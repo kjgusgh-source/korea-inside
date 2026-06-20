@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ThemeToggle from "../components/ThemeToggle";
+import SiteHeader from "../components/SiteHeader";
 import { getAllPosts } from "../lib/posts";
 
 const editorialNotes = [
@@ -40,32 +40,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
       <section className="mx-auto max-w-7xl px-5 py-6 md:px-8">
-        <header className="flex items-center justify-between gap-4">
-          <Link href="/" className="group">
-            <p className="text-2xl font-semibold tracking-tight">
-              Korea <span className="text-[var(--accent)]">Inside</span>
-            </p>
-            <p className="mt-1 hidden text-xs text-[var(--muted)] sm:block">
-              A warm local guide to Korean culture
-            </p>
-          </Link>
-
-          <div className="flex items-center gap-3">
-            <nav className="hidden items-center gap-6 text-sm text-[var(--muted)] md:flex">
-              <a href="#stories" className="hover:text-[var(--accent)]">
-                Stories
-              </a>
-              <a href="#guide" className="hover:text-[var(--accent)]">
-                Guide
-              </a>
-              <a href="#latest" className="hover:text-[var(--accent)]">
-                Latest
-              </a>
-            </nav>
-
-            <ThemeToggle />
-          </div>
-        </header>
+      <SiteHeader />
 
         <section className="grid gap-8 py-16 md:grid-cols-[1.15fr_0.85fr] md:py-24">
           <div className="flex flex-col justify-center">
