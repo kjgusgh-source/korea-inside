@@ -1,302 +1,274 @@
-import type { Metadata } from "next";
+import Link from "next/link";
+import ThemeToggle from "../components/ThemeToggle";
+import { getAllPosts } from "../lib/posts";
 
-export const metadata: Metadata = {
-  title: "Korea Inside | Discover the Real Korea Beyond K-Pop",
-  description:
-    "Explore Korean memes, expressions, food, hidden places, K-pop, dramas, and cultural stories explained for global visitors.",
-};
-
-const categories = [
-  {
-    title: "Korean Memes",
-    description: "Understand viral Korean jokes, internet slang, and social media trends.",
-    tag: "Memes",
-  },
-  {
-    title: "Korean Expressions",
-    description: "Learn words like Nunchi, Jeong, Fighting, Aegyo, and why they matter.",
-    tag: "Language",
-  },
-  {
-    title: "K-Pop",
-    description: "Beginner-friendly guides to idols, fandoms, comeback culture, and music shows.",
-    tag: "Music",
-  },
-  {
-    title: "Korean Food",
-    description: "From convenience store snacks to regional dishes and drinking culture.",
-    tag: "Food",
-  },
-  {
-    title: "K-Dramas",
-    description: "Discover drama recommendations and the cultural meanings behind scenes.",
-    tag: "Drama",
-  },
-  {
-    title: "Hidden Places",
-    description: "Local spots, historic streets, small towns, and places tourists often miss.",
-    tag: "Travel",
-  },
+const editorialNotes = [
+  "Living Korean language",
+  "Local scenes, not stereotypes",
+  "Tradition beside modern life",
 ];
 
-const featuredPosts = [
+const categoryHighlights = [
   {
-    title: "What Is Nunchi? The Korean Art of Reading the Room",
-    category: "Korean Expressions",
-    excerpt:
-      "Nunchi is more than politeness. It is a social skill deeply connected to Korean relationships and daily life.",
+    title: "Living Language",
+    label: "Memes & Expressions",
+    text: "Words Koreans actually use in chats, shows, fandoms, and everyday moments.",
   },
   {
-    title: "Why Korean Convenience Stores Feel Different",
-    category: "Korean Lifestyle",
-    excerpt:
-      "From instant ramen tables to seasonal snacks, Korean convenience stores are part of everyday culture.",
+    title: "Everyday Korea",
+    label: "Lifestyle",
+    text: "Convenience stores, PC bangs, late-night routines, and the small systems that shape daily life.",
   },
   {
-    title: "What Does Fighting Mean in Korea?",
-    category: "Korean Expressions",
-    excerpt:
-      "Foreigners often hear Koreans say 'Fighting!' — but it does not mean fighting someone.",
+    title: "City & Memory",
+    label: "Places",
+    text: "Old palaces, glowing streets, quiet alleys, and the way history still breathes inside the city.",
   },
-];
-
-const trends = [
-  "Nunchi",
-  "Jeong",
-  "Korean PC Bang",
-  "Convenience Store Culture",
-  "Korean Memes",
-  "Hidden Seoul",
+  {
+    title: "Warm Context",
+    label: "Culture",
+    text: "Not just what Koreans do, but why those habits feel natural here.",
+  },
 ];
 
 export default function Home() {
+  const posts = getAllPosts();
+  const heroPost = posts[0];
+  const featuredPosts = posts.slice(1, 4);
+  const latestPosts = posts.slice(4);
+
   return (
-    <main className="min-h-screen bg-[#121212] text-white">
-      <section className="relative overflow-hidden border-b border-white/10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,#E30B5C33,transparent_35%),radial-gradient(circle_at_bottom_right,#1F51FF33,transparent_35%)]" />
-        <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col px-6 py-8 lg:px-8">
-          <header className="flex items-center justify-between">
-            <div className="text-xl font-bold tracking-tight">
-              Korea <span className="text-[#E30B5C]">Inside</span>
-            </div>
-            <nav className="hidden gap-6 text-sm text-white/70 md:flex">
-              <a href="#memes" className="hover:text-white">
-                Memes
+    <main className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
+      <section className="mx-auto max-w-7xl px-5 py-6 md:px-8">
+        <header className="flex items-center justify-between gap-4">
+          <Link href="/" className="group">
+            <p className="text-2xl font-semibold tracking-tight">
+              Korea <span className="text-[var(--accent)]">Inside</span>
+            </p>
+            <p className="mt-1 hidden text-xs text-[var(--muted)] sm:block">
+              A warm local guide to Korean culture
+            </p>
+          </Link>
+
+          <div className="flex items-center gap-3">
+            <nav className="hidden items-center gap-6 text-sm text-[var(--muted)] md:flex">
+              <a href="#stories" className="hover:text-[var(--accent)]">
+                Stories
               </a>
-              <a href="#expressions" className="hover:text-white">
-                Expressions
+              <a href="#guide" className="hover:text-[var(--accent)]">
+                Guide
               </a>
-              <a href="#kpop" className="hover:text-white">
-                K-Pop
-              </a>
-              <a href="#travel" className="hover:text-white">
-                Hidden Korea
+              <a href="#latest" className="hover:text-[var(--accent)]">
+                Latest
               </a>
             </nav>
-          </header>
 
-          <div className="grid flex-1 items-center gap-12 py-20 lg:grid-cols-[1.1fr_0.9fr]">
-            <div>
-              <p className="mb-5 inline-flex rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm text-white/70 backdrop-blur">
-                The real Korea, explained for the world
-              </p>
+            <ThemeToggle />
+          </div>
+        </header>
 
-              <h1 className="max-w-4xl text-5xl font-black leading-tight tracking-tight md:text-7xl">
-                Discover the Real Korea{" "}
-                <span className="bg-gradient-to-r from-[#E30B5C] to-[#1F51FF] bg-clip-text text-transparent">
-                  Beyond K-Pop
-                </span>
-              </h1>
-
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">
-                Korea Inside helps global visitors understand Korean memes,
-                expressions, food, hidden places, dramas, K-pop, and everyday
-                culture — with context only locals can explain.
-              </p>
-
-              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-                <a
-                  href="#featured"
-                  className="rounded-full bg-[#E30B5C] px-7 py-4 text-center text-sm font-bold text-white shadow-[0_0_30px_rgba(227,11,92,0.35)] transition hover:scale-105"
-                >
-                  Start Exploring
-                </a>
-                <a
-                  href="#categories"
-                  className="rounded-full border border-white/15 bg-white/5 px-7 py-4 text-center text-sm font-bold text-white transition hover:bg-white/10"
-                >
-                  View Categories
-                </a>
-              </div>
-
-              <div className="mt-10 flex flex-wrap gap-3">
-                {trends.map((trend) => (
-                  <span
-                    key={trend}
-                    className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm text-white/60"
-                  >
-                    #{trend}
-                  </span>
-                ))}
-              </div>
+        <section className="grid gap-8 py-16 md:grid-cols-[1.15fr_0.85fr] md:py-24">
+          <div className="flex flex-col justify-center">
+            <div className="mb-6 inline-flex w-fit rounded-full border border-[var(--border)] bg-[var(--surface)] px-4 py-2 text-sm text-[var(--muted)]">
+              Friendly cultural notes from the inside
             </div>
 
-            <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 shadow-2xl backdrop-blur">
-              <div className="rounded-[1.5rem] bg-gradient-to-br from-[#E30B5C] via-[#121212] to-[#1F51FF] p-[1px]">
-                <div className="rounded-[1.5rem] bg-[#161616] p-6">
-                  <p className="text-sm font-semibold text-[#E30B5C]">
-                    Today&apos;s Culture Note
-                  </p>
-                  <h2 className="mt-4 text-3xl font-black">
-                    What foreigners often misunderstand about Korea
-                  </h2>
-                  <p className="mt-4 leading-7 text-white/65">
-                    Many Korean behaviors are connected to ideas like respect,
-                    group harmony, speed, hospitality, and historical resilience.
-                    Korea Inside explains the hidden context behind what you see
-                    in dramas, streets, restaurants, and online communities.
-                  </p>
-                  <div className="mt-6 grid gap-3 sm:grid-cols-2">
-                    <div className="rounded-2xl bg-white/5 p-4">
-                      <div className="text-3xl">🧠</div>
-                      <p className="mt-3 font-bold">Nunchi</p>
-                      <p className="mt-1 text-sm text-white/55">
-                        Reading the room
-                      </p>
-                    </div>
-                    <div className="rounded-2xl bg-white/5 p-4">
-                      <div className="text-3xl">🔥</div>
-                      <p className="mt-3 font-bold">Fighting</p>
-                      <p className="mt-1 text-sm text-white/55">
-                        Korean encouragement
-                      </p>
-                    </div>
-                    <div className="rounded-2xl bg-white/5 p-4">
-                      <div className="text-3xl">🍜</div>
-                      <p className="mt-3 font-bold">Food Culture</p>
-                      <p className="mt-1 text-sm text-white/55">
-                        More than meals
-                      </p>
-                    </div>
-                    <div className="rounded-2xl bg-white/5 p-4">
-                      <div className="text-3xl">📍</div>
-                      <p className="mt-3 font-bold">Hidden Korea</p>
-                      <p className="mt-1 text-sm text-white/55">
-                        Beyond tourist maps
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+            <h1 className="max-w-4xl text-5xl font-semibold leading-[1.05] tracking-tight md:text-7xl">
+              Korea, explained like a local friend would.
+            </h1>
 
-      <section id="categories" className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
-        <div className="mb-12 flex flex-col justify-between gap-4 md:flex-row md:items-end">
-          <div>
-            <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#E30B5C]">
-              Explore Korea
+            <p className="mt-7 max-w-2xl text-lg leading-8 text-[var(--muted)] md:text-xl">
+              Not a textbook. Not a tourist brochure. Korea Inside shares the
+              small scenes, living words, and hidden context behind everyday
+              Korean culture.
             </p>
-            <h2 className="mt-3 text-4xl font-black tracking-tight">
-              Culture categories built for global readers
-            </h2>
-          </div>
-          <p className="max-w-xl text-white/60">
-            Each category is designed around what international visitors search
-            for, misunderstand, or become curious about after watching Korean
-            content.
-          </p>
-        </div>
 
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {categories.map((category) => (
-            <article
-              key={category.title}
-              className="group rounded-3xl border border-white/10 bg-white/[0.04] p-6 transition hover:-translate-y-1 hover:border-[#E30B5C]/60 hover:bg-white/[0.07]"
-            >
-              <span className="rounded-full bg-[#E30B5C]/15 px-3 py-1 text-xs font-bold text-[#E30B5C]">
-                {category.tag}
-              </span>
-              <h3 className="mt-6 text-2xl font-black">{category.title}</h3>
-              <p className="mt-3 leading-7 text-white/60">
-                {category.description}
-              </p>
-              <p className="mt-6 text-sm font-bold text-white/80 group-hover:text-[#E30B5C]">
-                Explore →
-              </p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section
-        id="featured"
-        className="border-y border-white/10 bg-white/[0.03] px-6 py-24 lg:px-8"
-      >
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-12">
-            <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#1F51FF]">
-              Featured Stories
-            </p>
-            <h2 className="mt-3 text-4xl font-black tracking-tight">
-              Start with what foreigners actually wonder about
-            </h2>
-          </div>
-
-          <div className="grid gap-6 lg:grid-cols-3">
-            {featuredPosts.map((post) => (
-              <article
-                key={post.title}
-                className="rounded-3xl border border-white/10 bg-[#121212] p-7"
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link
+                href={`/${heroPost.categorySlug}/${heroPost.slug}`}
+                className="rounded-full bg-[var(--accent)] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[var(--shadow)] transition hover:-translate-y-0.5"
               >
-                <p className="text-sm font-bold text-[#1F51FF]">
-                  {post.category}
+                Start with today’s story
+              </Link>
+
+              <a
+                href="#latest"
+                className="rounded-full border border-[var(--border)] bg-[var(--surface)] px-6 py-3 text-sm font-semibold text-[var(--text)] transition hover:-translate-y-0.5"
+              >
+                Browse latest notes
+              </a>
+            </div>
+
+            <div className="mt-10 flex flex-wrap gap-3">
+              {editorialNotes.map((note) => (
+                <span
+                  key={note}
+                  className="rounded-full bg-[var(--accent-soft)] px-4 py-2 text-sm text-[var(--text)]"
+                >
+                  {note}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <Link
+            href={`/${heroPost.categorySlug}/${heroPost.slug}`}
+            className="group relative overflow-hidden rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 shadow-xl shadow-[var(--shadow)] transition hover:-translate-y-1"
+          >
+            <div className="absolute right-6 top-6 text-7xl text-[var(--accent)] opacity-10">
+              內
+            </div>
+
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+              Editor’s first pick
+            </p>
+
+            <div className="mt-24">
+              <p className="mb-3 text-sm text-[var(--muted)]">
+                {heroPost.categoryLabel} · {heroPost.readingTime}
+              </p>
+
+              <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
+                {heroPost.title}
+              </h2>
+
+              <p className="mt-5 leading-7 text-[var(--muted)]">
+                {heroPost.excerpt}
+              </p>
+
+              <p className="mt-8 text-sm font-semibold text-[var(--accent)]">
+                Read the note →
+              </p>
+            </div>
+          </Link>
+        </section>
+
+        <section
+          id="stories"
+          className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-5 md:p-8"
+        >
+          <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+                Selected stories
+              </p>
+              <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
+                Start with what feels alive now
+              </h2>
+            </div>
+
+            <p className="max-w-md text-sm leading-6 text-[var(--muted)]">
+              Short cultural notes for people who want to understand Korea
+              through real scenes, not stiff explanations.
+            </p>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-3">
+            {featuredPosts.map((post) => (
+              <Link
+                key={post.id}
+                href={`/${post.categorySlug}/${post.slug}`}
+                className="group rounded-[1.5rem] border border-[var(--border)] bg-[var(--card)] p-5 transition hover:-translate-y-1 hover:shadow-lg hover:shadow-[var(--shadow)]"
+              >
+                <p className="text-sm text-[var(--accent)]">
+                  {post.categoryLabel}
                 </p>
-                <h3 className="mt-4 text-2xl font-black leading-snug">
+
+                <h3 className="mt-5 text-2xl font-semibold leading-tight">
                   {post.title}
                 </h3>
-                <p className="mt-4 leading-7 text-white/60">{post.excerpt}</p>
-                <button className="mt-8 rounded-full border border-white/15 px-5 py-3 text-sm font-bold transition hover:border-[#E30B5C] hover:text-[#E30B5C]">
-                  Read Article
-                </button>
-              </article>
+
+                <p className="mt-4 text-sm leading-6 text-[var(--muted)]">
+                  {post.excerpt}
+                </p>
+
+                <div className="mt-6 flex items-center justify-between text-sm">
+                  <span className="text-[var(--muted)]">{post.readingTime}</span>
+                  <span className="font-semibold text-[var(--accent)]">
+                    Open →
+                  </span>
+                </div>
+              </Link>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
-        <div className="rounded-[2rem] border border-white/10 bg-gradient-to-r from-[#E30B5C]/20 to-[#1F51FF]/20 p-8 md:p-12">
-          <div className="grid gap-10 md:grid-cols-[1fr_0.7fr] md:items-center">
-            <div>
-              <p className="text-sm font-bold uppercase tracking-[0.25em] text-white/60">
-                Monetization Ready
-              </p>
-              <h2 className="mt-4 text-4xl font-black">
-                Built for SEO, AdSense, and long-term content growth
-              </h2>
-              <p className="mt-5 leading-8 text-white/70">
-                Korea Inside will grow through searchable evergreen articles:
-                Korean expressions, cultural explainers, hidden travel guides,
-                food guides, and entertainment context.
-              </p>
-            </div>
-            <div className="rounded-3xl border border-dashed border-white/20 bg-black/20 p-6 text-center">
-              <p className="text-sm text-white/50">Future Ad Space</p>
-              <p className="mt-3 text-2xl font-black">Google AdSense Ready</p>
-              <p className="mt-2 text-sm text-white/50">
-                Reserved layout area to prevent CLS later
-              </p>
-            </div>
+        <section id="guide" className="py-16">
+          <div className="max-w-2xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+              Our way of seeing Korea
+            </p>
+            <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
+              Pride, without shouting.
+            </h2>
+            <p className="mt-5 leading-8 text-[var(--muted)]">
+              Korea Inside does not try to prove that Korea is better than
+              anywhere else. It simply opens the door, points to a scene, and
+              says: “This is how it feels here.”
+            </p>
           </div>
-        </div>
-      </section>
 
-      <footer className="border-t border-white/10 px-6 py-10 text-center text-sm text-white/45">
-        <p>© 2026 Korea Inside. Explaining Korea to the world.</p>
-      </footer>
+          <div className="mt-8 grid gap-5 md:grid-cols-4">
+            {categoryHighlights.map((item) => (
+              <div
+                key={item.title}
+                className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--card)] p-5"
+              >
+                <p className="text-sm text-[var(--accent)]">{item.label}</p>
+                <h3 className="mt-4 text-xl font-semibold">{item.title}</h3>
+                <p className="mt-4 text-sm leading-6 text-[var(--muted)]">
+                  {item.text}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="latest" className="pb-16">
+          <div className="mb-8">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+              Latest notes
+            </p>
+            <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
+              More from the inside
+            </h2>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-2">
+            {latestPosts.map((post) => (
+              <Link
+                key={post.id}
+                href={`/${post.categorySlug}/${post.slug}`}
+                className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--card)] p-5 transition hover:-translate-y-1 hover:shadow-lg hover:shadow-[var(--shadow)]"
+              >
+                <div className="mb-4 flex flex-wrap items-center gap-3 text-sm">
+                  <span className="text-[var(--accent)]">
+                    {post.categoryLabel}
+                  </span>
+                  <span className="text-[var(--muted)]">
+                    {post.readingTime}
+                  </span>
+                </div>
+
+                <h3 className="text-2xl font-semibold leading-tight">
+                  {post.title}
+                </h3>
+
+                <p className="mt-4 leading-7 text-[var(--muted)]">
+                  {post.description}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        <footer className="border-t border-[var(--border)] py-8 text-sm text-[var(--muted)]">
+          <div className="flex flex-col justify-between gap-3 md:flex-row">
+            <p>© 2026 Korea Inside</p>
+            <p>Warm local notes on Korean culture, language, and everyday life.</p>
+          </div>
+        </footer>
+      </section>
     </main>
   );
 }

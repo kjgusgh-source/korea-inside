@@ -1,26 +1,67 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+:root,
+html[data-theme="light"],
+.theme-light {
+  --bg: #faf9f6;
+  --surface: #ffffff;
+  --card: #fffdf8;
+  --text: #1f1f1f;
+  --muted: #6f6a63;
+  --border: rgba(31, 31, 31, 0.12);
+
+  --accent: #a33b39;
+  --celadon: #5a8b78;
+  --gold: #b89b5e;
+  --electric: #1f51ff;
+
+  --accent-soft: rgba(163, 59, 57, 0.1);
+  --celadon-soft: rgba(90, 139, 120, 0.13);
+  --electric-soft: rgba(31, 81, 255, 0.09);
+
+  --shadow: rgba(40, 30, 20, 0.1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html[data-theme="dark"],
+html.dark,
+.theme-dark {
+  --bg: #1a1a1a;
+  --surface: #22201d;
+  --card: #272521;
+  --text: #f5efe5;
+  --muted: #b8aea2;
+  --border: rgba(245, 239, 229, 0.14);
+
+  --accent: #c65a55;
+  --celadon: #78a894;
+  --gold: #d0ad65;
+  --electric: #6f91ff;
+
+  --accent-soft: rgba(198, 90, 85, 0.14);
+  --celadon-soft: rgba(120, 168, 148, 0.14);
+  --electric-soft: rgba(111, 145, 255, 0.12);
+
+  --shadow: rgba(0, 0, 0, 0.34);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+.display-serif {
+  font-family: var(--font-playfair), Georgia, serif;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--text);
 }
