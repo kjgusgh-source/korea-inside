@@ -14,37 +14,13 @@ const editorialNotes = [
   "Tradition beside modern life",
 ];
 
-const categoryHighlights = [
-  {
-    title: "Living Language",
-    label: "Memes & Expressions",
-    text: "Words Koreans actually use in chats, shows, fandoms, and everyday moments.",
-  },
-  {
-    title: "Everyday Korea",
-    label: "Lifestyle",
-    text: "Convenience stores, PC bangs, late-night routines, and the small systems that shape daily life.",
-  },
-  {
-    title: "City & Memory",
-    label: "Places",
-    text: "Old palaces, glowing streets, quiet alleys, and the way history still breathes inside the city.",
-  },
-  {
-    title: "Warm Context",
-    label: "Culture",
-    text: "Not just what Koreans do, but why those habits feel natural here.",
-  },
-];
-
 export default function Home() {
   const posts = getAllPosts();
   const contentHubs = getContentHubs();
   const onStageItems = getOnStageItems();
   const mediaItems = getMediaItems();
   const heroPost = posts[0];
-  const featuredPosts = posts.slice(1, 4);
-  const latestPosts = posts.slice(4);
+  const latestPosts = posts.slice(1);
 
   return (
     <main className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
@@ -99,9 +75,9 @@ export default function Home() {
             href={`/${heroPost.categorySlug}/${heroPost.slug}`}
             className="group relative overflow-hidden rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 shadow-xl shadow-[var(--shadow)] transition hover:-translate-y-1"
           >
-            <div className="absolute right-6 top-6 text-7xl text-[var(--accent)] opacity-10">
-              內
-            </div>
+            <div className="absolute right-6 top-6 text-7xl opacity-10">
+  🇰🇷
+</div>
 
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
               Editor’s first pick
@@ -125,6 +101,35 @@ export default function Home() {
               </p>
             </div>
           </Link>
+        </section>
+
+        <section className="py-16">
+          <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+                Visual culture picks
+              </p>
+              <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
+                See the culture before reading about it.
+              </h2>
+            </div>
+
+            <p className="max-w-md text-sm leading-6 text-[var(--muted)]">
+              Korea is often understood through stages, scenes, food, streets,
+              and small visual moments. These picks are built for watching
+              first, then understanding the context behind them.
+            </p>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {mediaItems.map((item, index) => (
+              <MediaFeatureCard
+                key={item.id}
+                item={item}
+                featured={index === 0}
+              />
+            ))}
+          </div>
         </section>
 
         <section className="py-16">
@@ -159,85 +164,6 @@ export default function Home() {
           <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
-                Visual culture picks
-              </p>
-              <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
-                See the culture before reading about it.
-              </h2>
-            </div>
-
-            <p className="max-w-md text-sm leading-6 text-[var(--muted)]">
-              Korea is often understood through stages, scenes, food, streets,
-              and small visual moments. These picks are built for watching
-              first, then understanding the context behind them.
-            </p>
-          </div>
-
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {mediaItems.map((item, index) => (
-              <MediaFeatureCard
-                key={item.id}
-                item={item}
-                featured={index === 0}
-              />
-            ))}
-          </div>
-        </section>
-        
-        <section
-          id="stories"
-          className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-5 md:p-8"
-        >
-          <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
-                Selected stories
-              </p>
-              <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
-                Start with what feels alive now
-              </h2>
-            </div>
-
-            <p className="max-w-md text-sm leading-6 text-[var(--muted)]">
-              Short cultural notes for people who want to understand Korea
-              through real scenes, not stiff explanations.
-            </p>
-          </div>
-
-          <div className="grid gap-5 md:grid-cols-3">
-            {featuredPosts.map((post) => (
-              <Link
-                key={post.id}
-                href={`/${post.categorySlug}/${post.slug}`}
-                className="group rounded-[1.5rem] border border-[var(--border)] bg-[var(--card)] p-5 transition hover:-translate-y-1 hover:shadow-lg hover:shadow-[var(--shadow)]"
-              >
-                <p className="text-sm text-[var(--accent)]">
-                  {post.categoryLabel}
-                </p>
-
-                <h3 className="mt-5 text-2xl font-semibold leading-tight">
-                  {post.title}
-                </h3>
-
-                <p className="mt-4 text-sm leading-6 text-[var(--muted)]">
-                  {post.excerpt}
-                </p>
-
-                <div className="mt-6 flex items-center justify-between text-sm">
-                  <span className="text-[var(--muted)]">{post.readingTime}</span>
-                  <span className="font-semibold text-[var(--accent)]">
-                    Open →
-                  </span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
-
-        <section className="py-16">
-          <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
                 Korea culture map
               </p>
               <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
@@ -263,37 +189,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="guide" className="py-16">
-          <div className="max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
-              Our way of seeing Korea
-            </p>
-            <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
-              Pride, without shouting.
-            </h2>
-            <p className="mt-5 leading-8 text-[var(--muted)]">
-              Korea Inside does not try to prove that Korea is better than
-              anywhere else. It simply opens the door, points to a scene, and
-              says: “This is how it feels here.”
-            </p>
-          </div>
-
-          <div className="mt-8 grid gap-5 md:grid-cols-4">
-            {categoryHighlights.map((item) => (
-              <div
-                key={item.title}
-                className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--card)] p-5"
-              >
-                <p className="text-sm text-[var(--accent)]">{item.label}</p>
-                <h3 className="mt-4 text-xl font-semibold">{item.title}</h3>
-                <p className="mt-4 text-sm leading-6 text-[var(--muted)]">
-                  {item.text}
-                </p>
-              </div>
-            ))}
-          </div>
-        </section>
-
+       
         <section id="latest" className="pb-16">
           <div className="mb-8">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
