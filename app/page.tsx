@@ -1,7 +1,11 @@
 import Link from "next/link";
 import SiteHeader from "../components/SiteHeader";
 import ContentHubCard from "../components/ContentHubCard";
+import MediaFeatureCard from "../components/MediaFeatureCard";
+import OnStageCard from "../components/OnStageCard";
 import { getContentHubs } from "../lib/contentHubs";
+import { getMediaItems } from "../lib/media";
+import { getOnStageItems } from "../lib/onStage";
 import { getAllPosts } from "../lib/posts";
 
 const editorialNotes = [
@@ -36,6 +40,8 @@ const categoryHighlights = [
 export default function Home() {
   const posts = getAllPosts();
   const contentHubs = getContentHubs();
+  const onStageItems = getOnStageItems();
+  const mediaItems = getMediaItems();
   const heroPost = posts[0];
   const featuredPosts = posts.slice(1, 4);
   const latestPosts = posts.slice(4);
@@ -121,6 +127,63 @@ export default function Home() {
           </Link>
         </section>
 
+        <section className="py-16">
+          <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+                On Stage
+              </p>
+              <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
+                The moments around Korean pop culture.
+              </h2>
+            </div>
+
+            <p className="max-w-md text-sm leading-6 text-[var(--muted)]">
+              Songs, faces, stages, comments, fan rituals, and small details
+              that make K-pop feel alive beyond the performance.
+            </p>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {onStageItems.map((item, index) => (
+              <OnStageCard
+                key={item.id}
+                item={item}
+                featured={index === 0}
+              />
+            ))}
+          </div>
+        </section>
+
+        <section className="py-16">
+          <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+                Visual culture picks
+              </p>
+              <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
+                See the culture before reading about it.
+              </h2>
+            </div>
+
+            <p className="max-w-md text-sm leading-6 text-[var(--muted)]">
+              Korea is often understood through stages, scenes, food, streets,
+              and small visual moments. These picks are built for watching
+              first, then understanding the context behind them.
+            </p>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {mediaItems.map((item, index) => (
+              <MediaFeatureCard
+                key={item.id}
+                item={item}
+                featured={index === 0}
+              />
+            ))}
+          </div>
+        </section>
+        
         <section
           id="stories"
           className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-5 md:p-8"
@@ -170,7 +233,7 @@ export default function Home() {
             ))}
           </div>
         </section>
-        
+
         <section className="py-16">
           <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
             <div>
