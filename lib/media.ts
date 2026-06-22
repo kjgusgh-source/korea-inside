@@ -39,32 +39,37 @@ export const MEDIA_ITEMS: MediaItem[] = [
     youtubeId: "QGBMQVFNpvI",
     sourceLabel: "Official video from KBS Kpop",
   },
+
+     {
+        id: "our-beloved-summer-first-highlight",
+        title: "When old feelings return on camera",
+        category: "drama-film",
+        categoryLabel: "On Screen",
+        mediaType: "youtube",
+        description:
+          "A scene from Our Beloved Summer, where two people who once knew each other too well are suddenly placed back in front of the camera. The tension is quiet, but you can feel the old memories sitting between them.",
+        cultureNote:
+          "K-dramas often make emotions feel bigger by saying less. A pause, an awkward look, or a familiar place can tell you that the story is not really over yet.",
+        tags: ["Our Beloved Summer", "K-drama", "Old feelings"],
+        youtubeId: "5Jtu4pAH0B0",
+        sourceLabel: "Official SBS archive clip from 빽드",
+      },
+
   {
-    id: "drama-scene-culture",
-    title: "The quiet details behind a drama scene",
-    category: "drama-film",
-    categoryLabel: "On Screen",
-    mediaType: "youtube",
-    description:
-      "Korean dramas often use food, silence, streets, and small gestures to show emotions without explaining everything directly.",
-    cultureNote:
-      "A scene can reveal family expectations, dating manners, work culture, friendship, or the Korean sense of timing and restraint.",
-    tags: ["Drama", "Emotion", "Scene"],
-    sourceLabel: "Trailer, OST, or official clip",
-  },
-  {
-    id: "food-table-culture",
-    title: "Food as the easiest door into Korea",
-    category: "food",
-    categoryLabel: "On the Table",
-    mediaType: "image",
-    description:
-      "From ramyeon to street food, Korean food is visual, emotional, and closely connected to dramas, idols, and daily life.",
-    cultureNote:
-      "Food is often where Korean warmth becomes visible — sharing, ordering together, late-night meals, and comfort after a long day.",
-    tags: ["Food", "Ramyeon", "Street food"],
-    sourceLabel: "Safe image or original photo later",
-  },
+  id: "korean-food-table-culture",
+  title: "That first bite of Korean ramyeon",
+  category: "food",
+  categoryLabel: "On the Table",
+  mediaType: "youtube",
+  description:
+    "A reaction-style video of people trying Korean ramyeon — the steam, the spicy broth, and the funny little pause after the first bite.",
+  cultureNote:
+    "Korean ramyeon is one of those foods that is fun to watch people try for the first time. This video is simply about that moment: people tasting it, reacting to it, and slowly going back for another bite.",
+  tags: ["Korean ramyeon", "Food reaction", "First bite"],
+  youtubeId: "EgLwaLFiCjg",
+  sourceUrl: "https://www.youtube.com/watch?v=EgLwaLFiCjg",
+  sourceLabel: "Official video from MBC every1",
+},
 ];
 
 export function getMediaItems() {
