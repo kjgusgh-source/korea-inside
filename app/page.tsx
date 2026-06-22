@@ -1,5 +1,7 @@
 import Link from "next/link";
 import SiteHeader from "../components/SiteHeader";
+import ContentHubCard from "../components/ContentHubCard";
+import { getContentHubs } from "../lib/contentHubs";
 import { getAllPosts } from "../lib/posts";
 
 const editorialNotes = [
@@ -33,6 +35,7 @@ const categoryHighlights = [
 
 export default function Home() {
   const posts = getAllPosts();
+  const contentHubs = getContentHubs();
   const heroPost = posts[0];
   const featuredPosts = posts.slice(1, 4);
   const latestPosts = posts.slice(4);
@@ -164,6 +167,35 @@ export default function Home() {
                   </span>
                 </div>
               </Link>
+            ))}
+          </div>
+        </section>
+        
+        <section className="py-16">
+          <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+                Korea culture map
+              </p>
+              <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
+                K-pop opens the door, but Korea is wider than one stage.
+              </h2>
+            </div>
+
+            <p className="max-w-md text-sm leading-6 text-[var(--muted)]">
+              Korea Inside begins with the strongest global interests — idols,
+              dramas, films, and food — then connects them to everyday culture,
+              travel, language, and local scenes.
+            </p>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {contentHubs.map((hub, index) => (
+              <ContentHubCard
+                key={hub.id}
+                hub={hub}
+                featured={index === 0}
+              />
             ))}
           </div>
         </section>
