@@ -152,3 +152,7 @@ export function getKpopGroups() {
 export function getKpopGroupsByCategory(category: KpopGroupCategory) {
   return KPOP_GROUPS.filter((group) => group.category === category);
 }
+
+export function getKpopGroupById(groupId: string) {
+  return KPOP_GROUPS.find((group) => group.id === groupId);
+}

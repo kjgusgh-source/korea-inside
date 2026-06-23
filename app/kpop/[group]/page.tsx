@@ -1,0 +1,141 @@
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import SiteHeader from "../../../components/SiteHeader";
+import { getKpopGroupById, getKpopGroups } from "../../../lib/kpopData";
+
+type PageProps = {
+  params: Promise<{
+    group: string;
+  }>;
+};
+
+export function generateStaticParams() {
+  return getKpopGroups().map((group) => ({
+    group: group.id,
+  }));
+}
+
+export async function generateMetadata({ params }: PageProps) {
+  const { group: groupId } = await params;
+  const group = getKpopGroupById(groupId);
+
+  if (!group) {
+    return {
+      title: "K-pop Group | HAEMIL",
+    };
+  }
+
+  return {
+    title: `${group.name} | HAEMIL`,
+    description: `${group.name} fancams, members, stage moments, and the Korean culture around them.`,
+  };
+}
+
+export default async function KpopGroupPage({ params }: PageProps) {
+  const { group: groupId } = await params;
+  const group = getKpopGroupById(groupId);
+
+  if (!group) {
+    notFound();
+  }
+
+  return (
+    <main className="min-h-screen bg-[var(--background)] text-[var(--text)]">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-6 py-6 md:px-8 md:py-8">
+        <SiteHeader />
+
+        <section className="relative overflow-hidden rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-10">
+          <div className="absolute right-6 top-6 text-7xl font-semibold text-[var(--accent)] opacity-10">
+            {group.name.slice(0, 1)}
+          </div>
+
+          <Link
+            href="/kpop"
+            className="mb-6 inline-flex text-sm font-semibold text-[var(--accent)]"
+          >
+            ← Back to K-pop
+          </Link>
+
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+            K-pop group
+          </p>
+
+          <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
+            {group.name}
+          </h1>
+
+          <p className="mt-6 max-w-2xl text-base leading-8 text-[var(--muted)] md:text-lg">
+            {group.description}
+          </p>
+
+          <div className="mt-6 flex flex-wrap gap-2">
+            {group.starterTags.map((tag) => (
+              <span
+                key={tag}
+                className="rounded-full border border-[var(--border)] bg-[var(--card)] px-3 py-1 text-xs text-[var(--muted)]"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        </section>
+
+        <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-5 md:p-8">
+          <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+                Members
+              </p>
+              <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
+                Choose a member to follow the stage details.
+              </h2>
+            </div>
+
+            <p className="max-w-md text-sm leading-6 text-[var(--muted)]">
+              Member pages will collect fancams, facecams, stage words, and
+              small moments that help new fans understand why people replay
+              these clips.
+            </p>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-3">
+            {group.members.map((member) => (
+              <article
+                key={member.id}
+                className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface)] p-5"
+              >
+                <p className="text-xl font-semibold text-[var(--text)]">
+                  {member.name}
+                </p>
+
+                <p className="mt-3 text-sm leading-6 text-[var(--muted)]">
+                  {member.note}
+                </p>
+
+                <p className="mt-5 text-sm font-semibold text-[var(--accent)]">
+                  Member page soon →
+                </p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-5 md:p-8">
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+            Fancam picks
+          </p>
+
+          <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
+            Group videos will live here.
+          </h2>
+
+          <p className="mt-4 max-w-2xl text-sm leading-7 text-[var(--muted)] md:text-base">
+            This section will later collect official stages, group fancams,
+            dance practices, and cultural notes about the words or fan moments
+            around this group.
+          </p>
+        </section>
+      </div>
+    </main>
+  );
+}

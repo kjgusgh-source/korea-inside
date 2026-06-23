@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import type { KpopGroup, KpopGroupCategory } from "../lib/kpopData";
 
@@ -114,7 +115,7 @@ export default function KpopExplorer({ groups }: KpopExplorerProps) {
                                 {group.name}
                               </h4>
                               <span className="rounded-full bg-[var(--accent-soft)] px-3 py-1 text-xs font-semibold text-[var(--text)]">
-                                Group page soon
+                                Group page
                               </span>
                             </div>
 
@@ -140,23 +141,32 @@ export default function KpopExplorer({ groups }: KpopExplorerProps) {
                         </button>
 
                         {isGroupOpen && (
-                          <div className="grid gap-3 border-t border-[var(--border)] p-5 md:grid-cols-3">
-                            {group.members.map((member) => (
-                              <div
-                                key={member.id}
-                                className="rounded-[1rem] border border-[var(--border)] bg-[var(--card)] p-4"
-                              >
-                                <p className="font-semibold text-[var(--text)]">
-                                  {member.name}
-                                </p>
-                                <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
-                                  {member.note}
-                                </p>
-                                <p className="mt-4 text-xs font-semibold text-[var(--accent)]">
-                                  Member page soon →
-                                </p>
-                              </div>
-                            ))}
+                          <div className="border-t border-[var(--border)] p-5">
+                            <Link
+                              href={`/kpop/${group.id}`}
+                              className="mb-5 inline-flex rounded-full bg-[var(--accent)] px-4 py-2 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:shadow-lg"
+                            >
+                              Open group page →
+                            </Link>
+
+                            <div className="grid gap-3 md:grid-cols-3">
+                              {group.members.map((member) => (
+                                <div
+                                  key={member.id}
+                                  className="rounded-[1rem] border border-[var(--border)] bg-[var(--card)] p-4"
+                                >
+                                  <p className="font-semibold text-[var(--text)]">
+                                    {member.name}
+                                  </p>
+                                  <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
+                                    {member.note}
+                                  </p>
+                                  <p className="mt-4 text-xs font-semibold text-[var(--accent)]">
+                                    Member page soon →
+                                  </p>
+                                </div>
+                              ))}
+                            </div>
                           </div>
                         )}
                       </div>
