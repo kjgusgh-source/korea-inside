@@ -15,9 +15,8 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Korea Inside",
-  description:
-    "A warm local guide to Korean culture, language, lifestyle, and hidden everyday stories.",
+  title: "HAEMIL",
+  description: "Beautiful Korean stories, told by a local friend.",
 };
 
 export default function RootLayout({

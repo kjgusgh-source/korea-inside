@@ -33,12 +33,16 @@ export default function Home() {
               Friendly cultural notes from the inside
             </div>
 
-            <h1 className="max-w-4xl text-5xl font-semibold leading-[1.05] tracking-tight md:text-7xl">
-              Korea, explained like a local friend would.
-            </h1>
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--gold)]">
+  HAEMIL
+</p>
+
+<h1 className="mt-6 max-w-4xl text-5xl font-semibold leading-tight tracking-tight md:text-7xl">
+  Beautiful Korean stories, told by a local friend.
+</h1>
 
             <p className="mt-7 max-w-2xl text-lg leading-8 text-[var(--muted)] md:text-xl">
-              Not a textbook. Not a tourist brochure. Korea Inside shares the
+              Not a textbook. Not a tourist brochure. HAEMIL shares the
               small scenes, living words, and hidden context behind everyday
               Korean culture.
             </p>
@@ -172,7 +176,7 @@ export default function Home() {
             </div>
 
             <p className="max-w-md text-sm leading-6 text-[var(--muted)]">
-              Korea Inside begins with the strongest global interests — idols,
+            HAEMIL begins with the strongest global interests — idols,
               dramas, films, and food — then connects them to everyday culture,
               travel, language, and local scenes.
             </p>
@@ -230,7 +234,7 @@ export default function Home() {
 
         <footer className="border-t border-[var(--border)] py-8 text-sm text-[var(--muted)]">
           <div className="flex flex-col justify-between gap-3 md:flex-row">
-            <p>© 2026 Korea Inside</p>
+            <p>© 2026 HAEMIL</p>
             <p>Warm local notes on Korean culture, language, and everyday life.</p>
           </div>
         </footer>
