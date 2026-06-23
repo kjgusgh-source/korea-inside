@@ -20,16 +20,13 @@ export default function SiteHeader({ showNav = true }: SiteHeaderProps) {
       <div className="flex items-center gap-3">
         {showNav && (
           <nav className="hidden items-center gap-6 text-sm text-[var(--muted)] md:flex">
-            <Link href="/#stories" className="hover:text-[var(--accent)]">
-              Stories
-            </Link>
-            <Link href="/#guide" className="hover:text-[var(--accent)]">
-              Guide
-            </Link>
-            <Link href="/#latest" className="hover:text-[var(--accent)]">
-              Latest
-            </Link>
-          </nav>
+  <Link href="/kpop" className="hover:text-[var(--accent)]">
+    K-pop
+  </Link>
+  <Link href="/#latest" className="hover:text-[var(--accent)]">
+    Latest
+  </Link>
+</nav>
         )}
 
         <ThemeToggle />
