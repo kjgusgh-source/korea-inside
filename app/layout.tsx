@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import SiteFooter from "../components/SiteFooter";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -28,6 +29,7 @@ export default function RootLayout({
     <html lang="en" data-theme="light">
       <body className={`${inter.variable} ${playfair.variable}`}>
         {children}
+        <SiteFooter />
       </body>
     </html>
   );
