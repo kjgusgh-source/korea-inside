@@ -27,7 +27,7 @@ export type MediaItem = {
 export const MEDIA_ITEMS: MediaItem[] = [
   {
     id: "kpop-fancam-culture",
-    title: "Why one fancam can change everything",
+    title: "What an eolppak facecam feels like",
     category: "kpop",
     categoryLabel: "On Stage",
     mediaType: "youtube",
@@ -35,7 +35,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
       "A single performance clip can turn a small expression, gesture, or stage detail into a moment fans remember.",
     cultureNote:
       "Eolppak-jikcam”(=얼빡 직캠) is a close-up fancam that stays almost entirely on an idol’s face. It is the kind of video fans replay to catch small smiles, glances, and expressions that make a stage feel more personal.",
-    tags: ["Fancam", "Performance", "K-pop"],
+    tags: ["Performance", "K-pop","fromis_9", "Song Hayoung", "Eolppak", "Facecam"],
     youtubeId: "QGBMQVFNpvI",
     sourceLabel: "Official video from KBS Kpop",
   },

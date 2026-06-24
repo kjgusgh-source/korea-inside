@@ -4,6 +4,7 @@ export type KpopMember = {
   id: string;
   name: string;
   note: string;
+  relatedMediaIds?: string[];
 };
 
 export type KpopGroup = {
@@ -29,6 +30,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
         id: "song-hayoung",
         name: "Song Hayoung",
         note: "Facecams, bright expressions, and small stage details.",
+        relatedMediaIds: ["kpop-fancam-culture"],
       },
       {
         id: "lee-nagyung",
@@ -155,4 +157,14 @@ export function getKpopGroupsByCategory(category: KpopGroupCategory) {
 
 export function getKpopGroupById(groupId: string) {
   return KPOP_GROUPS.find((group) => group.id === groupId);
+}
+
+export function getKpopMemberById(groupId: string, memberId: string) {
+  const group = getKpopGroupById(groupId);
+
+  if (!group) {
+    return undefined;
+  }
+
+  return group.members.find((member) => member.id === memberId);
 }
