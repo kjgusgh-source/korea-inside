@@ -3,6 +3,8 @@
 import { useState, type FormEvent } from "react";
 import SiteHeader from "../../../components/SiteHeader";
 
+type RequestStatus = "pending" | "approved" | "done" | "rejected";
+
 type ContentRequest = {
   id: string;
   group_name: string | null;
@@ -11,15 +13,23 @@ type ContentRequest = {
   youtube_url: string | null;
   country: string | null;
   message: string | null;
-  status: string;
+  status: RequestStatus;
   created_at: string;
 };
+
+const statusOptions: RequestStatus[] = [
+  "pending",
+  "approved",
+  "done",
+  "rejected",
+];
 
 export default function AdminRequestsPage() {
   const [token, setToken] = useState("");
   const [requests, setRequests] = useState<ContentRequest[]>([]);
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [updatingId, setUpdatingId] = useState<string | null>(null);
   const [hasLoaded, setHasLoaded] = useState(false);
 
   const loadRequests = async (event?: FormEvent<HTMLFormElement>) => {
@@ -54,6 +64,49 @@ export default function AdminRequestsPage() {
       setMessage("Could not connect to the admin API.");
     } finally {
       setIsLoading(false);
+    }
+  };
+
+  const updateRequestStatus = async (
+    requestId: string,
+    nextStatus: RequestStatus
+  ) => {
+    if (!token.trim()) {
+      setMessage("Please enter the admin token.");
+      return;
+    }
+
+    setUpdatingId(requestId);
+    setMessage("");
+
+    try {
+      const response = await fetch(`/api/admin/requests/${requestId}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token.trim()}`,
+        },
+        body: JSON.stringify({ status: nextStatus }),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        setMessage(result.error ?? "Could not update request.");
+        return;
+      }
+
+      setRequests((currentRequests) =>
+        currentRequests.map((request) =>
+          request.id === requestId ? result.request : request
+        )
+      );
+
+      setMessage(`Request marked as ${nextStatus}.`);
+    } catch {
+      setMessage("Could not connect to the update API.");
+    } finally {
+      setUpdatingId(null);
     }
   };
 
@@ -171,6 +224,22 @@ export default function AdminRequestsPage() {
                     {request.message}
                   </p>
                 )}
+
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {statusOptions.map((status) => (
+                    <button
+                      key={status}
+                      type="button"
+                      disabled={
+                        updatingId === request.id || request.status === status
+                      }
+                      onClick={() => updateRequestStatus(request.id, status)}
+                      className="rounded-full border border-[var(--border)] px-4 py-2 text-xs font-semibold text-[var(--text)] transition hover:-translate-y-0.5 hover:border-[var(--accent)] disabled:cursor-not-allowed disabled:opacity-40"
+                    >
+                      {request.status === status ? `Current: ${status}` : status}
+                    </button>
+                  ))}
+                </div>
               </article>
             ))}
           </div>
