@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 
 const videoTypes = [
   "Facecam",
@@ -30,13 +30,51 @@ const countries = [
 
 export default function IdolRequestForm() {
   const [message, setMessage] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    setMessage(
-      "Request saving will be connected soon. For now, this form is a preview."
-    );
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    const payload = {
+      groupName: formData.get("groupName"),
+      memberName: formData.get("memberName"),
+      videoType: formData.get("videoType"),
+      youtubeUrl: formData.get("youtubeUrl"),
+      country: formData.get("country"),
+      requestMessage: formData.get("requestMessage"),
+    };
+
+    setIsSubmitting(true);
+    setMessage("");
+
+    try {
+      const response = await fetch("/api/requests", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        setMessage(result.error ?? "Could not save your request.");
+        return;
+      }
+
+      form.reset();
+      setMessage(
+        "Thank you. Your request was saved and will be reviewed by HAEMIL."
+      );
+    } catch {
+      setMessage("Could not send your request. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -88,7 +126,9 @@ export default function IdolRequestForm() {
             className="w-full rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3 text-sm text-[var(--text)] outline-none transition focus:border-[var(--accent)]"
           >
             {videoTypes.map((type) => (
-              <option key={type}>{type}</option>
+              <option key={type} value={type}>
+                {type}
+              </option>
             ))}
           </select>
         </label>
@@ -102,7 +142,9 @@ export default function IdolRequestForm() {
             className="w-full rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3 text-sm text-[var(--text)] outline-none transition focus:border-[var(--accent)]"
           >
             {countries.map((country) => (
-              <option key={country}>{country}</option>
+              <option key={country} value={country}>
+                {country}
+              </option>
             ))}
           </select>
         </label>
@@ -134,9 +176,10 @@ export default function IdolRequestForm() {
         <div className="md:col-span-2">
           <button
             type="submit"
-            className="rounded-full bg-[var(--accent)] px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:shadow-lg"
+            disabled={isSubmitting}
+            className="rounded-full bg-[var(--accent)] px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-60"
           >
-            Submit request
+            {isSubmitting ? "Submitting..." : "Submit request"}
           </button>
 
           {message && (
