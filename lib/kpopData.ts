@@ -97,7 +97,33 @@ export const KPOP_GROUPS: KpopGroup[] = [
       {
         id: "jang-wonyoung",
         name: "Jang Wonyoung",
-        note: "Visual moments, ending fairy clips, and stage styling.",
+        note: "IVE’s unmistakable center of attention — polished, elegant, and very aware of how to use the camera.",
+        pageLabel: "Who is Jang Wonyoung?",
+        appealTitle: "Why DIVE keeps watching her",
+        watchTitle: "What to notice in a Wonyoung fancam",
+        contextTitle: "Why she fits IVE so well",
+        intro:
+          "Jang Wonyoung is one of the easiest IVE members to recognize, even for people who are new to K-pop. IVE fans are called DIVE, and many DIVE see Wonyoung as a member who understands the camera almost too well. She does not only stand out because she is tall or pretty. Her real strength is how polished she makes every small moment feel — the way she looks into the camera, holds her posture, smiles at the right second, and makes a stage feel like it was built around confidence.",
+        whyFansLike: [
+          "Wonyoung has the kind of presence that makes people look at her first, but what keeps fans watching is how controlled it feels. She rarely looks like she is just waiting for her part.",
+          "Her charm fits IVE’s identity really well. IVE songs often carry a confident, elegant, almost untouchable feeling, and Wonyoung naturally makes that mood easier to understand.",
+          "A lot of fans also notice how professional she feels. She has been watched by the public since she was very young, so her stage image feels carefully built, not accidental.",
+        ],
+        watchPoints: [
+          "Watch her eye contact. Wonyoung often uses the camera like part of the choreography, not just something recording her.",
+          "Look at her posture between moves. Even when she is not doing the biggest dance point, she keeps the IVE mood alive.",
+          "Pay attention to the small facial changes. Her expressions are usually clean and controlled, which is why short clips of her spread so easily.",
+        ],
+        koreanExpression: {
+          hangul: "센터",
+          romanization: "senteo",
+          meaning: "center; the member who often draws the viewer’s attention in a group performance",
+          note:
+            "In K-pop, 센터 does not only mean standing in the middle. It often means the member who best delivers the group’s image at a certain moment. For Wonyoung, fans often connect this idea with her camera awareness, posture, and polished stage presence.",
+        },
+        culturalContext:
+          "IVE’s image is built around confidence rather than cuteness alone. That is why Wonyoung feels so central to the group’s first impression. She gives new viewers an easy way to understand IVE’s mood: elegant, self-aware, and a little untouchable. For DIVE, her appeal is not just her visual image. It is the way she turns that image into performance — through timing, expression, and the calm confidence she brings to the stage.",
+        relatedMediaIds: ["jang-wonyoung-ive-fancam"],
       },
       {
         id: "rei",
@@ -115,10 +141,36 @@ export const KPOP_GROUPS: KpopGroup[] = [
       "High-concept visuals, sharp performances, and stage moments with a strong digital style.",
     members: [
       {
-        id: "karina",
-        name: "Karina",
-        note: "Performance focus, visual clips, and powerful stage moments.",
-      },
+  id: "karina",
+  name: "Karina",
+  note: "aespa’s leader — sharp stage presence, strong camera awareness, and a surprisingly warm off-stage charm.",
+  pageLabel: "Who is Karina?",
+  appealTitle: "Why MY can’t look away from her",
+  watchTitle: "What to notice in a Karina fancam",
+  contextTitle: "Why Karina feels like aespa’s front door",
+  intro:
+    "Karina is often the first aespa member people notice. aespa fans are called MY, and for many MY, Karina has a very specific kind of charm: she can look almost unreal on stage, but still feel warm and slightly awkward in a human way off stage. That contrast is important. In aespa, where the group image is futuristic, sharp, and a little otherworldly, Karina feels like the member who makes that concept easy to understand at first glance.",
+  whyFansLike: [
+    "A lot of MY talk about Karina’s ‘AI-like’ visual, but what makes her interesting is that she does not feel empty or cold. The stage image is sharp, but her personality outside the stage often feels softer and more playful.",
+    "As aespa’s leader, she gives the group a clear center of gravity. Even when the concept is complicated — avatars, KWANGYA, futuristic styling — Karina makes the performance feel focused.",
+    "Her dancing works well with aespa’s style. The movements are often clean, angular, and powerful, so her controlled posture and strong lines make the group’s sound easier to see with your eyes.",
+  ],
+  watchPoints: [
+    "Watch how she uses stillness. Karina does not always need big movement to look powerful; sometimes the pause before a move is what makes her stand out.",
+    "Pay attention to her eyes and head angles. In aespa stages, small camera-facing details can make the performance feel colder, sharper, or more intense.",
+    "Try noticing the gap between her stage image and her off-stage charm. That contrast is one reason MY often describe her as both unreal and surprisingly relatable.",
+  ],
+  koreanExpression: {
+    hangul: "냉미녀",
+    romanization: "naeng-minyeo",
+    meaning: "a cool-looking beauty; someone with a cold, elegant, sharp visual impression",
+    note:
+      "냉 means cold, and 미녀 means beauty. Fans often use this kind of word for idols who have a calm, sharp, or untouchable image. With Karina, the fun is that her stage image can feel very 냉미녀, while her off-stage personality often feels much warmer.",
+  },
+  culturalContext:
+    "aespa is not a group built only around cuteness or simple freshness. Their image is more futuristic, sleek, and sometimes almost digital. Karina fits that world because she can make the concept look natural instead of forced. For new viewers, she often works like aespa’s front door: you see the sharp visual first, then slowly notice the leadership, the dance control, the camera sense, and the warmer personality underneath.",
+  relatedMediaIds: ["karina-aespa-fancam"],
+},
       {
         id: "winter",
         name: "Winter",

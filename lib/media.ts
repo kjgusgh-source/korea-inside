@@ -39,6 +39,34 @@ export const MEDIA_ITEMS: MediaItem[] = [
     youtubeId: "QGBMQVFNpvI",
     sourceLabel: "Official video from KBS Kpop",
   },
+  {
+    id: "jang-wonyoung-ive-fancam",
+    title: "How Wonyoung turns the camera into part of the stage",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A Jang Wonyoung fancam is a good place to see why her stage image feels so polished: eye contact, posture, timing, and confidence all work together.",
+    cultureNote:
+      "IVE fans are called DIVE. For many DIVE, Wonyoung is not only a visual center. She is one of the clearest examples of IVE’s confident and elegant image — the kind of idol who seems to know exactly where the camera is.",
+    tags: ["IVE", "Jang Wonyoung", "DIVE", "Fancam", "Center"],
+    youtubeId: "whAtUp1akLE",
+    sourceLabel: "YouTube fancam",
+  },
+  {
+    id: "karina-aespa-fancam",
+    title: "Why Karina feels like aespa’s front door",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A Karina fancam is a good way to understand aespa’s sharp, futuristic image — clean lines, strong eye contact, controlled pauses, and a stage presence that feels almost unreal.",
+    cultureNote:
+      "aespa fans are called MY. For many MY, Karina’s charm is the contrast between her cool, AI-like stage image and her warmer, more human off-stage personality.",
+    tags: ["aespa", "Karina", "MY", "Fancam", "Leader"],
+    youtubeId: "90gUAIS-jBQ",
+    sourceLabel: "YouTube fancam",
+  },
 
      {
         id: "our-beloved-summer-first-highlight",
