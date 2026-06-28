@@ -7,6 +7,7 @@ import { getContentHubs } from "../lib/contentHubs";
 import { getMediaItems } from "../lib/media";
 import { getOnStageItems } from "../lib/onStage";
 import { getAllPosts } from "../lib/posts";
+import FeaturedMemberGuides from "../components/FeaturedMemberGuides";
 
 const editorialNotes = [
   "Living Korean language",
@@ -239,6 +240,8 @@ export default function Home() {
           </div>
         </footer>
       </section>
+
+      <FeaturedMemberGuides />
     </main>
   );
 }
