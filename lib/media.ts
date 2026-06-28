@@ -67,7 +67,20 @@ export const MEDIA_ITEMS: MediaItem[] = [
     youtubeId: "90gUAIS-jBQ",
     sourceLabel: "YouTube fancam",
   },
-
+  {
+    id: "jung-kook-bts-fancam",
+    title: "Why Jung Kook still feels like BTS’s golden center",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A Jung Kook fancam is not just about watching a good performer. It shows why fans often see him as someone who grew from BTS’s youngest member into a full solo-stage presence.",
+    cultureNote:
+      "BTS fans are called ARMY. For many ARMY, Jung Kook’s charm is the mix of youthful energy, strong vocals, clean dancing, and the feeling that he is always trying to get better.",
+    tags: ["BTS", "Jung Kook", "ARMY", "Fancam", "Golden Maknae"],
+    youtubeId: "LEX7j8nRXSk",
+    sourceLabel: "YouTube fancam",
+  },
      {
         id: "our-beloved-summer-first-highlight",
         title: "When old feelings return on camera",

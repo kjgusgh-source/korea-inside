@@ -192,9 +192,35 @@ export const KPOP_GROUPS: KpopGroup[] = [
       "Global stages, fan culture, and performances that opened K-pop to many first-time listeners.",
     members: [
       {
-        id: "jungkook",
+        id: "jung-kook",
         name: "Jung Kook",
-        note: "Live stages, dance clips, and vocal performance moments.",
+        note: "BTS’s youngest member, main vocal presence, and the performer fans often call the golden maknae.",
+        pageLabel: "Who is Jung Kook?",
+        appealTitle: "Why ARMY watched him grow up on stage",
+        watchTitle: "What to notice in a Jung Kook fancam",
+        contextTitle: "Why his stage feels bigger than one role",
+        intro:
+          "Jung Kook is one of the easiest BTS members to introduce, but one of the hardest to explain simply. BTS fans are called ARMY, and many ARMY grew up watching him grow too — from the youngest member of the group into a performer who can carry a stage on his own. That is why his fancams feel different from a normal 'good singer, good dancer' clip. You are watching someone with years of BTS stage history behind every small move.",
+        whyFansLike: [
+          "ARMY often call Jung Kook the golden maknae, because he has always been known for doing many things well — singing, dancing, performing, sports, covers, and later solo music too.",
+          "What makes him interesting is that his skill does not feel cold. Even when the performance is polished, there is still a young, sincere, slightly restless energy in the way he moves.",
+          "His voice is a huge part of BTS’s emotional color, but his fancams also remind people that he is not only a vocalist. He performs with his whole body, not just with the microphone.",
+        ],
+        watchPoints: [
+          "Watch how he keeps the energy alive even between the obvious highlight moments. Jung Kook rarely looks like he is just waiting for his part.",
+          "Pay attention to the balance between power and softness. His movement can be sharp, but his expression often keeps the stage from feeling too hard.",
+          "Try watching the clip with his BTS history in mind. For ARMY, part of the emotion is seeing the youngest member who once looked almost shy now owning the stage with confidence.",
+        ],
+        koreanExpression: {
+          hangul: "황금막내",
+          romanization: "hwanggeum-maknae",
+          meaning: "golden youngest member; a maknae who seems good at almost everything",
+          note:
+            "막내 means the youngest member in a group. 황금 means golden. Fans use 황금막내 for Jung Kook because he became known as the youngest BTS member who could sing, dance, perform, and keep improving in many different areas.",
+        },
+        culturalContext:
+          "In K-pop, the maknae is often seen as the youngest member who grows up in front of fans. Jung Kook is one of the clearest examples of that feeling. ARMY did not only watch a performer become famous; they watched a young member slowly become more confident, more skilled, and more independent. That history is why even a single fancam can carry more weight for fans. It is not just a stage clip. It is another small piece of a long growth story.",
+        relatedMediaIds: ["jung-kook-bts-fancam"],
       },
       {
         id: "v",
