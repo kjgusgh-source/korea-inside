@@ -60,6 +60,14 @@ export default function KpopPage() {
             helps visitors find groups, members, fancams, stage words, fan
             culture, and the small moments that make people curious about Korea.
           </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+  <Link
+    href="/kpop/glossary"
+    className="rounded-full border border-[var(--border)] bg-[var(--card)] px-5 py-3 text-sm font-semibold text-[var(--text)] transition hover:-translate-y-0.5 hover:shadow-md"
+  >
+    Open K-pop glossary →
+  </Link>
+</div>
         </section>
 
         <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">
