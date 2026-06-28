@@ -81,6 +81,20 @@ export const MEDIA_ITEMS: MediaItem[] = [
     youtubeId: "LEX7j8nRXSk",
     sourceLabel: "YouTube fancam",
   },
+  {
+    id: "hoshi-seventeen-fancam",
+    title: "Why Hoshi feels like SEVENTEEN’s performance engine",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A Hoshi fancam is a good way to understand SEVENTEEN’s performance identity: sharp timing, playful intensity, and the feeling that the stage is being driven from the inside.",
+    cultureNote:
+      "SEVENTEEN fans are called CARAT. For many CARAT, Hoshi is not only a strong dancer. He is the performance-team leader who carries SEVENTEEN’s tiger-like energy, humor, and stage control all at once.",
+    tags: ["SEVENTEEN", "Hoshi", "CARAT", "Fancam", "Performance"],
+    youtubeId: "KNqeIfpLouQ",
+    sourceLabel: "YouTube fancam",
+  },
      {
         id: "our-beloved-summer-first-highlight",
         title: "When old feelings return on camera",

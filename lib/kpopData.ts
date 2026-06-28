@@ -245,7 +245,33 @@ export const KPOP_GROUPS: KpopGroup[] = [
       {
         id: "hoshi",
         name: "Hoshi",
-        note: "Dance-focused clips, choreography details, and stage power.",
+        note: "SEVENTEEN’s performance-team leader — tiger energy, sharp dancing, and playful stage control.",
+        pageLabel: "Who is Hoshi?",
+        appealTitle: "Why CARAT knows the stage changes when Hoshi turns on",
+        watchTitle: "What to notice in a Hoshi fancam",
+        contextTitle: "Why he feels so SEVENTEEN",
+        intro:
+          "Hoshi is one of the clearest ways to understand SEVENTEEN’s performance side. SEVENTEEN fans are called CARAT, and for many CARAT, Hoshi is the member who makes the group’s dance identity feel alive. He is the performance-team leader, but his charm is not only that he dances well. It is the way he switches on: playful and almost silly one moment, then suddenly sharp, intense, and completely locked into the stage.",
+        whyFansLike: [
+          "CARAT often connect Hoshi with tiger energy. It is partly a joke, partly a real description of how he performs — bright, loud, playful, and suddenly fierce when the music starts.",
+          "As SEVENTEEN’s performance-team leader, he feels like someone who understands the whole shape of a stage, not only his own part. Even in a solo fancam, you can feel that group-performance mindset.",
+          "His charm is the contrast. Off stage, he can feel funny, chaotic, and warm. On stage, the lines get sharper, the eyes change, and the performance feels much more controlled than his playful image might suggest.",
+        ],
+        watchPoints: [
+          "Watch how quickly his expression changes when the performance starts. Hoshi often makes the switch from playful to intense feel almost instant.",
+          "Pay attention to his shoulders, head angles, and timing. His dance does not only look powerful; it often feels very exact.",
+          "Look for the moments where he seems to push the energy of the stage forward. That is one reason CARAT see him as more than just a good dancer.",
+        ],
+        koreanExpression: {
+          hangul: "호랑해",
+          romanization: "horanghae",
+          meaning: "a playful Hoshi phrase mixing tiger and love",
+          note:
+            "Hoshi is strongly connected with tiger jokes and tiger imagery. 호랑해 sounds like 사랑해, which means 'I love you,' but it uses 호랑 from 호랑이, meaning tiger. It is a very Hoshi-like fan expression: funny, cute, and strangely serious at the same time.",
+        },
+        culturalContext:
+          "SEVENTEEN is known for performance as a group, not just individual star power. That is why Hoshi’s role matters. He gives new viewers a way to understand how SEVENTEEN can feel playful and friendly, but still extremely sharp once the stage begins. For CARAT, Hoshi is not only the tiger guy or the funny member. He is one of the people who makes SEVENTEEN’s performance identity feel believable.",
+        relatedMediaIds: ["hoshi-seventeen-fancam"],
       },
       {
         id: "mingyu",
