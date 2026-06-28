@@ -8,6 +8,7 @@ import {
   getKpopMemberById,
 } from "../../../../lib/kpopData";
 import { getMediaItems } from "../../../../lib/media";
+import MoreKpopGuides from "../../../../components/MoreKpopGuides";
 
 type PageProps = {
   params: Promise<{
@@ -218,6 +219,7 @@ export default async function KpopMemberPage({ params }: PageProps) {
           )}
         </section>
       </section>
+      <MoreKpopGuides currentGroupId={group.id} currentMemberId={member.id} />
     </main>
   );
 }
