@@ -1,13 +1,5 @@
 import Link from "next/link";
-import { getKpopGroupById, getKpopMemberById } from "../lib/kpopData";
-
-const publishedMemberIds = [
-  { groupId: "fromis-9", memberId: "song-hayoung" },
-  { groupId: "ive", memberId: "jang-wonyoung" },
-  { groupId: "aespa", memberId: "karina" },
-  { groupId: "bts", memberId: "jung-kook" },
-  { groupId: "seventeen", memberId: "hoshi" },
-];
+import { getMorePublishedMemberGuides } from "../lib/publishedGuides";
 
 type MoreKpopGuidesProps = {
   currentGroupId: string;
@@ -18,22 +10,11 @@ export default function MoreKpopGuides({
   currentGroupId,
   currentMemberId,
 }: MoreKpopGuidesProps) {
-  const guides = publishedMemberIds
-    .filter(
-      (item) =>
-        item.groupId !== currentGroupId || item.memberId !== currentMemberId
-    )
-    .flatMap(({ groupId, memberId }) => {
-      const group = getKpopGroupById(groupId);
-      const member = getKpopMemberById(groupId, memberId);
-
-      if (!group || !member) {
-        return [];
-      }
-
-      return [{ group, member }];
-    })
-    .slice(0, 3);
+  const guides = getMorePublishedMemberGuides(
+    currentGroupId,
+    currentMemberId,
+    3
+  );
 
   if (guides.length === 0) {
     return null;

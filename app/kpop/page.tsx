@@ -2,33 +2,12 @@ import Link from "next/link";
 import SiteHeader from "../../components/SiteHeader";
 import IdolRequestForm from "../../components/IdolRequestForm";
 import KpopExplorer from "../../components/KpopExplorer";
-import {
-  getKpopGroups,
-  getKpopGroupById,
-  getKpopMemberById,
-} from "../../lib/kpopData";
-
-const publishedMemberIds = [
-  { groupId: "fromis-9", memberId: "song-hayoung" },
-  { groupId: "ive", memberId: "jang-wonyoung" },
-  { groupId: "aespa", memberId: "karina" },
-  { groupId: "bts", memberId: "jung-kook" },
-  { groupId: "seventeen", memberId: "hoshi" },
-];
+import { getKpopGroups } from "../../lib/kpopData";
+import { getPublishedMemberGuides } from "../../lib/publishedGuides";
 
 export default function KpopPage() {
   const groups = getKpopGroups();
-
-  const publishedGuides = publishedMemberIds.flatMap(({ groupId, memberId }) => {
-    const group = getKpopGroupById(groupId);
-    const member = getKpopMemberById(groupId, memberId);
-
-    if (!group || !member) {
-      return [];
-    }
-
-    return [{ group, member }];
-  });
+  const publishedGuides = getPublishedMemberGuides();
 
   return (
     <main className="min-h-screen bg-[var(--background)] text-[var(--text)]">

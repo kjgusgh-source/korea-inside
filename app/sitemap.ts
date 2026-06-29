@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getKpopGroups } from "../lib/kpopData";
+import { publishedMemberIds } from "../lib/publishedGuides";
 
 const baseUrl = "https://korea-inside.vercel.app";
 
@@ -52,14 +53,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   );
 
-  const kpopMemberRoutes: MetadataRoute.Sitemap = getKpopGroups().flatMap(
-    (group) =>
-      group.members.map((member) => ({
-        url: `${baseUrl}/kpop/${group.id}/${member.id}`,
-        lastModified: new Date(),
-        changeFrequency: "weekly",
-        priority: 0.75,
-      }))
+  const kpopMemberRoutes: MetadataRoute.Sitemap = publishedMemberIds.map(
+    ({ groupId, memberId }) => ({
+      url: `${baseUrl}/kpop/${groupId}/${memberId}`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.75,
+    })
   );
 
   return [...staticRoutes, ...kpopGroupRoutes, ...kpopMemberRoutes];

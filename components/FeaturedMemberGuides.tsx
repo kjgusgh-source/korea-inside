@@ -1,25 +1,8 @@
 import Link from "next/link";
-import { getKpopGroupById, getKpopMemberById } from "../lib/kpopData";
-
-const featuredMemberIds = [
-  { groupId: "fromis-9", memberId: "song-hayoung" },
-  { groupId: "ive", memberId: "jang-wonyoung" },
-  { groupId: "aespa", memberId: "karina" },
-  { groupId: "bts", memberId: "jung-kook" },
-  { groupId: "seventeen", memberId: "hoshi" },
-];
+import { getPublishedMemberGuides } from "../lib/publishedGuides";
 
 export default function FeaturedMemberGuides() {
-  const featuredMembers = featuredMemberIds.flatMap(({ groupId, memberId }) => {
-    const group = getKpopGroupById(groupId);
-    const member = getKpopMemberById(groupId, memberId);
-
-    if (!group || !member) {
-      return [];
-    }
-
-    return [{ group, member }];
-  });
+  const featuredMembers = getPublishedMemberGuides();
 
   return (
     <section className="mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-16">
