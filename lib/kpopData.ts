@@ -277,7 +277,33 @@ export const KPOP_GROUPS: KpopGroup[] = [
       {
         id: "jimin",
         name: "Jimin",
-        note: "Dance lines, performance details, and emotional stages.",
+        note: "BTS’s emotional performer — known for elegant dance lines, expressive details, and a stage presence that feels soft and intense at once.",
+        pageLabel: "Who is Jimin?",
+        appealTitle: "Why ARMY feels his performance, not just watches it",
+        watchTitle: "What to notice in a Jimin fancam",
+        contextTitle: "Why Jimin shows the emotional side of BTS performance",
+        intro:
+          "Jimin is one of the BTS members who makes performance feel emotional before you even understand the lyrics. BTS fans are called ARMY, and many ARMY talk about Jimin not only as a strong dancer, but as someone who can make movement feel like a feeling. Jung Kook often shows the growth of BTS’s golden maknae, while Jimin shows another side of the group: softness, tension, elegance, and emotional focus all happening on the same stage.",
+        whyFansLike: [
+          "ARMY often notice Jimin’s dance line first. His movements can look soft and light, but they still have control underneath, which makes the stage feel delicate without feeling weak.",
+          "His facial expressions are a big part of his charm. He does not only perform the choreography; he often makes the mood of the song visible through his eyes, timing, and small changes in expression.",
+          "Jimin’s stage presence feels emotional in a very direct way. Even when the performance is powerful, there is often a vulnerable or graceful feeling that makes people keep watching.",
+        ],
+        watchPoints: [
+          "Watch his hands, shoulders, and neck line. Jimin’s details often make the choreography feel more fluid and expressive.",
+          "Pay attention to how his expression changes with the mood of the song. His face often follows the emotion, not just the beat.",
+          "Compare him with Jung Kook’s style if you already watched Jung Kook’s guide. Jung Kook often feels steady and athletic, while Jimin often feels more emotional and dance-line focused.",
+        ],
+        koreanExpression: {
+          hangul: "춤선",
+          romanization: "chumseon",
+          meaning: "dance line; the visible shape and flow of someone’s movement while dancing",
+          note:
+            "춤 means dance, and 선 means line. Korean fans use 춤선 when they talk about how a dancer’s body line looks during movement. With Jimin, this word fits because fans often notice the flow of his arms, shoulders, neck, and overall movement, not only the big dance points.",
+        },
+        culturalContext:
+          "In K-pop, dancing is not only about matching the choreography. Fans also talk about texture: how heavy, light, sharp, soft, elegant, or emotional a member’s movement feels. Jimin is a good example of that. His fancams help new viewers understand why fans care about dance lines and facial expression so much. He shows that a stage can feel powerful without losing softness, and emotional without becoming too dramatic.",
+        relatedMediaIds: ["jimin-bts-fancam"],
       },
     ],
     starterTags: ["Live stage", "Dance", "Global fandom"],

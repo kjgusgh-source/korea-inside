@@ -110,6 +110,20 @@ export const MEDIA_ITEMS: MediaItem[] = [
     sourceLabel: "YouTube fancam",
   },
   {
+  id: "jimin-bts-fancam",
+  title: "Why Jimin makes emotion visible through movement",
+  category: "kpop",
+  categoryLabel: "On Stage",
+  mediaType: "youtube",
+  description:
+    "A Jimin fancam is a good way to understand how emotion, dance lines, facial expression, and stage focus can turn a performance into something that feels almost personal.",
+  cultureNote:
+    "BTS fans are called ARMY. For many ARMY, Jimin’s charm is not only that he dances well. It is the way his movement carries emotion — soft, sharp, elegant, and intense at the same time.",
+  tags: ["BTS", "Jimin", "ARMY", "Fancam", "Dance line"],
+  youtubeId: "2ssijwETM0s",
+  sourceLabel: "YouTube fancam",
+},
+  {
     id: "hoshi-seventeen-fancam",
     title: "Why Hoshi feels like SEVENTEEN’s performance engine",
     category: "kpop",
