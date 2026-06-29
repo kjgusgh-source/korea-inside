@@ -3,6 +3,7 @@ import { getKpopGroupById, getKpopMemberById } from "./kpopData";
 export const publishedMemberIds = [
   { groupId: "fromis-9", memberId: "song-hayoung" },
   { groupId: "ive", memberId: "jang-wonyoung" },
+  { groupId: "ive", memberId: "an-yujin" },
   { groupId: "aespa", memberId: "karina" },
   { groupId: "bts", memberId: "jung-kook" },
   { groupId: "seventeen", memberId: "hoshi" },

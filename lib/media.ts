@@ -54,6 +54,20 @@ export const MEDIA_ITEMS: MediaItem[] = [
     sourceLabel: "YouTube fancam",
   },
   {
+    id: "an-yujin-ive-fancam",
+    title: "Why An Yujin feels like IVE’s steady spark",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "An An Yujin fancam is a good way to see IVE’s bright confidence from a different angle: energetic, steady, expressive, and less princess-like than Wonyoung’s polished center image.",
+    cultureNote:
+      "IVE fans are called DIVE. For many DIVE, Yujin feels like the member who brings leader energy, healthy confidence, and a natural sense of fun to IVE’s stage.",
+    tags: ["IVE", "An Yujin", "DIVE", "Fancam", "Leader"],
+    youtubeId: "Ld6m93MWwV4",
+    sourceLabel: "YouTube fancam",
+  },
+  {
     id: "karina-aespa-fancam",
     title: "Why Karina feels like aespa’s front door",
     category: "kpop",

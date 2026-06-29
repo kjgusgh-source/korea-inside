@@ -90,9 +90,35 @@ export const KPOP_GROUPS: KpopGroup[] = [
       "Glossy stages, viral moments, and idol performances that often travel far beyond Korea.",
     members: [
       {
-        id: "ahn-yujin",
-        name: "Ahn Yujin",
-        note: "Performance clips, variety moments, and confident stages.",
+        id: "an-yujin",
+        name: "An Yujin",
+        note: "IVE’s leader-like spark — bright energy, clean performance, and the kind of confidence that feels natural rather than distant.",
+        pageLabel: "Who is An Yujin?",
+        appealTitle: "Why DIVE trusts her energy",
+        watchTitle: "What to notice in a Yujin fancam",
+        contextTitle: "Why Yujin gives IVE a different kind of confidence",
+        intro:
+          "An Yujin gives IVE a different kind of confidence from Jang Wonyoung. IVE fans are called DIVE, and many DIVE see Yujin as the member who brings a more active, healthy, and grounded energy to the group. If Wonyoung often feels elegant and camera-perfect, Yujin feels more like the spark that keeps the stage moving. She can look polished, but she rarely feels distant.",
+        whyFansLike: [
+          "DIVE often like Yujin because her confidence feels natural. She does not always need to look untouchable; sometimes her charm comes from looking relaxed, bright, and fully present.",
+          "Her stage energy fits IVE well because the group’s image is built around self-confidence. Yujin adds a more lively and direct version of that confidence.",
+          "She also has the kind of presence that makes people trust the stage. Even when the performance is playful or fast, she looks steady, focused, and comfortable leading the mood.",
+        ],
+        watchPoints: [
+          "Watch how she uses her smile. Yujin’s expressions often feel open and energetic, which makes the stage feel less cold and more alive.",
+          "Pay attention to her posture and timing during transitions. She often keeps the performance clean without making it look too stiff.",
+          "Compare her with Wonyoung’s style if you already watched Wonyoung’s guide. Wonyoung often shows IVE’s elegant confidence, while Yujin shows a brighter, more grounded confidence.",
+        ],
+        koreanExpression: {
+          hangul: "리더미",
+          romanization: "rideo-mi",
+          meaning: "leader-like charm or leader energy",
+          note:
+            "리더 means leader, and 미 is often added in Korean fan slang to mean a certain kind of charm or vibe. 리더미 is used when someone naturally gives a steady, responsible, or reliable feeling, even without saying much.",
+        },
+        culturalContext:
+          "IVE’s confidence does not come from only one member or one image. Wonyoung often represents the elegant, polished side of the group, while Yujin helps make IVE feel more active, direct, and easy to connect with. That balance matters. For new viewers, Yujin can make IVE feel less like a distant concept and more like a group with real energy behind the confidence.",
+        relatedMediaIds: ["an-yujin-ive-fancam"],
       },
       {
         id: "jang-wonyoung",
