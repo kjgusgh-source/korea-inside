@@ -197,16 +197,37 @@ export const KPOP_GROUPS: KpopGroup[] = [
     "aespa is not a group built only around cuteness or simple freshness. Their image is more futuristic, sleek, and sometimes almost digital. Karina fits that world because she can make the concept look natural instead of forced. For new viewers, she often works like aespa’s front door: you see the sharp visual first, then slowly notice the leadership, the dance control, the camera sense, and the warmer personality underneath.",
   relatedMediaIds: ["karina-aespa-fancam"],
 },
-      {
-        id: "winter",
-        name: "Winter",
-        note: "Vocals, expressions, and clean performance clips.",
-      },
-      {
-        id: "ningning",
-        name: "Ningning",
-        note: "Vocal highlights, stage details, and live performance moments.",
-      },
+{
+  id: "winter",
+  name: "Winter",
+  note: "aespa’s quiet detail-maker — clean expressions, clear vocal color, and a calm stage charm that becomes stronger the more you watch.",
+  pageLabel: "Who is Winter?",
+  appealTitle: "Why MY keeps noticing the small details",
+  watchTitle: "What to notice in a Winter fancam",
+  contextTitle: "Why Winter balances aespa’s sharper image",
+  intro:
+    "Winter has a different kind of charm from Karina. aespa fans are called MY, and many MY like Winter because she does not always need to look intense to stand out. Karina often gives aespa a strong, futuristic first impression, while Winter can make the group feel cleaner and more minimal. Her expressions are usually smaller, but that is why people replay her clips — the details are easy to miss the first time.",
+  whyFansLike: [
+    "Winter’s charm often feels calm rather than loud. She can look almost expressionless for a second, then change the mood with one small glance or smile.",
+    "Her vocal color is one of the things fans notice quickly. It has a clear, bright feeling that fits aespa’s sharp sound without making the stage feel too heavy.",
+    "She also gives aespa a different kind of balance. While the group’s concept can feel futuristic and intense, Winter’s presence can make it feel simpler, cleaner, and easier to watch.",
+  ],
+  watchPoints: [
+    "Watch her small facial changes. Winter’s charm often comes from tiny shifts, not big reactions.",
+    "Pay attention to her timing. Even when the movement looks simple, she often keeps the line clean and controlled.",
+    "Compare her with Karina’s stage style. Karina often feels powerful and front-facing, while Winter can feel quieter but surprisingly memorable.",
+  ],
+  koreanExpression: {
+    hangul: "담백한 매력",
+    romanization: "dambaekhan maeryeok",
+    meaning: "a clean, simple charm that does not feel overdone",
+    note:
+      "담백하다 is a Korean word often used for food that is clean and not too heavy, but people also use it for a person’s style or charm. For Winter, 담백한 매력 fits because her stage appeal often feels neat, calm, and quietly clear rather than dramatic.",
+  },
+  culturalContext:
+    "aespa’s image is usually strong, sleek, and futuristic. Winter helps that image feel less one-note. She does not have to dominate the screen in a loud way; instead, she gives the group a cleaner texture. For new viewers, a Winter fancam is useful because it shows that aespa’s charm is not only about intensity. Sometimes it is also about restraint, timing, and the small details that make a performance feel polished.",
+  relatedMediaIds: ["winter-aespa-fancam"],
+},
     ],
     starterTags: ["Performance", "Concept", "Fancam"],
   },

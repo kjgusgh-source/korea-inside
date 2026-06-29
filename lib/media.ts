@@ -82,6 +82,20 @@ export const MEDIA_ITEMS: MediaItem[] = [
     sourceLabel: "YouTube fancam",
   },
   {
+    id: "winter-aespa-fancam",
+    title: "Why Winter makes small details feel sharp",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A Winter fancam is a good way to notice aespa’s cleaner, quieter kind of stage power: clear expressions, neat timing, and small details that do not feel overdone.",
+    cultureNote:
+      "aespa fans are called MY. For many MY, Winter’s charm is not always loud or dramatic. She often stands out through a calm face, a clear vocal color, and a stage style that feels simple but precise.",
+    tags: ["aespa", "Winter", "MY", "Fancam", "Stage detail"],
+    youtubeId: "iF9di-AySFo",
+    sourceLabel: "YouTube fancam",
+  },
+  {
     id: "jung-kook-bts-fancam",
     title: "Why Jung Kook still feels like BTS’s golden center",
     category: "kpop",
