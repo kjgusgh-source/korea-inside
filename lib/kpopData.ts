@@ -349,7 +349,33 @@ export const KPOP_GROUPS: KpopGroup[] = [
       {
         id: "mingyu",
         name: "Mingyu",
-        note: "Visual clips, stage moments, and fan-favorite scenes.",
+        note: "SEVENTEEN’s warm visual presence — tall, bright, and surprisingly friendly for someone who stands out so easily.",
+        pageLabel: "Who is Mingyu?",
+        appealTitle: "Why CARAT sees more than just a visual",
+        watchTitle: "What to notice in a Mingyu fancam",
+        contextTitle: "Why Mingyu makes SEVENTEEN feel approachable",
+        intro:
+          "Mingyu is one of the SEVENTEEN members people often notice quickly, even before they know the group well. SEVENTEEN fans are called CARAT, and many CARAT understand why new viewers first react to his height, visuals, and strong screen presence. But the reason fans stay with Mingyu is not only that he looks impressive. His charm is that he can look like a classic K-pop visual on stage, then feel warm, funny, and surprisingly approachable once you see more of him.",
+        whyFansLike: [
+          "CARAT often like Mingyu because his presence is easy to notice, but it does not feel cold. He can fill the screen without making the stage feel distant.",
+          "His charm works well inside SEVENTEEN because the group has a friendly and energetic image. Mingyu adds a big visual impact, but he still feels like part of the team’s warm atmosphere.",
+          "There is also a relaxed confidence in the way he performs. He does not always need to push too hard to stand out; sometimes his size, timing, and open expression already do a lot of the work.",
+        ],
+        watchPoints: [
+          "Watch how he carries his height on stage. Mingyu naturally draws attention, but the important part is how relaxed he looks while doing it.",
+          "Pay attention to his smile and expression between bigger moments. His warmth often comes through in small, casual-looking details.",
+          "Compare him with Hoshi’s style if you already watched Hoshi’s guide. Hoshi often pushes the stage forward with performance energy, while Mingyu gives the stage a bigger and warmer visual presence.",
+        ],
+        koreanExpression: {
+          hangul: "피지컬",
+          romanization: "pijikeol",
+          meaning: "physical presence; often used for height, proportions, or body frame",
+          note:
+            "피지컬 comes from the English word physical, but Korean fans use it a lot when talking about idols with strong height, proportions, or overall body presence. With Mingyu, this word fits because he stands out physically, but his warm image keeps that presence from feeling too intimidating.",
+        },
+        culturalContext:
+          "In K-pop, a visual member is not only someone who looks good in photos. Fans also notice how that member changes the feeling of a group: whether they make the stage feel elegant, bright, powerful, distant, or friendly. Mingyu is useful for new viewers because he shows a warmer version of visual presence. He stands out immediately, but the more you watch him, the more his easygoing and team-friendly charm becomes part of the appeal.",
+        relatedMediaIds: ["mingyu-seventeen-fancam"],
       },
       {
         id: "wonwoo",

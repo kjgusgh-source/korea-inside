@@ -9,6 +9,7 @@ export const publishedMemberIds = [
   { groupId: "bts", memberId: "jung-kook" },
   { groupId: "bts", memberId: "jimin" },
   { groupId: "seventeen", memberId: "hoshi" },
+  { groupId: "seventeen", memberId: "mingyu" },
 ];
 
 export function getPublishedMemberGuides() {

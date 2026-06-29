@@ -137,6 +137,20 @@ export const MEDIA_ITEMS: MediaItem[] = [
     youtubeId: "KNqeIfpLouQ",
     sourceLabel: "YouTube fancam",
   },
+  {
+  id: "mingyu-seventeen-fancam",
+  title: "Why Mingyu feels warm even with a big stage presence",
+  category: "kpop",
+  categoryLabel: "On Stage",
+  mediaType: "youtube",
+  description:
+    "A Mingyu fancam is a good way to understand how a member can stand out through height, visuals, and presence, but still feel friendly and easy to watch.",
+  cultureNote:
+    "SEVENTEEN fans are called CARAT. For many CARAT, Mingyu’s charm is the mix of strong visual presence, warm personality, and the relaxed confidence that makes him feel less distant than a typical ‘perfect visual’ image.",
+  tags: ["SEVENTEEN", "Mingyu", "CARAT", "Fancam", "Visual"],
+  youtubeId: "dILHbP2i4IA",
+  sourceLabel: "YouTube fancam",
+},
      {
         id: "our-beloved-summer-first-highlight",
         title: "When old feelings return on camera",
