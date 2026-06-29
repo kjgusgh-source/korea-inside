@@ -40,6 +40,20 @@ export const MEDIA_ITEMS: MediaItem[] = [
     sourceLabel: "Official video from KBS Kpop",
   },
   {
+  id: "lee-nagyung-fromis9-fancam",
+  title: "Why Lee Nagyung quietly catches your eye",
+  category: "kpop",
+  categoryLabel: "On Stage",
+  mediaType: "youtube",
+  description:
+    "A Lee Nagyung fancam is a good way to notice fromis_9’s softer visual charm: natural expressions, calm focus, and a bright stage mood that does not feel forced.",
+  cultureNote:
+    "fromis_9 fans are called flover. For many flover, Nagyung first stands out through her visual image, but her charm lasts because her expressions feel calm, natural, and easy to watch.",
+  tags: ["fromis_9", "Lee Nagyung", "flover", "Fancam", "Visual"],
+  youtubeId: "WQJISekE0oM",
+  sourceLabel: "YouTube fancam",
+},
+  {
     id: "jang-wonyoung-ive-fancam",
     title: "How Wonyoung turns the camera into part of the stage",
     category: "kpop",

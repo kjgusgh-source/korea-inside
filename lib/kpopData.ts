@@ -72,7 +72,33 @@ export const KPOP_GROUPS: KpopGroup[] = [
       {
         id: "lee-nagyung",
         name: "Lee Nagyung",
-        note: "Visual moments, stage presence, and fan-favorite clips.",
+        note: "fromis_9’s soft visual charm — calm expressions, natural brightness, and a stage presence that grows on you quietly.",
+        pageLabel: "Who is Lee Nagyung?",
+        appealTitle: "Why flover notices her natural charm",
+        watchTitle: "What to notice in a Nagyung fancam",
+        contextTitle: "Why Nagyung fits fromis_9’s softer brightness",
+        intro:
+          "Lee Nagyung is one of the fromis_9 members who can catch your eye without pushing too hard. fromis_9 fans are called flover, and many flover first notice Nagyung because of her visual image. But the longer you watch her, the more her charm feels calm and natural rather than flashy. If Song Hayoung has that bright Habbang energy with a strong vocal-and-dance contrast, Nagyung shows a softer kind of fromis_9 charm: clean expressions, gentle brightness, and a stage mood that feels easy to stay with.",
+        whyFansLike: [
+          "flover often like Nagyung because her charm does not feel forced. She can stand out visually, but her expressions usually feel relaxed and natural.",
+          "Her stage image fits fromis_9’s bright and fresh mood well. She adds a calm visual softness instead of making the performance feel too intense.",
+          "She is also the kind of member who becomes more memorable after a few clips. At first you may notice her face, but later you start noticing the small smiles, eye contact, and gentle timing.",
+        ],
+        watchPoints: [
+          "Watch her expression during the smaller moments, not only during the main part of the choreography.",
+          "Pay attention to how naturally she holds the camera. Nagyung often feels noticeable without making the performance feel heavy.",
+          "Compare her with Song Hayoung’s guide if you already watched it. Hayoung often feels bright and playful with a strong skill contrast, while Nagyung feels calmer, softer, and more quietly visual.",
+        ],
+        koreanExpression: {
+          hangul: "청량",
+          romanization: "cheongnyang",
+          meaning: "fresh, clear, and refreshing; often used for a bright and clean mood",
+          note:
+            "청량 is a Korean word people use for something that feels fresh and clear, like a cool drink or a bright summer mood. In K-pop, fans often use it for songs, styling, or idols who give a clean and refreshing feeling. Nagyung fits this word because her stage charm often feels soft, bright, and easy to watch.",
+        },
+        culturalContext:
+          "fromis_9’s charm is not only about big impact. A lot of their appeal comes from freshness, friendliness, and small details that feel natural. Nagyung helps show that side of the group. She may first be noticed as a visual member, but her real appeal is how calmly she keeps the stage mood bright. For new viewers, her fancam is useful because it shows that K-pop visual charm can be gentle and approachable, not only dramatic or untouchable.",
+        relatedMediaIds: ["lee-nagyung-fromis9-fancam"],
       },
       {
         id: "park-jiwon",
