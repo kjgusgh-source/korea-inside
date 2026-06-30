@@ -4,6 +4,10 @@ export type KpopMember = {
   id: string;
   name: string;
   note: string;
+  pageLabel?: string;
+  appealTitle?: string;
+  watchTitle?: string;
+  contextTitle?: string;
   intro?: string;
   whyFansLike?: string[];
   watchPoints?: string[];
