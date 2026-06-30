@@ -53,6 +53,13 @@ export default function KpopPage() {
   >
     What is a fancam? →
   </Link>
+
+  <Link
+    href="/kpop/what-does-bias-mean"
+    className="rounded-full border border-[var(--border)] bg-[var(--card)] px-5 py-3 text-sm font-semibold text-[var(--text)] transition hover:-translate-y-0.5 hover:shadow-md"
+  >
+    What does bias mean? →
+  </Link>
 </div>
         </section>
 
