@@ -27,6 +27,13 @@ export type KpopGuideArticle = {
       href: "/kpop/what-does-bias-mean",
       label: "Fandom basics",
     },
+    {
+        title: "What is an ending fairy in K-pop?",
+        description:
+          "Learn what ending fairy means, why final close-up shots go viral, and how idols use a few seconds to show charm after a stage.",
+        href: "/kpop/what-is-ending-fairy",
+        label: "Music shows",
+      },
   ];
   
   export function getKpopGuideArticles() {
