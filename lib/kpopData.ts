@@ -103,7 +103,33 @@ export const KPOP_GROUPS: KpopGroup[] = [
       {
         id: "park-jiwon",
         name: "Park Jiwon",
-        note: "Vocals, performance moments, and emotional stage clips.",
+        note: "fromis_9’s vocal spark — bright, expressive, and known for bringing strong singing energy into the group’s fresh sound.",
+        pageLabel: "Who is Park Jiwon?",
+        appealTitle: "Why flover trusts her voice",
+        watchTitle: "What to notice in a Jiwon fancam",
+        contextTitle: "Why Jiwon gives fromis_9 more vocal weight",
+        intro:
+          "Park Jiwon brings a lively vocal energy to fromis_9. fromis_9 fans are called flover, and many flover connect Jiwon with the kind of voice that can make a bright song feel fuller and more emotional. Song Hayoung often shows a playful Habbang charm with strong all-rounder skill, and Lee Nagyung gives fromis_9 a softer visual brightness. Jiwon adds another layer: clear singing presence, expressive energy, and a stage mood that feels open and alive.",
+        whyFansLike: [
+          "flover often like Jiwon because her voice gives fromis_9 songs more lift. Even in a bright performance, her vocal presence can make the stage feel stronger.",
+          "Her charm is not only technical singing. She also performs with an expressive face and a lively mood, so her fancams do not feel flat even when the camera stays on her.",
+          "She helps balance fromis_9’s image. The group can feel fresh, friendly, and soft, but Jiwon adds vocal power that makes the music feel more solid.",
+        ],
+        watchPoints: [
+          "Watch how her expression changes when her vocal part comes in. Jiwon often makes the moment feel more open and emotional.",
+          "Pay attention to her mouth shape, breathing, and face during singing parts. Vocal-focused members often show their effort in small details.",
+          "Compare her with Hayoung and Nagyung if you already watched their guides. Hayoung feels playful and skilled, Nagyung feels soft and natural, while Jiwon gives the group more vocal brightness and power.",
+        ],
+        koreanExpression: {
+          hangul: "보컬",
+          romanization: "bokeol",
+          meaning: "vocal; a member’s singing role or singing presence in a group",
+          note:
+            "보컬 comes from the English word vocal, but Korean fans use it naturally when talking about idols who carry singing parts. With Jiwon, this word matters because her appeal is closely tied to how her voice supports fromis_9’s bright and emotional sound.",
+        },
+        culturalContext:
+          "fromis_9 is often loved for a fresh, friendly, and easy-to-watch charm, but that kind of image still needs strong musical support. Jiwon helps provide that through her vocal presence. For new viewers, her fancam is useful because it shows that fromis_9 is not only about soft visuals or cute brightness. There is also singing energy behind the group’s warmth, and Jiwon is one of the members who makes that easier to hear and feel.",
+        relatedMediaIds: ["park-jiwon-fromis9-fancam"],
       },
     ],
     starterTags: ["Facecam", "Stage", "Expressions"],
@@ -355,7 +381,33 @@ export const KPOP_GROUPS: KpopGroup[] = [
       {
         id: "v",
         name: "V",
-        note: "Expression-focused clips, visuals, and stage mood.",
+        note: "BTS’s mood-maker — known for a deep vocal tone, strong visual identity, and a stage presence that can feel relaxed but unforgettable.",
+        pageLabel: "Who is V?",
+        appealTitle: "Why ARMY remembers his atmosphere",
+        watchTitle: "What to notice in a V fancam",
+        contextTitle: "Why V changes the emotional color of BTS",
+        intro:
+          "V brings a very distinct mood to BTS. BTS fans are called ARMY, and many ARMY first notice him because of his face or his deep voice, but that is only part of the story. What really makes V memorable is the atmosphere he creates. Jung Kook often feels steady and all-round, Jimin often feels emotional and movement-driven, and V gives BTS another texture: a looser, moodier, and more character-based presence that can make even a short moment feel cinematic.",
+        whyFansLike: [
+          "ARMY often like V because he does not need to move the most or sing the highest note to stand out. His charm often comes from the way he changes the mood around him.",
+          "His vocal tone is one of the easiest in BTS to recognize. It is lower and more textured, which helps some songs feel warmer, moodier, or more dramatic.",
+          "He also has a strong face for the camera. Small expressions, eye contact, or even a quiet pause can make his fancams feel memorable without looking forced.",
+        ],
+        watchPoints: [
+          "Watch his facial expressions closely. V often changes the feeling of a moment with very small choices rather than big reactions.",
+          "Pay attention to how his voice and image work together. His deeper tone often matches the mood he creates on stage.",
+          "Compare him with Jung Kook and Jimin if you already watched their guides. Jung Kook often feels steady and athletic, Jimin feels emotional and fluid, while V feels more atmospheric and character-driven.",
+        ],
+        koreanExpression: {
+          hangul: "분위기",
+          romanization: "bunwigi",
+          meaning: "mood, aura, or atmosphere",
+          note:
+            "분위기 is a common Korean word for the feeling or mood someone gives off. Fans use it a lot when an idol has a strong aura that changes how a stage feels. With V, this word fits well because his appeal often comes from the atmosphere he creates, not only from choreography or line distribution.",
+        },
+        culturalContext:
+          "In K-pop, fans do not only talk about skill in a technical way. They also talk about feeling: who changes the mood, who creates emotional texture, and who leaves a strong impression even in a short shot. V is a good example of that. He shows why atmosphere matters so much in idol performance. For new viewers, a V fancam is useful because it explains how presence can work through expression, tone, and mood, not just through big performance moments.",
+        relatedMediaIds: ["v-bts-fancam"],
       },
       {
         id: "jimin",
@@ -463,7 +515,33 @@ export const KPOP_GROUPS: KpopGroup[] = [
       {
         id: "wonwoo",
         name: "Wonwoo",
-        note: "Low-tone parts, calm presence, and performance clips.",
+        note: "SEVENTEEN’s calm aura — low voice, quiet confidence, and a stage presence that feels steady without being loud.",
+        pageLabel: "Who is Wonwoo?",
+        appealTitle: "Why CARAT notices his quiet presence",
+        watchTitle: "What to notice in a Wonwoo fancam",
+        contextTitle: "Why Wonwoo adds calm weight to SEVENTEEN",
+        intro:
+          "Wonwoo brings a quieter kind of presence to SEVENTEEN. SEVENTEEN fans are called CARAT, and many CARAT like Wonwoo because he does not need to be the loudest member to stand out. Hoshi often pushes the stage forward with performance energy, and Mingyu gives the group a warm visual presence. Wonwoo adds something different: calm focus, a low voice, and a steady mood that makes the performance feel more grounded.",
+        whyFansLike: [
+          "CARAT often like Wonwoo because his charm feels calm and controlled. He does not overdo his expressions, but that restraint can make him feel even more memorable.",
+          "His low voice gives SEVENTEEN another texture. In a group with bright energy and strong performance, Wonwoo’s tone can make a song feel deeper and more balanced.",
+          "He also has a quiet kind of confidence. Even when he is not trying to dominate the camera, his posture, gaze, and timing can make people keep watching.",
+        ],
+        watchPoints: [
+          "Watch his eyes and small expression changes. Wonwoo often works with subtle details rather than big reactions.",
+          "Pay attention to his stillness. Sometimes the way he holds a moment is what makes his stage presence feel strong.",
+          "Compare him with Hoshi and Mingyu if you already watched their guides. Hoshi feels intense and performance-driven, Mingyu feels warm and visually open, while Wonwoo feels calmer and more atmospheric.",
+        ],
+        koreanExpression: {
+          hangul: "저음",
+          romanization: "jeo-eum",
+          meaning: "low tone or low-pitched voice",
+          note:
+            "저 means low, and 음 means sound or note. Korean fans use 저음 when they talk about a voice that feels deep, low, or calm. With Wonwoo, this word fits because his lower tone is one of the things that makes his presence feel steady and memorable.",
+        },
+        culturalContext:
+          "SEVENTEEN is often known for bright teamwork, strong performance, and friendly energy. Wonwoo shows another side of that balance. He proves that a member does not have to be loud or dramatic to leave an impression. In K-pop, fans often notice the members who create contrast inside a group. Wonwoo’s calm aura and low voice give SEVENTEEN a deeper texture, making the group feel more layered rather than only energetic.",
+        relatedMediaIds: ["wonwoo-seventeen-fancam"],
       },
     ],
     starterTags: ["Choreography", "Group stage", "Performance"],

@@ -53,6 +53,20 @@ export const MEDIA_ITEMS: MediaItem[] = [
   youtubeId: "WQJISekE0oM",
   sourceLabel: "YouTube fancam",
 },
+{
+  id: "park-jiwon-fromis9-fancam",
+  title: "Why Park Jiwon brings vocal power to fromis_9",
+  category: "kpop",
+  categoryLabel: "On Stage",
+  mediaType: "youtube",
+  description:
+    "A Park Jiwon fancam is a good way to notice fromis_9’s vocal energy: bright expression, strong singing presence, and a stage mood that feels open and lively.",
+  cultureNote:
+    "fromis_9 fans are called flover. For many flover, Jiwon stands out because she brings a strong vocal presence to fromis_9 while still matching the group’s bright and friendly image.",
+  tags: ["fromis_9", "Park Jiwon", "flover", "Fancam", "Vocal"],
+  youtubeId: "NFKhp4ftcEY",
+  sourceLabel: "YouTube fancam",
+},
   {
     id: "jang-wonyoung-ive-fancam",
     title: "How Wonyoung turns the camera into part of the stage",
@@ -165,6 +179,20 @@ export const MEDIA_ITEMS: MediaItem[] = [
   youtubeId: "2ssijwETM0s",
   sourceLabel: "YouTube fancam",
 },
+{
+  id: "v-bts-fancam",
+  title: "Why V can change the mood of a stage so easily",
+  category: "kpop",
+  categoryLabel: "On Stage",
+  mediaType: "youtube",
+  description:
+    "A V fancam is a good way to notice how one member can change the feeling of a performance through voice, expression, and quiet but memorable stage presence.",
+  cultureNote:
+    "BTS fans are called ARMY. For many ARMY, V stands out through his deep vocal tone, strong visual identity, and the way he can make a stage feel moody, playful, or dramatic with just a small change in expression.",
+  tags: ["BTS", "V", "ARMY", "Fancam", "Mood"],
+  youtubeId: "c7Xs9k1C8U0",
+  sourceLabel: "Official stage video",
+},
   {
     id: "hoshi-seventeen-fancam",
     title: "Why Hoshi feels like SEVENTEEN’s performance engine",
@@ -191,6 +219,20 @@ export const MEDIA_ITEMS: MediaItem[] = [
     "SEVENTEEN fans are called CARAT. For many CARAT, Mingyu’s charm is the mix of strong visual presence, warm personality, and the relaxed confidence that makes him feel less distant than a typical ‘perfect visual’ image.",
   tags: ["SEVENTEEN", "Mingyu", "CARAT", "Fancam", "Visual"],
   youtubeId: "dILHbP2i4IA",
+  sourceLabel: "YouTube fancam",
+},
+{
+  id: "wonwoo-seventeen-fancam",
+  title: "Why Wonwoo feels calm but hard to ignore",
+  category: "kpop",
+  categoryLabel: "On Stage",
+  mediaType: "youtube",
+  description:
+    "A Wonwoo fancam is a good way to notice SEVENTEEN’s quieter kind of presence: calm expressions, deep tone, controlled energy, and a stage mood that feels steady rather than loud.",
+  cultureNote:
+    "SEVENTEEN fans are called CARAT. For many CARAT, Wonwoo’s charm is his calm aura, low voice, and the way he can stand out without pushing for attention.",
+  tags: ["SEVENTEEN", "Wonwoo", "CARAT", "Fancam", "Calm aura"],
+  youtubeId: "hWEbQwhyDnM",
   sourceLabel: "YouTube fancam",
 },
      {
