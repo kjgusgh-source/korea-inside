@@ -8,6 +8,7 @@ import { getMediaItems } from "../lib/media";
 import { getOnStageItems } from "../lib/onStage";
 import { getAllPosts } from "../lib/posts";
 import FeaturedMemberGuides from "../components/FeaturedMemberGuides";
+import FeaturedKpopArticles from "../components/FeaturedKpopArticles";
 
 const editorialNotes = [
   "Living Korean language",
@@ -241,6 +242,8 @@ export default function Home() {
         </footer>
       </section>
 
+      <FeaturedKpopArticles />
+      
       <FeaturedMemberGuides />
     </main>
   );
