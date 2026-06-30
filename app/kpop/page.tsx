@@ -4,10 +4,12 @@ import IdolRequestForm from "../../components/IdolRequestForm";
 import KpopExplorer from "../../components/KpopExplorer";
 import { getKpopGroups } from "../../lib/kpopData";
 import { getPublishedMemberGuides } from "../../lib/publishedGuides";
+import { getKpopGuideArticles } from "../../lib/kpopGuideArticles";
 
 export default function KpopPage() {
   const groups = getKpopGroups();
   const publishedGuides = getPublishedMemberGuides();
+  const guideArticles = getKpopGuideArticles();
 
   return (
     <main className="min-h-screen bg-[var(--background)] text-[var(--text)]">
@@ -39,28 +41,48 @@ export default function KpopPage() {
             helps visitors find groups, members, fancams, stage words, fan
             culture, and the small moments that make people curious about Korea.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-  <Link
-    href="/kpop/glossary"
-    className="rounded-full border border-[var(--border)] bg-[var(--card)] px-5 py-3 text-sm font-semibold text-[var(--text)] transition hover:-translate-y-0.5 hover:shadow-md"
-  >
-    Open K-pop glossary →
-  </Link>
+        </section>
 
-  <Link
-    href="/kpop/what-is-a-fancam"
-    className="rounded-full border border-[var(--border)] bg-[var(--card)] px-5 py-3 text-sm font-semibold text-[var(--text)] transition hover:-translate-y-0.5 hover:shadow-md"
-  >
-    What is a fancam? →
-  </Link>
+        <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+            K-pop starter guides
+          </p>
 
-  <Link
-    href="/kpop/what-does-bias-mean"
-    className="rounded-full border border-[var(--border)] bg-[var(--card)] px-5 py-3 text-sm font-semibold text-[var(--text)] transition hover:-translate-y-0.5 hover:shadow-md"
-  >
-    What does bias mean? →
-  </Link>
-</div>
+          <h2 className="mt-3 max-w-3xl text-3xl font-semibold leading-tight">
+            New to K-pop? Start with the words fans use every day.
+          </h2>
+
+          <p className="mt-4 max-w-3xl text-base leading-8 text-[var(--muted)]">
+            These short guides explain the words and habits that appear again
+            and again in K-pop comments, fancams, member guides, and fan
+            conversations.
+          </p>
+
+          <div className="mt-8 grid gap-5 md:grid-cols-3">
+            {guideArticles.map((article) => (
+              <Link
+                key={article.href}
+                href={article.href}
+                className="group rounded-[1.5rem] border border-[var(--border)] bg-[var(--card)] p-5 transition hover:-translate-y-1 hover:shadow-md"
+              >
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
+                  {article.label}
+                </p>
+
+                <h3 className="mt-3 text-xl font-semibold text-[var(--text)]">
+                  {article.title}
+                </h3>
+
+                <p className="mt-3 text-sm leading-6 text-[var(--muted)]">
+                  {article.description}
+                </p>
+
+                <p className="mt-4 text-sm font-semibold text-[var(--accent)]">
+                  Read guide →
+                </p>
+              </Link>
+            ))}
+          </div>
         </section>
 
         <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">

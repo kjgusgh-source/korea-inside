@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getKpopGroups } from "../lib/kpopData";
 import { publishedMemberIds } from "../lib/publishedGuides";
+import { getKpopGuideArticles } from "../lib/kpopGuideArticles";
 
 const baseUrl = "https://korea-inside.vercel.app";
 
@@ -18,24 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.9,
     },
-    {
-      url: `${baseUrl}/kpop/glossary`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/kpop/what-is-a-fancam`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/kpop/what-does-bias-mean`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
+   
     {
       url: `${baseUrl}/about`,
       lastModified: new Date(),
@@ -55,6 +39,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.4,
     },
   ];
+  const kpopGuideRoutes: MetadataRoute.Sitemap = getKpopGuideArticles().map(
+    (article) => ({
+      url: `${baseUrl}${article.href}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    })
+  );
 
   const kpopGroupRoutes: MetadataRoute.Sitemap = getKpopGroups().map(
     (group) => ({
@@ -74,5 +66,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   );
 
-  return [...staticRoutes, ...kpopGroupRoutes, ...kpopMemberRoutes];
+  return [
+    ...staticRoutes,
+    ...kpopGuideRoutes,
+    ...kpopGroupRoutes,
+    ...kpopMemberRoutes,
+  ];
 }
