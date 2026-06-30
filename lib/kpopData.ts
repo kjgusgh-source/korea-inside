@@ -280,6 +280,37 @@ export const KPOP_GROUPS: KpopGroup[] = [
     "aespa’s image is usually strong, sleek, and futuristic. Winter helps that image feel less one-note. She does not have to dominate the screen in a loud way; instead, she gives the group a cleaner texture. For new viewers, a Winter fancam is useful because it shows that aespa’s charm is not only about intensity. Sometimes it is also about restraint, timing, and the small details that make a performance feel polished.",
   relatedMediaIds: ["winter-aespa-fancam"],
 },
+{
+  id: "ningning",
+  name: "Ningning",
+  note: "aespa’s bold vocal color — a Chinese member with strong high notes, expressive confidence, and a stage charm that feels bright and fearless.",
+  pageLabel: "Who is Ningning?",
+  appealTitle: "Why MY remembers her voice and confidence",
+  watchTitle: "What to notice in a Ningning fancam",
+  contextTitle: "Why Ningning adds color to aespa’s futuristic image",
+  intro:
+    "Ningning brings a bold and colorful energy to aespa. aespa fans are called MY, and many MY notice her because her voice and expressions feel very present on stage. She is aespa’s Chinese member, and that international background adds another layer to the group’s image. Karina often gives aespa a sharp first impression, Winter brings clean and quiet detail, and Ningning adds a more expressive vocal color — bright, confident, and hard to ignore once her part begins.",
+  whyFansLike: [
+    "MY often like Ningning because her presence feels bold without looking forced. She can make a short part feel memorable through her voice, expression, and confidence.",
+    "Her vocal color is one of aespa’s strongest points. When a high note or powerful line comes in, Ningning can make the stage feel bigger and more dramatic.",
+    "She also gives aespa a different kind of charm. While the group’s concept can feel sleek and futuristic, Ningning adds warmth, color, and a more expressive feeling.",
+  ],
+  watchPoints: [
+    "Watch how her expression changes when her vocal part comes in. Ningning often performs with her face as much as with her voice.",
+    "Pay attention to her confidence during high-energy moments. She can make the stage feel brighter and more open.",
+    "Compare her with Karina and Winter if you already watched their guides. Karina feels sharp and powerful, Winter feels clean and restrained, while Ningning feels more colorful and vocally expressive.",
+  ],
+  koreanExpression: {
+    hangul: "고음",
+    romanization: "go-eum",
+    meaning: "high note; a high-pitched vocal part in a song",
+    note:
+      "고 means high, and 음 means sound or note. Korean fans often talk about 고음 when a singer reaches a strong high note or carries an impressive vocal part. With Ningning, this word fits because her vocal moments often help aespa’s songs feel bigger and more dramatic.",
+  },
+  culturalContext:
+    "aespa’s image is futuristic, sleek, and sometimes almost digital, but the group still needs human color to make that world feel alive. Ningning helps with that. As aespa’s Chinese member, she also shows how K-pop groups can bring different backgrounds into one team identity. For new viewers, a Ningning fancam is useful because it shows that aespa is not only about sharp visuals or concept. It is also about voice, confidence, and the expressive moments that make a performance feel vivid.",
+  relatedMediaIds: ["ningning-aespa-fancam"],
+},
     ],
     starterTags: ["Performance", "Concept", "Fancam"],
   },

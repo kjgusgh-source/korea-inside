@@ -8,6 +8,7 @@ export const publishedMemberIds = [
   { groupId: "ive", memberId: "rei" },
   { groupId: "aespa", memberId: "karina" },
   { groupId: "aespa", memberId: "winter" },
+  { groupId: "aespa", memberId: "ningning" },
   { groupId: "bts", memberId: "jung-kook" },
   { groupId: "bts", memberId: "jimin" },
   { groupId: "seventeen", memberId: "hoshi" },

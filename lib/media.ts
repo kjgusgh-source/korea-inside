@@ -124,6 +124,20 @@ export const MEDIA_ITEMS: MediaItem[] = [
     sourceLabel: "YouTube fancam",
   },
   {
+    id: "ningning-aespa-fancam",
+    title: "Why Ningning gives aespa a bold vocal color",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A Ningning fancam is a good way to notice aespa’s more colorful side: confident expressions, strong vocal presence, and a stage mood that feels bright and bold.",
+    cultureNote:
+      "aespa fans are called MY. For many MY, Ningning stands out as aespa’s Chinese member with a powerful vocal color, expressive confidence, and a bold charm that adds another layer to the group’s futuristic image.",
+    tags: ["aespa", "Ningning", "MY", "Fancam", "Vocal"],
+    youtubeId: "5rbw6h_jM0Y",
+    sourceLabel: "YouTube fancam",
+  },
+  {
     id: "jung-kook-bts-fancam",
     title: "Why Jung Kook still feels like BTS’s golden center",
     category: "kpop",
