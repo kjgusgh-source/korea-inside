@@ -46,6 +46,13 @@ export default function KpopPage() {
   >
     Open K-pop glossary →
   </Link>
+
+  <Link
+    href="/kpop/what-is-a-fancam"
+    className="rounded-full border border-[var(--border)] bg-[var(--card)] px-5 py-3 text-sm font-semibold text-[var(--text)] transition hover:-translate-y-0.5 hover:shadow-md"
+  >
+    What is a fancam? →
+  </Link>
 </div>
         </section>
 
