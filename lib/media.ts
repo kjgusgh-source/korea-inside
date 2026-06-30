@@ -82,6 +82,20 @@ export const MEDIA_ITEMS: MediaItem[] = [
     sourceLabel: "YouTube fancam",
   },
   {
+    id: "rei-ive-fancam",
+    title: "Why Rei gives IVE a softer, unique color",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A Rei fancam is a good way to notice IVE’s softer and more unique side: calm expressions, a distinct tone, and a charm that feels different from the group’s more polished confidence.",
+    cultureNote:
+      "IVE fans are called DIVE. For many DIVE, Rei’s charm is her unique color inside IVE — cute but calm, soft but memorable, and especially noticeable through her voice, rap tone, and gentle stage mood.",
+    tags: ["IVE", "Rei", "DIVE", "Fancam", "Unique tone"],
+    youtubeId: "frTP-_d48iE",
+    sourceLabel: "YouTube fancam",
+  },
+  {
     id: "karina-aespa-fancam",
     title: "Why Karina feels like aespa’s front door",
     category: "kpop",

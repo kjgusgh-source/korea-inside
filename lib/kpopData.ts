@@ -180,7 +180,33 @@ export const KPOP_GROUPS: KpopGroup[] = [
       {
         id: "rei",
         name: "Rei",
-        note: "Rap parts, cute moments, and fan-loved clips.",
+        note: "IVE’s soft unique color — calm expressions, cute charm, and a rap tone that makes her stand out without trying too hard.",
+        pageLabel: "Who is Rei?",
+        appealTitle: "Why DIVE remembers her unique color",
+        watchTitle: "What to notice in a Rei fancam",
+        contextTitle: "Why Rei gives IVE a softer side",
+        intro:
+          "Rei brings a different kind of charm to IVE. IVE fans are called DIVE, and many DIVE like Rei because she does not feel like a copy of the group’s more polished image. Jang Wonyoung often shows IVE’s elegant confidence, and An Yujin brings bright leader energy. Rei feels softer, calmer, and a little more unexpected. Her charm is not loud, but once you notice her tone, expressions, and cute way of carrying herself, she becomes easy to remember.",
+        whyFansLike: [
+          "DIVE often like Rei because her charm feels unique inside IVE. She has a soft and slightly dreamy mood that makes her stand out from the group’s sharper confidence.",
+          "Her voice and rap tone are a big part of her color. Even when her part is short, it can feel memorable because her delivery has a different texture.",
+          "She also has a cute, natural character that fans enjoy. It does not feel like forced aegyo; it feels more like a calm, slightly shy charm that appears in small moments.",
+        ],
+        watchPoints: [
+          "Watch her expressions during transitions. Rei often stands out through small, calm details rather than big dramatic reactions.",
+          "Pay attention to her tone and rhythm when her part comes in. Her delivery can change the texture of the song for a moment.",
+          "Compare her with Wonyoung and Yujin if you already watched their guides. Wonyoung feels elegant, Yujin feels bright and grounded, while Rei gives IVE a softer and more unique color.",
+        ],
+        koreanExpression: {
+          hangul: "음색",
+          romanization: "eumsaek",
+          meaning: "vocal tone or color; the unique sound of someone’s voice",
+          note:
+            "음색 literally means the color of a sound. Korean fans use this word when a singer or rapper has a voice that feels easy to recognize. With Rei, 음색 fits because her voice and rap tone help her stand out inside IVE without needing to overpower the stage.",
+        },
+        culturalContext:
+          "IVE’s image is often described through confidence, elegance, and a polished stage mood. Rei adds another layer to that. She shows that a member can stand out not only by being the strongest center or the loudest performer, but by having a clear personal color. For new viewers, Rei is useful because she makes IVE feel more varied: still confident, but also softer, cuter, and more individual.",
+        relatedMediaIds: ["rei-ive-fancam"],
       },
     ],
     starterTags: ["Ending fairy", "Viral clips", "Stage styling"],

@@ -5,6 +5,7 @@ export const publishedMemberIds = [
   { groupId: "fromis-9", memberId: "lee-nagyung" },
   { groupId: "ive", memberId: "jang-wonyoung" },
   { groupId: "ive", memberId: "an-yujin" },
+  { groupId: "ive", memberId: "rei" },
   { groupId: "aespa", memberId: "karina" },
   { groupId: "aespa", memberId: "winter" },
   { groupId: "bts", memberId: "jung-kook" },
