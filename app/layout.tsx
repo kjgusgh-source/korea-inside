@@ -69,12 +69,10 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="light">
       <body className={`${inter.variable} ${playfair.variable}`}>
-        {children}
-        <SiteFooter />
+  {children}
+  <SiteFooter />
 
-        {process.env.NEXT_PUBLIC_GA_ID && (
-  <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
-)}
+  <GoogleAnalytics gaId="G-S0KL42RWE7" />
       </body>
     </html>
   );
