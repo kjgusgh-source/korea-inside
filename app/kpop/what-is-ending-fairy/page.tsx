@@ -1,18 +1,109 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "../../../components/SiteHeader";
+import JsonLd from "../../../components/JsonLd";
 import { getPublishedMemberGuides } from "../../../lib/publishedGuides";
 
+const siteUrl = "https://haemilkorea.com";
+const pageUrl = `${siteUrl}/kpop/what-is-ending-fairy`;
+
+const pageTitle =
+  "What Is an Ending Fairy in K-pop? | Meaning, Viral Moments & Fan Culture";
+const pageDescription =
+  "A friendly guide to K-pop ending fairy moments, why they go viral, and how idols use the final camera shot after a music show stage.";
+
 export const metadata: Metadata = {
-  title: "What is an ending fairy in K-pop?",
-  description:
-    "A friendly guide to K-pop ending fairy moments, why they go viral, and how idols use the final camera shot after a music show stage.",
+  title: pageTitle,
+  description: pageDescription,
+  alternates: {
+    canonical: "/kpop/what-is-ending-fairy",
+  },
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
+    siteName: "HAEMIL",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: pageTitle,
+    description: pageDescription,
+  },
 };
 
 export default function WhatIsEndingFairyPage() {
   const relatedGuides = getPublishedMemberGuides().slice(0, 4);
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: pageTitle,
+      description: pageDescription,
+      url: pageUrl,
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": pageUrl,
+      },
+      author: {
+        "@type": "Organization",
+        name: "HAEMIL",
+        url: siteUrl,
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "HAEMIL",
+        url: siteUrl,
+      },
+      inLanguage: "en",
+      about: [
+        {
+          "@type": "Thing",
+          name: "K-pop ending fairy",
+        },
+        {
+          "@type": "Thing",
+          name: "K-pop music shows",
+        },
+        {
+          "@type": "Thing",
+          name: "Korean fan culture",
+        },
+        {
+          "@type": "Thing",
+          name: "Viral K-pop stage moments",
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: siteUrl,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "K-pop",
+          item: `${siteUrl}/kpop`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "What is an ending fairy?",
+          item: pageUrl,
+        },
+      ],
+    },
+  ];
 
   return (
+    <>
+      <JsonLd data={structuredData} />
     <main className="min-h-screen bg-[var(--background)] text-[var(--text)]">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 py-6 md:px-8 md:py-8">
         <SiteHeader />
@@ -243,5 +334,6 @@ export default function WhatIsEndingFairyPage() {
         </section>
       </div>
     </main>
+    </>
   );
 }
