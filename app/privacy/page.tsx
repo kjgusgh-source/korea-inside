@@ -4,7 +4,7 @@ import SiteHeader from "../../components/SiteHeader";
 export const metadata: Metadata = {
   title: "Privacy Policy | HAEMIL",
   description:
-    "Privacy policy for HAEMIL, including how visitor requests and submitted information are handled.",
+    "Privacy policy for HAEMIL, including how visitor requests, analytics, and submitted information are handled.",
 };
 
 export default function PrivacyPage() {
@@ -64,6 +64,27 @@ export default function PrivacyPage() {
               HAEMIL may embed or link to videos from platforms such as YouTube.
               Those platforms may process data according to their own privacy
               policies.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-semibold text-[var(--text)]">
+              Google Analytics
+            </h2>
+            <p className="mt-3">
+              HAEMIL uses Google Analytics to understand how visitors use this
+              website, such as which pages are viewed, how visitors move through
+              the site, and general device or browser information. This helps us
+              improve the content, layout, and user experience.
+            </p>
+            <p className="mt-3">
+              Google Analytics may collect information through cookies or
+              similar technologies. HAEMIL does not use Google Analytics to
+              personally identify individual visitors.
+            </p>
+            <p className="mt-3">
+              Visitors can manage or block cookies through their browser
+              settings.
             </p>
           </section>
 
