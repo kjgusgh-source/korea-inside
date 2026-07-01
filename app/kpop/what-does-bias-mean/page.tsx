@@ -1,18 +1,114 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "../../../components/SiteHeader";
+import JsonLd from "../../../components/JsonLd";
 import { getPublishedMemberGuides } from "../../../lib/publishedGuides";
 
-export const metadata: Metadata = {
-  title: "What does bias mean in K-pop?",
-  description:
-    "A friendly guide to the meaning of bias in K-pop, including bias wrecker, choe-ae, cha-ae, and how fans talk about their favorite idols.",
-};
+const siteUrl = "https://haemilkorea.com";
+const pageUrl = `${siteUrl}/kpop/what-does-bias-mean`;
+
+const pageTitle =
+  "What Does Bias Mean in K-pop? | Bias Wrecker, Choe-ae & Fan Words";
+const pageDescription =
+  "A friendly guide to the meaning of bias in K-pop, including bias wrecker, ultimate bias, choe-ae, cha-ae, and how fans talk about their favorite idols.";
+
+  export const metadata: Metadata = {
+    title: pageTitle,
+    description: pageDescription,
+    alternates: {
+      canonical: "/kpop/what-does-bias-mean",
+    },
+    openGraph: {
+      title: pageTitle,
+      description: pageDescription,
+      url: pageUrl,
+      siteName: "HAEMIL",
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: pageTitle,
+      description: pageDescription,
+    },
+  };
 
 export default function WhatDoesBiasMeanPage() {
   const relatedGuides = getPublishedMemberGuides().slice(0, 4);
 
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: pageTitle,
+      description: pageDescription,
+      url: pageUrl,
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": pageUrl,
+      },
+      author: {
+        "@type": "Organization",
+        name: "HAEMIL",
+        url: siteUrl,
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "HAEMIL",
+        url: siteUrl,
+      },
+      inLanguage: "en",
+      about: [
+        {
+          "@type": "Thing",
+          name: "K-pop bias",
+        },
+        {
+          "@type": "Thing",
+          name: "Bias wrecker",
+        },
+        {
+          "@type": "Thing",
+          name: "Korean fan culture",
+        },
+        {
+          "@type": "Thing",
+          name: "Choe-ae",
+        },
+        {
+          "@type": "Thing",
+          name: "Cha-ae",
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: siteUrl,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "K-pop",
+          item: `${siteUrl}/kpop`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "What does bias mean?",
+          item: pageUrl,
+        },
+      ],
+    },
+  ];
   return (
+    <>
+      <JsonLd data={structuredData} />
+
     <main className="min-h-screen bg-[var(--background)] text-[var(--text)]">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 py-6 md:px-8 md:py-8">
         <SiteHeader />
@@ -264,5 +360,6 @@ export default function WhatDoesBiasMeanPage() {
         </section>
       </div>
     </main>
+    </>
   );
 }
