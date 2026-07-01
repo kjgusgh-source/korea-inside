@@ -9,6 +9,8 @@ import {
 } from "../../../../lib/kpopData";
 import { getMediaItems } from "../../../../lib/media";
 import MoreKpopGuides from "../../../../components/MoreKpopGuides";
+import JsonLd from "../../../../components/JsonLd";
+import type { Metadata } from "next";
 
 type PageProps = {
   params: Promise<{
@@ -26,22 +28,42 @@ export function generateStaticParams() {
   );
 }
 
-export async function generateMetadata({ params }: PageProps) {
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
   const { group: groupId, member: memberId } = await params;
   const group = getKpopGroupById(groupId);
   const member = getKpopMemberById(groupId, memberId);
 
   if (!group || !member) {
     return {
-      title: "K-pop Member | HAEMIL",
+      title: "K-pop Member Guide | HAEMIL",
     };
   }
 
+  const title = `${member.name} ${group.name} Guide | Fancam, Stage Charm & Korean Fan Words`;
+  const description =
+    member.intro ??
+    `A friendly guide to ${member.name} of ${group.name}, including stage charm, fancam points, Korean fan expressions, and cultural context.`;
+
   return {
-    title: `${member.name} from ${group.name} | HAEMIL`,
-    description:
-      member.intro ??
-      `${member.name} from ${group.name}: fancams, performance notes, Korean expressions, and cultural context.`,
+    title,
+    description,
+    alternates: {
+      canonical: `/kpop/${group.id}/${member.id}`,
+    },
+    openGraph: {
+      title,
+      description,
+      url: `https://haemilkorea.com/kpop/${group.id}/${member.id}`,
+      siteName: "HAEMIL",
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
   };
 }
 
@@ -57,6 +79,82 @@ export default async function KpopMemberPage({ params }: PageProps) {
   const relatedMediaItems = getMediaItems().filter((item) =>
     (member.relatedMediaIds ?? []).includes(item.id)
   );
+  const siteUrl = "https://haemilkorea.com";
+const pageUrl = `${siteUrl}/kpop/${group.id}/${member.id}`;
+
+const pageTitle = `${member.name} ${group.name} Guide | Fancam, Stage Charm & Korean Fan Words`;
+const pageDescription =
+  member.intro ??
+  `A friendly guide to ${member.name} of ${group.name}, including stage charm, fancam points, Korean fan expressions, and cultural context.`;
+
+const structuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": pageUrl,
+    },
+    author: {
+      "@type": "Organization",
+      name: "HAEMIL",
+      url: siteUrl,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "HAEMIL",
+      url: siteUrl,
+    },
+    inLanguage: "en",
+    about: [
+      {
+        "@type": "Thing",
+        name: "K-pop",
+      },
+      {
+        "@type": "Thing",
+        name: group.name,
+      },
+      {
+        "@type": "Thing",
+        name: member.name,
+      },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "K-pop",
+        item: `${siteUrl}/kpop`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: group.name,
+        item: `${siteUrl}/kpop/${group.id}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        name: member.name,
+        item: pageUrl,
+      },
+    ],
+  },
+];
 
   const intro =
     member.intro ??
@@ -74,6 +172,8 @@ export default async function KpopMemberPage({ params }: PageProps) {
   ];
 
   return (
+    <>
+    <JsonLd data={structuredData} />
     <main className="min-h-screen bg-[var(--background)] text-[var(--text)]">
       <SiteHeader />
 
@@ -221,5 +321,6 @@ export default async function KpopMemberPage({ params }: PageProps) {
       </section>
       <MoreKpopGuides currentGroupId={group.id} currentMemberId={member.id} />
     </main>
+    </>
   );
 }
