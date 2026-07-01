@@ -1,12 +1,34 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "../../../components/SiteHeader";
+import JsonLd from "../../../components/JsonLd";
 
-export const metadata: Metadata = {
-  title: "K-pop Glossary",
-  description:
-    "A friendly guide to Korean K-pop fan words like bias, maknae, center, fancam, ending fairy, and eolppak-jikcam.",
-};
+const siteUrl = "https://haemilkorea.com";
+const pageUrl = `${siteUrl}/kpop/glossary`;
+
+const pageTitle =
+  "K-pop Glossary | Bias, Maknae, Fancam, Ending Fairy & Korean Fan Words";
+const pageDescription =
+  "A friendly guide to Korean K-pop fan words like bias, maknae, center, fancam, ending fairy, eolppak-jikcam, aegyo, and horanghae.";
+  export const metadata: Metadata = {
+    title: pageTitle,
+    description: pageDescription,
+    alternates: {
+      canonical: "/kpop/glossary",
+    },
+    openGraph: {
+      title: pageTitle,
+      description: pageDescription,
+      url: pageUrl,
+      siteName: "HAEMIL",
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: pageTitle,
+      description: pageDescription,
+    },
+  };
 
 const glossaryTerms = [
   {
@@ -106,7 +128,87 @@ const glossaryTerms = [
 ];
 
 export default function KpopGlossaryPage() {
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: pageTitle,
+      description: pageDescription,
+      url: pageUrl,
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": pageUrl,
+      },
+      author: {
+        "@type": "Organization",
+        name: "HAEMIL",
+        url: siteUrl,
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "HAEMIL",
+        url: siteUrl,
+      },
+      inLanguage: "en",
+      about: [
+        {
+          "@type": "Thing",
+          name: "K-pop glossary",
+        },
+        {
+          "@type": "Thing",
+          name: "Korean fan words",
+        },
+        {
+          "@type": "Thing",
+          name: "K-pop fandom culture",
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: siteUrl,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "K-pop",
+          item: `${siteUrl}/kpop`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "K-pop Glossary",
+          item: pageUrl,
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "DefinedTermSet",
+      name: "K-pop Glossary",
+      description: pageDescription,
+      url: pageUrl,
+      inLanguage: "en",
+      hasDefinedTerm: glossaryTerms.map((item) => ({
+        "@type": "DefinedTerm",
+        name: item.term,
+        description: item.meaning,
+        termCode: item.korean,
+        alternateName: [item.korean, item.romanization],
+      })),
+    },
+  ];
   return (
+    <>
+      <JsonLd data={structuredData} />
+
     <main className="min-h-screen bg-[var(--background)] text-[var(--text)]">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 py-6 md:px-8 md:py-8">
         <SiteHeader />
@@ -171,5 +273,6 @@ export default function KpopGlossaryPage() {
         </section>
       </div>
     </main>
+    </>
   );
 }
