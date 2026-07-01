@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import SiteFooter from "../components/SiteFooter";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -70,6 +71,10 @@ export default function RootLayout({
       <body className={`${inter.variable} ${playfair.variable}`}>
         {children}
         <SiteFooter />
+
+        {process.env.NEXT_PUBLIC_GA_ID && (
+  <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+)}
       </body>
     </html>
   );
