@@ -3,7 +3,7 @@ import { getKpopGroups } from "../lib/kpopData";
 import { publishedMemberIds } from "../lib/publishedGuides";
 import { getKpopGuideArticles } from "../lib/kpopGuideArticles";
 
-const baseUrl = "https://korea-inside.vercel.app";
+const baseUrl = "https://haemilkorea.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [

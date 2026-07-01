@@ -16,7 +16,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://korea-inside.vercel.app"),
+  metadataBase: new URL("https://haemilkorea.com"),
   title: {
     default: "HAEMIL — Korean culture, K-pop, food, travel, and local stories",
     template: "%s | HAEMIL",
