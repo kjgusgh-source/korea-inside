@@ -95,30 +95,29 @@ export default function IdolRequestForm({ compact = false }: IdolRequestFormProp
 
   if (compact) {
     return (
-      <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-5 shadow-sm">
-        <div className="mb-5">
-          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+      <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-4 shadow-sm">
+        <div className="mb-4">
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
             Help shape HAEMIL
           </p>
-
-          <h2 className="mt-3 text-2xl font-semibold">
+  
+          <h2 className="mt-2 text-xl font-semibold">
             What should we explain next?
           </h2>
-
-          <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
-            Ask about a K-pop word, idol, Korean culture moment, food, place, or
-            tell us what felt confusing on this site.
+  
+          <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
+            Ask about K-pop, Korean culture, food, places, or site feedback.
           </p>
         </div>
-
-        <form onSubmit={handleSubmit} className="grid gap-4">
-          <label className="space-y-2">
+  
+        <form onSubmit={handleSubmit} className="grid gap-3">
+          <label className="space-y-1.5">
             <span className="text-sm font-semibold text-[var(--text)]">
               Request type
             </span>
             <select
               name="requestType"
-              className="w-full rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3 text-sm text-[var(--text)] outline-none transition focus:border-[var(--accent)]"
+              className="w-full rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-4 py-2.5 text-sm text-[var(--text)] outline-none transition focus:border-[var(--accent)]"
             >
               {requestTypes.map((type) => (
                 <option key={type.value} value={type.value}>
@@ -127,42 +126,42 @@ export default function IdolRequestForm({ compact = false }: IdolRequestFormProp
               ))}
             </select>
           </label>
-
-          <label className="space-y-2">
+  
+          <label className="space-y-1.5">
             <span className="text-sm font-semibold text-[var(--text)]">
               Topic or feedback
             </span>
             <input
               type="text"
               name="topicTitle"
-              placeholder="e.g. What does maknae mean? / The mobile menu is confusing"
-              className="w-full rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3 text-sm text-[var(--text)] outline-none transition focus:border-[var(--accent)]"
+              placeholder="e.g. What does maknae mean?"
+              className="w-full rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-4 py-2.5 text-sm text-[var(--text)] outline-none transition focus:border-[var(--accent)]"
             />
           </label>
-
-          <label className="space-y-2">
+  
+          <label className="space-y-1.5">
             <span className="text-sm font-semibold text-[var(--text)]">
               Message optional
             </span>
             <textarea
               name="requestMessage"
-              rows={4}
-              placeholder="Tell us what you want HAEMIL to explain, or what would make this site easier to use."
-              className="w-full resize-none rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3 text-sm text-[var(--text)] outline-none transition focus:border-[var(--accent)]"
+              rows={2}
+              placeholder="Tell us what you want HAEMIL to explain or improve."
+              className="w-full resize-none rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-4 py-2.5 text-sm text-[var(--text)] outline-none transition focus:border-[var(--accent)]"
             />
           </label>
-
+  
           <div>
             <button
               type="submit"
               disabled={isSubmitting}
-              className="rounded-full bg-[var(--accent)] px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-60"
+              className="rounded-full bg-[var(--accent)] px-5 py-2.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-60"
             >
               {isSubmitting ? "Sending..." : "Send to HAEMIL"}
             </button>
-
+  
             {message && (
-              <p className="mt-4 rounded-2xl bg-[var(--accent-soft)] px-4 py-3 text-sm leading-6 text-[var(--text)]">
+              <p className="mt-3 rounded-2xl bg-[var(--accent-soft)] px-4 py-2 text-sm leading-6 text-[var(--text)]">
                 {message}
               </p>
             )}

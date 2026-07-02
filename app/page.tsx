@@ -25,11 +25,11 @@ export default function Home() {
       <section className="mx-auto max-w-7xl px-5 py-6 md:px-8">
       <SiteHeader />
 
-        <section className="grid gap-8 py-16 md:grid-cols-[1.15fr_0.85fr] md:py-24">
-          <div className="flex flex-col justify-center">
-            <div className="mb-6 inline-flex w-fit rounded-full border border-[var(--border)] bg-[var(--surface)] px-4 py-2 text-sm text-[var(--muted)]">
-              Friendly cultural notes from the inside
-            </div>
+      <section className="grid items-start gap-8 pt-6 pb-12 md:grid-cols-[1.2fr_0.8fr] md:pt-8 md:pb-14">
+      <div className="flex flex-col justify-start md:-mt-2">
+      <div className="mb-7 inline-flex w-fit rounded-full border border-[var(--border)] bg-[var(--surface)] px-4 py-2 text-sm text-[var(--muted)]">
+  Friendly cultural notes from the inside
+</div>
 
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--gold)]">
   HAEMIL
@@ -61,15 +61,20 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="mt-10 max-w-2xl">
+            <div className="mt-8 max-w-2xl">
   <SiteSearchBox compact />
+
+  <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--surface)] px-4 py-2 text-sm text-[var(--muted)]">
+    <span>Scroll to explore more</span>
+    <span>↓</span>
+  </div>
 </div>
           </div>
 
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-3 md:max-w-[430px] md:justify-self-end">
   <Link
     href={`/${heroPost.categorySlug}/${heroPost.slug}`}
-    className="group relative overflow-hidden rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 shadow-xl shadow-[var(--shadow)] transition hover:-translate-y-1"
+    className="group relative overflow-hidden rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-5 shadow-xl shadow-[var(--shadow)] transition hover:-translate-y-1"
   >
     <div className="absolute right-6 top-6 text-7xl opacity-10">
       🇰🇷
@@ -79,12 +84,12 @@ export default function Home() {
       Editor’s first pick
     </p>
 
-    <div className="mt-12">
+    <div className="mt-6">
       <p className="mb-3 text-sm text-[var(--muted)]">
         {heroPost.categoryLabel} · {heroPost.readingTime}
       </p>
 
-      <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
+      <h2 className="text-3xl font-semibold leading-tight md:text-3xl">
         {heroPost.title}
       </h2>
 
