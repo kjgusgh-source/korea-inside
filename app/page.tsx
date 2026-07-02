@@ -10,12 +10,7 @@ import { getAllPosts } from "../lib/posts";
 import FeaturedMemberGuides from "../components/FeaturedMemberGuides";
 import FeaturedKpopArticles from "../components/FeaturedKpopArticles";
 import IdolRequestForm from "../components/IdolRequestForm";
-
-const editorialNotes = [
-  "Living Korean language",
-  "Local scenes, not stereotypes",
-  "Tradition beside modern life",
-];
+import SiteSearchBox from "../components/SiteSearchBox";
 
 export default function Home() {
   const posts = getAllPosts();
@@ -66,16 +61,9 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="mt-10 flex flex-wrap gap-3">
-              {editorialNotes.map((note) => (
-                <span
-                  key={note}
-                  className="rounded-full bg-[var(--accent-soft)] px-4 py-2 text-sm text-[var(--text)]"
-                >
-                  {note}
-                </span>
-              ))}
-            </div>
+            <div className="mt-10 max-w-2xl">
+  <SiteSearchBox compact />
+</div>
           </div>
 
           <div className="flex flex-col gap-5">
