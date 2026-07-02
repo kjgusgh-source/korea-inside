@@ -2,6 +2,18 @@
 
 import { useState, type FormEvent } from "react";
 
+type IdolRequestFormProps = {
+  compact?: boolean;
+};
+
+const requestTypes = [
+  { value: "content_idea", label: "Content idea" },
+  { value: "kpop_idol_guide", label: "K-pop / idol guide" },
+  { value: "korean_culture_question", label: "Korean culture question" },
+  { value: "site_feedback", label: "Site feedback" },
+  { value: "bug_or_confusing_page", label: "Bug or confusing page" },
+];
+
 const videoTypes = [
   "Facecam",
   "Group stage",
@@ -28,7 +40,7 @@ const countries = [
   "Other",
 ];
 
-export default function IdolRequestForm() {
+export default function IdolRequestForm({ compact = false }: IdolRequestFormProps) {
   const [message, setMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -39,6 +51,10 @@ export default function IdolRequestForm() {
     const formData = new FormData(form);
 
     const payload = {
+      requestType: formData.get("requestType"),
+      topicTitle: formData.get("topicTitle"),
+      pageUrl:
+        typeof window !== "undefined" ? window.location.href : formData.get("pageUrl"),
       groupName: formData.get("groupName"),
       memberName: formData.get("memberName"),
       videoType: formData.get("videoType"),
@@ -68,7 +84,7 @@ export default function IdolRequestForm() {
 
       form.reset();
       setMessage(
-        "Thank you. Your request was saved and will be reviewed by HAEMIL."
+        "Thank you. Your idea was saved and will be reviewed by HAEMIL."
       );
     } catch {
       setMessage("Could not send your request. Please try again later.");
@@ -77,25 +93,133 @@ export default function IdolRequestForm() {
     }
   };
 
+  if (compact) {
+    return (
+      <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-5 shadow-sm">
+        <div className="mb-5">
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+            Help shape HAEMIL
+          </p>
+
+          <h2 className="mt-3 text-2xl font-semibold">
+            What should we explain next?
+          </h2>
+
+          <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
+            Ask about a K-pop word, idol, Korean culture moment, food, place, or
+            tell us what felt confusing on this site.
+          </p>
+        </div>
+
+        <form onSubmit={handleSubmit} className="grid gap-4">
+          <label className="space-y-2">
+            <span className="text-sm font-semibold text-[var(--text)]">
+              Request type
+            </span>
+            <select
+              name="requestType"
+              className="w-full rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3 text-sm text-[var(--text)] outline-none transition focus:border-[var(--accent)]"
+            >
+              {requestTypes.map((type) => (
+                <option key={type.value} value={type.value}>
+                  {type.label}
+                </option>
+              ))}
+            </select>
+          </label>
+
+          <label className="space-y-2">
+            <span className="text-sm font-semibold text-[var(--text)]">
+              Topic or feedback
+            </span>
+            <input
+              type="text"
+              name="topicTitle"
+              placeholder="e.g. What does maknae mean? / The mobile menu is confusing"
+              className="w-full rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3 text-sm text-[var(--text)] outline-none transition focus:border-[var(--accent)]"
+            />
+          </label>
+
+          <label className="space-y-2">
+            <span className="text-sm font-semibold text-[var(--text)]">
+              Message optional
+            </span>
+            <textarea
+              name="requestMessage"
+              rows={4}
+              placeholder="Tell us what you want HAEMIL to explain, or what would make this site easier to use."
+              className="w-full resize-none rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3 text-sm text-[var(--text)] outline-none transition focus:border-[var(--accent)]"
+            />
+          </label>
+
+          <div>
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="rounded-full bg-[var(--accent)] px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-60"
+            >
+              {isSubmitting ? "Sending..." : "Send to HAEMIL"}
+            </button>
+
+            {message && (
+              <p className="mt-4 rounded-2xl bg-[var(--accent-soft)] px-4 py-3 text-sm leading-6 text-[var(--text)]">
+                {message}
+              </p>
+            )}
+          </div>
+        </form>
+      </section>
+    );
+  }
+
   return (
     <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-5 shadow-sm md:p-8">
       <div className="mb-8">
         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
-          Request
+          Help shape HAEMIL
         </p>
         <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
-          Who should we cover next?
+          What should we cover next?
         </h2>
         <p className="mt-4 max-w-2xl text-sm leading-7 text-[var(--muted)] md:text-base">
-          Tell us which idol, group, fancam, or Korean culture moment you want
-          to see here. Requests will help shape future pages.
+          Tell us which idol, K-pop word, Korean culture moment, food, place, or
+          site improvement you want to see here. Requests will help shape future
+          pages.
         </p>
       </div>
 
       <form onSubmit={handleSubmit} className="grid gap-4 md:grid-cols-2">
         <label className="space-y-2">
           <span className="text-sm font-semibold text-[var(--text)]">
-            Group name
+            Request type
+          </span>
+          <select
+            name="requestType"
+            className="w-full rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3 text-sm text-[var(--text)] outline-none transition focus:border-[var(--accent)]"
+          >
+            {requestTypes.map((type) => (
+              <option key={type.value} value={type.value}>
+                {type.label}
+              </option>
+            ))}
+          </select>
+        </label>
+
+        <label className="space-y-2">
+          <span className="text-sm font-semibold text-[var(--text)]">
+            Topic or feedback
+          </span>
+          <input
+            type="text"
+            name="topicTitle"
+            placeholder="e.g. What is maknae? / Please cover NewJeans / The page is hard to read"
+            className="w-full rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3 text-sm text-[var(--text)] outline-none transition focus:border-[var(--accent)]"
+          />
+        </label>
+
+        <label className="space-y-2">
+          <span className="text-sm font-semibold text-[var(--text)]">
+            Group name optional
           </span>
           <input
             type="text"
@@ -107,7 +231,7 @@ export default function IdolRequestForm() {
 
         <label className="space-y-2">
           <span className="text-sm font-semibold text-[var(--text)]">
-            Idol / member name
+            Idol / member name optional
           </span>
           <input
             type="text"
@@ -119,7 +243,7 @@ export default function IdolRequestForm() {
 
         <label className="space-y-2">
           <span className="text-sm font-semibold text-[var(--text)]">
-            What kind of video?
+            Related video type optional
           </span>
           <select
             name="videoType"
@@ -151,24 +275,24 @@ export default function IdolRequestForm() {
 
         <label className="space-y-2 md:col-span-2">
           <span className="text-sm font-semibold text-[var(--text)]">
-            YouTube link optional
+            Reference link optional
           </span>
           <input
             type="url"
             name="youtubeUrl"
-            placeholder="https://youtube.com/..."
+            placeholder="https://youtube.com/... or any related link"
             className="w-full rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3 text-sm text-[var(--text)] outline-none transition focus:border-[var(--accent)]"
           />
         </label>
 
         <label className="space-y-2 md:col-span-2">
           <span className="text-sm font-semibold text-[var(--text)]">
-            Why do you want this?
+            Message
           </span>
           <textarea
             name="requestMessage"
             rows={4}
-            placeholder="Tell us what you want to understand, watch, or share."
+            placeholder="Tell us what you want to understand, watch, improve, or share."
             className="w-full resize-none rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3 text-sm text-[var(--text)] outline-none transition focus:border-[var(--accent)]"
           />
         </label>
@@ -179,7 +303,7 @@ export default function IdolRequestForm() {
             disabled={isSubmitting}
             className="rounded-full bg-[var(--accent)] px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-60"
           >
-            {isSubmitting ? "Submitting..." : "Submit request"}
+            {isSubmitting ? "Submitting..." : "Send to HAEMIL"}
           </button>
 
           {message && (

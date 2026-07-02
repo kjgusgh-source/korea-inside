@@ -1,6 +1,14 @@
 import { NextResponse } from "next/server";
 import { supabaseServer } from "../../../lib/supabaseServer";
 
+const VALID_REQUEST_TYPES = new Set([
+  "content_idea",
+  "kpop_idol_guide",
+  "korean_culture_question",
+  "site_feedback",
+  "bug_or_confusing_page",
+]);
+
 const VALID_VIDEO_TYPES = new Set([
   "Facecam",
   "Group stage",
@@ -45,12 +53,22 @@ export async function POST(request: Request) {
   try {
     const body = await request.json();
 
+    const requestType = cleanText(body.requestType, 80) ?? "content_idea";
+    const topicTitle = cleanText(body.topicTitle, 160);
+    const pageUrl = cleanText(body.pageUrl, 300);
     const groupName = cleanText(body.groupName, 100);
     const memberName = cleanText(body.memberName, 100);
     const videoType = cleanText(body.videoType, 50) ?? "Other";
     const youtubeUrl = cleanText(body.youtubeUrl, 300);
     const country = cleanText(body.country, 80);
     const message = cleanText(body.requestMessage, 1000);
+
+    if (!VALID_REQUEST_TYPES.has(requestType)) {
+      return NextResponse.json(
+        { error: "Invalid request type." },
+        { status: 400 }
+      );
+    }
 
     if (!VALID_VIDEO_TYPES.has(videoType)) {
       return NextResponse.json(
@@ -59,14 +77,14 @@ export async function POST(request: Request) {
       );
     }
 
-    if (!isValidUrl(youtubeUrl)) {
+    if (!isValidUrl(youtubeUrl) || !isValidUrl(pageUrl)) {
       return NextResponse.json(
         { error: "Please enter a valid URL." },
         { status: 400 }
       );
     }
 
-    if (!groupName && !memberName && !youtubeUrl && !message) {
+    if (!topicTitle && !groupName && !memberName && !youtubeUrl && !message) {
       return NextResponse.json(
         { error: "Please tell us what you want to request." },
         { status: 400 }
@@ -74,6 +92,9 @@ export async function POST(request: Request) {
     }
 
     const { error } = await supabaseServer.from("content_requests").insert({
+      request_type: requestType,
+      topic_title: topicTitle,
+      page_url: pageUrl,
       group_name: groupName,
       member_name: memberName,
       video_type: videoType,

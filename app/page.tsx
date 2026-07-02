@@ -9,6 +9,7 @@ import { getOnStageItems } from "../lib/onStage";
 import { getAllPosts } from "../lib/posts";
 import FeaturedMemberGuides from "../components/FeaturedMemberGuides";
 import FeaturedKpopArticles from "../components/FeaturedKpopArticles";
+import IdolRequestForm from "../components/IdolRequestForm";
 
 const editorialNotes = [
   "Living Korean language",
@@ -77,36 +78,40 @@ export default function Home() {
             </div>
           </div>
 
-          <Link
-            href={`/${heroPost.categorySlug}/${heroPost.slug}`}
-            className="group relative overflow-hidden rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 shadow-xl shadow-[var(--shadow)] transition hover:-translate-y-1"
-          >
-            <div className="absolute right-6 top-6 text-7xl opacity-10">
-  🇰🇷
+          <div className="flex flex-col gap-5">
+  <Link
+    href={`/${heroPost.categorySlug}/${heroPost.slug}`}
+    className="group relative overflow-hidden rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 shadow-xl shadow-[var(--shadow)] transition hover:-translate-y-1"
+  >
+    <div className="absolute right-6 top-6 text-7xl opacity-10">
+      🇰🇷
+    </div>
+
+    <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+      Editor’s first pick
+    </p>
+
+    <div className="mt-12">
+      <p className="mb-3 text-sm text-[var(--muted)]">
+        {heroPost.categoryLabel} · {heroPost.readingTime}
+      </p>
+
+      <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
+        {heroPost.title}
+      </h2>
+
+      <p className="mt-5 leading-7 text-[var(--muted)]">
+        {heroPost.excerpt}
+      </p>
+
+      <p className="mt-8 text-sm font-semibold text-[var(--accent)]">
+        Read the note →
+      </p>
+    </div>
+  </Link>
+
+  <IdolRequestForm compact />
 </div>
-
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
-              Editor’s first pick
-            </p>
-
-            <div className="mt-24">
-              <p className="mb-3 text-sm text-[var(--muted)]">
-                {heroPost.categoryLabel} · {heroPost.readingTime}
-              </p>
-
-              <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
-                {heroPost.title}
-              </h2>
-
-              <p className="mt-5 leading-7 text-[var(--muted)]">
-                {heroPost.excerpt}
-              </p>
-
-              <p className="mt-8 text-sm font-semibold text-[var(--accent)]">
-                Read the note →
-              </p>
-            </div>
-          </Link>
         </section>
 
         <section className="py-16">
