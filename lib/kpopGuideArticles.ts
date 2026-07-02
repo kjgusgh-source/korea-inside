@@ -34,6 +34,13 @@ export type KpopGuideArticle = {
         href: "/kpop/what-is-ending-fairy",
         label: "Music shows",
       },
+      {
+        title: "What is maknae in K-pop?",
+        description:
+          "Learn what maknae means, why the youngest member matters in K-pop, and how fans use words like golden maknae.",
+        href: "/kpop/what-is-maknae",
+        label: "Korean fan words",
+      },
   ];
   
   export function getKpopGuideArticles() {

@@ -51,7 +51,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
     "fromis_9 fans are called flover. For many flover, Nagyung first stands out through her visual image, but her charm lasts because her expressions feel calm, natural, and easy to watch.",
   tags: ["fromis_9", "Lee Nagyung", "flover", "Fancam", "Visual"],
   youtubeId: "WQJISekE0oM",
-  sourceLabel: "YouTube fancam",
+  sourceLabel: "Official video from M2"
 },
 {
   id: "park-jiwon-fromis9-fancam",
@@ -65,7 +65,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
     "fromis_9 fans are called flover. For many flover, Jiwon stands out because she brings a strong vocal presence to fromis_9 while still matching the group’s bright and friendly image.",
   tags: ["fromis_9", "Park Jiwon", "flover", "Fancam", "Vocal"],
   youtubeId: "NFKhp4ftcEY",
-  sourceLabel: "YouTube fancam",
+  sourceLabel: "Official video from SBSKPOP X INKIGAYO",
 },
   {
     id: "jang-wonyoung-ive-fancam",
@@ -79,7 +79,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
       "IVE fans are called DIVE. For many DIVE, Wonyoung is not only a visual center. She is one of the clearest examples of IVE’s confident and elegant image — the kind of idol who seems to know exactly where the camera is.",
     tags: ["IVE", "Jang Wonyoung", "DIVE", "Fancam", "Center"],
     youtubeId: "whAtUp1akLE",
-    sourceLabel: "YouTube fancam",
+    sourceLabel: "Official video from KBS Kpop",
   },
   {
     id: "an-yujin-ive-fancam",
@@ -93,7 +93,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
       "IVE fans are called DIVE. For many DIVE, Yujin feels like the member who brings leader energy, healthy confidence, and a natural sense of fun to IVE’s stage.",
     tags: ["IVE", "An Yujin", "DIVE", "Fancam", "Leader"],
     youtubeId: "Ld6m93MWwV4",
-    sourceLabel: "YouTube fancam",
+    sourceLabel: "Official video from M2",
   },
   {
     id: "rei-ive-fancam",
@@ -107,7 +107,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
       "IVE fans are called DIVE. For many DIVE, Rei’s charm is her unique color inside IVE — cute but calm, soft but memorable, and especially noticeable through her voice, rap tone, and gentle stage mood.",
     tags: ["IVE", "Rei", "DIVE", "Fancam", "Unique tone"],
     youtubeId: "frTP-_d48iE",
-    sourceLabel: "YouTube fancam",
+    sourceLabel: "Official video from KBS Kpop",
   },
   {
     id: "karina-aespa-fancam",
@@ -121,7 +121,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
       "aespa fans are called MY. For many MY, Karina’s charm is the contrast between her cool, AI-like stage image and her warmer, more human off-stage personality.",
     tags: ["aespa", "Karina", "MY", "Fancam", "Leader"],
     youtubeId: "90gUAIS-jBQ",
-    sourceLabel: "YouTube fancam",
+    sourceLabel: "Official video from KBS Kpop",
   },
   {
     id: "winter-aespa-fancam",
@@ -135,7 +135,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
       "aespa fans are called MY. For many MY, Winter’s charm is not always loud or dramatic. She often stands out through a calm face, a clear vocal color, and a stage style that feels simple but precise.",
     tags: ["aespa", "Winter", "MY", "Fancam", "Stage detail"],
     youtubeId: "iF9di-AySFo",
-    sourceLabel: "YouTube fancam",
+    sourceLabel: "Official video from KBS Kpop",
   },
   {
     id: "ningning-aespa-fancam",
@@ -149,7 +149,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
       "aespa fans are called MY. For many MY, Ningning stands out as aespa’s Chinese member with a powerful vocal color, expressive confidence, and a bold charm that adds another layer to the group’s futuristic image.",
     tags: ["aespa", "Ningning", "MY", "Fancam", "Vocal"],
     youtubeId: "5rbw6h_jM0Y",
-    sourceLabel: "YouTube fancam",
+    sourceLabel: "Official video from M2",
   },
   {
     id: "jung-kook-bts-fancam",
@@ -163,7 +163,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
       "BTS fans are called ARMY. For many ARMY, Jung Kook’s charm is the mix of youthful energy, strong vocals, clean dancing, and the feeling that he is always trying to get better.",
     tags: ["BTS", "Jung Kook", "ARMY", "Fancam", "Golden Maknae"],
     youtubeId: "LEX7j8nRXSk",
-    sourceLabel: "YouTube fancam",
+    sourceLabel: "YouTube fancam from Moonlit",
   },
   {
   id: "jimin-bts-fancam",
@@ -177,7 +177,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
     "BTS fans are called ARMY. For many ARMY, Jimin’s charm is not only that he dances well. It is the way his movement carries emotion — soft, sharp, elegant, and intense at the same time.",
   tags: ["BTS", "Jimin", "ARMY", "Fancam", "Dance line"],
   youtubeId: "2ssijwETM0s",
-  sourceLabel: "YouTube fancam",
+  sourceLabel: "Official video from Mnet K-POP",
 },
 {
   id: "v-bts-fancam",
@@ -191,7 +191,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
     "BTS fans are called ARMY. For many ARMY, V stands out through his deep vocal tone, strong visual identity, and the way he can make a stage feel moody, playful, or dramatic with just a small change in expression.",
   tags: ["BTS", "V", "ARMY", "Fancam", "Mood"],
   youtubeId: "c7Xs9k1C8U0",
-  sourceLabel: "Official stage video",
+  sourceLabel: "Official video from M2",
 },
   {
     id: "hoshi-seventeen-fancam",
@@ -205,7 +205,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
       "SEVENTEEN fans are called CARAT. For many CARAT, Hoshi is not only a strong dancer. He is the performance-team leader who carries SEVENTEEN’s tiger-like energy, humor, and stage control all at once.",
     tags: ["SEVENTEEN", "Hoshi", "CARAT", "Fancam", "Performance"],
     youtubeId: "KNqeIfpLouQ",
-    sourceLabel: "YouTube fancam",
+    sourceLabel: "Official video from Mnet K-POP",
   },
   {
   id: "mingyu-seventeen-fancam",
@@ -219,7 +219,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
     "SEVENTEEN fans are called CARAT. For many CARAT, Mingyu’s charm is the mix of strong visual presence, warm personality, and the relaxed confidence that makes him feel less distant than a typical ‘perfect visual’ image.",
   tags: ["SEVENTEEN", "Mingyu", "CARAT", "Fancam", "Visual"],
   youtubeId: "dILHbP2i4IA",
-  sourceLabel: "YouTube fancam",
+  sourceLabel: "Official video from Mnet MBCkpop",
 },
 {
   id: "wonwoo-seventeen-fancam",
@@ -233,7 +233,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
     "SEVENTEEN fans are called CARAT. For many CARAT, Wonwoo’s charm is his calm aura, low voice, and the way he can stand out without pushing for attention.",
   tags: ["SEVENTEEN", "Wonwoo", "CARAT", "Fancam", "Calm aura"],
   youtubeId: "hWEbQwhyDnM",
-  sourceLabel: "YouTube fancam",
+  sourceLabel: "Official video from M2",
 },
      {
         id: "our-beloved-summer-first-highlight",
