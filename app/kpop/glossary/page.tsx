@@ -112,6 +112,7 @@ const glossaryTerms = [
     note:
       "Aegyo can be natural, playful, or intentionally exaggerated. Some idols are known for being good at it, while others are loved because they feel awkward doing it.",
     example: "Fans sometimes ask idols to show aegyo during live streams.",
+    href: "/kpop/what-is-aegyo",
   },
   {
     term: "All-rounder",

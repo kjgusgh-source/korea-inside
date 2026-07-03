@@ -48,6 +48,13 @@ export type KpopGuideArticle = {
         href: "/kpop/what-is-center-in-kpop",
         label: "K-pop positions",
       },
+      {
+        title: "What is aegyo in K-pop?",
+        description:
+          "Learn what aegyo means in K-pop, where fans see it, and why it is about mood, timing, and playful charm — not just acting cute.",
+        href: "/kpop/what-is-aegyo",
+        label: "Korean fan words",
+      },
   ];
   
   export function getKpopGuideArticles() {
