@@ -39,6 +39,7 @@ const glossaryTerms = [
     note:
       "In English-speaking fandoms, people often say 'my bias.' In Korean, fans usually say 최애, which means the person you like the most.",
     example: "My bias in IVE is Wonyoung.",
+    href: "/kpop/what-does-bias-mean",
   },
   {
     term: "Maknae",
@@ -48,6 +49,7 @@ const glossaryTerms = [
     note:
       "Maknae is not only about age. In K-pop, fans often enjoy watching how the youngest member grows inside the team.",
     example: "Jung Kook is BTS’s maknae.",
+    href: "/kpop/what-is-maknae",
   },
   {
     term: "Golden maknae",
@@ -57,6 +59,7 @@ const glossaryTerms = [
     note:
       "This expression is strongly connected with Jung Kook because fans noticed his singing, dancing, performing, and many other skills from early on.",
     example: "ARMY often call Jung Kook the golden maknae.",
+    href: "/kpop/what-is-maknae"
   },
   {
     term: "Center",
@@ -67,6 +70,7 @@ const glossaryTerms = [
     note:
       "Center does not only mean standing in the middle. It can also mean the member who best delivers the group’s mood at a certain moment.",
     example: "Wonyoung is often talked about as a strong center figure.",
+    href: "/kpop/what-is-center-in-kpop"
   },
   {
     term: "Fancam",
@@ -76,6 +80,7 @@ const glossaryTerms = [
     note:
       "Fancams are a big part of K-pop culture because they let fans watch small expressions, gestures, and details that are easy to miss in a full-stage video.",
     example: "A Karina fancam can show her sharp stage presence clearly.",
+    href: "/kpop/what-is-fancam"
   },
   {
     term: "Eolppak-jikcam",
@@ -86,6 +91,7 @@ const glossaryTerms = [
     note:
       "얼빡 is casual fan slang for a close face shot, and 직캠 means fancam. Fans watch these clips to catch tiny changes in expression.",
     example: "Hayoung’s eolppak-jikcam makes her small smiles easier to notice.",
+    href: "/kpop/what-is-a-fancam"
   },
   {
     term: "Ending fairy",
@@ -96,6 +102,7 @@ const glossaryTerms = [
     note:
       "Ending fairy moments became famous because idols use that short final camera shot to show charm, humor, confidence, or a memorable expression.",
     example: "An ending fairy clip can become viral even after the stage ends.",
+    href: "/kpop/what-is-ending-fairy"
   },
   {
     term: "Aegyo",
@@ -268,6 +275,14 @@ export default function KpopGlossaryPage() {
                   {item.example}
                 </p>
               </div>
+              {"href" in item && item.href && (
+  <Link
+    href={item.href}
+    className="mt-4 inline-flex text-sm font-semibold text-[var(--accent)] transition hover:opacity-80"
+  >
+    Read full guide →
+  </Link>
+)}
             </article>
           ))}
         </section>
