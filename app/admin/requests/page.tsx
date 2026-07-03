@@ -5,8 +5,18 @@ import SiteHeader from "../../../components/SiteHeader";
 
 type RequestStatus = "pending" | "approved" | "done" | "rejected";
 
+type RequestType =
+  | "content_idea"
+  | "kpop_idol_guide"
+  | "korean_culture_question"
+  | "site_feedback"
+  | "bug_or_confusing_page";
+
 type ContentRequest = {
   id: string;
+  request_type: RequestType | string | null;
+  topic_title: string | null;
+  page_url: string | null;
   group_name: string | null;
   member_name: string | null;
   video_type: string;
@@ -23,6 +33,43 @@ const statusOptions: RequestStatus[] = [
   "done",
   "rejected",
 ];
+
+const requestTypeLabels: Record<string, string> = {
+  content_idea: "Content idea",
+  kpop_idol_guide: "K-pop / idol guide",
+  korean_culture_question: "Korean culture question",
+  site_feedback: "Site feedback",
+  bug_or_confusing_page: "Bug or confusing page",
+  idol_or_member_guide: "Idol / member guide",
+};
+
+function getRequestTitle(request: ContentRequest) {
+  if (request.topic_title) {
+    return request.topic_title;
+  }
+
+  if (request.member_name && request.group_name) {
+    return `${request.member_name} · ${request.group_name}`;
+  }
+
+  if (request.member_name) {
+    return request.member_name;
+  }
+
+  if (request.group_name) {
+    return request.group_name;
+  }
+
+  return "Untitled request";
+}
+
+function getRequestTypeLabel(requestType: string | null) {
+  if (!requestType) {
+    return "Request";
+  }
+
+  return requestTypeLabels[requestType] ?? requestType;
+}
 
 export default function AdminRequestsPage() {
   const [token, setToken] = useState("");
@@ -98,7 +145,9 @@ export default function AdminRequestsPage() {
 
       setRequests((currentRequests) =>
         currentRequests.map((request) =>
-          request.id === requestId ? result.request : request
+          request.id === requestId
+            ? { ...request, ...result.request }
+            : request
         )
       );
 
@@ -125,8 +174,8 @@ export default function AdminRequestsPage() {
           </h1>
 
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[var(--muted)] md:text-base">
-            Review idol, group, fancam, and Korean culture requests submitted by
-            visitors.
+            Review content ideas, K-pop guide requests, Korean culture
+            questions, site feedback, and bug reports submitted by visitors.
           </p>
 
           <form
@@ -176,23 +225,42 @@ export default function AdminRequestsPage() {
                       {new Date(request.created_at).toLocaleString()}
                     </p>
 
-                    <h2 className="mt-2 text-xl font-semibold">
-                      {request.member_name || "Unknown member"}
-                      {request.group_name ? ` · ${request.group_name}` : ""}
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      <span className="w-fit rounded-full bg-[var(--surface)] px-3 py-1 text-xs font-semibold text-[var(--text)]">
+                        {getRequestTypeLabel(request.request_type)}
+                      </span>
+
+                      <span className="w-fit rounded-full bg-[var(--accent-soft)] px-3 py-1 text-xs font-semibold text-[var(--text)]">
+                        {request.status}
+                      </span>
+                    </div>
+
+                    <h2 className="mt-3 text-xl font-semibold">
+                      {getRequestTitle(request)}
                     </h2>
                   </div>
-
-                  <span className="w-fit rounded-full bg-[var(--accent-soft)] px-3 py-1 text-xs font-semibold text-[var(--text)]">
-                    {request.status}
-                  </span>
                 </div>
 
-                <div className="mt-4 grid gap-3 text-sm leading-6 text-[var(--muted)] md:grid-cols-2">
+                <div className="mt-5 grid gap-3 text-sm leading-6 text-[var(--muted)] md:grid-cols-2">
+                  <p>
+                    <span className="font-semibold text-[var(--text)]">
+                      Group:
+                    </span>{" "}
+                    {request.group_name || "-"}
+                  </p>
+
+                  <p>
+                    <span className="font-semibold text-[var(--text)]">
+                      Member:
+                    </span>{" "}
+                    {request.member_name || "-"}
+                  </p>
+
                   <p>
                     <span className="font-semibold text-[var(--text)]">
                       Video type:
                     </span>{" "}
-                    {request.video_type}
+                    {request.video_type || "-"}
                   </p>
 
                   <p>
@@ -203,21 +271,39 @@ export default function AdminRequestsPage() {
                   </p>
                 </div>
 
-                {request.youtube_url && (
-                  <p className="mt-3 text-sm leading-6">
-                    <span className="font-semibold text-[var(--text)]">
-                      YouTube:
-                    </span>{" "}
-                    <a
-                      href={request.youtube_url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-[var(--accent)] underline underline-offset-4"
-                    >
-                      Open link
-                    </a>
-                  </p>
-                )}
+                <div className="mt-4 grid gap-3 text-sm leading-6 md:grid-cols-2">
+                  {request.page_url && (
+                    <p>
+                      <span className="font-semibold text-[var(--text)]">
+                        Page:
+                      </span>{" "}
+                      <a
+                        href={request.page_url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-[var(--accent)] underline underline-offset-4"
+                      >
+                        Open page
+                      </a>
+                    </p>
+                  )}
+
+                  {request.youtube_url && (
+                    <p>
+                      <span className="font-semibold text-[var(--text)]">
+                        Reference:
+                      </span>{" "}
+                      <a
+                        href={request.youtube_url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-[var(--accent)] underline underline-offset-4"
+                      >
+                        Open link
+                      </a>
+                    </p>
+                  )}
+                </div>
 
                 {request.message && (
                   <p className="mt-4 rounded-2xl bg-[var(--surface)] p-4 text-sm leading-7 text-[var(--muted)]">
@@ -236,7 +322,9 @@ export default function AdminRequestsPage() {
                       onClick={() => updateRequestStatus(request.id, status)}
                       className="rounded-full border border-[var(--border)] px-4 py-2 text-xs font-semibold text-[var(--text)] transition hover:-translate-y-0.5 hover:border-[var(--accent)] disabled:cursor-not-allowed disabled:opacity-40"
                     >
-                      {request.status === status ? `Current: ${status}` : status}
+                      {request.status === status
+                        ? `Current: ${status}`
+                        : status}
                     </button>
                   ))}
                 </div>

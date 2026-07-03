@@ -30,11 +30,11 @@ export async function GET(request: Request) {
   }
 
   const { data, error } = await supabaseServer
-    .from("content_requests")
-    .select(
-      "id, group_name, member_name, video_type, youtube_url, country, message, status, created_at"
-    )
-    .order("created_at", { ascending: false });
+  .from("content_requests")
+  .select(
+    "id, request_type, topic_title, page_url, group_name, member_name, video_type, youtube_url, country, message, status, created_at"
+  )
+  .order("created_at", { ascending: false });
 
   if (error) {
     console.error("Admin requests fetch error:", error);
