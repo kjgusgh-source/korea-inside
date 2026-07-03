@@ -41,6 +41,13 @@ export type KpopGuideArticle = {
         href: "/kpop/what-is-maknae",
         label: "Korean fan words",
       },
+      {
+        title: "What is center in K-pop?",
+        description:
+          "Learn what center means in K-pop, why the center member matters, and how fans understand stage focus and group image.",
+        href: "/kpop/what-is-center-in-kpop",
+        label: "K-pop positions",
+      },
   ];
   
   export function getKpopGuideArticles() {
