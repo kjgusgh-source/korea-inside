@@ -1,0 +1,49 @@
+import {
+  getKpopGuideArticles,
+  type KpopGuideArticle,
+} from "./kpopGuideArticles";
+
+const guideHrefByKey = {
+  center: "/kpop/what-is-center-in-kpop",
+  fancam: "/kpop/what-is-a-fancam",
+  glossary: "/kpop/glossary",
+  maknae: "/kpop/what-is-maknae",
+} as const;
+
+type GuideKey = keyof typeof guideHrefByKey;
+
+const relatedGuidesByMemberId: Record<string, GuideKey[]> = {
+  "jang-wonyoung": ["center", "fancam", "glossary"],
+  karina: ["center", "fancam", "glossary"],
+  "an-yujin": ["fancam", "glossary"],
+  "jung-kook": ["maknae", "glossary"],
+  "song-hayoung": ["fancam", "glossary"],
+  "lee-nagyung": ["fancam", "glossary"],
+  "park-jiwon": ["fancam", "glossary"],
+  jimin: ["fancam", "glossary"],
+  v: ["fancam", "glossary"],
+  hoshi: ["fancam", "glossary"],
+  mingyu: ["fancam", "glossary"],
+  wonwoo: ["fancam", "glossary"],
+  rei: ["fancam", "glossary"],
+  winter: ["fancam", "glossary"],
+  ningning: ["fancam", "glossary"],
+};
+
+export function getRelatedKpopGuidesForMember(
+  memberId: string
+): KpopGuideArticle[] {
+  const guideKeys = relatedGuidesByMemberId[memberId];
+
+  if (!guideKeys) {
+    return [];
+  }
+
+  const articlesByHref = new Map(
+    getKpopGuideArticles().map((article) => [article.href, article])
+  );
+
+  return guideKeys
+    .map((key) => articlesByHref.get(guideHrefByKey[key]))
+    .filter((article): article is KpopGuideArticle => article !== undefined);
+}

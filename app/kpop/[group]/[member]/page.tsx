@@ -9,6 +9,7 @@ import {
 } from "../../../../lib/kpopData";
 import { getMediaItems } from "../../../../lib/media";
 import MoreKpopGuides from "../../../../components/MoreKpopGuides";
+import RelatedKpopGuideLinks from "../../../../components/RelatedKpopGuideLinks";
 import JsonLd from "../../../../components/JsonLd";
 import type { Metadata } from "next";
 
@@ -319,6 +320,7 @@ const structuredData = [
           )}
         </section>
       </section>
+      <RelatedKpopGuideLinks memberId={member.id} />
       <MoreKpopGuides currentGroupId={group.id} currentMemberId={member.id} />
     </main>
     </>
