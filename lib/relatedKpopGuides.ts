@@ -4,6 +4,7 @@ import {
 } from "./kpopGuideArticles";
 
 const guideHrefByKey = {
+  aegyo: "/kpop/what-is-aegyo",
   center: "/kpop/what-is-center-in-kpop",
   fancam: "/kpop/what-is-a-fancam",
   glossary: "/kpop/glossary",
@@ -17,15 +18,15 @@ const relatedGuidesByMemberId: Record<string, GuideKey[]> = {
   karina: ["center", "fancam", "glossary"],
   "an-yujin": ["fancam", "glossary"],
   "jung-kook": ["maknae", "glossary"],
-  "song-hayoung": ["fancam", "glossary"],
+  "song-hayoung": ["aegyo", "fancam", "glossary"],
   "lee-nagyung": ["fancam", "glossary"],
   "park-jiwon": ["fancam", "glossary"],
-  jimin: ["fancam", "glossary"],
-  v: ["fancam", "glossary"],
+  jimin: ["aegyo", "fancam", "glossary"],
+  v: ["aegyo", "fancam", "glossary"],
   hoshi: ["fancam", "glossary"],
   mingyu: ["fancam", "glossary"],
   wonwoo: ["fancam", "glossary"],
-  rei: ["fancam", "glossary"],
+  rei: ["aegyo", "fancam", "glossary"],
   winter: ["fancam", "glossary"],
   ningning: ["fancam", "glossary"],
 };
