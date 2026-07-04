@@ -22,6 +22,7 @@ export type MediaItem = {
   imageUrl?: string;
   sourceUrl?: string;
   sourceLabel?: string;
+  guideHref?: string;
 };
 
 export const MEDIA_ITEMS: MediaItem[] = [
@@ -38,6 +39,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
     tags: ["Performance", "K-pop","fromis_9", "Song Hayoung", "Eolppak", "Facecam"],
     youtubeId: "QGBMQVFNpvI",
     sourceLabel: "video from KBS Kpop",
+    guideHref: "/kpop/fromis-9/song-hayoung",
   },
   {
   id: "lee-nagyung-fromis9-fancam",
@@ -51,7 +53,8 @@ export const MEDIA_ITEMS: MediaItem[] = [
     "fromis_9 fans are called flover. For many flover, Nagyung first stands out through her visual image, but her charm lasts because her expressions feel calm, natural, and easy to watch.",
   tags: ["fromis_9", "Lee Nagyung", "flover", "Fancam", "Visual"],
   youtubeId: "WQJISekE0oM",
-  sourceLabel: "video from M2"
+  sourceLabel: "video from M2",
+  guideHref: "/kpop/fromis-9/lee-nagyung",
 },
 {
   id: "park-jiwon-fromis9-fancam",
@@ -66,6 +69,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
   tags: ["fromis_9", "Park Jiwon", "flover", "Fancam", "Vocal"],
   youtubeId: "NFKhp4ftcEY",
   sourceLabel: "video from SBSKPOP X INKIGAYO",
+  guideHref: "/kpop/fromis-9/park-jiwon",
 },
   {
     id: "jang-wonyoung-ive-fancam",
@@ -80,6 +84,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
     tags: ["IVE", "Jang Wonyoung", "DIVE", "Fancam", "Center"],
     youtubeId: "whAtUp1akLE",
     sourceLabel: "video from KBS Kpop",
+    guideHref: "/kpop/ive/jang-wonyoung",
   },
   {
     id: "an-yujin-ive-fancam",
@@ -94,6 +99,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
     tags: ["IVE", "An Yujin", "DIVE", "Fancam", "Leader"],
     youtubeId: "Ld6m93MWwV4",
     sourceLabel: "video from M2",
+    guideHref: "/kpop/ive/an-yujin",
   },
   {
     id: "gaeul-ive-fancam",
@@ -108,6 +114,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
     tags: ["IVE", "Gaeul", "DIVE", "Fancam", "Stage presence"],
     youtubeId: "UTTyXyZmDcI",
     sourceLabel: "Video from KBS Kpop",
+    guideHref: "/kpop/ive/gaeul",
   },
   {
     id: "rei-ive-fancam",
@@ -122,6 +129,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
     tags: ["IVE", "Rei", "DIVE", "Fancam", "Unique tone"],
     youtubeId: "frTP-_d48iE",
     sourceLabel: "video from KBS Kpop",
+    guideHref: "/kpop/ive/rei",
   },
   {
     id: "liz-ive-fancam",
@@ -136,6 +144,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
     tags: ["IVE", "Liz", "DIVE", "Fancam", "Vocal tone"],
     youtubeId: "22-ev5iBebo",
     sourceLabel: "Video from M2",
+    guideHref: "/kpop/ive/liz",
   },
   {
     id: "leeseo-ive-fancam",
@@ -150,6 +159,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
     tags: ["IVE", "Leeseo", "DIVE", "Fancam", "Maknae"],
     youtubeId: "dbx_gUiv7qY",
     sourceLabel: "Video from SBS KPOP ZOOM",
+    guideHref: "/kpop/ive/leeseo",
   },
   {
     id: "karina-aespa-fancam",
@@ -164,6 +174,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
     tags: ["aespa", "Karina", "MY", "Fancam", "Leader"],
     youtubeId: "90gUAIS-jBQ",
     sourceLabel: "video from KBS Kpop",
+    guideHref: "/kpop/aespa/karina",
   },
   {
     id: "winter-aespa-fancam",
@@ -178,6 +189,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
     tags: ["aespa", "Winter", "MY", "Fancam", "Stage detail"],
     youtubeId: "iF9di-AySFo",
     sourceLabel: "video from KBS Kpop",
+    guideHref: "/kpop/aespa/winter",
   },
   {
     id: "ningning-aespa-fancam",
@@ -192,6 +204,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
     tags: ["aespa", "Ningning", "MY", "Fancam", "Vocal"],
     youtubeId: "5rbw6h_jM0Y",
     sourceLabel: "video from M2",
+    guideHref: "/kpop/aespa/ningning",
   },
   {
     id: "jung-kook-bts-fancam",
@@ -206,6 +219,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
     tags: ["BTS", "Jung Kook", "ARMY", "Fancam", "Golden Maknae"],
     youtubeId: "LEX7j8nRXSk",
     sourceLabel: "YouTube fancam from Moonlit",
+    guideHref: "/kpop/bts/jung-kook",
   },
   {
   id: "jimin-bts-fancam",
@@ -220,6 +234,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
   tags: ["BTS", "Jimin", "ARMY", "Fancam", "Dance line"],
   youtubeId: "2ssijwETM0s",
   sourceLabel: "video from Mnet K-POP",
+  guideHref: "/kpop/bts/jimin",
 },
 {
   id: "v-bts-fancam",
@@ -234,6 +249,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
   tags: ["BTS", "V", "ARMY", "Fancam", "Mood"],
   youtubeId: "c7Xs9k1C8U0",
   sourceLabel: "video from M2",
+  guideHref: "/kpop/bts/v",
 },
   {
     id: "hoshi-seventeen-fancam",
@@ -248,6 +264,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
     tags: ["SEVENTEEN", "Hoshi", "CARAT", "Fancam", "Performance"],
     youtubeId: "KNqeIfpLouQ",
     sourceLabel: "video from Mnet K-POP",
+    guideHref: "/kpop/seventeen/hoshi",
   },
   {
   id: "mingyu-seventeen-fancam",
@@ -262,6 +279,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
   tags: ["SEVENTEEN", "Mingyu", "CARAT", "Fancam", "Visual"],
   youtubeId: "dILHbP2i4IA",
   sourceLabel: "video from Mnet MBCkpop",
+  guideHref: "/kpop/seventeen/mingyu",
 },
 {
   id: "wonwoo-seventeen-fancam",
@@ -276,6 +294,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
   tags: ["SEVENTEEN", "Wonwoo", "CARAT", "Fancam", "Calm aura"],
   youtubeId: "hWEbQwhyDnM",
   sourceLabel: "video from M2",
+  guideHref: "/kpop/seventeen/wonwoo",
 },
      {
         id: "our-beloved-summer-first-highlight",

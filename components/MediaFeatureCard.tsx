@@ -1,18 +1,27 @@
+import Link from "next/link";
 import type { MediaItem } from "../lib/media";
 import YouTubeEmbed from "./YouTubeEmbed";
 
 type MediaFeatureCardProps = {
   item: MediaItem;
   featured?: boolean;
+  showGuideLink?: boolean;
+  currentPath?: string;
 };
 
 export default function MediaFeatureCard({
   item,
   featured = false,
+  showGuideLink = false,
+  currentPath,
 }: MediaFeatureCardProps) {
   const watchUrl =
     item.sourceUrl ??
     (item.youtubeId ? `https://www.youtube.com/watch?v=${item.youtubeId}` : "");
+  const shouldShowGuideLink =
+    showGuideLink &&
+    item.guideHref &&
+    item.guideHref !== currentPath;
 
   return (
     <article
@@ -80,14 +89,25 @@ export default function MediaFeatureCard({
         </div>
 
         {watchUrl && (
-          <a
-            href={watchUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="mt-6 inline-flex rounded-full border border-[var(--border)] bg-[var(--surface)] px-4 py-2 text-sm font-semibold text-[var(--text)] transition hover:-translate-y-0.5 hover:border-[var(--accent)] hover:text-[var(--accent)]"
-          >
-            Watch on YouTube →
-          </a>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <a
+              href={watchUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex rounded-full border border-[var(--border)] bg-[var(--surface)] px-4 py-2 text-sm font-semibold text-[var(--text)] transition hover:-translate-y-0.5 hover:border-[var(--accent)] hover:text-[var(--accent)]"
+            >
+              Watch on YouTube →
+            </a>
+
+            {shouldShowGuideLink && (
+              <Link
+                href={item.guideHref!}
+                className="inline-flex rounded-full border border-[var(--border)] bg-[var(--surface)] px-4 py-2 text-sm font-semibold text-[var(--text)] transition hover:-translate-y-0.5 hover:border-[var(--accent)] hover:text-[var(--accent)]"
+              >
+                Read the related guide →
+              </Link>
+            )}
+          </div>
         )}
       </div>
     </article>
