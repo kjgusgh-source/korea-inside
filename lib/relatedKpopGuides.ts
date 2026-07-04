@@ -18,6 +18,7 @@ const relatedGuidesByMemberId: Record<string, GuideKey[]> = {
   "jang-wonyoung": ["visual", "center", "fancam"],
   karina: ["visual", "center", "fancam"],
   "an-yujin": ["fancam", "glossary"],
+  gaeul: ["fancam", "glossary"],
   "jung-kook": ["maknae", "glossary"],
   "song-hayoung": ["aegyo", "fancam", "glossary"],
   "lee-nagyung": ["fancam", "glossary"],

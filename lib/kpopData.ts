@@ -177,6 +177,39 @@ export const KPOP_GROUPS: KpopGroup[] = [
         relatedMediaIds: ["an-yujin-ive-fancam"],
       },
       {
+        id: "gaeul",
+        name: "Gaeul",
+        note:
+          "IVE’s calm oldest member — graceful lines, steady stage control, and a mature color inside the group’s polished energy.",
+        pageLabel: "Who is Gaeul?",
+        appealTitle: "Why DIVE notice her calm stage presence",
+        watchTitle: "What to notice in a Gaeul fancam",
+        contextTitle: "Why Gaeul gives IVE a mature balance",
+        intro:
+          "Gaeul is IVE’s oldest member, and her charm often comes from calm control rather than loud impact. IVE fans are called DIVE, and many DIVE notice how Gaeul brings a graceful, mature color to the group. In a team known for polished confidence and bright pop energy, she gives the stage a steadier feeling — the kind of presence that becomes clearer the longer you watch.",
+        whyFansLike: [
+          "DIVE often like Gaeul because her stage presence feels calm and controlled. She does not need to overpower a moment to make it memorable.",
+          "Her movements can give IVE’s performances a graceful line. Even in bright or sharp songs, she often adds a smoother and more mature texture.",
+          "Fans also enjoy the contrast she brings to the group. While some members stand out through bold expressions or youthful energy, Gaeul often feels composed, balanced, and quietly confident.",
+        ],
+        watchPoints: [
+          "Watch her lines during choreography. Gaeul often looks strongest when the movement needs a clean shape or a smooth transition.",
+          "Notice how she uses small expressions. Her appeal is usually not about exaggeration, but about controlled details that fit the mood of the stage.",
+          "In fancams, pay attention to how steady she feels from start to finish. She can give a performance a mature balance without pulling attention away from the group.",
+        ],
+        koreanExpression: {
+          hangul: "언니",
+          romanization: "eonni",
+          meaning:
+            "older sister; a word younger women use for an older woman or older female friend",
+          note:
+            "언니 is a normal Korean word, but in K-pop fandom it can also carry a warm feeling of trust, maturity, or older-sister energy. With Gaeul, the word helps explain why fans may notice her calm and composed role inside IVE.",
+        },
+        culturalContext:
+          "IVE’s image often mixes confidence, elegance, and youthful pop energy. Gaeul adds balance to that mix. As the oldest member, she can make the group feel steadier without making the performance feel heavy. For new viewers, Gaeul is a good member to watch when you want to notice IVE’s quieter details — clean movement, calm expressions, and the mature color that sits underneath the group’s glossy surface.",
+        relatedMediaIds: ["gaeul-ive-fancam"],
+      },
+      {
         id: "jang-wonyoung",
         name: "Jang Wonyoung",
         note: "IVE’s unmistakable center of attention — polished, elegant, and very aware of how to use the camera.",

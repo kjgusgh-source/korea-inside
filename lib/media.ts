@@ -96,6 +96,20 @@ export const MEDIA_ITEMS: MediaItem[] = [
     sourceLabel: "video from M2",
   },
   {
+    id: "gaeul-ive-fancam",
+    title: "Watching Gaeul’s calm stage control in IVE",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A Gaeul fancam is a good way to notice IVE’s more mature stage color: clean movement, calm expressions, and steady control inside the group’s polished pop energy.",
+    cultureNote:
+      "IVE fans are called DIVE. For many DIVE, Gaeul stands out through calm presence and graceful control — the kind of charm that becomes clearer when you watch the full stage instead of only the highlight moments.",
+    tags: ["IVE", "Gaeul", "DIVE", "Fancam", "Stage presence"],
+    youtubeId: "UTTyXyZmDcI",
+    sourceLabel: "Video from KBS Kpop",
+  },
+  {
     id: "rei-ive-fancam",
     title: "Why Rei gives IVE a softer, unique color",
     category: "kpop",
