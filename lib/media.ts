@@ -110,6 +110,20 @@ export const MEDIA_ITEMS: MediaItem[] = [
     sourceLabel: "video from KBS Kpop",
   },
   {
+    id: "liz-ive-fancam",
+    title: "Listening for Liz’s soft vocal color in IVE",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A Liz fancam is a good way to notice the softer side of IVE: calm expressions, controlled stage energy, and a vocal color that gives the group a warmer emotional texture.",
+    cultureNote:
+      "IVE fans are called DIVE. For many DIVE, Liz stands out through 음색, or vocal tone — the feeling of a voice, not just the power of a note.",
+    tags: ["IVE", "Liz", "DIVE", "Fancam", "Vocal tone"],
+    youtubeId: "22-ev5iBebo",
+    sourceLabel: "Video from M2",
+  },
+  {
     id: "leeseo-ive-fancam",
     title: "Watching Leeseo’s fresh maknae energy in IVE",
     category: "kpop",

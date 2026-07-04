@@ -28,6 +28,7 @@ const relatedGuidesByMemberId: Record<string, GuideKey[]> = {
   mingyu: ["visual", "fancam", "glossary"],
   wonwoo: ["visual", "fancam", "glossary"],
   rei: ["aegyo", "fancam", "glossary"],
+  liz: ["fancam", "glossary"],
   leeseo: ["maknae", "fancam", "glossary"],
   winter: ["fancam", "glossary"],
   ningning: ["fancam", "glossary"],

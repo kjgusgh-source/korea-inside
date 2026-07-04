@@ -239,6 +239,38 @@ export const KPOP_GROUPS: KpopGroup[] = [
         relatedMediaIds: ["rei-ive-fancam"],
       },
       {
+        id: "liz",
+        name: "Liz",
+        note:
+          "IVE’s soft vocal color — calm, clear, and quietly emotional inside the group’s polished pop image.",
+        pageLabel: "Who is Liz?",
+        appealTitle: "Why DIVE notice her voice and calm charm",
+        watchTitle: "What to notice in a Liz fancam",
+        contextTitle: "Why Liz adds softness to IVE",
+        intro:
+          "Liz is one of the IVE members many DIVE notice through voice first. In a group often known for polished confidence, elegant visuals, and sharp pop moments, Liz adds a softer color. Her charm is not loud or overly dramatic. It often comes through in a clear vocal tone, calm expressions, and the way she gives emotional weight to a bright song.",
+        whyFansLike: [
+          "DIVE often like Liz because her voice has a clean and gentle color. It can make IVE’s songs feel softer without making them lose energy.",
+          "Her presence gives the group a different texture. While some members catch attention through strong camera focus or bold expressions, Liz often feels steady, warm, and quietly expressive.",
+          "Fans also enjoy watching the contrast between her calm image and IVE’s glossy confidence. She gives the group more emotional range and lets softer moments breathe.",
+        ],
+        watchPoints: [
+          "Listen for her vocal color first. Liz is often easiest to notice when a line needs warmth, clarity, or a slightly emotional feeling.",
+          "Watch her expressions in close-ups. She does not always need a big gesture to leave an impression; a small change in her eyes or smile can carry the mood.",
+          "In fancams, notice how she keeps her energy controlled. Her appeal is not about being the loudest member on stage, but about adding a soft and stable color to the performance.",
+        ],
+        koreanExpression: {
+          hangul: "음색",
+          romanization: "eumsaek",
+          meaning: "vocal tone or voice color",
+          note:
+            "음색 is a Korean word people use when talking about the color or texture of someone’s voice. For Liz, this word helps explain why fans often notice her singing style — not only whether a note is high or powerful, but how her voice feels inside the song.",
+        },
+        culturalContext:
+          "IVE’s image is often confident, polished, and visually sharp. Liz adds balance to that image. Her softer vocal color and calm stage mood give the group emotional contrast, especially in songs that mix bright pop energy with a more sentimental feeling. For new viewers, Liz is a good member to watch when you want to understand that IVE is not only about confidence and visual impact, but also about voice color, softness, and emotional detail.",
+        relatedMediaIds: ["liz-ive-fancam"],
+      },
+      {
         id: "leeseo",
         name: "Leeseo",
         note:

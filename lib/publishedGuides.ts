@@ -7,6 +7,7 @@ export const publishedMemberIds = [
   { groupId: "ive", memberId: "jang-wonyoung" },
   { groupId: "ive", memberId: "an-yujin" },
   { groupId: "ive", memberId: "rei" },
+  { groupId: "ive", memberId: "liz" },
   { groupId: "ive", memberId: "leeseo" },
   { groupId: "aespa", memberId: "karina" },
   { groupId: "aespa", memberId: "winter" },
