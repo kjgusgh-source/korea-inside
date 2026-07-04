@@ -55,6 +55,13 @@ export type KpopGuideArticle = {
         href: "/kpop/what-is-aegyo",
         label: "Korean fan words",
       },
+      {
+        title: "What is visual in K-pop?",
+        description:
+          "Learn what visual means in K-pop, how it connects to group image and concept photos, and why it is not a beauty ranking.",
+        href: "/kpop/what-is-visual-in-kpop",
+        label: "K-pop positions",
+      },
   ];
   
   export function getKpopGuideArticles() {

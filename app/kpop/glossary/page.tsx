@@ -73,6 +73,18 @@ const glossaryTerms = [
     href: "/kpop/what-is-center-in-kpop"
   },
   {
+    term: "Visual",
+    korean: "비주얼",
+    romanization: "bijueol",
+    meaning:
+      "The member often associated with a group's public image or visual identity.",
+    note:
+      "Visual does not mean the only attractive member. It often points to who fits the group's concept photos, teasers, or first impression especially well.",
+    example:
+      "Fans may talk about a member's visual fit in a comeback concept photo.",
+    href: "/kpop/what-is-visual-in-kpop",
+  },
+  {
     term: "Fancam",
     korean: "직캠",
     romanization: "jikcam",
