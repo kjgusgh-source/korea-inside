@@ -238,6 +238,38 @@ export const KPOP_GROUPS: KpopGroup[] = [
           "IVE’s image is often described through confidence, elegance, and a polished stage mood. Rei adds another layer to that. She shows that a member can stand out not only by being the strongest center or the loudest performer, but by having a clear personal color. For new viewers, Rei is useful because she makes IVE feel more varied: still confident, but also softer, cuter, and more individual.",
         relatedMediaIds: ["rei-ive-fancam"],
       },
+      {
+        id: "leeseo",
+        name: "Leeseo",
+        note:
+          "IVE’s youngest member — bright reactions, fresh stage energy, and the kind of growth fans enjoy watching inside a polished group.",
+        pageLabel: "Who is Leeseo?",
+        appealTitle: "Why DIVE enjoy watching her grow",
+        watchTitle: "What to notice in a Leeseo fancam",
+        contextTitle: "Why Leeseo brings a fresh side to IVE",
+        intro:
+          "Leeseo is IVE’s youngest member, and that matters more in feeling than in age alone. IVE fans are called DIVE, and many DIVE notice her because she brings a bright, fresh energy into a group that often looks polished and self-assured. Jang Wonyoung often shows IVE’s elegant confidence, An Yujin brings bright leader energy, and Rei adds a softer personal color. Leeseo helps IVE feel younger, lively, and a little more spontaneous — not childish, but open in a way fans enjoy watching.",
+        whyFansLike: [
+          "DIVE often like Leeseo because her stage mood feels open. She can look excited, focused, or playful without making the moment feel too calculated.",
+          "Her youthful energy fits IVE in a useful way. The group’s image is confident and glossy, but Leeseo adds a fresher color that makes the team feel more dynamic.",
+          "Fans also enjoy the growth feeling. As the maknae, she is often the member people watch become more comfortable and expressive on stage over time.",
+        ],
+        watchPoints: [
+          "Watch her expressions during upbeat parts. Leeseo often feels memorable when her face matches the song’s energy without looking forced.",
+          "Notice how she holds herself next to the other members. She can match IVE’s polished mood while still bringing reactions that feel bright and direct.",
+          "Compare her with Wonyoung, Yujin, and Rei if you already watched their guides. Wonyoung feels elegant, Yujin feels grounded and bright, Rei feels soft and unique, while Leeseo gives IVE a fresher youngest-member mood.",
+        ],
+        koreanExpression: {
+          hangul: "막내",
+          romanization: "maknae",
+          meaning: "the youngest member of a group",
+          note:
+            "막내 is a normal Korean word for the youngest person in a family, team, or friend group. In K-pop, fans often use it with extra affection because they watch the youngest member grow in front of them. With Leeseo, the word helps explain why her energy can feel fresh and why fans pay attention to her growth.",
+        },
+        culturalContext:
+          "IVE’s public image is often built around confidence, elegance, and a polished first impression. Leeseo does not break that image. Instead, she adds a younger and brighter side to it. Her charm often comes from openness, growth, and expressive reactions on stage. For new viewers, Leeseo is a good entry point if you want to understand IVE’s team dynamic — not only the polished center figures, but also the member who brings a fresh maknae color to the group.",
+        relatedMediaIds: ["leeseo-ive-fancam"],
+      },
     ],
     starterTags: ["Ending fairy", "Viral clips", "Stage styling"],
   },

@@ -110,6 +110,20 @@ export const MEDIA_ITEMS: MediaItem[] = [
     sourceLabel: "Official video from KBS Kpop",
   },
   {
+    id: "leeseo-ive-fancam",
+    title: "Why Leeseo brings a fresh maknae energy to IVE",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A Leeseo fancam is a good way to notice IVE’s brighter youngest-member side: open expressions, lively reactions, and stage energy that feels fresh inside the group’s polished mood.",
+    cultureNote:
+      "IVE fans are called DIVE. For many DIVE, Leeseo’s charm is the mix of youthful energy and growth — the member who helps IVE feel more dynamic while still matching the group’s confident image.",
+    tags: ["IVE", "Leeseo", "DIVE", "Fancam", "Maknae"],
+    youtubeId: "dbx_gUiv7qY",
+    sourceLabel: "Official video from SBS KPOP ZOOM",
+  },
+  {
     id: "karina-aespa-fancam",
     title: "Why Karina feels like aespa’s front door",
     category: "kpop",
