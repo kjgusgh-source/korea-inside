@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { getKpopGroups } from "../lib/kpopData";
 import { publishedMemberIds } from "../lib/publishedGuides";
 import { getKpopGuideArticles } from "../lib/kpopGuideArticles";
+import { getAllPosts } from "../lib/posts";
 
 const baseUrl = "https://haemilkorea.com";
 
@@ -66,8 +67,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   );
 
+  const culturePostRoutes: MetadataRoute.Sitemap = getAllPosts().map((post) => ({
+    url: `${baseUrl}/${post.categorySlug}/${post.slug}`,
+    lastModified: new Date(post.publishedAt),
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
   return [
     ...staticRoutes,
+    ...culturePostRoutes,
     ...kpopGuideRoutes,
     ...kpopGroupRoutes,
     ...kpopMemberRoutes,

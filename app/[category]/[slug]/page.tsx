@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ThemeToggle from "../../../components/ThemeToggle";
+import TravelMapSpotList from "../../../components/TravelMapSpotList";
 import {
   getAllPosts,
   getPostBySlug,
@@ -138,6 +139,10 @@ export default async function ArticlePage({ params }: PageProps) {
               </div>
             </div>
           </div>
+
+          {post.mapSpots && post.mapSpots.length > 0 && (
+            <TravelMapSpotList spots={post.mapSpots} />
+          )}
 
           <section className="mt-8 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 shadow-lg shadow-[var(--shadow)] md:p-8">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">

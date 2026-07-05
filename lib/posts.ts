@@ -8,6 +8,19 @@ export type PostCategory =
   | "lifestyle"
   | "nightlife";
 
+export type TravelMapSpotArea =
+  | "West / Old Busan"
+  | "Central / Gwangalli / Seomyeon"
+  | "East / Haeundae / Gijang";
+
+export type TravelMapSpot = {
+  name: string;
+  area: TravelMapSpotArea;
+  category: string;
+  mapQuery: string;
+  note?: string;
+};
+
 export interface Post {
   id: number;
   title: string;
@@ -24,6 +37,7 @@ export interface Post {
   readingTime: string;
   seoTitle: string;
   seoDescription: string;
+  mapSpots?: TravelMapSpot[];
 }
 
 export const POSTS: Post[] = [
@@ -234,6 +248,143 @@ export const POSTS: Post[] = [
     seoTitle: "Seoul After Midnight: Korean Night Culture Explained",
     seoDescription:
       "Explore Seoul after midnight, from Han River ramen and 24-hour convenience stores to Korea’s warm and lively night culture."
+  },
+  {
+    id: 9,
+    title:
+      "Where Koreans Actually Go in Busan: A Map-Friendly Guide for First-Time Visitors",
+    slug: "where-to-go-in-busan-first-time",
+    category: "travel",
+    categorySlug: "travel",
+    categoryLabel: "Travel",
+    description:
+      "A simple Busan guide for first-time visitors, with beaches, markets, cafe streets, local food, stay areas, and map-friendly stops Koreans often visit.",
+    excerpt:
+      "Busan is not only Haeundae. This guide collects the places many Korean travelers actually visit: sea-view villages, markets, cafe streets, night beaches, coastal trains, food stops, and easy areas to stay.",
+    content: [
+      "Busan is often introduced as Korea’s beach city, but that is only one part of it. For many Korean travelers, Busan is a mix of sea views, hillside villages, markets, cafe streets, night beaches, and food that feels different from Seoul.",
+      "This guide is not a strict 1-night, 2-day itinerary. Think of it as a map-friendly starting point. You can choose one area if you only have a short trip, or combine several areas if you want to spend more time in the city.",
+      "Getting to Busan is easier than many first-time visitors expect. From Seoul, many travelers take the KTX to Busan Station. If you are flying in, Busan also has Gimhae International Airport, which connects the city with domestic routes and nearby international destinations.",
+      "Busan is wide, so it helps to think in areas. West and old Busan are good for markets, older neighborhoods, and colorful village views. Central Busan is good for Seomyeon, Jeonpo, Gwangalli, and a younger city mood. East Busan is good for Haeundae, coastal trains, Cheongsapo, and the sea temple side.",
+      "Gamcheon Culture Village is one of the classic Busan stops. It is colorful, hilly, and popular with both Korean and international visitors. It can be busy, but it gives you the famous “Busan hillside village” feeling in one place.",
+      "Bupyeong Kkangtong Market is a good stop if you want market food and an older city atmosphere. It works well with Nampo, Jagalchi, or Gamcheon because they are on the same general side of Busan.",
+      "Huinnyeoul Culture Village in Yeongdo has a quieter seaside mood. The charm is in the narrow alleys, small cafes, stairs, and sudden ocean views between buildings. It is a good place to walk slowly rather than rush through.",
+      "Jeonpo Cafe Street is one of the easiest places to feel Busan’s younger local mood. It is not about one famous cafe only. The fun is walking through small streets, choosing a cafe, and taking a break between bigger sightseeing stops.",
+      "Gwangalli Beach is one of the best first-night places in Busan. During the day it is a beach, but at night the lights of Gwangandaegyo Bridge make the whole area feel different. If you want one simple night view in Busan, Gwangalli is an easy choice.",
+      "Millak The Market is near the Gwangalli side and works well as a casual food or evening stop. It is useful when you want something more relaxed than a formal restaurant and still want to stay near the beach mood.",
+      "Haeundae Beach is the classic Busan beach. It is famous, busy, and easy to understand for first-time visitors. Even if you do not spend the whole day there, it is still a useful anchor for exploring the east side of Busan.",
+      "Haeridan-gil is a smaller street area near Haeundae with cafes, restaurants, and a softer walking mood. It is a good balance if Haeundae Beach feels too large or crowded.",
+      "Haeundae Blue Line Park, including the Beach Train and Sky Capsule around the Mipo and Cheongsapo side, is popular because the ride itself becomes part of the view. It is one of the easiest ways to enjoy Busan’s coast without making the day too complicated.",
+      "Cheongsapo is a good slow stop near the Blue Line Park route. It has a calmer coastal feeling and works well if you want to make the east side of Busan feel less rushed.",
+      "Haedong Yonggungsa Temple is farther out toward Gijang, but many visitors remember it because it is a temple by the sea. It takes more time than the central spots, so it is better when you are already focusing on the Haeundae or east Busan side.",
+      "Food is part of the Busan trip too. Dwaeji gukbap, a pork and rice soup, is one of the foods many Koreans connect with Busan. Milmyeon, a cold wheat noodle dish, is another Busan classic, especially when the weather is warm.",
+      "Seafood is also easy to connect with Busan, from raw fish and grilled seafood to fish cake and market snacks. You do not need to turn every meal into a famous restaurant hunt. Sometimes the best Busan meal is simply choosing one local food near the area you are already visiting.",
+      "For places to stay, Seomyeon is convenient if you want to move around different parts of Busan. Gwangalli is good if you care about night views and beach atmosphere. Haeundae works well if you want the classic beach, Blue Line Park, Cheongsapo, or Gijang side. Nampo or Busan Station can be useful if you arrive by KTX and want easier access to markets, Gamcheon, or Yeongdo.",
+      "Busan can also be a sea gateway. Some travelers use Busan as a starting point for a ferry trip to Tsushima, Japan. If you want to plan that, check the current ferry schedule, ticket rules, and passport requirements before making it part of your trip.",
+      "The easiest way to enjoy Busan is not to chase every famous place at once. Pick one side of the city, understand the mood of that area, and leave enough time for the sea, food, and small streets to do their work.",
+    ],
+    culturalContext:
+      "For Koreans, Busan is not just a beach destination. It is a city people visit for short getaways, food trips, night views, markets, and a feeling that is different from Seoul. A good Busan trip often mixes famous places with slower moments: a bowl of dwaeji gukbap, a walk near the sea, a cafe street, a bridge view at night, or a train ride along the coast.",
+    tags: [
+      "Busan",
+      "Korea travel",
+      "Travel course",
+      "Food",
+      "Haeundae",
+      "Gwangalli",
+    ],
+    publishedAt: "2026-07-05",
+    readingTime: "7 min read",
+    seoTitle:
+      "Where to Go in Busan for First-Time Visitors | HAEMIL Korea Travel Guide",
+    seoDescription:
+      "A map-friendly Busan travel guide for first-time visitors: Gamcheon Culture Village, Gwangalli, Haeundae, Blue Line Park, markets, food, stay areas, and more.",
+    mapSpots: [
+      {
+        name: "Gamcheon Culture Village",
+        area: "West / Old Busan",
+        category: "Colorful hillside village",
+        mapQuery: "Gamcheon Culture Village Busan",
+        note: "A classic Busan photo stop with hillside streets and colorful village views.",
+      },
+      {
+        name: "Bupyeong Kkangtong Market",
+        area: "West / Old Busan",
+        category: "Market food",
+        mapQuery: "Bupyeong Kkangtong Market Busan",
+        note: "Good for market snacks, older city energy, and the Nampo side of Busan.",
+      },
+      {
+        name: "Huinnyeoul Culture Village",
+        area: "West / Old Busan",
+        category: "Sea-view alleys",
+        mapQuery: "Huinnyeoul Culture Village Busan",
+        note: "A Yeongdo seaside village with alleys, stairs, cafes, and ocean views.",
+      },
+      {
+        name: "Jeonpo Cafe Street",
+        area: "Central / Gwangalli / Seomyeon",
+        category: "Cafes and local mood",
+        mapQuery: "Jeonpo Cafe Street Busan",
+        note: "A good cafe break area near Seomyeon with small streets and local energy.",
+      },
+      {
+        name: "Gwangalli Beach",
+        area: "Central / Gwangalli / Seomyeon",
+        category: "Night view",
+        mapQuery: "Gwangalli Beach Busan",
+        note: "One of Busan’s easiest night-view stops, with Gwangandaegyo Bridge in the background.",
+      },
+      {
+        name: "Millak The Market",
+        area: "Central / Gwangalli / Seomyeon",
+        category: "Food and evening stop",
+        mapQuery: "Millak The Market Busan",
+        note: "A casual stop near the Gwangalli side for food, drinks, and evening atmosphere.",
+      },
+      {
+        name: "Haeundae Beach",
+        area: "East / Haeundae / Gijang",
+        category: "Classic beach",
+        mapQuery: "Haeundae Beach Busan",
+        note: "The most famous Busan beach and a useful base for the east side of the city.",
+      },
+      {
+        name: "Haeridan-gil",
+        area: "East / Haeundae / Gijang",
+        category: "Small streets and cafes",
+        mapQuery: "Haeridan-gil Busan",
+        note: "A smaller Haeundae-area street with cafes, restaurants, and a calmer walking mood.",
+      },
+      {
+        name: "Haeundae Blue Line Park",
+        area: "East / Haeundae / Gijang",
+        category: "Coastal train",
+        mapQuery: "Haeundae Blue Line Park Busan",
+        note: "A popular coastal route around Mipo, Cheongsapo, and Songjeong.",
+      },
+      {
+        name: "Mipo Beach Train / Sky Capsule",
+        area: "East / Haeundae / Gijang",
+        category: "Coastal ride",
+        mapQuery: "Mipo Sky Capsule Busan",
+        note: "A visual coastal ride that many travelers connect with modern Busan travel.",
+      },
+      {
+        name: "Cheongsapo",
+        area: "East / Haeundae / Gijang",
+        category: "Slow coastal stop",
+        mapQuery: "Cheongsapo Busan",
+        note: "A slower coastal area that pairs naturally with the Blue Line Park route.",
+      },
+      {
+        name: "Haedong Yonggungsa Temple",
+        area: "East / Haeundae / Gijang",
+        category: "Temple by the sea",
+        mapQuery: "Haedong Yonggungsa Temple Busan",
+        note: "A sea-side temple often added to east Busan or Gijang-focused trips.",
+      },
+    ],
   }
 ];
 
