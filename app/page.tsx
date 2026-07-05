@@ -22,6 +22,7 @@ import {
 const CONTENT_HUB_LINKS: Partial<Record<string, string>> = {
   kpop: "/kpop",
   "memes-expressions": "/kpop/glossary",
+  "travel-hidden-places": "/travel",
 };
 
 export default function Home() {

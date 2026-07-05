@@ -21,6 +21,16 @@ export type TravelMapSpot = {
   note?: string;
 };
 
+export type TravelQuickGuideGroup = {
+  title: string;
+  items: string[];
+};
+
+export type TravelQuickGuide = {
+  sectionTitle: string;
+  groups: TravelQuickGuideGroup[];
+};
+
 export interface Post {
   id: number;
   title: string;
@@ -38,6 +48,7 @@ export interface Post {
   seoTitle: string;
   seoDescription: string;
   mapSpots?: TravelMapSpot[];
+  quickGuide?: TravelQuickGuide;
 }
 
 export const POSTS: Post[] = [
@@ -299,6 +310,51 @@ export const POSTS: Post[] = [
       "Where to Go in Busan for First-Time Visitors | HAEMIL Korea Travel Guide",
     seoDescription:
       "A map-friendly Busan travel guide for first-time visitors: Gamcheon Culture Village, Gwangalli, Haeundae, Blue Line Park, markets, food, stay areas, and more.",
+    quickGuide: {
+      sectionTitle: "Quick Busan guide",
+      groups: [
+        {
+          title: "Getting there",
+          items: [
+            "From Seoul: Take the KTX to Busan Station.",
+            "By air: Busan has Gimhae International Airport.",
+            "First-time note: Busan is easy to add after Seoul, but the city itself is wide.",
+          ],
+        },
+        {
+          title: "Places to put on your map",
+          items: [
+            "West / Old Busan: Gamcheon Culture Village, Bupyeong Kkangtong Market, Huinnyeoul Culture Village, Yeongdo.",
+            "Central / Gwangalli / Seomyeon: Jeonpo Cafe Street, Gwangalli Beach, Millak The Market.",
+            "East / Haeundae / Gijang: Haeundae Beach, Haeridan-gil, Haeundae Blue Line Park, Mipo Beach Train / Sky Capsule, Cheongsapo, Haedong Yonggungsa Temple.",
+          ],
+        },
+        {
+          title: "What to eat",
+          items: [
+            "Dwaeji gukbap: Pork and rice soup many Koreans connect with Busan.",
+            "Milmyeon: Cold wheat noodles, especially good in warm weather.",
+            "Seafood: Raw fish, grilled seafood, fish cake, and market snacks.",
+            "Market food: Good around Bupyeong Kkangtong Market, Nampo, and nearby areas.",
+          ],
+        },
+        {
+          title: "Where to stay",
+          items: [
+            "Seomyeon: Convenient if you want to move around different parts of Busan.",
+            "Gwangalli: Good for night views, beach mood, and Gwangandaegyo Bridge.",
+            "Haeundae: Good for the classic beach, Blue Line Park, Cheongsapo, and east Busan.",
+            "Nampo / Busan Station: Useful for KTX access, markets, Gamcheon, and Yeongdo.",
+          ],
+        },
+        {
+          title: "Extra idea",
+          items: [
+            "Busan to Tsushima: Some travelers take a ferry from Busan to Tsushima, Japan. Always check current ferry schedules, ticket rules, and passport requirements before planning.",
+          ],
+        },
+      ],
+    },
     mapSpots: [
       {
         name: "Gamcheon Culture Village",

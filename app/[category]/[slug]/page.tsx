@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import ThemeToggle from "../../../components/ThemeToggle";
+import SiteHeader from "../../../components/SiteHeader";
 import TravelMapSpotList from "../../../components/TravelMapSpotList";
+import TravelQuickGuide from "../../../components/TravelQuickGuide";
 import {
   getAllPosts,
   getPostBySlug,
@@ -52,7 +53,7 @@ export async function generateMetadata({
 
   if (!post) {
     return {
-      title: "Article Not Found | Korea Inside",
+      title: "Article Not Found | HAEMIL",
     };
   }
 
@@ -81,25 +82,16 @@ export default async function ArticlePage({ params }: PageProps) {
   return (
     <main className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
       <section className="mx-auto max-w-6xl px-5 py-6 md:px-8">
-        <header className="flex items-center justify-between gap-4">
-          <Link href="/" className="group">
-            <p className="text-2xl font-semibold tracking-tight">
-              Korea <span className="text-[var(--accent)]">Inside</span>
-            </p>
-            <p className="mt-1 hidden text-xs text-[var(--muted)] sm:block">
-              A warm local guide to Korean culture
-            </p>
-          </Link>
-
-          <ThemeToggle />
-        </header>
+        <SiteHeader />
 
         <article className="mx-auto mt-14 max-w-4xl md:mt-20">
           <Link
-            href="/"
+            href={post.categorySlug === "travel" ? "/travel" : "/"}
             className="text-sm font-medium text-[var(--muted)] transition hover:text-[var(--accent)]"
           >
-            ← Back to Korea Inside
+            {post.categorySlug === "travel"
+              ? "← Back to Travel"
+              : "← Back to HAEMIL"}
           </Link>
 
           <div className="mt-10 rounded-[2.5rem] border border-[var(--border)] bg-[var(--surface)] px-6 py-8 shadow-xl shadow-[var(--shadow)] md:px-12 md:py-14">
@@ -130,19 +122,25 @@ export default async function ArticlePage({ params }: PageProps) {
             <p className="mt-8 max-w-2xl text-lg leading-8 text-[var(--muted)] md:text-xl">
               {post.description}
             </p>
-
-            <div className="mt-12 border-t border-[var(--border)] pt-10">
-              <div className="space-y-7 text-lg leading-9 text-[var(--text)]">
-                {post.content.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
-                ))}
-              </div>
-            </div>
           </div>
+
+          {post.quickGuide && <TravelQuickGuide guide={post.quickGuide} />}
 
           {post.mapSpots && post.mapSpots.length > 0 && (
             <TravelMapSpotList spots={post.mapSpots} />
           )}
+
+          <div className="mt-8 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 shadow-lg shadow-[var(--shadow)] md:p-8">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+              Full guide
+            </p>
+
+            <div className="mt-8 space-y-7 text-lg leading-9 text-[var(--text)]">
+              {post.content.map((paragraph, index) => (
+                <p key={`${post.slug}-paragraph-${index}`}>{paragraph}</p>
+              ))}
+            </div>
+          </div>
 
           <section className="mt-8 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 shadow-lg shadow-[var(--shadow)] md:p-8">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
