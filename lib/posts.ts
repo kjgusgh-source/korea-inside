@@ -630,6 +630,177 @@ export const POSTS: Post[] = [
         title: "Why Seoul Feels Like a K-drama",
         href: "/dramas/why-seoul-feels-like-a-kdrama",
       },
+      {
+        label: "Travel guide",
+        title: "West Seoul for First-Time Visitors",
+        href: "/travel/west-seoul-hongdae-yeonnam-mangwon",
+      },
+    ],
+  },
+  {
+    id: 13,
+    title:
+      "West Seoul for First-Time Visitors: Hongdae, Yeonnam, Mangwon, and Hapjeong",
+    slug: "west-seoul-hongdae-yeonnam-mangwon",
+    category: "travel",
+    categorySlug: "travel",
+    categoryLabel: "Travel",
+    description:
+      "A map-friendly West Seoul guide for first-time visitors, covering Hongdae, Yeonnam-dong, Gyeongui Line Forest Park, Mangwon, Hapjeong, and Sangsu.",
+    excerpt:
+      "West Seoul feels younger, looser, and more local than the palace side of the city. This guide explains where to go around Hongdae, Yeonnam, Mangwon, Hapjeong, and Sangsu.",
+    content: [
+      "West Seoul is the side of the city that feels young, casual, and easy to wander. It does not have the formal mood of the palaces or the polished feeling of Gangnam. Instead, this area is built around cafes, small shops, music, side streets, markets, and nights that can start without a strict plan.",
+      "For first-time visitors, the easiest way to understand West Seoul is to think of Hongdae as the loud anchor. Around it, Yeonnam, Mangwon, Hapjeong, Sangsu, and Seogyo-dong each soften or change the mood. You can move from busy streets to quiet cafes, from a park walk to a market snack, and from dinner to a casual night out without leaving the area.",
+      "Hongdae is the name most visitors hear first. It is connected with youth culture, street music, shops, nightlife, and creative energy. It can feel crowded, especially in the evening, but that busyness is part of its character. If you want Seoul to feel energetic rather than quiet, Hongdae is an easy place to start.",
+      "Yeonnam-dong is close to Hongdae, but the mood is different. It feels slower, more cafe-heavy, and better for wandering without a fixed destination. The side streets are useful for small shops, dessert stops, simple restaurants, and casual photos that do not need a famous landmark.",
+      "Gyeongui Line Forest Park helps connect the area on foot. It gives Yeonnam a softer feeling and makes the neighborhood easier to enjoy slowly. You do not need to treat it like a major tourist attraction. It works better as a walking line between cafes, streets, and small stops.",
+      "Mangwon feels more local. It is not as loud as Hongdae and not as polished as trendier cafe districts. Mangwon Market is the easiest place to understand that mood. It is good for snacks, simple food, and the feeling of a neighborhood that people actually use in daily life.",
+      "Mangwon also pairs well with the Han River. If you want the area to feel more open, Mangwon Hangang Park can be a good final stop after market food or cafe time. This is one reason West Seoul works well for slower travelers: it can move from dense streets to riverside space.",
+      "Hapjeong is a good connector. It sits between Hongdae, Mangwon, and Sangsu, and it has plenty of cafes, restaurants, bookstores, and small streets without always feeling as crowded as central Hongdae. It is useful when you want the area to feel social but not too loud.",
+      "Sangsu has a smaller and slightly more hidden mood. It is close enough to Hongdae to reach easily, but it often feels more relaxed. For visitors who like bars, cafes, and side streets, Sangsu can be a good way to enjoy West Seoul without staying only on the busiest streets.",
+      "Seogyo-dong is part of the wider Hongdae feeling. It is useful to know because many restaurants, cafes, small venues, and evening streets sit around this area. You do not need to separate it too strongly from Hongdae, but it helps explain why the neighborhood feels bigger than one main street.",
+      "The best way to visit West Seoul is not to rush every name on the map. Choose the mood first. If you want energy, start with Hongdae. If you want cafes and slower streets, start with Yeonnam. If you want market food and a more local feeling, start with Mangwon. If you want an easy evening, use Hapjeong or Sangsu as your base.",
+      "Compared with Old Seoul, West Seoul feels less historical and more everyday. That is why the two areas work well together. Old Seoul shows palaces, hanok alleys, markets, and older city layers. West Seoul shows how younger people, small businesses, cafes, and casual night streets shape the city now.",
+      "For K-drama fans, West Seoul can also feel familiar. It is not about one famous filming location. It is about the kind of everyday places dramas often use: a cafe table, a side street, a late walk, a market snack, a casual dinner, or a night when the city feels open-ended.",
+    ],
+    culturalContext:
+      "West Seoul is important because it shows a less formal side of the city. Many visitors think of Seoul through palaces, shopping streets, or skyscrapers, but everyday Seoul is also made of neighborhoods where people meet friends, walk between cafes, eat simple food, browse small shops, and stay out a little later than planned. Hongdae, Yeonnam, Mangwon, Hapjeong, and Sangsu show that side of Seoul clearly.",
+    tags: [
+      "Seoul",
+      "Hongdae",
+      "Yeonnam",
+      "Mangwon",
+      "Hapjeong",
+      "Korea travel",
+      "West Seoul",
+    ],
+    publishedAt: "2026-07-06",
+    readingTime: "6 min read",
+    seoTitle:
+      "West Seoul for First-Time Visitors | Hongdae, Yeonnam, Mangwon & Hapjeong",
+    seoDescription:
+      "A map-friendly West Seoul travel guide covering Hongdae, Yeonnam-dong, Gyeongui Line Forest Park, Mangwon Market, Hapjeong, and Sangsu.",
+    quickGuide: {
+      sectionTitle: "Quick West Seoul guide",
+      groups: [
+        {
+          title: "What this area feels like",
+          items: [
+            "West Seoul feels younger, more casual, and less formal than the palace side of the city.",
+            "This area is good for cafes, small shops, street music, casual nightlife, markets, and relaxed walks.",
+            "Hongdae is the loudest anchor, but Yeonnam, Mangwon, Hapjeong, and Sangsu make the area feel more local.",
+          ],
+        },
+        {
+          title: "Best places to put on your map",
+          items: [
+            "Hongdae: Youth culture, street energy, music, shops, and nightlife.",
+            "Yeonnam-dong: Cafes, side streets, small stores, and slower walks near Gyeongui Line Forest Park.",
+            "Gyeongui Line Forest Park: A long green walking path that makes the area easier to enjoy slowly.",
+            "Mangwon Market: A local market stop for snacks, simple food, and everyday neighborhood energy.",
+            "Mangwon Hangang Park: A good riverside pairing if you want to end the area with open space.",
+            "Hapjeong: Cafes, restaurants, bookstores, and a calmer bridge between Hongdae and Mangwon.",
+            "Sangsu: Smaller streets, bars, cafes, and a softer alternative to the busiest Hongdae blocks.",
+          ],
+        },
+        {
+          title: "Good for",
+          items: [
+            "First-time visitors who want Seoul to feel youthful and casual.",
+            "Travelers who like cafes, walking, small shops, and street atmosphere.",
+            "People who want a local-feeling area without leaving central Seoul too far.",
+            "Anyone who wants a contrast with Old Seoul, palaces, and hanok streets.",
+          ],
+        },
+        {
+          title: "How to visit",
+          items: [
+            "Do not treat West Seoul as one checklist.",
+            "Pick one main area, then walk into nearby streets instead of jumping too quickly.",
+            "Hongdae is better when you want energy; Yeonnam and Mangwon are better when you want a slower mood.",
+            "If you visit at night, keep the plan simple: dinner, a walk, and one cafe or bar area.",
+          ],
+        },
+        {
+          title: "Pair with another HAEMIL guide",
+          items: [
+            "Read the Old Seoul guide if you want the traditional palace-and-alley side of the city.",
+            "Read the K-drama Seoul guide if you want to understand why cafes, small streets, and night walks often feel emotional on screen.",
+          ],
+        },
+      ],
+    },
+    mapSectionTitle: "West Seoul stops on your map",
+    mapSpots: [
+      {
+        name: "Hongdae",
+        area: "Hongdae & street energy",
+        category: "Neighborhood",
+        mapQuery: "Hongdae Seoul",
+        note: "The loudest anchor of West Seoul, known for youth culture, street energy, shops, music, and casual nightlife.",
+      },
+      {
+        name: "Yeonnam-dong",
+        area: "Yeonnam & walks",
+        category: "Neighborhood",
+        mapQuery: "Yeonnam-dong Seoul",
+        note: "A cafe-and-side-street area near Hongdae, good for slower walks, small shops, and a more relaxed mood.",
+      },
+      {
+        name: "Gyeongui Line Forest Park",
+        area: "Yeonnam & walks",
+        category: "Park",
+        mapQuery: "Gyeongui Line Forest Park Seoul",
+        note: "A long green walking path that runs through Yeonnam and helps make West Seoul feel easier to explore on foot.",
+      },
+      {
+        name: "Mangwon Market",
+        area: "Mangwon & local food",
+        category: "Market",
+        mapQuery: "Mangwon Market Seoul",
+        note: "A local market stop for snacks, simple meals, and everyday neighborhood energy.",
+      },
+      {
+        name: "Mangwon Hangang Park",
+        area: "Mangwon & local food",
+        category: "Riverside",
+        mapQuery: "Mangwon Hangang Park Seoul",
+        note: "A riverside pairing for Mangwon, useful when you want open space after market food or cafe streets.",
+      },
+      {
+        name: "Hapjeong",
+        area: "Hapjeong & Sangsu",
+        category: "Neighborhood",
+        mapQuery: "Hapjeong Seoul",
+        note: "A calmer connector area with cafes, restaurants, bookstores, and easy access toward Hongdae, Sangsu, and Mangwon.",
+      },
+      {
+        name: "Sangsu",
+        area: "Hapjeong & Sangsu",
+        category: "Neighborhood",
+        mapQuery: "Sangsu Seoul",
+        note: "A smaller-street area with cafes, bars, and a softer alternative to the busiest Hongdae blocks.",
+      },
+      {
+        name: "Seogyo-dong",
+        area: "Hongdae & street energy",
+        category: "Neighborhood",
+        mapQuery: "Seogyo-dong Seoul",
+        note: "A useful Hongdae-side area for restaurants, cafes, small venues, and casual evening walks.",
+      },
+    ],
+    relatedGuides: [
+      {
+        label: "Travel guide",
+        title: "Old Seoul for First-Time Visitors",
+        href: "/travel/old-seoul-jongno-ikseondong-bukchon",
+      },
+      {
+        label: "Drama guide",
+        title: "Why Seoul Feels Like a K-drama",
+        href: "/dramas/why-seoul-feels-like-a-kdrama",
+      },
     ],
   },
   {
@@ -901,6 +1072,11 @@ export const POSTS: Post[] = [
         label: "Travel guide",
         title: "Old Seoul for First-Time Visitors",
         href: "/travel/old-seoul-jongno-ikseondong-bukchon",
+      },
+      {
+        label: "Travel guide",
+        title: "West Seoul for First-Time Visitors",
+        href: "/travel/west-seoul-hongdae-yeonnam-mangwon",
       },
     ],
     trailers: [
