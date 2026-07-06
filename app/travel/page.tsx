@@ -65,6 +65,29 @@ export default function TravelPage() {
           </p>
         </section>
 
+        <section className="mt-12 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 shadow-lg shadow-[var(--shadow)] md:p-8">
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+            Seoul area guides
+          </p>
+
+          <h2 className="mt-4 text-2xl font-semibold leading-tight md:text-3xl">
+            Not sure where to start in Seoul?
+          </h2>
+
+          <p className="mt-4 max-w-2xl leading-7 text-[var(--muted)]">
+            Start with HAEMIL’s Seoul area hub. Choose the side of the city
+            that fits your mood: old streets, young neighborhoods, cafe streets,
+            shopping, night views, or riverside walks.
+          </p>
+
+          <Link
+            href="/travel/seoul"
+            className="mt-6 inline-flex text-sm font-semibold text-[var(--accent)]"
+          >
+            Explore Seoul guides →
+          </Link>
+        </section>
+
         <section className="mt-12 pb-8">
           <p className="mb-8 text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
             Travel guides
