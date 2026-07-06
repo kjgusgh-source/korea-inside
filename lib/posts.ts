@@ -8,14 +8,9 @@ export type PostCategory =
   | "lifestyle"
   | "nightlife";
 
-export type TravelMapSpotArea =
-  | "West / Old Busan"
-  | "Central / Gwangalli / Seomyeon"
-  | "East / Haeundae / Gijang";
-
 export type TravelMapSpot = {
   name: string;
-  area: TravelMapSpotArea;
+  area: string;
   category: string;
   mapQuery: string;
   note?: string;
@@ -71,6 +66,7 @@ export interface Post {
   seoTitle: string;
   seoDescription: string;
   mapSpots?: TravelMapSpot[];
+  mapSectionTitle?: string;
   quickGuide?: TravelQuickGuide;
   relatedGuides?: RelatedGuide[];
   heroImage?: PostImage;
@@ -468,11 +464,171 @@ export const POSTS: Post[] = [
         note: "A sea-side temple often added to east Busan or Gijang-focused trips.",
       },
     ],
+    mapSectionTitle: "Busan stops by area",
     relatedGuides: [
       {
         label: "Food guide",
         title: "What to Eat in Busan",
         href: "/food/what-to-eat-in-busan",
+      },
+    ],
+  },
+  {
+    id: 12,
+    title:
+      "Old Seoul for First-Time Visitors: Jongno, Ikseon-dong, Insadong, and Bukchon",
+    slug: "old-seoul-jongno-ikseondong-bukchon",
+    category: "travel",
+    categorySlug: "travel",
+    categoryLabel: "Travel",
+    description:
+      "A map-friendly Old Seoul guide for first-time visitors, covering Jongno, Gyeongbokgung, Changdeokgung, Bukchon, Insadong, Ikseon-dong, Cheonggyecheon, and Gwangjang Market.",
+    excerpt:
+      "Old Seoul is where palaces, hanok alleys, tea houses, markets, and quiet city walks sit close together. This guide explains where to go and what each area feels like.",
+    content: [
+      "Old Seoul is not one single place. It is a cluster of palaces, alleys, markets, tea houses, and older streets around Jongno. For first-time visitors, this area is one of the easiest ways to feel that Seoul is not only a modern city of towers, cafes, and subway stations.",
+      "The mood here is slower. You can move from a palace gate to a hanok alley, from a tea house to a market, and from a busy street to a quiet stream walk without leaving central Seoul. That mix is what makes Old Seoul useful for travelers who want more than one famous photo spot.",
+      "Gyeongbokgung Palace is the most classic starting point. It feels formal, wide, and symbolic. If this is your first trip to Korea, it gives you a clear sense of royal Seoul and pairs easily with Gwanghwamun, Bukchon, or Insadong.",
+      "Changdeokgung Palace has a slightly quieter feeling. It can feel less like a landmark checklist and more like a place to slow down. If you prefer softer walks and older textures, it is a good palace to keep on your map.",
+      "Bukchon Hanok Village is one of the most recognizable old street areas in Seoul. The narrow roads, tiled roofs, and uphill views can feel very cinematic. But Bukchon is not a theme park. It is also a real residential neighborhood, so visit quietly and avoid treating private homes like photo props.",
+      "Insadong is easier and more relaxed. It is a good place for tea houses, galleries, small craft shops, souvenirs, and traditional snacks. For many visitors, Insadong works well as a gentle cultural stop between palace walks and cafe time.",
+      "Ikseon-dong has a different energy. The lanes are narrow and often crowded, but the area is full of small cafes, restaurants, and hanok-style storefronts. It is less formal than the palaces and more social than Bukchon, which makes it a useful stop for couples, friends, and anyone who wants Old Seoul with a trendier mood.",
+      "Jongno ties these places together. It is not always polished, but that is part of the point. The area has offices, older restaurants, small streets, signs, food alleys, and daily city movement. It feels lived-in rather than staged.",
+      "Cheonggyecheon Stream is a simple break between stops. It does not need to be the main reason to visit, but it helps soften the city. After walking through busy streets, a short stream walk can make central Seoul feel easier to understand.",
+      "Gwangjang Market gives Old Seoul a louder and warmer food side. This is where the area becomes less quiet and more energetic. Visitors often come for market food, snacks, and the feeling of sitting close to the movement of the city.",
+      "The best way to visit Old Seoul is not to rush every place in one day. Pick one palace, one alley area, one tea or cafe stop, and one food stop. That is enough to feel the area without turning the day into a checklist.",
+      "For K-drama fans, Old Seoul can also feel familiar in a different way. It is not only about famous filming locations. The small streets, old walls, cafes, markets, and night walks are the kind of everyday spaces that Korean dramas often turn into emotional places.",
+    ],
+    culturalContext:
+      "Old Seoul is important because it shows how old and new Korea sit close together. A palace may be near an office street. A hanok alley may be beside a trendy cafe. A market may be only a short walk from a stream in the middle of the city. For Korean people, these contrasts are normal parts of Seoul. For visitors, they can make the city feel layered instead of simple.",
+    tags: [
+      "Seoul",
+      "Jongno",
+      "Ikseon-dong",
+      "Insadong",
+      "Bukchon",
+      "Korea travel",
+      "Old Seoul",
+    ],
+    publishedAt: "2026-07-06",
+    readingTime: "6 min read",
+    seoTitle:
+      "Old Seoul for First-Time Visitors | Jongno, Ikseon-dong, Insadong & Bukchon",
+    seoDescription:
+      "A map-friendly Old Seoul travel guide covering Jongno, Gyeongbokgung, Changdeokgung, Bukchon, Insadong, Ikseon-dong, Cheonggyecheon, and Gwangjang Market.",
+    quickGuide: {
+      sectionTitle: "Quick Old Seoul guide",
+      groups: [
+        {
+          title: "What this area feels like",
+          items: [
+            "Old Seoul is slower than Gangnam, Hongdae, or Seongsu.",
+            "This area is good for palaces, hanok streets, tea houses, markets, and quiet walks.",
+            "It is one of the easiest places to feel the older side of Seoul without leaving the city center.",
+          ],
+        },
+        {
+          title: "Best places to put on your map",
+          items: [
+            "Gyeongbokgung Palace: A classic first palace stop near Gwanghwamun.",
+            "Changdeokgung Palace: A calmer palace choice with a more garden-like mood.",
+            "Bukchon Hanok Village: Hanok alleys and old residential streets between the palaces.",
+            "Insadong: Tea houses, crafts, galleries, souvenirs, and traditional snacks.",
+            "Ikseon-dong: Narrow hanok-style alleys with cafes, small restaurants, and date-course energy.",
+            "Cheonggyecheon Stream: A simple city walk through central Seoul.",
+            "Gwangjang Market: Market food, old Seoul energy, and a busy local eating scene.",
+          ],
+        },
+        {
+          title: "Good for",
+          items: [
+            "First-time visitors who want Seoul to feel more local and historical.",
+            "K-drama fans who like alleys, small streets, and emotional city walks.",
+            "Travelers who prefer walking, cafes, snacks, and cultural stops over a packed schedule.",
+            "People who want a Seoul area that can work in any season.",
+          ],
+        },
+        {
+          title: "How to visit",
+          items: [
+            "Do not try to rush every stop in one straight line.",
+            "Pick one palace, one alley area, one cafe or tea stop, and one food stop.",
+            "Bukchon is a real residential area, so keep your voice low and be respectful.",
+            "Gwangjang Market is better when you are ready to eat, not just look around.",
+          ],
+        },
+        {
+          title: "Pair with another HAEMIL guide",
+          items: [
+            "Read the K-drama Seoul guide if you want to understand why ordinary Seoul streets, cafes, and night walks often feel emotional on screen.",
+          ],
+        },
+      ],
+    },
+    mapSectionTitle: "Old Seoul stops on your map",
+    mapSpots: [
+      {
+        name: "Gyeongbokgung Palace",
+        area: "Palaces & landmarks",
+        category: "Palace",
+        mapQuery: "Gyeongbokgung Palace Seoul",
+        note: "A classic first palace stop near Gwanghwamun, good for understanding the scale and formality of old royal Seoul.",
+      },
+      {
+        name: "Changdeokgung Palace",
+        area: "Palaces & landmarks",
+        category: "Palace",
+        mapQuery: "Changdeokgung Palace Seoul",
+        note: "A calmer palace choice with a softer mood, often paired with nearby Bukchon or Jongno walks.",
+      },
+      {
+        name: "Bukchon Hanok Village",
+        area: "Hanok streets & alleys",
+        category: "Hanok neighborhood",
+        mapQuery: "Bukchon Hanok Village Seoul",
+        note: "A hanok neighborhood between the palaces, best visited slowly and respectfully because people still live there.",
+      },
+      {
+        name: "Insadong",
+        area: "Hanok streets & alleys",
+        category: "Cultural street",
+        mapQuery: "Insadong Seoul",
+        note: "A central area for tea houses, galleries, crafts, souvenirs, and traditional snacks.",
+      },
+      {
+        name: "Ikseon-dong",
+        area: "Hanok streets & alleys",
+        category: "Hanok alleys",
+        mapQuery: "Ikseon-dong Seoul",
+        note: "A narrow-lane neighborhood with hanok-style cafes, small restaurants, and an easy date-course mood.",
+      },
+      {
+        name: "Jongno",
+        area: "Central Jongno",
+        category: "Central district",
+        mapQuery: "Jongno Seoul",
+        note: "A central Seoul district where old streets, offices, food alleys, and historic stops sit close together.",
+      },
+      {
+        name: "Cheonggyecheon Stream",
+        area: "Central Jongno",
+        category: "City walk",
+        mapQuery: "Cheonggyecheon Stream Seoul",
+        note: "A simple stream walk through the city, useful when you want a break between palace, market, or shopping stops.",
+      },
+      {
+        name: "Gwangjang Market",
+        area: "Markets & food",
+        category: "Market food",
+        mapQuery: "Gwangjang Market Seoul",
+        note: "A busy old market known for food stalls, snacks, and a more local eating atmosphere.",
+      },
+    ],
+    relatedGuides: [
+      {
+        label: "Drama guide",
+        title: "Why Seoul Feels Like a K-drama",
+        href: "/dramas/why-seoul-feels-like-a-kdrama",
       },
     ],
   },
@@ -740,6 +896,13 @@ export const POSTS: Post[] = [
         },
       ],
     },
+    relatedGuides: [
+      {
+        label: "Travel guide",
+        title: "Old Seoul for First-Time Visitors",
+        href: "/travel/old-seoul-jongno-ikseondong-bukchon",
+      },
+    ],
     trailers: [
       {
         title: "Our Unwritten Seoul",

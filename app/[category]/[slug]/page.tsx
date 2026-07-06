@@ -191,7 +191,10 @@ export default async function ArticlePage({ params }: PageProps) {
           )}
 
           {post.mapSpots && post.mapSpots.length > 0 && (
-            <TravelMapSpotList spots={post.mapSpots} />
+            <TravelMapSpotList
+              spots={post.mapSpots}
+              sectionTitle={post.mapSectionTitle}
+            />
           )}
 
           <div className="mt-8 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 shadow-lg shadow-[var(--shadow)] md:p-8">

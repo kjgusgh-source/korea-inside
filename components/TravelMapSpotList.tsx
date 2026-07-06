@@ -1,24 +1,37 @@
-import type { TravelMapSpot, TravelMapSpotArea } from "../lib/posts";
-
-const AREA_ORDER: TravelMapSpotArea[] = [
-  "West / Old Busan",
-  "Central / Gwangalli / Seomyeon",
-  "East / Haeundae / Gijang",
-];
+import type { TravelMapSpot } from "../lib/posts";
 
 function getMapHref(mapQuery: string) {
   return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQuery)}`;
 }
 
+function groupSpotsByArea(spots: TravelMapSpot[]) {
+  const areaOrder: string[] = [];
+  const groups = new Map<string, TravelMapSpot[]>();
+
+  spots.forEach((spot) => {
+    if (!groups.has(spot.area)) {
+      areaOrder.push(spot.area);
+      groups.set(spot.area, []);
+    }
+    groups.get(spot.area)!.push(spot);
+  });
+
+  return areaOrder.map((area) => ({
+    area,
+    spots: groups.get(area)!,
+  }));
+}
+
 type TravelMapSpotListProps = {
   spots: TravelMapSpot[];
+  sectionTitle?: string;
 };
 
-export default function TravelMapSpotList({ spots }: TravelMapSpotListProps) {
-  const spotsByArea = AREA_ORDER.map((area) => ({
-    area,
-    spots: spots.filter((spot) => spot.area === area),
-  })).filter((group) => group.spots.length > 0);
+export default function TravelMapSpotList({
+  spots,
+  sectionTitle,
+}: TravelMapSpotListProps) {
+  const spotsByArea = groupSpotsByArea(spots);
 
   return (
     <section className="mt-8 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 shadow-lg shadow-[var(--shadow)] md:p-8">
@@ -26,13 +39,13 @@ export default function TravelMapSpotList({ spots }: TravelMapSpotListProps) {
         Map at a glance
       </p>
 
-      <h2 className="mt-4 text-3xl font-semibold">
-        Busan stops by area
-      </h2>
+      {sectionTitle && (
+        <h2 className="mt-4 text-3xl font-semibold">{sectionTitle}</h2>
+      )}
 
       <p className="mt-4 max-w-2xl text-base leading-7 text-[var(--muted)]">
-        Open a spot in Google Maps to see where it sits in Busan. No heavy map
-        embed here — just quick links you can use while planning.
+        Open a spot in Google Maps to see where it sits. No heavy map embed here
+        — just quick links you can use while planning.
       </p>
 
       <div className="mt-8 space-y-10">
