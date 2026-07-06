@@ -635,6 +635,16 @@ export const POSTS: Post[] = [
         title: "West Seoul for First-Time Visitors",
         href: "/travel/west-seoul-hongdae-yeonnam-mangwon",
       },
+      {
+        label: "Travel guide",
+        title: "Trendy Seoul for First-Time Visitors",
+        href: "/travel/trendy-seoul-seongsu-apgujeong-cheongdam",
+      },
+      {
+        label: "Travel guide",
+        title: "Shopping Seoul for First-Time Visitors",
+        href: "/travel/shopping-seoul-myeongdong-namsan-dongdaemun",
+      },
     ],
   },
   {
@@ -795,6 +805,382 @@ export const POSTS: Post[] = [
         label: "Travel guide",
         title: "Old Seoul for First-Time Visitors",
         href: "/travel/old-seoul-jongno-ikseondong-bukchon",
+      },
+      {
+        label: "Drama guide",
+        title: "Why Seoul Feels Like a K-drama",
+        href: "/dramas/why-seoul-feels-like-a-kdrama",
+      },
+      {
+        label: "Travel guide",
+        title: "Trendy Seoul for First-Time Visitors",
+        href: "/travel/trendy-seoul-seongsu-apgujeong-cheongdam",
+      },
+      {
+        label: "Travel guide",
+        title: "Shopping Seoul for First-Time Visitors",
+        href: "/travel/shopping-seoul-myeongdong-namsan-dongdaemun",
+      },
+    ],
+  },
+  {
+    id: 14,
+    title:
+      "Trendy Seoul for First-Time Visitors: Seongsu, Apgujeong, Cheongdam, and Cafe Streets",
+    slug: "trendy-seoul-seongsu-apgujeong-cheongdam",
+    category: "travel",
+    categorySlug: "travel",
+    categoryLabel: "Travel",
+    description:
+      "A map-friendly Trendy Seoul guide for first-time visitors, covering Seongsu, Seoul Forest, Apgujeong Rodeo, Cheongdam, Dosan Park, Garosu-gil, and Sinsa.",
+    excerpt:
+      "Trendy Seoul is where cafes, pop-ups, fashion streets, beauty stores, and polished Gangnam energy come together. This guide explains where to go and what each area feels like.",
+    content: [
+      "Trendy Seoul is not only one neighborhood. It is a mood that appears in cafes, pop-ups, fashion streets, beauty stores, design spaces, and polished city blocks. For first-time visitors, this side of Seoul can feel very different from palaces, markets, or old alleys.",
+      "The easiest way to understand Trendy Seoul is to separate it into two feelings. Seongsu feels creative, cafe-heavy, and a little industrial. Apgujeong, Cheongdam, Sinsa, and Garosu-gil feel more polished, fashion-focused, and Gangnam-side.",
+      "Seongsu is one of the best places to start if you want modern Seoul without going straight to luxury shopping. The area has cafes, converted industrial spaces, pop-ups, design stores, and brand experiences. It can feel busy, but it still has a creative street mood that makes walking part of the visit.",
+      "Seoul Forest gives Seongsu a softer side. It is not only a park stop. It helps balance the area. After moving through cafes, shops, and crowded streets, Seoul Forest gives you open space and a slower pace.",
+      "Seongsu Cafe Street is useful because it shows why this neighborhood became so popular. The point is not to visit one famous cafe and leave. The better way is to walk slowly, look at the storefronts, and choose a place that matches your mood.",
+      "Apgujeong Rodeo has a different feeling. It is more polished, more style-conscious, and more connected with fashion, beauty, restaurants, and nightlife. If Hongdae feels young and loose, Apgujeong Rodeo feels more dressed-up.",
+      "Cheongdam is the high-end side of this guide. Luxury shops, entertainment-company atmosphere, and polished streets shape the area. It may not feel casual, but it helps visitors understand another side of Seoul: the side connected with image, status, fashion, and entertainment.",
+      "Dosan Park is a good softer stop between Apgujeong and Cheongdam. The area around it has cafes, restaurants, and quieter streets where the mood feels less rushed. It is useful when you want Gangnam style without staying only on the busiest shopping streets.",
+      "Garosu-gil gives Sinsa a stylish walking route. It is known for cafes, boutiques, fashion stores, and tree-lined streets. The mood can change over time, but it remains useful for visitors who want a simple Gangnam-side walk with shopping and cafe stops.",
+      "Sinsa is a good base for this part of Seoul. It connects Garosu-gil, cafes, shopping, and nearby Gangnam areas without feeling as intense as some parts of Apgujeong or Cheongdam. It works well for visitors who want a polished area but still want to walk casually.",
+      "The best way to visit Trendy Seoul is to choose your mood first. If you want cafes, pop-ups, and creative streets, start with Seongsu. If you want fashion, beauty, and a more polished city feeling, start with Apgujeong, Cheongdam, or Sinsa.",
+      "Compared with Old Seoul, this area is less about history and more about what feels current. Compared with West Seoul, it feels less loose and more curated. That contrast is useful. It shows that Seoul is not one style of city. It changes depending on which side you enter.",
+      "For K-drama fans, Trendy Seoul can also feel familiar. These are the kinds of areas where a cafe table, beauty store, brand event, quiet street, or night drive can become part of a scene. The emotion may be fictional, but the city mood is real.",
+    ],
+    culturalContext:
+      "Trendy Seoul changes quickly because many neighborhoods are shaped by cafes, brands, pop-ups, fashion, beauty, and social media attention. A street can feel popular for a few years and then shift again. For visitors, the best approach is not to chase every famous store. It is better to understand the mood: Seoul as a city where style, image, everyday walking, and commercial spaces often blend together.",
+    tags: [
+      "Seoul",
+      "Seongsu",
+      "Apgujeong",
+      "Cheongdam",
+      "Garosu-gil",
+      "Korea travel",
+      "Trendy Seoul",
+    ],
+    publishedAt: "2026-07-06",
+    readingTime: "6 min read",
+    seoTitle:
+      "Trendy Seoul for First-Time Visitors | Seongsu, Apgujeong, Cheongdam & Cafe Streets",
+    seoDescription:
+      "A map-friendly Trendy Seoul travel guide covering Seongsu, Seoul Forest, Apgujeong Rodeo, Cheongdam, Dosan Park, Garosu-gil, and Sinsa.",
+    quickGuide: {
+      sectionTitle: "Quick Trendy Seoul guide",
+      groups: [
+        {
+          title: "What this area feels like",
+          items: [
+            "Trendy Seoul feels more polished, brand-focused, and style-conscious than Old Seoul or West Seoul.",
+            "This area is good for cafes, pop-ups, fashion streets, beauty stores, design spaces, and people-watching.",
+            "Seongsu feels creative and cafe-heavy, while Apgujeong and Cheongdam feel more polished and upscale.",
+          ],
+        },
+        {
+          title: "Best places to put on your map",
+          items: [
+            "Seongsu: Cafes, converted industrial spaces, pop-ups, design stores, and creative energy.",
+            "Seoul Forest: A large green break beside Seongsu, useful when you want the area to feel less crowded.",
+            "Seongsu Cafe Street: A simple way to understand why this neighborhood became known for cafes and brand spaces.",
+            "Apgujeong Rodeo: Fashion, beauty, restaurants, and a polished Gangnam street mood.",
+            "Cheongdam: Luxury shops, entertainment-company atmosphere, and a more high-end side of Seoul.",
+            "Dosan Park: A calmer pocket near Apgujeong and Cheongdam, good for cafes and a slower stop.",
+            "Garosu-gil: A Sinsa street known for fashion, cafes, boutiques, and a stylish walking mood.",
+            "Sinsa: A useful base for Garosu-gil, cafes, shopping, and a softer Gangnam-side walk.",
+          ],
+        },
+        {
+          title: "Good for",
+          items: [
+            "First-time visitors who want modern Seoul, not only palaces, markets, or nightlife.",
+            "Travelers interested in cafes, pop-ups, K-beauty, fashion, and brand spaces.",
+            "People who want a polished contrast with Hongdae, Mangwon, Jongno, or Bukchon.",
+            "Visitors who like walking slowly, browsing stores, and stopping often.",
+          ],
+        },
+        {
+          title: "How to visit",
+          items: [
+            "Do not try to visit every trendy place in one day.",
+            "Pick one side first: Seongsu for creative cafes and pop-ups, or Apgujeong and Cheongdam for polished Gangnam energy.",
+            "Trendy areas change quickly, so treat this guide as a mood map, not a fixed checklist.",
+            "If a cafe or pop-up is too crowded, walk one or two streets away and look for a quieter stop.",
+          ],
+        },
+        {
+          title: "Pair with another HAEMIL guide",
+          items: [
+            "Read the Old Seoul guide if you want palaces, hanok alleys, markets, and older city layers.",
+            "Read the West Seoul guide if you want a younger, looser, more casual side of the city.",
+            "Read the K-drama Seoul guide if you want to understand why cafes, streets, and night views often feel emotional on screen.",
+          ],
+        },
+      ],
+    },
+    mapSectionTitle: "Trendy Seoul stops on your map",
+    mapSpots: [
+      {
+        name: "Seongsu",
+        area: "Seongsu & creative streets",
+        category: "Neighborhood",
+        mapQuery: "Seongsu Seoul",
+        note: "A creative east Seoul area known for cafes, converted industrial spaces, pop-ups, design stores, and brand experiences.",
+      },
+      {
+        name: "Seoul Forest",
+        area: "Seongsu & creative streets",
+        category: "Park",
+        mapQuery: "Seoul Forest Seoul",
+        note: "A large green stop near Seongsu, useful when you want a quieter break between cafes, shops, and pop-up spaces.",
+      },
+      {
+        name: "Seongsu Cafe Street",
+        area: "Seongsu & creative streets",
+        category: "Cafe area",
+        mapQuery: "Seongsu Cafe Street Seoul",
+        note: "A cafe-heavy area that helps explain why Seongsu became one of Seoul’s most talked-about neighborhoods.",
+      },
+      {
+        name: "Apgujeong Rodeo",
+        area: "Apgujeong & Cheongdam",
+        category: "Shopping street",
+        mapQuery: "Apgujeong Rodeo Street Seoul",
+        note: "A polished Gangnam-side street for fashion, beauty, restaurants, and a more style-conscious Seoul mood.",
+      },
+      {
+        name: "Cheongdam",
+        area: "Apgujeong & Cheongdam",
+        category: "Neighborhood",
+        mapQuery: "Cheongdam Seoul",
+        note: "A high-end area connected with luxury shopping, entertainment-company atmosphere, and polished city streets.",
+      },
+      {
+        name: "Dosan Park",
+        area: "Apgujeong & Cheongdam",
+        category: "Park",
+        mapQuery: "Dosan Park Seoul",
+        note: "A calmer pocket near Apgujeong and Cheongdam, good for cafes, short walks, and a slower stop.",
+      },
+      {
+        name: "Garosu-gil",
+        area: "Sinsa & Garosu-gil",
+        category: "Shopping street",
+        mapQuery: "Garosu-gil Seoul",
+        note: "A stylish Sinsa street known for fashion stores, cafes, boutiques, and an easy walking mood.",
+      },
+      {
+        name: "Sinsa",
+        area: "Sinsa & Garosu-gil",
+        category: "Neighborhood",
+        mapQuery: "Sinsa Seoul",
+        note: "A useful base for Garosu-gil, cafes, shopping, and a softer Gangnam-side neighborhood walk.",
+      },
+    ],
+    relatedGuides: [
+      {
+        label: "Travel guide",
+        title: "Old Seoul for First-Time Visitors",
+        href: "/travel/old-seoul-jongno-ikseondong-bukchon",
+      },
+      {
+        label: "Travel guide",
+        title: "West Seoul for First-Time Visitors",
+        href: "/travel/west-seoul-hongdae-yeonnam-mangwon",
+      },
+      {
+        label: "Drama guide",
+        title: "Why Seoul Feels Like a K-drama",
+        href: "/dramas/why-seoul-feels-like-a-kdrama",
+      },
+      {
+        label: "Travel guide",
+        title: "Shopping Seoul for First-Time Visitors",
+        href: "/travel/shopping-seoul-myeongdong-namsan-dongdaemun",
+      },
+    ],
+  },
+  {
+    id: 15,
+    title:
+      "Shopping Seoul for First-Time Visitors: Myeongdong, Namsan, Dongdaemun, and DDP",
+    slug: "shopping-seoul-myeongdong-namsan-dongdaemun",
+    category: "travel",
+    categorySlug: "travel",
+    categoryLabel: "Travel",
+    description:
+      "A map-friendly Shopping Seoul guide for first-time visitors, covering Myeongdong, Namsan, Euljiro, Cheonggyecheon, Dongdaemun, Dongdaemun Fashion Market, and DDP.",
+    excerpt:
+      "Shopping Seoul is where first-time shopping, cosmetics, street food, night views, design spaces, and late-night fashion energy come together around Myeongdong, Namsan, and Dongdaemun.",
+    content: [
+      "Shopping Seoul is not only about buying things. For first-time visitors, it is often the easiest way to understand central Seoul: bright streets, cosmetics shops, snacks, signs, night views, design buildings, and busy movement between subway stations.",
+      "This guide focuses on the Myeongdong, Namsan, Euljiro, Cheonggyecheon, Dongdaemun, and DDP area. These places do not all have the same mood, but they sit close enough to work as one shopping-and-city zone.",
+      "Myeongdong is the classic first shopping stop. It is tourist-friendly, easy to understand, and full of cosmetics stores, street food, snacks, souvenirs, and simple browsing. It can feel crowded and commercial, but that is also why it works well for a first visit.",
+      "Myeongdong Shopping Street is the busiest part of the area. It is not the place to look for a quiet local mood. It is better for quick shopping, trying snacks, comparing cosmetics stores, and getting a simple sense of how busy central Seoul can feel.",
+      "Namsan Seoul Tower gives the area a different feeling. After shopping streets and bright signs, the city view makes Seoul feel wider and calmer. This is why many visitors pair Myeongdong with Namsan, especially near sunset or at night.",
+      "Namsan itself is useful because it softens the area. It is close to the city center, but it adds trees, hills, walking paths, and views. If Myeongdong feels too crowded, Namsan can make the same area feel less compressed.",
+      "Euljiro is the older and rougher contrast near this shopping zone. It has restaurants, cafes, bars, older signs, printing shops, small streets, and a more local atmosphere. It does not feel as easy or polished as Myeongdong, but it helps show another layer of central Seoul.",
+      "Cheonggyecheon Stream is a simple way to move through the city. It appears in more than one Seoul guide because it connects different moods: old streets, shopping areas, office blocks, markets, and Dongdaemun. In this guide, it works as a break between busy shopping streets and Dongdaemun.",
+      "Dongdaemun has a different energy from Myeongdong. It feels more practical, faster, and more connected to fashion markets. The area is known for shopping buildings, wholesale energy, late-night movement, and busy city streets.",
+      "Dongdaemun Fashion Market is useful if you want to understand why the area has a fashion identity. You do not need to buy something for it to be interesting. The point is to feel the speed and density of a market area built around clothes, fabric, and shopping.",
+      "Dongdaemun Design Plaza, usually called DDP, gives Dongdaemun a more modern and design-focused side. Its shape, open space, exhibitions, and lights make the area feel different from ordinary shopping streets. At night, DDP can feel especially photo-friendly.",
+      "The best way to visit Shopping Seoul is to choose one side first. If you want easy shopping, cosmetics, snacks, and a night view, use Myeongdong and Namsan. If you want older streets, design, and fashion-market energy, use Euljiro, Cheonggyecheon, Dongdaemun, and DDP.",
+      "Compared with Old Seoul, this area is less quiet and less historical. Compared with West Seoul, it is more tourist-friendly and commercial. Compared with Trendy Seoul, it is less curated and more practical. That mix is what makes it useful for first-time visitors.",
+      "For K-drama fans, this side of Seoul can also feel familiar. Night views, bright streets, subway exits, shopping bags, and walks after dinner often appear on screen because they are normal parts of city life. The locations may not always be famous, but the mood is easy to recognize.",
+    ],
+    culturalContext:
+      "Shopping areas in Seoul are not only places to buy things. They are also meeting points, food stops, night-view routes, subway hubs, and everyday city spaces. Myeongdong, Namsan, Euljiro, Cheonggyecheon, Dongdaemun, and DDP show how Seoul mixes tourism, commerce, design, old streets, and late-night movement in one central area.",
+    tags: [
+      "Seoul",
+      "Myeongdong",
+      "Namsan",
+      "Dongdaemun",
+      "DDP",
+      "Korea travel",
+      "Shopping Seoul",
+    ],
+    publishedAt: "2026-07-06",
+    readingTime: "6 min read",
+    seoTitle:
+      "Shopping Seoul for First-Time Visitors | Myeongdong, Namsan, Dongdaemun & DDP",
+    seoDescription:
+      "A map-friendly Shopping Seoul travel guide covering Myeongdong, Namsan Seoul Tower, Euljiro, Cheonggyecheon, Dongdaemun, Dongdaemun Fashion Market, and DDP.",
+    quickGuide: {
+      sectionTitle: "Quick Shopping Seoul guide",
+      groups: [
+        {
+          title: "What this area feels like",
+          items: [
+            "Shopping Seoul feels practical, busy, and easy for first-time visitors.",
+            "This area is good for cosmetics, street food, shopping streets, night views, design spaces, and late-night fashion energy.",
+            "Myeongdong and Namsan feel tourist-friendly, while Euljiro and Dongdaemun add an older, busier, more city-like mood.",
+          ],
+        },
+        {
+          title: "Best places to put on your map",
+          items: [
+            "Myeongdong: A classic first shopping area for cosmetics, street food, and easy tourist energy.",
+            "Myeongdong Shopping Street: The busiest part of the area, useful for quick browsing and snacks.",
+            "Namsan Seoul Tower: A simple night-view stop that pairs well with Myeongdong.",
+            "Namsan: A hill and park area that gives the shopping district a softer city-view side.",
+            "Euljiro: Older streets, restaurants, cafes, bars, and a more local contrast near central Seoul.",
+            "Cheonggyecheon Stream: A useful walking line between central shopping, Euljiro, and Dongdaemun.",
+            "Dongdaemun: Fashion markets, wholesale energy, late-night shopping mood, and busy city streets.",
+            "Dongdaemun Fashion Market: A practical stop for understanding the area’s fashion-market identity.",
+            "DDP: A design landmark, exhibition space, and photo-friendly night stop.",
+          ],
+        },
+        {
+          title: "Good for",
+          items: [
+            "First-time visitors who want an easy shopping base.",
+            "Travelers looking for cosmetics, snacks, souvenirs, and simple city movement.",
+            "People who want to pair shopping with a night view or design stop.",
+            "Visitors who want a contrast with Old Seoul, West Seoul, and Trendy Seoul.",
+          ],
+        },
+        {
+          title: "How to visit",
+          items: [
+            "Do not treat this area as one long checklist.",
+            "Use Myeongdong and Namsan together if you want shopping plus a night view.",
+            "Use Euljiro, Cheonggyecheon, Dongdaemun, and DDP together if you want older streets, design, and late shopping energy.",
+            "If Myeongdong feels too crowded, step away from the main shopping street and use it as a short stop, not your whole day.",
+          ],
+        },
+        {
+          title: "Pair with another HAEMIL guide",
+          items: [
+            "Read the Old Seoul guide if you want palaces, hanok alleys, markets, and older city layers.",
+            "Read the West Seoul guide if you want a younger, looser, more casual side of the city.",
+            "Read the Trendy Seoul guide if you want cafes, pop-ups, fashion, beauty, and polished Gangnam energy.",
+            "Read the K-drama Seoul guide if you want to understand why night views, streets, and everyday spaces often feel emotional on screen.",
+          ],
+        },
+      ],
+    },
+    mapSectionTitle: "Shopping Seoul stops on your map",
+    mapSpots: [
+      {
+        name: "Myeongdong",
+        area: "Myeongdong & Namsan",
+        category: "Neighborhood",
+        mapQuery: "Myeongdong Seoul",
+        note: "A classic first shopping area for cosmetics, street food, souvenirs, and easy tourist energy.",
+      },
+      {
+        name: "Myeongdong Shopping Street",
+        area: "Myeongdong & Namsan",
+        category: "Shopping street",
+        mapQuery: "Myeongdong Shopping Street Seoul",
+        note: "The busiest part of Myeongdong, useful for quick browsing, snacks, cosmetics, and first-time Seoul shopping.",
+      },
+      {
+        name: "Namsan Seoul Tower",
+        area: "Myeongdong & Namsan",
+        category: "Viewpoint",
+        mapQuery: "Namsan Seoul Tower",
+        note: "A simple night-view stop that pairs well with Myeongdong when you want the city to feel more open.",
+      },
+      {
+        name: "Namsan",
+        area: "Myeongdong & Namsan",
+        category: "Park",
+        mapQuery: "Namsan Seoul",
+        note: "A hill and park area that gives the shopping district a softer walking and city-view side.",
+      },
+      {
+        name: "Euljiro",
+        area: "Euljiro & Cheonggyecheon",
+        category: "Neighborhood",
+        mapQuery: "Euljiro Seoul",
+        note: "An older central area with restaurants, cafes, bars, signs, and a more local contrast near shopping streets.",
+      },
+      {
+        name: "Cheonggyecheon Stream",
+        area: "Euljiro & Cheonggyecheon",
+        category: "Walk",
+        mapQuery: "Cheonggyecheon Stream Seoul",
+        note: "A useful walking line between central Seoul, Euljiro, and Dongdaemun when the streets feel crowded.",
+      },
+      {
+        name: "Dongdaemun",
+        area: "Dongdaemun & DDP",
+        category: "Neighborhood",
+        mapQuery: "Dongdaemun Seoul",
+        note: "A busy east-central area known for fashion markets, late-night shopping mood, and practical city energy.",
+      },
+      {
+        name: "Dongdaemun Fashion Market",
+        area: "Dongdaemun & DDP",
+        category: "Market",
+        mapQuery: "Dongdaemun Fashion Market Seoul",
+        note: "A practical stop for understanding Dongdaemun’s fashion-market identity and wholesale shopping atmosphere.",
+      },
+      {
+        name: "Dongdaemun Design Plaza",
+        area: "Dongdaemun & DDP",
+        category: "Design landmark",
+        mapQuery: "Dongdaemun Design Plaza Seoul",
+        note: "A design landmark, exhibition space, and photo-friendly stop that feels especially strong at night.",
+      },
+    ],
+    relatedGuides: [
+      {
+        label: "Travel guide",
+        title: "Old Seoul for First-Time Visitors",
+        href: "/travel/old-seoul-jongno-ikseondong-bukchon",
+      },
+      {
+        label: "Travel guide",
+        title: "West Seoul for First-Time Visitors",
+        href: "/travel/west-seoul-hongdae-yeonnam-mangwon",
+      },
+      {
+        label: "Travel guide",
+        title: "Trendy Seoul for First-Time Visitors",
+        href: "/travel/trendy-seoul-seongsu-apgujeong-cheongdam",
       },
       {
         label: "Drama guide",
@@ -1077,6 +1463,16 @@ export const POSTS: Post[] = [
         label: "Travel guide",
         title: "West Seoul for First-Time Visitors",
         href: "/travel/west-seoul-hongdae-yeonnam-mangwon",
+      },
+      {
+        label: "Travel guide",
+        title: "Trendy Seoul for First-Time Visitors",
+        href: "/travel/trendy-seoul-seongsu-apgujeong-cheongdam",
+      },
+      {
+        label: "Travel guide",
+        title: "Shopping Seoul for First-Time Visitors",
+        href: "/travel/shopping-seoul-myeongdong-namsan-dongdaemun",
       },
     ],
     trailers: [
