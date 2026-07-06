@@ -5,6 +5,7 @@ import SiteHeader from "../../../components/SiteHeader";
 import PostImageFigure, {
   PostFoodGallery,
 } from "../../../components/PostImageFigure";
+import PostTrailerList from "../../../components/PostTrailerList";
 import TravelMapSpotList from "../../../components/TravelMapSpotList";
 import TravelQuickGuide from "../../../components/TravelQuickGuide";
 import {
@@ -21,7 +22,7 @@ type PageProps = {
 };
 
 function getPostAccent(category: string) {
-  if (category === "memes" || category === "kpop") {
+  if (category === "memes" || category === "kpop" || category === "dramas") {
     return {
       color: "var(--electric)",
       background: "var(--electric-soft)",
@@ -86,13 +87,17 @@ export default async function ArticlePage({ params }: PageProps) {
       ? "/travel"
       : post.categorySlug === "food"
         ? "/food"
-        : "/";
+        : post.categorySlug === "dramas"
+          ? "/dramas"
+          : "/";
   const backLabel =
     post.categorySlug === "travel"
       ? "← Back to Travel"
       : post.categorySlug === "food"
         ? "← Back to Food"
-        : "← Back to HAEMIL";
+        : post.categorySlug === "dramas"
+          ? "← Back to Drama & Film"
+          : "← Back to HAEMIL";
 
   return (
     <main className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
@@ -175,6 +180,10 @@ export default async function ArticlePage({ params }: PageProps) {
                 ))}
               </div>
             </section>
+          )}
+
+          {post.trailers && post.trailers.length > 0 && (
+            <PostTrailerList trailers={post.trailers} />
           )}
 
           {post.galleryImages && post.galleryImages.length > 0 && (

@@ -309,6 +309,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
         tags: ["Our Beloved Summer", "K-drama", "Old feelings"],
         youtubeId: "5Jtu4pAH0B0",
         sourceLabel: "SBS archive clip from 빽드",
+        guideHref: "/dramas",
       },
 
   {
@@ -325,6 +326,52 @@ export const MEDIA_ITEMS: MediaItem[] = [
   youtubeId: "EgLwaLFiCjg",
   sourceUrl: "https://www.youtube.com/watch?v=EgLwaLFiCjg",
   sourceLabel: "video from MBC every1",
+  guideHref: "/food",
+},
+{
+  id: "our-unwritten-seoul-trailer",
+  title: "Our Unwritten Seoul: a quieter Seoul mood",
+  category: "drama-film",
+  categoryLabel: "On Screen",
+  mediaType: "youtube",
+  description:
+    "An official trailer that shows Seoul as a city of identity, work, family, and quiet emotional change.",
+  cultureNote:
+    "K-dramas often make ordinary city spaces feel emotional. This trailer is a good mood example for understanding why Seoul can feel familiar before you even visit.",
+  tags: ["K-drama", "Seoul", "Our Unwritten Seoul", "tvN", "Drama"],
+  youtubeId: "zGSvSRLlyUA",
+  sourceLabel: "Official trailer from tvN DRAMA",
+  guideHref: "/dramas/why-seoul-feels-like-a-kdrama",
+},
+{
+  id: "can-this-love-be-translated-trailer",
+  title: "Can This Love Be Translated?: language and romance",
+  category: "drama-film",
+  categoryLabel: "On Screen",
+  mediaType: "youtube",
+  description:
+    "An official trailer about translation, emotion, and the distance between people when language and culture do not fully match.",
+  cultureNote:
+    "This fits HAEMIL’s language and culture angle: sometimes the important part is not only what someone says, but how much feeling gets lost or found between languages.",
+  tags: ["K-drama", "Netflix Korea", "Romance", "Translation", "Korean culture"],
+  youtubeId: "IIHQ1Z2yu80",
+  sourceLabel: "Official trailer from Netflix Korea",
+  guideHref: "/dramas/why-seoul-feels-like-a-kdrama",
+},
+{
+  id: "boyfriend-on-demand-trailer",
+  title: "Boyfriend on Demand: modern Seoul romance",
+  category: "drama-film",
+  categoryLabel: "On Screen",
+  mediaType: "youtube",
+  description:
+    "An official trailer with a more modern romance mood, connecting city life, dating imagination, and digital-era relationships.",
+  cultureNote:
+    "Modern K-dramas often mix everyday Seoul with fantasy-like dating situations. This kind of trailer helps show how ordinary spaces can become romantic or cinematic.",
+  tags: ["K-drama", "Netflix Korea", "Romance", "Seoul", "Dating"],
+  youtubeId: "ZnS0sRSWPuc",
+  sourceLabel: "Official trailer from Netflix Korea",
+  guideHref: "/dramas/why-seoul-feels-like-a-kdrama",
 },
 ];
 

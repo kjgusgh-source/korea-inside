@@ -46,6 +46,14 @@ export type PostImage = {
   group?: string;
 };
 
+export type PostTrailer = {
+  title: string;
+  koreanTitle?: string;
+  youtubeId: string;
+  sourceLabel: string;
+  note?: string;
+};
+
 export interface Post {
   id: number;
   title: string;
@@ -67,6 +75,7 @@ export interface Post {
   relatedGuides?: RelatedGuide[];
   heroImage?: PostImage;
   galleryImages?: PostImage[];
+  trailers?: PostTrailer[];
 }
 
 export const POSTS: Post[] = [
@@ -646,6 +655,112 @@ export const POSTS: Post[] = [
         label: "Travel guide",
         title: "Where Koreans Actually Go in Busan",
         href: "/travel/where-to-go-in-busan-first-time",
+      },
+    ],
+  },
+  {
+    id: 11,
+    title:
+      "Why Seoul Feels Like a K-drama: Everyday Places Fans Can Actually Visit",
+    slug: "why-seoul-feels-like-a-kdrama",
+    category: "dramas",
+    categorySlug: "dramas",
+    categoryLabel: "Drama / Film",
+    description:
+      "A gentle Seoul guide for K-drama fans, connecting everyday drama scenes with real places like the Han River, cafes, convenience stores, alleys, night views, and late-night food streets.",
+    excerpt:
+      "K-dramas often make ordinary Seoul places feel emotional. This guide explains the real places fans can actually visit, from the Han River and cafes to convenience stores, alleys, and night views.",
+    content: [
+      "K-dramas often make ordinary places feel bigger than they are. A convenience store becomes a place for a quiet confession. A bridge becomes a place to think. A small cafe becomes the background for a conversation people remember.",
+      "That is why Seoul can feel familiar to K-drama fans even before they visit. The city is not always shown through famous landmarks. Many memorable drama moments happen in everyday spaces: riverside walks, bus stops, office streets, small restaurants, convenience stores, and late-night sidewalks.",
+      "This guide is not a list of exact filming locations. It is a softer way to understand the Seoul mood that appears again and again in Korean dramas. Instead of chasing one scene, you can visit the kinds of places that make those scenes feel possible.",
+      "The Han River is one of the easiest places to start. In real life, people walk, bike, sit, eat convenience-store food, and watch the city lights near the river. In dramas, the Han River often becomes a place where characters pause, think, or say something they could not say indoors.",
+      "Convenience stores are another everyday space that K-dramas use well. They are not glamorous, but that is the point. A character can buy ramyeon, sit outside, talk quietly, or simply exist for a moment without needing a big plan.",
+      "Cafes and small streets are also important. Seoul has many neighborhoods where a short walk can turn into a cafe stop, a small shop, or a quiet conversation. For visitors, this is one of the easiest ways to feel a drama-like mood without looking for a specific shooting spot.",
+      "Old alleys give a different feeling. Areas with hanok-style buildings, narrow lanes, or older neighborhood textures can make Seoul feel slower and more personal. Places like Ikseon-dong or Bukchon-style streets are not only photo spots; they help visitors feel how old and new Seoul sit close together.",
+      "Night views are where Seoul often becomes emotional. Namsan, bridges, apartment lights, and streets after dark can make the city feel more cinematic. A night view does not need to be dramatic by itself. It becomes meaningful because someone is standing there with a feeling.",
+      "Late-night food is part of the mood too. Pojangmacha-style streets, simple restaurants, and after-work meals often show the social side of Korean life. In dramas, food is rarely just food. It can be comfort, apology, friendship, tension, or a reason to stay a little longer.",
+      "The official trailers on this page are not here as a ranking of dramas. They are mood examples. Watch them to notice how Korean dramas use city spaces, ordinary conversations, language, work, romance, and night streets to create emotion.",
+      "When you visit Seoul as a K-drama fan, do not try to make the city act like a drama for you. Choose one river walk, one cafe street, one small food stop, and one night view. That is enough to understand why ordinary Seoul can stay in someone’s memory.",
+    ],
+    culturalContext:
+      "K-dramas often turn everyday Korean spaces into emotional places. For Korean viewers, a convenience store, bus stop, cafe, riverside bench, or late-night restaurant can feel familiar because these are not fantasy locations. They are normal parts of city life. That familiarity is one reason the scenes can feel close, even when the story is romantic, dramatic, or unrealistic.",
+    tags: [
+      "K-drama",
+      "Seoul",
+      "Korea travel",
+      "Drama",
+      "Han River",
+      "Korean culture",
+    ],
+    publishedAt: "2026-07-06",
+    readingTime: "6 min read",
+    seoTitle:
+      "Why Seoul Feels Like a K-drama | HAEMIL Drama & Travel Guide",
+    seoDescription:
+      "A Seoul guide for K-drama fans: Han River, cafes, convenience stores, alleys, night views, late-night food, and official K-drama trailers to understand the mood.",
+    quickGuide: {
+      sectionTitle: "Quick K-drama Seoul guide",
+      groups: [
+        {
+          title: "Places fans can actually visit",
+          items: [
+            "Han River: A common place for walking, eating ramyeon, thinking, or having quiet conversations.",
+            "Convenience stores: Small everyday spaces that often become emotional in Korean dramas.",
+            "Cafes and small streets: Good for slow conversations, dates, and city mood.",
+            "Old alleys: Ikseon-dong, Bukchon-style streets, and older neighborhoods can feel familiar to drama fans.",
+            "Night views: Namsan, bridges, and city lights often carry the emotional side of Seoul.",
+          ],
+        },
+        {
+          title: "What to look for",
+          items: [
+            "K-dramas often make normal places feel bigger than they are.",
+            "A bench, bridge, bus stop, cafe table, or convenience store can become the main emotional space.",
+            "The point is not to copy a scene exactly, but to understand why ordinary Seoul feels memorable on screen.",
+          ],
+        },
+        {
+          title: "How to visit",
+          items: [
+            "Do not expect every place to feel dramatic all the time.",
+            "Visit slowly, especially near the Han River, small streets, and night-view areas.",
+            "If you are a fan, combine one famous area with one ordinary everyday stop.",
+          ],
+        },
+        {
+          title: "Good first Seoul moods",
+          items: [
+            "Han River at sunset or night.",
+            "A small cafe street in the afternoon.",
+            "Convenience store snacks after walking.",
+            "Namsan or a bridge view after dark.",
+            "A late-night food street when the city feels quieter.",
+          ],
+        },
+      ],
+    },
+    trailers: [
+      {
+        title: "Our Unwritten Seoul",
+        koreanTitle: "미지의 서울",
+        youtubeId: "zGSvSRLlyUA",
+        sourceLabel: "Official trailer from tvN DRAMA",
+        note: "A trailer to feel Seoul as a city of identity, work, family, and quiet emotional change.",
+      },
+      {
+        title: "Can This Love Be Translated?",
+        koreanTitle: "이 사랑 통역 되나요?",
+        youtubeId: "IIHQ1Z2yu80",
+        sourceLabel: "Official trailer from Netflix Korea",
+        note: "A trailer that fits HAEMIL’s language and culture angle: translation, emotion, and the distance between people.",
+      },
+      {
+        title: "Boyfriend on Demand",
+        koreanTitle: "월간남친",
+        youtubeId: "ZnS0sRSWPuc",
+        sourceLabel: "Official trailer from Netflix Korea",
+        note: "A trailer for a more modern romance mood, with city life, dating imagination, and digital-era relationships.",
       },
     ],
   }

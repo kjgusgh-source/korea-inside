@@ -21,6 +21,7 @@ import {
 
 const CONTENT_HUB_LINKS: Partial<Record<string, string>> = {
   kpop: "/kpop",
+  "drama-film": "/dramas",
   food: "/food",
   "memes-expressions": "/kpop/glossary",
   "travel-hidden-places": "/travel",
@@ -180,7 +181,7 @@ export default function Home() {
                 On Screen & On the Table
               </p>
               <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
-                Drama scenes and food moments to watch next.
+                Drama scenes, trailers, and food moments to watch next.
               </h2>
             </div>
 
@@ -192,7 +193,7 @@ export default function Home() {
 
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {screenAndTableItems.map((item) => (
-              <MediaFeatureCard key={item.id} item={item} />
+              <MediaFeatureCard key={item.id} item={item} showGuideLink />
             ))}
           </div>
         </section>

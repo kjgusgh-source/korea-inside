@@ -49,6 +49,13 @@ export default function SiteHeader({ showNav = true }: SiteHeaderProps) {
             </Link>
 
             <Link
+              href="/dramas"
+              className="shrink-0 rounded-full px-3 py-2 hover:text-[var(--accent)] md:p-0"
+            >
+              Drama
+            </Link>
+
+            <Link
               href="/kpop/glossary"
               className="shrink-0 rounded-full px-3 py-2 hover:text-[var(--accent)] md:p-0"
             >
