@@ -31,6 +31,21 @@ export type TravelQuickGuide = {
   groups: TravelQuickGuideGroup[];
 };
 
+export type RelatedGuide = {
+  label: string;
+  title: string;
+  href: string;
+};
+
+export type PostImage = {
+  src: string;
+  alt: string;
+  credit: string;
+  sourceUrl?: string;
+  license: string;
+  group?: string;
+};
+
 export interface Post {
   id: number;
   title: string;
@@ -49,6 +64,9 @@ export interface Post {
   seoDescription: string;
   mapSpots?: TravelMapSpot[];
   quickGuide?: TravelQuickGuide;
+  relatedGuides?: RelatedGuide[];
+  heroImage?: PostImage;
+  galleryImages?: PostImage[];
 }
 
 export const POSTS: Post[] = [
@@ -439,6 +457,195 @@ export const POSTS: Post[] = [
         category: "Temple by the sea",
         mapQuery: "Haedong Yonggungsa Temple Busan",
         note: "A sea-side temple often added to east Busan or Gijang-focused trips.",
+      },
+    ],
+    relatedGuides: [
+      {
+        label: "Food guide",
+        title: "What to Eat in Busan",
+        href: "/food/what-to-eat-in-busan",
+      },
+    ],
+  },
+  {
+    id: 10,
+    title:
+      "What to Eat in Busan: Dwaeji Gukbap, Milmyeon, Seafood, and Market Snacks",
+    slug: "what-to-eat-in-busan",
+    category: "food",
+    categorySlug: "food",
+    categoryLabel: "Food",
+    description:
+      "A simple Busan food guide for first-time visitors, covering pork rice soup, cold wheat noodles, seafood, fish cake, market food, and where to eat by area.",
+    excerpt:
+      "Busan food does not have to be complicated. Start with dwaeji gukbap, milmyeon, seafood, fish cake, and market snacks, then choose an area that fits your route.",
+    content: [
+      "Busan food is not about making every meal complicated. For many Korean travelers, the best Busan meals are simple: a hot bowl of soup, cold noodles after walking, seafood near the coast, or market snacks while moving through an older part of the city.",
+      "If this is your first time in Busan, start with a few foods that appear again and again in local travel conversations: dwaeji gukbap, milmyeon, seafood, eomuk, and market food. You do not need to eat everything in one trip. Pick the food that fits the area you are already visiting.",
+      "Dwaeji gukbap is one of the easiest Busan foods to understand. It is a pork and rice soup, usually warm, filling, and straightforward. For many Koreans, it feels like a practical Busan meal rather than a special occasion food.",
+      "The good thing about dwaeji gukbap is that it works almost any time. It can be lunch after arriving at Busan Station, dinner after walking around the city, or a simple meal when you do not want to think too much. If you want your first Busan food to feel local and comforting, this is a strong place to start.",
+      "Milmyeon is a cold wheat noodle dish often connected with Busan. It is lighter than soup and especially good when the weather is warm. The taste can feel refreshing, slightly sweet, tangy, and cold in a way that makes sense after walking around beaches, markets, or cafe streets.",
+      "If dwaeji gukbap feels like the warm side of Busan, milmyeon feels like the cool side. It is a good choice when you want something quick, casual, and not too heavy.",
+      "Seafood is another natural part of Busan. You do not have to plan a luxury seafood meal to enjoy it. Depending on your route, seafood can mean raw fish, grilled shellfish, fish cake, or a simple meal near a market or beach area.",
+      "Gwangalli and Haeundae are easy areas to connect with seafood because they already have a beach mood. Nampo and nearby market areas can feel more casual and older. The best choice depends less on one famous restaurant and more on where you are already spending the day.",
+      "Eomuk, or Korean fish cake, is one of the easiest foods to try while walking. Busan is strongly associated with fish cake, and it works well as a snack rather than a full meal. It is useful when you are near markets, stations, or older shopping streets.",
+      "Market food is good when you do not want a formal restaurant. Around places like Bupyeong Kkangtong Market or Nampo, you can try smaller foods, snacks, and simple dishes while walking. This kind of meal can feel less planned, but sometimes that is what makes it memorable.",
+      "Where you stay can also shape what you eat. Seomyeon is convenient if you want many restaurant choices and easy movement around the city. Nampo and Bupyeong are better for market food and older Busan atmosphere. Gwangalli works well for evening meals, seafood, and beach mood. Haeundae is useful if your route is focused on the classic beach, Blue Line Park, Cheongsapo, or east Busan.",
+      "The easiest way to eat well in Busan is to match the food to the area. If you are near old Busan, try market food or fish cake. If you are near the coast, think about seafood. If you want something warm and local, choose dwaeji gukbap. If the day is hot, milmyeon makes sense.",
+      "A good Busan food trip does not need to become a checklist. Eat one thing well, leave room for the next area, and let the city’s food feel connected to the route you are already walking.",
+    ],
+    culturalContext:
+      "For Koreans, Busan food often feels practical, local, and tied to movement through the city. A bowl of dwaeji gukbap, a plate of milmyeon, seafood near the coast, or snacks in a market are not only foods to try. They are part of how people remember a short Busan trip: where they walked, where they rested, and what kind of mood the city had that day.",
+    tags: [
+      "Busan",
+      "Korean food",
+      "Food",
+      "Dwaeji gukbap",
+      "Milmyeon",
+      "Seafood",
+    ],
+    publishedAt: "2026-07-06",
+    readingTime: "6 min read",
+    seoTitle:
+      "What to Eat in Busan for First-Time Visitors | HAEMIL Korea Food Guide",
+    seoDescription:
+      "A simple guide to Busan food for first-time visitors: dwaeji gukbap, milmyeon, seafood, fish cake, market snacks, and where to eat by area.",
+    heroImage: {
+      src: "/food/busan/pixabay-dwaeji-gukbap.jpg",
+      alt: "A bowl of dwaeji gukbap served with rice, pork, and side dishes",
+      credit: "Photo from Pixabay",
+      sourceUrl:
+        "https://pixabay.com/ko/photos/%EB%8F%BC%EC%A7%80%EA%B5%AD%EB%B0%A5-%ED%95%9C%EA%B5%AD-%EC%9A%94%EB%A6%AC-%EC%88%98%ED%94%84-10220566/",
+      license: "Pixabay Content License",
+    },
+    galleryImages: [
+      {
+        group: "Dwaeji gukbap",
+        src: "/food/busan/dwaeji-gukbap-1.jpg",
+        alt: "A local-style bowl of dwaeji gukbap with rice and side dishes",
+        credit: "Photo by HAEMIL",
+        license: "Owned by HAEMIL",
+      },
+      {
+        group: "Dwaeji gukbap",
+        src: "/food/busan/dwaeji-gukbap-2.jpg",
+        alt: "Close-up of dwaeji gukbap with pork, green onions, and seasoning",
+        credit: "Photo by HAEMIL",
+        license: "Owned by HAEMIL",
+      },
+      {
+        group: "Milmyeon",
+        src: "/food/busan/pixabay-milmyeon.jpg",
+        alt: "A bowl of Busan milmyeon with cold broth, noodles, egg, and red sauce",
+        credit: "Photo from Pixabay",
+        sourceUrl:
+          "https://pixabay.com/ko/photos/%EB%AC%BC%EB%83%89%EB%A9%B4-%EB%B0%80%EB%A9%B4-%EB%B6%80%EC%82%B0%EB%B0%80%EB%A9%B4-3683050/",
+        license: "Pixabay Content License",
+      },
+      {
+        group: "Milmyeon",
+        src: "/food/busan/milmyeon.jpg",
+        alt: "A bowl of milmyeon with cold broth and red sauce on a metal table",
+        credit: "Photo by HAEMIL",
+        license: "Owned by HAEMIL",
+      },
+      {
+        group: "Milmyeon",
+        src: "/food/busan/bibim-milmyeon.jpg",
+        alt: "Bibim milmyeon with spicy red sauce and sesame seeds",
+        credit: "Photo by HAEMIL",
+        license: "Owned by HAEMIL",
+      },
+      {
+        group: "Eomuk / fish cake",
+        src: "/food/busan/busan-eomuk.jpg",
+        alt: "Busan eomuk fish cake skewers at a street food stall",
+        credit: "Photo by travel oriented, via Wikimedia Commons",
+        sourceUrl: "https://en.wikipedia.org/wiki/File:Street_eomuk.jpg",
+        license: "CC BY-SA 2.0",
+      },
+      {
+        group: "Seafood",
+        src: "/food/busan/seafood-sashimi-1.jpg",
+        alt: "A plate of assorted sashimi served with side dishes",
+        credit: "Photo by HAEMIL",
+        license: "Owned by HAEMIL",
+      },
+      {
+        group: "Seafood",
+        src: "/food/busan/seafood-sashimi-2.jpg",
+        alt: "A large Korean seafood sashimi platter with side dishes",
+        credit: "Photo by HAEMIL",
+        license: "Owned by HAEMIL",
+      },
+      {
+        group: "Seafood",
+        src: "/food/busan/seafood-sashimi-3.jpg",
+        alt: "Korean sashimi meal served with many small side dishes",
+        credit: "Photo by HAEMIL",
+        license: "Owned by HAEMIL",
+      },
+      {
+        group: "Seafood",
+        src: "/food/busan/seafood-sashimi-4.jpg",
+        alt: "Assorted seafood sashimi plate with shrimp, fish, and side dishes",
+        credit: "Photo by HAEMIL",
+        license: "Owned by HAEMIL",
+      },
+    ],
+    quickGuide: {
+      sectionTitle: "Quick Busan food guide",
+      groups: [
+        {
+          title: "Start with these foods",
+          items: [
+            "Dwaeji gukbap: Pork and rice soup that many Koreans connect with Busan.",
+            "Milmyeon: Cold wheat noodles, especially good in warm weather.",
+            "Seafood: Raw fish, grilled seafood, shellfish, and simple coastal meals.",
+            "Eomuk: Korean fish cake, easy to find around markets and street-food areas.",
+            "Market snacks: Good when you want to taste small things instead of planning a full meal.",
+          ],
+        },
+        {
+          title: "If it is your first Busan meal",
+          items: [
+            "Choose dwaeji gukbap if you want something warm, filling, and local.",
+            "Choose milmyeon if the weather is hot or you want something lighter.",
+            "Choose seafood if you are staying near the coast or visiting a market.",
+            "Choose market food if you want a casual stop while walking around Nampo or Bupyeong.",
+          ],
+        },
+        {
+          title: "Where to eat by area",
+          items: [
+            "Seomyeon: Convenient for restaurants, casual meals, and moving around the city.",
+            "Nampo / Bupyeong: Good for markets, snacks, fish cake, and older Busan food mood.",
+            "Gwangalli: Good for seafood, evening meals, and beach atmosphere.",
+            "Haeundae: Good if you are staying near the beach or exploring east Busan.",
+          ],
+        },
+        {
+          title: "Easy ordering note",
+          items: [
+            "Many Busan foods are simple and direct. You do not need to find the most famous restaurant for every meal.",
+            "If a place is busy with locals, has a short menu, and specializes in one dish, that is often enough.",
+            "For soups and noodles, look at what people nearby are eating before deciding.",
+          ],
+        },
+        {
+          title: "Pair with a route",
+          items: [
+            "If you are planning where to go in Busan, read the Busan travel guide too.",
+            "Food is easier when it follows your route: markets on the west side, cafes around Jeonpo, night meals near Gwangalli, and coastal stops near Haeundae.",
+          ],
+        },
+      ],
+    },
+    relatedGuides: [
+      {
+        label: "Travel guide",
+        title: "Where Koreans Actually Go in Busan",
+        href: "/travel/where-to-go-in-busan-first-time",
       },
     ],
   }

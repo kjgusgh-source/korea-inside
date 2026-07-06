@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import SiteHeader from "../../../components/SiteHeader";
+import PostImageFigure, {
+  PostFoodGallery,
+} from "../../../components/PostImageFigure";
 import TravelMapSpotList from "../../../components/TravelMapSpotList";
 import TravelQuickGuide from "../../../components/TravelQuickGuide";
 import {
@@ -78,6 +81,18 @@ export default async function ArticlePage({ params }: PageProps) {
 
   const relatedPosts = getRelatedPosts(post);
   const accent = getPostAccent(post.category);
+  const backHref =
+    post.categorySlug === "travel"
+      ? "/travel"
+      : post.categorySlug === "food"
+        ? "/food"
+        : "/";
+  const backLabel =
+    post.categorySlug === "travel"
+      ? "← Back to Travel"
+      : post.categorySlug === "food"
+        ? "← Back to Food"
+        : "← Back to HAEMIL";
 
   return (
     <main className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
@@ -86,12 +101,10 @@ export default async function ArticlePage({ params }: PageProps) {
 
         <article className="mx-auto mt-14 max-w-4xl md:mt-20">
           <Link
-            href={post.categorySlug === "travel" ? "/travel" : "/"}
+            href={backHref}
             className="text-sm font-medium text-[var(--muted)] transition hover:text-[var(--accent)]"
           >
-            {post.categorySlug === "travel"
-              ? "← Back to Travel"
-              : "← Back to HAEMIL"}
+            {backLabel}
           </Link>
 
           <div className="mt-10 rounded-[2.5rem] border border-[var(--border)] bg-[var(--surface)] px-6 py-8 shadow-xl shadow-[var(--shadow)] md:px-12 md:py-14">
@@ -124,7 +137,49 @@ export default async function ArticlePage({ params }: PageProps) {
             </p>
           </div>
 
+          {post.heroImage && (
+            <PostImageFigure
+              image={post.heroImage}
+              variant="hero"
+              priority
+            />
+          )}
+
           {post.quickGuide && <TravelQuickGuide guide={post.quickGuide} />}
+
+          {post.relatedGuides && post.relatedGuides.length > 0 && (
+            <section className="mt-8 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 shadow-lg shadow-[var(--shadow)] md:p-8">
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+                Related guide
+              </p>
+
+              <div className="mt-6 grid gap-4">
+                {post.relatedGuides.map((guide) => (
+                  <Link
+                    key={guide.href}
+                    href={guide.href}
+                    className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface)] p-5 transition hover:-translate-y-1 hover:border-[var(--accent)] hover:shadow-md"
+                  >
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--celadon)]">
+                      {guide.label}
+                    </p>
+
+                    <h3 className="mt-3 text-xl font-semibold leading-tight text-[var(--text)]">
+                      {guide.title}
+                    </h3>
+
+                    <p className="mt-4 text-sm font-semibold text-[var(--accent)]">
+                      Read guide →
+                    </p>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {post.galleryImages && post.galleryImages.length > 0 && (
+            <PostFoodGallery images={post.galleryImages} />
+          )}
 
           {post.mapSpots && post.mapSpots.length > 0 && (
             <TravelMapSpotList spots={post.mapSpots} />

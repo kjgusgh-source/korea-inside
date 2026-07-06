@@ -21,6 +21,7 @@ import {
 
 const CONTENT_HUB_LINKS: Partial<Record<string, string>> = {
   kpop: "/kpop",
+  food: "/food",
   "memes-expressions": "/kpop/glossary",
   "travel-hidden-places": "/travel",
 };
