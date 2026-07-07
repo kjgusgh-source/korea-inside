@@ -20,6 +20,7 @@ export const publishedMemberIds = [
   { groupId: "seventeen", memberId: "mingyu" },
   { groupId: "seventeen", memberId: "wonwoo" },
   { groupId: "rescene", memberId: "woni" },
+  { groupId: "illit", memberId: "wonhee" },
 ];
 
 export function getPublishedMemberGuides() {

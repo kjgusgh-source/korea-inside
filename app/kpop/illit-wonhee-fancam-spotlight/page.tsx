@@ -27,6 +27,13 @@ const relatedGuides = [
       "A beginner-friendly guide to Korean K-pop words and fan terms you will see around fancams, stages, and member clips.",
     href: "/kpop/glossary",
   },
+  {
+    label: "Member guide",
+    title: "Wonhee (ILLIT)",
+    description:
+      "Start here if you want a simple member guide after watching Wonhee’s fancam.",
+    href: "/kpop/illit/wonhee",
+  },
 ];
 
 export const metadata: Metadata = {

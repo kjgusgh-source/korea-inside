@@ -42,6 +42,21 @@ export const MEDIA_ITEMS: MediaItem[] = [
     guideHref: "/kpop/rescene-woni-fancam-spotlight",
   },
   {
+    id: "illit-wonhee-its-me-fancam",
+    title: "ILLIT Wonhee “It’s Me” Fancam",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A close-up Inkigayo fancam that shows why Wonhee is easy to remember through clear expressions, small timing changes, and camera-friendly stage moments.",
+    cultureNote:
+      "A close-up Inkigayo fancam can show why member-focused clips help new fans notice one performer before they know the whole group.",
+    tags: ["ILLIT", "Wonhee", "It's Me", "Fancam", "Inkigayo"],
+    youtubeId: "gOGU2zO4POY",
+    sourceLabel: "SBS KPOP official Inkigayo fancam",
+    guideHref: "/kpop/illit/wonhee",
+  },
+  {
     id: "kpop-fancam-culture",
     title: "What an eolppak facecam feels like",
     category: "kpop",

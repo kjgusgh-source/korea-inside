@@ -497,6 +497,61 @@ export const KPOP_GROUPS: KpopGroup[] = [
     ],
   },
   {
+    id: "illit",
+    name: "ILLIT",
+    category: "girl-groups",
+    description:
+      "ILLIT is a five-member girl group from BELIFT LAB. For new fans, the group is easy to enter through bright stages, close-up fancams, and member moments that stay in your head after a short clip.",
+    members: [
+      {
+        id: "yunah",
+        name: "YUNAH",
+        note: "An ILLIT member. Full HAEMIL member guide may be added later.",
+      },
+      {
+        id: "minju",
+        name: "MINJU",
+        note: "An ILLIT member. Full HAEMIL member guide may be added later.",
+      },
+      {
+        id: "moka",
+        name: "MOKA",
+        note: "An ILLIT member. Full HAEMIL member guide may be added later.",
+      },
+      {
+        id: "wonhee",
+        name: "Wonhee",
+        note: "An ILLIT member who is easy for new fans to remember through close-up fancams, clear expressions, and small stage moments that feel replayable.",
+        intro:
+          "Wonhee is a member of ILLIT. This page is a beginner-friendly starting point for fans who first noticed her through a facecam, a short clip, or ILLIT’s bright stage performances.",
+        whyFansLike: [
+          "Wonhee is easy to remember because her expressions feel clear, approachable, and close to the camera.",
+          "Her charm does not depend on one huge moment. It often comes through small timing changes, eye contact, and the way she keeps a stage feeling light.",
+          "For new ILLIT fans, Wonhee works well as a first member to follow because a single fancam can make her individual presence easy to understand.",
+        ],
+        watchPoints: [
+          "Start with one official fancam before trying to learn every ILLIT member at once.",
+          "Watch how Wonhee changes her expression during smaller transitions, not only during the chorus.",
+          "Notice how the close camera makes her charm easier to follow than a full-stage performance.",
+          "If her face, timing, or one small moment stays in your head after the clip ends, that is exactly why fancams matter.",
+        ],
+        relatedMediaIds: ["illit-wonhee-its-me-fancam"],
+      },
+      {
+        id: "iroha",
+        name: "IROHA",
+        note: "An ILLIT member. Full HAEMIL member guide may be added later.",
+      },
+    ],
+    starterTags: [
+      "Fancam",
+      "Facecam",
+      "Girl group",
+      "BELIFT LAB",
+      "Stage clips",
+    ],
+  },
+  {
     id: "bts",
     name: "BTS",
     category: "boy-groups",
