@@ -57,6 +57,21 @@ export const MEDIA_ITEMS: MediaItem[] = [
     guideHref: "/kpop/illit/wonhee",
   },
   {
+    id: "cortis-keonho-joyride-fancam",
+    title: "CORTIS Keonho “JoyRide” Fancam",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A focused MCOUNTDOWN fancam that shows why Keonho is becoming an easy CORTIS entry point through rookie energy, clear stage presence, and the “French Fry Boy” fan hook.",
+    cultureNote:
+      "A focused MCOUNTDOWN fancam can show why member-focused clips help new fans enter a rookie boy group one performer at a time.",
+    tags: ["CORTIS", "Keonho", "JoyRide", "Fancam", "MCOUNTDOWN"],
+    youtubeId: "qx8VbGEWcBo",
+    sourceLabel: "Mnet M2 official fancam",
+    guideHref: "/kpop/cortis/keonho",
+  },
+  {
     id: "kpop-fancam-culture",
     title: "What an eolppak facecam feels like",
     category: "kpop",

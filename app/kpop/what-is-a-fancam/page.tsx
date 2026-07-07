@@ -313,6 +313,28 @@ export default function WhatIsAFancamPage() {
                   Read spotlight →
                 </p>
               </Link>
+
+              <Link
+                href="/kpop/cortis-keonho-fancam-spotlight"
+                className="group rounded-[1.5rem] border border-[var(--border)] bg-[var(--card)] p-5 transition hover:-translate-y-1 hover:shadow-md"
+              >
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
+                  K-pop Spotlight
+                </p>
+
+                <h3 className="mt-3 text-xl font-semibold text-[var(--text)]">
+                  Why CORTIS Keonho Is an Easy Rookie Fancam Entry Point
+                </h3>
+
+                <p className="mt-3 text-sm leading-6 text-[var(--muted)]">
+                  A spotlight example of how one focused fancam can make a rookie
+                  boy group easier to enter.
+                </p>
+
+                <p className="mt-4 text-sm font-semibold text-[var(--accent)]">
+                  Read spotlight →
+                </p>
+              </Link>
             </div>
           </section>
 

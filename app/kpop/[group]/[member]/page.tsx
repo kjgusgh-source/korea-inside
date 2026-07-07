@@ -199,6 +199,29 @@ const structuredData = [
             {group.name}
           </p>
 
+          {member.profileFacts && member.profileFacts.length > 0 ? (
+            <div className="mt-6 max-w-3xl rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-5 md:p-6">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
+                Quick notes
+              </p>
+              <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
+                A few basics before you watch the fancam.
+              </p>
+              <dl className="mt-5 space-y-4">
+                {member.profileFacts.map((fact) => (
+                  <div key={fact.label}>
+                    <dt className="text-xs font-semibold uppercase tracking-[0.15em] text-[var(--text)]">
+                      {fact.label}
+                    </dt>
+                    <dd className="mt-1.5 text-sm leading-7 text-[var(--muted)]">
+                      {fact.value}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          ) : null}
+
           <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
             {intro}
           </p>

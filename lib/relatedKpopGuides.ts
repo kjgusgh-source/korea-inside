@@ -34,6 +34,7 @@ const relatedGuidesByMemberId: Record<string, GuideKey[]> = {
   winter: ["fancam", "glossary"],
   ningning: ["fancam", "glossary"],
   wonhee: ["fancam", "glossary"],
+  keonho: ["fancam", "glossary"],
 };
 
 export function getRelatedKpopGuidesForMember(

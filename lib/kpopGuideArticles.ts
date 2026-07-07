@@ -37,6 +37,14 @@ export type KpopGuideArticle = {
       label: "K-pop Spotlight",
     },
     {
+      title:
+        "K-pop Spotlight: Who Is CORTIS Keonho, the “French Fry Boy” Fans Keep Noticing?",
+      description:
+        "A friendly K-pop spotlight on CORTIS Keonho, the BIGHIT rookie member fans are noticing through “JoyRide” fancams, Korean nickname moments, and his easy-to-remember stage presence.",
+      href: "/kpop/cortis-keonho-fancam-spotlight",
+      label: "K-pop Spotlight",
+    },
+    {
       title: "What does bias mean in K-pop?",
       description:
         "Understand bias, bias wrecker, ultimate bias, and Korean fan words like choe-ae and cha-ae.",

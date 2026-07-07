@@ -1,5 +1,10 @@
 export type KpopGroupCategory = "girl-groups" | "boy-groups";
 
+export type KpopMemberProfileFact = {
+  label: string;
+  value: string;
+};
+
 export type KpopMember = {
   id: string;
   name: string;
@@ -9,6 +14,7 @@ export type KpopMember = {
   watchTitle?: string;
   contextTitle?: string;
   intro?: string;
+  profileFacts?: KpopMemberProfileFact[];
   whyFansLike?: string[];
   watchPoints?: string[];
   koreanExpression?: {
@@ -549,6 +555,82 @@ export const KPOP_GROUPS: KpopGroup[] = [
       "Girl group",
       "BELIFT LAB",
       "Stage clips",
+    ],
+  },
+  {
+    id: "cortis",
+    name: "CORTIS",
+    category: "boy-groups",
+    description:
+      "CORTIS is a five-member boy group from BIGHIT MUSIC. For new fans, the group is easy to enter through official stage clips, rookie energy, and member-focused fancams that make one performer easier to follow at a time.",
+    members: [
+      {
+        id: "martin",
+        name: "MARTIN",
+        note: "A member of CORTIS. Full HAEMIL member guide may be added later.",
+      },
+      {
+        id: "james",
+        name: "JAMES",
+        note: "A member of CORTIS. Full HAEMIL member guide may be added later.",
+      },
+      {
+        id: "juhoon",
+        name: "JUHOON",
+        note: "A member of CORTIS. Full HAEMIL member guide may be added later.",
+      },
+      {
+        id: "seonghyeon",
+        name: "SEONGHYEON",
+        note: "A member of CORTIS. Full HAEMIL member guide may be added later.",
+      },
+      {
+        id: "keonho",
+        name: "Keonho",
+        note: "A CORTIS member who is becoming easy for new fans to remember through official fancams, rookie stage clips, and the Korean fan nickname “감튀보이” — the “French Fry Boy.”",
+        intro:
+          "Keonho is a member of CORTIS, a five-member boy group from BIGHIT MUSIC. This page is a beginner-friendly starting point for fans who first noticed him through a fancam, a stage clip, or the Korean “French Fry Boy” nickname that made him easier to remember.",
+        profileFacts: [
+          {
+            label: "Born",
+            value:
+              "February 14, 2009 — easy to remember because it falls on Valentine’s Day.",
+          },
+          {
+            label: "Group",
+            value: "CORTIS, a five-member boy group from BIGHIT MUSIC.",
+          },
+          {
+            label: "Agency",
+            value: "BIGHIT MUSIC.",
+          },
+          {
+            label: "Debut context",
+            value:
+              "Part of BIGHIT MUSIC’s first new boy group in years after BTS and TXT.",
+          },
+        ],
+        whyFansLike: [
+          "Keonho is easy to remember because he has both a stage entry point and a casual fan hook.",
+          "The “French Fry Boy” nickname gives new fans something simple to remember before they know every CORTIS member.",
+          "His “JoyRide” fancam works because the focused camera makes his energy, timing, and rookie-stage feel easier to follow.",
+          "For new CORTIS fans, Keonho can be a first member to recognize before learning the whole group.",
+        ],
+        watchPoints: [
+          "Start with the official “JoyRide” fancam and see whether your eyes keep returning to him.",
+          "Watch how Keonho handles smaller transitions, not only the biggest moments.",
+          "Notice how a nickname or short clip can make a rookie member easier to remember.",
+          "Compare the fancam with a full CORTIS stage to see why member-focused videos matter.",
+        ],
+        relatedMediaIds: ["cortis-keonho-joyride-fancam"],
+      },
+    ],
+    starterTags: [
+      "Fancam",
+      "Boy group",
+      "BIGHIT MUSIC",
+      "MCOUNTDOWN",
+      "Rookie stage",
     ],
   },
   {
