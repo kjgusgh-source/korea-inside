@@ -655,6 +655,11 @@ export const POSTS: Post[] = [
         title: "International Seoul for First-Time Visitors",
         href: "/travel/international-seoul-itaewon-hannam-haebangchon",
       },
+      {
+        label: "Food guide",
+        title: "What to Eat in Seoul for First-Time Visitors",
+        href: "/food/what-to-eat-in-seoul-first-time",
+      },
     ],
   },
   {
@@ -840,6 +845,11 @@ export const POSTS: Post[] = [
         label: "Travel guide",
         title: "International Seoul for First-Time Visitors",
         href: "/travel/international-seoul-itaewon-hannam-haebangchon",
+      },
+      {
+        label: "Food guide",
+        title: "What to Eat in Seoul for First-Time Visitors",
+        href: "/food/what-to-eat-in-seoul-first-time",
       },
     ],
   },
@@ -1028,6 +1038,11 @@ export const POSTS: Post[] = [
         label: "Travel guide",
         title: "International Seoul for First-Time Visitors",
         href: "/travel/international-seoul-itaewon-hannam-haebangchon",
+      },
+      {
+        label: "Food guide",
+        title: "What to Eat in Seoul for First-Time Visitors",
+        href: "/food/what-to-eat-in-seoul-first-time",
       },
     ],
   },
@@ -1227,6 +1242,11 @@ export const POSTS: Post[] = [
         title: "International Seoul for First-Time Visitors",
         href: "/travel/international-seoul-itaewon-hannam-haebangchon",
       },
+      {
+        label: "Food guide",
+        title: "What to Eat in Seoul for First-Time Visitors",
+        href: "/food/what-to-eat-in-seoul-first-time",
+      },
     ],
   },
   {
@@ -1420,6 +1440,11 @@ export const POSTS: Post[] = [
         title: "International Seoul for First-Time Visitors",
         href: "/travel/international-seoul-itaewon-hannam-haebangchon",
       },
+      {
+        label: "Food guide",
+        title: "What to Eat in Seoul for First-Time Visitors",
+        href: "/food/what-to-eat-in-seoul-first-time",
+      },
     ],
   },
   {
@@ -1611,6 +1636,11 @@ export const POSTS: Post[] = [
         title: "Why Seoul Feels Like a K-drama",
         href: "/dramas/why-seoul-feels-like-a-kdrama",
       },
+      {
+        label: "Food guide",
+        title: "What to Eat in Seoul for First-Time Visitors",
+        href: "/food/what-to-eat-in-seoul-first-time",
+      },
     ],
   },
   {
@@ -1792,6 +1822,111 @@ export const POSTS: Post[] = [
         label: "Travel guide",
         title: "Where Koreans Actually Go in Busan",
         href: "/travel/where-to-go-in-busan-first-time",
+      },
+    ],
+  },
+  {
+    id: 18,
+    title:
+      "What to Eat in Seoul for First-Time Visitors: Markets, Street Food, Cafes, and Late-Night Meals",
+    slug: "what-to-eat-in-seoul-first-time",
+    category: "food",
+    categorySlug: "food",
+    categoryLabel: "Food",
+    description:
+      "A practical Seoul food guide for first-time visitors, covering markets, street food, cafes, Han River ramyeon, late-night meals, Korean barbecue, and global food areas.",
+    excerpt:
+      "Seoul food is not only one dish or one famous restaurant. This guide explains what to eat by mood and area, from Gwangjang Market and Myeongdong street food to Mangwon Market, Han River ramyeon, cafes, barbecue, and late-night meals.",
+    content: [
+      "Seoul food is not only one dish or one famous restaurant. For first-time visitors, the better question is not “What is the best restaurant in Seoul?” It is “What kind of food moment fits the area I am already visiting?”",
+      "A market meal feels different from a cafe stop. Street food in Myeongdong feels different from ramyeon by the Han River. A barbecue dinner feels different from a late snack after walking through Euljiro or Dongdaemun. Seoul becomes easier to understand when you match food with mood.",
+      "Gwangjang Market is one of the easiest places to start if you want traditional market energy. It is busy, direct, and food-focused. You can think of it as a place for simple dishes, quick bites, mung bean pancakes, gimbap, noodles, and the feeling of eating close to the movement of the city.",
+      "Myeongdong street food is different. It is more tourist-friendly, more commercial, and often more about quick snacks than a full meal. That does not make it useless. For first-time visitors, Myeongdong can be an easy place to try sweet, salty, fried, grilled, or trendy street snacks while shopping.",
+      "Mangwon Market gives Seoul food a more local neighborhood feeling. It works well with a West Seoul walk because it is close to Mangwon, Hongdae, Yeonnam, and the Han River side of the city. The mood is less polished than trendy cafe streets, but that is part of its charm.",
+      "The Han River ramyeon experience is simple, but it is memorable. Buying ramyeon and snacks from a convenience store, sitting near the river, and watching the city lights can feel more Seoul than a complicated restaurant plan. The food is ordinary, but the setting changes it.",
+      "Cafes are also part of Seoul food culture. In some cities, cafes are just places to drink coffee. In Seoul, they often help define the neighborhood. Yeonnam cafes feel different from Seongsu cafes, and Hannam cafes feel different from Myeongdong snack streets.",
+      "Korean barbecue is a good choice when you want dinner to feel social. It is not only about meat. It is also about sitting together, cooking at the table, sharing side dishes, ordering one more thing, and letting the meal take time. For many visitors, barbecue is one of the easiest ways to understand Korean dining as an experience.",
+      "Late-night food is another important part of Seoul. After shopping, walking, working, drinking, or meeting friends, food becomes a way to extend the night. It can be barbecue, soup, noodles, fried food, convenience-store snacks, or a small restaurant that feels warmer because it is late.",
+      "Pojangmacha-style food belongs to this late-night mood, but it is better understood as an atmosphere than a checklist. The feeling is casual, close, temporary, and slightly noisy. It is not always about finding the most famous place. It is about understanding why simple food can feel comforting at night.",
+      "Itaewon and Hannam add a different food layer. This is where Seoul’s global side becomes easier to see. International food, cafes, restaurants, bars, and mixed streets make the area feel different from traditional markets or palace-side food alleys.",
+      "The best way to eat in Seoul is to choose by area. If you are in Old Seoul, think about markets, tea, and traditional snacks. If you are in West Seoul, think about Mangwon Market, Hongdae snacks, and Yeonnam cafes. If you are in Trendy Seoul, think about Seongsu cafes, desserts, and pop-ups. If you are near Myeongdong or Dongdaemun, think about quick food, shopping breaks, and late meals. If you are near the river, keep it simple.",
+      "This guide is not a ranking. Seoul changes too quickly for one fixed list to stay useful forever. Instead, use it as a food map. Pick the area first, then choose the food experience that fits your mood.",
+    ],
+    culturalContext:
+      "Food in Seoul is not only about flavor. It is also about timing, place, and social mood. A market dish, a cafe dessert, barbecue with friends, ramyeon by the river, or a late-night snack after walking all feel different because they belong to different parts of city life. For visitors, understanding where and when people eat can make Seoul feel easier to read.",
+    tags: [
+      "Seoul",
+      "Korean food",
+      "Street food",
+      "Markets",
+      "Han River",
+      "Korea travel",
+      "Food",
+    ],
+    publishedAt: "2026-07-07",
+    readingTime: "6 min read",
+    seoTitle:
+      "What to Eat in Seoul for First-Time Visitors | HAEMIL Korean Food Guide",
+    seoDescription:
+      "A practical Seoul food guide for first-time visitors: markets, street food, cafes, Han River ramyeon, late-night meals, Korean barbecue, and global food areas.",
+    quickGuide: {
+      sectionTitle: "Quick Seoul food guide",
+      groups: [
+        {
+          title: "Start with these food experiences",
+          items: [
+            "Gwangjang Market: Classic market food, mung bean pancakes, gimbap, noodles, and a busy traditional market mood.",
+            "Myeongdong street food: Easy snacks, sweets, skewers, cosmetics-shopping breaks, and first-time tourist energy.",
+            "Mangwon Market: Local market snacks and simple food that pairs well with a West Seoul walk.",
+            "Han River ramyeon: Convenience-store ramyeon, snacks, and riverside sitting.",
+            "Korean barbecue: A social dinner choice when you want the meal to feel like part of the night.",
+            "Cafes: Seoul cafes are not only for coffee; they are often part of the area’s identity.",
+            "Late-night food: Simple meals, pojangmacha-style mood, and food after walking or shopping.",
+          ],
+        },
+        {
+          title: "Where food fits by area",
+          items: [
+            "Old Seoul: Gwangjang Market, Jongno food alleys, tea houses, and traditional snacks.",
+            "West Seoul: Mangwon Market, Hongdae snacks, Yeonnam cafes, and casual meals.",
+            "Trendy Seoul: Seongsu cafes, pop-ups, desserts, and polished cafe streets.",
+            "Shopping Seoul: Myeongdong street food, Dongdaemun late meals, and quick shopping breaks.",
+            "Night Seoul: Han River ramyeon, convenience-store snacks, and late-night meals.",
+            "International Seoul: Itaewon global food, Hannam cafes, and mixed local-global dining.",
+          ],
+        },
+        {
+          title: "If it is your first Seoul meal",
+          items: [
+            "Choose something easy, not something famous just because it is famous.",
+            "Market food is good when you want variety and energy.",
+            "Barbecue is good when you want a longer social dinner.",
+            "Convenience-store ramyeon by the river is simple, but it can feel very Seoul.",
+            "A cafe stop can be part of the food experience, especially in Yeonnam, Seongsu, Hannam, or Apgujeong.",
+          ],
+        },
+        {
+          title: "Late-night and casual mood",
+          items: [
+            "Seoul food often becomes more memorable after dark.",
+            "A late meal does not need to be fancy.",
+            "Convenience stores, small restaurants, barbecue places, and pojangmacha-style streets can all become part of the night.",
+            "If you are tired, one warm meal or one simple snack can be better than chasing another famous place.",
+          ],
+        },
+        {
+          title: "Pair with another HAEMIL guide",
+          items: [
+            "Read the Seoul travel hub if you want to choose the right area before choosing what to eat.",
+          ],
+        },
+      ],
+    },
+    relatedGuides: [
+      {
+        label: "Travel guide",
+        title: "Seoul Travel Guides",
+        href: "/travel/seoul",
       },
     ],
   },
