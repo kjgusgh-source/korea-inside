@@ -660,6 +660,11 @@ export const POSTS: Post[] = [
         title: "What to Eat in Seoul for First-Time Visitors",
         href: "/food/what-to-eat-in-seoul-first-time",
       },
+      {
+        label: "Food guide",
+        title: "Korean Market Food Guide",
+        href: "/food/korean-market-food-guide",
+      },
     ],
   },
   {
@@ -850,6 +855,11 @@ export const POSTS: Post[] = [
         label: "Food guide",
         title: "What to Eat in Seoul for First-Time Visitors",
         href: "/food/what-to-eat-in-seoul-first-time",
+      },
+      {
+        label: "Food guide",
+        title: "Korean Market Food Guide",
+        href: "/food/korean-market-food-guide",
       },
     ],
   },
@@ -1246,6 +1256,11 @@ export const POSTS: Post[] = [
         label: "Food guide",
         title: "What to Eat in Seoul for First-Time Visitors",
         href: "/food/what-to-eat-in-seoul-first-time",
+      },
+      {
+        label: "Food guide",
+        title: "Korean Market Food Guide",
+        href: "/food/korean-market-food-guide",
       },
     ],
   },
@@ -1938,6 +1953,11 @@ export const POSTS: Post[] = [
         title: "Korean Convenience Store Food Guide",
         href: "/food/korean-convenience-store-food-guide",
       },
+      {
+        label: "Food guide",
+        title: "Korean Market Food Guide",
+        href: "/food/korean-market-food-guide",
+      },
     ],
   },
   {
@@ -2053,6 +2073,135 @@ export const POSTS: Post[] = [
         label: "Drama guide",
         title: "Why Seoul Feels Like a K-drama",
         href: "/dramas/why-seoul-feels-like-a-kdrama",
+      },
+    ],
+  },
+  {
+    id: 20,
+    title:
+      "Korean Market Food Guide: What to Try at Gwangjang, Mangwon, Namdaemun, and Local Markets",
+    slug: "korean-market-food-guide",
+    category: "food",
+    categorySlug: "food",
+    categoryLabel: "Food",
+    description:
+      "A warm beginner-friendly guide to Korean market food, covering bindaetteok, small gimbap, tteokbokki, mandu, hotteok, fish cake, noodles, fried snacks, and how to choose food when a market feels busy.",
+    excerpt:
+      "Korean markets are not about finding one perfect stall. This guide helps first-time visitors choose simple, comforting market foods by mood, from crispy bindaetteok and small gimbap to hotteok, noodles, fish cake, and warm street snacks.",
+    content: [
+      "Korean market food is easiest to enjoy when you stop trying to find the perfect stall. The better way is simpler: walk slowly, look at what people are eating, choose one snack, choose one warm dish, and let the market feel a little messy.",
+      "Markets are busy by nature. Someone is frying something, someone is calling out an order, someone is sitting close to a stranger, and someone is already halfway through a bowl of noodles. That closeness is part of the food. It does not need to feel polished to be good.",
+      "If you want something crispy, start with bindaetteok. It is warm, filling, and easy to understand even if you do not know much about Korean food yet. At a busy market, a crispy pancake and a small side dish can already feel like a proper stop.",
+      "Small gimbap is good when you want something quick. It is not heavy, it is easy to share, and it does not ask too much from you. If the market feels crowded and you do not want to commit to a full meal, this kind of small bite is a safe start.",
+      "Tteokbokki gives you the familiar street-food mood. Soft rice cakes, spicy-sweet sauce, steam, and a small plate or cup can feel very Korean very quickly. It is not always mild, so take it slowly if you are not used to spicy food.",
+      "Mandu is another easy choice. Dumplings are familiar enough for many visitors, but still feel local depending on the filling, texture, and market setting. They work well when you want something warm without guessing too much.",
+      "Hotteok is for the sweet stop. It is warm, soft, and sugary, and it often feels best when you eat it while standing or walking. You do not need a big dessert plan if one hotteok is enough.",
+      "Fish cake is good when you want something warm but not too heavy. The broth can be comforting, especially when the weather is cold or when you have already been walking for a while. It is a quiet kind of snack, but useful.",
+      "Kalguksu or market noodles are better when you want to sit down. A bowl of noodles can reset the day. If snacks feel too scattered, noodles make the market feel more like a meal.",
+      "Fried snacks are the easiest choice when you do not know what to order. You can usually see them clearly, point to what looks good, and share with someone else. That makes them helpful for first-time visitors.",
+      "Gwangjang Market is the classic busy-market experience. It is loud, crowded, and food-focused. This is where you go if you want the full feeling of people eating close together, fast service, sizzling pans, and market dishes that feel direct.",
+      "Mangwon Market is softer and more neighborhood-like. It pairs well with West Seoul because you can connect it with Mangwon, Hongdae, Yeonnam, or a Han River walk. It does not have to be a big food mission. One snack before or after a walk is enough.",
+      "Namdaemun Market has an older central-Seoul feeling. It can work well when you are near Myeongdong, City Hall, or central shopping areas and want something less polished than a shopping street snack. Treat it as a practical market stop, not a perfect food checklist.",
+      "Local neighborhood markets can be just as useful as famous ones. You may not know the name before you arrive, but you can still understand the mood: a few food stalls, side dishes, fried snacks, fruit, fish cake, or something warm to eat quickly.",
+      "If the market feels overwhelming, choose by craving. Crispy, warm, sweet, spicy, soupy, or simple. That is easier than trying to choose the “right” stall. Market food is not a test.",
+      "You can also keep the meal small. One bindaetteok, one hotteok, one fish cake, one small gimbap, or one bowl of noodles can be enough. The goal is not to eat everything. The goal is to leave with one or two clear memories.",
+      "Market food feels different from restaurant food because the space is different. You are closer to the cooking, closer to other people, and closer to the noise. The dish matters, but the steam, stools, signs, and movement matter too.",
+      "It also feels different from convenience-store food. Convenience stores are about ease and timing. Markets are about energy and choice. At a market, the food pulls you in before you have fully decided what you want.",
+      "For first-time visitors, the best advice is to relax. If you find a famous stall, that is fine. If you do not, that is also fine. A market can still be worth it because of one warm snack, one quick seat, or one dish you remember later.",
+    ],
+    culturalContext:
+      "Korean market food is tied to movement, noise, warmth, and everyday life. Markets are places where people shop, eat quickly, meet others, and move through the city without making the meal too formal. For visitors, market food can feel exciting because it is not separated from the place around it. The food, the people, and the market mood all arrive together.",
+    tags: [
+      "Korean food",
+      "Market food",
+      "Gwangjang Market",
+      "Mangwon Market",
+      "Namdaemun",
+      "Street food",
+      "Food",
+    ],
+    publishedAt: "2026-07-07",
+    readingTime: "6 min read",
+    seoTitle:
+      "Korean Market Food Guide | Gwangjang, Mangwon, Namdaemun & Street Snacks",
+    seoDescription:
+      "A beginner-friendly Korean market food guide covering bindaetteok, small gimbap, tteokbokki, mandu, hotteok, fish cake, noodles, fried snacks, and how to choose what to eat.",
+    quickGuide: {
+      sectionTitle: "Quick Korean market food guide",
+      groups: [
+        {
+          title: "Start with these foods",
+          items: [
+            "Bindaetteok: Good when you want something crispy, warm, and filling.",
+            "Small gimbap: Easy to share, easy to pick up, and good when you do not want a heavy meal.",
+            "Tteokbokki: Soft rice cakes in a spicy-sweet sauce, best when you want a familiar street-food feeling.",
+            "Mandu: Dumplings that work well as a simple snack or part of a bigger market meal.",
+            "Hotteok: A sweet pancake-style snack, especially nice when you want something warm and sugary.",
+            "Fish cake: A gentle option when you want something warm, soupy, and easy.",
+            "Kalguksu or market noodles: Good when you want to sit down and eat something comforting.",
+            "Fried snacks: Easy to point at, share, and eat while walking.",
+          ],
+        },
+        {
+          title: "Which market fits what",
+          items: [
+            "Gwangjang Market: Best for classic busy market energy, bindaetteok, small gimbap, noodles, and sitting close to the action.",
+            "Mangwon Market: Good for a more neighborhood-style food stop, especially if you are already exploring West Seoul.",
+            "Namdaemun Market: Useful when you want older central-market energy near shopping, snacks, and simple meals.",
+            "Local neighborhood markets: Often less famous, but sometimes easier if you just want one snack and a quick look around.",
+          ],
+        },
+        {
+          title: "If the market feels overwhelming",
+          items: [
+            "Do not try to eat everything.",
+            "Choose one snack and one simple meal.",
+            "If you want crispy, look for bindaetteok or fried snacks.",
+            "If you want warm and easy, look for fish cake, noodles, or mandu.",
+            "If you want something sweet, look for hotteok.",
+            "You do not need to find the perfect stall for the market to be worth it.",
+          ],
+        },
+        {
+          title: "Why market food feels different",
+          items: [
+            "Market food is usually closer, louder, and more direct than restaurant food.",
+            "You can see what people are eating before you choose.",
+            "A small snack can be enough if the market is crowded.",
+            "The mood matters as much as the dish: steam, noise, metal stools, quick service, and people eating side by side.",
+          ],
+        },
+        {
+          title: "Pair with another HAEMIL guide",
+          items: [
+            "Read the Seoul food guide if you want to understand where market food fits with cafes, barbecue, convenience stores, and late-night meals.",
+            "Read the Old Seoul guide if you want to pair Gwangjang Market with palaces, Jongno, Insadong, or Bukchon.",
+            "Read the West Seoul guide if you want to connect Mangwon Market with Hongdae, Yeonnam, Hapjeong, or Mangwon walks.",
+            "Read the Shopping Seoul guide if you want to connect Myeongdong, Namdaemun, Dongdaemun, and central shopping streets with simple food stops.",
+          ],
+        },
+      ],
+    },
+    relatedGuides: [
+      {
+        label: "Food guide",
+        title: "What to Eat in Seoul for First-Time Visitors",
+        href: "/food/what-to-eat-in-seoul-first-time",
+      },
+      {
+        label: "Travel guide",
+        title: "Old Seoul for First-Time Visitors",
+        href: "/travel/old-seoul-jongno-ikseondong-bukchon",
+      },
+      {
+        label: "Travel guide",
+        title: "West Seoul for First-Time Visitors",
+        href: "/travel/west-seoul-hongdae-yeonnam-mangwon",
+      },
+      {
+        label: "Travel guide",
+        title: "Shopping Seoul for First-Time Visitors",
+        href: "/travel/shopping-seoul-myeongdong-namsan-dongdaemun",
       },
     ],
   },
