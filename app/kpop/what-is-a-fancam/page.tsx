@@ -268,27 +268,52 @@ export default function WhatIsAFancamPage() {
               See fancams in action
             </h2>
 
-            <Link
-              href="/kpop/rescene-woni-fancam-spotlight"
-              className="group mt-6 block rounded-[1.5rem] border border-[var(--border)] bg-[var(--card)] p-5 transition hover:-translate-y-1 hover:shadow-md md:max-w-xl"
-            >
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
-                K-pop Spotlight
-              </p>
+            <div className="mt-6 grid gap-4 md:grid-cols-2">
+              <Link
+                href="/kpop/rescene-woni-fancam-spotlight"
+                className="group rounded-[1.5rem] border border-[var(--border)] bg-[var(--card)] p-5 transition hover:-translate-y-1 hover:shadow-md"
+              >
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
+                  K-pop Spotlight
+                </p>
 
-              <h3 className="mt-3 text-xl font-semibold text-[var(--text)]">
-                Why RESCENE Woni Is Getting Attention Through Fancams
-              </h3>
+                <h3 className="mt-3 text-xl font-semibold text-[var(--text)]">
+                  Why RESCENE Woni Is Getting Attention Through Fancams
+                </h3>
 
-              <p className="mt-3 text-sm leading-6 text-[var(--muted)]">
-                A spotlight example of how a close-up stage video can help a new
-                idol become easier to notice.
-              </p>
+                <p className="mt-3 text-sm leading-6 text-[var(--muted)]">
+                  A spotlight example of how a close-up stage video can help a new
+                  idol become easier to notice.
+                </p>
 
-              <p className="mt-4 text-sm font-semibold text-[var(--accent)]">
-                Read spotlight →
-              </p>
-            </Link>
+                <p className="mt-4 text-sm font-semibold text-[var(--accent)]">
+                  Read spotlight →
+                </p>
+              </Link>
+
+              <Link
+                href="/kpop/illit-wonhee-fancam-spotlight"
+                className="group rounded-[1.5rem] border border-[var(--border)] bg-[var(--card)] p-5 transition hover:-translate-y-1 hover:shadow-md"
+              >
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
+                  K-pop Spotlight
+                </p>
+
+                <h3 className="mt-3 text-xl font-semibold text-[var(--text)]">
+                  Why ILLIT Wonhee Keeps Catching Attention in Fancams
+                </h3>
+
+                <p className="mt-3 text-sm leading-6 text-[var(--muted)]">
+                  A spotlight example of how clear expressions, timing, and
+                  close-up camera comfort can make a familiar idol stay easy to
+                  remember.
+                </p>
+
+                <p className="mt-4 text-sm font-semibold text-[var(--accent)]">
+                  Read spotlight →
+                </p>
+              </Link>
+            </div>
           </section>
 
           <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">

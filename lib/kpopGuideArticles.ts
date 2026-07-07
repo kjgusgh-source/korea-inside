@@ -29,6 +29,14 @@ export type KpopGuideArticle = {
       label: "K-pop Spotlight",
     },
     {
+      title:
+        "K-pop Spotlight: Why ILLIT Wonhee Keeps Catching Attention in Fancams",
+      description:
+        "A friendly K-pop spotlight on ILLIT Wonhee, her “It’s Me” fancam, and why clear expressions, small timing changes, and close-up stage clips make her easy to remember.",
+      href: "/kpop/illit-wonhee-fancam-spotlight",
+      label: "K-pop Spotlight",
+    },
+    {
       title: "What does bias mean in K-pop?",
       description:
         "Understand bias, bias wrecker, ultimate bias, and Korean fan words like choe-ae and cha-ae.",

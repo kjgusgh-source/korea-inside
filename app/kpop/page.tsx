@@ -1,6 +1,7 @@
 import Link from "next/link";
 import SiteHeader from "../../components/SiteHeader";
 import IdolRequestForm from "../../components/IdolRequestForm";
+import KpopGuideArticleList from "../../components/KpopGuideArticleList";
 import KpopExplorer from "../../components/KpopExplorer";
 import { getKpopGroups } from "../../lib/kpopData";
 import { getPublishedMemberGuides } from "../../lib/publishedGuides";
@@ -45,44 +46,27 @@ export default function KpopPage() {
 
         <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
-            K-pop starter guides
+            K-pop guides & spotlights
           </p>
 
           <h2 className="mt-3 max-w-3xl text-3xl font-semibold leading-tight">
-            New to K-pop? Start with the words fans use every day.
+            Start with the words fans use, then follow the spotlight moments
+            people keep replaying.
           </h2>
 
           <p className="mt-4 max-w-3xl text-base leading-8 text-[var(--muted)]">
-            These short guides explain the words and habits that appear again
-            and again in K-pop comments, fancams, member guides, and fan
-            conversations.
+            These short guides and spotlight picks explain the words, stage
+            habits, and replayable moments that show up again and again in
+            K-pop comments, fancams, member guides, and fan conversations.
           </p>
 
-          <div className="mt-8 grid gap-5 md:grid-cols-3">
-            {guideArticles.map((article) => (
-              <Link
-                key={article.href}
-                href={article.href}
-                className="group rounded-[1.5rem] border border-[var(--border)] bg-[var(--card)] p-5 transition hover:-translate-y-1 hover:shadow-md"
-              >
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
-                  {article.label}
-                </p>
-
-                <h3 className="mt-3 text-xl font-semibold text-[var(--text)]">
-                  {article.title}
-                </h3>
-
-                <p className="mt-3 text-sm leading-6 text-[var(--muted)]">
-                  {article.description}
-                </p>
-
-                <p className="mt-4 text-sm font-semibold text-[var(--accent)]">
-                  Read guide →
-                </p>
-              </Link>
-            ))}
-          </div>
+          <KpopGuideArticleList
+            articles={guideArticles}
+            visibleCount={6}
+            gridClassName="grid gap-5 md:grid-cols-3"
+            cardClassName="group rounded-[1.5rem] border border-[var(--border)] bg-[var(--card)] p-5 transition hover:-translate-y-1 hover:shadow-md"
+            cardSpacing="hub"
+          />
         </section>
 
         <KpopExplorer groups={groups} />

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import KpopGuideArticleList from "./KpopGuideArticleList";
 import { getKpopGuideArticles } from "../lib/kpopGuideArticles";
 
 export default function FeaturedKpopArticles() {
@@ -9,11 +10,12 @@ export default function FeaturedKpopArticles() {
       <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
-            K-pop starter guides
+            K-pop guides & spotlights
           </p>
 
           <h2 className="mt-3 max-w-3xl text-3xl font-semibold leading-tight md:text-5xl">
-            New to K-pop? Start with the words fans use every day.
+            Start with the words, stages, and spotlight moments fans actually
+            click.
           </h2>
         </div>
 
@@ -27,35 +29,17 @@ export default function FeaturedKpopArticles() {
 
       <p className="mt-5 max-w-3xl text-base leading-8 text-[var(--muted)]">
         Fancams, bias, ending fairy, and Korean fan words can feel confusing at
-        first. These guides explain them like a local friend, without making
-        K-pop feel like a textbook.
+        first. These starter guides and spotlight picks explain them like a
+        local friend, without making K-pop feel like a textbook.
       </p>
 
-      <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-        {articles.map((article) => (
-          <Link
-            key={article.href}
-            href={article.href}
-            className="group rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
-          >
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
-              {article.label}
-            </p>
-
-            <h3 className="mt-3 text-xl font-semibold text-[var(--text)]">
-              {article.title}
-            </h3>
-
-            <p className="mt-4 text-sm leading-7 text-[var(--muted)]">
-              {article.description}
-            </p>
-
-            <p className="mt-5 text-sm font-semibold text-[var(--accent)]">
-              Read guide →
-            </p>
-          </Link>
-        ))}
-      </div>
+      <KpopGuideArticleList
+        articles={articles}
+        visibleCount={6}
+        gridClassName="grid gap-5 md:grid-cols-2 lg:grid-cols-4"
+        cardClassName="group rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+        cardSpacing="home"
+      />
     </section>
   );
 }
