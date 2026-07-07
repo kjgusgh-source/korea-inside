@@ -1445,6 +1445,11 @@ export const POSTS: Post[] = [
         title: "What to Eat in Seoul for First-Time Visitors",
         href: "/food/what-to-eat-in-seoul-first-time",
       },
+      {
+        label: "Food guide",
+        title: "Korean Convenience Store Food Guide",
+        href: "/food/korean-convenience-store-food-guide",
+      },
     ],
   },
   {
@@ -1928,6 +1933,127 @@ export const POSTS: Post[] = [
         title: "Seoul Travel Guides",
         href: "/travel/seoul",
       },
+      {
+        label: "Food guide",
+        title: "Korean Convenience Store Food Guide",
+        href: "/food/korean-convenience-store-food-guide",
+      },
+    ],
+  },
+  {
+    id: 19,
+    title:
+      "Korean Convenience Store Food Guide: Ramyeon, Triangle Gimbap, Dosirak, and Late-Night Snacks",
+    slug: "korean-convenience-store-food-guide",
+    category: "food",
+    categorySlug: "food",
+    categoryLabel: "Food",
+    description:
+      "A beginner-friendly Korean convenience store food guide for first-time visitors, covering ramyeon, triangle gimbap, dosirak, heated snacks, drinks, ice cream, and late-night snack culture.",
+    excerpt:
+      "Korean convenience stores are not only places to buy drinks. This guide explains the food categories first-time visitors can try, from ramyeon and triangle gimbap to dosirak, heated snacks, flavored milk, ice cream, and late-night snacks.",
+    content: [
+      "Korean convenience stores are not only places to buy drinks. For many visitors, they become one of the easiest ways to understand everyday food in Korea: ramyeon after a walk, triangle gimbap before a subway ride, a quick dosirak, a cold coffee, or ice cream after dinner.",
+      "This guide is not a ranking of the best convenience-store products. Products change, limited editions disappear, and every store can feel a little different. Instead, it explains the main food categories first-time visitors can understand and try.",
+      "Ramyeon is the easiest place to start. Cup noodles are simple, cheap, warm, and available almost everywhere. In some places, especially near the Han River, ramyeon can become part of the travel memory because the setting changes the food.",
+      "Han River ramyeon is not famous because it is fancy. It is memorable because it is simple. You buy ramyeon and snacks, sit near the river, watch the lights, and let the city feel slower for a while. The food is ordinary, but the moment can feel very Seoul.",
+      "Triangle gimbap is useful when you want something quick. It is a small rice snack wrapped in seaweed, usually with a filling inside. It can be a breakfast, a subway snack, a late-night bite, or something to eat when you do not want a full meal.",
+      "Dosirak is the convenience-store version of a simple meal. It usually gives you rice, side dishes, meat or another main item, and a more complete feeling than a snack. It is not restaurant food, but it can be practical when you are tired, saving money, or eating alone.",
+      "Heated snacks are another part of the experience. Depending on the store, you may find hot bars, sausages, dumplings, fried snacks, or microwave foods. These are not usually the reason to plan a trip, but they are useful when you want something warm and easy.",
+      "Drinks matter too. Flavored milk, bottled coffee, teas, and seasonal drinks are part of the convenience-store rhythm. Even if you do not eat a meal, stopping for a drink can become a small break between neighborhoods.",
+      "Ice cream and sweet snacks are good when you only want a small stop. After walking through a market, shopping street, cafe area, or riverside park, a simple ice cream can be enough. Korean convenience stores are useful because they make small choices easy.",
+      "Late-night snacks are one of the most important parts of convenience-store food culture. After shopping, drinking, studying, working, walking, or meeting friends, people often want something quick instead of a full restaurant meal. A convenience store gives you that option without needing a plan.",
+      "Eating outside or near a convenience store can also be part of the mood. Some stores have small tables, and some neighborhoods have benches or nearby public space. The feeling is casual, bright, and temporary. You stop for a moment, eat something simple, and move on.",
+      "Convenience stores appear often in K-dramas because they are ordinary spaces where characters can pause. A store can be a place for a quiet talk, a late snack, an awkward meeting, or a moment alone. It is not glamorous, but that is why it works.",
+      "For first-time visitors, the best approach is to keep it simple. Try ramyeon once. Try triangle gimbap once. Try a drink or ice cream when you need a break. If you are near the Han River or walking at night, let the convenience store become part of the moment instead of treating it like a checklist.",
+      "Korean convenience-store food is not supposed to replace markets, barbecue, cafes, or restaurants. It belongs to a different part of the trip. It is for the in-between moments: before the next train, after the last stop, near the river, outside a hotel, or when you are too tired to make another decision.",
+    ],
+    culturalContext:
+      "Convenience-store food in Korea is about timing as much as taste. It fits into daily life because people use convenience stores between school, work, travel, dates, late nights, and quiet pauses. A cup of ramyeon, triangle gimbap, bottled coffee, or ice cream can feel ordinary, but these small foods help explain how Korean city life moves between bigger meals and smaller moments.",
+    tags: [
+      "Korean food",
+      "Convenience store",
+      "Ramyeon",
+      "Triangle gimbap",
+      "Dosirak",
+      "Korea travel",
+      "Food",
+    ],
+    publishedAt: "2026-07-07",
+    readingTime: "6 min read",
+    seoTitle:
+      "Korean Convenience Store Food Guide | Ramyeon, Gimbap, Dosirak & Snacks",
+    seoDescription:
+      "A beginner-friendly guide to Korean convenience store food: ramyeon, triangle gimbap, dosirak lunch boxes, heated snacks, drinks, ice cream, and late-night snacks.",
+    quickGuide: {
+      sectionTitle: "Quick Korean convenience store food guide",
+      groups: [
+        {
+          title: "Start with these categories",
+          items: [
+            "Ramyeon: Cup noodles or cooked ramyeon, especially memorable near the Han River.",
+            "Triangle gimbap: A small rice snack with fillings, useful when you want something quick and simple.",
+            "Dosirak: Convenience-store lunch boxes for a more complete meal.",
+            "Heated snacks: Hot bars, sausages, dumplings, or simple microwave snacks.",
+            "Flavored milk and bottled coffee: Easy drinks that many visitors notice quickly.",
+            "Ice cream and sweet snacks: Good for a small dessert stop after walking.",
+            "Late-night snacks: Simple food that feels useful when restaurants are closed or you are too tired to plan.",
+          ],
+        },
+        {
+          title: "How to eat like a local",
+          items: [
+            "Use the microwave or hot water station when the store provides one.",
+            "Pair ramyeon with a drink, triangle gimbap, or a small snack.",
+            "Near parks or the Han River, convenience-store food can become part of the place, not just the meal.",
+            "Do not overthink it. Convenience store food is often about ease, timing, and mood.",
+          ],
+        },
+        {
+          title: "If it is your first visit",
+          items: [
+            "Start with categories, not one famous product.",
+            "Try ramyeon if you want the easiest experience.",
+            "Try triangle gimbap if you want a quick snack.",
+            "Try dosirak if you want a simple meal.",
+            "Try flavored milk, coffee, ice cream, or chips if you only want a small stop.",
+          ],
+        },
+        {
+          title: "Late-night mood",
+          items: [
+            "Korean convenience stores are useful after shopping, walking, studying, working, or meeting friends.",
+            "A late-night snack does not need to be special to feel memorable.",
+            "The mood can be very simple: bright lights, a small table, ramyeon, a cold drink, and a short pause.",
+            "This is different from restaurant dining, but it is still part of Korean city life.",
+          ],
+        },
+        {
+          title: "Pair with another HAEMIL guide",
+          items: [
+            "Read the Seoul food guide if you want to understand where convenience-store food fits among markets, cafes, barbecue, and late-night meals.",
+            "Read the Night Seoul guide if you want to connect convenience-store snacks with Han River walks, night views, and quiet city moods.",
+            "Read the K-drama Seoul guide if you want to understand why convenience stores often become emotional spaces on screen.",
+          ],
+        },
+      ],
+    },
+    relatedGuides: [
+      {
+        label: "Food guide",
+        title: "What to Eat in Seoul for First-Time Visitors",
+        href: "/food/what-to-eat-in-seoul-first-time",
+      },
+      {
+        label: "Travel guide",
+        title: "Night Seoul for First-Time Visitors",
+        href: "/travel/night-seoul-han-river-namsan-euljiro",
+      },
+      {
+        label: "Drama guide",
+        title: "Why Seoul Feels Like a K-drama",
+        href: "/dramas/why-seoul-feels-like-a-kdrama",
+      },
     ],
   },
   {
@@ -2042,6 +2168,11 @@ export const POSTS: Post[] = [
         label: "Travel guide",
         title: "International Seoul for First-Time Visitors",
         href: "/travel/international-seoul-itaewon-hannam-haebangchon",
+      },
+      {
+        label: "Food guide",
+        title: "Korean Convenience Store Food Guide",
+        href: "/food/korean-convenience-store-food-guide",
       },
     ],
     trailers: [
