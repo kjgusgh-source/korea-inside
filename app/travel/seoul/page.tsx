@@ -45,6 +45,12 @@ const SEOUL_AREA_GUIDES = [
       "Han River, Namsan, Euljiro, Cheonggyecheon, late-night streets, convenience-store snacks, and quiet city moods.",
     href: "/travel/night-seoul-han-river-namsan-euljiro",
   },
+  {
+    title: "International Seoul",
+    description:
+      "Itaewon, Hannam, Haebangchon, Yongsan, global food, hillside streets, art spaces, and mixed local-global Seoul.",
+    href: "/travel/international-seoul-itaewon-hannam-haebangchon",
+  },
 ];
 
 export default function SeoulTravelPage() {

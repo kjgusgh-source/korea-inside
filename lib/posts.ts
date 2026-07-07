@@ -650,6 +650,11 @@ export const POSTS: Post[] = [
         title: "Night Seoul for First-Time Visitors",
         href: "/travel/night-seoul-han-river-namsan-euljiro",
       },
+      {
+        label: "Travel guide",
+        title: "International Seoul for First-Time Visitors",
+        href: "/travel/international-seoul-itaewon-hannam-haebangchon",
+      },
     ],
   },
   {
@@ -830,6 +835,11 @@ export const POSTS: Post[] = [
         label: "Travel guide",
         title: "Night Seoul for First-Time Visitors",
         href: "/travel/night-seoul-han-river-namsan-euljiro",
+      },
+      {
+        label: "Travel guide",
+        title: "International Seoul for First-Time Visitors",
+        href: "/travel/international-seoul-itaewon-hannam-haebangchon",
       },
     ],
   },
@@ -1013,6 +1023,11 @@ export const POSTS: Post[] = [
         label: "Travel guide",
         title: "Night Seoul for First-Time Visitors",
         href: "/travel/night-seoul-han-river-namsan-euljiro",
+      },
+      {
+        label: "Travel guide",
+        title: "International Seoul for First-Time Visitors",
+        href: "/travel/international-seoul-itaewon-hannam-haebangchon",
       },
     ],
   },
@@ -1207,6 +1222,11 @@ export const POSTS: Post[] = [
         title: "Night Seoul for First-Time Visitors",
         href: "/travel/night-seoul-han-river-namsan-euljiro",
       },
+      {
+        label: "Travel guide",
+        title: "International Seoul for First-Time Visitors",
+        href: "/travel/international-seoul-itaewon-hannam-haebangchon",
+      },
     ],
   },
   {
@@ -1394,6 +1414,202 @@ export const POSTS: Post[] = [
         label: "Travel guide",
         title: "Trendy Seoul for First-Time Visitors",
         href: "/travel/trendy-seoul-seongsu-apgujeong-cheongdam",
+      },
+      {
+        label: "Travel guide",
+        title: "International Seoul for First-Time Visitors",
+        href: "/travel/international-seoul-itaewon-hannam-haebangchon",
+      },
+    ],
+  },
+  {
+    id: 17,
+    title:
+      "International Seoul for First-Time Visitors: Itaewon, Hannam, Haebangchon, and Yongsan",
+    slug: "international-seoul-itaewon-hannam-haebangchon",
+    category: "travel",
+    categorySlug: "travel",
+    categoryLabel: "Travel",
+    description:
+      "A map-friendly International Seoul guide for first-time visitors, covering Itaewon, Hannam-dong, Haebangchon, Gyeongnidan-gil, Noksapyeong, Leeum, and Yongsan.",
+    excerpt:
+      "International Seoul is where global food, hillside streets, art spaces, cafes, bars, and mixed local-global city moods come together around Itaewon, Hannam, Haebangchon, and Yongsan.",
+    content: [
+      "International Seoul is not one single street. It is a cluster of neighborhoods around Itaewon, Hannam, Haebangchon, Noksapyeong, and Yongsan where Seoul feels mixed, global, hillside, artistic, and layered.",
+      "This area is often described through nightlife, but that is too narrow. For first-time visitors, International Seoul can also mean global food, small cafes, steep streets, art spaces, design shops, quiet residential corners, and a city mood that does not fit neatly into one category.",
+      "Itaewon is the easiest place to start. It has long been one of Seoul’s most recognizable international areas, with global restaurants, mixed streets, and a wide range of visitors. It can feel busy, but it is useful because it shows a side of Seoul that is less uniform than many first-time travel images suggest.",
+      "Gyeongnidan-gil gives the area a more sloped and slower feeling. It is close to Itaewon but often feels less direct. The street works well when you want cafes, food, and walking without staying only on the busiest blocks.",
+      "Usadan-ro is useful for understanding the smaller Itaewon-side mood. It is not as obvious as the main street, but that is part of the point. The area can feel more local, more hillside, and more personal than the places visitors usually hear about first.",
+      "Haebangchon, often shortened to HBC, has one of the strongest hillside moods in this guide. The streets climb toward Namsan, and the area mixes cafes, bars, small restaurants, views, and a relaxed neighborhood feeling. It is good for visitors who like walking through a place rather than only arriving at one landmark.",
+      "Noksapyeong is a connector. It helps link Itaewon, Haebangchon, and Gyeongnidan. You may not plan your whole day around it, but it helps explain how these neighborhoods sit together on the map.",
+      "Hannam-dong changes the mood again. It feels quieter, more polished, and more design-focused than central Itaewon. Cafes, restaurants, galleries, showrooms, and small streets make Hannam a good choice when you want International Seoul to feel calmer and more refined.",
+      "Leeum Museum of Art gives the area a strong cultural anchor. It helps visitors understand that Hannam and Hangangjin are not only about cafes or restaurants. They are also connected with art, architecture, exhibitions, and a more thoughtful city mood.",
+      "Yongsan gives this whole area a wider background. The district has military history, international influence, residential areas, transport links, parks, museums, shopping, and changing city spaces. It is not always easy to summarize, but that complexity is exactly why it belongs in this guide.",
+      "The best way to visit International Seoul is to choose one mood first. If you want global food and mixed streets, start with Itaewon. If you want hillside walks, start with Haebangchon or Gyeongnidan. If you want art and a more polished mood, start with Hannam and Leeum. If you want to understand the wider district, keep Yongsan on your map.",
+      "Compared with Old Seoul, this area feels less historical and more mixed. Compared with West Seoul, it feels less youthful and more international. Compared with Trendy Seoul, it feels less polished in some places and more layered. Compared with Shopping Seoul, it is less practical and more atmospheric. Compared with Night Seoul, it can work both during the day and after dark.",
+      "For K-drama fans, International Seoul may feel familiar in a quieter way. These are the kinds of areas where a hillside walk, a cafe table, a night street, a museum stop, or a conversation after dinner can feel like part of a story. The area does not need to look dramatic to feel memorable.",
+    ],
+    culturalContext:
+      "International Seoul is important because it shows that Korean city life is not only traditional, trendy, or commercial. Itaewon, Hannam, Haebangchon, Noksapyeong, and Yongsan show how Seoul has absorbed foreign influence, local history, military presence, art spaces, global food, residential life, and changing urban identity into one area. For visitors, this part of Seoul can feel less simple, but that is what makes it interesting.",
+    tags: [
+      "Seoul",
+      "Itaewon",
+      "Hannam",
+      "Haebangchon",
+      "Yongsan",
+      "Korea travel",
+      "International Seoul",
+    ],
+    publishedAt: "2026-07-07",
+    readingTime: "6 min read",
+    seoTitle:
+      "International Seoul for First-Time Visitors | Itaewon, Hannam, Haebangchon & Yongsan",
+    seoDescription:
+      "A map-friendly International Seoul travel guide covering Itaewon, Hannam-dong, Haebangchon, Gyeongnidan-gil, Noksapyeong, Leeum, and Yongsan.",
+    quickGuide: {
+      sectionTitle: "Quick International Seoul guide",
+      groups: [
+        {
+          title: "What this area feels like",
+          items: [
+            "International Seoul feels mixed, layered, and less easy to define than one shopping street or palace area.",
+            "This area is good for global food, hillside streets, cafes, bars, art spaces, design shops, and a local-global Seoul mood.",
+            "Itaewon feels open and international, Haebangchon feels hillside and casual, Hannam feels more polished, and Yongsan gives the area a broader city background.",
+          ],
+        },
+        {
+          title: "Best places to put on your map",
+          items: [
+            "Itaewon: Global food, mixed streets, international mood, and one of Seoul’s most recognizable cultural crossroads.",
+            "Gyeongnidan-gil: A sloped street area near Itaewon with cafes, food, and a quieter walking mood.",
+            "Usadan-ro: Smaller Itaewon-side streets with a more local, hillside feeling.",
+            "Haebangchon: Hillside streets, cafes, bars, views, and a relaxed neighborhood mood near Namsan.",
+            "Noksapyeong: A useful connector between Itaewon, Haebangchon, and Gyeongnidan.",
+            "Hannam-dong: Cafes, restaurants, design shops, galleries, and a quieter polished mood.",
+            "Leeum Museum of Art: A major art stop near Hannam and Hangangjin.",
+            "Yongsan: A wider district that helps explain the area’s mixed military, international, residential, and cultural background.",
+          ],
+        },
+        {
+          title: "Good for",
+          items: [
+            "First-time visitors who want Seoul to feel diverse and layered.",
+            "Travelers interested in global food, cafes, art, design, and hillside walks.",
+            "People who want an international mood without making the night only about clubs or bars.",
+            "Visitors who want a contrast with Old Seoul, West Seoul, Trendy Seoul, Shopping Seoul, and Night Seoul.",
+          ],
+        },
+        {
+          title: "How to visit",
+          items: [
+            "Do not try to turn this area into one checklist.",
+            "Choose one anchor first: Itaewon for global food, Haebangchon for hillside streets, Hannam for art and cafes, or Yongsan for a wider city context.",
+            "Some streets are steep, so comfortable shoes matter more here than in flat shopping areas.",
+            "If you visit at night, keep the plan simple and focus on food, walking, and one or two streets instead of rushing around.",
+          ],
+        },
+        {
+          title: "Pair with another HAEMIL guide",
+          items: [
+            "Read the Old Seoul guide if you want palaces, hanok alleys, markets, and older city layers.",
+            "Read the West Seoul guide if you want a younger, looser, more casual side of the city.",
+            "Read the Trendy Seoul guide if you want cafes, pop-ups, fashion, beauty, and polished modern Seoul.",
+            "Read the Shopping Seoul guide if you want Myeongdong, Namsan, Dongdaemun, DDP, cosmetics, and shopping streets.",
+            "Read the Night Seoul guide if you want Han River, Namsan, Euljiro, late-night streets, and quiet city moods.",
+            "Read the K-drama Seoul guide if you want to understand why ordinary streets, cafes, and night walks often feel emotional on screen.",
+          ],
+        },
+      ],
+    },
+    mapSectionTitle: "International Seoul stops on your map",
+    mapSpots: [
+      {
+        name: "Itaewon",
+        area: "Itaewon & global streets",
+        category: "Neighborhood",
+        mapQuery: "Itaewon Seoul",
+        note: "A recognizable international area for global food, mixed streets, cafes, bars, and a layered local-global Seoul mood.",
+      },
+      {
+        name: "Gyeongnidan-gil",
+        area: "Itaewon & global streets",
+        category: "Street",
+        mapQuery: "Gyeongnidan-gil Seoul",
+        note: "A sloped Itaewon-side street area with cafes, food, and a quieter walking mood than the busiest main streets.",
+      },
+      {
+        name: "Usadan-ro",
+        area: "Itaewon & global streets",
+        category: "Street",
+        mapQuery: "Usadan-ro Seoul",
+        note: "Smaller Itaewon-side streets that can feel more local, hillside, and less obvious to first-time visitors.",
+      },
+      {
+        name: "Haebangchon",
+        area: "Hillside & Haebangchon",
+        category: "Neighborhood",
+        mapQuery: "Haebangchon Seoul",
+        note: "A hillside neighborhood near Namsan with cafes, bars, views, and a relaxed mixed-city mood.",
+      },
+      {
+        name: "Noksapyeong",
+        area: "Hillside & Haebangchon",
+        category: "Neighborhood",
+        mapQuery: "Noksapyeong Seoul",
+        note: "A useful connector between Itaewon, Haebangchon, and Gyeongnidan, especially for walking between hillside streets.",
+      },
+      {
+        name: "Hannam-dong",
+        area: "Hannam & art",
+        category: "Neighborhood",
+        mapQuery: "Hannam-dong Seoul",
+        note: "A quieter and more polished area for cafes, restaurants, galleries, design shops, and art-focused stops.",
+      },
+      {
+        name: "Leeum Museum of Art",
+        area: "Hannam & art",
+        category: "Museum",
+        mapQuery: "Leeum Museum of Art Seoul",
+        note: "A major art stop near Hannam and Hangangjin, useful when you want this area to feel cultural rather than only food-focused.",
+      },
+      {
+        name: "Yongsan",
+        area: "Yongsan & city layers",
+        category: "District",
+        mapQuery: "Yongsan Seoul",
+        note: "A wider district that helps explain the area’s mixed military, international, residential, and cultural background.",
+      },
+    ],
+    relatedGuides: [
+      {
+        label: "Travel guide",
+        title: "Old Seoul for First-Time Visitors",
+        href: "/travel/old-seoul-jongno-ikseondong-bukchon",
+      },
+      {
+        label: "Travel guide",
+        title: "West Seoul for First-Time Visitors",
+        href: "/travel/west-seoul-hongdae-yeonnam-mangwon",
+      },
+      {
+        label: "Travel guide",
+        title: "Trendy Seoul for First-Time Visitors",
+        href: "/travel/trendy-seoul-seongsu-apgujeong-cheongdam",
+      },
+      {
+        label: "Travel guide",
+        title: "Shopping Seoul for First-Time Visitors",
+        href: "/travel/shopping-seoul-myeongdong-namsan-dongdaemun",
+      },
+      {
+        label: "Travel guide",
+        title: "Night Seoul for First-Time Visitors",
+        href: "/travel/night-seoul-han-river-namsan-euljiro",
+      },
+      {
+        label: "Drama guide",
+        title: "Why Seoul Feels Like a K-drama",
+        href: "/dramas/why-seoul-feels-like-a-kdrama",
       },
     ],
   },
@@ -1686,6 +1902,11 @@ export const POSTS: Post[] = [
         label: "Travel guide",
         title: "Night Seoul for First-Time Visitors",
         href: "/travel/night-seoul-han-river-namsan-euljiro",
+      },
+      {
+        label: "Travel guide",
+        title: "International Seoul for First-Time Visitors",
+        href: "/travel/international-seoul-itaewon-hannam-haebangchon",
       },
     ],
     trailers: [
