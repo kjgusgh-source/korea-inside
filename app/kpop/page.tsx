@@ -85,20 +85,28 @@ export default function KpopPage() {
           </div>
         </section>
 
-        <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
-            Published member guides
-          </p>
+        <KpopExplorer groups={groups} />
 
-          <h2 className="mt-3 max-w-3xl text-3xl font-semibold leading-tight">
-            Start with the members fans are already talking about.
-          </h2>
+        <details className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">
+          <summary className="cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+              Published member guides
+            </p>
 
-          <p className="mt-4 max-w-3xl text-base leading-8 text-[var(--muted)]">
-            These guides explain not only who each idol is, but why fans notice
-            them, what kind of role they play in their group, and which Korean
-            fan words make their stage moments easier to understand.
-          </p>
+            <h2 className="mt-3 max-w-3xl text-3xl font-semibold leading-tight">
+              Start with the members fans are already talking about.
+            </h2>
+
+            <p className="mt-4 max-w-3xl text-base leading-8 text-[var(--muted)]">
+              These guides explain not only who each idol is, but why fans notice
+              them, what kind of role they play in their group, and which Korean
+              fan words make their stage moments easier to understand.
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-[var(--accent)]">
+              Show member guides ↓
+            </p>
+          </summary>
 
           <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {publishedGuides.map(({ group, member }) => (
@@ -125,9 +133,7 @@ export default function KpopPage() {
               </Link>
             ))}
           </div>
-        </section>
-
-        <KpopExplorer groups={groups} />
+        </details>
 
         <IdolRequestForm />
       </div>

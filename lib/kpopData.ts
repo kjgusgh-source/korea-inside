@@ -442,6 +442,61 @@ export const KPOP_GROUPS: KpopGroup[] = [
     starterTags: ["Performance", "Concept", "Fancam"],
   },
   {
+    id: "rescene",
+    name: "RESCENE",
+    category: "girl-groups",
+    description:
+      "RESCENE is a five-member girl group from The Muze Entertainment. For new fans, they are becoming an easy K-pop discovery because short clips, fancams, and member-focused moments make the group feel approachable.",
+    members: [
+      {
+        id: "woni",
+        name: "Woni",
+        note: "A RESCENE member who is becoming easier for new fans to notice through close-up stages, short clips, and facecam-friendly performance moments.",
+        intro:
+          "Woni is a member of RESCENE. This page is a beginner-friendly starting point for fans who first noticed her through a facecam, a short clip, or RESCENE’s recent stage content.",
+        whyFansLike: [
+          "Woni is easy to notice in close-up performance clips because her expressions feel controlled rather than forced.",
+          "Her appeal is not only one big moment. It is the small replayable details: eye contact, timing, and the way she keeps the camera alive.",
+          "For new RESCENE fans, Woni works well as a first member to follow because a single facecam can make her stage presence clear.",
+        ],
+        watchPoints: [
+          "Start with one official facecam before trying to learn every RESCENE member at once.",
+          "Watch how Woni changes her expression during smaller transitions, not only during the chorus.",
+          "Compare a full-stage video with a close-up facecam to see why member-focused videos matter in K-pop.",
+          "If you remember her after the clip ends, that is exactly why fancams can create a bias candidate.",
+        ],
+        relatedMediaIds: ["rescene-woni-runaway-facecam"],
+      },
+      {
+        id: "liv",
+        name: "Liv",
+        note: "A member of RESCENE. Full HAEMIL member guide may be added later.",
+      },
+      {
+        id: "minami",
+        name: "Minami",
+        note: "A member of RESCENE. Full HAEMIL member guide may be added later.",
+      },
+      {
+        id: "may",
+        name: "May",
+        note: "A member of RESCENE. Full HAEMIL member guide may be added later.",
+      },
+      {
+        id: "zena",
+        name: "Zena",
+        note: "A member of RESCENE. Full HAEMIL member guide may be added later.",
+      },
+    ],
+    starterTags: [
+      "Fancam",
+      "Facecam",
+      "Rookie girl group",
+      "Small-agency K-pop",
+      "5th generation",
+    ],
+  },
+  {
     id: "bts",
     name: "BTS",
     category: "boy-groups",

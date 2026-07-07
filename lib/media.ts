@@ -27,6 +27,21 @@ export type MediaItem = {
 
 export const MEDIA_ITEMS: MediaItem[] = [
   {
+    id: "rescene-woni-runaway-facecam",
+    title: 'RESCENE Woni "Runaway" Facecam',
+    category: "kpop",
+    categoryLabel: "K-pop Spotlight",
+    mediaType: "youtube",
+    description:
+      "A close-up Music Bank facecam that shows why Woni is becoming an easy RESCENE entry point for new fans.",
+    cultureNote:
+      "A close-up Music Bank facecam can show why member-focused clips help new fans notice one performer before they know the whole group.",
+    tags: ["RESCENE", "Woni", "Runaway", "Facecam", "Fancam"],
+    youtubeId: "gHoKSBaLP7E",
+    sourceLabel: "KBS Kpop official Music Bank facecam",
+    guideHref: "/kpop/rescene-woni-fancam-spotlight",
+  },
+  {
     id: "kpop-fancam-culture",
     title: "What an eolppak facecam feels like",
     category: "kpop",

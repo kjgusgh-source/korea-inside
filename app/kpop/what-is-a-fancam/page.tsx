@@ -260,6 +260,38 @@ export default function WhatIsAFancamPage() {
           </section>
 
           <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+              K-pop Spotlight
+            </p>
+
+            <h2 className="mt-3 text-3xl font-semibold">
+              See fancams in action
+            </h2>
+
+            <Link
+              href="/kpop/rescene-woni-fancam-spotlight"
+              className="group mt-6 block rounded-[1.5rem] border border-[var(--border)] bg-[var(--card)] p-5 transition hover:-translate-y-1 hover:shadow-md md:max-w-xl"
+            >
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
+                K-pop Spotlight
+              </p>
+
+              <h3 className="mt-3 text-xl font-semibold text-[var(--text)]">
+                Why RESCENE Woni Is Getting Attention Through Fancams
+              </h3>
+
+              <p className="mt-3 text-sm leading-6 text-[var(--muted)]">
+                A spotlight example of how a close-up stage video can help a new
+                idol become easier to notice.
+              </p>
+
+              <p className="mt-4 text-sm font-semibold text-[var(--accent)]">
+                Read spotlight →
+              </p>
+            </Link>
+          </section>
+
+          <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">
             <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">

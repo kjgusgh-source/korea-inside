@@ -3,6 +3,7 @@ import SiteHeader from "../components/SiteHeader";
 import ContentHubCard from "../components/ContentHubCard";
 import MediaFeatureCard from "../components/MediaFeatureCard";
 import OnStageCard from "../components/OnStageCard";
+import YouTubeEmbed from "../components/YouTubeEmbed";
 import { getContentHubs } from "../lib/contentHubs";
 import { getMediaItems } from "../lib/media";
 import { getOnStageItems } from "../lib/onStage";
@@ -33,6 +34,9 @@ export default function Home() {
   const onStageItems = getOnStageItems();
   const mediaItems = getMediaItems();
   const heroPost = posts[0];
+  const editorPick =
+    mediaItems.find((item) => item.id === "rescene-woni-runaway-facecam") ??
+    mediaItems[0];
   const latestPosts = posts.slice(1);
   const defaultKpopPicks = resolveHomeKpopStagePicks(
     mediaItems,
@@ -98,36 +102,55 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col gap-3 md:max-w-[430px] md:justify-self-end">
-            <Link
-              href={`/${heroPost.categorySlug}/${heroPost.slug}`}
-              className="group relative overflow-hidden rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-5 shadow-xl shadow-[var(--shadow)] transition hover:-translate-y-1"
-            >
-              <div className="absolute right-6 top-6 text-7xl opacity-10">
-                🇰🇷
-              </div>
-
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+            <div>
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
                 Editor’s first pick
               </p>
 
-              <div className="mt-6">
-                <p className="mb-3 text-sm text-[var(--muted)]">
-                  {heroPost.categoryLabel} · {heroPost.readingTime}
-                </p>
+              <details className="overflow-hidden rounded-[2rem] border border-[var(--border)] bg-[var(--card)] shadow-xl shadow-[var(--shadow)]">
+                <summary className="cursor-pointer list-none p-5 [&::-webkit-details-marker]:hidden">
+                  <p className="inline-flex rounded-full bg-[var(--accent-soft)] px-3 py-1 text-xs font-semibold text-[var(--text)]">
+                    K-pop Spotlight
+                  </p>
 
-                <h2 className="text-3xl font-semibold leading-tight md:text-3xl">
-                  {heroPost.title}
-                </h2>
+                  <h2 className="mt-4 text-3xl font-semibold leading-tight">
+                    RESCENE Woni &quot;Runaway&quot; Facecam
+                  </h2>
 
-                <p className="mt-5 leading-7 text-[var(--muted)]">
-                  {heroPost.excerpt}
-                </p>
+                  <p className="mt-5 leading-7 text-[var(--muted)]">
+                    A close-up stage pick for fans who want to understand why
+                    Woni is becoming one of RESCENE&apos;s easiest entry points.
+                  </p>
 
-                <p className="mt-8 text-sm font-semibold text-[var(--accent)]">
-                  Read the note →
-                </p>
-              </div>
-            </Link>
+                  <p className="mt-6 text-sm font-semibold text-[var(--accent)]">
+                    Watch facecam ↓
+                  </p>
+                </summary>
+
+                <div className="border-t border-[var(--border)] px-4 pb-5 pt-4">
+                  <YouTubeEmbed
+                    youtubeId={editorPick.youtubeId}
+                    title={editorPick.title}
+                  />
+
+                  {editorPick.guideHref && (
+                    <Link
+                      href={editorPick.guideHref}
+                      className="mt-4 inline-flex rounded-full border border-[var(--border)] bg-[var(--surface)] px-4 py-2 text-sm font-semibold text-[var(--text)] transition hover:-translate-y-0.5 hover:border-[var(--accent)] hover:text-[var(--accent)]"
+                    >
+                      Read the spotlight →
+                    </Link>
+                  )}
+                </div>
+              </details>
+
+              <Link
+                href="/kpop/rescene-woni-fancam-spotlight"
+                className="mt-4 inline-flex text-sm font-semibold text-[var(--accent)] transition hover:opacity-80"
+              >
+                Read the spotlight →
+              </Link>
+            </div>
 
             <IdolRequestForm compact />
           </div>

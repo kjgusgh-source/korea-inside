@@ -21,9 +21,7 @@ const CATEGORY_DESCRIPTIONS: Record<KpopGroupCategory, string> = {
 };
 
 export default function KpopExplorer({ groups }: KpopExplorerProps) {
-  const [openCategories, setOpenCategories] = useState<KpopGroupCategory[]>([
-    "girl-groups",
-  ]);
+  const [openCategories, setOpenCategories] = useState<KpopGroupCategory[]>([]);
   const [openGroups, setOpenGroups] = useState<string[]>([]);
 
   const toggleCategory = (category: KpopGroupCategory) => {
@@ -151,9 +149,10 @@ export default function KpopExplorer({ groups }: KpopExplorerProps) {
 
                             <div className="grid gap-3 md:grid-cols-3">
                               {group.members.map((member) => (
-                                <div
+                                <Link
                                   key={member.id}
-                                  className="rounded-[1rem] border border-[var(--border)] bg-[var(--card)] p-4"
+                                  href={`/kpop/${group.id}/${member.id}`}
+                                  className="rounded-[1rem] border border-[var(--border)] bg-[var(--card)] p-4 transition hover:-translate-y-0.5 hover:border-[var(--accent)] hover:shadow-md"
                                 >
                                   <p className="font-semibold text-[var(--text)]">
                                     {member.name}
@@ -162,9 +161,9 @@ export default function KpopExplorer({ groups }: KpopExplorerProps) {
                                     {member.note}
                                   </p>
                                   <p className="mt-4 text-xs font-semibold text-[var(--accent)]">
-                                    Member page soon →
+                                    Open member page →
                                   </p>
-                                </div>
+                                </Link>
                               ))}
                             </div>
                           </div>

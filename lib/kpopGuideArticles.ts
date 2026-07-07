@@ -21,6 +21,14 @@ export type KpopGuideArticle = {
       label: "Stage culture",
     },
     {
+      title:
+        "K-pop Spotlight: Why RESCENE Woni Is Getting Attention Through Fancams",
+      description:
+        "A friendly K-pop spotlight on RESCENE Woni, her Runaway facecam, and why small moments, expressions, and replayable clips can help a new idol catch attention.",
+      href: "/kpop/rescene-woni-fancam-spotlight",
+      label: "K-pop Spotlight",
+    },
+    {
       title: "What does bias mean in K-pop?",
       description:
         "Understand bias, bias wrecker, ultimate bias, and Korean fan words like choe-ae and cha-ae.",
