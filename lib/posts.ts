@@ -1465,6 +1465,11 @@ export const POSTS: Post[] = [
         title: "Korean Convenience Store Food Guide",
         href: "/food/korean-convenience-store-food-guide",
       },
+      {
+        label: "Food guide",
+        title: "Korean BBQ Guide for First-Time Visitors",
+        href: "/food/korean-bbq-guide-first-time",
+      },
     ],
   },
   {
@@ -1958,6 +1963,11 @@ export const POSTS: Post[] = [
         title: "Korean Market Food Guide",
         href: "/food/korean-market-food-guide",
       },
+      {
+        label: "Food guide",
+        title: "Korean BBQ Guide for First-Time Visitors",
+        href: "/food/korean-bbq-guide-first-time",
+      },
     ],
   },
   {
@@ -2206,6 +2216,125 @@ export const POSTS: Post[] = [
     ],
   },
   {
+    id: 21,
+    title:
+      "Korean BBQ Guide for First-Time Visitors: What to Order, How to Eat, and What to Expect",
+    slug: "korean-bbq-guide-first-time",
+    category: "food",
+    categorySlug: "food",
+    categoryLabel: "Food",
+    description:
+      "A warm beginner-friendly Korean BBQ guide for first-time visitors, covering what to order first, how to eat with banchan and ssam, who grills the meat, whether alcohol is required, and why Korean barbecue feels social.",
+    excerpt:
+      "Korean BBQ can feel confusing the first time, but it does not have to be. Start simple, share the table, use the side dishes, and enjoy the meal as a social experience rather than a perfect technique.",
+    content: [
+      "Korean BBQ can feel a little confusing the first time. There is a grill in the middle of the table, side dishes arrive before you fully understand what is happening, someone may start cutting the meat with scissors, and everyone seems to know the rhythm already.",
+      "You do not need to know everything before you sit down. If it is your first time, start simple. Order one or two cuts, watch the table, use the side dishes, and let the meal feel social instead of trying to do everything perfectly.",
+      "Samgyeopsal is one of the easiest starting points. It is pork belly, usually rich, simple, and familiar enough for many visitors. It works well because you can eat it plain, dip it in sauce, wrap it in lettuce, or pair it with kimchi and garlic.",
+      "Moksal is another good pork choice. It is usually meatier and less fatty than samgyeopsal, so it can feel easier if you want something a little firmer. If you are not sure what to order, samgyeopsal and moksal together are a comfortable first table.",
+      "Galbi is often marinated and a little sweeter. It can be a gentle option for visitors who want something flavorful without thinking too much about sauces or wraps. Beef galbi can feel more expensive, while pork galbi can feel more casual.",
+      "Beef BBQ and pork BBQ do not always feel the same. Beef often feels a little more polished or special. Pork often feels more relaxed and everyday. Neither is better for everyone. Choose the mood you want, not the one that sounds more impressive.",
+      "Banchan are the side dishes that come with the meal. They are not decoration. They help balance the meat. A bite of grilled pork with kimchi feels different from a bite with pickled radish, garlic, lettuce, or a little sauce.",
+      "Ssam is the wrap. Usually, you take a lettuce or perilla leaf, add meat, sauce, maybe garlic, maybe kimchi, maybe rice, then eat it in one bite if you can. But you do not need to build the perfect wrap. A simple one is fine.",
+      "Ssamjang is the thick savory sauce you will often see on the table. Use a little first. It can make the wrap feel fuller and more Korean without needing many extra steps.",
+      "Garlic and kimchi are flexible. Some people grill them. Some people add them raw. Some people eat them on the side. If you are unsure, watch what the others at the table do, then try the version that looks good to you.",
+      "The question of who grills the meat depends on the place. Sometimes staff help. Sometimes one person at the table takes charge. Sometimes everyone quietly shares the job. If staff are grilling, let them lead. If you are doing it yourself, do not panic. Turn the meat, cut it when needed, and avoid letting it burn.",
+      "Korean BBQ is usually not a silent meal. The grill makes noise, the table gets crowded, and people reach for side dishes, leaves, sauces, and meat at the same time. That busyness is part of the experience.",
+      "You also do not have to drink alcohol. Many Korean BBQ meals include soju or beer, especially at night, but it is not required. Water, soda, or no alcohol at all is fine. The important part is the shared meal, not forcing yourself into a drinking mood.",
+      "Solo Korean BBQ can be possible, but it depends on the restaurant. Some places are built for groups, while others are more comfortable for one person. If you are traveling alone, it may be easier to look for places that clearly allow solo diners or to choose a simpler grilled meat meal instead of a large table setup.",
+      "The pace matters. You do not need to cook all the meat at once or eat every bite as soon as it leaves the grill. Korean BBQ is often about letting the meal stretch a little: one bite of meat, one side dish, one wrap, one conversation, one more piece on the grill.",
+      "Compared with market food, Korean BBQ feels slower and more social. Compared with convenience-store food, it asks you to sit down and share space. Compared with a cafe, it is louder and more physical. That is why it feels like more than just eating meat.",
+      "For first-time visitors, the best Korean BBQ meal is not the most expensive one or the most famous one. It is the one where you feel comfortable enough to try a wrap, use the side dishes, laugh a little if something is awkward, and leave understanding why people like eating this way together.",
+      "Korean BBQ also appears often in dramas because it naturally creates conversation. People sit close, cook together, pour drinks or water, argue, apologize, celebrate, or sit in silence while the grill keeps going. The food gives the scene something to do while the emotions move underneath.",
+    ],
+    culturalContext:
+      "Korean BBQ is important because the meal is built around sharing. The grill is in the center, the side dishes belong to the table, and the pace often depends on the group. Even when the food is simple, the act of cooking, wrapping, passing, waiting, and eating together makes the meal feel social. For visitors, understanding that shared rhythm can make Korean BBQ feel much less intimidating.",
+    tags: [
+      "Korean food",
+      "Korean BBQ",
+      "Samgyeopsal",
+      "Banchan",
+      "Ssam",
+      "Korea travel",
+      "Food",
+    ],
+    publishedAt: "2026-07-07",
+    readingTime: "6 min read",
+    seoTitle:
+      "Korean BBQ Guide for First-Time Visitors | What to Order & How to Eat",
+    seoDescription:
+      "A beginner-friendly Korean BBQ guide covering samgyeopsal, moksal, galbi, banchan, ssam, grilling, sharing, alcohol, solo dining, and table manners.",
+    quickGuide: {
+      sectionTitle: "Quick Korean BBQ guide",
+      groups: [
+        {
+          title: "Start simple",
+          items: [
+            "Samgyeopsal: Pork belly, easy to understand, rich, familiar, and common for a first Korean BBQ meal.",
+            "Moksal: Pork neck, usually meatier and less fatty than samgyeopsal.",
+            "Galbi: Marinated ribs, often sweeter and easier for visitors who want a softer flavor.",
+            "Beef BBQ: Usually feels a little more expensive and polished.",
+            "Pork BBQ: Often feels more casual, relaxed, and beginner-friendly.",
+          ],
+        },
+        {
+          title: "What comes with the meal",
+          items: [
+            "Banchan: Side dishes are part of the meal, not decoration.",
+            "Ssam: A lettuce or perilla leaf wrap with meat, sauce, garlic, and anything else you like.",
+            "Ssamjang: A thick savory sauce that helps bring the wrap together.",
+            "Kimchi: Sometimes eaten fresh, sometimes grilled with the meat.",
+            "Garlic: Often grilled or added raw to a wrap, depending on your taste.",
+          ],
+        },
+        {
+          title: "If it is your first BBQ meal",
+          items: [
+            "Start with one or two cuts instead of ordering too much.",
+            "You do not need to build the perfect wrap.",
+            "Watch how the table eats, then copy the rhythm.",
+            "If staff help grill the meat, let them.",
+            "If you grill it yourself, keep turning the meat and do not rush every bite.",
+          ],
+        },
+        {
+          title: "Social table mood",
+          items: [
+            "Korean BBQ is usually more about sharing the table than eating quietly alone.",
+            "The meal can feel noisy, smoky, and a little busy. That is normal.",
+            "You do not have to drink alcohol to enjoy Korean BBQ.",
+            "Solo BBQ can be possible in some places, but the experience is usually easier with two or more people.",
+          ],
+        },
+        {
+          title: "Pair with another HAEMIL guide",
+          items: [
+            "Read the Seoul food guide if you want to understand where Korean BBQ fits with markets, cafes, convenience stores, and late-night meals.",
+            "Read the Night Seoul guide if you want to connect Korean BBQ with dinner, late walks, and evening city moods.",
+            "Read the K-drama Seoul guide if you want to understand why shared meals often carry emotion on screen.",
+          ],
+        },
+      ],
+    },
+    relatedGuides: [
+      {
+        label: "Food guide",
+        title: "What to Eat in Seoul for First-Time Visitors",
+        href: "/food/what-to-eat-in-seoul-first-time",
+      },
+      {
+        label: "Travel guide",
+        title: "Night Seoul for First-Time Visitors",
+        href: "/travel/night-seoul-han-river-namsan-euljiro",
+      },
+      {
+        label: "Drama guide",
+        title: "Why Seoul Feels Like a K-drama",
+        href: "/dramas/why-seoul-feels-like-a-kdrama",
+      },
+    ],
+  },
+  {
     id: 11,
     title:
       "Why Seoul Feels Like a K-drama: Everyday Places Fans Can Actually Visit",
@@ -2322,6 +2451,11 @@ export const POSTS: Post[] = [
         label: "Food guide",
         title: "Korean Convenience Store Food Guide",
         href: "/food/korean-convenience-store-food-guide",
+      },
+      {
+        label: "Food guide",
+        title: "Korean BBQ Guide for First-Time Visitors",
+        href: "/food/korean-bbq-guide-first-time",
       },
     ],
     trailers: [
