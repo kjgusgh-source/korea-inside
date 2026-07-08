@@ -710,6 +710,84 @@ export const KPOP_GROUPS: KpopGroup[] = [
     ],
   },
   {
+    id: "triples",
+    name: "tripleS",
+    category: "girl-groups",
+    description:
+      "tripleS is a large girl group from MODHAUS with a unique member system, where fans often discover one member first before slowly learning the wider team. On HAEMIL, start with Kim ChaeYeon — a familiar Korean TV face whose close-up fancam gives an easy first entry point into the group.",
+    members: [
+      {
+        id: "kim-chaeyeon",
+        name: "Kim ChaeYeon",
+        note: "Kim ChaeYeon is tripleS S4, a former child actress and Korean TV face whose Baby Flower close-up fancam makes her bright image easy to remember.",
+        intro:
+          "Kim ChaeYeon is not a completely new face to Korean viewers. Before tripleS, she was already familiar through childhood acting and Korean TV, especially BoNiHaNi, a children’s program many Koreans remember from after-school TV. That background gives her idol image a different feeling: she does not look like someone suddenly appearing from nowhere. In tripleS, ChaeYeon has the kind of camera-friendly brightness that works well in a close-up fancam. The Baby Flower facecam is a good place to start because it shows her in a soft, fresh stage mood without making the performance feel too heavy. You can see why some fans imagine her fitting a Korean summer festival mood someday, including WATERBOMB-style stages, but it is better to read that as fan expectation rather than an official title.",
+        profileFacts: [
+          {
+            label: "Korean name",
+            value: "Kim ChaeYeon / 김채연.",
+          },
+          {
+            label: "Member code",
+            value: "S4 in tripleS.",
+          },
+          {
+            label: "Born",
+            value: "December 4, 2004.",
+          },
+          {
+            label: "Group",
+            value: "tripleS, a large-member girl group from MODHAUS.",
+          },
+          {
+            label: "Agency",
+            value: "MODHAUS.",
+          },
+          {
+            label: "Before tripleS",
+            value:
+              "A former child actress and a familiar Korean TV face through BoNiHaNi.",
+          },
+          {
+            label: "Reported MBTI",
+            value:
+              "ESFP — MBTI is often used in Korea as a quick, casual way to talk about idol personality.",
+          },
+          {
+            label: "Reported height",
+            value: "170 cm.",
+          },
+          {
+            label: "Entry point",
+            value:
+              "A good member to start with if you want to see tripleS through a bright, close-up fancam.",
+          },
+        ],
+        whyFansLike: [
+          "She has a familiar Korean TV background, so some fans feel like they have watched her grow from a child actress into an idol.",
+          "Her image fits bright, fresh stages well without feeling too plain or flat.",
+          "The Baby Flower close-up fancam makes her easy to follow because her expressions feel natural and camera-friendly.",
+          "She gives new tripleS listeners a simple entry point into a very large group: remember one face first, then slowly learn the wider team.",
+          "Some fans already connect her with a future summer-festival image, but that should be understood as expectation and mood rather than an official nickname.",
+        ],
+        watchPoints: [
+          "Watch how naturally she handles close-up camera moments without making every expression feel forced.",
+          "Notice the soft, bright mood of the Baby Flower stage and how well it fits her image.",
+          "Pay attention to why she feels familiar to Korean viewers — her TV background changes how some fans read her idol image.",
+          "If you are new to tripleS, use this fancam as a small first door into the group instead of trying to memorize every member at once.",
+          "Think of the WATERBOMB connection only as a fan-imagined future fit: summer styling, bright confidence, and a camera-friendly stage mood.",
+        ],
+        relatedMediaIds: ["triples-kim-chaeyeon-baby-flower-facecam"],
+      },
+    ],
+    starterTags: [
+      "MODHAUS",
+      "large-member group",
+      "close-up fancam",
+      "girl group",
+    ],
+  },
+  {
     id: "bts",
     name: "BTS",
     category: "boy-groups",

@@ -37,6 +37,7 @@ const relatedGuidesByMemberId: Record<string, GuideKey[]> = {
   wonhee: ["fancam", "rookie", "glossary"],
   keonho: ["fancam", "rookie", "glossary"],
   woni: ["fancam", "rookie", "glossary"],
+  "kim-chaeyeon": ["fancam", "glossary"],
 };
 
 export function getRelatedKpopGuidesForMember(

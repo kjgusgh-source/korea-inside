@@ -95,6 +95,18 @@ const glossaryTerms = [
     href: "/kpop/what-is-fancam"
   },
   {
+    term: "Rookie group",
+    korean: "루키",
+    romanization: "ruki",
+    meaning:
+      "A K-pop group in its early debut period, when fans are still learning the members and the team's public image.",
+    note:
+      "Fans often discover a rookie group through one fancam, one short clip, or the first member they remember — not the whole team at once.",
+    example:
+      "A fan may hear CORTIS first, then remember Keonho through a JoyRide fancam before learning every member name.",
+    href: "/kpop/what-is-a-rookie-group-in-kpop",
+  },
+  {
     term: "Eolppak-jikcam",
     korean: "얼빡직캠",
     romanization: "eolppak-jikcam",
