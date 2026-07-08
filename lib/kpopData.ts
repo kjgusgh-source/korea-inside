@@ -634,6 +634,82 @@ export const KPOP_GROUPS: KpopGroup[] = [
     ],
   },
   {
+    id: "le-sserafim",
+    name: "LE SSERAFIM",
+    category: "girl-groups",
+    description:
+      "LE SSERAFIM is a five-member girl group from SOURCE MUSIC, known for a sharp, confident performance image. On HAEMIL, start with Kim Chaewon first — one of the members whose stage details are easy to notice in fancams.",
+    members: [
+      {
+        id: "kim-chaewon",
+        name: "Kim Chaewon",
+        note: "Kim Chaewon is the leader of LE SSERAFIM, a former IZ*ONE member, and one of those idols whose fancams make people understand the group’s sharp stage image very quickly.",
+        intro:
+          "Kim Chaewon is not a hard name to recognize in K-pop. Many fans already know her from IZ*ONE, and now as the leader of LE SSERAFIM. Her fancams are interesting because they show how she keeps refreshing an image fans already know. In LE SSERAFIM, Chaewon often feels like the member who makes the group’s confident concept easier to read. Her stage style is not only about big expressions. It is the quick switch: cute to sharp, relaxed to focused, soft to intense. That contrast is one reason Korean fans often remember her stages so easily.",
+        profileFacts: [
+          {
+            label: "Korean name",
+            value: "Kim Chaewon / 김채원.",
+          },
+          {
+            label: "Born",
+            value: "August 1, 2000.",
+          },
+          {
+            label: "Group",
+            value:
+              "LE SSERAFIM, a five-member girl group from SOURCE MUSIC.",
+          },
+          {
+            label: "Agency",
+            value: "SOURCE MUSIC.",
+          },
+          {
+            label: "Role",
+            value: "Leader of LE SSERAFIM.",
+          },
+          {
+            label: "Former group",
+            value: "Former member of IZ*ONE.",
+          },
+          {
+            label: "Reported MBTI",
+            value:
+              "ESTP — MBTI is often used in Korea as a quick, casual way to talk about idol personality.",
+          },
+          {
+            label: "Reported height",
+            value: "164 cm.",
+          },
+          {
+            label: "Entry point",
+            value:
+              "A good member to start with if you want to understand LE SSERAFIM’s sharp but playful stage image.",
+          },
+        ],
+        whyFansLike: [
+          "She carries both sides of LE SSERAFIM well: the clean, confident image and the playful charm fans already know from her variety and fan clips.",
+          "As the leader, she gives the group a clear center of gravity without needing to look overly serious all the time.",
+          "Her fancams are easy to rewatch because small facial changes, short eye-contact moments, and quick mood switches happen often.",
+          "For Korean fans, Chaewon is also easy to talk about through familiar profile details like MBTI, leadership, and her IZ*ONE-to-LE SSERAFIM story.",
+        ],
+        watchPoints: [
+          "Watch how quickly she changes mood between cute, cool, and sharp expressions.",
+          "Notice how she keeps the performance clean without making every camera moment feel too heavy.",
+          "Look at how she balances leader-like control with a lighter, more playful image.",
+          "If you are new to LE SSERAFIM, use her fancam as a way to understand the group’s confident stage color first.",
+        ],
+        relatedMediaIds: ["lesserafim-kim-chaewon-hot-fancam"],
+      },
+    ],
+    starterTags: [
+      "SOURCE MUSIC",
+      "performance",
+      "fancam-friendly",
+      "girl group",
+    ],
+  },
+  {
     id: "bts",
     name: "BTS",
     category: "boy-groups",

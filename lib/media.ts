@@ -72,6 +72,21 @@ export const MEDIA_ITEMS: MediaItem[] = [
     guideHref: "/kpop/cortis/keonho",
   },
   {
+    id: "lesserafim-kim-chaewon-hot-fancam",
+    title: "Kim Chaewon “HOT” fancam",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A Kim Chaewon-focused LE SSERAFIM performance clip that is easy to follow if you want to see how one member carries sharp timing, expression changes, and stage control.",
+    cultureNote:
+      "In K-pop, a fancam can make a familiar idol feel new again. Instead of watching the full group at once, you can follow one member closely and notice the small details that usually pass by too quickly.",
+    tags: ["LE SSERAFIM", "Kim Chaewon", "fancam", "HOT", "performance"],
+    youtubeId: "Xn5UNB6ZOA0",
+    sourceLabel: "STUDIO CHOOM",
+    guideHref: "/kpop/le-sserafim/kim-chaewon",
+  },
+  {
     id: "kpop-fancam-culture",
     title: "What an eolppak facecam feels like",
     category: "kpop",
