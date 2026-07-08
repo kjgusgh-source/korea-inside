@@ -21,6 +21,13 @@ export type KpopGuideArticle = {
       label: "Stage culture",
     },
     {
+      title: 'What Does "Rookie Group" Mean in K-pop?',
+      description:
+        "A simple guide to how K-pop fans discover rookie groups through first stages, short clips, fancams, and the first member they remember.",
+      href: "/kpop/what-is-a-rookie-group-in-kpop",
+      label: "K-pop term",
+    },
+    {
       title:
         "K-pop Spotlight: Why RESCENE Woni Is Getting Attention Through Fancams",
       description:
@@ -43,6 +50,21 @@ export type KpopGuideArticle = {
         "A friendly K-pop spotlight on CORTIS Keonho, the BIGHIT rookie member fans are noticing through “JoyRide” fancams, Korean nickname moments, and his easy-to-remember stage presence.",
       href: "/kpop/cortis-keonho-fancam-spotlight",
       label: "K-pop Spotlight",
+    },
+    {
+      title:
+        "Why tripleS Kim ChaeYeon’s “Baby Flower” Facecam Feels So Easy to Remember",
+      description:
+        "A close-up look at Kim ChaeYeon’s Baby Flower facecam, her familiar Korean TV background, and why she is an easy first door into tripleS.",
+      href: "/kpop/triples-kim-chaeyeon-baby-flower-fancam-spotlight",
+      label: "Fancam spotlight",
+    },
+    {
+      title: "Why Kwon Eunbi Is Called Korea’s “Waterbomb Goddess”",
+      description:
+        "A friendly look at Kwon Eunbi, WATERBOMB Korea, and how one summer festival image reshaped her solo stage identity.",
+      href: "/kpop/kwon-eunbi-waterbomb-fancam-spotlight",
+      label: "Festival spotlight",
     },
     {
       title: "K-pop Rookie Guide: Who Is CORTIS?",

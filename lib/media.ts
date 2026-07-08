@@ -87,6 +87,48 @@ export const MEDIA_ITEMS: MediaItem[] = [
     guideHref: "/kpop/le-sserafim/kim-chaewon",
   },
   {
+    id: "triples-kim-chaeyeon-baby-flower-facecam",
+    title: "Kim ChaeYeon “Baby Flower” close-up fancam",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A Kim ChaeYeon-focused tripleS Baby Flower close-up fancam that works well as a first entry point for noticing her bright, camera-friendly stage image.",
+    cultureNote:
+      "In Korea, an ‘얼빡직캠’ means a close-up fancam where the camera stays tight on the idol’s face. It can make expressions, eye contact, and small mood changes feel more important than the full choreography.",
+    tags: [
+      "tripleS",
+      "Kim ChaeYeon",
+      "Baby Flower",
+      "close-up fancam",
+      "얼빡직캠",
+    ],
+    youtubeId: "4USO1Vxxz18",
+    sourceLabel: "KBS Kpop",
+    guideHref: "/kpop/triples/kim-chaeyeon",
+  },
+  {
+    id: "kwon-eunbi-waterbomb-crazy-in-love-fancam",
+    title: "Kwon Eunbi “Crazy in Love” WATERBOMB fancam",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A Kwon Eunbi WATERBOMB fancam that shows why Korean fans connect her with summer festival stages, confident performance, and the “Waterbomb Goddess” image.",
+    cultureNote:
+      "WATERBOMB is a Korean summer music festival where performance, audience energy, and water-based stage moments become part of the show. For some artists, one festival fancam can change how the public remembers their stage image.",
+    tags: [
+      "Kwon Eunbi",
+      "WATERBOMB",
+      "fancam",
+      "Crazy in Love",
+      "summer festival",
+    ],
+    youtubeId: "CfwQ2fe7LH0",
+    sourceLabel: "Fancam",
+    guideHref: "/kpop/kwon-eunbi-waterbomb-fancam-spotlight",
+  },
+  {
     id: "kpop-fancam-culture",
     title: "What an eolppak facecam feels like",
     category: "kpop",
