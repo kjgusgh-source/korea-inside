@@ -14,6 +14,13 @@ const pageDescription =
 
 const relatedGuides = [
   {
+    label: "Rookie guide",
+    title: "K-pop Rookie Guide: Who Is CORTIS?",
+    description:
+      "A simple group-level starter guide if you found Keonho first and now want to understand CORTIS.",
+    href: "/kpop/who-is-cortis",
+  },
+  {
     label: "K-pop guide",
     title: "What Is a Fancam in K-pop?",
     description:

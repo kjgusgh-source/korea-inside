@@ -45,6 +45,13 @@ export type KpopGuideArticle = {
       label: "K-pop Spotlight",
     },
     {
+      title: "K-pop Rookie Guide: Who Is CORTIS?",
+      description:
+        "A friendly starter guide to CORTIS, the BIGHIT MUSIC boy group, with a simple way to understand the members, the debut context, and why Keonho’s fancam can be an easy first door.",
+      href: "/kpop/who-is-cortis",
+      label: "Rookie guide",
+    },
+    {
       title: "What does bias mean in K-pop?",
       description:
         "Understand bias, bias wrecker, ultimate bias, and Korean fan words like choe-ae and cha-ae.",
