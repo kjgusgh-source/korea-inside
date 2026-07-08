@@ -607,7 +607,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
           {
             label: "Debut context",
             value:
-              "Part of BIGHIT MUSIC’s first new boy group in years after BTS and TXT.",
+              "Part of BIGHIT MUSIC’s first new boy group in years after BTS and TOMORROW X TOGETHER.",
           },
         ],
         whyFansLike: [
