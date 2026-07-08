@@ -10,7 +10,7 @@ const pageUrl = `${siteUrl}/kpop/cortis-keonho-fancam-spotlight`;
 const pageTitle =
   "K-pop Spotlight: Who Is CORTIS Keonho, the “French Fry Boy” Fans Keep Noticing?";
 const pageDescription =
-  "A friendly K-pop spotlight on CORTIS Keonho, the BIGHIT rookie member fans are noticing through “JoyRide” fancams, Korean nickname moments, and his easy-to-remember stage presence.";
+  "A friendly HAEMIL spotlight on CORTIS Keonho, the rookie member some fans remember as “French Fry Boy,” and why his JoyRide fancam is an easy first entry point into CORTIS.";
 
 const relatedGuides = [
   {
@@ -153,13 +153,18 @@ export default function CortisKeonhoFancamSpotlightPage() {
             </h1>
 
             <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
-              Before some fans even learned every CORTIS member&apos;s name, they
-              had already seen Keonho somewhere: a fancam, a stage clip, a
-              photo, or a Korean post calling him the &quot;French Fry Boy.&quot;
-              It sounds random, but that is exactly how K-pop discovery often
-              works now. One small nickname, one good fancam, one moment that is
-              easy to remember — and suddenly a rookie member starts feeling
-              familiar.
+              Sometimes a rookie idol becomes easier to remember because of one
+              very small detail.
+            </p>
+
+            <p className="mt-4 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
+              Not a huge viral headline. Not a dramatic title. Just a nickname, a
+              short clip, or one fancam that makes people pause for a second and
+              think, &quot;Wait, who is that?&quot;
+            </p>
+
+            <p className="mt-4 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
+              For CORTIS Keonho, that kind of first memory matters.
             </p>
           </article>
 
@@ -197,175 +202,97 @@ export default function CortisKeonhoFancamSpotlightPage() {
           <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
             <div className="space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
               <p>
-                Before some fans even learned every CORTIS member&apos;s name,
-                they had already seen Keonho somewhere: a fancam, a stage clip, a
-                photo, or a Korean post calling him the &quot;French Fry Boy.&quot;
+                CORTIS is a five-member boy group from BIGHIT MUSIC, with
+                MARTIN, JAMES, JUHOON, SEONGHYEON, and KEONHO. Because of the
+                BIGHIT name, many K-pop fans naturally check the group once. That
+                part is easy to understand. A new boy group from the company
+                behind BTS and TOMORROW X TOGETHER will always make people
+                curious.
+              </p>
+
+              <p>But company attention is only the first click.</p>
+
+              <p>
+                The harder part is becoming the member someone remembers after
+                the video ends. That usually happens through something smaller
+                and more personal: a face that becomes easy to spot, a stage
+                expression, a fan nickname, or a fancam that gives one member
+                enough space to leave an impression.
+              </p>
+
+              <p>That is where Keonho becomes interesting.</p>
+
+              <p>
+                Some fans remember him with the nickname &quot;French Fry
+                Boy,&quot; which comes from the Korean-style way fans often
+                attach a small, oddly specific image to a rookie. In Korean fan
+                spaces, a nickname does not always have to sound serious to
+                work. Sometimes it is cute, random, and strangely sticky — and
+                that is exactly why people remember it.
               </p>
 
               <p>
-                It sounds random, but that is exactly how K-pop discovery often
-                works now. One small nickname, one good fancam, one moment that
-                is easy to remember — and suddenly a rookie member starts feeling
-                familiar.
+                For an international fan, &quot;French Fry Boy&quot; may sound
+                funny at first. But that is part of the point. It gives Keonho a
+                first hook before you even know every CORTIS song or every member
+                name. You may not remember the full group order yet, but you
+                might remember &quot;the French Fry Boy from CORTIS.&quot; In
+                rookie K-pop, that kind of small memory can be powerful.
               </p>
 
               <p>
-                Keonho is a member of CORTIS, a five-member boy group from BIGHIT
-                MUSIC. For international fans, that company name already gives the
-                group attention. But attention is not the same as attachment. A
-                fan still needs one member, one clip, or one small detail that
-                makes the group feel personal.
-              </p>
-
-              <p>For some people, Keonho becomes that first detail.</p>
-
-              <p>
-                Part of it is simple profile memory. Keonho is often introduced
-                as born on February 14, 2009. A Valentine&apos;s Day birthday is
-                easy to remember, and in K-pop, small profile details like that
-                can become part of how fans first organize a new group in their
-                heads.
+                His birthday also has that same easy-to-remember quality:
+                February 14, 2009. Since it falls on Valentine&apos;s Day, it
+                becomes one of those profile details fans can pick up quickly
+                without feeling like they are studying a chart.
               </p>
 
               <p>
-                But the more interesting part is the nickname. Korean fans and
-                K-pop accounts have used &quot;감튀보이,&quot; which basically
-                means &quot;French Fry Boy,&quot; around Keonho. It comes from the
-                kind of casual, slightly silly moment that does not feel like a
-                company-made concept. Someone sees a good-looking rookie connected
-                with a random French-fry moment, the nickname sticks, and
-                suddenly he becomes easier to recognize.
+                Still, the nickname and birthday are only the surface. The
+                better reason to watch Keonho is the stage itself.
               </p>
 
               <p>
-                That is why this kind of attention feels different from a normal
-                profile introduction. &quot;Keonho, member of CORTIS&quot; is
-                correct, but a little flat. &quot;The French-fry guy from
-                CORTIS&quot; is less formal, but much easier to remember.
+                His &quot;JoyRide&quot; fancam works well as a first entry point
+                because it lets you focus on one performer without trying to
+                memorize the whole group at once. That is one reason fancams
+                matter so much for rookie groups. A full group stage can be
+                exciting, but it can also feel crowded when you are new. A fancam
+                slows the process down. You follow one member, notice how they
+                move, and decide whether you want to click another video.
               </p>
 
               <p>
-                This does not mean the whole appeal is only a meme. The nickname
-                just opens the door. Once people click the fancam, they still
-                need a reason to keep watching.
-              </p>
-
-              <p>That is where the &quot;JoyRide&quot; fancam matters.</p>
-
-              <p>
-                A full group stage can be hard when you are new to CORTIS. There
-                are five members, fast movement, and a lot of rookie energy
-                happening at once. A fancam makes the choice easier. It says: do
-                not try to learn everything yet. Just watch this one member for a
-                few minutes.
+                With Keonho, the appeal is not about being loud all the time. It
+                is more about how quickly he becomes recognizable. In a new
+                group, that matters. A rookie member does not need to look like a
+                finished legend on day one. Sometimes the more interesting thing
+                is seeing the shape of a performer forming in real time.
               </p>
 
               <p>
-                In Keonho&apos;s case, the fancam works because he feels easy to
-                track. He has the kind of stage presence that does not need a long
-                explanation first. You can understand the basic appeal quickly:
-                clean focus, bright rookie energy, and a face that stays easy to
-                remember after the clip ends.
+                That is why Keonho is a useful door into CORTIS right now.
               </p>
 
               <p>
-                The best part is that he does not need the article to
-                over-explain him. Watch the video and the reason becomes clearer.
-                The camera gives you a simple question: do your eyes keep coming
-                back to him?
+                He gives new fans a simple path: learn the group name, remember
+                one member, watch one fancam, then slowly connect the rest. From
+                there, CORTIS starts to feel less like &quot;BIGHIT&apos;s new
+                boy group&quot; and more like five individual members you can
+                actually follow.
               </p>
 
               <p>
-                For many new fans, that is how a bias candidate starts. Not from a
-                full biography. Not from knowing every role. Just from one clip
-                where a member suddenly becomes the person you recognize first.
+                So if you are new to CORTIS, Keonho is not the only place to
+                start. But he is a very natural one.
               </p>
 
               <p>
-                Keonho also fits CORTIS&apos;s current image as a rookie group
-                people are still figuring out. They are not only being introduced
-                through polished stages. Fans are also meeting them through short
-                clips, self-made moments, nicknames, and casual content. That
-                makes the group feel less distant.
-              </p>
-
-              <p>
-                Compared with the RESCENE Woni spotlight, this is not a
-                small-agency discovery story. Compared with the ILLIT Wonhee
-                spotlight, this is not about a familiar idol staying visible.
-                Keonho&apos;s case is more like this: a new BIGHIT boy group is
-                already on people&apos;s radar, but one member starts becoming
-                easier to remember because the internet gives him a hook.
-              </p>
-
-              <p>
-                That hook might be a nickname. It might be a facecam. It might be
-                the way he looks in a thumbnail. It might be the fact that people
-                keep saying, &quot;Wait, is that the French-fry guy?&quot;
-              </p>
-
-              <p>That is very K-pop.</p>
-
-              <p>
-                It is a little funny, a little visual, a little stage-focused,
-                and very replayable. More importantly, it gives international
-                fans a way to enter the group without feeling lost.
-              </p>
-
-              <p>
-                If you are watching Keonho for the first time, do not start by
-                trying to decide whether he is your bias. Start smaller. Watch
-                the &quot;JoyRide&quot; fancam. Notice whether you remember him
-                after the video ends. Notice whether the nickname makes him easier
-                to find again later.
-              </p>
-
-              <p>That is enough for a first step.</p>
-            </div>
-          </section>
-
-          <section className="grid gap-6 md:grid-cols-[0.9fr_1.1fr]">
-            <div className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
-                What to notice while watching
-              </p>
-
-              <ul className="mt-5 space-y-4 text-base leading-8 text-[var(--muted)]">
-                <li>
-                  Watch whether your eyes return to Keonho even when the
-                  choreography moves quickly.
-                </li>
-                <li>
-                  Notice how a focused fancam makes CORTIS easier to enter one
-                  member at a time.
-                </li>
-                <li>
-                  Pay attention to his smaller transitions, not only the biggest
-                  moves.
-                </li>
-                <li>
-                  Remember the nickname context: sometimes a silly fan hook makes
-                  a new idol easier to remember.
-                </li>
-                <li>
-                  If the clip makes you want to search another Keonho or CORTIS
-                  stage, the fancam has done its job.
-                </li>
-              </ul>
-            </div>
-
-            <div className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
-                Why this works as a HAEMIL K-pop Spotlight
-              </p>
-
-              <p className="mt-5 text-base leading-8 text-[var(--muted)]">
-                This is not only a profile of one idol. It is an example of how
-                rookie K-pop discovery actually happens now. A company name can
-                make people look once, but a nickname, a fancam, or one memorable
-                clip can make a member stick. Keonho is interesting because he
-                gives new fans both: the CORTIS/BIGHIT context and a small Korean
-                fan hook that is easy to remember.
+                Start with the &quot;JoyRide&quot; fancam. Notice the stage
+                energy. Notice the small details that make him easy to pick out.
+                And if the phrase &quot;French Fry Boy&quot; stays in your head
+                longer than expected, that is exactly how rookie K-pop often
+                begins.
               </p>
             </div>
           </section>
