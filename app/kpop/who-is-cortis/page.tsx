@@ -6,32 +6,39 @@ import JsonLd from "../../../components/JsonLd";
 const siteUrl = "https://haemilkorea.com";
 const pageUrl = `${siteUrl}/kpop/who-is-cortis`;
 
-const pageTitle = "K-pop Rookie Guide: Who Is CORTIS?";
+const pageTitle =
+  "Who Is CORTIS? A Friendly Guide to the New Boy Group K-pop Fans Are Watching";
 const pageDescription =
-  "A friendly starter guide to CORTIS, the BIGHIT MUSIC boy group, with a simple way to understand the members, the debut context, and why Keonho’s fancam can be an easy first door.";
+  "A friendly HAEMIL guide to CORTIS, the new BIGHIT MUSIC boy group, their five members, and why new K-pop fans may want to start with their group page and Keonho spotlight.";
 
 const relatedGuides = [
   {
+    label: "Group page",
+    title: "Start with the CORTIS group page",
+    description:
+      "See the group overview, starter tags, and the members HAEMIL covers so far.",
+    href: "/kpop/cortis",
+  },
+  {
     label: "Member guide",
-    title: "Keonho (CORTIS)",
+    title: "Meet Keonho",
     description:
       "Start here if you first noticed Keonho through a fancam, stage clip, or Korean fan nickname.",
     href: "/kpop/cortis/keonho",
   },
   {
     label: "K-pop Spotlight",
-    title:
-      "Who Is CORTIS Keonho, the “French Fry Boy” Fans Keep Noticing?",
+    title: "Watch the Keonho fancam spotlight",
     description:
       "A closer look at Keonho’s JoyRide fancam, nickname hook, and why he can be an easy first member to remember.",
     href: "/kpop/cortis-keonho-fancam-spotlight",
   },
   {
     label: "K-pop guide",
-    title: "What Is a Fancam in K-pop?",
+    title: "Learn what a rookie group means in K-pop",
     description:
-      "Learn why fancams matter and how one focused stage clip can make a member stand out.",
-    href: "/kpop/what-is-a-fancam",
+      "A simple guide to how K-pop fans discover rookie groups through first stages, short clips, fancams, and the first member they remember.",
+    href: "/kpop/what-is-a-rookie-group-in-kpop",
   },
 ];
 
@@ -136,205 +143,139 @@ export default function WhoIsCortisPage() {
             </Link>
 
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
-              Rookie guide
+              Boy group guide
             </p>
 
             <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
-              Who Is CORTIS?
+              Who Is CORTIS? A Friendly Guide to the New Boy Group K-pop Fans
+              Are Watching
             </h1>
 
             <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
-              CORTIS is one of those rookie groups where the company name makes
-              people look once, but the small details make people stay. If you
-              have seen Keonho&apos;s fancam, heard the BIGHIT MUSIC context, or
-              simply wondered why the name CORTIS keeps appearing in K-pop
-              spaces, this is a simple place to start.
+              If you are new to K-pop, CORTIS may feel like one of those names
+              that suddenly starts appearing everywhere at once.
             </p>
           </article>
 
           <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
             <div className="space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
               <p>
-                CORTIS is one of those rookie groups where the company name
-                makes people look once, but the small details make people stay.
+                They are a five-member boy group under BIGHIT MUSIC, with
+                Martin, James, Juhoon, Seonghyeon, and Keonho. For many
+                international fans, that label connection alone makes people
+                curious. BIGHIT is already familiar because of BTS and TOMORROW
+                X TOGETHER, so when a new boy group appears from the same
+                company, people naturally want to know what kind of team they
+                are.
+              </p>
+
+              <p>But CORTIS is not interesting only because of the company name.</p>
+
+              <p>
+                The group&apos;s image is built around a more free,
+                self-directed feeling. Even the name points to the idea of
+                coloring outside the lines. That is a useful way to read them as
+                a new fan. They are not presented only as a polished rookie group
+                waiting to be explained by a company profile. The appeal is
+                closer to watching a young team trying to show its own mood,
+                taste, and energy from the start.
               </p>
 
               <p>
-                For international fans, the first thing they may hear is simple:
-                CORTIS is a five-member boy group from BIGHIT MUSIC. The members
-                are MARTIN, JAMES, JUHOON, SEONGHYEON, and KEONHO.
+                That makes them a good group for HAEMIL readers to follow
+                slowly.
               </p>
 
               <p>
-                That already gives the group a certain kind of attention. BIGHIT
-                MUSIC is not a random name in K-pop. It is the company behind BTS
-                and TOMORROW X TOGETHER, so a new boy group from the label
-                naturally makes Korean and international fans curious.
-              </p>
-
-              <p>But curiosity is only the first click.</p>
-
-              <p>
-                A company name can make people check a group once. It does not
-                automatically make someone remember the members. That usually
-                happens through something smaller: one stage, one short clip, one
-                nickname, one member whose face becomes easy to recognize.
-              </p>
-
-              <p>That is a better way to understand CORTIS right now.</p>
-
-              <p>
-                CORTIS debuted in 2025, and many fans are still learning where to
-                begin. Some people will start with the official music video. Some
-                will start with a performance. Some will start with a member clip
-                that appears in their feed before they even know the full group.
-              </p>
-
-              <p>That is very normal for rookie K-pop.</p>
-
-              <p>
-                When a group is new, fans do not always enter through the whole
-                team at once. They enter through a door. One member becomes the
-                first name they remember, and then the rest of the group slowly
-                becomes clearer.
-              </p>
-
-              <p>For HAEMIL readers, Keonho is one useful door into CORTIS.</p>
-
-              <p>
-                That does not mean he is the only member to watch. It means his
-                current clips make the group easier to approach. A fancam can do
-                that because it removes some of the noise. Instead of trying to
-                memorize five faces at once, you can follow one performer for a
-                few minutes.
+                With rookie groups, it can be tempting to memorize everything at
+                once: every member, every position, every nickname, every song,
+                every fandom detail. But that is not always the best way in.
+                Sometimes it is easier to start with one simple question: what
+                kind of feeling does this group leave behind?
               </p>
 
               <p>
-                This is why Keonho&apos;s &quot;JoyRide&quot; fancam matters in
-                the CORTIS entry path. It gives new fans a simple first step:
-                watch one member, notice the stage energy, and see whether you
-                want to click another CORTIS video after it ends.
+                For CORTIS, the first impression is youthful, active, and a
+                little restless in a good way.
               </p>
 
               <p>
-                The group itself also has an interesting rookie image. CORTIS
-                does not only feel like a polished boy group being introduced
-                from far away. The members are also being discovered through short
-                clips, stage moments, fan nicknames, and casual details. That
-                makes the group feel easier to talk about.
+                Their stages and clips often feel like they are trying to move
+                forward quickly. There is a boyish energy, but not in a soft or
+                overly cute way. It feels more like a group built around motion,
+                confidence, and the idea of trying things before everything
+                becomes too fixed.
               </p>
 
               <p>
-                This is important because new K-pop groups can feel overwhelming.
-                There are names to learn, songs to catch up on, official videos,
-                shorts, fancams, fandom jokes, and people online already acting
-                like you should know everything.
-              </p>
-
-              <p>You do not need to know everything first.</p>
-
-              <p>Start with the basics.</p>
-
-              <p>
-                CORTIS has five members: MARTIN, JAMES, JUHOON, SEONGHYEON, and
-                KEONHO. The group comes from BIGHIT MUSIC. They debuted in 2025.
-                If you want one member-focused first step, Keonho&apos;s fancam
-                is a good place to begin.
+                That is why Keonho has been an easy first doorway for many
+                viewers.
               </p>
 
               <p>
-                After that, move sideways. Watch a full CORTIS stage. Go back to
-                the group performance. Notice which member your eyes follow next.
-                That is usually how a rookie group becomes less confusing.
+                A single member can sometimes make a new group easier to
+                remember. You do not need to understand the whole team
+                immediately. You notice one face, one stage moment, one fancam,
+                and then the group becomes less distant. Keonho works well in
+                that role because his visuals and stage presence are easy for
+                casual viewers to recognize quickly.
+              </p>
+
+              <p>But CORTIS should not be reduced to only one member.</p>
+
+              <p>
+                The better way to read the group is this: Keonho may be the
+                first door for some fans, but the group itself is the room you
+                enter after that. Once you start from one member, it becomes
+                easier to notice how the team moves together, how the members
+                balance each other, and why the group has its own rookie
+                identity.
+              </p>
+
+              <p>This is also where Korean K-pop culture matters.</p>
+
+              <p>
+                In Korea, a new idol group does not grow only through official
+                music videos. It grows through short clips, stage moments,
+                member edits, fancams, airport photos, variety-style content,
+                and small online conversations. A rookie group can become
+                familiar piece by piece, even before a casual viewer knows every
+                detail.
+              </p>
+
+              <p>CORTIS fits that kind of discovery well.</p>
+
+              <p>
+                You might first see a Keonho clip. Then you might check the
+                group page. Then you notice the other members. Then one
+                performance or behind-the-scenes moment makes the group feel
+                more real. That slow process is normal in K-pop, especially with
+                new groups.
+              </p>
+
+              <p>So if CORTIS feels unfamiliar right now, that is fine.</p>
+
+              <p>
+                You do not need to become an expert immediately. Start with the
+                group name. Remember the five members. Watch one or two stages.
+                If one member catches your eye, follow that thread. K-pop often
+                becomes easier when you let one small moment lead you to the
+                next one.
               </p>
 
               <p>
-                The fun part is that every fan&apos;s entry point can be
-                different. One person may notice MARTIN first. Another may notice
-                JAMES, JUHOON, or SEONGHYEON. Someone else may remember Keonho
-                because of the &quot;French Fry Boy&quot; nickname or a stage
-                clip that stayed in their head.
+                For HAEMIL, CORTIS is worth watching because they show how a
+                rookie boy group starts becoming visible.
               </p>
 
               <p>
-                That is not a problem. That is how K-pop discovery works now.
+                Not all at once. Not only through one headline. More like a
+                collection of small signals: a familiar label, a clear group
+                concept, a standout member, a few replayed clips, and the
+                feeling that more people are beginning to pay attention.
               </p>
 
-              <p>
-                A group becomes familiar through many small doors. CORTIS is still
-                new enough that those doors are being built in real time: official
-                stages, member clips, fan jokes, performance edits, and the kind
-                of short moments that make a name easier to remember.
-              </p>
-
-              <p>
-                So if you are new to CORTIS, do not treat this like homework. You
-                do not need to memorize every detail in one sitting.
-              </p>
-
-              <p>Start with one thing.</p>
-
-              <p>
-                If you like performance clips, start with Keonho&apos;s
-                &quot;JoyRide&quot; fancam. If you prefer group context, start
-                with a full CORTIS stage. If you like learning members slowly,
-                use the five names as a map and let one clip lead to the next.
-              </p>
-
-              <p>
-                That is the easiest way to enter a rookie group without feeling
-                lost.
-              </p>
-
-              <p>
-                CORTIS is not interesting only because of the BIGHIT MUSIC name.
-                That name explains why people looked. The more interesting
-                question is what makes people keep clicking.
-              </p>
-
-              <p>
-                For now, the answer seems simple: a new group, clear member entry
-                points, and enough small moments for fans to start choosing who
-                they want to follow first.
-              </p>
-            </div>
-          </section>
-
-          <section className="grid gap-6 md:grid-cols-[0.9fr_1.1fr]">
-            <div className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
-                What to know first
-              </p>
-
-              <ul className="mt-5 space-y-4 text-base leading-8 text-[var(--muted)]">
-                <li>CORTIS is a five-member boy group from BIGHIT MUSIC.</li>
-                <li>
-                  The members are MARTIN, JAMES, JUHOON, SEONGHYEON, and KEONHO.
-                </li>
-                <li>The group debuted in 2025.</li>
-                <li>
-                  For new fans, member-focused clips can make the group easier to
-                  enter.
-                </li>
-                <li>
-                  Keonho&apos;s &quot;JoyRide&quot; fancam is one easy first door,
-                  especially if you prefer learning a group through stage clips.
-                </li>
-              </ul>
-            </div>
-
-            <div className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
-                Why this works as a HAEMIL rookie guide
-              </p>
-
-              <p className="mt-5 text-base leading-8 text-[var(--muted)]">
-                This is not meant to be a full encyclopedia page. It is a simple
-                starting point for readers who have seen the name CORTIS, noticed
-                Keonho, or heard that BIGHIT MUSIC has a newer boy group. The
-                best way to start is not to memorize everything. Start with one
-                clip, one member, and one reason to click the next video.
-              </p>
+              <p>That is usually how a new K-pop group starts to feel real.</p>
             </div>
           </section>
 
