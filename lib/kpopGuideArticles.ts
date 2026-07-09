@@ -67,6 +67,13 @@ export type KpopGuideArticle = {
       label: "Festival spotlight",
     },
     {
+      title: "What Is WATERBOMB Korea?",
+      description:
+        "A simple guide to the Korean summer festival behind viral K-pop fancams, stage moments, and names like Kwon Eunbi’s “Waterbomb Goddess.”",
+      href: "/kpop/what-is-waterbomb-korea",
+      label: "K-pop culture guide",
+    },
+    {
       title: "K-pop Rookie Guide: Who Is CORTIS?",
       description:
         "A friendly starter guide to CORTIS, the BIGHIT MUSIC boy group, with a simple way to understand the members, the debut context, and why Keonho’s fancam can be an easy first door.",

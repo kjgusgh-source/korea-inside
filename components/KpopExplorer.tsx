@@ -3,9 +3,11 @@
 import Link from "next/link";
 import { useState } from "react";
 import type { KpopGroup, KpopGroupCategory } from "../lib/kpopData";
+import type { KpopSoloArtist } from "../lib/kpopSoloArtists";
 
 type KpopExplorerProps = {
   groups: KpopGroup[];
+  soloArtists: KpopSoloArtist[];
 };
 
 const CATEGORY_LABELS: Record<KpopGroupCategory, string> = {
@@ -20,9 +22,10 @@ const CATEGORY_DESCRIPTIONS: Record<KpopGroupCategory, string> = {
     "Explore boy groups, members, performances, fandom moments, and stage culture.",
 };
 
-export default function KpopExplorer({ groups }: KpopExplorerProps) {
+export default function KpopExplorer({ groups, soloArtists }: KpopExplorerProps) {
   const [openCategories, setOpenCategories] = useState<KpopGroupCategory[]>([]);
   const [openGroups, setOpenGroups] = useState<string[]>([]);
+  const [isSoloOpen, setIsSoloOpen] = useState(false);
 
   const toggleCategory = (category: KpopGroupCategory) => {
     setOpenCategories((current) =>
@@ -176,6 +179,74 @@ export default function KpopExplorer({ groups }: KpopExplorerProps) {
             </div>
           );
         })}
+
+        <div className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--card)]">
+          <button
+            type="button"
+            onClick={() => setIsSoloOpen((current) => !current)}
+            className="flex w-full items-center justify-between gap-4 p-5 text-left"
+          >
+            <div>
+              <h3 className="text-2xl font-semibold text-[var(--text)]">
+                Solo Artists
+              </h3>
+              <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
+                Some K-pop stories do not start from a group page. Start with a
+                spotlight or guide, then follow the artist from there.
+              </p>
+            </div>
+
+            <span className="text-2xl text-[var(--accent)]">
+              {isSoloOpen ? "▲" : "▼"}
+            </span>
+          </button>
+
+          {isSoloOpen && (
+            <div className="border-t border-[var(--border)] p-5">
+              <div className="grid gap-3 md:grid-cols-3">
+                {soloArtists.map((artist) => (
+                  <Link
+                    key={artist.id}
+                    href={artist.href}
+                    className="rounded-[1rem] border border-[var(--border)] bg-[var(--surface)] p-4 transition hover:-translate-y-0.5 hover:border-[var(--accent)] hover:shadow-md"
+                  >
+                    <div className="flex flex-wrap items-center gap-2">
+                      <p className="font-semibold text-[var(--text)]">
+                        {artist.name}
+                      </p>
+                      <span className="rounded-full bg-[var(--accent-soft)] px-3 py-1 text-xs font-semibold text-[var(--text)]">
+                        Solo artist
+                      </span>
+                    </div>
+
+                    <p className="mt-2 text-xs font-medium text-[var(--muted)]">
+                      {artist.note}
+                    </p>
+
+                    <p className="mt-3 text-sm leading-6 text-[var(--muted)]">
+                      {artist.description}
+                    </p>
+
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {artist.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="rounded-full border border-[var(--border)] px-3 py-1 text-xs text-[var(--muted)]"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    <p className="mt-4 text-xs font-semibold text-[var(--accent)]">
+                      Open spotlight →
+                    </p>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );

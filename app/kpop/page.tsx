@@ -6,9 +6,11 @@ import KpopExplorer from "../../components/KpopExplorer";
 import { getKpopGroups } from "../../lib/kpopData";
 import { getPublishedMemberGuides } from "../../lib/publishedGuides";
 import { getKpopGuideArticles } from "../../lib/kpopGuideArticles";
+import { getKpopSoloArtists } from "../../lib/kpopSoloArtists";
 
 export default function KpopPage() {
   const groups = getKpopGroups();
+  const soloArtists = getKpopSoloArtists();
   const publishedGuides = getPublishedMemberGuides();
   const guideArticles = getKpopGuideArticles();
 
@@ -69,7 +71,7 @@ export default function KpopPage() {
           />
         </section>
 
-        <KpopExplorer groups={groups} />
+        <KpopExplorer groups={groups} soloArtists={soloArtists} />
 
         <details className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">
           <summary className="cursor-pointer list-none [&::-webkit-details-marker]:hidden">
