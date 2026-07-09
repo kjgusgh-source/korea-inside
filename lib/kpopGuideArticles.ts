@@ -60,6 +60,13 @@ export type KpopGuideArticle = {
       label: "Fancam spotlight",
     },
     {
+      title: "Who Is tripleS?",
+      description:
+        "A friendly first guide to tripleS, the big unit-based girl group that becomes easier when you start with one member, one unit, or one fancam.",
+      href: "/kpop/who-is-triples",
+      label: "Girl group guide",
+    },
+    {
       title: "Why Kwon Eunbi Is Called Korea’s “Waterbomb Goddess”",
       description:
         "A friendly look at Kwon Eunbi, WATERBOMB Korea, and how one summer festival image reshaped her solo stage identity.",
