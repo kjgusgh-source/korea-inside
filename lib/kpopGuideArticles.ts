@@ -81,6 +81,13 @@ export type KpopGuideArticle = {
       label: "Festival spotlight",
     },
     {
+      title: "Choi Yena “Catch Catch” Fancam",
+      description:
+        "A friendly spotlight on Choi Yena’s close-up fancam, anime-idol stage image, and the small playful expressions that make the clip easy to replay.",
+      href: "/kpop/choi-yena-catch-catch-fancam-spotlight",
+      label: "Solo spotlight",
+    },
+    {
       title: "What Is WATERBOMB Korea?",
       description:
         "A simple guide to the Korean summer festival behind viral K-pop fancams, stage moments, and names like Kwon Eunbi’s “Waterbomb Goddess.”",

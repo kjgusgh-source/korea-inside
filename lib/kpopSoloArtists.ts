@@ -17,6 +17,15 @@ export const KPOP_SOLO_ARTISTS: KpopSoloArtist[] = [
     href: "/kpop/kwon-eunbi-waterbomb-fancam-spotlight",
     tags: ["Solo artist", "Former IZ*ONE", "WATERBOMB", "Festival spotlight"],
   },
+  {
+    id: "choi-yena",
+    name: "Choi Yena",
+    note: "Solo artist · Former IZ*ONE member",
+    description:
+      "Known for bright solo stages, anime-like idol energy, and close-up fancams where her playful expressions are easy to catch.",
+    href: "/kpop/choi-yena-catch-catch-fancam-spotlight",
+    tags: ["Solo artist", "Former IZ*ONE", "Close-up fancam", "Catch Catch"],
+  },
 ];
 
 export function getKpopSoloArtists() {
