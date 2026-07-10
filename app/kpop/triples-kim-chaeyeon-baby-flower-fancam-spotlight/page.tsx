@@ -28,6 +28,13 @@ const relatedGuides = [
     href: "/kpop/what-is-a-fancam",
   },
   {
+    label: "K-pop term",
+    title: "What Is an “얼빡직캠”?",
+    description:
+      "A friendly guide to Korean close-up fancams, where one face, one expression, or one quick mood change can make a stage easy to replay.",
+    href: "/kpop/what-is-close-up-fancam-in-kpop",
+  },
+  {
     label: "K-pop guide",
     title: "K-pop Glossary for New Fans",
     description:

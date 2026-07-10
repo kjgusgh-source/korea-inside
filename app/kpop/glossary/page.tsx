@@ -111,11 +111,12 @@ const glossaryTerms = [
     korean: "얼빡직캠",
     romanization: "eolppak-jikcam",
     meaning:
-      "A very close-up fancam where an idol’s face fills most of the screen.",
+      "A Korean fan slang term for a close-up fancam where the idol’s face fills much of the screen.",
     note:
-      "얼빡 is casual fan slang for a close face shot, and 직캠 means fancam. Fans watch these clips to catch tiny changes in expression.",
-    example: "Hayoung’s eolppak-jikcam makes her small smiles easier to notice.",
-    href: "/kpop/what-is-a-fancam"
+      "Fans watch this kind of fancam for expressions, eye contact, and tiny mood changes that are easy to miss in a full-stage video.",
+    example:
+      "Kim ChaeYeon’s “Baby Flower” close-up fancam is a good example of why an 얼빡직캠 can become an easy first entry point.",
+    href: "/kpop/what-is-close-up-fancam-in-kpop",
   },
   {
     term: "Ending fairy",

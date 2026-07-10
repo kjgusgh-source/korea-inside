@@ -21,6 +21,13 @@ export type KpopGuideArticle = {
       label: "Stage culture",
     },
     {
+      title: "What Is an “얼빡직캠”?",
+      description:
+        "A friendly guide to Korean close-up fancams, where one face, one expression, or one quick mood change can make a stage easy to replay.",
+      href: "/kpop/what-is-close-up-fancam-in-kpop",
+      label: "K-pop term",
+    },
+    {
       title: 'What Does "Rookie Group" Mean in K-pop?',
       description:
         "A simple guide to how K-pop fans discover rookie groups through first stages, short clips, fancams, and the first member they remember.",
