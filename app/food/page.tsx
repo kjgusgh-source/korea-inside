@@ -64,6 +64,16 @@ const STANDALONE_FOOD_GUIDES = [
     href: "/food/what-is-eomuk-korean-fish-cake",
     readingTime: "7 min read",
   },
+  {
+    id: "what-is-twigim-korean-fried-snacks",
+    category: "food",
+    categoryLabel: "Food guide",
+    title: "What Is Twigim?",
+    description:
+      "A local-friendly guide to Korean fried snacks, from gimmari and fried mandu to the very Korean habit of dipping twigim in tteokbokki sauce.",
+    href: "/food/what-is-twigim-korean-fried-snacks",
+    readingTime: "7 min read",
+  },
 ];
 
 export const metadata: Metadata = {
