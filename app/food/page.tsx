@@ -24,6 +24,16 @@ const STANDALONE_FOOD_GUIDES = [
     href: "/food/what-is-korean-street-toast",
     readingTime: "6 min read",
   },
+  {
+    id: "what-is-bungeoppang",
+    category: "food",
+    categoryLabel: "Food guide",
+    title: "What Is Bungeoppang?",
+    description:
+      "A local-friendly guide to Korea’s fish-shaped winter snack, from red bean filling to the cold-weather street stall feeling.",
+    href: "/food/what-is-bungeoppang",
+    readingTime: "6 min read",
+  },
 ];
 
 export const metadata: Metadata = {
