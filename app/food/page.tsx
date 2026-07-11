@@ -94,6 +94,16 @@ const STANDALONE_FOOD_GUIDES = [
     href: "/food/what-is-gimbap-korean-seaweed-rice-roll",
     readingTime: "7 min read",
   },
+  {
+    id: "what-is-bunsik-korean-snack-food",
+    category: "food",
+    categoryLabel: "Food culture guide",
+    title: "What Is Bunsik?",
+    description:
+      "A local-friendly guide to Korean snack-shop food culture, where tteokbokki, gimbap, twigim, sundae, and eomuk all belong on the same table.",
+    href: "/food/what-is-bunsik-korean-snack-food",
+    readingTime: "8 min read",
+  },
 ];
 
 export const metadata: Metadata = {
