@@ -21,6 +21,13 @@ const relatedGuides = [
     href: "/kpop/what-is-close-up-fancam-in-kpop",
   },
   {
+    label: "K-pop culture guide",
+    title: "Why some idols feel like anime characters",
+    description:
+      "A friendly guide to the Korean fan feeling behind anime-like idol images, 2D-style visuals, close-up fancams, and Oshi no Ko comparisons.",
+    href: "/kpop/why-kpop-idols-feel-like-anime-characters",
+  },
+  {
     label: "K-pop guide",
     title: "Learn the basic idea of fancams",
     description:

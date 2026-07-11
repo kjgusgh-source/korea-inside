@@ -27,6 +27,13 @@ const relatedGuides = [
     href: "/kpop/triples-kim-chaeyeon-baby-flower-fancam-spotlight",
   },
   {
+    label: "K-pop culture guide",
+    title: "Why some idols feel like anime characters",
+    description:
+      "A friendly guide to the Korean fan feeling behind anime-like idol images, 2D-style visuals, close-up fancams, and Oshi no Ko comparisons.",
+    href: "/kpop/why-kpop-idols-feel-like-anime-characters",
+  },
+  {
     label: "K-pop guide",
     title: "Open the K-pop glossary",
     description:

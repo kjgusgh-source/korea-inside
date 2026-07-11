@@ -88,6 +88,13 @@ export type KpopGuideArticle = {
       label: "Solo spotlight",
     },
     {
+      title: "Why Do Some K-pop Idols Feel Like Anime Characters?",
+      description:
+        "A friendly guide to the Korean fan feeling behind anime-like idol images, 2D-style visuals, close-up fancams, and Oshi no Ko comparisons.",
+      href: "/kpop/why-kpop-idols-feel-like-anime-characters",
+      label: "K-pop culture guide",
+    },
+    {
       title: "What Is WATERBOMB Korea?",
       description:
         "A simple guide to the Korean summer festival behind viral K-pop fancams, stage moments, and names like Kwon Eunbi’s “Waterbomb Goddess.”",
