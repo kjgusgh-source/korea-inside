@@ -84,6 +84,16 @@ const STANDALONE_FOOD_GUIDES = [
     href: "/food/what-is-sundae-korean-blood-sausage",
     readingTime: "7 min read",
   },
+  {
+    id: "what-is-gimbap-korean-seaweed-rice-roll",
+    category: "food",
+    categoryLabel: "Food guide",
+    title: "What Is Gimbap?",
+    description:
+      "A local-friendly guide to Korea’s seaweed rice roll, from everyday bunsik shops and convenience stores to tuna gimbap, mini gimbap, and picnic memories.",
+    href: "/food/what-is-gimbap-korean-seaweed-rice-roll",
+    readingTime: "7 min read",
+  },
 ];
 
 export const metadata: Metadata = {
