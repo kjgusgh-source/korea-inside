@@ -3,6 +3,19 @@ import Link from "next/link";
 import SiteHeader from "../../components/SiteHeader";
 import { getPostsByCategory } from "../../lib/posts";
 
+const STANDALONE_DRAMA_GUIDES = [
+  {
+    id: "why-itaewon-class-is-a-good-first-kdrama",
+    category: "dramas",
+    categoryLabel: "K-drama guide",
+    title: "Why Itaewon Class Is a Good First K-drama",
+    description:
+      "A local-friendly guide to the 2020 JTBC hit, from Itaewon and DanBam to youth ambition, unfair power, and why the drama stayed memorable.",
+    href: "/dramas/why-itaewon-class-is-a-good-first-kdrama",
+    readingTime: "7 min read",
+  },
+];
+
 export const metadata: Metadata = {
   title: "Drama & Film | HAEMIL",
   description:
@@ -29,6 +42,26 @@ function getPostAccent(category: string) {
 
 export default function DramasPage() {
   const dramaPosts = getPostsByCategory("dramas");
+  const dramaGuides = [
+    ...STANDALONE_DRAMA_GUIDES.map((guide) => ({
+      id: guide.id,
+      category: guide.category,
+      categoryLabel: guide.categoryLabel,
+      title: guide.title,
+      description: guide.description,
+      href: guide.href,
+      readingTime: guide.readingTime,
+    })),
+    ...dramaPosts.map((post) => ({
+      id: String(post.id),
+      category: post.category,
+      categoryLabel: post.categoryLabel,
+      title: post.title,
+      description: post.description,
+      href: `/${post.categorySlug}/${post.slug}`,
+      readingTime: post.readingTime,
+    })),
+  ];
 
   return (
     <main className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
@@ -75,25 +108,25 @@ export default function DramasPage() {
           </p>
 
           <div className="grid gap-4 md:grid-cols-2">
-            {dramaPosts.map((post) => (
+            {dramaGuides.map((guide) => (
               <Link
-                key={post.id}
-                href={`/${post.categorySlug}/${post.slug}`}
+                key={guide.id}
+                href={guide.href}
                 className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--card)] p-5 transition hover:-translate-y-1 hover:shadow-lg hover:shadow-[var(--shadow)]"
               >
                 <div className="mb-4 flex flex-wrap items-center gap-3 text-sm">
-                  <span style={{ color: getPostAccent(post.category) }}>
-                    {post.categoryLabel}
+                  <span style={{ color: getPostAccent(guide.category) }}>
+                    {guide.categoryLabel}
                   </span>
-                  <span className="text-[var(--muted)]">{post.readingTime}</span>
+                  <span className="text-[var(--muted)]">{guide.readingTime}</span>
                 </div>
 
                 <h3 className="text-2xl font-semibold leading-tight">
-                  {post.title}
+                  {guide.title}
                 </h3>
 
                 <p className="mt-4 leading-7 text-[var(--muted)]">
-                  {post.description}
+                  {guide.description}
                 </p>
 
                 <p className="mt-6 text-sm font-semibold text-[var(--accent)]">

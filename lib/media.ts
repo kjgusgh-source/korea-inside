@@ -129,6 +129,27 @@ export const MEDIA_ITEMS: MediaItem[] = [
     guideHref: "/kpop/kwon-eunbi-waterbomb-fancam-spotlight",
   },
   {
+    id: "choi-yena-catch-catch-close-up-fancam",
+    title: "Choi Yena “Catch Catch” Close-Up Fancam",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A Choi Yena Catch Catch close-up fancam that shows why her playful expression timing and quick mood changes make a solo stage easy to replay.",
+    cultureNote:
+      "In Korea, an ‘얼빡직캠’ means a close-up fancam where the camera stays tight on the idol’s face. For solo artists like Yena, that format can make bright, playful stage energy feel personal and easy to remember.",
+    tags: [
+      "Choi Yena",
+      "YENA",
+      "Catch Catch",
+      "close-up fancam",
+      "얼빡직캠",
+    ],
+    youtubeId: "bOVZcRK1fyw",
+    sourceLabel: "YouTube",
+    guideHref: "/kpop/choi-yena-catch-catch-fancam-spotlight",
+  },
+  {
     id: "kpop-fancam-culture",
     title: "What an eolppak facecam feels like",
     category: "kpop",
@@ -474,6 +495,21 @@ export const MEDIA_ITEMS: MediaItem[] = [
   youtubeId: "ZnS0sRSWPuc",
   sourceLabel: "Official trailer from Netflix Korea",
   guideHref: "/dramas/why-seoul-feels-like-a-kdrama",
+},
+{
+  id: "itaewon-class-jtbc-highlight",
+  title: "Itaewon Class JTBC Highlight",
+  category: "drama-film",
+  categoryLabel: "On Screen",
+  mediaType: "youtube",
+  description:
+    "A JTBC highlight clip that captures the mood of Itaewon Class — stubborn youth, Itaewon streets, DanBam, and the feeling of starting over.",
+  cultureNote:
+    "Itaewon Class turned a small bar-restaurant dream, unfair power, and a refusal to kneel into one of the K-dramas many international viewers still remember by mood.",
+  tags: ["Itaewon Class", "K-drama", "JTBC", "Itaewon", "Drama"],
+  youtubeId: "67fnZvwVamM",
+  sourceLabel: "JTBC",
+  guideHref: "/dramas/why-itaewon-class-is-a-good-first-kdrama",
 },
 ];
 
