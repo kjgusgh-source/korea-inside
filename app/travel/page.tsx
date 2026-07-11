@@ -34,6 +34,16 @@ const STANDALONE_TRAVEL_GUIDES = [
     href: "/travel/naver-map-kakaomap-korea-travel-guide",
     readingTime: "8 min read",
   },
+  {
+    id: "how-to-get-from-incheon-airport-to-seoul",
+    category: "travel",
+    categoryLabel: "Travel guide",
+    title: "How to Get from Incheon Airport to Seoul",
+    description:
+      "A local-friendly first guide to AREX trains, airport buses, taxis, Kakao T, late-night arrivals, luggage, and choosing the easiest route into Seoul.",
+    href: "/travel/how-to-get-from-incheon-airport-to-seoul",
+    readingTime: "8 min read",
+  },
 ];
 
 export const metadata: Metadata = {
