@@ -14,6 +14,16 @@ const STANDALONE_FOOD_GUIDES = [
     href: "/food/what-to-eat-at-korean-convenience-store",
     readingTime: "7 min read",
   },
+  {
+    id: "what-is-korean-street-toast",
+    category: "food",
+    categoryLabel: "Food guide",
+    title: "What Is Korean Street Toast?",
+    description:
+      "A local-friendly guide to Korea’s sweet egg sandwich, from old street stalls to modern toast chains like Isaac Toast and Eggdrop.",
+    href: "/food/what-is-korean-street-toast",
+    readingTime: "6 min read",
+  },
 ];
 
 export const metadata: Metadata = {

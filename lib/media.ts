@@ -435,7 +435,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
         guideHref: "/dramas",
       },
 
-  {
+{
   id: "korean-food-table-culture",
   title: "That first bite of Korean ramyeon",
   category: "food",
