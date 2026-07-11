@@ -44,6 +44,16 @@ const STANDALONE_FOOD_GUIDES = [
     href: "/food/how-to-eat-cup-ramyeon-at-a-korean-convenience-store",
     readingTime: "6 min read",
   },
+  {
+    id: "what-is-tteokbokki",
+    category: "food",
+    categoryLabel: "Food guide",
+    title: "What Is Tteokbokki?",
+    description:
+      "A local-friendly guide to Korea’s spicy rice cake snack, from chewy tteok and red sauce to bunsik shops, markets, and classic add-ons.",
+    href: "/food/what-is-tteokbokki",
+    readingTime: "7 min read",
+  },
 ];
 
 export const metadata: Metadata = {
