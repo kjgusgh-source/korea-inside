@@ -54,6 +54,16 @@ const STANDALONE_FOOD_GUIDES = [
     href: "/food/what-is-tteokbokki",
     readingTime: "7 min read",
   },
+  {
+    id: "what-is-eomuk-korean-fish-cake",
+    category: "food",
+    categoryLabel: "Food guide",
+    title: "What Is Eomuk?",
+    description:
+      "A local-friendly guide to Korean fish cake, from street-stall skewers and warm broth to the many shapes you see in tteokbokki, soup, and snack shops.",
+    href: "/food/what-is-eomuk-korean-fish-cake",
+    readingTime: "7 min read",
+  },
 ];
 
 export const metadata: Metadata = {
