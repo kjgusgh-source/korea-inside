@@ -3,6 +3,19 @@ import Link from "next/link";
 import SiteHeader from "../../components/SiteHeader";
 import { getPostsByCategory } from "../../lib/posts";
 
+const STANDALONE_TRAVEL_GUIDES = [
+  {
+    id: "how-to-use-korean-subway",
+    category: "travel",
+    categoryLabel: "Travel guide",
+    title: "How to Use the Korean Subway",
+    description:
+      "A local-friendly first guide to Korean subway rides, T-money cards, transfers, station signs, apps, etiquette, and simple mistakes to avoid.",
+    href: "/travel/how-to-use-korean-subway",
+    readingTime: "8 min read",
+  },
+];
+
 export const metadata: Metadata = {
   title: "Travel in Korea | HAEMIL",
   description:
@@ -25,6 +38,26 @@ function getPostAccent(category: string) {
 
 export default function TravelPage() {
   const travelPosts = getPostsByCategory("travel");
+  const travelGuides = [
+    ...STANDALONE_TRAVEL_GUIDES.map((guide) => ({
+      id: guide.id,
+      category: guide.category,
+      categoryLabel: guide.categoryLabel,
+      title: guide.title,
+      description: guide.description,
+      href: guide.href,
+      readingTime: guide.readingTime,
+    })),
+    ...travelPosts.map((post) => ({
+      id: String(post.id),
+      category: post.category,
+      categoryLabel: post.categoryLabel,
+      title: post.title,
+      description: post.description,
+      href: `/${post.categorySlug}/${post.slug}`,
+      readingTime: post.readingTime,
+    })),
+  ];
 
   return (
     <main className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
@@ -94,25 +127,25 @@ export default function TravelPage() {
           </p>
 
           <div className="grid gap-4 md:grid-cols-2">
-            {travelPosts.map((post) => (
+            {travelGuides.map((guide) => (
               <Link
-                key={post.id}
-                href={`/${post.categorySlug}/${post.slug}`}
+                key={guide.id}
+                href={guide.href}
                 className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--card)] p-5 transition hover:-translate-y-1 hover:shadow-lg hover:shadow-[var(--shadow)]"
               >
                 <div className="mb-4 flex flex-wrap items-center gap-3 text-sm">
-                  <span style={{ color: getPostAccent(post.category) }}>
-                    {post.categoryLabel}
+                  <span style={{ color: getPostAccent(guide.category) }}>
+                    {guide.categoryLabel}
                   </span>
-                  <span className="text-[var(--muted)]">{post.readingTime}</span>
+                  <span className="text-[var(--muted)]">{guide.readingTime}</span>
                 </div>
 
                 <h3 className="text-2xl font-semibold leading-tight">
-                  {post.title}
+                  {guide.title}
                 </h3>
 
                 <p className="mt-4 leading-7 text-[var(--muted)]">
-                  {post.description}
+                  {guide.description}
                 </p>
 
                 <p className="mt-6 text-sm font-semibold text-[var(--accent)]">
