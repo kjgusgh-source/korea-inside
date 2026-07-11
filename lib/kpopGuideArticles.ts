@@ -144,11 +144,11 @@ export type KpopGuideArticle = {
         label: "Korean fan words",
       },
       {
-        title: "What is visual in K-pop?",
+        title: "What Does Visual Mean in K-pop?",
         description:
-          "Learn what visual means in K-pop, how it connects to group image and concept photos, and why it is not a beauty ranking.",
+          "A friendly guide to the K-pop word “visual,” how it differs from center or face of the group, and why fans use it for more than simple looks.",
         href: "/kpop/what-is-visual-in-kpop",
-        label: "K-pop positions",
+        label: "K-pop starter guide",
       },
   ];
   

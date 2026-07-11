@@ -2,15 +2,61 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "../../../components/SiteHeader";
 import JsonLd from "../../../components/JsonLd";
-import { getPublishedMemberGuides } from "../../../lib/publishedGuides";
 
 const siteUrl = "https://haemilkorea.com";
 const pageUrl = `${siteUrl}/kpop/what-is-visual-in-kpop`;
 
-const pageTitle =
-  "What Is Visual in K-pop? | Meaning, Examples & Group Image";
+const pageTitle = "What Does Visual Mean in K-pop? A Friendly Guide to the Role";
 const pageDescription =
-  "A friendly guide to what visual means in K-pop, how it connects to group image and concept photos, and why it is not a beauty ranking.";
+  "A friendly HAEMIL guide to what “visual” means in K-pop, how it differs from center, face of the group, ending fairy, and why fans use the word carefully.";
+
+const quickFacts = [
+  "Korean word: Visual / 비주얼",
+  "Basic meaning: A member known for standing out visually in a group’s image",
+  "Official or fan-used: Sometimes official, sometimes used casually by fans",
+  "Not the same as: Center, face of the group, main dancer, main vocal, or ending fairy",
+  "What matters: Styling, camera presence, public image, facial impression, proportions, and how memorable the member feels in photos or videos",
+  "Fan phrase: 얼굴천재 can be used by fans for someone with striking visuals, but it is not a formal company role",
+  "Important: “Visual” should not be treated as a simple beauty ranking",
+];
+
+const relatedGuides = [
+  {
+    label: "K-pop guide",
+    title: "What is a fancam?",
+    description:
+      "Learn why fans watch fancams, what makes them go viral, and how facecams and eolppak-jikcam clips are different.",
+    href: "/kpop/what-is-a-fancam",
+  },
+  {
+    label: "K-pop guide",
+    title: "What is an ending fairy?",
+    description:
+      "Learn what ending fairy means, why final close-up shots go viral, and how idols use a few seconds to show charm after a stage.",
+    href: "/kpop/what-is-ending-fairy",
+  },
+  {
+    label: "K-pop guide",
+    title: "What does maknae mean?",
+    description:
+      "Learn what maknae means, why the youngest member matters in K-pop, and how fans use words like golden maknae.",
+    href: "/kpop/what-is-maknae",
+  },
+  {
+    label: "K-pop guide",
+    title: "What is center in K-pop?",
+    description:
+      "Learn what center means in K-pop, why the center member matters, and how fans understand stage focus and group image.",
+    href: "/kpop/what-is-center-in-kpop",
+  },
+  {
+    label: "K-pop guide",
+    title: "Open the K-pop glossary",
+    description:
+      "A friendly guide to Korean K-pop fan words like bias, maknae, fancam, ending fairy, and eolppak-jikcam.",
+    href: "/kpop/glossary",
+  },
+];
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -32,15 +78,7 @@ export const metadata: Metadata = {
   },
 };
 
-const relatedMemberIds = ["jang-wonyoung", "karina", "v", "mingyu"];
-
 export default function WhatIsVisualInKpopPage() {
-  const publishedGuides = getPublishedMemberGuides();
-  const relatedGuides = relatedMemberIds.flatMap((memberId) => {
-    const match = publishedGuides.find(({ member }) => member.id === memberId);
-    return match ? [match] : [];
-  });
-
   const structuredData = [
     {
       "@context": "https://schema.org",
@@ -74,10 +112,6 @@ export default function WhatIsVisualInKpopPage() {
         },
         {
           "@type": "Thing",
-          name: "Group image",
-        },
-        {
-          "@type": "Thing",
           name: "Korean fan culture",
         },
       ],
@@ -101,7 +135,7 @@ export default function WhatIsVisualInKpopPage() {
         {
           "@type": "ListItem",
           position: 3,
-          name: "What is visual in K-pop?",
+          name: "What does visual mean in K-pop?",
           item: pageUrl,
         },
       ],
@@ -125,199 +159,306 @@ export default function WhatIsVisualInKpopPage() {
             </Link>
 
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
-              K-pop guide
+              K-pop starter guide
             </p>
 
             <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
-              What is visual in K-pop?
+              What Does Visual Mean in K-pop? A Friendly Guide to the Role
             </h1>
 
             <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
-  In K-pop, visual usually refers to a member known for strong looks,
-  styling, camera presence, and the way they shape a group&apos;s first
-  impression. Fans often use it as a compliment, and appearance is
-  definitely part of the word. But visual is not usually meant as an
-  objective ranking of every member&apos;s looks. It is more about the
-  member whose image, mood, and presence strongly match the group&apos;s
-  concept.
-</p>
-
-            <div className="mt-8 grid gap-4 md:grid-cols-3">
-              <div className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--card)] p-5">
-                <p className="text-sm font-semibold text-[var(--gold)]">
-                  Korean word
-                </p>
-                <p className="mt-2 text-2xl font-semibold">비주얼</p>
-                <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
-                  bijueol — visual; often used for image, presentation, or how
-                  someone fits a group&apos;s look.
-                </p>
-              </div>
-
-              <div className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--card)] p-5">
-                <p className="text-sm font-semibold text-[var(--gold)]">
-                  In K-pop
-                </p>
-                <p className="mt-2 text-2xl font-semibold">Group image</p>
-                <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
-                  The member who often represents the group&apos;s visual
-                  identity in photos, teasers, and public-facing moments.
-                </p>
-              </div>
-
-              <div className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--card)] p-5">
-                <p className="text-sm font-semibold text-[var(--gold)]">
-                  Not the same as
-                </p>
-                <p className="mt-2 text-2xl font-semibold">Center</p>
-                <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
-                  Visual and center can overlap, but center is more about stage
-                  focus and performance attention.
-                </p>
-              </div>
-            </div>
+              If you are new to K-pop, the word &quot;visual&quot; can sound
+              strange at first.
+            </p>
           </article>
 
-          <section className="grid gap-6 md:grid-cols-[1fr_1fr]">
-            <div className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
-                Meaning
-              </p>
+          <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+              Quick facts
+            </p>
 
-              <h2 className="mt-3 text-3xl font-semibold">
-  Visual starts with appearance, but it is not only about appearance.
-</h2>
-
-<p className="mt-5 text-base leading-8 text-[var(--muted)]">
-  비주얼 comes from the English word visual. In K-pop, it often starts
-  from appearance: looks, styling, proportions, facial features, and
-  the way someone appears on camera. That part is real, so it would
-  feel strange to explain visual as if beauty has nothing to do with
-  it.
-</p>
-
-<p className="mt-4 text-base leading-8 text-[var(--muted)]">
-  But the word does not stop at “this person is good-looking.” Fans and
-  companies often connect visual to a group&apos;s concept, public image,
-  teaser photos, profile shots, and first impression. A visual member
-  may be the person who makes a group&apos;s image easier to remember at a
-  glance.
-</p>
-            </div>
-
-            <div className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
-                Where fans notice it
-              </p>
-
-              <ul className="mt-5 space-y-4 text-base leading-8 text-[var(--muted)]">
-                <li>
-                  <span className="font-semibold text-[var(--text)]">
-                    Concept photos:
-                  </span>{" "}
-                  comeback images often set the tone for who feels most tied to
-                  the era&apos;s look.
+            <ul className="mt-4 space-y-3 text-base leading-7 text-[var(--muted)] md:text-lg">
+              {quickFacts.map((fact) => (
+                <li key={fact} className="flex gap-3">
+                  <span className="text-[var(--gold)]">•</span>
+                  <span>{fact}</span>
                 </li>
-                <li>
-                  <span className="font-semibold text-[var(--text)]">
-                    Teasers & thumbnails:
-                  </span>{" "}
-                  the member on a cover image can shape first impressions before
-                  anyone hears the song.
-                </li>
-                <li>
-                  <span className="font-semibold text-[var(--text)]">
-                    Red carpet & interviews:
-                  </span>{" "}
-                  styling, posture, and camera presence all feed into public
-                  image.
-                </li>
-                <li>
-                  <span className="font-semibold text-[var(--text)]">
-                    Stage close-ups & profile images:
-                  </span>{" "}
-                  fans notice who carries the group&apos;s visual mood in still
-                  and moving shots.
-                </li>
-              </ul>
-            </div>
+              ))}
+            </ul>
           </section>
 
-          <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
-              What visual does not mean
-            </p>
+          <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
+            <div className="space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
+              <p>
+                In normal English, visual just means something you can see.
+              </p>
 
-            <h2 className="mt-3 text-3xl font-semibold">
-  It does not mean the other members are not attractive.
-</h2>
+              <p>In K-pop, it can mean something more specific.</p>
 
-<p className="mt-5 max-w-3xl text-base leading-8 text-[var(--muted)]">
-  Calling one member the visual does not mean the other members are not
-  attractive. It also does not mean visual is the most important role in
-  the group. K-pop fans often use the word to talk about who leaves a
-  strong visual impression, especially in photos, teasers, thumbnails,
-  or public appearances.
-</p>
+              <p>
+                A visual is usually the member who is known for standing out in
+                the group&apos;s image. That might mean their face is very
+                memorable, their styling fits the group concept well, or they
+                often catch attention in photos, thumbnails, stage shots, and
+                public appearances.
+              </p>
 
-<p className="mt-4 max-w-3xl text-base leading-8 text-[var(--muted)]">
-  Visual can overlap with center, but they are not exactly the same.
-  Center is usually about stage focus, formation, and performance
-  attention. Visual is more about appearance, image, camera presence,
-  and how strongly someone fits the group&apos;s visual concept.
-</p>
+              <p>But here is the important part:</p>
 
-<p className="mt-4 max-w-3xl text-base leading-8 text-[var(--muted)]">
-  “Face of the group” is a little different too. That phrase usually
-  points to the member many people recognize first outside the fandom,
-  through variety shows, acting, interviews, ads, or viral moments. A
-  visual may shape the group&apos;s image in photos and concepts, while
-  the face of the group often carries public recognition beyond the
-  stage.
-</p>
+              <p>
+                &quot;Visual&quot; is not just a simple beauty ranking.
+              </p>
 
-            <div className="mt-6 flex flex-wrap gap-3">
-              <Link
-                href="/kpop/what-is-center-in-kpop"
-                className="rounded-full border border-[var(--border)] bg-[var(--card)] px-5 py-3 text-sm font-semibold text-[var(--text)] transition hover:-translate-y-0.5 hover:shadow-md"
-              >
-                Read center guide →
-              </Link>
+              <p>It is better to understand it as an image role.</p>
 
-              <Link
-                href="/kpop/glossary"
-                className="rounded-full border border-[var(--border)] bg-[var(--card)] px-5 py-3 text-sm font-semibold text-[var(--text)] transition hover:-translate-y-0.5 hover:shadow-md"
-              >
-                Open K-pop glossary →
-              </Link>
+              <p>
+                In Korean K-pop talk, fans may say 비주얼 or 비주얼 멤버.
+                Sometimes a company may describe a member this way. Sometimes
+                fans use it casually even if the group does not have an official
+                visual position.
+              </p>
+
+              <p>That is why you should be careful with the word.</p>
+
+              <p>
+                It does not always mean, &quot;This person is officially the
+                prettiest member.&quot;
+              </p>
+
+              <p>
+                It can mean, &quot;This member is strongly remembered for their
+                look, image, and camera presence.&quot;
+              </p>
+
+              <p>
+                A visual often helps people recognize the group quickly.
+              </p>
+
+              <p>Think of a group photo.</p>
+
+              <p>Some members may stand out because of styling.</p>
+
+              <p>Some may stand out because of facial features.</p>
+
+              <p>
+                Some may stand out because their image matches the group concept
+                very clearly.
+              </p>
+
+              <p>
+                Some may become the member casual viewers remember first after
+                seeing a thumbnail, a music video scene, or a stage photo.
+              </p>
+
+              <p>
+                That is the kind of feeling people often mean when they say
+                &quot;visual.&quot;
+              </p>
+
+              <p>Visual is also different from center.</p>
+
+              <p>
+                The center is usually the member placed in the middle of
+                choreography, formations, teasers, or key performance moments.
+                A center can be chosen because of dance, balance, stage presence,
+                popularity, concept fit, or the way they organize the group
+                visually on stage.
+              </p>
+
+              <p>A visual may be the center sometimes.</p>
+
+              <p>But not always.</p>
+
+              <p>
+                A center is about placement and performance focus.
+              </p>
+
+              <p>A visual is more about image and visual recognition.</p>
+
+              <p>Visual is also different from face of the group.</p>
+
+              <p>
+                The face of the group is often the member most recognized by the
+                public. That can be because of variety shows, acting,
+                advertisements, viral clips, hosting, past career, or general
+                popularity. A face of the group may be a visual, but the two
+                ideas are not exactly the same.
+              </p>
+
+              <p>One is more about public recognition.</p>
+
+              <p>One is more about visual image.</p>
+
+              <p>Visual is also different from ending fairy.</p>
+
+              <p>
+                An ending fairy is a short camera moment at the end of a K-pop
+                performance. A member looks into the camera after the song ends,
+                usually while catching their breath and holding a memorable
+                expression. Any member can become an ending fairy for a stage.
+              </p>
+
+              <p>
+                A visual may get a lot of attention during ending fairy
+                moments.
+              </p>
+
+              <p>But ending fairy is a moment.</p>
+
+              <p>Visual is a broader image role.</p>
+
+              <p>The word also connects to fancams.</p>
+
+              <p>
+                Fancams often make people notice a member&apos;s expressions,
+                styling, proportions, and camera presence more clearly than a
+                full-group stage. That is one reason visual talk often appears
+                around fancams. A person may watch one fancam and suddenly
+                understand why fans say, &quot;Their visual is strong.&quot;
+              </p>
+
+              <p>Still, a good fancam is not only about appearance.</p>
+
+              <p>
+                It is also about timing, confidence, expression, and the way a
+                member holds attention on stage.
+              </p>
+
+              <p>
+                In Korean fan language, you may also see the phrase 얼굴천재.
+              </p>
+
+              <p>
+                Literally, it means something like &quot;face genius.&quot;
+                Fans use it when someone&apos;s face or image feels especially
+                striking. It is a compliment, not a formal role. It can sound
+                dramatic in English, but in Korean fandom spaces, exaggerated
+                praise like this is common.
+              </p>
+
+              <p>Do not read every phrase too literally.</p>
+
+              <p>K-pop fan language often uses playful exaggeration.</p>
+
+              <p>The safest way to understand &quot;visual&quot; is this:</p>
+
+              <p>
+                A visual is a member whose appearance and image are especially
+                memorable in the group&apos;s public presentation.
+              </p>
+
+              <p>That can include beauty.</p>
+
+              <p>
+                But it can also include styling, mood, expression, proportions,
+                confidence, and how naturally the member fits the concept.
+              </p>
+
+              <p>
+                For example, a cute concept, elegant concept, sporty concept,
+                dreamy concept, or powerful concept can all make different kinds
+                of visuals stand out. The &quot;visual&quot; feeling changes
+                depending on the group.
+              </p>
+
+              <p>That is why the word is not as simple as it looks.</p>
+
+              <p>
+                A member can feel like a visual in one comeback because the
+                styling fits them perfectly.
+              </p>
+
+              <p>
+                Another member can go viral because a fancam captures their
+                expression at the right moment.
+              </p>
+
+              <p>
+                Another member can become known for photos, ads, or public
+                appearances.
+              </p>
+
+              <p>
+                K-pop visuals are connected to the whole idol system: music
+                videos, album photos, stages, styling, thumbnails, fan edits,
+                brand deals, and the way fans share images online.
+              </p>
+
+              <p>That does not mean fans only care about looks.</p>
+
+              <p>
+                K-pop fans talk about vocals, dance, personality, humor, stage
+                presence, teamwork, fan communication, and many other things.
+                But K-pop is also a very visual culture, so image language
+                becomes part of how fans describe idols.
+              </p>
+
+              <p>For first-time fans, the best approach is simple.</p>
+
+              <p>
+                Use &quot;visual&quot; as a cultural word, not as a harsh
+                ranking.
+              </p>
+
+              <p>Do not use it to put members against each other.</p>
+
+              <p>Do not assume every group has one official visual.</p>
+
+              <p>Do not assume the visual is always the most popular member.</p>
+
+              <p>
+                And do not assume visual means the member has no other talent.
+              </p>
+
+              <p>
+                Many idols called visuals are also strong performers, singers,
+                dancers, hosts, actors, or variety personalities.
+              </p>
+
+              <p>The word is only one piece of the picture.</p>
+
+              <p>
+                If someone says, &quot;Who is the visual?&quot; they may be
+                asking which member is known for standing out visually.
+              </p>
+
+              <p>
+                If someone says, &quot;Her visual is crazy,&quot; they usually
+                mean her look, styling, or camera presence is very impressive.
+              </p>
+
+              <p>
+                If someone says, &quot;This comeback fits his visual,&quot; they
+                mean the concept makes his image stand out well.
+              </p>
+
+              <p>Once you understand that, the word becomes less awkward.</p>
+
+              <p>It is not just about looking pretty.</p>
+
+              <p>
+                It is about how an idol is seen, remembered, styled, and
+                recognized.
+              </p>
+
+              <p>
+                That is why &quot;visual&quot; appears so often in K-pop
+                conversations.
+              </p>
+
+              <p>K-pop is music.</p>
+
+              <p>But it is also performance.</p>
+
+              <p>It is also image.</p>
+
+              <p>It is also camera language.</p>
+
+              <p>
+                And &quot;visual&quot; is one of the words fans use to talk
+                about that image world.
+              </p>
             </div>
-          </section>
-
-          <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
-              Korean culture note
-            </p>
-
-            <h2 className="mt-3 text-3xl font-semibold">
-              Official position or casual fan word?
-            </h2>
-
-            <p className="mt-5 max-w-3xl text-base leading-8 text-[var(--muted)]">
-              In some groups, visual appears in profile charts or introduction
-              materials almost like a formal role. In others, fans use it more
-              loosely when a member&apos;s styling or photo presence fits a
-              comeback especially well. Both uses exist, and they do not always
-              match.
-            </p>
-
-            <p className="mt-4 max-w-3xl text-base leading-8 text-[var(--muted)]">
-              For international fans, the helpful way to read visual is through
-              context: what concept is the group pushing, what image are they
-              showing publicly, and which member keeps appearing in the photos
-              or moments that define that era. That approach keeps the word
-              useful without turning it into objectifying language or a shallow
-              ranking.
-            </p>
           </section>
 
           <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">
@@ -328,7 +469,7 @@ export default function WhatIsVisualInKpopPage() {
                 </p>
 
                 <h2 className="mt-3 text-3xl font-semibold">
-                  Member guides to read next
+                  Related K-pop guides
                 </h2>
               </div>
 
@@ -340,23 +481,23 @@ export default function WhatIsVisualInKpopPage() {
               </Link>
             </div>
 
-            <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-              {relatedGuides.map(({ group, member }) => (
+            <div className="mt-6 grid gap-4 md:grid-cols-2">
+              {relatedGuides.map((guide) => (
                 <Link
-                  key={`${group.id}-${member.id}`}
-                  href={`/kpop/${group.id}/${member.id}`}
+                  key={guide.href}
+                  href={guide.href}
                   className="group rounded-[1.5rem] border border-[var(--border)] bg-[var(--card)] p-5 transition hover:-translate-y-1 hover:shadow-md"
                 >
                   <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
-                    {group.name}
+                    {guide.label}
                   </p>
 
                   <h3 className="mt-3 text-xl font-semibold text-[var(--text)]">
-                    {member.name}
+                    {guide.title}
                   </h3>
 
-                  <p className="mt-3 line-clamp-3 text-sm leading-6 text-[var(--muted)]">
-                    {member.note}
+                  <p className="mt-3 text-sm leading-6 text-[var(--muted)]">
+                    {guide.description}
                   </p>
 
                   <p className="mt-4 text-sm font-semibold text-[var(--accent)]">
