@@ -285,6 +285,66 @@ export const MEDIA_ITEMS: MediaItem[] = [
     guideHref: "/kpop/ive/leeseo",
   },
   {
+    id: "leeseo-ive-lion-heart-fancam",
+    title: 'IVE Leeseo "Lion Heart" FanCam',
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A MBC Gayo Daejejeon fancam that shows Leeseo in a softer, classic performance mood outside a typical IVE comeback stage.",
+    cultureNote:
+      "Gayo Daejejeon cover stages often let idols show a different side from their usual comeback image. For DIVE, this clip is a useful contrast to Leeseo’s brighter maknae energy on IVE’s own songs.",
+    tags: ["IVE", "Leeseo", "DIVE", "Fancam", "Lion Heart", "MBC"],
+    youtubeId: "tYGqpg5x7I4",
+    sourceLabel: "MBCkpop",
+    guideHref: "/kpop/ive/leeseo",
+  },
+  {
+    id: "leeseo-ive-rebel-heart-music-core-fancam",
+    title: 'IVE Leeseo "REBEL HEART" FanCam',
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A Music Core fancam that shows Leeseo in IVE’s “REBEL HEART” stage, with a clearer look at her performance focus and expression changes.",
+    cultureNote:
+      "Music Core fancams often give a tighter read on how one member handles a comeback stage. For DIVE, this clip is useful if you want to see Leeseo’s focus and expression shifts inside IVE’s “REBEL HEART” performance.",
+    tags: ["IVE", "Leeseo", "DIVE", "Fancam", "REBEL HEART", "Music Core"],
+    youtubeId: "cVv8qbIKmGw",
+    sourceLabel: "MBCkpop",
+    guideHref: "/kpop/ive/leeseo",
+  },
+  {
+    id: "leeseo-ive-love-dive-hanchedae-fancam",
+    title: 'IVE Leeseo "LOVE DIVE" Hanchedae Festival FanCam',
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A festival fancam from Korea National Sport University that shows Leeseo’s “LOVE DIVE” stage in a live campus-event setting.",
+    cultureNote:
+      "University festival stages feel different from music-show broadcasts — louder crowd energy, less polished camera work, and a more open live-event mood. For DIVE, this clip shows Leeseo’s “LOVE DIVE” performance in that kind of setting.",
+    tags: ["IVE", "Leeseo", "DIVE", "Fancam", "LOVE DIVE", "Festival"],
+    youtubeId: "EnWBNXAqc8o",
+    sourceLabel: "Spinel CAM",
+    guideHref: "/kpop/ive/leeseo",
+  },
+  {
+    id: "leeseo-ive-love-dive-newark-focus",
+    title: 'IVE Leeseo "LOVE DIVE" Newark Focus Cam',
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A Newark world tour focus cam that gives another angle on Leeseo’s “LOVE DIVE” performance outside a Korean music-show setting.",
+    cultureNote:
+      "World tour focus cams often show a different side from Korean broadcast fancams — wider venue energy, fan-shot angles, and a performance read shaped by a live overseas crowd. For DIVE, this Newark clip is a useful contrast to Leeseo’s “LOVE DIVE” stages filmed in Korea.",
+    tags: ["IVE", "Leeseo", "DIVE", "Focus cam", "LOVE DIVE", "World tour"],
+    youtubeId: "7may4UsvG_g",
+    sourceLabel: "hypnosis",
+    guideHref: "/kpop/ive/leeseo",
+  },
+  {
     id: "karina-aespa-fancam",
     title: "Why Karina feels like aespa’s front door",
     category: "kpop",

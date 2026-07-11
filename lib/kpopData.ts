@@ -339,7 +339,13 @@ export const KPOP_GROUPS: KpopGroup[] = [
         },
         culturalContext:
           "IVE’s public image is often built around confidence, elegance, and a polished first impression. Leeseo does not break that image. Instead, she adds a younger and brighter side to it. Her charm often comes from openness, growth, and expressive reactions on stage. For new viewers, Leeseo is a good entry point if you want to understand IVE’s team dynamic — not only the polished center figures, but also the member who brings a fresh maknae color to the group.",
-        relatedMediaIds: ["leeseo-ive-fancam"],
+        relatedMediaIds: [
+          "leeseo-ive-fancam",
+          "leeseo-ive-lion-heart-fancam",
+          "leeseo-ive-rebel-heart-music-core-fancam",
+          "leeseo-ive-love-dive-hanchedae-fancam",
+          "leeseo-ive-love-dive-newark-focus",
+        ],
       },
     ],
     starterTags: ["Ending fairy", "Viral clips", "Stage styling"],
