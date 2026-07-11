@@ -24,6 +24,16 @@ const STANDALONE_TRAVEL_GUIDES = [
     href: "/travel/how-to-use-t-money-card-in-korea",
     readingTime: "7 min read",
   },
+  {
+    id: "naver-map-kakaomap-korea-travel-guide",
+    category: "travel",
+    categoryLabel: "Travel guide",
+    title: "Naver Map or KakaoMap?",
+    description:
+      "A local-friendly guide to Korean map apps, why Google Maps can feel limited in Korea, and how to find subway exits, buses, restaurants, and saved places.",
+    href: "/travel/naver-map-kakaomap-korea-travel-guide",
+    readingTime: "8 min read",
+  },
 ];
 
 export const metadata: Metadata = {
