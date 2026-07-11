@@ -44,6 +44,16 @@ const STANDALONE_TRAVEL_GUIDES = [
     href: "/travel/how-to-get-from-incheon-airport-to-seoul",
     readingTime: "8 min read",
   },
+  {
+    id: "what-to-do-in-myeongdong-first-time",
+    category: "travel",
+    categoryLabel: "Travel guide",
+    title: "What to Do in Myeongdong",
+    description:
+      "A local-friendly first guide to Myeongdong, from K-beauty shops and street food to Myeongdong Cathedral, money exchange, subway exits, and nearby Namsan.",
+    href: "/travel/what-to-do-in-myeongdong-first-time",
+    readingTime: "8 min read",
+  },
 ];
 
 export const metadata: Metadata = {
