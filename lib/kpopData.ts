@@ -313,32 +313,67 @@ export const KPOP_GROUPS: KpopGroup[] = [
         id: "leeseo",
         name: "Leeseo",
         note:
-          "IVE’s youngest member — bright reactions, fresh stage energy, and the kind of growth fans enjoy watching inside a polished group.",
-        pageLabel: "Who is Leeseo?",
-        appealTitle: "Why DIVE enjoy watching her grow",
+          "IVE Leeseo — maknae, fancams, ending fairy moments, and a useful entry point for learning how fans read visual image in K-pop.",
+        pageLabel: "Who is IVE Leeseo?",
+        appealTitle: "Why Leeseo works as a K-pop entry point",
         watchTitle: "What to notice in a Leeseo fancam",
-        contextTitle: "Why Leeseo brings a fresh side to IVE",
+        contextTitle: "How fans read visual image with Leeseo",
         intro:
-          "Leeseo is IVE’s youngest member, and that matters more in feeling than in age alone. IVE fans are called DIVE, and many DIVE notice her because she brings a bright, fresh energy into a group that often looks polished and self-assured. Jang Wonyoung often shows IVE’s elegant confidence, An Yujin brings bright leader energy, and Rei adds a softer personal color. Leeseo helps IVE feel younger, lively, and a little more spontaneous — not childish, but open in a way fans enjoy watching.",
+          "Leeseo is a good IVE member to start with if you are learning K-pop through small details. Some new fans search her as “Lee Seo IVE,” but her stage name is usually written as Leeseo. On HAEMIL, this page uses Leeseo because that is the spelling most K-pop fans will recognize. The reason she works well as an entry point is not only that she is young or easy to remember. It is that her page connects several words new fans keep seeing: maknae, fancam, ending fairy, and visual.",
+        profileFacts: [
+          {
+            label: "Stage name",
+            value: "Leeseo / 이서.",
+          },
+          {
+            label: "Search note",
+            value:
+              "Some English users search “Lee Seo IVE,” but K-pop fans usually write her stage name as Leeseo.",
+          },
+          {
+            label: "Group",
+            value: "IVE.",
+          },
+          {
+            label: "Fan context",
+            value: "Often discussed as IVE’s maknae.",
+          },
+          {
+            label: "Good entry point",
+            value: "Fancams, ending fairy moments, and visual-image talk.",
+          },
+          {
+            label: "Watch for",
+            value:
+              "Expression changes, camera timing, styling, and how her stage image changes by era.",
+          },
+          {
+            label: "Important",
+            value: "Do not read “visual” as a simple beauty ranking.",
+          },
+        ],
         whyFansLike: [
-          "DIVE often like Leeseo because her stage mood feels open. She can look excited, focused, or playful without making the moment feel too calculated.",
-          "Her youthful energy fits IVE in a useful way. The group’s image is confident and glossy, but Leeseo adds a fresher color that makes the team feel more dynamic.",
-          "Fans also enjoy the growth feeling. As the maknae, she is often the member people watch become more comfortable and expressive on stage over time.",
+          "Leeseo is often talked about as IVE’s maknae, the youngest member. In K-pop, maknae does not simply mean “the youngest person in the group.” It can shape how fans read a member’s image. People notice growth, confidence, small changes in stage style, and the way the youngest member fits beside older members.",
+          "IVE’s image is polished, confident, and very camera-aware. Inside that kind of group, Leeseo often gives beginners a clear way to see how a young idol grows into a strong stage image without losing the feeling of being the maknae.",
+          "A full-group IVE stage shows the whole formation, the choreography, and the group mood. A Leeseo fancam narrows the view. You can notice her expression changes, where she looks into the camera, how she handles quieter seconds, and how her styling changes the feeling of the same song. That is often how a new fan suddenly understands one member.",
+          "An ending fairy is the short camera moment at the end of a K-pop stage. It can look simple, but fans notice timing, breathing, eye contact, and expression control. For a younger idol, those few seconds can be especially interesting because you can see the balance between fresh energy and practiced stage awareness.",
+          "Leeseo is also useful for understanding how fans talk about “visual” in K-pop. This does not mean ranking members by looks. It means noticing how styling, facial impression, camera presence, and public image work together.",
         ],
         watchPoints: [
-          "Watch her expressions during upbeat parts. Leeseo often feels memorable when her face matches the song’s energy without looking forced.",
-          "Notice how she holds herself next to the other members. She can match IVE’s polished mood while still bringing reactions that feel bright and direct.",
-          "Compare her with Wonyoung, Yujin, and Rei if you already watched their guides. Wonyoung feels elegant, Yujin feels grounded and bright, Rei feels soft and unique, while Leeseo gives IVE a fresher youngest-member mood.",
+          "Start with one fancam on this page — a music-show clip, a softer year-end stage, a festival setting, or a tour focus angle. You do not need to watch all of them like homework.",
+          "Notice expression changes and camera timing. Where does Leeseo look into the lens? How does she handle quieter seconds in the same song?",
+          "Watch ending moments for small details: a quick expression, a calm look, a slightly playful face, or the sense that she knows exactly how long the camera will stay.",
+          "Compare eras when you come back. Fans often ask what changed in her styling, image, or stage confidence — not only whether the performance was good.",
         ],
         koreanExpression: {
           hangul: "막내",
           romanization: "maknae",
           meaning: "the youngest member of a group",
           note:
-            "막내 is a normal Korean word for the youngest person in a family, team, or friend group. In K-pop, fans often use it with extra affection because they watch the youngest member grow in front of them. With Leeseo, the word helps explain why her energy can feel fresh and why fans pay attention to her growth.",
+            "막내 is a normal Korean word for the youngest person in a family, team, or friend group. In K-pop, it often affects how fans read a member’s image, growth, and place in the group dynamic — not just age. With Leeseo, the word helps explain why fans watch her development over time and why her stage mood can feel fresh inside IVE’s polished image.",
         },
         culturalContext:
-          "IVE’s public image is often built around confidence, elegance, and a polished first impression. Leeseo does not break that image. Instead, she adds a younger and brighter side to it. Her charm often comes from openness, growth, and expressive reactions on stage. For new viewers, Leeseo is a good entry point if you want to understand IVE’s team dynamic — not only the polished center figures, but also the member who brings a fresh maknae color to the group.",
+          "With Leeseo, visual talk often connects to her age image too. She debuted young, so fans do not only look at one stage and stop there. They compare eras. They notice when her expressions become sharper, when her styling feels more mature, or when a fancam shows a different side from the group’s main concept. That is a very K-pop way of watching. You are not only asking, “Is this a good performance?” You are also asking, “What changed?” “What kind of image is this comeback giving her?” “Why did this clip make people look twice?” That is why Leeseo is a useful member page for beginners. She helps you understand IVE, but she also helps you understand how K-pop fans watch idols over time. Start with one fancam, then read the maknae guide, then the ending fairy guide, then come back and watch another clip. The page will make more sense the second time.",
         relatedMediaIds: [
           "leeseo-ive-fancam",
           "leeseo-ive-lion-heart-fancam",

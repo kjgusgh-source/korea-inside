@@ -9,6 +9,7 @@ const guideHrefByKey = {
   fancam: "/kpop/what-is-a-fancam",
   glossary: "/kpop/glossary",
   maknae: "/kpop/what-is-maknae",
+  endingFairy: "/kpop/what-is-ending-fairy",
   rookie: "/kpop/what-is-a-rookie-group-in-kpop",
   visual: "/kpop/what-is-visual-in-kpop",
 } as const;
@@ -31,7 +32,7 @@ const relatedGuidesByMemberId: Record<string, GuideKey[]> = {
   wonwoo: ["visual", "fancam", "glossary"],
   rei: ["aegyo", "fancam", "glossary"],
   liz: ["fancam", "glossary"],
-  leeseo: ["maknae", "fancam", "glossary"],
+  leeseo: ["maknae", "fancam", "endingFairy", "visual", "center"],
   winter: ["fancam", "glossary"],
   ningning: ["fancam", "glossary"],
   wonhee: ["fancam", "rookie", "glossary"],
