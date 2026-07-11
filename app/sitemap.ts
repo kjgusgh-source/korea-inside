@@ -51,6 +51,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/food/how-to-eat-cup-ramyeon-at-a-korean-convenience-store`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/dramas`,
       lastModified: new Date(),
       changeFrequency: "weekly",

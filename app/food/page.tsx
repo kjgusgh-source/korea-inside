@@ -34,6 +34,16 @@ const STANDALONE_FOOD_GUIDES = [
     href: "/food/what-is-bungeoppang",
     readingTime: "6 min read",
   },
+  {
+    id: "how-to-eat-cup-ramyeon-at-a-korean-convenience-store",
+    category: "food",
+    categoryLabel: "Food guide",
+    title: "How to Eat Cup Ramyeon at a Korean Convenience Store",
+    description:
+      "A local-friendly guide to Korean cup ramyeon, hot water machines, convenience store counters, spicy flavors, and easy local pairings.",
+    href: "/food/how-to-eat-cup-ramyeon-at-a-korean-convenience-store",
+    readingTime: "6 min read",
+  },
 ];
 
 export const metadata: Metadata = {
