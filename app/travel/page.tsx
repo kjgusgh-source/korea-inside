@@ -14,6 +14,16 @@ const STANDALONE_TRAVEL_GUIDES = [
     href: "/travel/how-to-use-korean-subway",
     readingTime: "8 min read",
   },
+  {
+    id: "how-to-use-t-money-card-in-korea",
+    category: "travel",
+    categoryLabel: "Travel guide",
+    title: "How to Use a T-money Card in Korea",
+    description:
+      "A local-friendly guide to buying, recharging, tapping, transferring, and avoiding common T-money mistakes on Korean subways and buses.",
+    href: "/travel/how-to-use-t-money-card-in-korea",
+    readingTime: "7 min read",
+  },
 ];
 
 export const metadata: Metadata = {
