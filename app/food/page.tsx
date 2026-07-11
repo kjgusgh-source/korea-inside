@@ -74,6 +74,16 @@ const STANDALONE_FOOD_GUIDES = [
     href: "/food/what-is-twigim-korean-fried-snacks",
     readingTime: "7 min read",
   },
+  {
+    id: "what-is-sundae-korean-blood-sausage",
+    category: "food",
+    categoryLabel: "Food guide",
+    title: "What Is Sundae?",
+    description:
+      "A local-friendly guide to Korean blood sausage, from market stalls and bunsik shops to tteokbokki sauce, dipping salts, and regional styles.",
+    href: "/food/what-is-sundae-korean-blood-sausage",
+    readingTime: "7 min read",
+  },
 ];
 
 export const metadata: Metadata = {
