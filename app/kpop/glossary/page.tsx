@@ -65,6 +65,29 @@ const glossaryTerms = [
     href: "/kpop/what-does-comeback-mean-in-kpop",
   },
   {
+    term: "Music show",
+    korean: "음악방송",
+    romanization: "eumakbangsong",
+    meaning:
+      "A Korean broadcast program where K-pop artists perform current songs, especially during comeback promotions.",
+    note:
+      "Music shows are where many comeback stages, title track performances, fancams, ending fairy moments, and weekly performance clips come from. Fans often shorten 음악방송 to 음방.",
+    example:
+      "Fans may say a group is doing 음방 활동 when they are promoting a title track on music shows.",
+    href: "/kpop/what-is-a-music-show-in-kpop",
+  },
+  {
+    term: "Music show win",
+    korean: "음방 1위",
+    romanization: "eumbang ilwi",
+    meaning: "A first-place result or trophy on a K-pop music show.",
+    note:
+      "Music show win rules can vary by program and time, so it is better to understand it as part of promotion culture rather than a single universal ranking system.",
+    example:
+      "Fans may celebrate a group’s first music show win during a comeback.",
+    href: "/kpop/what-is-a-music-show-in-kpop",
+  },
+  {
     term: "Title track",
     korean: "타이틀곡",
     romanization: "taiteulgok",

@@ -105,6 +105,13 @@ export type KpopGuideArticle = {
       label: "K-pop starter guide",
     },
     {
+      title: "What Is a Music Show in K-pop?",
+      description:
+        "A friendly guide to Korean K-pop music shows, comeback stages, fancams, ending fairy moments, stage outfits, and why weekly performances matter to fans.",
+      href: "/kpop/what-is-a-music-show-in-kpop",
+      label: "K-pop starter guide",
+    },
+    {
       title: "What Does Concept Mean in K-pop?",
       description:
         "A friendly guide to K-pop concept meaning, how idols change their image each comeback, and how music, styling, choreography, stages, and visuals create an era.",
