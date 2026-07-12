@@ -256,6 +256,18 @@ const glossaryTerms = [
     href: "/kpop/what-is-point-choreography-in-kpop",
   },
   {
+    term: "Dance practice",
+    korean: "안무 연습 영상",
+    romanization: "anmu yeonseup yeongsang",
+    meaning:
+      "A choreography-focused video that shows the full dance more clearly than a music video or edited stage.",
+    note:
+      "Dance practice videos are often filmed in a practice room or studio and help fans see formations, timing, point choreography, transitions, and group synchronization.",
+    example:
+      "Fans may watch a dance practice after a comeback stage to understand the point choreography more clearly.",
+    href: "/kpop/what-is-dance-practice-in-kpop",
+  },
+  {
     term: "Stage presence",
     korean: "무대 존재감",
     romanization: "mude jonsaegam",

@@ -56,6 +56,13 @@ export type KpopGuideArticle = {
       label: "K-pop starter guide",
     },
     {
+      title: "What Is a Dance Practice in K-pop?",
+      description:
+        "A friendly guide to K-pop dance practice videos, why fans watch choreography clearly, and how they differ from fancams, stages, performance videos, and dance challenges.",
+      href: "/kpop/what-is-dance-practice-in-kpop",
+      label: "K-pop starter guide",
+    },
+    {
       title: "What Is Stage Presence in K-pop?",
       description:
         "A friendly guide to stage presence in K-pop, why some idols are hard to look away from, and how it connects to fancams, center, visual, and killing parts.",
