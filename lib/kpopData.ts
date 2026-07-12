@@ -829,6 +829,65 @@ export const KPOP_GROUPS: KpopGroup[] = [
     ],
   },
   {
+    id: "babymonster",
+    name: "BABYMONSTER",
+    category: "girl-groups",
+    description:
+      "BABYMONSTER is a seven-member girl group from YG Entertainment that debuted on April 1, 2024. HAEMIL currently starts with Ahyeon as the first covered member, using her MBCkpop #최애ZIP캠 compilation as a beginner-friendly entry point into the group’s performance image. Other official members include Ruka, Pharita, Asa, Rami, Rora, and Chiquita — member guides may be added later.",
+    members: [
+      {
+        id: "ahyeon",
+        name: "Ahyeon",
+        note: "A BABYMONSTER member who is a good entry point for new fans through member-focused fancam compilations, expression control, camera awareness, and stage presence.",
+        intro:
+          "Ahyeon is a member of BABYMONSTER. On HAEMIL, her page starts with a fancam-focused entry point because member-focused videos are one of the easiest ways for new K-pop fans to understand individual performance style. Her MBCkpop #최애ZIP캠 compilation is useful because it shows several performance moods in one place, making it easier to notice expression control, camera awareness, and stage presence.",
+        profileFacts: [
+          {
+            label: "Korean name",
+            value: "Ahyeon / 아현",
+          },
+          {
+            label: "Born",
+            value: "April 11, 2007",
+          },
+          {
+            label: "Group",
+            value: "BABYMONSTER, a seven-member girl group from YG Entertainment.",
+          },
+          {
+            label: "Agency",
+            value: "YG Entertainment",
+          },
+          {
+            label: "Group debut",
+            value: "April 1, 2024",
+          },
+        ],
+        whyFansLike: [
+          "Her MBCkpop #최애ZIP캠 compilation lets you compare several performance moods in one video instead of searching stage by stage.",
+          "Expression control stands out in compilation format — you can see how she shifts face, energy, and camera focus depending on the song.",
+          "For new BABYMONSTER fans, Ahyeon works well as a first member to follow because the video makes individual performance style easier to read.",
+          "Stage presence shows in transitions too, not only in the obvious highlight moments.",
+        ],
+        watchPoints: [
+          "Start with the #최애ZIP캠 compilation before trying to learn every BABYMONSTER song at once.",
+          "Watch how her expressions change before and after highlight moments across different clips.",
+          "Notice camera awareness — when she looks into the camera, when she stays with choreography, and when she keeps the mood without a big gesture.",
+          "Try a three-pass watch: casual first, then expressions, then camera timing.",
+          "Compare one clip with a full-group stage to see why member-focused videos matter in K-pop.",
+        ],
+        relatedMediaIds: ["babymonster-ahyeon-favorite-fancam-compilation"],
+      },
+    ],
+    starterTags: [
+      "Fancam",
+      "Girl group",
+      "YG Entertainment",
+      "Music Core",
+      "Compilation fancam",
+    ],
+  },
+  {
     id: "bts",
     name: "BTS",
     category: "boy-groups",

@@ -72,6 +72,28 @@ export const MEDIA_ITEMS: MediaItem[] = [
     guideHref: "/kpop/cortis/keonho",
   },
   {
+    id: "babymonster-ahyeon-favorite-fancam-compilation",
+    title: "BABYMONSTER Ahyeon Favorite Fancam Compilation",
+    category: "kpop",
+    categoryLabel: "K-pop Spotlight",
+    mediaType: "youtube",
+    description:
+      "An MBCkpop #최애ZIP캠 compilation that gathers Ahyeon-focused Music Core fancam moments from DRIP through SUGAR HONEY ICE TEA.",
+    cultureNote:
+      "An MBCkpop #최애ZIP캠 compilation that gathers Ahyeon-focused Music Core fancam moments from DRIP through SUGAR HONEY ICE TEA.",
+    tags: [
+      "BABYMONSTER",
+      "Ahyeon",
+      "Fancam",
+      "Music Core",
+      "Compilation",
+      "최애ZIP캠",
+    ],
+    youtubeId: "ZbxCI7ibDWk",
+    sourceLabel: "MBCkpop",
+    guideHref: "/kpop/babymonster-ahyeon-fancam-spotlight",
+  },
+  {
     id: "lesserafim-kim-chaewon-hot-fancam",
     title: "Kim Chaewon “HOT” fancam",
     category: "kpop",

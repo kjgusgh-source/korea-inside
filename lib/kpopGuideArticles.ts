@@ -147,6 +147,13 @@ export type KpopGuideArticle = {
       label: "Boy group guide",
     },
     {
+      title: "BABYMONSTER Ahyeon Fancam Spotlight",
+      description:
+        "A friendly look at BABYMONSTER Ahyeon’s MBCkpop #최애ZIP캠 compilation, from DRIP to SUGAR HONEY ICE TEA, and why it is a good entry point for noticing her stage presence.",
+      href: "/kpop/babymonster-ahyeon-fancam-spotlight",
+      label: "K-pop spotlight",
+    },
+    {
       title:
         "K-pop Spotlight: Why RESCENE Woni Is Getting Attention Through Fancams",
       description:
