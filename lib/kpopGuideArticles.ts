@@ -116,11 +116,11 @@ export type KpopGuideArticle = {
       label: "Fandom basics",
     },
     {
-        title: "What is an ending fairy in K-pop?",
+        title: "What Is an Ending Fairy?",
         description:
-          "Learn what ending fairy means, why final close-up shots go viral, and how idols use a few seconds to show charm after a stage.",
+          "A friendly guide to K-pop ending fairy meaning, why the final close-up matters, and how it differs from fancams, facecams, visual moments, and center parts.",
         href: "/kpop/what-is-ending-fairy",
-        label: "Music shows",
+        label: "K-pop starter guide",
       },
       {
         title: "What is maknae in K-pop?",

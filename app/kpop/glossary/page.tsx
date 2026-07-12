@@ -123,9 +123,9 @@ const glossaryTerms = [
     korean: "엔딩요정",
     romanization: "ending-yojeong",
     meaning:
-      "The idol shown in a close-up at the end of a music show performance.",
+      "The final close-up camera moment after a K-pop performance ends.",
     note:
-      "Ending fairy moments became famous because idols use that short final camera shot to show charm, humor, confidence, or a memorable expression.",
+      "Fans notice timing, breathing, expression control, and camera awareness — not only appearance. A strong ending fairy is about how the idol uses those final few seconds.",
     example: "An ending fairy clip can become viral even after the stage ends.",
     href: "/kpop/what-is-ending-fairy"
   },
