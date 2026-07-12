@@ -216,6 +216,28 @@ export const MEDIA_ITEMS: MediaItem[] = [
     guideHref: "/kpop/hearts2hearts-ian-style-fancam-spotlight",
   },
   {
+    id: "stray-kids-felix-soul-beam-facecam",
+    title: 'Stray Kids Felix "Soul Beam" Facecam',
+    category: "kpop",
+    categoryLabel: "K-pop Spotlight",
+    mediaType: "youtube",
+    description:
+      "A KBSKpop 얼빡직캠 focused on Stray Kids Felix’s “Soul Beam” stage, useful for watching facecam details, camera awareness, and how his visual image contrasts with the deep voice many fans remember from songs like MANIAC.",
+    cultureNote:
+      "A KBSKpop 얼빡직캠 focused on Stray Kids Felix’s “Soul Beam” stage, useful for watching facecam details, camera awareness, and how his visual image contrasts with the deep voice many fans remember from songs like MANIAC.",
+    tags: [
+      "Stray Kids",
+      "Felix",
+      "Soul Beam",
+      "Facecam",
+      "얼빡직캠",
+      "KBSKpop",
+    ],
+    youtubeId: "GETUc1c1uAs",
+    sourceLabel: "KBSKpop",
+    guideHref: "/kpop/stray-kids-felix-soul-beam-facecam-spotlight",
+  },
+  {
     id: "kpop-fancam-culture",
     title: "What an eolppak facecam feels like",
     category: "kpop",

@@ -213,6 +213,13 @@ export type KpopGuideArticle = {
       href: "/kpop/hearts2hearts-ian-style-fancam-spotlight",
       label: "K-pop spotlight",
     },
+    {
+      title: "Stray Kids Felix “Soul Beam” Facecam Spotlight",
+      description:
+        "A friendly look at Stray Kids Felix’s KBSKpop “Soul Beam” facecam, his deep-voice image, camera awareness, and why close-up fancams make his stage details easier to notice.",
+      href: "/kpop/stray-kids-felix-soul-beam-facecam-spotlight",
+      label: "K-pop spotlight",
+    },
   ];
   
   export function getKpopGuideArticles() {

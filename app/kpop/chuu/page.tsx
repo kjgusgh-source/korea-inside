@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "../../../components/SiteHeader";
 import JsonLd from "../../../components/JsonLd";
+import MediaFeatureCard from "../../../components/MediaFeatureCard";
+import { getMediaItems } from "../../../lib/media";
 
 const siteUrl = "https://haemilkorea.com";
 const pageUrl = `${siteUrl}/kpop/chuu`;
@@ -11,15 +13,40 @@ const pageTitle =
 const pageDescription =
   "A friendly HAEMIL profile of CHUU, the solo artist also known for Chuu Can Do It, her warm public image, solo career turn, and why her fancams are a good entry point.";
 
-const quickFacts = [
-  "Stage name: CHUU / 츄",
-  "Korean name: Kim Jiwoo / 김지우",
-  "Birth date: 1999-10-20",
-  "Artist type: Solo artist",
-  "Known for: Solo music, Chuu Can Do It, bright public image, warm variety presence",
-  "Former group: LOONA",
-  "Good entry point: “XO, My Cyberlove” fancam spotlight",
-  "Subscriber snapshot: At the time of this HAEMIL update, Chuu Can Do It is listed at around 1.41 million subscribers.",
+const intro =
+  "CHUU is a solo artist many people recognize before they fully know her music. On HAEMIL, she is treated as a solo artist — not through a LOONA group page. Her page starts with a fancam-focused entry point because member-focused videos are one of the easiest ways to understand individual performance style.";
+
+const profileFacts = [
+  { label: "Stage name", value: "CHUU / 츄" },
+  { label: "Korean name", value: "Kim Jiwoo / 김지우" },
+  { label: "Born", value: "October 20, 1999" },
+  { label: "Artist type", value: "Solo artist" },
+  {
+    label: "Known for",
+    value:
+      "Solo music, Chuu Can Do It, bright public image, warm variety presence",
+  },
+  { label: "Former group", value: "LOONA" },
+  {
+    label: "Subscriber snapshot",
+    value:
+      "At the time of this HAEMIL update, Chuu Can Do It is listed at around 1.41 million subscribers.",
+  },
+];
+
+const whyFansLike = [
+  "Many fans see CHUU as someone who kept her warmth and continued building her own name after a difficult agency transition — not as a simple underdog story or fan-war topic.",
+  "Her public image is not only bright or cute. Solo stages show expression control, camera awareness, and how warmth becomes a performance style.",
+  "Chuu Can Do It helped make her non-stage image familiar to many viewers, but her fancams show how she carries a stage when the camera keeps returning to one person.",
+  "For new listeners, her “XO, My Cyberlove” fancam works well as a first clip because small facial details are easier to notice in a solo performance.",
+];
+
+const watchPoints = [
+  "Start with the “XO, My Cyberlove” fancam before trying to learn every part of her career at once.",
+  "Watch how she uses her face without turning every moment into the same expression.",
+  "Notice camera awareness — eye contact, softer lines, and resets between expressions.",
+  "Try a three-pass watch: casual first, then expressions, then small transitions before and after obvious camera moments.",
+  "Read the fancam spotlight for a longer guide to her solo-stage style.",
 ];
 
 const relatedGuides = [
@@ -81,6 +108,10 @@ export const metadata: Metadata = {
 };
 
 export default function ChuuProfilePage() {
+  const featuredMedia = getMediaItems().find(
+    (item) => item.id === "chuu-xo-my-cyberlove-mcountdown-fancam"
+  );
+
   const structuredData = [
     {
       "@context": "https://schema.org",
@@ -145,173 +176,174 @@ export default function ChuuProfilePage() {
       <JsonLd data={structuredData} />
 
       <main className="min-h-screen bg-[var(--background)] text-[var(--text)]">
-        <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 py-6 md:px-8 md:py-8">
-          <SiteHeader />
+        <SiteHeader />
 
-          <article className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-10">
-            <Link
-              href="/kpop"
-              className="mb-6 inline-flex text-sm font-semibold text-[var(--accent)]"
-            >
-              ← Back to K-pop
-            </Link>
+        <section className="mx-auto max-w-6xl px-5 py-10 md:px-8 md:py-14">
+          <Link
+            href="/kpop"
+            className="text-sm font-semibold text-[var(--accent)] transition hover:opacity-80"
+          >
+            ← Back to K-pop
+          </Link>
 
+          <div className="mt-8 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 shadow-sm md:p-10">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
               Solo artist profile
             </p>
 
-            <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
-              {pageTitle}
+            <h1 className="mt-4 text-4xl font-semibold leading-tight md:text-6xl">
+              CHUU
             </h1>
 
-            <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
-              CHUU is one of those K-pop names many people recognize before they
-              fully know her music. On HAEMIL, she is treated as a solo artist —
-              not through a LOONA group page.
-            </p>
-          </article>
-
-          <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
-              Quick facts
+            <p className="mt-3 text-lg font-medium text-[var(--muted)]">
+              Solo artist · Former LOONA member · Chuu Can Do It
             </p>
 
-            <ul className="mt-4 space-y-3 text-base leading-7 text-[var(--muted)] md:text-lg">
-              {quickFacts.map((fact) => (
-                <li key={fact} className="flex gap-3">
-                  <span className="text-[var(--gold)]">•</span>
-                  <span>{fact}</span>
-                </li>
-              ))}
-            </ul>
+            <div className="mt-6 grid gap-5 md:grid-cols-2 md:items-start md:gap-6">
+              <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-4 md:p-5">
+                <p className="text-base leading-8 text-[var(--muted)] md:text-lg">
+                  {intro}
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-4 md:p-5">
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
+                  Quick notes
+                </p>
+                <p className="mt-1.5 text-sm leading-6 text-[var(--muted)]">
+                  A few basics before you watch the fancam.
+                </p>
+                <dl className="mt-3 space-y-2.5">
+                  {profileFacts.map((fact) => (
+                    <div key={fact.label}>
+                      <dt className="text-xs font-semibold uppercase tracking-[0.15em] text-[var(--text)]">
+                        {fact.label}
+                      </dt>
+                      <dd className="mt-1 text-sm leading-6 text-[var(--muted)]">
+                        {fact.value}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+            </div>
+          </div>
+
+          <section className="mt-8 grid gap-5 lg:grid-cols-3">
+            <article className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 shadow-sm lg:col-span-2">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
+                Why fans notice CHUU
+              </p>
+
+              <div className="mt-5 space-y-4">
+                {whyFansLike.map((point) => (
+                  <p
+                    key={point}
+                    className="rounded-2xl bg-[var(--surface)] p-4 text-sm leading-7 text-[var(--muted)]"
+                  >
+                    {point}
+                  </p>
+                ))}
+              </div>
+            </article>
+
+            <article className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 shadow-sm">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
+                Watch points
+              </p>
+
+              <ul className="mt-5 space-y-3 text-sm leading-7 text-[var(--muted)]">
+                {watchPoints.map((point) => (
+                  <li key={point} className="rounded-2xl bg-[var(--surface)] p-4">
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </article>
           </section>
 
-          <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
+          <section className="mt-8 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 shadow-sm md:p-8">
             <div className="space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
               <p>
-                CHUU is one of those K-pop names many people recognize before
-                they fully know her music.
-              </p>
-
-              <p>Some people first met her through LOONA.</p>
-
-              <p>Some found her through variety clips.</p>
-
-              <p>
-                Some know her from Chuu Can Do It, the YouTube show connected to
-                her warm and approachable public image.
-              </p>
-
-              <p>
-                At the time of this HAEMIL update, the Chuu Can Do It channel is
-                listed at around 1.41 million subscribers. That number can
-                change, but it shows how familiar her non-stage image has become
-                to many viewers.
+                Some people first met her through LOONA. Some found her through
+                variety clips. Some know her from Chuu Can Do It. At the time of
+                this HAEMIL update, the channel is listed at around 1.41 million
+                subscribers — a snapshot that can change, but it shows how
+                familiar her non-stage image has become.
               </p>
 
               <p>
                 Still, CHUU should not be explained only as &quot;bright&quot; or
-                &quot;cute.&quot;
-              </p>
-
-              <p>That is part of her image, but not the whole thing.</p>
-
-              <p>
-                CHUU is also a solo artist who had to rebuild her public path
-                after a difficult agency transition. That story should be handled
-                carefully. It is not simply an &quot;underdog wins&quot; story,
-                and it should not become fan-war content.
-              </p>
-
-              <p>A better way to understand it is this:</p>
-
-              <p>
-                Many fans see CHUU as someone who kept her warmth, stayed visible
-                through different kinds of work, and continued building her own
-                name after a complicated period.
+                &quot;cute.&quot; She is also a solo artist who rebuilt her public
+                path after a difficult agency transition. Many fans see her as
+                someone who kept her warmth and stayed visible through different
+                kinds of work.
               </p>
 
               <p>
-                That is why her solo stages can feel meaningful to watch.
+                When CHUU performs alone, the camera keeps returning to the same
+                person. That makes small details easier to notice — a smile, a
+                quick eye change, a softer line, a reset between expressions.
+                Friendly, but not careless. Cute, but not one-note. Soft, but
+                still aware of the stage.
               </p>
 
               <p>
-                When CHUU performs alone, the stage depends on her timing,
-                expression control, and camera awareness. In a group, attention
-                can move between members. In a solo performance, the camera keeps
-                returning to the same person.
+                If you want to start with one performance, her{" "}
+                <Link
+                  href="/kpop/chuu-xo-my-cyberlove-fancam-spotlight"
+                  className="font-semibold text-[var(--accent)]"
+                >
+                  “XO, My Cyberlove” fancam spotlight
+                </Link>{" "}
+                is a useful place to begin.
               </p>
-
-              <p>That makes small details easier to notice.</p>
-
-              <p>A smile.</p>
-
-              <p>A quick eye change.</p>
-
-              <p>A softer line.</p>
-
-              <p>A brighter camera moment.</p>
-
-              <p>A reset between expressions.</p>
-
-              <p>
-                Those details are part of why CHUU&apos;s fancams can work well
-                for beginners.
-              </p>
-
-              <p>
-                They show how her public warmth becomes a performance style.
-              </p>
-
-              <p>Friendly, but not careless.</p>
-
-              <p>Cute, but not one-note.</p>
-
-              <p>Soft, but still aware of the stage.</p>
-
-              <p>
-                For HAEMIL readers, CHUU is a good solo artist entry point
-                because her career connects several sides of K-pop:
-              </p>
-
-              <p>a group history,</p>
-
-              <p>a recognizable variety image,</p>
-
-              <p>a YouTube presence,</p>
-
-              <p>a solo career turn,</p>
-
-              <p>
-                and fancams that show how much expression control matters when
-                one performer carries the frame.
-              </p>
-
-              <p>
-                If you want to start with one performance, her &quot;XO, My
-                Cyberlove&quot; fancam is a useful place to begin.
-              </p>
-
-              <p>Watch it casually first.</p>
-
-              <p>Then watch her expressions.</p>
-
-              <p>
-                Then watch the small transitions before and after the obvious
-                camera moments.
-              </p>
-
-              <p>That is where her solo-stage style becomes clearer.</p>
             </div>
           </section>
 
-          <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">
+          <section className="mt-10">
+            <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+                  Video shelf
+                </p>
+                <h2 className="mt-3 text-3xl font-semibold">
+                  Start with one clip
+                </h2>
+              </div>
+
+              <Link
+                href="/kpop/chuu-xo-my-cyberlove-fancam-spotlight"
+                className="text-sm font-semibold text-[var(--accent)] transition hover:opacity-80"
+              >
+                Open fancam spotlight →
+              </Link>
+            </div>
+
+            {featuredMedia ? (
+              <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+                <MediaFeatureCard
+                  item={featuredMedia}
+                  featured
+                  showGuideLink
+                  currentPath="/kpop/chuu"
+                />
+              </div>
+            ) : (
+              <div className="mt-8 rounded-[1.5rem] border border-dashed border-[var(--border)] bg-[var(--card)] p-6">
+                <p className="text-sm font-semibold text-[var(--text)]">
+                  Videos coming soon
+                </p>
+              </div>
+            )}
+          </section>
+
+          <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">
             <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
                   Keep exploring
                 </p>
-
                 <h2 className="mt-3 text-3xl font-semibold">
                   Related K-pop guides
                 </h2>
@@ -351,7 +383,7 @@ export default function ChuuProfilePage() {
               ))}
             </div>
           </section>
-        </div>
+        </section>
       </main>
     </>
   );

@@ -948,6 +948,62 @@ export const KPOP_GROUPS: KpopGroup[] = [
     ],
   },
   {
+    id: "stray-kids",
+    name: "Stray Kids",
+    category: "boy-groups",
+    description:
+      "Stray Kids (스트레이 키즈) is a K-pop boy group from JYP Entertainment. HAEMIL currently starts with Felix as the first covered member because his facecam, deep-voice contrast, and stage presence make him a beginner-friendly entry point into the group’s performance image. Other official members exist — member guides may be added later.",
+    members: [
+      {
+        id: "felix",
+        name: "Felix",
+        note: "A Stray Kids member many casual listeners first remember through his deep voice, with facecams that also show expression control, visual contrast, and camera awareness.",
+        intro:
+          "Felix is a member of Stray Kids. Many casual K-pop viewers first remember him through his unusually deep voice, especially in songs fans often mention like MANIAC. On HAEMIL, his page starts with a KBSKpop “Soul Beam” facecam because it shows another side of his appeal: close-up expression control, camera awareness, visual contrast, and stage presence.",
+        profileFacts: [
+          {
+            label: "Stage name",
+            value: "Felix / 필릭스",
+          },
+          {
+            label: "Born",
+            value: "September 15, 2000",
+          },
+          {
+            label: "Group",
+            value:
+              "Stray Kids (스트레이 키즈), a boy group from JYP Entertainment.",
+          },
+          {
+            label: "Agency",
+            value: "JYP Entertainment",
+          },
+        ],
+        whyFansLike: [
+          "Many casual listeners first remember Felix because of his deep voice — MANIAC is one song fans often bring up, but it is not the whole story.",
+          "His public image often has contrast: a low vocal color alongside softer facial impressions, bright expressions, and camera-friendly styling.",
+          "Close-up facecams show expression timing and stage presence that a voice-only memory cannot explain on its own.",
+          "For new Stray Kids fans, Felix works well as a first member to follow because the fancam makes visual and performance details easier to read.",
+        ],
+        watchPoints: [
+          "Start with the “Soul Beam” facecam before trying to learn every Stray Kids song at once.",
+          "Watch small eye changes, soft expressions, and direct camera moments — not only the deep-voice image you may already know.",
+          "Notice whether his attention stays steady when the camera is close.",
+          "Try a three-pass watch: casual first, then expressions, then think about voice-vs-face contrast.",
+          "Compare one facecam with a full-group stage to see why member-focused videos matter in K-pop.",
+        ],
+        relatedMediaIds: ["stray-kids-felix-soul-beam-facecam"],
+      },
+    ],
+    starterTags: [
+      "Fancam",
+      "Boy group",
+      "JYP Entertainment",
+      "Facecam",
+      "Close-up fancam",
+    ],
+  },
+  {
     id: "bts",
     name: "BTS",
     category: "boy-groups",
