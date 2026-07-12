@@ -90,9 +90,9 @@ const glossaryTerms = [
     romanization: "jikcam",
     meaning: "A video focused on one idol during a performance.",
     note:
-      "Fancams are a big part of K-pop culture because they let fans watch small expressions, gestures, and details that are easy to miss in a full-stage video.",
+      "In K-pop today, many fancams are official music-show videos, not only fan recordings. They let fans watch small expressions, styling, and details that are easy to miss in a full-stage video.",
     example: "A Karina fancam can show her sharp stage presence clearly.",
-    href: "/kpop/what-is-fancam"
+    href: "/kpop/what-is-a-fancam"
   },
   {
     term: "Rookie group",

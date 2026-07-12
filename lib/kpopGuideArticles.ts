@@ -14,11 +14,11 @@ export type KpopGuideArticle = {
       label: "Fan words",
     },
     {
-      title: "What is a fancam in K-pop?",
+      title: "What Is a Fancam?",
       description:
-        "Learn why fans watch fancams, what makes them go viral, and how facecams and eolppak-jikcam clips are different.",
+        "A friendly guide to K-pop fancam meaning, why member-focused videos matter, and how fancams differ from facecams, ending fairy moments, and full-stage clips.",
       href: "/kpop/what-is-a-fancam",
-      label: "Stage culture",
+      label: "K-pop starter guide",
     },
     {
       title: "What Is an “얼빡직캠”?",
