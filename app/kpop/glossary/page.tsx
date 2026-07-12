@@ -164,6 +164,39 @@ const glossaryTerms = [
     href: "/kpop/what-is-a-fancam"
   },
   {
+    term: "Debut",
+    korean: "데뷔",
+    romanization: "debyu",
+    meaning: "The official start of a K-pop idol, solo artist, or group.",
+    note:
+      "A debut usually introduces an artist through a first official release, music video, stage, or promotion period. It is different from a comeback, which happens after debut.",
+    example:
+      "Fans may say a group is preparing for debut when teasers and first-release promotions begin.",
+    href: "/kpop/what-does-debut-mean-in-kpop",
+  },
+  {
+    term: "Pre-debut",
+    korean: "데뷔 전",
+    romanization: "debyu jeon",
+    meaning: "The period before an idol, solo artist, or group officially debuts.",
+    note:
+      "Pre-debut content can include trainee history, teasers, survival shows, practice videos, or early public appearances before the official start.",
+    example:
+      "Some fans follow idols from pre-debut before the group releases its first official song.",
+    href: "/kpop/what-does-debut-mean-in-kpop",
+  },
+  {
+    term: "Trainee",
+    korean: "연습생",
+    romanization: "yeonsseupsaeng",
+    meaning: "A person preparing to become an idol before debut.",
+    note:
+      "Trainees may practice singing, dance, performance, language, media skills, and stage basics before an official debut.",
+    example:
+      "A trainee may become part of a debut lineup after years of practice.",
+    href: "/kpop/what-does-debut-mean-in-kpop",
+  },
+  {
     term: "Rookie group",
     korean: "루키",
     romanization: "ruki",

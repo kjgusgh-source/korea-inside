@@ -112,6 +112,13 @@ export type KpopGuideArticle = {
       label: "Fan words",
     },
     {
+      title: "What Does Debut Mean in K-pop?",
+      description:
+        "A friendly guide to K-pop debut meaning, pre-debut, trainees, rookie groups, and how debut differs from a comeback.",
+      href: "/kpop/what-does-debut-mean-in-kpop",
+      label: "K-pop starter guide",
+    },
+    {
       title: 'What Does "Rookie Group" Mean in K-pop?',
       description:
         "A simple guide to how K-pop fans discover rookie groups through first stages, short clips, fancams, and the first member they remember.",
