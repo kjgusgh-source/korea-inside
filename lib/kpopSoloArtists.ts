@@ -26,6 +26,15 @@ export const KPOP_SOLO_ARTISTS: KpopSoloArtist[] = [
     href: "/kpop/choi-yena-catch-catch-fancam-spotlight",
     tags: ["Solo artist", "Former IZ*ONE", "Close-up fancam", "Catch Catch"],
   },
+  {
+    id: "chuu",
+    name: "CHUU",
+    note: "Solo artist · Former LOONA member · Chuu Can Do It",
+    description:
+      "Known for her bright public image, solo music, Chuu Can Do It variety presence, and a fan-supported career turn after a difficult agency transition.",
+    href: "/kpop/chuu-xo-my-cyberlove-fancam-spotlight",
+    tags: ["Solo artist", "Former LOONA", "Fancam", "Chuu Can Do It"],
+  },
 ];
 
 export function getKpopSoloArtists() {

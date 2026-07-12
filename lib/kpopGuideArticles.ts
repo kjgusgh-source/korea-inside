@@ -199,6 +199,13 @@ export type KpopGuideArticle = {
       href: "/kpop/choi-yena-catch-catch-fancam-spotlight",
       label: "Solo spotlight",
     },
+    {
+      title: "CHUU “XO, My Cyberlove” Fancam Spotlight",
+      description:
+        "A friendly look at CHUU’s Mnet M2 “XO, My Cyberlove” fancam, her solo artist charm, Chuu Can Do It presence, and why her bright but controlled stage style is easy to notice.",
+      href: "/kpop/chuu-xo-my-cyberlove-fancam-spotlight",
+      label: "K-pop spotlight",
+    },
   ];
   
   export function getKpopGuideArticles() {

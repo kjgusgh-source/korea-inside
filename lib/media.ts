@@ -172,6 +172,28 @@ export const MEDIA_ITEMS: MediaItem[] = [
     guideHref: "/kpop/choi-yena-catch-catch-fancam-spotlight",
   },
   {
+    id: "chuu-xo-my-cyberlove-mcountdown-fancam",
+    title: 'CHUU "XO, My Cyberlove" FanCam',
+    category: "kpop",
+    categoryLabel: "K-pop Spotlight",
+    mediaType: "youtube",
+    description:
+      "An Mnet M2 입덕직캠 focused on CHUU’s “XO, My Cyberlove” stage, useful for watching her solo-stage expressions, camera awareness, and bright but controlled performance mood.",
+    cultureNote:
+      "An Mnet M2 입덕직캠 focused on CHUU’s “XO, My Cyberlove” stage, useful for watching her solo-stage expressions, camera awareness, and bright but controlled performance mood.",
+    tags: [
+      "CHUU",
+      "Chuu",
+      "XO My Cyberlove",
+      "Fancam",
+      "MCOUNTDOWN",
+      "Solo artist",
+    ],
+    youtubeId: "_-g3FoBXD3I",
+    sourceLabel: "Mnet M2",
+    guideHref: "/kpop/chuu-xo-my-cyberlove-fancam-spotlight",
+  },
+  {
     id: "kpop-fancam-culture",
     title: "What an eolppak facecam feels like",
     category: "kpop",
