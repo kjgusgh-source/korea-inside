@@ -65,6 +65,39 @@ const glossaryTerms = [
     href: "/kpop/what-does-comeback-mean-in-kpop",
   },
   {
+    term: "Title track",
+    korean: "타이틀곡",
+    romanization: "taiteulgok",
+    meaning: "The main song promoted during a K-pop comeback.",
+    note:
+      "A title track usually gets the music video, main choreography, music show stages, fancams, and the most public attention. It represents the comeback, but it is not always every fan’s favorite song.",
+    example:
+      "Fans may talk about whether the title track matches the comeback concept.",
+    href: "/kpop/what-is-a-title-track-in-kpop",
+  },
+  {
+    term: "B-side",
+    korean: "수록곡",
+    romanization: "surokgok",
+    meaning: "A song on a K-pop album that is not the main title track.",
+    note:
+      "B-sides are not usually the main promoted song, but they can still become fan favorites or be performed on stages.",
+    example:
+      "Some fans may prefer a B-side even when the title track gets the main promotions.",
+    href: "/kpop/what-is-a-title-track-in-kpop",
+  },
+  {
+    term: "Pre-release",
+    korean: "선공개곡",
+    romanization: "seongonggaegok",
+    meaning: "A song released before the main comeback or title track.",
+    note:
+      "A pre-release can build interest before the full comeback, but it is not always the main promoted title track.",
+    example:
+      "A group may release a pre-release song before the title track and album drop.",
+    href: "/kpop/what-is-a-title-track-in-kpop",
+  },
+  {
     term: "Concept",
     korean: "컨셉",
     romanization: "keonsept",

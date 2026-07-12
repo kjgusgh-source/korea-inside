@@ -91,6 +91,13 @@ export type KpopGuideArticle = {
       label: "K-pop starter guide",
     },
     {
+      title: "What Is a Title Track in K-pop?",
+      description:
+        "A friendly guide to title track meaning in K-pop, how it differs from B-sides and pre-releases, and why one song usually represents a comeback.",
+      href: "/kpop/what-is-a-title-track-in-kpop",
+      label: "K-pop starter guide",
+    },
+    {
       title: "What Does Concept Mean in K-pop?",
       description:
         "A friendly guide to K-pop concept meaning, how idols change their image each comeback, and how music, styling, choreography, stages, and visuals create an era.",
