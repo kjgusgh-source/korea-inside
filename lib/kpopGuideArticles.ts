@@ -123,11 +123,11 @@ export type KpopGuideArticle = {
         label: "K-pop starter guide",
       },
       {
-        title: "What is maknae in K-pop?",
+        title: "What Does Maknae Mean?",
         description:
-          "Learn what maknae means, why the youngest member matters in K-pop, and how fans use words like golden maknae.",
+          "A friendly guide to maknae meaning in K-pop, why the youngest member matters, and how maknae differs from center, visual, fancam, and ending fairy talk.",
         href: "/kpop/what-is-maknae",
-        label: "Korean fan words",
+        label: "K-pop starter guide",
       },
       {
         title: "What is center in K-pop?",

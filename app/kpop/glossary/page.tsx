@@ -45,10 +45,10 @@ const glossaryTerms = [
     term: "Maknae",
     korean: "막내",
     romanization: "maknae",
-    meaning: "The youngest member of a group.",
+    meaning: "The youngest person in a group, family, team, or social setting.",
     note:
-      "Maknae is not only about age. In K-pop, fans often enjoy watching how the youngest member grows inside the team.",
-    example: "Jung Kook is BTS’s maknae.",
+      "In K-pop, maknae usually means the youngest idol member. Fans often notice growth, group dynamics, and how older members interact with the youngest — not only age.",
+    example: "Fans may watch a maknae grow more confident across comeback eras.",
     href: "/kpop/what-is-maknae",
   },
   {
