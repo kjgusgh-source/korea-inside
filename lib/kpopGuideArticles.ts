@@ -56,18 +56,18 @@ export type KpopGuideArticle = {
       label: "K-pop starter guide",
     },
     {
-      title: "What Is an “얼빡직캠”?",
+      title: "What Is a Close-up Fancam?",
       description:
-        "A friendly guide to Korean close-up fancams, where one face, one expression, or one quick mood change can make a stage easy to replay.",
+        "A friendly guide to close-up fancam, facecam, and 얼빡직캠 meaning in K-pop, and how face-focused videos differ from fancams and ending fairy moments.",
       href: "/kpop/what-is-close-up-fancam-in-kpop",
-      label: "K-pop term",
+      label: "K-pop starter guide",
     },
     {
-      title: "What does bias mean in K-pop?",
+      title: "What Does Bias Mean in K-pop?",
       description:
-        "Understand bias, bias wrecker, ultimate bias, and Korean fan words like choe-ae and cha-ae.",
+        "A friendly guide to K-pop bias meaning, favorite members, bias wreckers, ultimate bias, 최애, 차애, and why one member keeps catching your attention.",
       href: "/kpop/what-does-bias-mean",
-      label: "Fandom basics",
+      label: "K-pop starter guide",
     },
     {
       title: "K-pop Glossary",

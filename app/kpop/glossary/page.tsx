@@ -37,8 +37,9 @@ const glossaryTerms = [
     romanization: "choe-ae",
     meaning: "Your favorite member in a K-pop group.",
     note:
-      "In English-speaking fandoms, people often say 'my bias.' In Korean, fans usually say 최애, which means the person you like the most.",
-    example: "My bias in IVE is Wonyoung.",
+      "In fandom talk, bias is often the member you naturally notice, follow, rewatch, or feel attached to — not only a simple favorite. Having a bias does not mean you need to ignore other members.",
+    example:
+      "You watch one fancam and suddenly keep searching that member.",
     href: "/kpop/what-does-bias-mean",
   },
   {
@@ -114,9 +115,9 @@ const glossaryTerms = [
     meaning:
       "A Korean fan slang term for a close-up fancam where the idol’s face fills much of the screen.",
     note:
-      "Fans watch this kind of fancam for expressions, eye contact, and tiny mood changes that are easy to miss in a full-stage video.",
+      "It is casual fandom language, not a formal broadcast term. Fans watch for expressions, eye contact, breathing, and tiny mood changes that are easy to miss in a full-stage video.",
     example:
-      "Kim ChaeYeon’s “Baby Flower” close-up fancam is a good example of why an 얼빡직캠 can become an easy first entry point.",
+      "Eye contact during a quiet line can become the moment fans replay in an 얼빡직캠.",
     href: "/kpop/what-is-close-up-fancam-in-kpop",
   },
   {
