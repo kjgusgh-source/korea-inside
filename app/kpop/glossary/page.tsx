@@ -143,6 +143,18 @@ const glossaryTerms = [
     href: "/kpop/what-is-killing-part-in-kpop",
   },
   {
+    term: "Stage presence",
+    korean: "무대 존재감",
+    romanization: "mude jonsaegam",
+    meaning:
+      "The way an idol holds attention during a performance.",
+    note:
+      "Stage presence is not only dancing hard or making big expressions. It can include timing, expression control, camera awareness, energy control, and how well the idol fits the song concept.",
+    example:
+      "Fans may notice stage presence when a member stays interesting even while not singing or standing in the center.",
+    href: "/kpop/what-is-stage-presence-in-kpop",
+  },
+  {
     term: "Aegyo",
     korean: "애교",
     romanization: "aegyo",

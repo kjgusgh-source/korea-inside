@@ -137,6 +137,13 @@ export type KpopGuideArticle = {
         label: "K-pop starter guide",
       },
       {
+        title: "What Is Stage Presence in K-pop?",
+        description:
+          "A friendly guide to stage presence in K-pop, why some idols are hard to look away from, and how it connects to fancams, center, visual, and killing parts.",
+        href: "/kpop/what-is-stage-presence-in-kpop",
+        label: "K-pop starter guide",
+      },
+      {
         title: "What Is Center in K-pop?",
         description:
           "A friendly guide to center meaning in K-pop, why the focus member matters, and how center differs from visual, killing part, fancam, and ending fairy moments.",
