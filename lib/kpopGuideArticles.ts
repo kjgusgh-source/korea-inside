@@ -137,11 +137,11 @@ export type KpopGuideArticle = {
         label: "K-pop starter guide",
       },
       {
-        title: "What is center in K-pop?",
+        title: "What Is Center in K-pop?",
         description:
-          "Learn what center means in K-pop, why the center member matters, and how fans understand stage focus and group image.",
+          "A friendly guide to center meaning in K-pop, why the focus member matters, and how center differs from visual, killing part, fancam, and ending fairy moments.",
         href: "/kpop/what-is-center-in-kpop",
-        label: "K-pop positions",
+        label: "K-pop starter guide",
       },
       {
         title: "What is aegyo in K-pop?",

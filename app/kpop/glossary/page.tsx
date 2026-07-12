@@ -66,10 +66,11 @@ const glossaryTerms = [
     korean: "센터",
     romanization: "senteo",
     meaning:
-      "The member who often represents the group’s image or catches attention in a performance.",
+      "The member placed in the main focus of a group’s stage, choreography, photo, teaser, or performance moment.",
     note:
-      "Center does not only mean standing in the middle. It can also mean the member who best delivers the group’s mood at a certain moment.",
-    example: "Wonyoung is often talked about as a strong center figure.",
+      "Center is about focus and placement, not only standing in the literal middle. It does not automatically mean the best singer, dancer, or most popular member.",
+    example:
+      "The member in the middle of the chorus formation is often where fans first notice center.",
     href: "/kpop/what-is-center-in-kpop"
   },
   {
