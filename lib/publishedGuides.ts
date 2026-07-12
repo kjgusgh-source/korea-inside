@@ -25,6 +25,7 @@ export const publishedMemberIds = [
   { groupId: "le-sserafim", memberId: "kim-chaewon" },
   { groupId: "triples", memberId: "kim-chaeyeon" },
   { groupId: "babymonster", memberId: "ahyeon" },
+  { groupId: "hearts2hearts", memberId: "ian" },
 ];
 
 export function getPublishedMemberGuides() {

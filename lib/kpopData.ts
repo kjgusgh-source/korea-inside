@@ -888,6 +888,66 @@ export const KPOP_GROUPS: KpopGroup[] = [
     ],
   },
   {
+    id: "hearts2hearts",
+    name: "Hearts2Hearts",
+    category: "girl-groups",
+    description:
+      "Hearts2Hearts (하츠투하츠) is a rookie girl group from SM Entertainment that debuted on February 24, 2025. HAEMIL currently starts with Ian as the first covered member because her STYLE fancam and challenge-friendly performance moments make her a beginner-friendly entry point into the group’s stage image. Other official members exist — member guides may be added later.",
+    members: [
+      {
+        id: "ian",
+        name: "Ian",
+        note: "A Hearts2Hearts member who became easier for many casual viewers to notice through challenge-friendly STYLE performance moments, point choreography, and clear stage timing.",
+        intro:
+          "Ian is a member of Hearts2Hearts. On HAEMIL, her page starts with her “STYLE” fancam because many casual viewers noticed her through challenge-friendly performance moments. Her appeal should be explained through point choreography, camera timing, and stage presence — not as someone defined only by one viral clip.",
+        profileFacts: [
+          {
+            label: "Stage name",
+            value: "Ian / 이안",
+          },
+          {
+            label: "Reported birth date",
+            value: "October 9, 2009",
+          },
+          {
+            label: "Group",
+            value:
+              "Hearts2Hearts (하츠투하츠), a rookie girl group from SM Entertainment.",
+          },
+          {
+            label: "Agency",
+            value: "SM Entertainment",
+          },
+          {
+            label: "Group debut",
+            value: "February 24, 2025",
+          },
+        ],
+        whyFansLike: [
+          "Her STYLE fancam shows how a challenge-friendly point move can make a rookie member easier to recognize without reducing her to one viral clip.",
+          "Timing and expression control matter — the movement lands clearly, then connects back to the rest of the stage.",
+          "For new Hearts2Hearts fans, Ian works well as a first member to follow because the fancam makes point choreography and stage presence easier to read.",
+          "The Ian challenge may be the doorway, but the fancam shows what happens before and after the familiar moment.",
+        ],
+        watchPoints: [
+          "Start with the STYLE fancam before trying to learn every Hearts2Hearts member at once.",
+          "Watch the challenge-friendly part, then what Ian does right before and after it.",
+          "Notice facial timing and whether the performance still holds together outside the short clip.",
+          "Try a three-pass watch: familiar part first, then transitions, then face and timing when she is not the main highlight.",
+          "Compare one fancam with a full-group stage to see why member-focused videos matter in K-pop.",
+        ],
+        relatedMediaIds: ["hearts2hearts-ian-style-music-core-fancam"],
+      },
+    ],
+    starterTags: [
+      "Fancam",
+      "Girl group",
+      "SM Entertainment",
+      "Rookie group",
+      "Music Core",
+    ],
+  },
+  {
     id: "bts",
     name: "BTS",
     category: "boy-groups",

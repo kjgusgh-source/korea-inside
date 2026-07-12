@@ -16,6 +16,7 @@ const guideHrefByKey = {
   endingFairy: "/kpop/what-is-ending-fairy",
   rookie: "/kpop/what-is-a-rookie-group-in-kpop",
   stagePresence: "/kpop/what-is-stage-presence-in-kpop",
+  pointChoreography: "/kpop/what-is-point-choreography-in-kpop",
   visual: "/kpop/what-is-visual-in-kpop",
 } as const;
 
@@ -45,6 +46,7 @@ const relatedGuidesByMemberId: Record<string, GuideKey[]> = {
   woni: ["fancam", "rookie", "glossary"],
   "kim-chaeyeon": ["fancam", "glossary"],
   ahyeon: ["fancam", "stagePresence", "closeUpFancam", "killingPart"],
+  ian: ["fancam", "pointChoreography", "stagePresence", "killingPart"],
 };
 
 export function getRelatedKpopGuidesForMember(

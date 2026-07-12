@@ -194,6 +194,28 @@ export const MEDIA_ITEMS: MediaItem[] = [
     guideHref: "/kpop/chuu-xo-my-cyberlove-fancam-spotlight",
   },
   {
+    id: "hearts2hearts-ian-style-music-core-fancam",
+    title: 'Hearts2Hearts Ian "STYLE" FanCam',
+    category: "kpop",
+    categoryLabel: "K-pop Spotlight",
+    mediaType: "youtube",
+    description:
+      "An MBCkpop 최애직캠 focused on Hearts2Hearts Ian’s “STYLE” stage, useful for watching how a challenge-friendly point move, facial timing, and stage presence can make a rookie member easier to recognize.",
+    cultureNote:
+      "An MBCkpop 최애직캠 focused on Hearts2Hearts Ian’s “STYLE” stage, useful for watching how a challenge-friendly point move, facial timing, and stage presence can make a rookie member easier to recognize.",
+    tags: [
+      "Hearts2Hearts",
+      "Ian",
+      "STYLE",
+      "Fancam",
+      "Music Core",
+      "Rookie group",
+    ],
+    youtubeId: "HvnrZARfPi0",
+    sourceLabel: "MBCkpop",
+    guideHref: "/kpop/hearts2hearts-ian-style-fancam-spotlight",
+  },
+  {
     id: "kpop-fancam-culture",
     title: "What an eolppak facecam feels like",
     category: "kpop",

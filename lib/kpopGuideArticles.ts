@@ -206,6 +206,13 @@ export type KpopGuideArticle = {
       href: "/kpop/chuu-xo-my-cyberlove-fancam-spotlight",
       label: "K-pop spotlight",
     },
+    {
+      title: "Hearts2Hearts Ian “STYLE” Fancam Spotlight",
+      description:
+        "A friendly look at Hearts2Hearts Ian’s MBCkpop “STYLE” fancam, the Ian challenge effect, and why her point choreography, camera timing, and rookie-stage presence are easy to notice.",
+      href: "/kpop/hearts2hearts-ian-style-fancam-spotlight",
+      label: "K-pop spotlight",
+    },
   ];
   
   export function getKpopGuideArticles() {

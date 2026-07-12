@@ -14,6 +14,13 @@ const pageDescription =
 
 const relatedGuides = [
   {
+    label: "Solo artist profile",
+    title: "CHUU profile",
+    description:
+      "A friendly HAEMIL profile of CHUU, the solo artist also known for Chuu Can Do It, her warm public image, solo career turn, and why her fancams are a good entry point.",
+    href: "/kpop/chuu",
+  },
+  {
     label: "K-pop starter guide",
     title: "What is a fancam?",
     description:
