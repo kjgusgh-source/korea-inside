@@ -91,6 +91,13 @@ export type KpopGuideArticle = {
       label: "K-pop starter guide",
     },
     {
+      title: "What Does Concept Mean in K-pop?",
+      description:
+        "A friendly guide to K-pop concept meaning, how idols change their image each comeback, and how music, styling, choreography, stages, and visuals create an era.",
+      href: "/kpop/what-does-concept-mean-in-kpop",
+      label: "K-pop starter guide",
+    },
+    {
       title: "K-pop Glossary",
       description:
         "A friendly guide to Korean K-pop fan words like bias, maknae, fancam, ending fairy, and eolppak-jikcam.",

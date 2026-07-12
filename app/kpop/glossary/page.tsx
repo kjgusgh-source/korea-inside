@@ -65,6 +65,18 @@ const glossaryTerms = [
     href: "/kpop/what-does-comeback-mean-in-kpop",
   },
   {
+    term: "Concept",
+    korean: "컨셉",
+    romanization: "keonsept",
+    meaning:
+      "The overall mood, image, story, and style of a K-pop comeback, song, or era.",
+    note:
+      "A concept can include music, styling, choreography, music video, teaser photos, stage outfits, expressions, and how the group's image is presented.",
+    example:
+      "Fans may say a comeback has a bright concept, dark concept, elegant concept, cute concept, or summer concept.",
+    href: "/kpop/what-does-concept-mean-in-kpop",
+  },
+  {
     term: "Maknae",
     korean: "막내",
     romanization: "maknae",
