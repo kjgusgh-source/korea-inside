@@ -130,6 +130,18 @@ const glossaryTerms = [
     href: "/kpop/what-is-ending-fairy"
   },
   {
+    term: "Killing part",
+    korean: "킬링파트",
+    romanization: "killing part",
+    meaning:
+      "The short part of a song or performance that fans remember, replay, quote, or share.",
+    note:
+      "“Killing” here does not mean violence. In K-pop fan language, it means the standout moment that hits strongly — a vocal line, move, expression, or camera moment.",
+    example:
+      "Fans may replay one line before the chorus or a hand gesture everyone copies in a dance challenge.",
+    href: "/kpop/what-is-killing-part-in-kpop",
+  },
+  {
     term: "Aegyo",
     korean: "애교",
     romanization: "aegyo",

@@ -130,6 +130,13 @@ export type KpopGuideArticle = {
         label: "K-pop starter guide",
       },
       {
+        title: "What Is a Killing Part in K-pop?",
+        description:
+          "A friendly guide to K-pop killing part meaning, why fans replay certain lines or moves, and how it differs from center, fancam, ending fairy, and visual moments.",
+        href: "/kpop/what-is-killing-part-in-kpop",
+        label: "K-pop starter guide",
+      },
+      {
         title: "What is center in K-pop?",
         description:
           "Learn what center means in K-pop, why the center member matters, and how fans understand stage focus and group image.",
