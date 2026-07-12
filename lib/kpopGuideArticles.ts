@@ -70,6 +70,13 @@ export type KpopGuideArticle = {
       label: "K-pop starter guide",
     },
     {
+      title: "What Is a Bias Wrecker in K-pop?",
+      description:
+        "A friendly guide to bias wrecker meaning in K-pop, why another member keeps stealing your attention, and how it differs from your bias, ultimate bias, and bias line.",
+      href: "/kpop/what-is-a-bias-wrecker-in-kpop",
+      label: "K-pop starter guide",
+    },
+    {
       title: "K-pop Glossary",
       description:
         "A friendly guide to Korean K-pop fan words like bias, maknae, fancam, ending fairy, and eolppak-jikcam.",

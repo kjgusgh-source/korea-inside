@@ -43,6 +43,16 @@ const glossaryTerms = [
     href: "/kpop/what-does-bias-mean",
   },
   {
+    term: "Bias wrecker",
+    meaning:
+      "A member who makes a fan question their bias or keeps stealing their attention.",
+    note:
+      "Usually playful fandom language. A bias wrecker can appear through a fancam, killing part, funny clip, interview moment, or strong stage presence.",
+    example:
+      "You thought you had one bias, but another member's fancam keeps pulling you in.",
+    href: "/kpop/what-is-a-bias-wrecker-in-kpop",
+  },
+  {
     term: "Maknae",
     korean: "막내",
     romanization: "maknae",

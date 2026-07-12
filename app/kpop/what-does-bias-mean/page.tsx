@@ -24,6 +24,13 @@ const quickFacts = [
 const relatedGuides = [
   {
     label: "K-pop starter guide",
+    title: "What is a bias wrecker in K-pop?",
+    description:
+      "A friendly guide to bias wrecker meaning in K-pop, why another member keeps stealing your attention, and how it differs from your bias, ultimate bias, and bias line.",
+    href: "/kpop/what-is-a-bias-wrecker-in-kpop",
+  },
+  {
+    label: "K-pop starter guide",
     title: "What is a fancam?",
     description:
       "A friendly guide to K-pop fancam meaning, why member-focused videos matter, and how fancams differ from facecams, ending fairy moments, and full-stage clips.",
