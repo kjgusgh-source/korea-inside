@@ -77,6 +77,13 @@ export type KpopGuideArticle = {
       label: "K-pop starter guide",
     },
     {
+      title: "What Does Comeback Mean in K-pop?",
+      description:
+        "A friendly guide to K-pop comeback meaning, why new releases are called comebacks, and how teasers, title tracks, comeback stages, and promotions work.",
+      href: "/kpop/what-does-comeback-mean-in-kpop",
+      label: "K-pop starter guide",
+    },
+    {
       title: "K-pop Glossary",
       description:
         "A friendly guide to Korean K-pop fan words like bias, maknae, fancam, ending fairy, and eolppak-jikcam.",

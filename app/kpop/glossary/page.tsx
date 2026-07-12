@@ -53,6 +53,18 @@ const glossaryTerms = [
     href: "/kpop/what-is-a-bias-wrecker-in-kpop",
   },
   {
+    term: "Comeback",
+    korean: "컴백",
+    romanization: "keombaek",
+    meaning:
+      "A new release and promotion period by a K-pop artist or group.",
+    note:
+      "In K-pop, comeback does not always mean returning after a long absence. It usually means a new era with teasers, a title track, music video, stages, and promotions.",
+    example:
+      "Fans may say a group is having a comeback when they release a new title track and start promoting it on music shows.",
+    href: "/kpop/what-does-comeback-mean-in-kpop",
+  },
+  {
     term: "Maknae",
     korean: "막내",
     romanization: "maknae",
