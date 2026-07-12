@@ -49,6 +49,13 @@ export type KpopGuideArticle = {
       label: "K-pop starter guide",
     },
     {
+      title: "What Is Point Choreography in K-pop?",
+      description:
+        "A friendly guide to point choreography and 포인트 안무 in K-pop, the signature move fans remember, copy, replay, and connect to killing parts and dance challenges.",
+      href: "/kpop/what-is-point-choreography-in-kpop",
+      label: "K-pop starter guide",
+    },
+    {
       title: "What Is Stage Presence in K-pop?",
       description:
         "A friendly guide to stage presence in K-pop, why some idols are hard to look away from, and how it connects to fancams, center, visual, and killing parts.",

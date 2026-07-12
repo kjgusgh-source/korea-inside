@@ -166,6 +166,18 @@ const glossaryTerms = [
     href: "/kpop/what-is-killing-part-in-kpop",
   },
   {
+    term: "Point choreography",
+    korean: "포인트 안무",
+    romanization: "pointeu anmu",
+    meaning:
+      "The signature dance move or gesture people remember from a K-pop song.",
+    note:
+      "Point choreography often appears in the chorus or hook and helps a song become easy to recognize, copy, and share. It can become a killing part, but not every killing part is choreography.",
+    example:
+      "Fans may remember a comeback because the chorus has a clear 포인트 안무.",
+    href: "/kpop/what-is-point-choreography-in-kpop",
+  },
+  {
     term: "Stage presence",
     korean: "무대 존재감",
     romanization: "mude jonsaegam",
