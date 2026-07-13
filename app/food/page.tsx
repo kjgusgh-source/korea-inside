@@ -45,6 +45,16 @@ const STANDALONE_FOOD_GUIDES = [
     readingTime: "9 min read",
   },
   {
+    id: "korean-breakfast-guide-first-time",
+    category: "food",
+    categoryLabel: "Food guide",
+    title: "Korean Breakfast Guide for First-Time Visitors",
+    description:
+      "A practical guide to breakfast in Korea, from gimbap, convenience stores, gukbap, haejangguk, and seolleongtang to street toast, bakeries, brunch cafes, and hotel breakfast.",
+    href: "/food/korean-breakfast-guide-first-time",
+    readingTime: "8 min read",
+  },
+  {
     id: "gwangjang-market-food-guide-first-time",
     category: "food",
     categoryLabel: "Food guide",
