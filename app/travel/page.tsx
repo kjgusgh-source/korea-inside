@@ -75,6 +75,16 @@ const STANDALONE_TRAVEL_GUIDES = [
     readingTime: "9 min read",
   },
   {
+    id: "7-days-in-korea-itinerary-first-time",
+    category: "travel",
+    categoryLabel: "Travel guide",
+    title: "7 Days in Korea Itinerary for First-Time Visitors",
+    description:
+      "A practical one-week Korea route for first-time visitors, with Seoul, Busan, Gyeongju, transport tips, food ideas, and realistic travel trade-offs.",
+    href: "/travel/7-days-in-korea-itinerary-first-time",
+    readingTime: "12 min read",
+  },
+  {
     id: "where-to-stay-in-seoul-first-time",
     category: "travel",
     categoryLabel: "Travel guide",
