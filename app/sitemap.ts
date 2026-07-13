@@ -94,6 +94,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/travel/korea-etiquette-tips-for-tourists`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/travel/best-time-to-visit-korea-first-time`,
       lastModified: new Date(),
       changeFrequency: "monthly",

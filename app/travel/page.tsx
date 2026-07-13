@@ -15,6 +15,16 @@ const STANDALONE_TRAVEL_GUIDES = [
     readingTime: "9 min read",
   },
   {
+    id: "korea-etiquette-tips-for-tourists",
+    category: "travel",
+    categoryLabel: "Travel guide",
+    title: "Korea Etiquette Tips for Tourists",
+    description:
+      "A practical first-time Korea etiquette guide with subway manners, restaurant habits, table bells, tipping, trash, shoes, public noise, and local travel tips.",
+    href: "/travel/korea-etiquette-tips-for-tourists",
+    readingTime: "8 min read",
+  },
+  {
     id: "best-time-to-visit-korea-first-time",
     category: "travel",
     categoryLabel: "Travel guide",
