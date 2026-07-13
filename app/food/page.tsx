@@ -55,6 +55,16 @@ const STANDALONE_FOOD_GUIDES = [
     readingTime: "8 min read",
   },
   {
+    id: "korean-fried-chicken-chimaek-guide-first-time",
+    category: "food",
+    categoryLabel: "Food guide",
+    title: "Korean Fried Chicken and Chimaek Guide for First-Time Visitors",
+    description:
+      "A practical guide to Korean fried chicken and chimaek, with banban chicken, yangnyeom, soy garlic, boneless chicken, chicken-mu, delivery, takeout, Han River tips, and local etiquette.",
+    href: "/food/korean-fried-chicken-chimaek-guide-first-time",
+    readingTime: "8 min read",
+  },
+  {
     id: "gwangjang-market-food-guide-first-time",
     category: "food",
     categoryLabel: "Food guide",
