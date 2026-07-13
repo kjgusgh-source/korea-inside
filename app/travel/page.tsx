@@ -25,6 +25,16 @@ const STANDALONE_TRAVEL_GUIDES = [
     readingTime: "8 min read",
   },
   {
+    id: "what-to-buy-in-korea-first-time",
+    category: "travel",
+    categoryLabel: "Travel guide",
+    title: "What to Buy in Korea for the First Time",
+    description:
+      "A practical first-time Korea shopping guide with skincare, snacks, stationery, fashion, traditional souvenirs, convenience store finds, and honest local tips.",
+    href: "/travel/what-to-buy-in-korea-first-time",
+    readingTime: "8 min read",
+  },
+  {
     id: "3-days-in-seoul-itinerary-first-time",
     category: "travel",
     categoryLabel: "Travel guide",
