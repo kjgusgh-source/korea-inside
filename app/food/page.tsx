@@ -45,6 +45,16 @@ const STANDALONE_FOOD_GUIDES = [
     readingTime: "8 min read",
   },
   {
+    id: "korean-cafe-culture-guide-first-time",
+    category: "food",
+    categoryLabel: "Food guide",
+    title: "Korean Cafe Culture Guide for First-Time Visitors",
+    description:
+      "A practical guide to Korean cafes, including ordering, Wi-Fi, receipts, outlets, desserts, study mood, photo spots, one-drink rules, and local etiquette.",
+    href: "/food/korean-cafe-culture-guide-first-time",
+    readingTime: "9 min read",
+  },
+  {
     id: "what-to-eat-at-korean-convenience-store",
     category: "food",
     categoryLabel: "Food guide",
