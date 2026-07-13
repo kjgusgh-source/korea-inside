@@ -25,6 +25,16 @@ const STANDALONE_TRAVEL_GUIDES = [
     readingTime: "8 min read",
   },
   {
+    id: "what-to-wear-in-korea-by-season",
+    category: "travel",
+    categoryLabel: "Travel guide",
+    title: "What to Wear in Korea by Season",
+    description:
+      "A practical first-time Korea packing guide with spring, summer, autumn, and winter outfit tips, walking shoes, rain, subway stairs, and local travel notes.",
+    href: "/travel/what-to-wear-in-korea-by-season",
+    readingTime: "8 min read",
+  },
+  {
     id: "is-korea-expensive-to-visit-first-time",
     category: "travel",
     categoryLabel: "Travel guide",
