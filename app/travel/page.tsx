@@ -5,6 +5,16 @@ import { getPostsByCategory } from "../../lib/posts";
 
 const STANDALONE_TRAVEL_GUIDES = [
   {
+    id: "3-days-in-seoul-itinerary-first-time",
+    category: "travel",
+    categoryLabel: "Travel guide",
+    title: "3 Days in Seoul Itinerary for First-Time Visitors",
+    description:
+      "A practical local-friendly Seoul route for first-time visitors, with Myeongdong, Namsan, palaces, Insadong, Hongdae or Gangnam, plus honest travel trade-offs.",
+    href: "/travel/3-days-in-seoul-itinerary-first-time",
+    readingTime: "9 min read",
+  },
+  {
     id: "where-to-stay-in-seoul-first-time",
     category: "travel",
     categoryLabel: "Travel guide",
