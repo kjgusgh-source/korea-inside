@@ -218,44 +218,13 @@ export default function MyeongdongStreetFoodGuideFirstTimePage() {
             <div className="space-y-8 text-base leading-8 text-[var(--muted)] md:text-lg">
               <div className="space-y-4">
                 <p>
-                  It is better to understand what Myeongdong street food really
-                  is.
+                  Myeongdong street food is fun, central, and easy for a first
+                  taste — but it is not a quiet local secret, and prices can run
+                  higher than in calmer neighborhoods. Many stalls are used to
+                  foreign tourists, and some snacks feel more like travel food
+                  than everyday Korean meals. That is fine if you go for easy
+                  first bites and keep your eyes open on price.
                 </p>
-
-                <p>It is fun.</p>
-
-                <p>It is convenient.</p>
-
-                <p>It is very tourist-friendly.</p>
-
-                <p>And it is not always cheap.</p>
-
-                <p>
-                  Myeongdong is not the place I would describe as a quiet local
-                  food secret.
-                </p>
-
-                <p>Many visitors go there.</p>
-
-                <p>Many stalls are used to foreign tourists.</p>
-
-                <p>
-                  Some foods feel more like travel snacks than everyday Korean
-                  meals.
-                </p>
-
-                <p>That does not make them bad.</p>
-
-                <p>
-                  It just means you should not expect every bite to be the
-                  best-value or most local version of Korean food.
-                </p>
-
-                <p>Go for the mood.</p>
-
-                <p>Go for easy first snacks.</p>
-
-                <p>Go because it is simple.</p>
               </div>
 
               <div className="space-y-4">
@@ -395,30 +364,11 @@ export default function MyeongdongStreetFoodGuideFirstTimePage() {
 
                 <p>
                   You may also see skewers, grilled snacks, cheese-heavy foods,
-                  tornado potato, fruit drinks, and bigger tourist-style snacks.
-                </p>
-
-                <p>Some of these are fun.</p>
-
-                <p>Some are more for photos than flavor.</p>
-
-                <p>
-                  Some are not really &quot;traditional Korean food&quot; in a
-                  deep sense.
-                </p>
-
-                <p>That is okay.</p>
-
-                <p>
-                  Myeongdong street food has become a mix of Korean snacks,
-                  tourist snacks, and trendy-looking foods.
-                </p>
-
-                <p>You do not have to judge it too seriously.</p>
-
-                <p>
-                  Just do not confuse every stall with everyday Korean home
-                  food.
+                  tornado potato, and bigger tourist-style snacks. Some are fun;
+                  some are more for photos than flavor. Myeongdong has become a
+                  mix of Korean snacks, tourist snacks, and trendy-looking food
+                  — enjoy it lightly, and do not confuse every stall with
+                  everyday home cooking.
                 </p>
               </div>
 
@@ -427,47 +377,14 @@ export default function MyeongdongStreetFoodGuideFirstTimePage() {
                   Prices, cash, and payment
                 </h2>
 
-                <p>Now, the important part:</p>
-
-                <p>Check the price before ordering.</p>
-
                 <p>
-                  Myeongdong is a tourist-heavy area, and street food here can
-                  feel more expensive than food in quieter local neighborhoods.
+                  Check the price before ordering. Myeongdong is tourist-heavy,
+                  and street food here can cost more than in quieter areas — not
+                  because every stall is bad, but because you should look for a
+                  visible price, ask if unsure, and keep walking if someone
+                  pushes food at you without clarity. Small cash helps; payment
+                  style varies by stall.
                 </p>
-
-                <p>That does not mean every stall is bad.</p>
-
-                <p>It means you should act like a careful traveler.</p>
-
-                <p>Look for a visible price.</p>
-
-                <p>Ask before you order if you are unsure.</p>
-
-                <p>
-                  Do not feel pressured to buy just because someone is holding
-                  food out or calling to you.
-                </p>
-
-                <p>If something feels unclear, keep walking.</p>
-
-                <p>There will be another stall.</p>
-
-                <p>Small cash is useful in Myeongdong.</p>
-
-                <p>
-                  Some stalls may accept cards or other payment methods, but
-                  payment style can vary.
-                </p>
-
-                <p>Do not assume every stall works the same way.</p>
-
-                <p>
-                  If you only have one payment option, you may feel awkward at
-                  the counter.
-                </p>
-
-                <p>Having small cash makes street food easier.</p>
               </div>
 
               <div className="space-y-4">
@@ -475,26 +392,12 @@ export default function MyeongdongStreetFoodGuideFirstTimePage() {
                   Order less than you think
                 </h2>
 
-                <p>Order less than you think.</p>
-
                 <p>
-                  This is the mistake many first-time visitors make.
+                  Many first-time visitors buy too much, get full fast, and stop
+                  enjoying anything. Treat Myeongdong as a light food walk: pick
+                  two or three things, eat them while hot, then stop. You can
+                  always eat again later.
                 </p>
-
-                <p>
-                  They see ten snacks, buy too much, and feel full before they
-                  actually enjoy anything.
-                </p>
-
-                <p>Myeongdong street food is better as a light food walk.</p>
-
-                <p>Pick two or three things.</p>
-
-                <p>Eat them while they are hot.</p>
-
-                <p>Then stop.</p>
-
-                <p>You can always eat again later.</p>
               </div>
 
               <div className="space-y-4">
@@ -550,19 +453,12 @@ export default function MyeongdongStreetFoodGuideFirstTimePage() {
                   Simple first visit
                 </p>
 
-                <p>Try egg bread.</p>
-
-                <p>Try tteokbokki or eomuk.</p>
-
-                <p>Add hotteok if you want something sweet.</p>
-
-                <p>Share chicken bites or a skewer if something looks good.</p>
-
-                <p>Skip anything that looks overpriced or too heavy.</p>
-
-                <p>That is enough.</p>
-
-                <p>You do not need to eat every famous-looking snack.</p>
+                <p>
+                  Try egg bread, tteokbokki or eomuk, hotteok if you want
+                  something sweet, and share chicken bites or a skewer if
+                  something looks good. Skip anything that feels overpriced or
+                  too heavy — you do not need every famous-looking snack.
+                </p>
               </div>
 
               <div className="space-y-4">
@@ -571,56 +467,20 @@ export default function MyeongdongStreetFoodGuideFirstTimePage() {
                 </h2>
 
                 <p>
-                  Myeongdong works best when you treat it as part of the
-                  neighborhood, not the whole food plan.
+                  Shop a little, walk a little, eat one or two snacks, then move
+                  on. Myeongdong works best as part of the neighborhood — not
+                  your whole food plan for the day.
                 </p>
-
-                <p>Shop a little.</p>
-
-                <p>Walk a little.</p>
-
-                <p>Eat one or two snacks.</p>
-
-                <p>Look at the lights and signs.</p>
-
-                <p>Then move on to your next stop.</p>
               </div>
 
               <div className="space-y-4">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
-                  Final note
-                </p>
-
                 <p>
-                  For HAEMIL readers, the honest answer is this:
-                </p>
-
-                <p>Myeongdong street food is not hidden.</p>
-
-                <p>It is not always cheap.</p>
-
-                <p>It is not always the most local food in Korea.</p>
-
-                <p>
-                  But it is easy, lively, and useful for a first taste of Seoul.
-                </p>
-
-                <p>Go with small cash.</p>
-
-                <p>Check prices.</p>
-
-                <p>Choose what actually looks good.</p>
-
-                <p>Do not order too much.</p>
-
-                <p>
-                  And remember that the best snack is not always the most viral
-                  one.
-                </p>
-
-                <p>
-                  Sometimes it is just warm egg bread on a cold evening, eaten
-                  while you are still figuring out Seoul.
+                  Myeongdong street food is not hidden, not always cheap, and not
+                  always the most local food in Korea — but it is easy and
+                  useful for a first taste of Seoul. Bring small cash, check
+                  prices, and choose what actually looks good. Sometimes the best
+                  snack is just warm egg bread on a cold evening while you are
+                  still figuring out the city.
                 </p>
               </div>
             </div>

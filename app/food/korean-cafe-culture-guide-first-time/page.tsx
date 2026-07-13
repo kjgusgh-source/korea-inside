@@ -217,43 +217,13 @@ export default function KoreanCafeCultureGuideFirstTimePage() {
             <div className="space-y-8 text-base leading-8 text-[var(--muted)] md:text-lg">
               <div className="space-y-4">
                 <p>
-                  You go to a cafe when you are tired from walking.
+                  People use Korean cafes to rest after walking, wait for a
+                  friend, escape rain or heat, charge a phone, use Wi-Fi, eat
+                  dessert, or take photos. Some are built for long sits; some are
+                  tiny photo spots where one drink and thirty minutes is the
+                  normal rhythm. It helps to know which kind you walked into
+                  before you settle in.
                 </p>
-
-                <p>When it is raining.</p>
-
-                <p>When it is too hot.</p>
-
-                <p>When you are waiting for a friend.</p>
-
-                <p>When you need Wi-Fi.</p>
-
-                <p>When you want dessert.</p>
-
-                <p>When you want a quiet seat.</p>
-
-                <p>When you want photos.</p>
-
-                <p>When you just need a clean place to sit for a while.</p>
-
-                <p>
-                  Some cafes are made for resting.
-                </p>
-
-                <p>Some are made for photos.</p>
-
-                <p>Some are made for dessert.</p>
-
-                <p>Some are better for studying.</p>
-
-                <p>Some are too small to stay long.</p>
-
-                <p>
-                  Some look beautiful but feel crowded and expensive once you
-                  sit down.
-                </p>
-
-                <p>So it helps to know what kind of cafe you are entering.</p>
               </div>
 
               <div className="space-y-4">
@@ -433,48 +403,14 @@ export default function KoreanCafeCultureGuideFirstTimePage() {
                   Wi-Fi, receipts, and toilets
                 </h2>
 
-                <p>Wi-Fi is common.</p>
-
                 <p>
-                  In many Korean cafes, the Wi-Fi name and password are written
-                  somewhere inside.
-                </p>
-
-                <p>Check the wall.</p>
-
-                <p>Check near the counter.</p>
-
-                <p>Check the table sign.</p>
-
-                <p>Check the receipt.</p>
-
-                <p>
-                  Sometimes the password is printed at the bottom of the
-                  receipt, so do not throw it away too quickly.
-                </p>
-
-                <p>If you cannot find it, asking staff is normal.</p>
-
-                <p>Toilets can also work differently.</p>
-
-                <p>Some cafes have a toilet inside.</p>
-
-                <p>Some share a toilet in the building.</p>
-
-                <p>Some require a passcode.</p>
-
-                <p>
-                  That passcode may be written on the receipt, near the
-                  counter, or on a small sign.
-                </p>
-
-                <p>
-                  This is one of those small details that surprises visitors.
-                </p>
-
-                <p>
-                  So if you think you may need the toilet, keep your receipt
-                  for a while.
+                  Wi-Fi is common, and the name and password are often on the
+                  wall, near the counter, on a table sign, or printed on the
+                  receipt — so do not throw the receipt away immediately if you
+                  still need to connect. Toilets may be inside the cafe, shared
+                  with the building, or locked with a passcode that also shows up
+                  on the receipt or a small sign. Keep the receipt a little
+                  longer if you think you will need either.
                 </p>
               </div>
 
@@ -512,28 +448,12 @@ export default function KoreanCafeCultureGuideFirstTimePage() {
                   One drink per person
                 </h2>
 
-                <p>One drink per person is common.</p>
-
                 <p>
-                  Not every cafe will say it loudly, but many cafes expect each
-                  person to order something.
+                  One drink per person is the safe habit, even when the rule is
+                  not posted. In small or popular dessert cafes, two people at a
+                  table with one drink can feel awkward — order a drink each,
+                  and add dessert if you are sharing something sweet.
                 </p>
-
-                <p>
-                  This matters especially in small cafes or popular dessert
-                  cafes.
-                </p>
-
-                <p>
-                  If two people take a table and order one drink, it may feel
-                  awkward.
-                </p>
-
-                <p>The safe habit is simple:</p>
-
-                <p>one person, one drink.</p>
-
-                <p>If you are sharing dessert too, that is even better.</p>
               </div>
 
               <div className="space-y-4">
@@ -601,84 +521,22 @@ export default function KoreanCafeCultureGuideFirstTimePage() {
                 </h2>
 
                 <p>
-                  For first-time visitors, cafes are also good weather shelters.
-                </p>
-
-                <p>In summer, they save you from heat and humidity.</p>
-
-                <p>In winter, they give you a warm place to sit.</p>
-
-                <p>
-                  On rainy days, they help you slow down instead of forcing
-                  another outdoor plan.
-                </p>
-
-                <p>
-                  This is why I think cafes should be part of a Korea
-                  itinerary, not just an extra.
-                </p>
-
-                <p>A cafe break can make the whole day better.</p>
-
-                <p>But do not plan only around viral cafes.</p>
-
-                <p>
-                  A simple cafe near your route is often more useful than a
-                  famous cafe across the city.
-                </p>
-
-                <p>If the cafe is already near your plan, great.</p>
-
-                <p>If it takes 40 minutes each way, think twice.</p>
-
-                <p>
-                  Seoul is big, and cafe-hopping can eat your day faster than
-                  you expect.
+                  Cafes are useful weather shelters — air-con in summer, warmth
+                  in winter, a pause on rainy days. A cafe on your route beats
+                  a famous one forty minutes away; Seoul is big, and cafe-hopping
+                  can eat your day faster than you expect.
                 </p>
               </div>
 
               <div className="space-y-4">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
-                  Final note
-                </p>
-
                 <p>
-                  For HAEMIL readers, the best way to use Korean cafes is
-                  simple.
-                </p>
-
-                <p>
-                  Use large cafes when you need rest, Wi-Fi, a toilet, or
-                  charging.
-                </p>
-
-                <p>
-                  Use small cafes when you want mood and do not need to stay
-                  too long.
-                </p>
-
-                <p>
-                  Use dessert cafes when you actually want dessert, not just
-                  because you saw them online.
-                </p>
-
-                <p>Check the receipt for Wi-Fi or toilet codes.</p>
-
-                <p>Order one drink per person.</p>
-
-                <p>
-                  Do not take up a tiny table forever if people are waiting.
-                </p>
-
-                <p>
-                  And remember that the best cafe on a trip is not always the
-                  most famous one.
-                </p>
-
-                <p>
-                  Sometimes it is the cafe that gives your feet a break, your
-                  phone a little battery, and your day enough energy to keep
-                  going.
+                  Use large franchise cafes when you need rest, Wi-Fi, a toilet,
+                  or charging. Use small cafes for mood when you are not planning
+                  a long stay. Check the receipt for Wi-Fi or toilet codes, order
+                  one drink per person, and read the room if people are waiting.
+                  The best cafe on a trip is often the one that gives your feet a
+                  break and your phone a little battery — not necessarily the
+                  most famous name online.
                 </p>
               </div>
             </div>

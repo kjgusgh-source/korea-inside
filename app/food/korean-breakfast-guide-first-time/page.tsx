@@ -216,49 +216,15 @@ export default function KoreanBreakfastGuideFirstTimePage() {
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
             <div className="space-y-8 text-base leading-8 text-[var(--muted)] md:text-lg">
               <div className="space-y-4">
-                <p>Breakfast in Korea can surprise first-time visitors.</p>
-
-                <p>Not because there is nothing to eat.</p>
-
-                <p>There is plenty.</p>
-
-                <p>But the morning rhythm may be different from what you expect.</p>
-
                 <p>
-                  Some travelers imagine a classic Korean breakfast with rice,
-                  soup, grilled fish, and side dishes.
-                </p>
-
-                <p>That kind of meal exists.</p>
-
-                <p>
-                  But it is not always the easiest thing to find near your hotel
-                  early in the morning.
-                </p>
-
-                <p>And modern Korea does not have only one breakfast style.</p>
-
-                <p>Some people eat rice and soup.</p>
-
-                <p>Some grab gimbap.</p>
-
-                <p>Some buy something at a convenience store.</p>
-
-                <p>Some go to a bakery.</p>
-
-                <p>Some drink coffee and eat bread.</p>
-
-                <p>Some go to brunch cafes when the morning is slower.</p>
-
-                <p>
-                  So the better question is not &ldquo;What is the traditional
-                  Korean breakfast?&rdquo;
-                </p>
-
-                <p>The better question is:</p>
-
-                <p>
-                  What can I actually eat near my route before the day starts?
+                  There is plenty to eat in the morning — the rhythm is just
+                  different from what many travelers expect. Some people imagine
+                  rice, soup, grilled fish, and side dishes on one table; that
+                  meal exists, but it is not always easy to find near your hotel
+                  at 8 a.m. Modern Korea runs on gimbap, convenience stores,
+                  bakeries, brunch cafes, and soup shops too. The useful
+                  question is what you can actually eat near your route before
+                  the day starts.
                 </p>
               </div>
 
@@ -268,30 +234,11 @@ export default function KoreanBreakfastGuideFirstTimePage() {
                 </h2>
 
                 <p>
-                  For many visitors, the easiest answer is hotel breakfast.
-                </p>
-
-                <p>It is not the most local answer.</p>
-
-                <p>But it is simple.</p>
-
-                <p>
-                  If your hotel has breakfast and you have an early palace day,
-                  airport move, tour, or train ride, it can save time and stress.
-                </p>
-
-                <p>
-                  You do not have to think about maps, menus, weather, or opening
-                  times.
-                </p>
-
-                <p>That can be worth it.</p>
-
-                <p>But you do not need hotel breakfast every day.</p>
-
-                <p>
-                  Korea has many simple morning options if you know what to look
-                  for.
+                  Hotel breakfast is the zero-stress option when you have an
+                  early palace day, airport move, tour, or train — no map
+                  hunting, no guessing on opening times. It is not the most local
+                  choice, and you do not need it every day, but it can save a
+                  rough morning.
                 </p>
               </div>
 
@@ -301,32 +248,11 @@ export default function KoreanBreakfastGuideFirstTimePage() {
                 </h2>
 
                 <p>
-                  Convenience stores are one of the most practical breakfast
-                  choices.
-                </p>
-
-                <p>This does not have to feel sad.</p>
-
-                <p>
-                  In Korea, convenience stores are part of normal daily life.
-                </p>
-
-                <p>
-                  You can buy triangle gimbap, regular gimbap, boiled eggs,
-                  yogurt, milk, coffee, bread, bananas, drinks, cup ramyeon, or
-                  a small lunchbox-style meal.
-                </p>
-
-                <p>It is not the most beautiful breakfast.</p>
-
-                <p>
-                  But it is useful, quick, and easy to understand when you are
-                  still half-awake.
-                </p>
-
-                <p>
-                  For an early train or airport move, convenience store breakfast
-                  can make more sense than searching for an open restaurant.
+                  Convenience stores are normal morning food in Korea, not a sad
+                  backup. Triangle gimbap, boiled eggs, yogurt, bread, cup
+                  ramyeon, or a small lunchbox-style meal works when you are
+                  still half-awake — especially before an early train or airport
+                  bus, when hunting for an open restaurant makes little sense.
                 </p>
               </div>
 
@@ -365,40 +291,14 @@ export default function KoreanBreakfastGuideFirstTimePage() {
                   Soup and rice in the morning
                 </h2>
 
-                <p>If you want something warmer, look for soup-and-rice meals.</p>
-
                 <p>
-                  Gukbap, haejangguk, seolleongtang, and similar dishes can work
-                  well in the morning.
-                </p>
-
-                <p>These are not delicate brunch foods.</p>
-
-                <p>They are practical.</p>
-
-                <p>Hot broth.</p>
-
-                <p>Rice.</p>
-
-                <p>Maybe meat, vegetables, or noodles.</p>
-
-                <p>Something warm before walking outside.</p>
-
-                <p>
-                  Haejangguk has a hangover-soup image, but you do not need to be
-                  hungover to eat it.
-                </p>
-
-                <p>
-                  Seolleongtang is milder and often needs salt, pepper,
-                  scallions, or kimchi to bring out the flavor.
-                </p>
-
-                <p>Gukbap can be filling and direct.</p>
-
-                <p>
-                  This kind of breakfast is good if you want to feel like you
-                  actually ate a meal.
+                  Gukbap, haejangguk, seolleongtang, and similar soup-and-rice
+                  meals are practical morning food — hot broth, rice, maybe meat
+                  or vegetables — not delicate brunch. Haejangguk has a
+                  hangover-soup image but you do not need to be hungover;
+                  seolleongtang is milder and often needs salt, pepper,
+                  scallions, or kimchi to open up. Good when you want to feel
+                  like you actually ate.
                 </p>
               </div>
 
@@ -407,26 +307,13 @@ export default function KoreanBreakfastGuideFirstTimePage() {
                   24-hour restaurants — check before you walk
                 </h2>
 
-                <p>There are still 24-hour restaurants in Korea.</p>
-
-                <p>But visitors should not assume they are everywhere.</p>
-
                 <p>
-                  After the pandemic era, many late-night and 24-hour dining
-                  habits changed, and some places that used to stay open longer
-                  now close earlier than people remember.
-                </p>
-
-                <p>This is why checking a map app matters.</p>
-
-                <p>
-                  If you search &ldquo;24시&rdquo; and see a place nearby, still
-                  check the latest information before walking there.
-                </p>
-
-                <p>
-                  Do not plan your whole morning around an old idea of Korea
-                  where everything is open all night.
+                  24-hour restaurants still exist, but do not assume they are
+                  everywhere. After the pandemic era, many places close earlier
+                  than people remember. Search &ldquo;24시&rdquo; on Naver Map or
+                  KakaoMap, then check the latest hours before you walk — do not
+                  plan the whole morning around an old idea of Korea staying open
+                  all night.
                 </p>
               </div>
 
@@ -435,44 +322,14 @@ export default function KoreanBreakfastGuideFirstTimePage() {
                   Where breakfast is easier — and where it is not
                 </h2>
 
-                <p>The area matters too.</p>
-
                 <p>
-                  Breakfast near traditional markets, major stations, office
-                  districts, hospitals, and busy central streets can be easier.
+                  Breakfast is easier near markets, major stations, office
+                  districts, and busy central streets — Jongno, Myeongdong, Seoul
+                  Station, and similar areas often have morning demand from
+                  commuters and vendors. Hongdae, Seongsu, and pretty cafe streets
+                  can feel quiet early; they are great later, but check the map
+                  before walking around hungry if you are staying there.
                 </p>
-
-                <p>These places often have people moving early.</p>
-
-                <p>
-                  Workers, commuters, vendors, travelers, and local residents
-                  create morning demand.
-                </p>
-
-                <p>
-                  Depending on your exact location, areas like Jongno, Myeongdong,
-                  Seoul Station, market areas, and office neighborhoods can have
-                  more practical breakfast choices.
-                </p>
-
-                <p>
-                  On the other hand, some cafe-heavy or nightlife-heavy
-                  neighborhoods can feel quiet in the morning.
-                </p>
-
-                <p>
-                  Hongdae, Seongsu, and pretty cafe streets can be great later in
-                  the day.
-                </p>
-
-                <p>
-                  But they are not always the easiest places for very early
-                  breakfast.
-                </p>
-
-                <p>That does not mean you should avoid staying there.</p>
-
-                <p>It just means you should check before walking around hungry.</p>
               </div>
 
               <div className="space-y-4">
@@ -603,78 +460,22 @@ export default function KoreanBreakfastGuideFirstTimePage() {
                 </p>
 
                 <p>
-                  If you have a packed schedule, do not make breakfast
-                  complicated.
+                  On a packed day — palace visit, early tour, train to Busan —
+                  eat close and save your energy. Hotel breakfast when you want
+                  zero stress, convenience store or gimbap when you start early,
+                  soup when you want something warm, toast or bakery bread when
+                  you want quick, brunch cafe when the morning is slower.
                 </p>
-
-                <p>
-                  A palace day, train to Busan, airport move, or early tour is
-                  not the best time to chase a famous restaurant.
-                </p>
-
-                <p>Eat something close.</p>
-
-                <p>Save your energy.</p>
-
-                <p>Korea has better meals waiting later in the day.</p>
-
-                <p>Hotel breakfast when you need zero stress.</p>
-
-                <p>Convenience store breakfast when you start early.</p>
-
-                <p>Gimbap when you want something easy and Korean.</p>
-
-                <p>Soup and rice when you want a warm meal.</p>
-
-                <p>Toast or bakery bread when you want something quick.</p>
-
-                <p>Brunch cafe when your morning is slower.</p>
-
-                <p>That is enough.</p>
-
-                <p>You do not need a perfect breakfast every day.</p>
               </div>
 
               <div className="space-y-4">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
-                  Final note
-                </p>
-
-                <p>For HAEMIL readers, the honest answer is this:</p>
-
                 <p>
-                  Korean breakfast is not always a beautiful table of traditional
-                  dishes.
-                </p>
-
-                <p>Sometimes it is gimbap in a small shop.</p>
-
-                <p>Sometimes it is soup with rice.</p>
-
-                <p>Sometimes it is toast near a station.</p>
-
-                <p>Sometimes it is coffee and bread from a bakery.</p>
-
-                <p>Sometimes it is a brunch cafe with eggs and coffee.</p>
-
-                <p>
-                  Sometimes it is triangle gimbap from a convenience store because
-                  your train leaves early.
-                </p>
-
-                <p>That is not a failure.</p>
-
-                <p>That is real travel.</p>
-
-                <p>Eat simply in the morning.</p>
-
-                <p>Check the map before walking.</p>
-
-                <p>And do not assume every neighborhood wakes up at the same time.</p>
-
-                <p>
-                  Breakfast in Korea becomes much easier when you stop chasing an
-                  ideal version of it.
+                  Korean breakfast is often gimbap in a small shop, soup with
+                  rice, toast near a station, coffee and bread from a bakery, a
+                  brunch cafe with eggs, or triangle gimbap from a convenience
+                  store because your train leaves early. None of that is a
+                  failure — it is just how mornings work here. Check the map
+                  before walking, and stop chasing one ideal version of breakfast.
                 </p>
               </div>
             </div>

@@ -210,18 +210,10 @@ export default function KoreanSoupsAndStewsGuideFirstTimePage() {
             <div className="space-y-8 text-base leading-8 text-[var(--muted)] md:text-lg">
               <div className="space-y-4">
                 <p>
-                  They show a quieter side of Korean food.
-                </p>
-
-                <p>Not barbecue.</p>
-
-                <p>Not street food.</p>
-
-                <p>Not cafe dessert.</p>
-
-                <p>
-                  Just the kind of meal people eat when they are hungry, tired,
-                  cold, hungover, busy, or in need of something warm.
+                  Korean soups and stews show a quieter side of the table — not
+                  barbecue, not street snacks, but the warm bowl people reach for
+                  when they are hungry, tired, cold, or just done walking for the
+                  day.
                 </p>
               </div>
 
@@ -230,36 +222,15 @@ export default function KoreanSoupsAndStewsGuideFirstTimePage() {
                   Guk, tang, jjigae, jeongol — without overthinking it
                 </h2>
 
-                <p>The words can be confusing at first.</p>
-
-                <p>Guk usually means a lighter soup.</p>
-
-                <p>Tang often feels like a deeper soup or broth dish.</p>
-
                 <p>
-                  Jjigae is closer to a stew, usually stronger, saltier, and
-                  served bubbling hot.
-                </p>
-
-                <p>
-                  Jeongol is more like a shared hot pot cooked at the table.
-                </p>
-
-                <p>But do not worry too much about memorizing the categories.</p>
-
-                <p>
-                  In real life, the more useful question is simple:
-                </p>
-
-                <p>Is this an individual bowl, or is this a shared pot?</p>
-
-                <p>That matters more when you are ordering.</p>
-
-                <p>If you are alone, individual soups are easier.</p>
-
-                <p>
-                  If you are with two or more people, shared stews and hot pots
-                  become easier.
+                  Guk usually means a lighter soup. Tang often feels like a
+                  deeper broth dish. Jjigae is a stew — stronger, saltier, often
+                  bubbling hot. Jeongol is a shared hot pot at the table. You do
+                  not need to memorize all of this; the useful question is
+                  whether you are ordering one bowl for yourself or a shared pot
+                  for the table. Solo travelers do better with individual soups;
+                  groups can handle budae-jjigae, gamjatang, or jeongol more
+                  easily.
                 </p>
               </div>
 
@@ -268,51 +239,14 @@ export default function KoreanSoupsAndStewsGuideFirstTimePage() {
                   Kimchi-jjigae and doenjang-jjigae
                 </h2>
 
-                <p>Kimchi-jjigae is one of the most familiar Korean stews.</p>
-
                 <p>
-                  It is made with kimchi and often pork, tofu, or other
-                  ingredients depending on the restaurant.
+                  Kimchi-jjigae is sour, spicy, salty, and warm — meant to be
+                  eaten with rice, not sipped like Western soup. If it tastes too
+                  strong alone, try a spoonful with rice first. Doenjang-jjigae
+                  uses soybean paste and can smell earthy and very home-meal
+                  Korean; some people love it immediately, others need a few
+                  bites. It often shows up alongside rice and grilled meat.
                 </p>
-
-                <p>The flavor is sour, spicy, salty, and warm.</p>
-
-                <p>It is not meant to be a delicate soup.</p>
-
-                <p>It is meant to be eaten with rice.</p>
-
-                <p>This is important.</p>
-
-                <p>
-                  If you taste kimchi-jjigae alone and think it is too strong,
-                  try it with rice.
-                </p>
-
-                <p>That is how it makes sense.</p>
-
-                <p>Doenjang-jjigae is another everyday stew.</p>
-
-                <p>It uses doenjang, Korean soybean paste.</p>
-
-                <p>
-                  The smell and flavor can be stronger than visitors expect.
-                </p>
-
-                <p>
-                  It can feel earthy, salty, and very Korean in a home-meal
-                  way.
-                </p>
-
-                <p>Some people love it immediately.</p>
-
-                <p>Some need time.</p>
-
-                <p>
-                  Doenjang-jjigae is not usually a flashy food, but it is one
-                  of the dishes that makes a Korean table feel complete.
-                </p>
-
-                <p>It is especially common with rice and grilled meat meals.</p>
               </div>
 
               <div className="space-y-4">
@@ -334,19 +268,10 @@ export default function KoreanSoupsAndStewsGuideFirstTimePage() {
                   depending on the place.
                 </p>
 
-                <p>It looks intense when it arrives.</p>
-
-                <p>It may still be boiling.</p>
-
-                <p>Do not touch the bowl.</p>
-
-                <p>Do not rush the first spoon.</p>
-
-                <p>Let it calm down a little.</p>
-
                 <p>
-                  Sundubu is nice because the tofu softens the broth, so even
-                  when it is spicy, the texture can feel comforting.
+                  It arrives in a small stone bowl, often still boiling — do not
+                  touch the bowl, and let the first spoon cool a little. The soft
+                  tofu can make even a spicy broth feel comforting.
                 </p>
               </div>
 
@@ -381,52 +306,13 @@ export default function KoreanSoupsAndStewsGuideFirstTimePage() {
                   Seolleongtang and galbitang
                 </h2>
 
-                <p>Seolleongtang is a mild beef bone soup.</p>
-
-                <p>It often looks plain at first.</p>
-
-                <p>White broth.</p>
-
-                <p>Sliced beef.</p>
-
-                <p>Noodles or rice depending on the place.</p>
-
                 <p>
-                  When it arrives, the flavor may feel lighter than expected.
-                </p>
-
-                <p>That is normal.</p>
-
-                <p>
-                  At many places, you season it yourself with salt, pepper,
-                  scallions, or kimchi.
-                </p>
-
-                <p>This is part of eating seolleongtang.</p>
-
-                <p>
-                  Do not judge it before adding a little seasoning.
-                </p>
-
-                <p>It is a comfort food, not a loud food.</p>
-
-                <p>Galbitang is another good option if you want something milder.</p>
-
-                <p>It is a beef short rib soup.</p>
-
-                <p>
-                  The broth is usually clearer than spicy stews, and the meat
-                  makes it feel more filling.
-                </p>
-
-                <p>
-                  For first-time visitors who are nervous about spice, galbitang
-                  can be a safer choice.
-                </p>
-
-                <p>
-                  It still feels Korean, but it is not usually a red, spicy
-                  bowl.
+                  Seolleongtang is mild beef bone soup — white broth, sliced
+                  beef, sometimes noodles or rice — and it can taste lighter than
+                  you expect until you season it. Salt, pepper, scallions, or
+                  kimchi at the table are part of the meal; try that before you
+                  decide it is too plain. Galbitang, beef short rib soup, is
+                  another milder choice if red spicy stews feel like too much.
                 </p>
               </div>
 
@@ -502,49 +388,11 @@ export default function KoreanSoupsAndStewsGuideFirstTimePage() {
                 </h2>
 
                 <p>
-                  The biggest mistake with Korean stews is treating them like
-                  Western soup.
-                </p>
-
-                <p>
-                  Many jjigae dishes are strong because they are meant to be
-                  eaten with rice.
-                </p>
-
-                <p>A spoon of stew.</p>
-
-                <p>A bite of rice.</p>
-
-                <p>A side dish.</p>
-
-                <p>Another spoon of broth.</p>
-
-                <p>That rhythm matters.</p>
-
-                <p>
-                  If you eat only the broth, it may feel too salty or intense.
-                </p>
-
-                <p>Rice balances it.</p>
-
-                <p>Side dishes also matter.</p>
-
-                <p>
-                  Some restaurants bring banchan with soup or stew.
-                </p>
-
-                <p>Some may refill certain side dishes.</p>
-
-                <p>Some may not.</p>
-
-                <p>Do not assume every item is unlimited.</p>
-
-                <p>
-                  If there is a self-service area, take a reasonable amount.
-                </p>
-
-                <p>
-                  It is better to get a little more later than to waste food.
+                  Many jjigae dishes taste strong because they are built for rice:
+                  stew, rice, side dish, another spoon of broth. Without rice,
+                  the broth can feel too salty. Banchan may come with your order,
+                  but refills vary by place — take a reasonable amount from
+                  self-service areas rather than loading the table at once.
                 </p>
               </div>
 
@@ -553,27 +401,10 @@ export default function KoreanSoupsAndStewsGuideFirstTimePage() {
                   Hot bowls and shared pots
                 </h2>
 
-                <p>Be careful with hot bowls.</p>
-
-                <p>Korean soups and stews can arrive boiling.</p>
-
                 <p>
-                  Stone bowls, metal pots, and shared burners can stay hot for
-                  a long time.
-                </p>
-
-                <p>
-                  The food may look ready, but the bowl may still be dangerous
-                  to touch.
-                </p>
-
-                <p>Use the spoon.</p>
-
-                <p>Wait before taking a big bite.</p>
-
-                <p>
-                  If there is a shared pot, let the person cooking or the staff
-                  handle it if you are unsure.
+                  Stone bowls, metal pots, and shared burners stay hot a long
+                  time — use the spoon, wait before a big bite, and let staff
+                  handle a shared pot if you are unsure.
                 </p>
               </div>
 
@@ -614,59 +445,22 @@ export default function KoreanSoupsAndStewsGuideFirstTimePage() {
                   Choose by mood
                 </p>
 
-                <p>If you want spicy and classic, try kimchi-jjigae.</p>
-
-                <p>If you want soft tofu and heat, try sundubu-jjigae.</p>
-
-                <p>If you want mild comfort, try seolleongtang or galbitang.</p>
-
-                <p>If you want a stronger everyday flavor, try doenjang-jjigae.</p>
-
                 <p>
-                  If you are with friends and want a shared meal, try
-                  budae-jjigae or gamjatang.
+                  Spicy and classic: kimchi-jjigae. Soft tofu and heat: sundubu.
+                  Mild comfort: seolleongtang or galbitang. Everyday depth:
+                  doenjang-jjigae. With friends: budae-jjigae or gamjatang.
+                  Summer stamina: samgyetang. One trip does not need every soup
+                  on the list.
                 </p>
-
-                <p>If you want a summer stamina meal, try samgyetang.</p>
-
-                <p>You do not need to try every soup on one trip.</p>
               </div>
 
               <div className="space-y-4">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
-                  Final note
-                </p>
-
                 <p>
-                  For HAEMIL readers, Korean soups and stews are worth trying
-                  because they feel close to daily life.
-                </p>
-
-                <p>They are not always pretty.</p>
-
-                <p>They are not always gentle.</p>
-
-                <p>
-                  Sometimes they are salty, spicy, plain, boiling, or messy.
-                </p>
-
-                <p>
-                  But they make sense when you eat them the Korean way:
-                </p>
-
-                <p>with rice,</p>
-
-                <p>with side dishes,</p>
-
-                <p>slowly enough not to burn your mouth,</p>
-
-                <p>
-                  and without trying to turn every meal into a checklist.
-                </p>
-
-                <p>
-                  A good bowl of soup after a long walk can tell you more about
-                  Korea than another viral snack.
+                  Korean soups and stews sit close to daily life — sometimes
+                  salty, spicy, plain, or boiling hot, but they click when you
+                  eat them with rice and side dishes and give the bowl a minute
+                  to cool. After a long walk, one good bowl can tell you more
+                  about Korea than another viral snack on your checklist.
                 </p>
               </div>
             </div>

@@ -209,46 +209,12 @@ export default function KoreanFriedChickenChimaekGuideFirstTimePage() {
             <div className="space-y-8 text-base leading-8 text-[var(--muted)] md:text-lg">
               <div className="space-y-4">
                 <p>
-                  Korean fried chicken is not only a &ldquo;special food&rdquo; in
-                  Korea.
+                  Korean fried chicken is lazy dinner food, late-night delivery,
+                  after-work food — a box on the table, chicken-mu on the side,
+                  plastic gloves, sauce on your fingers, someone debating fried
+                  vs yangnyeom. That situation is as much part of the meal as
+                  the chicken itself.
                 </p>
-
-                <p>It is also lazy dinner food.</p>
-
-                <p>Late-night food.</p>
-
-                <p>Delivery food.</p>
-
-                <p>After-work food.</p>
-
-                <p>Friend-group food.</p>
-
-                <p>
-                  A weekend food you order when nobody wants to cook.
-                </p>
-
-                <p>
-                  That is why it feels different from simply eating fried chicken
-                  at a restaurant.
-                </p>
-
-                <p>The chicken is part of the situation.</p>
-
-                <p>A box on the table.</p>
-
-                <p>Pickled radish on the side.</p>
-
-                <p>Plastic gloves.</p>
-
-                <p>Sauce on your fingers.</p>
-
-                <p>Someone choosing between fried and yangnyeom.</p>
-
-                <p>
-                  Someone saying one chicken is enough, then ordering more later.
-                </p>
-
-                <p>That is the mood.</p>
               </div>
 
               <div className="space-y-4">
@@ -323,58 +289,14 @@ export default function KoreanFriedChickenChimaekGuideFirstTimePage() {
                   Korean fried chicken.
                 </p>
 
-                <p>Do not ignore it.</p>
-
-                <p>It cuts through the oil and sauce.</p>
-
                 <p>
-                  When the chicken starts feeling heavy, chicken-mu makes the next
-                  bite easier.
+                  Chicken-mu cuts through the oil and sauce — eat it between
+                  heavy bites. Yangnyeom is sticky and can soften the crunch; try
+                  plain fried first if you want crisp, or soy garlic if red sauce
+                  feels like too much. Cheese, honey butter, and other trend
+                  flavors are fine, but fried plus yangnyeom, or fried plus soy
+                  garlic, is a solid first order.
                 </p>
-
-                <p>Some visitors think it is just a small side.</p>
-
-                <p>
-                  But for Koreans, chicken without chicken-mu can feel incomplete.
-                </p>
-
-                <p>
-                  Yangnyeom chicken is famous, but it is not always the best first
-                  bite for everyone.
-                </p>
-
-                <p>The sauce can be sticky, sweet, spicy, and heavy.</p>
-
-                <p>It gets on your fingers.</p>
-
-                <p>It can make the crispy coating softer.</p>
-
-                <p>That is part of the style.</p>
-
-                <p>If you want crunch, eat some plain fried chicken first.</p>
-
-                <p>If you want sauce, go for yangnyeom.</p>
-
-                <p>If you want something safer, soy garlic is a good middle ground.</p>
-
-                <p>
-                  You may also see cheese, honey butter, spicy fire flavors,
-                  creamy sauces, or other newer styles.
-                </p>
-
-                <p>Some are fun.</p>
-
-                <p>Some feel more like trend food than classic chicken.</p>
-
-                <p>Do not feel like you have to chase the strangest flavor.</p>
-
-                <p>For a first order, simple is usually better.</p>
-
-                <p>Fried plus yangnyeom.</p>
-
-                <p>Or fried plus soy garlic.</p>
-
-                <p>That is enough.</p>
               </div>
 
               <div className="space-y-4">
@@ -382,29 +304,11 @@ export default function KoreanFriedChickenChimaekGuideFirstTimePage() {
                   Chimaek — beer is optional
                 </h2>
 
-                <p>Now, chimaek.</p>
-
-                <p>Chimaek means chicken and maekju, or beer.</p>
-
                 <p>
-                  It is one of the most familiar Korean food words for night plans.
+                  Chimaek means chicken and beer, but soda, sparkling water, or
+                  no alcohol at all works fine. If you drink, keep your pace; if
+                  you do not, just order chicken — the box is still the main point.
                 </p>
-
-                <p>
-                  But you do not have to drink beer to enjoy Korean fried chicken.
-                </p>
-
-                <p>Many people eat chicken with soda.</p>
-
-                <p>Some eat it with sparkling water.</p>
-
-                <p>Some eat it with no alcohol at all.</p>
-
-                <p>If you drink, drink at your own pace.</p>
-
-                <p>If you do not drink, just order chicken.</p>
-
-                <p>The chicken is still the main point.</p>
               </div>
 
               <div className="space-y-4">
@@ -443,61 +347,15 @@ export default function KoreanFriedChickenChimaekGuideFirstTimePage() {
                   Delivery, takeout, and hotel rooms
                 </h2>
 
-                <p>Delivery is a huge part of Korean chicken culture.</p>
-
-                <p>But for visitors, delivery is not always the easiest route.</p>
-
                 <p>
-                  Korean delivery apps can involve address details, phone
-                  verification, payment methods, building entrances, hotel rules,
-                  and rider communication.
+                  Delivery is huge in Korean chicken culture, but visitors often
+                  struggle with app address entry, phone verification, hotel lobby
+                  pickup, and rider communication. Locals make it look easy; on
+                  your first night, takeout or eat-in is usually simpler. In a
+                  hotel room, think about smell and trash — sauce cups, bones,
+                  gloves, and radish containers add up; tie bags properly and
+                  follow the hotel&apos;s rules.
                 </p>
-
-                <p>
-                  If you are staying at a hotel, delivery may need to be picked up
-                  in the lobby or outside.
-                </p>
-
-                <p>Some hotels may have their own rules.</p>
-
-                <p>
-                  If your Korean address is not clear, the rider may have trouble
-                  finding you.
-                </p>
-
-                <p>
-                  So even though locals order chicken delivery all the time,
-                  tourists should not assume it will be simple on the first night.
-                </p>
-
-                <p>Takeout can be easier.</p>
-
-                <p>Eating in the shop can be easier.</p>
-
-                <p>
-                  If you really want delivery, make sure your address is clear and
-                  your stay allows it.
-                </p>
-
-                <p>
-                  Chicken in a hotel room sounds easy, but think about the smell
-                  and trash.
-                </p>
-
-                <p>Korean fried chicken can smell strong.</p>
-
-                <p>
-                  Sauce containers, bones, gloves, napkins, and radish containers
-                  create more trash than expected.
-                </p>
-
-                <p>Do not leave messy food waste sitting around.</p>
-
-                <p>Tie it up properly.</p>
-
-                <p>Use the hotel trash rules if there are instructions.</p>
-
-                <p>It is a small thing, but it matters.</p>
               </div>
 
               <div className="space-y-4">
@@ -505,31 +363,13 @@ export default function KoreanFriedChickenChimaekGuideFirstTimePage() {
                   Han River chimaek
                 </h2>
 
-                <p>Han River chimaek is a real image people have of Seoul.</p>
-
-                <p>Chicken, beer, a mat, river wind, city lights.</p>
-
-                <p>It can be fun.</p>
-
-                <p>But it works best when you plan it lightly.</p>
-
-                <p>The weather matters.</p>
-
-                <p>The exact meeting spot matters.</p>
-
-                <p>Delivery drivers need a clear location.</p>
-
-                <p>Trash cleanup matters.</p>
-
-                <p>And not every riverside moment looks like a drama scene.</p>
-
-                <p>If you bring chicken to the Han River, clean up everything.</p>
-
                 <p>
-                  Do not leave boxes, cups, sauce, or radish containers behind.
+                  Han River chimaek — chicken, a mat, river wind — can be fun when
+                  the weather and meeting spot are clear and delivery drivers know
+                  where to find you. Clean up everything: boxes, cups, sauce,
+                  radish containers. Not every riverside moment looks like a drama
+                  scene, and that is fine.
                 </p>
-
-                <p>The place is shared.</p>
               </div>
 
               <div className="space-y-4">
@@ -537,26 +377,11 @@ export default function KoreanFriedChickenChimaekGuideFirstTimePage() {
                   Eat-in shops and hof-style places
                 </h2>
 
-                <p>Eat-in chicken places can feel different depending on the shop.</p>
-
-                <p>Some are family-friendly restaurants.</p>
-
-                <p>Some are casual beer pubs.</p>
-
-                <p>Some are more like hof-style drinking places.</p>
-
-                <p>Some are loud with groups.</p>
-
                 <p>
-                  If the place feels more like a drinking spot and you only want a
-                  quick meal, it may not be the best match.
+                  Eat-in shops range from family-friendly to loud hof-style beer
+                  pubs. If you only want a quick meal, read the tables and mood
+                  before sitting — you do not have to take the first place you see.
                 </p>
-
-                <p>
-                  Look at the tables, menu, and mood before sitting.
-                </p>
-
-                <p>You do not need to force the first place you see.</p>
               </div>
 
               <div className="space-y-4 rounded-[1.25rem] border border-[var(--border)] bg-[var(--surface)] p-5">
@@ -580,37 +405,12 @@ export default function KoreanFriedChickenChimaekGuideFirstTimePage() {
               </div>
 
               <div className="space-y-4">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
-                  Final note
-                </p>
-
                 <p>
-                  For HAEMIL readers, the honest way to enjoy Korean fried chicken
-                  is this:
-                </p>
-
-                <p>Start with banban.</p>
-
-                <p>Choose boneless if you want less mess.</p>
-
-                <p>Use the gloves if they give you gloves.</p>
-
-                <p>Eat the chicken-mu between oily bites.</p>
-
-                <p>Do not over-order.</p>
-
-                <p>
-                  Do not assume delivery will be easy just because it is easy for
-                  locals.
-                </p>
-
-                <p>And do not turn chimaek into pressure to drink.</p>
-
-                <p>A box of chicken at the right moment is enough.</p>
-
-                <p>
-                  After a long day in Seoul, that may be exactly the meal you
-                  needed.
+                  Start with banban, use gloves if they give them, eat chicken-mu
+                  between oily bites, and do not assume delivery will be easy just
+                  because it is for locals. Chimaek does not require beer — after a
+                  long day in Seoul, a box at the right moment may be exactly what
+                  you wanted.
                 </p>
               </div>
             </div>

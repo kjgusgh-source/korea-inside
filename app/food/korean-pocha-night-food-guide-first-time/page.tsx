@@ -218,26 +218,10 @@ export default function KoreanPochaNightFoodGuideFirstTimePage() {
             <div className="space-y-8 text-base leading-8 text-[var(--muted)] md:text-lg">
               <div className="space-y-4">
                 <p>
-                  First-time visitors should not think of pocha as one exact
-                  thing.
-                </p>
-
-                <p>Pocha is more of a mood.</p>
-
-                <p>Late evening.</p>
-
-                <p>Small tables.</p>
-
-                <p>Hot food.</p>
-
-                <p>Soju or beer nearby.</p>
-
-                <p>People talking louder than they planned.</p>
-
-                <p>Something spicy or salty in the middle of the table.</p>
-
-                <p>
-                  A meal that is not really dinner, but also not just snacks.
+                  Pocha is not one exact thing — it is a late-evening mood: small
+                  tables, hot food, soju or beer nearby, something salty or spicy
+                  in the middle, people talking louder than they meant to. Not
+                  quite dinner, not just snacks.
                 </p>
               </div>
 
@@ -247,62 +231,14 @@ export default function KoreanPochaNightFoodGuideFirstTimePage() {
                 </h2>
 
                 <p>
-                  Old-style pojangmacha is the image many foreigners know.
-                </p>
-
-                <p>Plastic covers.</p>
-
-                <p>Small stools.</p>
-
-                <p>Steam from hot broth.</p>
-
-                <p>A little messy.</p>
-
-                <p>A little cramped.</p>
-
-                <p>Very Korean in the imagination.</p>
-
-                <p>
-                  These places can feel memorable, but they are not always the
-                  easiest choice for first-time visitors.
-                </p>
-
-                <p>Menus may be simple.</p>
-
-                <p>Prices may not feel as clear.</p>
-
-                <p>Seating can be tight.</p>
-
-                <p>Language support may be limited.</p>
-
-                <p>Payment style can vary.</p>
-
-                <p>
-                  If you are nervous, do not force yourself into the first tent
-                  you see.
-                </p>
-
-                <p>
-                  It is okay to look, check the menu, and keep walking.
-                </p>
-
-                <p>Modern indoor pocha is usually easier.</p>
-
-                <p>
-                  These places feel more like casual bars or restaurants. They
-                  often have clearer menus, more seats, and a more predictable
-                  setup.
-                </p>
-
-                <p>You can still eat pocha-style food there.</p>
-
-                <p>
-                  It just may not look like the old street tent in your head.
-                </p>
-
-                <p>
-                  For many first-time visitors, indoor pocha is the safer first
-                  step.
+                  Old-style pojangmacha is the drama image — plastic covers, small
+                  stools, steam from broth, a little cramped. Memorable, but menus
+                  can be simple, prices less clear, and payment style varies. It
+                  is fine to look, check the menu, and keep walking. Modern indoor
+                  pocha usually feels more like a casual bar or restaurant, with
+                  clearer menus and more seats — still pocha-style food, just not
+                  the tent in your head. For a first visit, indoor is often the
+                  easier step.
                 </p>
               </div>
 
@@ -311,60 +247,15 @@ export default function KoreanPochaNightFoodGuideFirstTimePage() {
                   What is anju?
                 </h2>
 
-                <p>The word you should know is anju.</p>
-
-                <p>Anju means food eaten with alcohol.</p>
-
-                <p>This is why pocha food often tastes strong.</p>
-
-                <p>Salty.</p>
-
-                <p>Spicy.</p>
-
-                <p>Hot.</p>
-
-                <p>Greasy.</p>
-
-                <p>Sour.</p>
-
-                <p>Sweet-spicy.</p>
-
-                <p>Good for sharing.</p>
-
-                <p>Good with a drink.</p>
-
-                <p>Not always light.</p>
-
                 <p>
-                  If a stew tastes too salty by itself, it may be because it is
-                  meant to be eaten slowly with drinks, rice, or other food.
+                  Anju means food eaten with alcohol — salty, spicy, greasy,
+                  shareable, not always light. If a stew tastes too salty alone,
+                  it may be meant to go slowly with drinks, rice, or other dishes.
+                  You do not need to drink heavily; many people come mostly for
+                  the food. Pocha is usually built around drinking culture, so
+                  expect alcohol around you, but if you do not drink, pick a
+                  place where ordering food without much alcohol feels normal.
                 </p>
-
-                <p>If a dish feels heavy, that is also normal.</p>
-
-                <p>Pocha is not salad culture.</p>
-
-                <p>
-                  You do not need to drink heavily to enjoy pocha food.
-                </p>
-
-                <p>
-                  Some people go mostly for the food and atmosphere.
-                </p>
-
-                <p>
-                  But pocha is usually built around drinking culture, so expect
-                  alcohol around you.
-                </p>
-
-                <p>If you drink, keep your pace.</p>
-
-                <p>
-                  If you do not drink, choose a place where ordering food
-                  without much alcohol feels comfortable.
-                </p>
-
-                <p>You do not have to copy the table next to you.</p>
               </div>
 
               <div className="space-y-4">
@@ -533,52 +424,15 @@ export default function KoreanPochaNightFoodGuideFirstTimePage() {
                   Prices, cash, and payment
                 </h2>
 
-                <p>Now, the practical warning.</p>
-
-                <p>Check the menu and price before sitting or ordering.</p>
-
                 <p>
-                  This matters more at night and in tourist-heavy areas.
+                  Check the menu and price before you sit, especially at night in
+                  tourist-heavy areas. Some places are normal; some are expensive
+                  because of the location; outdoor or small tents may not show
+                  prices as clearly as a regular restaurant. Do not sit down just
+                  because someone calls you over. Cash helps at old-style or
+                  street-side spots; indoor places often take cards, but payment
+                  style varies — do not rely on one method only.
                 </p>
-
-                <p>Some pocha-style places are perfectly normal.</p>
-
-                <p>Some are expensive because of the area.</p>
-
-                <p>
-                  Some outdoor or small places may not make prices as clear as a
-                  regular restaurant.
-                </p>
-
-                <p>Do not sit down only because someone calls you over.</p>
-
-                <p>Do not order without knowing the price.</p>
-
-                <p>If the menu feels unclear, ask first.</p>
-
-                <p>If it still feels unclear, leave.</p>
-
-                <p>There will be another place.</p>
-
-                <p>Cash can be useful.</p>
-
-                <p>
-                  Many indoor places may accept cards, but old-style, small, or
-                  street-side places can vary.
-                </p>
-
-                <p>
-                  If you are planning to try a more traditional
-                  pojangmacha-style place, small cash makes things easier.
-                </p>
-
-                <p>Do not rely on one payment method only.</p>
-
-                <p>Also, do not assume every place works the same way.</p>
-
-                <p>That is the point of local travel.</p>
-
-                <p>The system changes by place.</p>
               </div>
 
               <div className="space-y-4">
@@ -586,26 +440,13 @@ export default function KoreanPochaNightFoodGuideFirstTimePage() {
                   Noise and street manners
                 </h2>
 
-                <p>Pocha areas can be noisy.</p>
-
-                <p>People drink, laugh, talk loudly, and stay late.</p>
-
-                <p>That is part of the atmosphere.</p>
-
-                <p>But still be aware of the street around you.</p>
-
-                <p>Do not block narrow sidewalks.</p>
-
-                <p>Do not stand in front of someone&apos;s doorway.</p>
-
-                <p>Do not shout near residential buildings late at night.</p>
-
                 <p>
+                  Pocha areas get loud — people drink, laugh, and stay late, and
+                  that is part of it. Still, do not block narrow sidewalks, stand
+                  in doorways, or shout near residential buildings late at night.
                   If you are taking photos, avoid putting strangers clearly in
                   the frame, especially when people are drinking.
                 </p>
-
-                <p>A pocha night should feel fun, not careless.</p>
               </div>
 
               <div className="space-y-4 rounded-[1.25rem] border border-[var(--border)] bg-[var(--surface)] p-5">
@@ -613,88 +454,25 @@ export default function KoreanPochaNightFoodGuideFirstTimePage() {
                   Simple first pocha night
                 </p>
 
-                <p>Choose one warm soup like eomuk-tang.</p>
-
                 <p>
-                  Add one shared dish like pajeon, tteokbokki, or gyeran-mari.
-                </p>
-
-                <p>
-                  Try something stronger like dakbal or golbaengi only if your
-                  group actually wants it.
-                </p>
-
-                <p>
-                  Do not order five dishes because they all look interesting.
-                </p>
-
-                <p>Pocha food is heavier than it looks.</p>
-
-                <p>
-                  For the easiest version, choose an indoor pocha.
-                </p>
-
-                <p>
-                  For the drama-like version, look for old-style pojangmacha, but
-                  be more careful with price, menu, and payment.
+                  Start with eomuk-tang, add one shared dish like pajeon,
+                  tteokbokki, or gyeran-mari, and save dakbal or golbaengi for
+                  when your group actually wants heat. Pocha food is heavier than
+                  it looks — indoor pocha for the easy first night, old-style
+                  tent only if you are ready to check price, menu, and payment
+                  carefully.
                 </p>
               </div>
 
               <div className="space-y-4">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
-                  Final note
-                </p>
-
                 <p>
-                  For HAEMIL readers, pocha is worth understanding because it
-                  shows a real Korean night rhythm.
+                  Pocha is worth understanding because it shows a real night
+                  rhythm — someone tired after work, someone meeting friends,
+                  someone ordering one more dish after saying they were done,
+                  someone heading to the subway. Go with curiosity, check the
+                  price, bring a little cash, order less than you think, and pick
+                  a place clear enough that you can actually relax.
                 </p>
-
-                <p>Not polished.</p>
-
-                <p>Not quiet.</p>
-
-                <p>Not always cheap.</p>
-
-                <p>Not always easy.</p>
-
-                <p>But very human.</p>
-
-                <p>Someone is tired after work.</p>
-
-                <p>Someone is meeting friends.</p>
-
-                <p>Someone is eating hot soup in the cold.</p>
-
-                <p>
-                  Someone is ordering one more dish even though they said they
-                  were done.
-                </p>
-
-                <p>Someone is talking too loudly.</p>
-
-                <p>
-                  Someone is peeling away from the night and heading to the
-                  subway.
-                </p>
-
-                <p>That is pocha.</p>
-
-                <p>Go with curiosity.</p>
-
-                <p>Check the price.</p>
-
-                <p>Bring a little cash.</p>
-
-                <p>Order less than you think.</p>
-
-                <p>Drink slowly if you drink.</p>
-
-                <p>
-                  And choose a place that feels clear enough for you to relax.
-                </p>
-
-                <p>That is the best first pocha experience.</p>
               </div>
             </div>
           </section>

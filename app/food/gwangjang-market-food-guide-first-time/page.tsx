@@ -217,32 +217,12 @@ export default function GwangjangMarketFoodGuideFirstTimePage() {
             <div className="space-y-8 text-base leading-8 text-[var(--muted)] md:text-lg">
               <div className="space-y-4">
                 <p>
-                  It is not a quiet hidden market.
-                </p>
-
-                <p>It is famous.</p>
-
-                <p>It is crowded.</p>
-
-                <p>It has a lot of tourists now.</p>
-
-                <p>
-                  Some parts feel local, some parts feel very visitor-focused,
-                  and some parts can feel a little too pushy if you are not used
-                  to Korean markets.
-                </p>
-
-                <p>
-                  Gwangjang Market is best when you treat it as a place to try a
-                  few foods and feel the market energy.
-                </p>
-
-                <p>Not as a place where every stall is perfect.</p>
-
-                <p>Not as a place where everything is automatically cheap.</p>
-
-                <p>
-                  Not as a place where you need to eat every viral dish.
+                  Some aisles still feel local. Others feel built for visitors,
+                  and a few stalls can get pushy if you are not used to Korean
+                  markets. Treat Gwangjang as a place to try two or three foods
+                  and move on — not a checklist where every viral dish has to
+                  happen in one visit, and not a place where every price is
+                  automatically fair.
                 </p>
               </div>
 
@@ -268,20 +248,10 @@ export default function GwangjangMarketFoodGuideFirstTimePage() {
                 </p>
 
                 <p>
-                  This is one of the better first foods at Gwangjang Market
-                  because it actually feels like market food.
+                  It is oily, loud-market food — not delicate, but exactly what
+                  makes sense on a hot griddle in a narrow aisle. The only
+                  caution is that it can be heavy.
                 </p>
-
-                <p>It is not delicate.</p>
-
-                <p>It is not fancy.</p>
-
-                <p>
-                  It is the kind of food that makes sense in a noisy market
-                  aisle.
-                </p>
-
-                <p>The only caution is that it can be heavy.</p>
 
                 <p>
                   If you eat a whole one alone, you may not have much room left
@@ -304,26 +274,10 @@ export default function GwangjangMarketFoodGuideFirstTimePage() {
                 </p>
 
                 <p>
-                  Do not expect it to feel like a full restaurant meal.
+                  Think of it as a small bite between other foods — easy to pick
+                  up and share, not a full meal. It is famous now, so it will
+                  not feel like a secret find, and that is fine.
                 </p>
-
-                <p>It is more like a small market snack.</p>
-
-                <p>That is why it works.</p>
-
-                <p>
-                  It is easy to pick up, easy to share, and not too hard for
-                  first-time visitors to understand.
-                </p>
-
-                <p>
-                  But because it is so famous, it may not feel like a secret
-                  local discovery.
-                </p>
-
-                <p>Just eat it for what it is:</p>
-
-                <p>a simple bite between other foods.</p>
               </div>
 
               <div className="space-y-4">
@@ -418,46 +372,20 @@ export default function GwangjangMarketFoodGuideFirstTimePage() {
                   Cash, prices, and payment
                 </h2>
 
-                <p>Now, the practical part.</p>
-
-                <p>Bring some cash.</p>
-
                 <p>
-                  Some places may accept cards, but food stalls and market
-                  counters can vary.
+                  Bring small cash. Some stalls take cards, but payment style
+                  varies, and relying on one method can leave you stuck at the
+                  counter.
                 </p>
 
                 <p>
-                  If you only rely on one payment method, you may feel stuck.
+                  Check the price before you sit or order. Gwangjang gets a lot
+                  of foreign visitors, and food-alley prices are not always the
+                  best value — that does not mean every vendor is dishonest, but
+                  it does mean you should look for a visible menu, ask if needed,
+                  and keep walking if someone calls you over without a clear
+                  price. There are many stalls.
                 </p>
-
-                <p>Small cash is useful in a market like this.</p>
-
-                <p>You should also check the price before ordering.</p>
-
-                <p>This is important.</p>
-
-                <p>
-                  Gwangjang Market has many foreign visitors, and some travelers
-                  feel that prices in very tourist-heavy food areas are not
-                  always the best value.
-                </p>
-
-                <p>This does not mean every vendor is dishonest.</p>
-
-                <p>It means you should act like a careful traveler.</p>
-
-                <p>Look for a visible menu.</p>
-
-                <p>Ask the price before you sit.</p>
-
-                <p>Do not sit down only because someone calls you over.</p>
-
-                <p>If the price feels unclear, keep walking.</p>
-
-                <p>There are many stalls.</p>
-
-                <p>You do not have to choose the first one.</p>
               </div>
 
               <div className="space-y-4">
@@ -465,26 +393,11 @@ export default function GwangjangMarketFoodGuideFirstTimePage() {
                   Moving through the market
                 </h2>
 
-                <p>The market aisles can be narrow.</p>
-
-                <p>People stop suddenly.</p>
-
-                <p>Staff may call out to customers.</p>
-
-                <p>Tourists take photos.</p>
-
-                <p>Someone is trying to carry hot food behind you.</p>
-
                 <p>
-                  This is not the place to stand in the middle of the path and
-                  check your phone for five minutes.
-                </p>
-
-                <p>Step to the side first.</p>
-
-                <p>
-                  If you want photos, take them quickly and avoid blocking people
-                  eating or working.
+                  The aisles are narrow — people stop for photos, staff call out
+                  to customers, and someone behind you may be carrying hot food.
+                  Step to the side before checking your phone, take photos
+                  quickly, and avoid blocking people eating or working.
                 </p>
               </div>
 
@@ -493,27 +406,12 @@ export default function GwangjangMarketFoodGuideFirstTimePage() {
                   How market seating works
                 </h2>
 
-                <p>Market seats are not cafe seats.</p>
-
-                <p>At many stalls, the rhythm is simple:</p>
-
-                <p>sit,</p>
-
-                <p>order,</p>
-
-                <p>eat,</p>
-
-                <p>pay,</p>
-
-                <p>move on.</p>
-
                 <p>
-                  You do not need to rush nervously, but it is not the best
-                  place to stay for a long time after finishing food, especially
-                  when people are waiting.
+                  Market seats are not cafe seats. At many stalls the rhythm is
+                  sit, order, eat, pay, move on. You do not need to rush, but
+                  lingering after you finish — especially when people are waiting
+                  — can feel awkward. That is just how busy market eating works.
                 </p>
-
-                <p>This is just how busy market eating works.</p>
               </div>
 
               <div className="space-y-4 rounded-[1.25rem] border border-[var(--border)] bg-[var(--surface)] p-5">
@@ -521,19 +419,12 @@ export default function GwangjangMarketFoodGuideFirstTimePage() {
                   Simple first visit
                 </p>
 
-                <p>Try bindaetteok.</p>
-
-                <p>Add mayak gimbap if you want a small snack.</p>
-
-                <p>Try yukhoe only if you are comfortable with raw beef.</p>
-
-                <p>Choose noodles if you want something warm and calmer.</p>
-
-                <p>Then stop.</p>
-
-                <p>That is enough.</p>
-
-                <p>You can eat again later somewhere else.</p>
+                <p>
+                  Try bindaetteok, add mayak gimbap if you want a small snack,
+                  choose yukhoe only if you are comfortable with raw beef, and
+                  pick noodles if you want something warm and calmer — then stop
+                  and eat again later somewhere else.
+                </p>
               </div>
 
               <div className="space-y-4">
@@ -562,62 +453,15 @@ export default function GwangjangMarketFoodGuideFirstTimePage() {
               </div>
 
               <div className="space-y-4">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
-                  Final note
-                </p>
-
                 <p>
-                  For HAEMIL readers, the best way to enjoy Gwangjang Market is
-                  not to believe every viral video.
+                  Go hungry but not desperate, bring small cash, check prices,
+                  pick two or three foods, and eat while things are still hot.
+                  Gwangjang can be crowded, touristy, noisy, and oily — and the
+                  reason people still go is the feeling: a hot pancake on a
+                  metal counter, a small roll of gimbap, frying oil in the air,
+                  and a market auntie calling you over from a narrow aisle. It
+                  is messy, and that is part of it.
                 </p>
-
-                <p>Go hungry, but not desperate.</p>
-
-                <p>Bring small cash.</p>
-
-                <p>Check prices.</p>
-
-                <p>Pick two or three foods.</p>
-
-                <p>Avoid pushy or unclear stalls.</p>
-
-                <p>Do not block the aisle.</p>
-
-                <p>Eat while the food is hot.</p>
-
-                <p>And accept that the market is a little messy.</p>
-
-                <p>That is part of the place.</p>
-
-                <p>
-                  Gwangjang Market can be crowded, touristy, noisy, oily, and
-                  not always the cheapest.
-                </p>
-
-                <p>But it can still be memorable.</p>
-
-                <p>A hot pancake on a metal counter.</p>
-
-                <p>A small roll of gimbap.</p>
-
-                <p>A bowl of noodles.</p>
-
-                <p>The smell of frying oil.</p>
-
-                <p>People moving in every direction.</p>
-
-                <p>A market auntie calling you over.</p>
-
-                <p>
-                  A quick meal that feels very different from a polished cafe
-                  street.
-                </p>
-
-                <p>That is the reason to go.</p>
-
-                <p>Not because it is perfect.</p>
-
-                <p>Because it feels alive.</p>
               </div>
             </div>
           </section>

@@ -209,28 +209,11 @@ export default function KoreanNoodlesGuideFirstTimePage() {
             <div className="space-y-8 text-base leading-8 text-[var(--muted)] md:text-lg">
               <div className="space-y-4">
                 <p>
-                  Korean noodles are useful when you do not want a complicated
-                  meal.
-                </p>
-
-                <p>That sounds simple, but it matters when you are traveling.</p>
-
-                <p>Some Korean foods are better with two or more people.</p>
-
-                <p>Some need grilling.</p>
-
-                <p>Some come as a shared pot.</p>
-
-                <p>Some require knowing how the table works.</p>
-
-                <p>Noodles are easier.</p>
-
-                <p>You can walk in, order one bowl, eat, and leave.</p>
-
-                <p>
-                  That makes them good for solo travelers, tired travelers, rainy
-                  days, hot days, early lunches, late meals, and moments when
-                  you do not want to think too much.
+                  Noodles are useful when you do not want a complicated meal — no
+                  grill, no shared pot, not much table choreography. Walk in,
+                  order one bowl, eat, leave. That makes them good for solo
+                  travelers, tired days, rain, heat, or when your food plans
+                  suddenly fail.
                 </p>
               </div>
 
@@ -249,20 +232,10 @@ export default function KoreanNoodlesGuideFirstTimePage() {
                   image that many travelers know from Japan.
                 </p>
 
-                <p>Cup ramyeon at a convenience store is normal travel food.</p>
-
                 <p>
-                  A simple bowl of ramyeon at a small restaurant or snack place
-                  can also be normal.
-                </p>
-
-                <p>It is not fancy.</p>
-
-                <p>That is the point.</p>
-
-                <p>
-                  It is quick, salty, spicy, cheap-feeling in mood even when
-                  prices vary, and useful when you just need food.
+                  Cup ramyeon at a convenience store is normal travel food; a
+                  simple bowl at a snack shop works too. Quick, salty, spicy —
+                  useful when you just need food, not a special meal.
                 </p>
               </div>
 
@@ -308,36 +281,13 @@ export default function KoreanNoodlesGuideFirstTimePage() {
                   visitors.
                 </p>
 
-                <p>The noodles are chewy.</p>
-
-                <p>The broth can be cold, light, sour, or icy.</p>
-
                 <p>
-                  The flavor may feel quieter than expected if you are used to
-                  hot, salty noodle soup.
+                  Chewy noodles, cold light or sour broth — quieter than hot soup
+                  if that is what you know. Scissors on the table are normal;
+                  cut the noodles. Vinegar and mustard may sit nearby; add a
+                  little first. Great after BBQ on a hot day; not everyone loves
+                  the first bite.
                 </p>
-
-                <p>
-                  Some places serve scissors with naengmyeon because the noodles
-                  can be long and chewy.
-                </p>
-
-                <p>Cutting the noodles is normal.</p>
-
-                <p>You may also see vinegar and mustard on the table.</p>
-
-                <p>Add a little first, not too much.</p>
-
-                <p>
-                  Naengmyeon is especially good when the weather is hot or after
-                  a heavy meal like BBQ.
-                </p>
-
-                <p>But it is not for everyone on the first bite.</p>
-
-                <p>Some people love it.</p>
-
-                <p>Some people need time.</p>
               </div>
 
               <div className="space-y-4">
@@ -439,49 +389,13 @@ export default function KoreanNoodlesGuideFirstTimePage() {
                   for many visitors than spicy red dishes.
                 </p>
 
-                <p>This is not traditional Korean royal food.</p>
-
-                <p>It is everyday Korean-Chinese food.</p>
-
-                <p>Delivery food.</p>
-
-                <p>Moving-day food.</p>
-
-                <p>Casual restaurant food.</p>
-
                 <p>
-                  A dish people order when they want something simple and filling.
+                  Jjajangmyeon is everyday Korean-Chinese comfort — dark, savory,
+                  slightly sweet black bean sauce, easy for many visitors. Moving
+                  day, delivery night, casual restaurant food. Jjamppong is the
+                  louder red seafood broth side: spicy, filling, good if you want
+                  heat. Alone, pick black sauce for comfort or red soup for spice.
                 </p>
-
-                <p>
-                  If you are nervous about spice, jjajangmyeon can be an easy
-                  choice.
-                </p>
-
-                <p>
-                  Jjamppong is the spicy seafood noodle side of Korean-Chinese
-                  food.
-                </p>
-
-                <p>
-                  It has red broth, seafood or vegetables, and a stronger flavor.
-                </p>
-
-                <p>It can be hot, spicy, salty, and filling.</p>
-
-                <p>
-                  If jjajangmyeon feels soft and easy, jjamppong feels louder.
-                </p>
-
-                <p>
-                  Some people order both together when eating with someone else.
-                </p>
-
-                <p>Alone, choose based on your mood.</p>
-
-                <p>Black sauce if you want comfort.</p>
-
-                <p>Red soup if you want heat.</p>
               </div>
 
               <div className="space-y-4">
@@ -538,23 +452,11 @@ export default function KoreanNoodlesGuideFirstTimePage() {
                   When your food plans fail
                 </h2>
 
-                <p>Noodles are also good when your food plans fail.</p>
-
-                <p>The restaurant you saved is closed.</p>
-
-                <p>The line is too long.</p>
-
-                <p>You are too hungry to search.</p>
-
-                <p>Your group cannot agree.</p>
-
-                <p>You are alone and do not want a shared dish.</p>
-
-                <p>This is when noodles help.</p>
-
-                <p>A simple bowl can save the day.</p>
-
-                <p>Do not overthink it.</p>
+                <p>
+                  When the saved restaurant is closed, the line is too long, or
+                  your group cannot agree — a noodle shop is an easy backup. One
+                  bowl, no overthinking.
+                </p>
               </div>
 
               <div className="space-y-4">
@@ -562,50 +464,20 @@ export default function KoreanNoodlesGuideFirstTimePage() {
                   Ordering tips
                 </h2>
 
-                <p>Ordering noodles is usually straightforward.</p>
-
-                <p>Look for photos.</p>
-
-                <p>Check whether the dish is hot or cold.</p>
-
-                <p>Check whether it is spicy.</p>
-
-                <p>Use a translation app if needed.</p>
-
                 <p>
-                  If there are table scissors with cold noodles, use them
-                  carefully.
+                  Look for photos, check hot vs cold and spicy vs mild, use a
+                  translation app if needed, cut cold noodles with table scissors
+                  carefully, add vinegar or mustard slowly, and let hot bowls cool
+                  before the first big bite.
                 </p>
-
-                <p>If there is vinegar or mustard, add slowly.</p>
-
-                <p>If the bowl is hot, do not rush the first bite.</p>
               </div>
 
               <div className="space-y-4">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
-                  Final note
-                </p>
-
                 <p>
-                  For HAEMIL readers, Korean noodles are not about finding one
-                  perfect dish.
-                </p>
-
-                <p>They are about having options.</p>
-
-                <p>
-                  Warm, cold, spicy, plain, quick, heavy, soft, chewy,
-                  solo-friendly, convenience-store easy, restaurant-simple.
-                </p>
-
-                <p>That is why noodles are useful in Korea.</p>
-
-                <p>They are not always the most exciting meal of the trip.</p>
-
-                <p>
-                  But sometimes, after too much walking and too many choices, a
-                  good bowl of noodles is exactly what you needed.
+                  Korean noodles are about options — warm, cold, spicy, plain,
+                  quick, chewy, solo-friendly. They are not always the most
+                  exciting meal of the trip, but after too much walking and too
+                  many choices, one good bowl can be exactly what you needed.
                 </p>
               </div>
             </div>
