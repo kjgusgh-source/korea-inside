@@ -175,6 +175,16 @@ const STANDALONE_TRAVEL_GUIDES = [
     readingTime: "8 min read",
   },
   {
+    id: "luggage-storage-in-seoul-first-time",
+    category: "travel",
+    categoryLabel: "Travel guide",
+    title: "Luggage Storage in Seoul for First-Time Visitors",
+    description:
+      "A practical Seoul luggage guide covering hotel storage, station lockers, airport options, suitcase movement, subway stairs, rush hour, and local travel tips.",
+    href: "/travel/luggage-storage-in-seoul-first-time",
+    readingTime: "8 min read",
+  },
+  {
     id: "how-to-get-from-incheon-airport-to-seoul",
     category: "travel",
     categoryLabel: "Travel guide",
