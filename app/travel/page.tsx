@@ -145,6 +145,16 @@ const STANDALONE_TRAVEL_GUIDES = [
     readingTime: "8 min read",
   },
   {
+    id: "korea-travel-apps-first-time",
+    category: "travel",
+    categoryLabel: "Travel guide",
+    title: "Best Korea Travel Apps for First-Time Visitors",
+    description:
+      "A practical guide to Korean apps travelers may actually use, from Naver Map, KakaoMap, Papago, Kakao T, and subway apps to Baemin, CatchTable, Yanolja, and Yeogi Eottae.",
+    href: "/travel/korea-travel-apps-first-time",
+    readingTime: "10 min read",
+  },
+  {
     id: "how-to-get-from-incheon-airport-to-seoul",
     category: "travel",
     categoryLabel: "Travel guide",
