@@ -5,6 +5,16 @@ import { getPostsByCategory } from "../../lib/posts";
 
 const STANDALONE_TRAVEL_GUIDES = [
   {
+    id: "where-to-stay-in-seoul-first-time",
+    category: "travel",
+    categoryLabel: "Travel guide",
+    title: "Where to Stay in Seoul for the First Time",
+    description:
+      "A practical local-style guide to choosing your Seoul base, from Myeongdong and Hongdae to Gangnam, Insadong, Seoul Station, and Jamsil.",
+    href: "/travel/where-to-stay-in-seoul-first-time",
+    readingTime: "10 min read",
+  },
+  {
     id: "how-to-use-korean-subway",
     category: "travel",
     categoryLabel: "Travel guide",
