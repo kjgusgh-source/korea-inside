@@ -94,6 +94,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/food/how-to-order-food-in-korea`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/food/what-is-korean-street-toast`,
       lastModified: new Date(),
       changeFrequency: "monthly",

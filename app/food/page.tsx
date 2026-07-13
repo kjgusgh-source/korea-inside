@@ -15,6 +15,16 @@ const STANDALONE_FOOD_GUIDES = [
     readingTime: "9 min read",
   },
   {
+    id: "how-to-order-food-in-korea",
+    category: "food",
+    categoryLabel: "Food guide",
+    title: "How to Order Food in Korea",
+    description:
+      "A practical guide for first-time visitors, with Korean restaurant ordering tips, kiosks, table bells, side dishes, self-service water, paying, solo dining, and spicy food notes.",
+    href: "/food/how-to-order-food-in-korea",
+    readingTime: "8 min read",
+  },
+  {
     id: "what-to-eat-at-korean-convenience-store",
     category: "food",
     categoryLabel: "Food guide",
