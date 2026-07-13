@@ -5,6 +5,16 @@ import { getPostsByCategory } from "../../lib/posts";
 
 const STANDALONE_TRAVEL_GUIDES = [
   {
+    id: "things-to-know-before-visiting-korea-first-time",
+    category: "travel",
+    categoryLabel: "Travel guide",
+    title: "Things to Know Before Visiting Korea for the First Time",
+    description:
+      "A practical first-time Korea travel guide with local tips on Seoul transport, maps, rush hour, food ordering, costs, cafes, weather, and common travel mistakes.",
+    href: "/travel/things-to-know-before-visiting-korea-first-time",
+    readingTime: "9 min read",
+  },
+  {
     id: "3-days-in-seoul-itinerary-first-time",
     category: "travel",
     categoryLabel: "Travel guide",
