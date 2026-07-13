@@ -25,6 +25,16 @@ const STANDALONE_TRAVEL_GUIDES = [
     readingTime: "10 min read",
   },
   {
+    id: "how-to-get-around-seoul-first-time",
+    category: "travel",
+    categoryLabel: "Travel guide",
+    title: "How to Get Around Seoul for First-Time Visitors",
+    description:
+      "A practical Seoul transport guide for first-time visitors, with subway, taxi, rush hour, airport routes, walking, maps, and local trade-offs.",
+    href: "/travel/how-to-get-around-seoul-first-time",
+    readingTime: "8 min read",
+  },
+  {
     id: "how-to-use-korean-subway",
     category: "travel",
     categoryLabel: "Travel guide",
