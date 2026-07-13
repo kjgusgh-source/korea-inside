@@ -35,6 +35,16 @@ const STANDALONE_FOOD_GUIDES = [
     readingTime: "9 min read",
   },
   {
+    id: "myeongdong-street-food-guide-first-time",
+    category: "food",
+    categoryLabel: "Food guide",
+    title: "Myeongdong Street Food Guide for First-Time Visitors",
+    description:
+      "A practical first-time guide to Myeongdong street food, with egg bread, tteokbokki, eomuk, hotteok, chicken bites, skewers, tourist prices, and cash tips.",
+    href: "/food/myeongdong-street-food-guide-first-time",
+    readingTime: "8 min read",
+  },
+  {
     id: "what-to-eat-at-korean-convenience-store",
     category: "food",
     categoryLabel: "Food guide",
