@@ -25,6 +25,16 @@ const STANDALONE_FOOD_GUIDES = [
     readingTime: "8 min read",
   },
   {
+    id: "korean-soups-and-stews-guide-first-time",
+    category: "food",
+    categoryLabel: "Food guide",
+    title: "Korean Soups and Stews Guide for First-Time Visitors",
+    description:
+      "A practical guide to Korean soups and stews, from kimchi-jjigae and doenjang-jjigae to sundubu, seolleongtang, galbitang, samgyetang, rice, side dishes, and local tips.",
+    href: "/food/korean-soups-and-stews-guide-first-time",
+    readingTime: "10 min read",
+  },
+  {
     id: "gwangjang-market-food-guide-first-time",
     category: "food",
     categoryLabel: "Food guide",
