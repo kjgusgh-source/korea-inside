@@ -15,6 +15,16 @@ const STANDALONE_TRAVEL_GUIDES = [
     readingTime: "9 min read",
   },
   {
+    id: "best-time-to-visit-korea-first-time",
+    category: "travel",
+    categoryLabel: "Travel guide",
+    title: "Best Time to Visit Korea for First-Time Visitors",
+    description:
+      "A practical first-time Korea travel guide comparing spring, summer, autumn, and winter by weather, crowds, costs, clothing, and travel style.",
+    href: "/travel/best-time-to-visit-korea-first-time",
+    readingTime: "8 min read",
+  },
+  {
     id: "is-korea-expensive-to-visit-first-time",
     category: "travel",
     categoryLabel: "Travel guide",
