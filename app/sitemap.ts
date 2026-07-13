@@ -88,6 +88,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
+      url: `${baseUrl}/food/what-to-eat-in-korea-first-time`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/food/what-is-korean-street-toast`,
       lastModified: new Date(),
       changeFrequency: "monthly",

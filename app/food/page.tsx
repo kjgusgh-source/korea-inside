@@ -5,6 +5,16 @@ import { getPostsByCategory } from "../../lib/posts";
 
 const STANDALONE_FOOD_GUIDES = [
   {
+    id: "what-to-eat-in-korea-first-time",
+    category: "food",
+    categoryLabel: "Food guide",
+    title: "What to Eat in Korea for the First Time",
+    description:
+      "A friendly food guide for first-time Korea visitors, with Korean BBQ, gimbap, tteokbokki, soups, fried chicken, convenience stores, cafes, and realistic local tips.",
+    href: "/food/what-to-eat-in-korea-first-time",
+    readingTime: "9 min read",
+  },
+  {
     id: "what-to-eat-at-korean-convenience-store",
     category: "food",
     categoryLabel: "Food guide",
