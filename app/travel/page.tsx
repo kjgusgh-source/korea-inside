@@ -15,6 +15,16 @@ const STANDALONE_TRAVEL_GUIDES = [
     readingTime: "9 min read",
   },
   {
+    id: "is-korea-expensive-to-visit-first-time",
+    category: "travel",
+    categoryLabel: "Travel guide",
+    title: "Is Korea Expensive to Visit?",
+    description:
+      "An honest first-time traveler's guide to Korea costs, with Seoul hotels, tourist areas, food, cafes, transport, taxis, shopping, and better-value local tips.",
+    href: "/travel/is-korea-expensive-to-visit-first-time",
+    readingTime: "8 min read",
+  },
+  {
     id: "3-days-in-seoul-itinerary-first-time",
     category: "travel",
     categoryLabel: "Travel guide",
