@@ -221,15 +221,10 @@ export default function KoreaArrivalDayChecklistFirstTimePage() {
                   Simple arrival-day plan
                 </p>
 
-                <p>Get connected.</p>
-
-                <p>Get to your stay.</p>
-
-                <p>Eat something easy.</p>
-
-                <p>Learn your neighborhood.</p>
-
-                <p>Sleep well.</p>
+                <p>
+                  Get connected, reach your stay, eat something easy, learn your
+                  neighborhood, sleep — that is a full arrival day.
+                </p>
               </div>
 
               <div className="space-y-4">
@@ -238,38 +233,11 @@ export default function KoreaArrivalDayChecklistFirstTimePage() {
                 </h2>
 
                 <p>
-                  First, check your internet before leaving the airport area.
+                  Confirm eSIM, SIM, roaming, or pocket Wi-Fi works before you
+                  leave the airport area — Korea has plenty of Wi-Fi in hotels,
+                  cafes, and stations (often on the wall, counter, or receipt),
+                  but you need data while moving on day one.
                 </p>
-
-                <p>If you are using eSIM, make sure it is working.</p>
-
-                <p>
-                  If you are using a SIM card, make sure your phone has data.
-                </p>
-
-                <p>
-                  If you are using roaming, check that your maps and messages
-                  load.
-                </p>
-
-                <p>
-                  If you are using pocket Wi-Fi, make sure it is charged and
-                  connected.
-                </p>
-
-                <p>
-                  Korea has a lot of Wi-Fi, especially in hotels, cafes, malls,
-                  stations, and many indoor places. In cafes, the Wi-Fi name and
-                  password are often written on the wall, near the counter, or
-                  on the receipt.
-                </p>
-
-                <p>
-                  But on arrival day, you do not want to depend only on finding
-                  free Wi-Fi.
-                </p>
-
-                <p>You need data while moving.</p>
               </div>
 
               <div className="space-y-4">
@@ -277,24 +245,10 @@ export default function KoreaArrivalDayChecklistFirstTimePage() {
                   2. Open your map app before you start moving
                 </h2>
 
-                <p>Second, open your map app before you start moving.</p>
-
-                <p>Use Naver Map or KakaoMap if you can.</p>
-
-                <p>Search your hotel or stay.</p>
-
-                <p>Check the route.</p>
-
-                <p>Check the subway station or airport bus stop.</p>
-
-                <p>Check the exit if you are using the subway.</p>
-
                 <p>
-                  A station exit can make a big difference in Korea.
-                </p>
-
-                <p>
-                  The wrong exit can add a long walk with luggage.
+                  Open Naver Map or KakaoMap, search your stay, and check the
+                  route, station, and exit before you start moving — the wrong
+                  exit can mean a long walk with luggage.
                 </p>
               </div>
 
@@ -304,33 +258,10 @@ export default function KoreaArrivalDayChecklistFirstTimePage() {
                 </h2>
 
                 <p>
-                  Third, choose airport transport based on your energy, not only
-                  price.
-                </p>
-
-                <p>
-                  Airport trains can be good if your stay is near a useful
-                  station.
-                </p>
-
-                <p>
-                  Airport buses can be more comfortable if the stop is close to
-                  your hotel.
-                </p>
-
-                <p>
-                  Taxis can help if you have a lot of luggage, arrive late, or
-                  travel with family.
-                </p>
-
-                <p>But taxis are not always fastest.</p>
-
-                <p>
-                  Traffic, rain, rush hour, or events can make roads slow.
-                </p>
-
-                <p>
-                  Do not assume a taxi is always the easiest answer.
+                  Pick transport by energy and luggage, not price alone — airport
+                  train if your stay is near a useful station, bus if the stop is
+                  close, taxi if you are late or loaded down. Taxis are not always
+                  fastest; traffic and rain can slow them too.
                 </p>
               </div>
 
@@ -340,26 +271,10 @@ export default function KoreaArrivalDayChecklistFirstTimePage() {
                 </h2>
 
                 <p>
-                  Fourth, do not overplan sightseeing before check-in.
-                </p>
-
-                <p>
-                  Even if your flight arrives early, dragging luggage around
-                  the city can make the day feel heavy.
-                </p>
-
-                <p>
-                  If you cannot check in yet, ask whether your stay can hold
-                  luggage.
-                </p>
-
-                <p>
-                  If not, look for a simple luggage option nearby, but do not
-                  build your whole first day around complicated movement.
-                </p>
-
-                <p>
-                  Arrival day is not the best day for a packed itinerary.
+                  Even if you land early, dragging luggage across the city before
+                  check-in makes the day heavy. Ask your stay to hold bags if they
+                  can; if not, look for a simple nearby option — but keep arrival
+                  day light, not packed with sightseeing.
                 </p>
               </div>
 
@@ -368,34 +283,12 @@ export default function KoreaArrivalDayChecklistFirstTimePage() {
                   5. Learn the area around your stay
                 </h2>
 
-                <p>Fifth, learn the area around your stay.</p>
-
-                <p>Find the nearest subway station.</p>
-
-                <p>Find the nearest convenience store.</p>
-
-                <p>Find one simple restaurant or cafe.</p>
-
-                <p>Check where the main road is.</p>
-
-                <p>Check which station exit gets you home.</p>
-
                 <p>
-                  This sounds small, but it makes the rest of the trip easier.
-                </p>
-
-                <p>
-                  A convenience store is especially useful on the first day.
-                </p>
-
-                <p>
-                  You can buy water, snacks, a quick meal, tissues, a small
-                  umbrella, or basic travel items.
-                </p>
-
-                <p>
-                  You can also get a first feeling of Korean daily life without
-                  needing to order a full restaurant meal.
+                  Find your nearest station exit, convenience store, and one
+                  simple place to eat — small details that make the rest of the
+                  trip easier. A convenience store run gives you water, snacks,
+                  and a first taste of daily Korea without a full restaurant
+                  order.
                 </p>
               </div>
 
@@ -404,36 +297,10 @@ export default function KoreaArrivalDayChecklistFirstTimePage() {
                   6. Choose an easy first meal
                 </h2>
 
-                <p>Sixth, choose an easy first meal.</p>
-
                 <p>
-                  Do not make your first meal too complicated unless you already
-                  have energy.
-                </p>
-
-                <p>Good first-day meals can be:</p>
-
-                <p>gimbap,</p>
-
-                <p>noodles,</p>
-
-                <p>soup,</p>
-
-                <p>fried chicken,</p>
-
-                <p>convenience store food,</p>
-
-                <p>a food court meal,</p>
-
-                <p>or a simple restaurant near your hotel.</p>
-
-                <p>
-                  Korean BBQ is fun, but it may not be the easiest first meal if
-                  you are alone, tired, or unsure how ordering works.
-                </p>
-
-                <p>
-                  Save it for a day when you can enjoy it properly.
+                  Keep the first meal simple — gimbap, noodles, soup, convenience
+                  store food, or something near the hotel. Korean BBQ can wait
+                  until you have energy and know how ordering works.
                 </p>
               </div>
 
@@ -442,27 +309,11 @@ export default function KoreaArrivalDayChecklistFirstTimePage() {
                   7. Avoid crossing the city on arrival day
                 </h2>
 
-                <p>Seventh, avoid crossing the city on arrival day.</p>
-
                 <p>
-                  If you are staying in Myeongdong, do not force yourself to go
-                  to Hongdae, Gangnam, and Jamsil right away.
+                  Stay near your neighborhood on day one — one area, a short
+                  walk, food, rest. Crossing Myeongdong, Hongdae, and Gangnam in
+                  one evening with jet lag rarely pays off.
                 </p>
-
-                <p>
-                  If you are staying in Hongdae, do not rush to palaces and
-                  then Gangnam in the same evening.
-                </p>
-
-                <p>Pick one nearby area.</p>
-
-                <p>Walk a little.</p>
-
-                <p>Eat.</p>
-
-                <p>Rest.</p>
-
-                <p>A good first day makes the second day better.</p>
               </div>
 
               <div className="space-y-4">
@@ -470,55 +321,19 @@ export default function KoreaArrivalDayChecklistFirstTimePage() {
                   8. Prepare your phone for the next morning
                 </h2>
 
-                <p>Eighth, prepare your phone for the next morning.</p>
-
-                <p>Charge it.</p>
-
-                <p>Save your hotel address.</p>
-
-                <p>Save your first sightseeing route.</p>
-
-                <p>Save one or two food options.</p>
-
-                <p>Check the weather.</p>
-
-                <p>If you have a power bank, charge that too.</p>
-
                 <p>
-                  You may see power bank rental options in busy parts of Korea,
-                  but it is still easier to start the day with your own battery
-                  ready.
+                  Charge your phone and power bank, save your hotel address and
+                  tomorrow&apos;s route, check the weather — rental battery
+                  stations exist in busy areas, but starting with your own charge
+                  is easier.
                 </p>
               </div>
 
               <div className="space-y-4">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
-                  Final note
-                </p>
-
                 <p>
-                  For HAEMIL readers, the best Korea arrival day is not
-                  impressive.
-                </p>
-
-                <p>It is smooth.</p>
-
-                <p>
-                  You do not need to see five famous places immediately.
-                </p>
-
-                <p>
-                  You need to arrive safely, understand your area, eat
-                  something, and feel ready for tomorrow.
-                </p>
-
-                <p>Korea becomes much easier after the first night.</p>
-
-                <p>So keep arrival day light.</p>
-
-                <p>
-                  Your real trip starts better when you are not already
-                  exhausted.
+                  The best arrival day is smooth, not impressive — arrive safely,
+                  learn your block, eat something, sleep. Korea gets easier after
+                  the first night; starting exhausted makes everything harder.
                 </p>
               </div>
             </div>

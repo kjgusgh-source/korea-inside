@@ -225,42 +225,16 @@ export default function SevenDaysInKoreaItineraryFirstTimePage() {
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
             <div className="space-y-8 text-base leading-8 text-[var(--muted)] md:text-lg">
               <div className="space-y-4">
-                <p>The important thing is not to move too much.</p>
-
                 <p>
                   Korea is well connected, but changing cities still takes
-                  energy.
+                  energy — pack, check out, move with luggage, find the station,
+                  arrive, settle in. That can tire you out more than the map
+                  suggests. For most first-time visitors, a simple one-week route
+                  works: Seoul four days, Busan two days, Gyeongju one day — or
+                  Seoul five days and Busan two if you want less movement. Seoul
+                  alone can fill a week; the right choice depends on how much
+                  city-hopping you enjoy.
                 </p>
-
-                <p>
-                  You have to pack, check out, move with luggage, find the
-                  station, take the train, arrive, move again, and settle in.
-                </p>
-
-                <p>
-                  That can make a trip feel more tiring than it looks on a map.
-                </p>
-
-                <p>
-                  For most first-time visitors, the best one-week route is
-                  simple:
-                </p>
-
-                <p>Seoul for four days.</p>
-
-                <p>Busan for two days.</p>
-
-                <p>Gyeongju for one day.</p>
-
-                <p>Or, if you want an easier trip:</p>
-
-                <p>Seoul for five days.</p>
-
-                <p>Busan for two days.</p>
-
-                <p>Both are good.</p>
-
-                <p>The right choice depends on how much movement you enjoy.</p>
               </div>
 
               <div className="space-y-4">
@@ -268,31 +242,13 @@ export default function SevenDaysInKoreaItineraryFirstTimePage() {
                   Day 1: Arrive in Seoul and settle in
                 </h2>
 
-                <p>Day 1 should be gentle.</p>
-
-                <p>Arrive in Seoul, check in, and do not plan too much.</p>
-
                 <p>
-                  After a flight, even simple things can feel tiring: finding
-                  the airport route, buying a transit card, checking into your
-                  stay, understanding the neighborhood, and getting your first
-                  meal.
+                  Day 1 should stay gentle — arrive, check in, and keep plans
+                  light. After a flight, even airport routes, transit cards, and
+                  a first meal take energy. Walk near your base in Myeongdong,
+                  Euljiro, Jongno, or Hongdae, hit a convenience store, learn
+                  your nearest station, and skip a full sightseeing race.
                 </p>
-
-                <p>
-                  Choose an easy area like Myeongdong, Euljiro, Jongno, or
-                  Hongdae depending on where you stay.
-                </p>
-
-                <p>Walk nearby.</p>
-
-                <p>Eat something simple.</p>
-
-                <p>Visit a convenience store.</p>
-
-                <p>Get used to the subway station near your hotel.</p>
-
-                <p>Do not make the first day a full sightseeing race.</p>
 
                 <div className="space-y-2 rounded-[1.25rem] border border-[var(--border)] bg-[var(--surface)] p-5">
                   <p>
@@ -317,32 +273,12 @@ export default function SevenDaysInKoreaItineraryFirstTimePage() {
                   Day 2: Palace, Bukchon, Insadong, Ikseon-dong
                 </h2>
 
-                <p>Day 2 can be classic Seoul.</p>
-
                 <p>
-                  Start with a palace such as Gyeongbokgung or Changdeokgung.
-                </p>
-
-                <p>
-                  Then walk toward Bukchon, Insadong, or Ikseon-dong.
-                </p>
-
-                <p>
-                  This gives you older Seoul: palace walls, hanok-style
-                  streets, tea, small alleys, galleries, cafes, and cultural
-                  mood.
-                </p>
-
-                <p>Do not try to visit every palace.</p>
-
-                <p>
-                  One palace plus one or two nearby neighborhoods is enough for
-                  most first-time visitors.
-                </p>
-
-                <p>
-                  This day can involve more walking than expected, so
-                  comfortable shoes matter.
+                  Day 2 can be classic Seoul — one palace such as Gyeongbokgung
+                  or Changdeokgung, then Bukchon, Insadong, or Ikseon-dong for
+                  hanok streets, tea, galleries, and cultural mood. One palace
+                  plus one or two nearby neighborhoods is enough for most
+                  first-timers; wear comfortable shoes because walking adds up.
                 </p>
 
                 <div className="space-y-2 rounded-[1.25rem] border border-[var(--border)] bg-[var(--surface)] p-5">
@@ -367,32 +303,13 @@ export default function SevenDaysInKoreaItineraryFirstTimePage() {
                   Day 3: Myeongdong, Namsan, Euljiro
                 </h2>
 
-                <p>Day 3 can be central Seoul and night mood.</p>
-
                 <p>
-                  Use Myeongdong, Namsan, Euljiro, Namdaemun, or City Hall
-                  depending on your energy.
-                </p>
-
-                <p>
-                  Myeongdong is touristy, but it is easy.
-                </p>
-
-                <p>Namsan gives a good first city view.</p>
-
-                <p>
-                  Euljiro gives a more local-cool contrast with older alleys,
-                  small restaurants, and bars.
-                </p>
-
-                <p>
-                  This is a good day to understand that Seoul is not one single
-                  mood.
-                </p>
-
-                <p>
-                  It can be bright and touristy on one street, then older and
-                  more hidden a few blocks away.
+                  Day 3 is central Seoul and night mood — Myeongdong, Namsan,
+                  Euljiro, Namdaemun, or City Hall depending on energy.
+                  Myeongdong is touristy but easy; Namsan gives a first city
+                  view; Euljiro adds a local-cool contrast a few blocks away.
+                  Seoul shifts mood fast from bright shopping streets to older
+                  alleys.
                 </p>
 
                 <div className="space-y-2 rounded-[1.25rem] border border-[var(--border)] bg-[var(--surface)] p-5">
@@ -417,26 +334,12 @@ export default function SevenDaysInKoreaItineraryFirstTimePage() {
                   Day 4: Hongdae, Gangnam, or Seongsu
                 </h2>
 
-                <p>Day 4 can be your choice day in Seoul.</p>
-
                 <p>
-                  Choose Hongdae if you want young energy, cafes, casual
-                  shopping, late-night food, and street mood.
+                  Day 4 is your choice in Seoul — Hongdae for young energy and
+                  cafes, Gangnam for modern shopping and COEX, or Seongsu for
+                  design and trendy streets. Pick one direction; all three in one
+                  day is too much spread.
                 </p>
-
-                <p>
-                  Choose Gangnam if you want modern Seoul, shopping, beauty,
-                  restaurants, COEX, Sinsa, or Apgujeong.
-                </p>
-
-                <p>
-                  Choose Seongsu if you like cafes, design shops, pop-up spaces,
-                  and trendy streets.
-                </p>
-
-                <p>Do not try to do all three in one day.</p>
-
-                <p>Pick one direction and enjoy it properly.</p>
 
                 <div className="space-y-2 rounded-[1.25rem] border border-[var(--border)] bg-[var(--surface)] p-5">
                   <p>
@@ -461,36 +364,13 @@ export default function SevenDaysInKoreaItineraryFirstTimePage() {
                   Day 5: Travel to Busan and easy evening
                 </h2>
 
-                <p>Day 5 is a good day to move to Busan.</p>
-
                 <p>
-                  Do not plan a heavy sightseeing morning before changing
-                  cities.
-                </p>
-
-                <p>Travel days always take more energy than expected.</p>
-
-                <p>
-                  Check out, get to the station, take the train, arrive in
-                  Busan, move to your stay, and settle in.
-                </p>
-
-                <p>After that, keep the day simple.</p>
-
-                <p>Walk near your Busan base.</p>
-
-                <p>Eat something local.</p>
-
-                <p>
-                  If you still have energy, visit a nearby beach, market, or
-                  evening street depending on where you are staying.
-                </p>
-
-                <p>Busan feels different from Seoul.</p>
-
-                <p>
-                  It is still a big city, but the ocean, hills, bridges,
-                  markets, and wider coastal feeling change the mood.
+                  Day 5 is a travel day to Busan — skip a heavy Seoul morning
+                  before changing cities. Check out, take the train, settle in,
+                  then keep the evening simple: walk near your base, eat
+                  something local, maybe a beach or market if energy allows.
+                  Busan still feels like a big city, but the ocean, hills, and
+                  bridges change the mood from Seoul.
                 </p>
 
                 <div className="space-y-2 rounded-[1.25rem] border border-[var(--border)] bg-[var(--surface)] p-5">
@@ -515,33 +395,11 @@ export default function SevenDaysInKoreaItineraryFirstTimePage() {
                   Day 6: Busan coastal or market day
                 </h2>
 
-                <p>Day 6 can be your main Busan day.</p>
-
-                <p>Choose a route that fits your style.</p>
-
                 <p>
-                  For a classic first Busan feeling, combine a coastal view,
-                  market or food area, and one relaxed neighborhood.
-                </p>
-
-                <p>Do not try to cross Busan too many times either.</p>
-
-                <p>
-                  Busan is spread out, and travel time can be longer than
-                  expected.
-                </p>
-
-                <p>
-                  If you like ocean views, focus on beach and coastal areas.
-                </p>
-
-                <p>
-                  If you like markets and food, focus on central market areas.
-                </p>
-
-                <p>
-                  If you like colorful streets and photos, choose one
-                  neighborhood and give it time.
+                  Day 6 is your main Busan day — pick a route that fits you:
+                  coastal views and beach areas, central markets and food, or
+                  one colorful neighborhood with time to wander. Busan is spread
+                  out; crossing it too many times eats into the day.
                 </p>
 
                 <div className="space-y-2 rounded-[1.25rem] border border-[var(--border)] bg-[var(--surface)] p-5">
@@ -574,24 +432,10 @@ export default function SevenDaysInKoreaItineraryFirstTimePage() {
                 </h3>
 
                 <p>
-                  Gyeongju is good if you want history, slower streets, old
-                  capital atmosphere, tomb areas, traditional mood, and a calm
-                  contrast after Seoul and Busan.
-                </p>
-
-                <p>
-                  It is one of the easiest ways to make a one-week Korea trip
-                  feel more cultural.
-                </p>
-
-                <p>But adding Gyeongju means another move.</p>
-
-                <p>
-                  That can be worth it if you enjoy history.
-                </p>
-
-                <p>
-                  It may be too much if you dislike changing cities.
+                  Gyeongju adds history, tombs, and a calmer old-capital mood —
+                  a good cultural contrast after Seoul and Busan, but another
+                  move with luggage. Worth it if history matters to you; skip it
+                  if city changes drain you.
                 </p>
 
                 <h3 className="text-xl font-semibold text-[var(--text)]">
@@ -599,12 +443,9 @@ export default function SevenDaysInKoreaItineraryFirstTimePage() {
                 </h3>
 
                 <p>
-                  This is better if you want less stress before departure.
-                </p>
-
-                <p>
-                  A slower final day can sometimes be better than adding one
-                  more famous place.
+                  Staying in Busan or returning to Seoul slowly works better if
+                  you want less stress before departure — sometimes a calmer
+                  final day beats one more famous place.
                 </p>
 
                 <div className="space-y-2 rounded-[1.25rem] border border-[var(--border)] bg-[var(--surface)] p-5">
@@ -680,41 +521,15 @@ export default function SevenDaysInKoreaItineraryFirstTimePage() {
                 </h2>
 
                 <p>
-                  One common mistake is trying to add too many cities.
-                </p>
-
-                <p>
-                  Seoul, Busan, Gyeongju, Jeju, Jeonju, Sokcho, and DMZ-style
-                  trips can all sound interesting.
-                </p>
-
-                <p>
-                  But seven days is not enough to do everything comfortably.
-                </p>
-
-                <p>
-                  A trip with fewer places often feels better than a trip with
-                  many checkmarks.
-                </p>
-
-                <p>
-                  Another mistake is planning every meal too tightly.
-                </p>
-
-                <p>
-                  Korea has great food, but famous restaurants can have lines,
-                  break times, or confusing ordering systems. If every meal
-                  depends on one famous place, the trip can become stressful.
-                </p>
-
-                <p>Plan a few food goals.</p>
-
-                <p>Leave the rest flexible.</p>
-
-                <p>
-                  Some of the best Korea meals are simple: gimbap, soup, noodles,
-                  bunsik, convenience store snacks, fried chicken, barbecue, or
-                  a random restaurant near your stay.
+                  One common mistake is adding too many cities — Seoul, Busan,
+                  Gyeongju, Jeju, Jeonju, and DMZ-style trips all sound
+                  interesting, but seven days is not enough to do everything
+                  comfortably. Fewer places often feel better than many
+                  checkmarks. Another mistake is planning every meal tightly;
+                  famous restaurants can have lines, break times, or confusing
+                  ordering. Plan a few food goals and leave the rest flexible —
+                  gimbap, soup, bunsik, convenience store snacks, or a random
+                  spot near your stay often become the best meals.
                 </p>
               </div>
 
@@ -723,101 +538,27 @@ export default function SevenDaysInKoreaItineraryFirstTimePage() {
                   Transport and weather
                 </h2>
 
-                <p>Transport planning also matters.</p>
-
                 <p>
-                  Try not to move across the city during rush hour with
-                  luggage.
+                  Try not to move across the city during rush hour with luggage
+                  — morning and evening commutes crowd subways and stations.
+                  Taxis help when they reduce stress, but traffic can make them
+                  slower than expected; use the subway as your base for city
+                  movement. Keep travel days lighter. Weather reshapes the plan
+                  too: shorter outdoor blocks and indoor breaks in summer,
+                  warmer food stops in winter, and crowded popular areas in
+                  spring and autumn peak seasons.
                 </p>
-
-                <p>
-                  Morning and evening commute periods can make subways, roads,
-                  and stations crowded.
-                </p>
-
-                <p>
-                  Taxis can be useful, but during traffic they may be slower
-                  and more stressful than expected.
-                </p>
-
-                <p>
-                  For most city movement, use the subway as your base.
-                </p>
-
-                <p>
-                  Use taxis when they truly reduce stress.
-                </p>
-
-                <p>For city changes, keep the day lighter.</p>
-
-                <p>Weather can change this itinerary too.</p>
-
-                <p>
-                  In summer, reduce outdoor walking and add indoor breaks.
-                </p>
-
-                <p>
-                  In winter, plan shorter outdoor blocks and warmer food or cafe
-                  stops.
-                </p>
-
-                <p>
-                  In spring and autumn, walking is easier, but popular areas can
-                  be crowded and stays can cost more during busy travel periods.
-                </p>
-
-                <p>A good itinerary should adjust to the season.</p>
               </div>
 
               <div className="space-y-4">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
-                  Final note
-                </p>
-
                 <p>
-                  For HAEMIL readers, the best 7-day Korea trip is not the one
-                  that proves you saw everything.
-                </p>
-
-                <p>
-                  It is the one that lets you enjoy Korea without being tired
-                  every night.
-                </p>
-
-                <p>
-                  Spend enough time in Seoul to understand the city.
-                </p>
-
-                <p>
-                  Add Busan if you want ocean and a different rhythm.
-                </p>
-
-                <p>Add Gyeongju if history matters to you.</p>
-
-                <p>Skip one place if your body needs rest.</p>
-
-                <p>
-                  Korea is better when you leave room for small moments:
-                </p>
-
-                <p>a quiet palace path,</p>
-
-                <p>a convenience store snack,</p>
-
-                <p>a subway ride across the river,</p>
-
-                <p>a cafe you did not plan,</p>
-
-                <p>a warm bowl of soup,</p>
-
-                <p>
-                  a night street that feels better than the famous attraction.
-                </p>
-
-                <p>Use this itinerary as a base, not a rule.</p>
-
-                <p>
-                  That is the easiest way to enjoy Korea for the first time.
+                  A good first week in Korea is not about proving you saw
+                  everything — it is about leaving energy at night. Spend enough
+                  time in Seoul, add Busan for coastal contrast, add Gyeongju if
+                  history calls to you, and skip a city if your body needs rest.
+                  Use this route as a base, not a rule; the unplanned convenience
+                  store snack or cafe you wandered into often sticks longer than
+                  the checkmark you rushed to hit.
                 </p>
               </div>
             </div>

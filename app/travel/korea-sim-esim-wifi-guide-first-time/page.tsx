@@ -215,32 +215,11 @@ export default function KoreaSimEsimWifiGuideFirstTimePage() {
                 </h2>
 
                 <p>
-                  In many parts of Seoul and other big cities, you will see
-                  Wi-Fi in hotels, guesthouses, cafes, malls, stations,
-                  restaurants, and public spaces.
-                </p>
-
-                <p>
-                  Korea is a very connected country, and many travelers are
-                  surprised by how often Wi-Fi appears.
-                </p>
-
-                <p>
-                  In cafes, the Wi-Fi name and password are often written
-                  somewhere inside.
-                </p>
-
-                <p>Sometimes it is on the wall.</p>
-
-                <p>Sometimes it is near the counter.</p>
-
-                <p>Sometimes it is on a small sign.</p>
-
-                <p>Sometimes it is printed on the receipt.</p>
-
-                <p>
-                  So if you sit down in a cafe and need Wi-Fi, check the wall,
-                  receipt, or counter before asking.
+                  In Seoul and other big cities, Wi-Fi shows up in hotels,
+                  guesthouses, cafes, malls, and stations more often than many
+                  visitors expect. In cafes, the name and password are often on
+                  the wall, near the counter, on a small sign, or printed on the
+                  receipt — check those before asking staff.
                 </p>
               </div>
 
@@ -250,25 +229,10 @@ export default function KoreaSimEsimWifiGuideFirstTimePage() {
                 </h2>
 
                 <p>
-                  That said, free Wi-Fi is not the same as a full travel
-                  internet plan.
-                </p>
-
-                <p>You may need data while walking between places.</p>
-
-                <p>You may need maps before you enter a cafe.</p>
-
-                <p>You may need translation at a kiosk.</p>
-
-                <p>You may need to find the right subway exit.</p>
-
-                <p>You may need to contact your stay after landing.</p>
-
-                <p>You may need to call a taxi in the rain.</p>
-
-                <p>
-                  That is where having your own data makes the trip much
-                  smoother.
+                  Free Wi-Fi still is not the same as travel data — you need
+                  maps between cafes, translation at kiosks, the right subway
+                  exit, and a way to reach your stay after landing. That is when
+                  your own connection matters most.
                 </p>
               </div>
 
@@ -278,31 +242,12 @@ export default function KoreaSimEsimWifiGuideFirstTimePage() {
                 </h2>
 
                 <p>
-                  For many visitors, an eSIM is the easiest option.
-                </p>
-
-                <p>
-                  If your phone supports eSIM, it can be simple because you do
-                  not need to change a physical SIM card. You can prepare it
-                  before the trip and turn it on when you arrive, depending on
-                  the provider and your phone.
-                </p>
-
-                <p>The trade-off is compatibility.</p>
-
-                <p>Not every phone supports eSIM.</p>
-
-                <p>Some phones are carrier-locked.</p>
-
-                <p>
-                  Some setups are confusing if you have never used eSIM before.
-                </p>
-
-                <p>So check your phone before buying anything.</p>
-
-                <p>
-                  Do not wait until you are tired at the airport to discover
-                  your phone cannot use it.
+                  For many visitors, eSIM is the easiest option — no physical
+                  card swap, and you can often set it up before landing. The
+                  catch is compatibility: not every phone supports eSIM, some are
+                  carrier-locked, and first-time setup can confuse you if you wait
+                  until you are tired at the airport. Check your phone before you
+                  buy anything.
                 </p>
               </div>
 
@@ -311,35 +256,13 @@ export default function KoreaSimEsimWifiGuideFirstTimePage() {
                   Physical SIM card
                 </h2>
 
-                <p>A physical SIM card is another common option.</p>
-
                 <p>
-                  This can be useful if you prefer a more traditional setup or
-                  if you want a Korean phone number depending on the plan.
+                  A physical SIM is another common choice, and some plans include
+                  a Korean number — useful for reservations, taxis, or contact
+                  forms. A tourist number does not unlock every Korean app like a
+                  local account would; sign-up, payment, and verification still
+                  vary. Buy it for reliable data, not because it opens every door.
                 </p>
-
-                <p>
-                  A Korean number can help in some situations, such as
-                  reservations, taxis, waiting systems, or contact forms.
-                </p>
-
-                <p>But be careful.</p>
-
-                <p>
-                  A tourist SIM with a Korean number does not automatically make
-                  every Korean app work like it does for a local resident.
-                </p>
-
-                <p>
-                  Some services may still depend on account setup, payment
-                  method, identity verification, app policy, or provider details.
-                </p>
-
-                <p>
-                  So do not buy a SIM thinking it will unlock everything.
-                </p>
-
-                <p>Buy it mainly because you need reliable data.</p>
               </div>
 
               <div className="space-y-4">
@@ -347,27 +270,11 @@ export default function KoreaSimEsimWifiGuideFirstTimePage() {
                   International roaming
                 </h2>
 
-                <p>Roaming is the easiest emotionally.</p>
-
                 <p>
-                  You keep your normal number and your normal phone setup.
+                  Roaming keeps your normal number and setup, which feels simple
+                  if your home carrier has a decent travel plan — but cost and
+                  data limits vary a lot. Check your plan before you leave.
                 </p>
-
-                <p>There is less to learn.</p>
-
-                <p>
-                  This can be worth it if your home carrier has a travel plan
-                  that fits your trip.
-                </p>
-
-                <p>The trade-off is cost and limits.</p>
-
-                <p>
-                  Roaming can be expensive depending on your plan, and speed or
-                  data limits may vary.
-                </p>
-
-                <p>Check before you leave.</p>
               </div>
 
               <div className="space-y-4">
@@ -375,29 +282,12 @@ export default function KoreaSimEsimWifiGuideFirstTimePage() {
                   Pocket Wi-Fi
                 </h2>
 
-                <p>Pocket Wi-Fi can be good for groups.</p>
-
                 <p>
-                  If several people need internet, one pocket Wi-Fi device can
-                  keep everyone connected. It can also help if one person&apos;s
-                  phone does not support eSIM or SIM changes.
-                </p>
-
-                <p>
-                  The trade-off is that it becomes one more thing to carry.
-                </p>
-
-                <p>You need to charge it.</p>
-
-                <p>You need to remember who has it.</p>
-
-                <p>
-                  If the person carrying it walks away, everyone else may lose
-                  connection.
-                </p>
-
-                <p>
-                  For solo travelers, eSIM or SIM is usually simpler.
+                  Pocket Wi-Fi works well for groups — one device keeps several
+                  phones online, and it helps if someone cannot use eSIM. You
+                  carry and charge one more thing, and if the person holding it
+                  walks off, everyone loses connection. Solo travelers usually
+                  find eSIM or a SIM simpler.
                 </p>
               </div>
 
@@ -407,42 +297,10 @@ export default function KoreaSimEsimWifiGuideFirstTimePage() {
                 </h2>
 
                 <p>
-                  Free Wi-Fi is useful, but it should be your backup.
-                </p>
-
-                <p>Hotel Wi-Fi is good for planning.</p>
-
-                <p>Cafe Wi-Fi is good for resting and checking routes.</p>
-
-                <p>Mall or station Wi-Fi can help in a pinch.</p>
-
-                <p>
-                  But if you rely only on free Wi-Fi, the stressful moments
-                  happen between Wi-Fi spots.
-                </p>
-
-                <p>That is exactly when you usually need help most.</p>
-
-                <p>On the street.</p>
-
-                <p>At a bus stop.</p>
-
-                <p>Inside a huge subway station.</p>
-
-                <p>In front of a restaurant kiosk.</p>
-
-                <p>While trying to find your hotel entrance.</p>
-
-                <p>
-                  So the best mindset is not &quot;Korea has Wi-Fi, so I need
-                  nothing.&quot;
-                </p>
-
-                <p>It is:</p>
-
-                <p>
-                  Korea has lots of Wi-Fi, but I still want basic data for
-                  movement.
+                  Korea has lots of Wi-Fi, but the stressful moments happen
+                  between Wi-Fi spots — on the street, at a bus stop, inside a
+                  huge station, in front of a restaurant kiosk. Use hotel and cafe
+                  Wi-Fi for planning; keep basic data for moving.
                 </p>
               </div>
 
@@ -451,33 +309,12 @@ export default function KoreaSimEsimWifiGuideFirstTimePage() {
                   Battery and power bank rental
                 </h2>
 
-                <p>Battery matters too.</p>
-
                 <p>
-                  Maps, translation, photos, messaging, taxi apps, and route
-                  searches can drain your phone quickly.
-                </p>
-
-                <p>
-                  In Korea, you may see power bank rental stations or battery
-                  rental options in busy areas, shopping districts, stations,
-                  malls, or near popular streets.
-                </p>
-
-                <p>They can be useful when your battery is low.</p>
-
-                <p>But do not depend on them completely.</p>
-
-                <p>
-                  The app, payment, sign-up, language support, location, and
-                  return method may vary. If you are a first-time visitor,
-                  finding a rental battery when your phone is already dying can
-                  feel stressful.
-                </p>
-
-                <p>
-                  If you rely heavily on your phone, carrying your own small
-                  power bank is still the safest choice.
+                  Maps, translation, photos, and taxi apps drain battery fast.
+                  You may see power bank rental stations in busy districts,
+                  stations, and malls — handy when you are low, but app, payment,
+                  and return rules vary. If you map all day, your own small power
+                  bank is still the safer backup.
                 </p>
               </div>
 
@@ -487,33 +324,11 @@ export default function KoreaSimEsimWifiGuideFirstTimePage() {
                 </h2>
 
                 <p>
-                  Arrival day is the most important time to be prepared.
-                </p>
-
-                <p>Before you leave the airport area, make sure you can:</p>
-
-                <p>open your map app,</p>
-
-                <p>search your hotel,</p>
-
-                <p>see your route,</p>
-
-                <p>use translation if needed,</p>
-
-                <p>
-                  and contact your accommodation if something goes wrong.
-                </p>
-
-                <p>Save your hotel name and address in Korean.</p>
-
-                <p>Screenshot your airport-to-hotel route.</p>
-
-                <p>Save your first subway station.</p>
-
-                <p>Save your hotel&apos;s nearest station exit.</p>
-
-                <p>
-                  This helps even if your data has a bad moment.
+                  Before leaving the airport area, confirm you can open maps,
+                  search your hotel, read your route, translate if needed, and
+                  message your stay. Save the hotel name and address in Korean,
+                  screenshot the airport-to-hotel route, and note your nearest
+                  station exit — that helps even if data hiccups once.
                 </p>
               </div>
 
@@ -523,73 +338,20 @@ export default function KoreaSimEsimWifiGuideFirstTimePage() {
                 </p>
 
                 <p>
-                  Use an eSIM if your phone supports it and you want
-                  convenience.
-                </p>
-
-                <p>
-                  Use a physical SIM if you prefer a SIM card or want a Korean
-                  number option.
-                </p>
-
-                <p>
-                  Use roaming if your carrier plan is simple and worth the cost.
-                </p>
-
-                <p>
-                  Use pocket Wi-Fi if you are traveling as a group.
-                </p>
-
-                <p>Use cafe and hotel Wi-Fi as helpful support.</p>
-
-                <p>Carry a power bank if you use maps all day.</p>
-
-                <p>That balance is enough.</p>
-
-                <p>You do not need the perfect internet setup.</p>
-
-                <p>
-                  You just need enough connection to move around without
-                  stress.
+                  eSIM if your phone supports it, physical SIM or roaming if that
+                  fits better, pocket Wi-Fi for groups, cafe and hotel Wi-Fi as
+                  backup, and your own power bank if you map all day — enough
+                  connection to move without stress, not a perfect setup.
                 </p>
               </div>
 
               <div className="space-y-4">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
-                  Final note
-                </p>
-
                 <p>
-                  For HAEMIL readers, Korea is actually a very connected place.
-                </p>
-
-                <p>You will probably find Wi-Fi often.</p>
-
-                <p>
-                  You will probably see people charging phones everywhere.
-                </p>
-
-                <p>
-                  You may even notice battery rental options in busy areas.
-                </p>
-
-                <p>
-                  But your first trip becomes easier when your phone works
-                  before you need help.
-                </p>
-
-                <p>Not after.</p>
-
-                <p>Prepare basic data.</p>
-
-                <p>Use Wi-Fi when it is available.</p>
-
-                <p>Keep your battery alive.</p>
-
-                <p>And save a few important things offline.</p>
-
-                <p>
-                  That is the most realistic way to travel Korea comfortably.
+                  Korea is a connected country — you will find Wi-Fi often and
+                  see people charging everywhere. Your trip goes smoother when
+                  basic data works before you need help, not after: prepare data,
+                  use Wi-Fi when it is there, keep your battery alive, and save a
+                  few things offline.
                 </p>
               </div>
             </div>

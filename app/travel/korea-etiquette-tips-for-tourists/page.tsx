@@ -210,12 +210,9 @@ export default function KoreaEtiquetteTipsForTouristsPage() {
             <div className="space-y-8 text-base leading-8 text-[var(--muted)] md:text-lg">
               <div className="space-y-4">
                 <p>
-                  The goal is not to act perfectly Korean.
-                </p>
-
-                <p>
-                  The goal is to avoid small moments that feel awkward or
-                  uncomfortable.
+                  The goal is not to act perfectly Korean — it is to avoid small
+                  moments that feel awkward. Watch what people around you do, then
+                  follow gently.
                 </p>
               </div>
 
@@ -224,56 +221,15 @@ export default function KoreaEtiquetteTipsForTouristsPage() {
                   Subway manners
                 </h2>
 
-                <p>On the subway, keep your bag close to your body.</p>
-
                 <p>
-                  Seoul subway trains can become crowded, especially during
-                  weekday rush hour. If you have a backpack, it is better to
-                  hold it in front of you or keep it low instead of letting it
-                  bump into people behind you.
-                </p>
-
-                <p>Try not to block the doors.</p>
-
-                <p>People often move quickly when getting on and off.</p>
-
-                <p>
-                  If you are not sure where to stand, step to the side and let
-                  people pass first.
-                </p>
-
-                <p>
-                  Phone calls on the subway are usually kept short and quiet.
-                </p>
-
-                <p>
-                  You may see people watching videos or using phones, but loud
-                  calls or speaker sound can feel uncomfortable in a crowded
-                  train.
-                </p>
-
-                <p>Use earphones if you watch something.</p>
-
-                <p>
-                  Keep your voice lower than you might in an outdoor tourist
-                  area.
-                </p>
-
-                <p>Rush hour needs extra patience.</p>
-
-                <p>
-                  During morning and evening commute times, subway cars,
-                  platforms, and station transfers can be very crowded. People
-                  are trying to get to work, school, appointments, or home.
-                </p>
-
-                <p>
-                  If you are sightseeing, it is often better to wait a little
-                  instead of forcing yourself into the busiest movement time.
-                </p>
-
-                <p>
-                  A cafe break can sometimes make the whole day easier.
+                  On the subway, keep your bag close — hold a backpack in front
+                  during crowded weekday rush hour instead of letting it bump
+                  people behind you. Step aside near doors and let others pass
+                  first if you are unsure where to stand. Phone calls are usually
+                  kept short and quiet; use earphones for videos and keep your
+                  voice lower than in outdoor tourist areas. If you are
+                  sightseeing, waiting out rush hour with a cafe break often
+                  makes the rest of the day easier.
                 </p>
               </div>
 
@@ -283,24 +239,9 @@ export default function KoreaEtiquetteTipsForTouristsPage() {
                 </h2>
 
                 <p>
-                  Taxis are useful, but they are not always the polite or
-                  practical answer.
-                </p>
-
-                <p>
-                  If traffic is heavy, a taxi can become slow and stressful.
-                  During rush hour or rain, roads can move badly and drivers may
-                  be under pressure.
-                </p>
-
-                <p>
-                  Use taxis when they reduce stress, such as late at night,
-                  with luggage, bad weather, or a difficult route.
-                </p>
-
-                <p>
-                  For most city movement, the subway is usually more
-                  predictable.
+                  Taxis help with luggage, rain, or late nights, but heavy
+                  traffic can make them slow and stressful during rush hour. For
+                  most city movement, the subway stays more predictable.
                 </p>
               </div>
 
@@ -309,95 +250,26 @@ export default function KoreaEtiquetteTipsForTouristsPage() {
                   Restaurant habits
                 </h2>
 
-                <p>Restaurants in Korea can work in different ways.</p>
-
-                <p>Some restaurants have staff who take your order.</p>
-
-                <p>Some use kiosks.</p>
-
-                <p>Some use tablets at the table.</p>
-
-                <p>Some ask you to pay first.</p>
-
                 <p>
-                  Some let you eat first and pay at the counter after the meal.
-                </p>
-
-                <p>This can feel confusing at first, but it is normal.</p>
-
-                <p>Look around before you panic.</p>
-
-                <p>
-                  If there is a kiosk, check for a language button.
+                  Korean restaurants work in different ways — staff may take
+                  your order, or you may use a kiosk, tablet, or pay-first
+                  system, then eat and pay at the counter afterward. Look around
+                  before you panic: check for a language button on kiosks, a table
+                  bell for staff, or a self-service water corner. In many casual
+                  spots, water, spoons, chopsticks, and napkins are self-serve
+                  from a drawer under the table or a corner station — copying
+                  other customers is fine.
                 </p>
 
                 <p>
-                  If there is a table bell, you can press it when you need
-                  staff.
+                  Side dishes (banchan) come with many meals; some places refill,
+                  some have a self-service area, some do not refill every item.
+                  Take a reasonable amount and avoid wasting food. Table bells
+                  are normal, not rude — staff may not check on your table
+                  repeatedly like in some countries. Tipping is not expected in
+                  everyday restaurants and cafes; you usually pay the amount
+                  shown, often at the counter after eating.
                 </p>
-
-                <p>
-                  If water is not brought to you, check for a self-service
-                  area.
-                </p>
-
-                <p>In many casual restaurants, water is self-service.</p>
-
-                <p>
-                  Spoons, chopsticks, napkins, or scissors may be in a drawer
-                  under the table or near a self-service corner.
-                </p>
-
-                <p>This surprises many first-time visitors.</p>
-
-                <p>
-                  It is okay to look around and copy what other customers are
-                  doing.
-                </p>
-
-                <p>Side dishes are part of many Korean meals.</p>
-
-                <p>They are called banchan.</p>
-
-                <p>Some restaurants refill side dishes.</p>
-
-                <p>Some have a self-service banchan area.</p>
-
-                <p>Some may not refill every item.</p>
-
-                <p>Take a little first and avoid wasting food.</p>
-
-                <p>
-                  If there is a clear self-service section, it is usually okay
-                  to take a reasonable amount.
-                </p>
-
-                <p>Table bells are common and not rude.</p>
-
-                <p>
-                  If there is a button on the table, press it when you are
-                  ready to order or need help. Staff may not check on your table
-                  repeatedly like in some countries.
-                </p>
-
-                <p>That does not mean they are ignoring you.</p>
-
-                <p>It is just a different system.</p>
-
-                <p>
-                  Tipping is not normally expected in everyday Korean
-                  restaurants and cafes.
-                </p>
-
-                <p>You usually pay the amount shown.</p>
-
-                <p>
-                  In many restaurants, payment happens at the counter after
-                  eating. In cafes, kiosks, food courts, or casual places, you
-                  may pay before eating.
-                </p>
-
-                <p>If you are unsure, watch what other customers do.</p>
               </div>
 
               <div className="space-y-4">
@@ -406,74 +278,25 @@ export default function KoreaEtiquetteTipsForTouristsPage() {
                 </h2>
 
                 <p>
-                  Public trash cans can be harder to find than visitors expect.
+                  Public trash cans can be harder to find than visitors expect
+                  — keep a small bag for wrappers and tissues until you find a
+                  proper bin. Convenience stores sometimes have bins, but not
+                  every store wants outside trash.
                 </p>
 
                 <p>
-                  Do not assume there will be a trash can on every street
-                  corner.
+                  Most modern cafes, shops, and restaurants do not require shoe
+                  removal, but traditional restaurants, guesthouses, temple
+                  spaces, and hanok stays may ask you to take shoes off — if you
+                  see a shoe shelf or others removing shoes, follow them.
                 </p>
 
                 <p>
-                  It is useful to keep a small empty bag for wrappers,
-                  receipts, or tissues until you find a proper place to throw
-                  them away.
-                </p>
-
-                <p>
-                  Convenience stores may have bins, but not every store wants
-                  outside trash.
-                </p>
-
-                <p>Be considerate.</p>
-
-                <p>Shoes can matter in some places.</p>
-
-                <p>
-                  Most modern cafes, shops, hotels, and restaurants do not
-                  require you to remove shoes.
-                </p>
-
-                <p>
-                  But some traditional restaurants, guesthouses, temple spaces,
-                  hanok stays, or private indoor areas may ask you to take them
-                  off.
-                </p>
-
-                <p>
-                  If you see a shoe shelf or other people removing shoes,
-                  follow them.
-                </p>
-
-                <p>
-                  It is a simple habit, but it shows respect for the space.
-                </p>
-
-                <p>Be careful with photos.</p>
-
-                <p>
-                  Korea is very photo-friendly in many travel areas, but not
-                  every place is a photo set.
-                </p>
-
-                <p>
-                  In residential neighborhoods like parts of Bukchon, keep your
-                  voice low and be respectful. People actually live there.
-                </p>
-
-                <p>
-                  In temples, palaces, museums, small shops, and restaurants,
-                  avoid taking close photos of strangers without permission.
-                </p>
-
-                <p>
-                  If a place feels quiet or private, slow down and look for
-                  signs.
-                </p>
-
-                <p>
-                  This is especially important in hanok streets, cafes, and
-                  small local alleys.
+                  Korea is photo-friendly in many travel areas, but residential
+                  streets like parts of Bukchon are where people actually live —
+                  keep your voice low. In temples, palaces, museums, and small
+                  shops, avoid close photos of strangers without permission, and
+                  slow down if a space feels quiet or private.
                 </p>
               </div>
 
@@ -482,46 +305,15 @@ export default function KoreaEtiquetteTipsForTouristsPage() {
                   Queues and public noise
                 </h2>
 
-                <p>Queues matter.</p>
-
-                <p>If people are lining up, join the line.</p>
-
                 <p>
-                  This applies to cafes, restaurants, buses, subway platforms,
-                  pop-up shops, food stalls, and photo spots.
+                  If people are lining up at a cafe, restaurant, bus, or food
+                  stall, join the line — in crowded spots the queue may not look
+                  perfect, but follow the flow rather than pushing forward. Korea
+                  is not silent: markets and nightlife areas can be lively, but
+                  in subways, buses, quiet cafes, museums, temples, and
+                  residential streets, loud talking stands out. Match your volume
+                  to the space.
                 </p>
-
-                <p>
-                  In very crowded places, the line may not always look perfect,
-                  but try to follow the flow.
-                </p>
-
-                <p>Do not push forward just because you are unsure.</p>
-
-                <p>Ask gently or wait and watch.</p>
-
-                <p>Public noise is about context.</p>
-
-                <p>Korea is not silent.</p>
-
-                <p>
-                  Markets, nightlife areas, festivals, shopping streets, and
-                  restaurants can be lively.
-                </p>
-
-                <p>
-                  But in subways, buses, quiet cafes, museums, temples,
-                  residential streets, and elevators, loud talking can stand
-                  out.
-                </p>
-
-                <p>
-                  The local habit is often to adjust your volume to the space.
-                </p>
-
-                <p>Loud is fine in the right place.</p>
-
-                <p>Quiet is better in shared transport or calm areas.</p>
               </div>
 
               <div className="space-y-4">
@@ -530,57 +322,15 @@ export default function KoreaEtiquetteTipsForTouristsPage() {
                 </h2>
 
                 <p>
-                  At cafes, remember that some places are about atmosphere.
-                </p>
-
-                <p>
-                  Korea has many beautiful cafes, and people often stay, talk,
-                  take photos, work, or rest. But in popular cafes, seats can
-                  be limited and lines can form.
-                </p>
-
-                <p>
-                  Avoid using a table for too long if the cafe is small and
-                  crowded.
-                </p>
-
-                <p>
-                  If you take photos, be careful not to block people or turn
-                  the whole space into a personal shoot.
-                </p>
-
-                <p>Enjoy the cafe, but notice the room.</p>
-
-                <p>At palaces and cultural sites, move gently.</p>
-
-                <p>You do not need to be overly formal.</p>
-
-                <p>
-                  Just avoid loud behavior, climbing where you should not,
-                  blocking paths for photos, or treating quiet cultural spaces
-                  like theme park sets.
-                </p>
-
-                <p>If you rent hanbok, enjoy it respectfully.</p>
-
-                <p>
-                  Take photos, but still respect other visitors, staff, and the
-                  space.
-                </p>
-
-                <p>In markets and busy shopping streets, be aware of movement.</p>
-
-                <p>
-                  Do not stop suddenly in the middle of a narrow path to check
-                  your phone.
-                </p>
-
-                <p>Step to the side first.</p>
-
-                <p>
-                  This sounds small, but it helps a lot in crowded places like
-                  Myeongdong, Hongdae, Namdaemun, Gwangjang Market, or popular
-                  cafe streets.
+                  In popular cafes, seats can be limited — enjoy the atmosphere
+                  but notice the room, and avoid turning a small space into a
+                  personal photo shoot. At palaces and cultural sites, move
+                  gently: no loud behavior, blocking paths for photos, or
+                  treating quiet spaces like theme park sets. Hanbok rentals are
+                  fine; just respect other visitors and staff. In crowded markets
+                  and shopping streets like Myeongdong or Gwangjang, step to the
+                  side before stopping to check your phone — small habit, big
+                  difference in narrow paths.
                 </p>
               </div>
 
@@ -589,79 +339,26 @@ export default function KoreaEtiquetteTipsForTouristsPage() {
                   Watch first
                 </p>
 
-                <p>Korea can feel fast-paced.</p>
-
-                <p>Staff may move quickly.</p>
-
-                <p>Restaurants may turn tables quickly.</p>
-
-                <p>Subway crowds may move with purpose.</p>
-
-                <p>Delivery riders may pass through busy streets.</p>
-
-                <p>This does not mean people are angry.</p>
-
-                <p>It often just means the rhythm is fast.</p>
-
                 <p>
-                  If you feel overwhelmed, step aside, check your map, and move
-                  again when you are ready.
+                  Korea can feel fast-paced — staff move quickly, restaurants
+                  turn tables, subway crowds flow with purpose. That does not
+                  mean people are angry; the rhythm is just fast. If you feel
+                  overwhelmed, step aside, check your map, and move when ready.
+                  Before ordering, watch how people order; before throwing
+                  something away, see where others put trash; before photos,
+                  read the mood. Ten seconds of watching goes a long way.
                 </p>
-
-                <p>One of the best etiquette tips is to watch first.</p>
-
-                <p>Before ordering, watch how people order.</p>
-
-                <p>Before throwing something away, check where others put trash.</p>
-
-                <p>Before entering a room, check shoes.</p>
-
-                <p>Before taking photos, check the mood.</p>
-
-                <p>Before pressing a bell, see if other tables use it.</p>
-
-                <p>You can learn a lot in ten seconds.</p>
               </div>
 
               <div className="space-y-4">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
-                  Final note
-                </p>
-
                 <p>
-                  For HAEMIL readers, Korea etiquette is not about memorizing a
-                  long list.
-                </p>
-
-                <p>It is about small awareness.</p>
-
-                <p>Keep your bag close on the subway.</p>
-
-                <p>Use a quiet voice in shared spaces.</p>
-
-                <p>Follow restaurant systems calmly.</p>
-
-                <p>Do not waste side dishes.</p>
-
-                <p>Watch for shoe rules.</p>
-
-                <p>Be careful with photos.</p>
-
-                <p>Respect lines.</p>
-
-                <p>Give yourself extra patience during rush hour.</p>
-
-                <p>And when you are unsure, pause and look around.</p>
-
-                <p>That is enough for most situations.</p>
-
-                <p>You do not have to be perfect.</p>
-
-                <p>You just have to be considerate.</p>
-
-                <p>
-                  That makes travel easier for you and for the people around
-                  you.
+                  Korea etiquette is mostly small awareness — bag close on the
+                  subway, quiet voice in shared spaces, follow restaurant systems
+                  calmly, take banchan without wasting, watch for shoe rules, be
+                  careful with photos, respect lines, and give yourself patience
+                  during rush hour. When unsure, pause and look around. You do
+                  not have to be perfect; being considerate is enough for most
+                  situations.
                 </p>
               </div>
             </div>

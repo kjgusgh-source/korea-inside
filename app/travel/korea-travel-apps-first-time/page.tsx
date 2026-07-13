@@ -217,92 +217,17 @@ export default function KoreaTravelAppsFirstTimePage() {
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
             <div className="space-y-8 text-base leading-8 text-[var(--muted)] md:text-lg">
               <div className="space-y-4">
-                <p>
-                  Many locals use KakaoTalk for messaging.
-                </p>
-
-                <p>Naver Map or KakaoMap for places and routes.</p>
-
-                <p>Kakao T for taxis.</p>
-
-                <p>Baemin for food delivery.</p>
-
-                <p>CatchTable for some restaurant reservations.</p>
-
-                <p>
-                  Yanolja or Yeogi Eottae for local stays and travel bookings.
-                </p>
-
-                <p>
-                  For a short trip, you do not need to master all of them.
-                </p>
-
-                <p>
-                  But knowing what each app is for can save you a lot of
-                  confusion.
-                </p>
-              </div>
-
-              <div className="space-y-4">
                 <h2 className="text-2xl font-semibold text-[var(--text)]">
                   Naver Map and KakaoMap
                 </h2>
 
                 <p>
-                  The first app to prepare is a local map app.
-                </p>
-
-                <p>
-                  For most first-time visitors, Naver Map is the easiest place
-                  to start.
-                </p>
-
-                <p>KakaoMap is also useful.</p>
-
-                <p>
-                  These apps are important because Korea can be difficult to
-                  navigate with only a global map app. Local place names, subway
-                  exits, buses, walking routes, and small restaurants are often
-                  easier to understand through Korean map apps.
-                </p>
-
-                <p>This matters in Seoul.</p>
-
-                <p>A subway exit can change your whole route.</p>
-
-                <p>
-                  Exit 2 and Exit 8 may put you on different sides of a wide
-                  road.
-                </p>
-
-                <p>
-                  A restaurant may look close, but the walking route may involve
-                  stairs, alleys, or a large crossing.
-                </p>
-
-                <p>
-                  A cafe may be inside a building, underground, or on an upper
-                  floor.
-                </p>
-
-                <p>
-                  Naver Map or KakaoMap can help with those small details.
-                </p>
-
-                <p>Download at least one before you arrive.</p>
-
-                <p>Search your hotel.</p>
-
-                <p>Search Myeongdong.</p>
-
-                <p>Search Hongdae.</p>
-
-                <p>Search Incheon Airport.</p>
-
-                <p>Search one restaurant or cafe.</p>
-
-                <p>
-                  Get used to the app before you are tired and carrying luggage.
+                  Naver Map or KakaoMap matters because Google Maps alone often
+                  misses local detail — subway exits, bus stops, alley walks,
+                  cafes on upper floors. Exit 2 and Exit 8 can put you on opposite
+                  sides of a wide road. Download one before you land, search your
+                  hotel and a few neighborhoods, and get used to it before you
+                  are tired with luggage.
                 </p>
               </div>
 
@@ -311,31 +236,11 @@ export default function KoreaTravelAppsFirstTimePage() {
                   KakaoTalk
                 </h2>
 
-                <p>KakaoTalk is Korea&apos;s everyday messenger.</p>
-
                 <p>
-                  If you make Korean friends, contact a local service, message a
-                  guesthouse, follow a shop channel, or need to communicate with
-                  someone in Korea, KakaoTalk may appear.
-                </p>
-
-                <p>
-                  For many Koreans, KakaoTalk is not just a chat app.
-                </p>
-
-                <p>It is part of daily communication.</p>
-
-                <p>
-                  But for a short tourist trip, you may not need to use it much.
-                </p>
-
-                <p>
-                  Do not feel like your Korea trip will fail without KakaoTalk.
-                </p>
-
-                <p>
-                  It is useful to know, and helpful if someone asks for it, but
-                  maps and translation apps are more urgent for most travelers.
+                  KakaoTalk is Korea&apos;s everyday messenger — guesthouses,
+                  shops, and new friends may ask for it. Your trip will not fail
+                  without it; maps and translation are more urgent for most
+                  short visits.
                 </p>
               </div>
 
@@ -344,35 +249,13 @@ export default function KoreaTravelAppsFirstTimePage() {
                   Papago
                 </h2>
 
-                <p>A translation app is very useful.</p>
-
                 <p>
-                  Papago is commonly used by travelers in Korea, especially for
-                  Korean menus, signs, notices, product labels, kiosks, and short
-                  phrases.
-                </p>
-
-                <p>
-                  Image translation can help when a menu has no English.
-                </p>
-
-                <p>
-                  It can also help with convenience store products, restaurant
-                  signs, or kiosk screens.
-                </p>
-
-                <p>But translations are not always perfect.</p>
-
-                <p>
-                  Food names, slang, short notices, and handwritten menus can
-                  still be confusing.
-                </p>
-
-                <p>Use translation as a helper.</p>
-
-                <p>
-                  Pointing at a menu photo, using simple words, and watching
-                  what other customers do can be just as useful.
+                  Papago is the translation app many travelers use in Korea —
+                  menus, signs, kiosks, product labels, and short phrases. Image
+                  translation helps when there is no English, but food names,
+                  slang, and handwritten menus still trip it up. Use it as a
+                  helper alongside pointing at photos and watching what locals
+                  order.
                 </p>
               </div>
 
@@ -381,49 +264,12 @@ export default function KoreaTravelAppsFirstTimePage() {
                   Kakao T
                 </h2>
 
-                <p>Kakao T is useful for taxis.</p>
-
                 <p>
-                  A taxi can help when you have luggage, when it is raining,
-                  when it is late, or when the subway route has too many
-                  transfers.
-                </p>
-
-                <p>
-                  Kakao T can make calling a taxi easier than trying to catch
-                  one on the street.
-                </p>
-
-                <p>But do not build your whole trip around taxis.</p>
-
-                <p>
-                  During rush hour, rain, events, or heavy traffic, a taxi can
-                  be slower and more stressful than the subway.
-                </p>
-
-                <p>
-                  This is especially true when crossing the city.
-                </p>
-
-                <p>
-                  A taxi feels comfortable when the road is clear.
-                </p>
-
-                <p>
-                  It feels very different when traffic is barely moving.
-                </p>
-
-                <p>
-                  Also, app sign-up, payment options, language support, and
-                  foreign card support can vary by time and user situation.
-                </p>
-
-                <p>So the safest mindset is:</p>
-
-                <p>Use the subway as your base.</p>
-
-                <p>
-                  Use Kakao T or taxis when they actually reduce stress.
+                  Kakao T helps when you have luggage, rain, or too many subway
+                  transfers — but use the subway as your base and taxis when they
+                  actually reduce stress. Rush hour and rain can make a taxi crawl;
+                  sign-up, payment, and foreign card support also vary. A clear
+                  road feels comfortable; a jammed one does not.
                 </p>
               </div>
 
@@ -432,40 +278,12 @@ export default function KoreaTravelAppsFirstTimePage() {
                   Subway route apps
                 </h2>
 
-                <p>A subway app can also help.</p>
-
                 <p>
-                  Naver Map or KakaoMap can handle most subway routes, but some
-                  first-time visitors like having a dedicated subway route app
-                  too.
-                </p>
-
-                <p>
-                  An official Seoul Subway app or a clear subway map app can
-                  help you check lines, transfers, stations, exits, and route
-                  flow.
-                </p>
-
-                <p>
-                  This is useful when Seoul&apos;s subway map feels too large at
-                  first.
-                </p>
-
-                <p>Still, do not overcomplicate it.</p>
-
-                <p>
-                  If Naver Map already gives you a clear route, that may be
-                  enough.
-                </p>
-
-                <p>
-                  The key is to check your route before entering a crowded
-                  station.
-                </p>
-
-                <p>
-                  During rush hour, standing in the middle of a station while
-                  trying to understand transfers can feel stressful.
+                  Naver Map or KakaoMap handle most subway routes; a dedicated
+                  subway app can help if the map feels overwhelming at first.
+                  Check your route before you enter a crowded station — standing
+                  mid-platform during rush hour while figuring out transfers is
+                  no fun.
                 </p>
               </div>
 
@@ -475,50 +293,11 @@ export default function KoreaTravelAppsFirstTimePage() {
                 </h2>
 
                 <p>
-                  Baemin, or Baedal Minjok, is Korea&apos;s famous food delivery
-                  app.
+                  Baemin is the big local delivery app, but address entry, payment,
+                  sign-up, and building confusion can block visitors. Good to know
+                  it exists — for most first-timers, restaurants, food courts,
+                  convenience stores, and takeout are simpler day-one options.
                 </p>
-
-                <p>Many locals use food delivery often.</p>
-
-                <p>
-                  For travelers, Baemin can be tempting because the food
-                  options are huge.
-                </p>
-
-                <p>
-                  But food delivery is not always the easiest choice on a short
-                  trip.
-                </p>
-
-                <p>Your hotel address may be hard to enter.</p>
-
-                <p>The delivery pin may need to be exact.</p>
-
-                <p>
-                  Payment or sign-up may not work smoothly for every foreign
-                  visitor.
-                </p>
-
-                <p>Some buildings are confusing for riders.</p>
-
-                <p>Some menus may still be hard to understand.</p>
-
-                <p>If it works for you, great.</p>
-
-                <p>
-                  But do not depend on delivery apps as your main food plan.
-                </p>
-
-                <p>
-                  For most first-time visitors, eating at restaurants, using food
-                  courts, buying convenience store meals, or getting takeout
-                  can be much simpler.
-                </p>
-
-                <p>Baemin is good to know.</p>
-
-                <p>It is not something you must master on day one.</p>
               </div>
 
               <div className="space-y-4">
@@ -526,31 +305,12 @@ export default function KoreaTravelAppsFirstTimePage() {
                   CatchTable
                 </h2>
 
-                <p>CatchTable is useful if you care about restaurants.</p>
-
                 <p>
-                  Some popular restaurants use reservation or waitlist systems,
-                  and CatchTable can help you discover places, check
-                  availability, or manage reservations where supported.
+                  CatchTable helps with reservations and waitlists at some
+                  popular restaurants, which matters if you have specific places
+                  in mind. Not every good meal needs a booking — plenty of the
+                  best travel food is a simple spot you find on your route.
                 </p>
-
-                <p>
-                  This can be helpful if your trip includes specific restaurants
-                  you really want to try.
-                </p>
-
-                <p>But not every restaurant is on CatchTable.</p>
-
-                <p>Not every good meal needs a reservation.</p>
-
-                <p>
-                  And some of the best travel meals in Korea are simple places
-                  you find near your route.
-                </p>
-
-                <p>Use CatchTable when it helps.</p>
-
-                <p>Do not turn every meal into a reservation project.</p>
               </div>
 
               <div className="space-y-4">
@@ -559,35 +319,11 @@ export default function KoreaTravelAppsFirstTimePage() {
                 </h2>
 
                 <p>
-                  Yanolja, now also seen as NOL, and Yeogi Eottae are Korean
-                  travel and accommodation apps.
-                </p>
-
-                <p>
-                  Koreans may use these for hotels, motels, pensions, stays,
-                  leisure, and domestic travel deals.
-                </p>
-
-                <p>
-                  They can be useful for understanding local accommodation
-                  options or last-minute domestic travel mood.
-                </p>
-
-                <p>But foreign visitors should be careful.</p>
-
-                <p>
-                  Language support, payment, account setup, cancellation rules,
-                  and customer support can vary.
-                </p>
-
-                <p>
-                  For many tourists, global booking platforms may still feel
-                  easier.
-                </p>
-
-                <p>
-                  Think of Yanolja/NOL and Yeogi Eottae as useful local names to
-                  know, not apps you must use for every booking.
+                  Yanolja (also seen as NOL) and Yeogi Eottae are the local apps
+                  Koreans use for hotels, motels, pensions, and domestic travel
+                  deals. Useful names to recognize, but language, payment, and
+                  cancellation rules can be harder for visitors — global booking
+                  platforms may still feel easier for most tourists.
                 </p>
               </div>
 
@@ -596,28 +332,10 @@ export default function KoreaTravelAppsFirstTimePage() {
                   Weather app
                 </h2>
 
-                <p>A weather app is also worth having.</p>
-
-                <p>Korea&apos;s weather can change your day.</p>
-
-                <p>Summer humidity can make walking harder.</p>
-
                 <p>
-                  Rain can slow traffic and make taxis harder to catch.
-                </p>
-
-                <p>Winter cold can make outdoor plans tiring.</p>
-
-                <p>
-                  Spring and autumn can be beautiful, but the day can still
-                  shift.
-                </p>
-
-                <p>Check the weather before leaving your stay.</p>
-
-                <p>
-                  A small umbrella, warmer layer, or indoor backup plan can
-                  save the day.
+                  Summer humidity, winter cold, and sudden rain can reshape your
+                  day — check the forecast before leaving and keep a small umbrella
+                  or layer handy.
                 </p>
               </div>
 
@@ -669,17 +387,11 @@ export default function KoreaTravelAppsFirstTimePage() {
 
                 <p>Weather app for daily adjustments</p>
 
-                <p>You do not need to download everything.</p>
-
                 <p>
-                  Too many unfamiliar apps can make the trip more confusing.
-                </p>
-
-                <p>Start with maps, translation, and transport.</p>
-
-                <p>
-                  Then add food, taxi, or booking apps only if they match your
-                  travel style.
+                  Start with maps, translation, and transport — add Baemin,
+                  CatchTable, or booking apps only if they match your style. Too
+                  many unfamiliar apps at once can make the trip harder, not
+                  easier.
                 </p>
               </div>
 
@@ -688,58 +400,20 @@ export default function KoreaTravelAppsFirstTimePage() {
                   Offline backup
                 </h2>
 
-                <p>One last local tip:</p>
-
-                <p>Do not rely only on live apps.</p>
-
-                <p>Save your hotel name and address in Korean.</p>
-
-                <p>Screenshot your first airport route.</p>
-
-                <p>Screenshot your first-day neighborhood.</p>
-
-                <p>Save important places in your map app.</p>
-
                 <p>
-                  Carry a battery pack if you use maps all day.
-                </p>
-
-                <p>
-                  Apps are helpful, but your phone can lose battery, signal, or
-                  patience at the worst moment.
+                  Save your hotel name and address in Korean, screenshot your
+                  airport route and first-day neighborhood, and carry a battery
+                  pack if you map all day — apps help until your phone dies or
+                  loses signal at the worst moment.
                 </p>
               </div>
 
               <div className="space-y-4">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
-                  Final note
-                </p>
-
                 <p>
-                  For HAEMIL readers, Korea travel apps are not about having the
-                  perfect phone setup.
-                </p>
-
-                <p>They are about reducing small stress.</p>
-
-                <p>Finding the right subway exit.</p>
-
-                <p>Understanding a menu.</p>
-
-                <p>Calling a taxi when you really need one.</p>
-
-                <p>Checking a restaurant reservation.</p>
-
-                <p>Knowing why locals mention KakaoTalk or Baemin.</p>
-
-                <p>
-                  And still being okay if one app does not work perfectly.
-                </p>
-
-                <p>Use Korean apps as tools, not pressure.</p>
-
-                <p>
-                  That is the best way to make your first Korea trip smoother.
+                  Korean apps are tools, not a ranking list to complete — the
+                  right subway exit, a translated menu line, a taxi when you really
+                  need one. Use what works, and stay calm when one app does not
+                  cooperate on the first try.
                 </p>
               </div>
             </div>

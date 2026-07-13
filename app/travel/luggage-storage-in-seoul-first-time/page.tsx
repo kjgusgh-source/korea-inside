@@ -214,27 +214,10 @@ export default function LuggageStorageInSeoulFirstTimePage() {
                 </h2>
 
                 <p>
-                  If your hotel or stay can hold your luggage, that is usually
-                  the easiest option.
-                </p>
-
-                <p>
-                  Many travelers first ask their hotel, guesthouse, or
-                  accommodation whether they can leave bags before check-in or
-                  after check-out. Policies vary, so you should check with your
-                  own stay.
-                </p>
-
-                <p>When it works, this is usually the smoothest choice.</p>
-
-                <p>You go straight to your stay.</p>
-
-                <p>Drop your bags.</p>
-
-                <p>Then start the day lighter.</p>
-
-                <p>
-                  This is especially helpful if you arrive in Seoul before
+                  If your hotel or guesthouse can hold luggage before check-in or
+                  after check-out, that is usually the smoothest option — drop
+                  your bags, then start the day lighter. Policies vary, so ask
+                  your stay directly; it is especially helpful when you land before
                   check-in time.
                 </p>
               </div>
@@ -244,37 +227,13 @@ export default function LuggageStorageInSeoulFirstTimePage() {
                   Station lockers
                 </h2>
 
-                <p>Station lockers can also be useful.</p>
-
                 <p>
-                  You may find lockers in major stations, subway areas, malls,
-                  or transport hubs. They can help if you want to store a bag
-                  for a few hours while you walk around.
-                </p>
-
-                <p>But lockers are not perfect.</p>
-
-                <p>They can be full.</p>
-
-                <p>They may be hard to find inside a large station.</p>
-
-                <p>The size may not fit a large suitcase.</p>
-
-                <p>Payment or language support may vary.</p>
-
-                <p>
-                  The locker may be far from the exit you actually need.
-                </p>
-
-                <p>
-                  So do not build a tight plan around a locker unless you have
-                  some flexibility.
-                </p>
-
-                <p>A locker is useful when it works.</p>
-
-                <p>
-                  It is stressful when you are tired and every locker is full.
+                  Station lockers in major hubs, malls, and transport areas can
+                  hold a bag for a few hours while you walk around — but they can
+                  be full, hard to find inside a big station, too small for a
+                  large suitcase, or far from the exit you need. Payment and
+                  language support vary too. Treat lockers as a bonus when they
+                  work, not the backbone of a tight plan.
                 </p>
               </div>
 
@@ -283,27 +242,12 @@ export default function LuggageStorageInSeoulFirstTimePage() {
                   Moving through large stations with luggage
                 </h2>
 
-                <p>Large stations can be confusing with luggage.</p>
-
                 <p>
-                  Seoul Station, Hongdae, Gangnam, Jamsil, Express Bus
-                  Terminal, and other big stations can involve long walks,
-                  stairs, escalators, crowds, and many exits.
-                </p>
-
-                <p>
-                  If you have a suitcase, the shortest route on a map may not
-                  feel like the easiest route in real life.
-                </p>
-
-                <p>
-                  With luggage, fewer transfers are usually better than the
-                  fastest-looking route.
-                </p>
-
-                <p>
-                  A slightly longer route with elevators, simpler transfers, or
-                  fewer station changes can feel much better.
+                  Seoul Station, Hongdae, Gangnam, Jamsil, Express Bus Terminal,
+                  and other big hubs mean long walks, stairs, escalators, crowds,
+                  and many exits. The shortest map route is not always the easiest
+                  with a suitcase — fewer transfers and a path with elevators
+                  often beats a faster-looking line change.
                 </p>
               </div>
 
@@ -312,31 +256,12 @@ export default function LuggageStorageInSeoulFirstTimePage() {
                   Rush hour and suitcases
                 </h2>
 
-                <p>Rush hour is the worst time to move with luggage.</p>
-
                 <p>
-                  During weekday morning and evening commute times, subway cars
-                  and station walkways can become very crowded. People are
-                  moving quickly to work, school, appointments, or home.
+                  Weekday morning and evening rush hour is the worst time to move
+                  with luggage — subway cars and walkways fill with commuters
+                  moving fast. If you can, wait it out with coffee or a simple
+                  meal and move when crowds thin.
                 </p>
-
-                <p>
-                  Dragging a large suitcase through that flow can feel stressful
-                  for you and inconvenient for everyone around you.
-                </p>
-
-                <p>
-                  If you can, avoid moving across Seoul with luggage during rush
-                  hour.
-                </p>
-
-                <p>Wait a little.</p>
-
-                <p>Have coffee.</p>
-
-                <p>Eat something simple.</p>
-
-                <p>Move when the crowd is lighter.</p>
               </div>
 
               <div className="space-y-4">
@@ -344,28 +269,12 @@ export default function LuggageStorageInSeoulFirstTimePage() {
                   Taxis with luggage
                 </h2>
 
-                <p>Taxis can help, but they are not always the answer.</p>
-
                 <p>
-                  A taxi can be useful if you have heavy luggage, bad weather,
-                  family members, or a difficult subway route.
-                </p>
-
-                <p>
-                  But during rush hour, rain, events, or heavy traffic, a taxi
-                  can be slow and expensive for the amount of distance you
-                  cover.
-                </p>
-
-                <p>
-                  Sometimes the subway is crowded but still more predictable.
-                </p>
-
-                <p>Sometimes the taxi is more comfortable.</p>
-
-                <p>
-                  Choose based on the day, not just the idea that taxi is always
-                  easier.
+                  Taxis help with heavy bags, rain, family travel, or awkward
+                  subway routes — but rush hour, rain, events, and traffic can
+                  make them slow and expensive for the distance. Sometimes the
+                  subway is crowded yet more predictable; pick based on the day,
+                  not the idea that a taxi is always easier.
                 </p>
               </div>
 
@@ -375,29 +284,12 @@ export default function LuggageStorageInSeoulFirstTimePage() {
                 </h2>
 
                 <p>
-                  Avoid taking large luggage to delicate or crowded areas.
-                </p>
-
-                <p>
                   Bukchon, palace areas, Insadong alleys, Ikseon-dong, crowded
-                  markets, small cafes, and busy nightlife streets are not fun
-                  with a suitcase.
+                  markets, small cafes, and busy nightlife streets are rough with
+                  a large suitcase — narrow paths, stairs, crowds, and in
+                  Bukchon, real residential streets. Store luggage first, then
+                  visit.
                 </p>
-
-                <p>Some places have narrow paths.</p>
-
-                <p>Some have stairs.</p>
-
-                <p>Some are crowded.</p>
-
-                <p>Some are real residential areas.</p>
-
-                <p>
-                  Dragging luggage through those places can make the experience
-                  worse.
-                </p>
-
-                <p>If you want to visit those areas, store your luggage first.</p>
               </div>
 
               <div className="space-y-4">
@@ -405,22 +297,12 @@ export default function LuggageStorageInSeoulFirstTimePage() {
                   Cafes and restaurants are not storage
                 </h2>
 
-                <p>Cafes and restaurants are not luggage storage.</p>
-
                 <p>
-                  Some large cafes may have space near your table, but many
-                  smaller Seoul cafes are compact. Restaurants can be busy,
-                  narrow, or fast-paced.
-                </p>
-
-                <p>
-                  Do not expect a cafe or restaurant to watch your suitcase
-                  while you leave.
-                </p>
-
-                <p>
-                  If you sit down with luggage, keep it close and avoid blocking
-                  walkways.
+                  Cafes and restaurants are not luggage storage. Some larger
+                  cafes have space near your table, but many Seoul spots are
+                  compact and fast-paced — do not expect staff to watch your
+                  suitcase while you leave. If you sit with bags, keep them close
+                  and out of walkways.
                 </p>
               </div>
 
@@ -429,44 +311,13 @@ export default function LuggageStorageInSeoulFirstTimePage() {
                   Departure day
                 </h2>
 
-                <p>For departure day, keep the plan simple.</p>
-
                 <p>
-                  If your flight is later, ask your stay about luggage storage
-                  after check-out.
-                </p>
-
-                <p>
-                  If that is not possible, consider a station or airport-area
-                  storage option depending on your route.
-                </p>
-
-                <p>
-                  But do not plan a far, complicated sightseeing day with luggage
-                  before going to the airport.
-                </p>
-
-                <p>Departure day already has enough stress.</p>
-
-                <p>
-                  You need to think about transport, timing, airport movement,
-                  and your bags.
-                </p>
-
-                <p>One good plan is to stay near your final route.</p>
-
-                <p>
-                  If you leave from Seoul Station, spend time nearby or in
-                  central Seoul.
-                </p>
-
-                <p>
-                  If you leave by airport bus, stay near the bus stop area.
-                </p>
-
-                <p>
-                  If you are carrying big luggage, avoid plans that require
-                  many transfers.
+                  On departure day, ask your stay about post check-out storage if
+                  your flight is later. If that is not an option, look at station
+                  or airport-area storage depending on your route — but skip a
+                  far, transfer-heavy sightseeing plan before the airport. Stay
+                  near your final route: central Seoul if you leave from Seoul
+                  Station, near the bus stop if you take an airport bus.
                 </p>
               </div>
 
@@ -476,51 +327,21 @@ export default function LuggageStorageInSeoulFirstTimePage() {
                 </h2>
 
                 <p>
-                  Arrival day and departure day should be lighter than normal
-                  sightseeing days.
-                </p>
-
-                <p>That does not mean boring.</p>
-
-                <p>It means realistic.</p>
-
-                <p>
-                  A convenience store meal, a nearby cafe, a short neighborhood
-                  walk, or one easy shopping street can be enough.
-                </p>
-
-                <p>
-                  The goal is to enjoy the day without fighting your suitcase.
+                  Arrival and departure days work best when they are lighter than
+                  normal sightseeing — a convenience store meal, a nearby cafe, a
+                  short neighborhood walk, or one easy shopping street can be
+                  plenty. The goal is to enjoy the day without fighting your
+                  suitcase.
                 </p>
               </div>
 
               <div className="space-y-4">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
-                  Final note
-                </p>
-
                 <p>
-                  For HAEMIL readers, the easiest luggage rule in Seoul is this:
+                  In Seoul, bags first and sightseeing second usually wins — drop
+                  luggage at your stay when you can, use lockers when they are
+                  convenient, skip rush hour with suitcases, and keep transfers
+                  low. Seoul feels much better when your hands are free.
                 </p>
-
-                <p>Bags first, sightseeing second.</p>
-
-                <p>Drop luggage at your stay if possible.</p>
-
-                <p>
-                  Use lockers when they are convenient, not as a risky last
-                  hope.
-                </p>
-
-                <p>Avoid rush hour with suitcases.</p>
-
-                <p>Choose fewer transfers.</p>
-
-                <p>Do not drag large bags into crowded alleys.</p>
-
-                <p>And keep arrival and departure days simple.</p>
-
-                <p>Seoul is much more enjoyable when your hands are free.</p>
               </div>
             </div>
           </section>

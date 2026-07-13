@@ -210,34 +210,15 @@ export default function SeoulNeighborhoodGuideFirstTimePage() {
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
             <div className="space-y-8 text-base leading-8 text-[var(--muted)] md:text-lg">
               <div className="space-y-4">
-                <p>
-                  That is why choosing where to go depends on what kind of day
-                  you want.
-                </p>
-              </div>
-
-              <div className="space-y-4">
                 <h2 className="text-2xl font-semibold text-[var(--text)]">
                   Myeongdong
                 </h2>
 
-                <p>Myeongdong is the easiest first stop.</p>
-
                 <p>
-                  It is central, busy, tourist-friendly, and simple to
-                  understand. You can shop, try street snacks, find cosmetics
-                  stores, reach Namsan, and move to Euljiro, City Hall,
-                  Jongno, or Namdaemun without much trouble.
-                </p>
-
-                <p>
-                  The trade-off is that Myeongdong can feel touristy. Food,
-                  cafes, snacks, and shopping around the busiest streets can
-                  cost more than in quieter local areas.
-                </p>
-
-                <p>
-                  Choose Myeongdong if you want an easy first Seoul experience.
+                  Myeongdong is the easiest first stop — central, busy,
+                  tourist-friendly, with shopping, street snacks, Namsan, and
+                  easy links to Euljiro, City Hall, and Jongno. The trade-off is
+                  tourist-area pricing on the busiest streets.
                 </p>
               </div>
 
@@ -246,23 +227,12 @@ export default function SeoulNeighborhoodGuideFirstTimePage() {
                   Hongdae
                 </h2>
 
-                <p>Hongdae is for young energy.</p>
-
                 <p>
-                  It has cafes, casual shopping, music, late-night food, clubs,
-                  street mood, and a more playful feeling. It is good if you
-                  like walking without a strict plan.
-                </p>
-
-                <p>
-                  The trade-off is crowds and noise. Weekend evenings can feel
-                  very busy, and the most central streets are not always the
+                  Hongdae is young Seoul — cafes, casual shopping, music,
+                  late-night food, clubs, and a playful street mood. Good if you
+                  like walking without a strict plan. Weekend evenings get loud
+                  and crowded, and the most central streets are not always the
                   best value.
-                </p>
-
-                <p>
-                  Choose Hongdae if you want nightlife, cafes, casual shopping,
-                  and a younger Seoul mood.
                 </p>
               </div>
 
@@ -271,25 +241,12 @@ export default function SeoulNeighborhoodGuideFirstTimePage() {
                   Gangnam
                 </h2>
 
-                <p>Gangnam is modern and commercial.</p>
-
                 <p>
-                  It feels polished, wide, busy, and city-like. It is useful
-                  for shopping, restaurants, beauty clinics, business plans,
-                  COEX, Sinsa, Apgujeong, or south-of-river routes.
-                </p>
-
-                <p>
-                  The trade-off is distance from older Seoul. If your main
-                  plans are palaces, Bukchon, Insadong, Myeongdong, and Jongno,
-                  Gangnam can take more subway time than expected. It can also
-                  feel expensive because it is a major business and commercial
-                  district.
-                </p>
-
-                <p>
-                  Choose Gangnam if you want modern Seoul, shopping,
-                  restaurants, and south Seoul plans.
+                  Gangnam is modern and commercial — polished, wide, busy, good
+                  for shopping, restaurants, COEX, Sinsa, and Apgujeong. If your
+                  main plans are palaces, Bukchon, and Insadong, Gangnam adds
+                  more subway time than expected and can feel expensive as a
+                  major business district.
                 </p>
               </div>
 
@@ -298,24 +255,12 @@ export default function SeoulNeighborhoodGuideFirstTimePage() {
                   Insadong and Jongno
                 </h2>
 
-                <p>Insadong and Jongno are for older Seoul.</p>
-
                 <p>
-                  This area is close to palaces, tea houses, galleries,
-                  temples, hanok-style alleys, Ikseon-dong, and slower walking
-                  routes. It is a good choice if you want Seoul to feel more
-                  cultural and less like a shopping district.
-                </p>
-
-                <p>
-                  The trade-off is that some streets become quieter at night.
-                  Certain cafes, hanok-style spaces, and souvenir shops can also
-                  cost more because the atmosphere is part of the experience.
-                </p>
-
-                <p>
-                  Choose Insadong or Jongno if you want palaces, tea, history,
-                  walking, and a calmer central mood.
+                  Insadong and Jongno are older Seoul — palaces, tea houses,
+                  galleries, hanok alleys, Ikseon-dong, and slower walks. Good
+                  if you want culture over shopping-district energy. Some
+                  streets quiet down at night, and souvenir shops or hanok cafes
+                  can cost more because the atmosphere is part of the draw.
                 </p>
               </div>
 
@@ -324,24 +269,12 @@ export default function SeoulNeighborhoodGuideFirstTimePage() {
                   Euljiro
                 </h2>
 
-                <p>Euljiro feels more local and hidden.</p>
-
                 <p>
-                  It is close to Myeongdong, but the mood is different. You can
-                  find older alleys, small restaurants, bars, cafes, print-shop
-                  streets, and a slightly rougher local-cool feeling.
-                </p>
-
-                <p>
-                  The trade-off is that Euljiro can be harder to read for
-                  first-time visitors. Some streets feel plain during the day
-                  and more interesting at night. It is better with Naver Map or
-                  KakaoMap.
-                </p>
-
-                <p>
-                  Choose Euljiro if you want a less polished Seoul mood near
-                  the center.
+                  Euljiro feels more local and less polished — close to
+                  Myeongdong but with older alleys, small restaurants, bars,
+                  print-shop streets, and a rougher local-cool mood. Harder to
+                  read on a first visit; some streets look plain by day and
+                  come alive at night. Naver Map or KakaoMap helps here.
                 </p>
               </div>
 
@@ -350,23 +283,11 @@ export default function SeoulNeighborhoodGuideFirstTimePage() {
                   Seongsu
                 </h2>
 
-                <p>Seongsu is trendy and cafe-heavy.</p>
-
                 <p>
-                  It is known for cafes, design shops, pop-up spaces, fashion,
-                  converted industrial-style buildings, and a newer Seoul trend
-                  mood.
-                </p>
-
-                <p>
-                  The trade-off is that trendy does not always mean cheap. Some
-                  cafes and shops are more about atmosphere than value, and
-                  popular weekends can feel crowded.
-                </p>
-
-                <p>
-                  Choose Seongsu if you like cafes, design, lifestyle shops,
-                  and trend-watching.
+                  Seongsu is trendy and cafe-heavy — design shops, pop-up spaces,
+                  converted industrial buildings, and a newer Seoul mood. Trendy
+                  does not always mean cheap; popular weekends can feel crowded,
+                  and some spots are more about atmosphere than value.
                 </p>
               </div>
 
@@ -375,23 +296,11 @@ export default function SeoulNeighborhoodGuideFirstTimePage() {
                   Jamsil
                 </h2>
 
-                <p>Jamsil is practical for family plans.</p>
-
                 <p>
-                  It is useful for Lotte World, Lotte World Tower, malls, lake
-                  walks, and southeast Seoul plans. It can feel clean,
-                  organized, and comfortable.
-                </p>
-
-                <p>
-                  The trade-off is distance. If your trip is mostly about
-                  Myeongdong, Hongdae, palaces, and older Seoul, Jamsil may feel
-                  far.
-                </p>
-
-                <p>
-                  Choose Jamsil if your plans are centered around Lotte World,
-                  malls, family activities, or southeast Seoul.
+                  Jamsil suits family and southeast Seoul plans — Lotte World,
+                  Lotte World Tower, malls, and lake walks in a clean,
+                  organized area. If your trip is mostly Myeongdong, Hongdae,
+                  and palaces, Jamsil can feel far.
                 </p>
               </div>
 
@@ -400,23 +309,10 @@ export default function SeoulNeighborhoodGuideFirstTimePage() {
                   Itaewon
                 </h2>
 
-                <p>Itaewon feels international.</p>
-
                 <p>
-                  It has global food, bars, cafes, and a more mixed cultural
-                  feeling than many other areas. It can be interesting if you
-                  want food variety or a different side of Seoul.
-                </p>
-
-                <p>
-                  The trade-off is that Itaewon is not the easiest area for
-                  every first-time itinerary. It can be better as a focused
-                  visit than a default base, depending on your plans.
-                </p>
-
-                <p>
-                  Choose Itaewon if you want international food, nightlife, and
-                  a more global mood.
+                  Itaewon feels international — global food, bars, cafes, and a
+                  mixed cultural mood. Better as a focused visit than a default
+                  base for every first-time itinerary, depending on your plans.
                 </p>
               </div>
 
@@ -426,25 +322,10 @@ export default function SeoulNeighborhoodGuideFirstTimePage() {
                 </h2>
 
                 <p>
-                  Yeonnam and Mangwon are softer alternatives near Hongdae.
-                </p>
-
-                <p>
-                  They can feel more relaxed, cafe-friendly, and
-                  neighborhood-like while still being close to the Hongdae area.
-                  These areas are good if you want a young Seoul mood without
-                  staying in the loudest part.
-                </p>
-
-                <p>
-                  The trade-off is that they may be less straightforward for a
-                  first-time visitor than major station areas. Walking routes
-                  and exact location matter.
-                </p>
-
-                <p>
-                  Choose Yeonnam or Mangwon if you want cafes, small shops, and
-                  a softer local feel near Hongdae.
+                  Yeonnam and Mangwon are softer alternatives near Hongdae —
+                  more relaxed, cafe-friendly, and neighborhood-like without the
+                  loudest nightlife. Walking routes and exact location matter
+                  more here than at a major station area.
                 </p>
               </div>
 
@@ -454,33 +335,13 @@ export default function SeoulNeighborhoodGuideFirstTimePage() {
                 </p>
 
                 <p>
-                  The biggest Seoul neighborhood mistake is trying to visit too
-                  many areas in one day.
+                  The biggest neighborhood mistake is squeezing too many areas
+                  into one day — Seoul is connected but still big. Group nearby
+                  spots: Myeongdong, Namsan, Euljiro, Jongno, and Insadong;
+                  Hongdae, Yeonnam, and Mangwon; Gangnam, Sinsa, COEX, and
+                  Jamsil depending on your route. That saves energy, subway
+                  time, and money.
                 </p>
-
-                <p>Seoul is connected, but it is still big.</p>
-
-                <p>
-                  Myeongdong, Gangnam, Hongdae, Jamsil, and Insadong can all
-                  fit into one trip, but they should not all be squeezed into
-                  one day.
-                </p>
-
-                <p>Group nearby areas.</p>
-
-                <p>
-                  Myeongdong, Namsan, Euljiro, Jongno, and Insadong can work
-                  together.
-                </p>
-
-                <p>Hongdae, Yeonnam, and Mangwon can work together.</p>
-
-                <p>
-                  Gangnam, Sinsa, Apgujeong, COEX, and Jamsil can work together
-                  depending on your route.
-                </p>
-
-                <p>This saves energy, subway time, and money.</p>
               </div>
 
               <div className="space-y-4">
@@ -489,62 +350,26 @@ export default function SeoulNeighborhoodGuideFirstTimePage() {
                 </h2>
 
                 <p>
-                  For first-time visitors, subway access matters more than
-                  neighborhood fame.
-                </p>
-
-                <p>
-                  A famous neighborhood is not useful if your hotel is far from
-                  the station or requires a long uphill walk. A less famous
-                  area near a good subway line can feel much better in real
-                  life.
-                </p>
-
-                <p>Also remember that taxis are not always faster.</p>
-
-                <p>
-                  During rush hour, rain, events, or heavy traffic, taxis can
-                  get stuck. The subway may be crowded, but it is often more
-                  predictable.
+                  Subway access matters more than neighborhood fame — a famous
+                  name is not useful if your hotel is far from the station or up
+                  a long hill. A less famous area on a good line can feel much
+                  better in real life. Taxis are not always faster either;
+                  during rush hour or rain they can stall while the subway stays
+                  more predictable.
                 </p>
               </div>
 
               <div className="space-y-4">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
-                  Final note
-                </p>
-
                 <p>
-                  For HAEMIL readers, the easiest way to understand Seoul is
-                  this:
+                  You do not have to visit every neighborhood on this list —
+                  pick the moods that match your trip. Myeongdong for ease,
+                  Hongdae for young energy, Gangnam for modern south Seoul,
+                  Insadong and Jongno for older streets, Euljiro for local-cool
+                  near the center, Seongsu for cafes and design, Jamsil for
+                  family plans, Itaewon for international food, Yeonnam and
+                  Mangwon for a softer Hongdae-adjacent feel. Group nearby areas
+                  and Seoul gets easier to enjoy.
                 </p>
-
-                <p>Myeongdong is easy.</p>
-
-                <p>Hongdae is young.</p>
-
-                <p>Gangnam is modern.</p>
-
-                <p>Insadong and Jongno are traditional.</p>
-
-                <p>Euljiro is local-cool.</p>
-
-                <p>Seongsu is trendy.</p>
-
-                <p>Jamsil is family-friendly and mall-centered.</p>
-
-                <p>Itaewon is international.</p>
-
-                <p>
-                  Yeonnam and Mangwon are softer cafe neighborhoods near
-                  Hongdae.
-                </p>
-
-                <p>You do not need to visit all of them.</p>
-
-                <p>Pick the neighborhoods that match your trip.</p>
-
-                <p>That is how Seoul becomes easier to enjoy.</p>
               </div>
             </div>
           </section>
