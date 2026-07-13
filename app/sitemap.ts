@@ -52,6 +52,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/travel/korea-travel-apps-first-time`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/travel/korea-sim-esim-wifi-guide-first-time`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/travel/korea-arrival-day-checklist-first-time`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/travel/how-to-get-from-incheon-airport-to-seoul`,
       lastModified: new Date(),
       changeFrequency: "monthly",

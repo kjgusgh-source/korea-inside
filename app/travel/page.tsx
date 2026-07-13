@@ -155,6 +155,26 @@ const STANDALONE_TRAVEL_GUIDES = [
     readingTime: "10 min read",
   },
   {
+    id: "korea-sim-esim-wifi-guide-first-time",
+    category: "travel",
+    categoryLabel: "Travel guide",
+    title: "Korea SIM, eSIM, and Wi-Fi Guide for First-Time Visitors",
+    description:
+      "A practical first-time Korea internet guide comparing eSIM, SIM cards, roaming, pocket Wi-Fi, cafe Wi-Fi, public Wi-Fi, phone numbers, and power bank tips.",
+    href: "/travel/korea-sim-esim-wifi-guide-first-time",
+    readingTime: "9 min read",
+  },
+  {
+    id: "korea-arrival-day-checklist-first-time",
+    category: "travel",
+    categoryLabel: "Travel guide",
+    title: "Korea Arrival Day Checklist for First-Time Visitors",
+    description:
+      "A practical first-day Korea guide covering airport arrival, internet setup, maps, transport, hotel check-in, first meal, Wi-Fi, and local travel tips.",
+    href: "/travel/korea-arrival-day-checklist-first-time",
+    readingTime: "8 min read",
+  },
+  {
     id: "how-to-get-from-incheon-airport-to-seoul",
     category: "travel",
     categoryLabel: "Travel guide",
