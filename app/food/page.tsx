@@ -65,6 +65,16 @@ const STANDALONE_FOOD_GUIDES = [
     readingTime: "8 min read",
   },
   {
+    id: "korean-noodles-guide-first-time",
+    category: "food",
+    categoryLabel: "Food guide",
+    title: "Korean Noodles Guide for First-Time Visitors",
+    description:
+      "A practical guide to Korean noodle dishes, from ramyeon, kalguksu, and naengmyeon to bibim guksu, makguksu, kongguksu, jjajangmyeon, jjamppong, and local eating tips.",
+    href: "/food/korean-noodles-guide-first-time",
+    readingTime: "9 min read",
+  },
+  {
     id: "gwangjang-market-food-guide-first-time",
     category: "food",
     categoryLabel: "Food guide",
