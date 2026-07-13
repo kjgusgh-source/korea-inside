@@ -209,12 +209,9 @@ export default function WhatToBuyInKoreaFirstTimePage() {
             <div className="space-y-8 text-base leading-8 text-[var(--muted)] md:text-lg">
               <div className="space-y-4">
                 <p>
-                  The best things to buy in Korea are not always the most viral
-                  items online.
-                </p>
-
-                <p>
-                  For a first trip, think small, practical, and easy to pack.
+                  The best things to buy are not always the most viral online —
+                  think small, practical, and easy to pack: items you will use,
+                  carry home safely, or enjoy sharing.
                 </p>
               </div>
 
@@ -224,43 +221,13 @@ export default function WhatToBuyInKoreaFirstTimePage() {
                 </h2>
 
                 <p>
-                  Skincare is one of the most popular things visitors buy in
-                  Korea.
-                </p>
-
-                <p>
-                  You will see sheet masks, sunscreens, cleansers, lip products,
-                  hand creams, serums, and travel-size beauty items in many
-                  shopping areas.
-                </p>
-
-                <p>This can be fun, but also overwhelming.</p>
-
-                <p>There are too many choices.</p>
-
-                <p>A good first-time rule is simple:</p>
-
-                <p>Do not buy a full routine on your first day.</p>
-
-                <p>
-                  Start with a few small items, especially things that are easy
-                  to pack and easy to gift. Sheet masks, hand creams, lip
-                  balms, and small skincare products are usually easier than
-                  heavy bottles.
-                </p>
-
-                <p>
-                  Also remember that popular beauty streets can feel convenient
-                  but not always cheap. In areas like Myeongdong, Hongdae,
-                  Gangnam, or major malls, you may be paying for location and
-                  convenience too.
-                </p>
-
-                <p>That does not make it bad.</p>
-
-                <p>
-                  It just means you should compare calmly and avoid
-                  panic-buying.
+                  Skincare is popular and overwhelming — sheet masks, sunscreens,
+                  cleansers, lip products, and travel-size items everywhere. Start
+                  with a few small, packable pieces rather than a full routine on
+                  day one. Beauty streets in Myeongdong, Hongdae, Gangnam, and
+                  major malls are convenient but not always the best value; compare
+                  calmly and skip panic-buying viral products that may not suit your
+                  skin.
                 </p>
               </div>
 
@@ -269,32 +236,13 @@ export default function WhatToBuyInKoreaFirstTimePage() {
                   Snacks and food souvenirs
                 </h2>
 
-                <p>Korean snacks are another easy choice.</p>
-
                 <p>
-                  Packaged snacks, seaweed snacks, instant coffee sticks, tea,
-                  ramyeon, candies, cookies, and seasonal convenience store
-                  items can be fun souvenirs.
-                </p>
-
-                <p>Snacks are good because they are easy to share.</p>
-
-                <p>
-                  They also give people at home a small taste of Korea without
-                  needing a big explanation.
-                </p>
-
-                <p>The trade-off is luggage space.</p>
-
-                <p>
-                  Snacks can be light, but bulky. A few bags are fine. Ten bags
-                  can suddenly fill your suitcase.
-                </p>
-
-                <p>
-                  If you plan to buy food items, check what you are allowed to
-                  bring back to your country. Rules can differ, so avoid risky
-                  items and keep it simple with sealed packaged goods.
+                  Korean snacks make easy souvenirs — packaged treats, seaweed
+                  snacks, instant coffee sticks, tea, ramyeon, and seasonal
+                  convenience store items are light, shareable, and easy to
+                  explain. Watch luggage space; a few bags are fine, ten bags fill
+                  a suitcase. For food items, stick to sealed packaged goods and
+                  check what your home country allows — rules vary.
                 </p>
               </div>
 
@@ -303,33 +251,12 @@ export default function WhatToBuyInKoreaFirstTimePage() {
                   Convenience store finds
                 </h2>
 
-                <p>Convenience stores are good for small finds.</p>
-
                 <p>
-                  Korean convenience stores are useful for travel snacks, drinks,
-                  desserts, triangle gimbap, cup ramyeon, small candies, and
-                  seasonal items.
-                </p>
-
-                <p>They are not only for cheap food.</p>
-
-                <p>
-                  They are also an easy way to explore small Korean products
-                  without spending too much at once.
-                </p>
-
-                <p>
-                  The nice part is that you can try things during the trip
-                  before deciding what to bring home.
-                </p>
-
-                <p>
-                  Instead of buying a big snack haul immediately, taste a few
-                  things first.
-                </p>
-
-                <p>
-                  If you like them, buy more near the end of the trip.
+                  Convenience stores are good for small finds beyond cheap food —
+                  drinks, desserts, candies, and seasonal items let you try things
+                  during the trip before deciding what to bring home. Taste a few
+                  snacks first; if you like them, buy more near the end so you
+                  are not hauling bags around Seoul from day one.
                 </p>
               </div>
 
@@ -339,83 +266,16 @@ export default function WhatToBuyInKoreaFirstTimePage() {
                 </h2>
 
                 <p>
-                  Stationery and cute small goods are also good souvenirs.
-                </p>
-
-                <p>
-                  Korea has many notebooks, pens, stickers, pouches, character
-                  items, keyrings, cards, and small lifestyle goods.
-                </p>
-
-                <p>These are easy to pack and easy to give as gifts.</p>
-
-                <p>
-                  They also feel more personal than random tourist souvenirs.
-                </p>
-
-                <p>The trade-off is that small items add up.</p>
-
-                <p>
-                  A few cute things can become a full shopping basket before you
-                  notice.
-                </p>
-
-                <p>
-                  Choose items that feel useful, not only cute in the store.
-                </p>
-
-                <p>Fashion can be fun, but sizing and quality vary.</p>
-
-                <p>
-                  Korea is good for casual fashion, socks, caps, bags,
-                  accessories, and seasonal basics.
-                </p>
-
-                <p>
-                  Shopping streets can be enjoyable even if you are only
-                  browsing.
-                </p>
-
-                <p>But do not assume every item is a bargain.</p>
-
-                <p>
-                  Some areas are trendy because they are commercial, not
-                  because they are cheap.
-                </p>
-
-                <p>
-                  Also, sizes may feel different from what you are used to.
-                </p>
-
-                <p>
-                  Try things on when possible, check fabric and stitching, and
-                  think about whether you would still wear it after the trip.
-                </p>
-
-                <p>Traditional-style souvenirs can be meaningful.</p>
-
-                <p>
-                  Small items inspired by hanbok, Korean patterns, tea culture,
-                  paper goods, crafts, bookmarks, pouches, or simple home items
-                  can make nice gifts.
-                </p>
-
-                <p>
-                  Insadong and palace-area shops are often connected to this
-                  kind of souvenir mood.
-                </p>
-
-                <p>The trade-off is that atmosphere can affect price.</p>
-
-                <p>
-                  A beautiful traditional-style shop in a popular area may cost
-                  more than a simple store elsewhere.
-                </p>
-
-                <p>That can be okay if the item feels special.</p>
-
-                <p>
-                  Just do not buy only because the street feels pretty.
+                  Stationery and cute small goods — notebooks, pens, stickers,
+                  pouches, character items — pack easily and feel more personal
+                  than generic tourist souvenirs, though small items add up fast.
+                  Fashion can be fun for socks, caps, bags, and seasonal basics,
+                  but sizing and quality vary; try things on and check whether
+                  you would wear it after the trip. Trendy streets are commercial,
+                  not always cheap. Traditional-style items from Insadong or
+                  palace-area shops — tea, paper goods, bookmarks, pouches — can
+                  be meaningful when the item feels special, not only because the
+                  street looks pretty.
                 </p>
               </div>
 
@@ -425,27 +285,10 @@ export default function WhatToBuyInKoreaFirstTimePage() {
                 </h2>
 
                 <p>
-                  Cafe goods and lifestyle items can also be tempting.
-                </p>
-
-                <p>
-                  Korea has strong cafe culture, and some cafes sell mugs,
-                  tumblers, beans, bags, postcards, or small design goods.
-                </p>
-
-                <p>
-                  These can feel like memories from a specific place, which makes
-                  them nice personal souvenirs.
-                </p>
-
-                <p>
-                  But cafe items can be expensive, especially in trendy
-                  neighborhoods.
-                </p>
-
-                <p>
-                  Buy them when the place really matters to you, not just
-                  because the display looks nice.
+                  Cafe goods — mugs, tumblers, beans, postcards — make nice
+                  personal souvenirs when the place mattered to you, but trendy
+                  neighborhood cafes can charge a lot for design. Buy when the
+                  memory is real, not only because the display looked good.
                 </p>
               </div>
 
@@ -455,27 +298,11 @@ export default function WhatToBuyInKoreaFirstTimePage() {
                 </p>
 
                 <p>
-                  One good shopping strategy is to wait until the middle of the
-                  trip.
-                </p>
-
-                <p>On the first day, look around.</p>
-
-                <p>Notice prices.</p>
-
-                <p>Notice what you keep thinking about.</p>
-
-                <p>Try snacks before buying many.</p>
-
-                <p>Test whether you actually like a beauty item.</p>
-
-                <p>See how much luggage space you have.</p>
-
-                <p>Then shop more seriously later.</p>
-
-                <p>
-                  This helps you avoid carrying bags around Seoul and regretting
-                  early purchases.
+                  A useful strategy: look around on the first day, notice prices
+                  and what keeps catching your eye, try snacks and beauty items
+                  before bulk-buying, check luggage space, then shop more seriously
+                  mid-trip or near the end — that avoids carrying bags all over
+                  Seoul and regretting early purchases.
                 </p>
               </div>
 
@@ -484,50 +311,14 @@ export default function WhatToBuyInKoreaFirstTimePage() {
                   Where to shop
                 </h2>
 
-                <p>Where you shop also matters.</p>
-
                 <p>
-                  Myeongdong is convenient for beauty, snacks, tourist shopping,
-                  and easy browsing.
-                </p>
-
-                <p>
-                  Hongdae is better for young fashion, cute goods, casual shops,
-                  and street mood.
-                </p>
-
-                <p>
-                  Gangnam and malls are better for polished shopping, beauty,
-                  lifestyle, and department-store-style browsing.
-                </p>
-
-                <p>
-                  Insadong is better for traditional-style souvenirs and
-                  cultural items.
-                </p>
-
-                <p>Convenience stores are good everywhere.</p>
-
-                <p>
-                  Markets can be interesting, but they may feel more confusing
-                  for first-time visitors.
-                </p>
-
-                <p>None of these areas is perfect.</p>
-
-                <p>Myeongdong can feel touristy.</p>
-
-                <p>Hongdae can be crowded.</p>
-
-                <p>Gangnam can be expensive.</p>
-
-                <p>Insadong can charge more for atmosphere.</p>
-
-                <p>Malls are comfortable but not always the best value.</p>
-
-                <p>
-                  That is why the best shopping choice depends on what you
-                  actually want.
+                  Where you shop shapes what you find: Myeongdong for beauty and
+                  easy tourist browsing, Hongdae for young fashion and cute goods,
+                  Gangnam and malls for polished lifestyle shopping, Insadong for
+                  traditional-style souvenirs, convenience stores everywhere for
+                  small trials. Each has trade-offs — touristy, crowded, expensive,
+                  or atmosphere-priced — so pick based on what you actually want,
+                  not a perfect shopping district.
                 </p>
               </div>
 
@@ -537,65 +328,22 @@ export default function WhatToBuyInKoreaFirstTimePage() {
                 </p>
 
                 <p>
-                  For first-time visitors, the easiest shopping list is:
+                  An easy first-trip list: a few skincare items, some packaged
+                  snacks, one or two stationery or character goods, a small
+                  traditional-style souvenir, a convenience store favorite, and
+                  maybe one personal fashion or lifestyle piece — enough to
+                  remember the trip without filling your suitcase.
                 </p>
-
-                <p>a few skincare items,</p>
-
-                <p>some packaged snacks,</p>
-
-                <p>one or two stationery or character goods,</p>
-
-                <p>a small traditional-style souvenir,</p>
-
-                <p>a convenience store favorite,</p>
-
-                <p>and maybe one personal fashion or lifestyle item.</p>
-
-                <p>That is enough.</p>
-
-                <p>You do not need to bring half of Korea home.</p>
               </div>
 
               <div className="space-y-4">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
-                  Final note
-                </p>
-
                 <p>
-                  For HAEMIL readers, the best thing to buy in Korea is not
-                  always the thing everyone online says is popular.
-                </p>
-
-                <p>
-                  It is the thing that still feels useful or meaningful after
-                  the trip.
-                </p>
-
-                <p>A snack you actually liked.</p>
-
-                <p>A small gift someone will enjoy.</p>
-
-                <p>A skincare item you can pack easily.</p>
-
-                <p>A notebook you will use.</p>
-
-                <p>A tea or souvenir that reminds you of a quiet street.</p>
-
-                <p>A cafe item from a place you loved.</p>
-
-                <p>
-                  Shopping in Korea is most fun when it stays connected to your
-                  trip.
-                </p>
-
-                <p>Not pressure.</p>
-
-                <p>Not a checklist.</p>
-
-                <p>
-                  Just small things that help you remember the feeling of being
-                  here.
+                  The best purchase is often not the viral product everyone
+                  mentions online — it is the snack you actually liked, the small
+                  gift someone will use, the notebook you will keep, or the cafe
+                  mug from a place you loved. Shopping stays fun when it connects
+                  to your trip, not a checklist or pressure to buy everything
+                  Korean social media says is popular.
                 </p>
               </div>
             </div>

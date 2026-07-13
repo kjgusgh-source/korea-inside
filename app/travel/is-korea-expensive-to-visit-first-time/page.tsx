@@ -181,11 +181,11 @@ export default function IsKoreaExpensiveToVisitFirstTimePage() {
             </h1>
 
             <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
-              If you are visiting Korea for the first time, you may wonder if
-              Korea is expensive. The honest answer is: it depends on how you
-              travel. Korea can feel very convenient and reasonable — or
-              expensive — depending on where you stay, how you move, and how
-              often you follow famous spots.
+              If you are visiting Korea for the first time, you may wonder whether
+              the trip will feel expensive. Korea can feel very convenient and
+              reasonable — or pricey — depending on where you stay, how you move,
+              and how often you follow famous spots. The useful question is where
+              money actually disappears on a first trip.
             </p>
           </article>
 
@@ -208,26 +208,14 @@ export default function IsKoreaExpensiveToVisitFirstTimePage() {
             <div className="space-y-8 text-base leading-8 text-[var(--muted)] md:text-lg">
               <div className="space-y-4">
                 <p>
-                  Korea can feel very convenient and reasonable if you use the
-                  subway, eat simple local meals, stay near a practical
-                  station, and do not chase every famous cafe or shopping
-                  street.
+                  Korea can feel reasonable if you use the subway, eat simple
+                  local meals, stay near a practical station, and skip chasing
+                  every famous cafe or shopping street. It can also feel expensive
+                  if you stay in the busiest areas, take taxis often, visit trendy
+                  cafes daily, and shop mostly on tourist-heavy streets. Neither
+                  story is the whole picture — your travel style decides which
+                  one you get.
                 </p>
-
-                <p>
-                  But Korea can also feel expensive if you stay in the most
-                  popular areas, take taxis often, visit trendy cafes every
-                  day, shop a lot, and eat mostly in tourist-heavy streets.
-                </p>
-
-                <p>
-                  So the better question is not &ldquo;Is Korea cheap or
-                  expensive?&rdquo;
-                </p>
-
-                <p>The better question is:</p>
-
-                <p>Where does money disappear on a Korea trip?</p>
               </div>
 
               <div className="space-y-4">
@@ -237,51 +225,15 @@ export default function IsKoreaExpensiveToVisitFirstTimePage() {
 
                 <p>
                   For many first-time visitors, accommodation is the biggest
-                  cost.
-                </p>
-
-                <p>
-                  Areas like Myeongdong, Hongdae, Gangnam, Insadong, Seoul
-                  Station, and Jamsil are popular because they are convenient.
-                  They are close to subway lines, shopping, sightseeing,
-                  restaurants, or major attractions.
-                </p>
-
-                <p>That convenience has value.</p>
-
-                <p>
-                  But it also means hotels and stays in the busiest spots can
-                  cost more, especially during popular travel seasons or near
-                  major stations.
-                </p>
-
-                <p>That does not mean you should avoid famous areas.</p>
-
-                <p>
-                  For a first trip, staying somewhere convenient can save time
-                  and stress.
-                </p>
-
-                <p>But it helps to understand the trade-off.</p>
-
-                <p>
-                  A cheaper stay far from your route may look good when
-                  booking, but it can become tiring if it adds long transfers
-                  every day.
-                </p>
-
-                <p>
-                  A slightly more expensive stay near a useful subway station
-                  may feel better in real life.
-                </p>
-
-                <p>The local tip is simple:</p>
-
-                <p>Choose by station, not only by neighborhood name.</p>
-
-                <p>
-                  A hotel three minutes from a useful station can be better than
-                  a famous address with a long uphill walk.
+                  cost. Myeongdong, Hongdae, Gangnam, Insadong, Seoul Station,
+                  and Jamsil are popular because they sit near subway lines,
+                  sightseeing, and restaurants — that convenience has value, but
+                  hotels in the busiest spots often cost more, especially in peak
+                  seasons. A cheaper stay far from your daily route can look good
+                  when booking and feel tiring once you add long transfers every
+                  day. Choose by station, not only neighborhood name — three
+                  minutes from a useful line beats a famous address with an uphill
+                  walk.
                 </p>
               </div>
 
@@ -290,40 +242,16 @@ export default function IsKoreaExpensiveToVisitFirstTimePage() {
                   Food
                 </h2>
 
-                <p>Food can be affordable, but not every meal is cheap.</p>
-
                 <p>
-                  Simple Korean meals can be good value. Gimbap, bunsik,
-                  soups, noodles, stews, food courts, convenience store meals,
-                  and casual local restaurants can help balance your budget.
-                </p>
-
-                <p>But famous tourist areas can feel more expensive.</p>
-
-                <p>
-                  Myeongdong, Hongdae, Gangnam, Insadong, Seongsu, and other
-                  popular streets are easy and fun, but restaurants and cafes in
-                  the busiest spots often charge more because of location,
-                  demand, and atmosphere.
-                </p>
-
-                <p>That does not make them bad.</p>
-
-                <p>Sometimes you are paying for convenience.</p>
-
-                <p>Sometimes you are paying for a nice space.</p>
-
-                <p>Sometimes you are paying because the place is popular.</p>
-
-                <p>For a first trip, that can be okay.</p>
-
-                <p>
-                  Just do not make every meal a famous restaurant.
-                </p>
-
-                <p>
-                  A simple local meal near your hotel can be just as useful as
-                  a viral restaurant across the city.
+                  Food can be affordable, but not every meal is cheap. Gimbap,
+                  bunsik, soups, noodles, food courts, convenience store meals,
+                  and casual local restaurants help balance the budget. Myeongdong,
+                  Hongdae, Gangnam, Insadong, and Seongsu are fun, but restaurants
+                  and cafes on the busiest streets often charge more for location
+                  and atmosphere — sometimes worth it, sometimes you are paying
+                  for convenience. Mix in simple meals near your hotel; a local
+                  spot on your block can be as satisfying as a viral restaurant
+                  across the city.
                 </p>
               </div>
 
@@ -332,59 +260,18 @@ export default function IsKoreaExpensiveToVisitFirstTimePage() {
                   Cafes and shopping
                 </h2>
 
-                <p>Cafes are one of the easiest places to overspend.</p>
-
                 <p>
-                  Korea has a strong cafe culture, and cafes can be part of the
-                  fun. Some are simple. Some are beautiful. Some are
-                  dessert-focused. Some are more about interior design and
-                  atmosphere.
+                  Cafes are one of the easiest places to overspend — Korea&apos;s
+                  cafe culture is part of the fun, but in trendy areas a stop can
+                  feel like a small experience rather than a quick drink, and
+                  several visits a day add up fast. Pick one cafe you really want,
+                  then use simpler spots or convenience stores for quick drinks.
+                  Shopping surprises people too: cosmetics, snacks, stationery,
+                  skincare, and character goods are designed to make you keep
+                  picking up small things. A loose daily limit in your head helps
+                  you enjoy Myeongdong, Hongdae, Gangnam, Seongsu, and major malls
+                  without regret later.
                 </p>
-
-                <p>
-                  In trendy areas, a cafe stop can feel less like a quick drink
-                  and more like a small experience.
-                </p>
-
-                <p>
-                  That is enjoyable, but it can add up quickly if you do it
-                  several times a day.
-                </p>
-
-                <p>
-                  A good balance is to choose one cafe you really want to
-                  enjoy, then use simpler cafes or convenience stores for quick
-                  drinks.
-                </p>
-
-                <p>Shopping can also surprise people.</p>
-
-                <p>
-                  Korea is fun for shopping because there are cosmetics shops,
-                  fashion streets, lifestyle stores, character goods, snacks,
-                  stationery, skincare, and department stores.
-                </p>
-
-                <p>
-                  But shopping streets are designed to make you keep picking up
-                  small things.
-                </p>
-
-                <p>
-                  A few small purchases can become a large part of your travel
-                  budget.
-                </p>
-
-                <p>
-                  This is especially true in areas like Myeongdong, Hongdae,
-                  Gangnam, Seongsu, and major malls.
-                </p>
-
-                <p>
-                  If you like shopping, set a loose daily limit in your mind.
-                </p>
-
-                <p>That helps you enjoy it without regret later.</p>
               </div>
 
               <div className="space-y-4">
@@ -393,55 +280,14 @@ export default function IsKoreaExpensiveToVisitFirstTimePage() {
                 </h2>
 
                 <p>
-                  Transportation is usually one of the easier costs to control.
+                  Transportation is usually easier to control. The subway is the
+                  best base for most first-time visitors — predictable, connected,
+                  and workable with a T-money card even during crowded rush hour.
+                  Taxis help late at night, in bad weather, or with heavy luggage,
+                  but during traffic they can stall and cost more than the subway
+                  for the distance. Use taxis as a comfort tool, not your main
+                  transport plan.
                 </p>
-
-                <p>
-                  The subway is the best base for most first-time visitors. It
-                  is predictable, connected, and useful for moving between major
-                  areas.
-                </p>
-
-                <p>
-                  A T-money card or transit card makes public transportation
-                  easier.
-                </p>
-
-                <p>
-                  The subway can be crowded, especially during weekday rush
-                  hour, but it is usually more predictable than road traffic.
-                </p>
-
-                <p>
-                  Taxis are useful, but they are not always the budget-friendly
-                  choice.
-                </p>
-
-                <p>
-                  A taxi can be helpful late at night, in bad weather, with
-                  heavy luggage, or when the subway route is too complicated.
-                </p>
-
-                <p>
-                  But during rush hour, rain, events, or heavy traffic, taxis
-                  can get stuck and feel slower than the subway.
-                </p>
-
-                <p>
-                  If you take taxis across the city often, costs can rise
-                  quickly.
-                </p>
-
-                <p>
-                  Think of taxis as a comfort tool, not your main transport
-                  plan.
-                </p>
-
-                <p>Subway for most movement.</p>
-
-                <p>Taxi when it actually reduces stress.</p>
-
-                <p>That balance works well in Seoul.</p>
               </div>
 
               <div className="space-y-4">
@@ -450,38 +296,12 @@ export default function IsKoreaExpensiveToVisitFirstTimePage() {
                 </h2>
 
                 <p>
-                  Convenience stores are helpful for saving money and energy.
-                </p>
-
-                <p>They are not just emergency snack stops.</p>
-
-                <p>
-                  You can use them for breakfast, late-night food, drinks,
-                  triangle gimbap, cup ramyeon, lunch boxes, desserts, and small
-                  travel needs.
-                </p>
-
-                <p>
-                  Convenience store food is not a replacement for every meal,
-                  but it can save your day when you are tired or between plans.
-                </p>
-
-                <p>
-                  It also helps balance more expensive restaurant or cafe days.
-                </p>
-
-                <p>Food courts can be useful too.</p>
-
-                <p>
-                  In malls, stations, department stores, and large buildings,
-                  food courts can make ordering easier and give you several
-                  choices in one place.
-                </p>
-
-                <p>
-                  They are not always the cheapest option, but they can be
-                  convenient, especially when traveling with friends or family
-                  who want different foods.
+                  Convenience stores are useful beyond emergency snacks — breakfast,
+                  late-night food, triangle gimbap, cup ramyeon, lunch boxes, and
+                  small travel needs can balance more expensive restaurant or cafe
+                  days. Food courts in malls, stations, and department stores make
+                  ordering easier when traveling with people who want different
+                  foods; not always the cheapest option, but convenient.
                 </p>
               </div>
 
@@ -491,127 +311,29 @@ export default function IsKoreaExpensiveToVisitFirstTimePage() {
                 </p>
 
                 <p>
-                  Another budget mistake is crossing the city too much.
-                </p>
-
-                <p>
-                  Every long transfer costs time, energy, and sometimes extra
-                  spending.
-                </p>
-
-                <p>
-                  If you go from Myeongdong to Jamsil, then to Hongdae, then to
-                  Gangnam in one day, the day may look full but feel exhausting.
-                </p>
-
-                <p>
-                  You may end up taking more taxis, buying more drinks, and
-                  eating wherever is easiest because you are tired.
-                </p>
-
-                <p>A better plan is to group nearby areas.</p>
-
-                <p>Central Seoul day.</p>
-
-                <p>Old Seoul day.</p>
-
-                <p>Hongdae and northwest Seoul day.</p>
-
-                <p>Gangnam or Jamsil day.</p>
-
-                <p>This saves both energy and money.</p>
-
-                <p>Weather can also affect cost.</p>
-
-                <p>
-                  On very hot, cold, or rainy days, you may spend more on
-                  taxis, cafes, malls, or indoor activities.
-                </p>
-
-                <p>That is normal.</p>
-
-                <p>
-                  But it helps to build flexible plans instead of forcing long
-                  outdoor routes in bad weather.
-                </p>
-
-                <p>
-                  If you need a break, a cafe, mall, museum, food court, or
-                  convenience store stop can keep the day comfortable.
+                  Crossing Seoul too much is another budget mistake — long
+                  transfers cost time and energy, and tired days lead to more
+                  taxis, drinks, and eating wherever is easiest. Group nearby
+                  areas: central Seoul one day, old Seoul another, Hongdae and
+                  northwest Seoul, Gangnam or Jamsil. Weather matters too; on
+                  very hot, cold, or rainy days you may spend more on taxis,
+                  cafes, and indoor stops, so flexible plans beat forced outdoor
+                  routes.
                 </p>
               </div>
 
               <div className="space-y-4">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
-                  Final note
-                </p>
-
                 <p>
-                  For first-time visitors, the best budget strategy is not to
-                  be cheap all day.
-                </p>
-
-                <p>
-                  It is to choose where spending actually improves the trip.
-                </p>
-
-                <p>A convenient hotel near a station may be worth it.</p>
-
-                <p>A taxi with heavy luggage may be worth it.</p>
-
-                <p>
-                  A beautiful cafe you really wanted to visit may be worth it.
-                </p>
-
-                <p>Korean BBQ with friends may be worth it.</p>
-
-                <p>
-                  But a taxi during traffic, a random expensive cafe just
-                  because you are tired, or a hotel far from your itinerary may
-                  not be worth it.
-                </p>
-
-                <p>That is the difference.</p>
-
-                <p>
-                  For HAEMIL readers, Korea is not a place where every good
-                  experience has to be expensive.
-                </p>
-
-                <p>Some of the best first-trip moments can be simple:</p>
-
-                <p>a warm bowl of soup,</p>
-
-                <p>a gimbap lunch,</p>
-
-                <p>a convenience store snack,</p>
-
-                <p>a subway ride across the city,</p>
-
-                <p>a quiet palace walk,</p>
-
-                <p>a night view,</p>
-
-                <p>a cafe break after too much walking.</p>
-
-                <p>
-                  Korea can be affordable if you travel with balance.
-                </p>
-
-                <p>
-                  It can be expensive if every choice is based on convenience,
-                  trend, or famous locations.
-                </p>
-
-                <p>So plan your spending around comfort, not pressure.</p>
-
-                <p>Spend where it saves energy.</p>
-
-                <p>Save where the famous option does not really matter.</p>
-
-                <p>
-                  That is the easiest way to enjoy Korea without feeling
-                  surprised by the cost.
+                  The best budget strategy is not to be cheap all day — it is to
+                  choose where spending actually improves the trip. A convenient
+                  hotel near a station, a taxi with heavy luggage, or Korean BBQ
+                  with friends may be worth it; a taxi stuck in traffic or a
+                  random expensive cafe because you are tired may not. Korea is
+                  not a place where every good moment has to cost a lot — a warm
+                  bowl of soup, gimbap lunch, convenience store snack, or quiet
+                  palace walk can be some of the best first-trip memories. Spend
+                  where it saves energy; save where the famous option does not
+                  really matter.
                 </p>
               </div>
             </div>

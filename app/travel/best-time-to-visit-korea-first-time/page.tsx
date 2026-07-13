@@ -209,29 +209,13 @@ export default function BestTimeToVisitKoreaFirstTimePage() {
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
             <div className="space-y-8 text-base leading-8 text-[var(--muted)] md:text-lg">
               <div className="space-y-4">
-                <p>Spring feels bright and fresh.</p>
-
-                <p>Summer feels hot, humid, and energetic.</p>
-
-                <p>Autumn feels clear, comfortable, and easy to walk in.</p>
-
                 <p>
-                  Winter feels cold, dry, and calmer, but also cozy in a
-                  different way.
-                </p>
-
-                <p>Do you want flowers?</p>
-
-                <p>Comfortable walking?</p>
-
-                <p>Night markets and summer energy?</p>
-
-                <p>Quiet cafes and warm food?</p>
-
-                <p>Lower-pressure sightseeing?</p>
-
-                <p>
-                  Or the classic first-time Seoul experience with good weather?
+                  Korea has four clear seasons, and each one changes how the trip
+                  feels — spring bright and fresh, summer hot and humid, autumn
+                  clear and easy to walk in, winter cold and dry but cozy in its
+                  own way. Match the season to what you want: flowers, comfortable
+                  walking, summer night energy, warm food and cafes, or lower-pressure
+                  sightseeing — not only the prettiest photos online.
                 </p>
               </div>
 
@@ -241,32 +225,13 @@ export default function BestTimeToVisitKoreaFirstTimePage() {
                 </h2>
 
                 <p>
-                  For many first-time visitors, autumn is the easiest season to
-                  enjoy.
-                </p>
-
-                <p>
-                  The weather is usually more comfortable for walking, the air
-                  often feels clearer, and outdoor plans can feel less tiring
-                  than summer. Palace walks, shopping streets, parks, cafes,
-                  riverside areas, and neighborhoods like Insadong, Hongdae,
-                  Myeongdong, and Seongsu can feel easier to explore.
-                </p>
-
-                <p>The trade-off is popularity.</p>
-
-                <p>
-                  Autumn can be busy because many people want good weather and
-                  fall colors. Famous areas, photo spots, hotels, cafes, and
-                  day-trip places can feel more crowded, especially during peak
-                  travel periods.
-                </p>
-
-                <p>Autumn is beautiful, but it is not a secret.</p>
-
-                <p>
-                  Choose autumn if you want comfortable walking, outdoor
-                  sightseeing, and a balanced first Korea trip.
+                  For many first-time visitors, autumn is the easiest season —
+                  comfortable walking weather, clearer air, and outdoor plans that
+                  feel less tiring than summer. Palaces, Insadong, Hongdae,
+                  Myeongdong, and Seongsu are easier to explore on foot. The
+                  trade-off is popularity: fall colors and good weather draw
+                  crowds, and hotels, cafes, and photo spots can feel busier
+                  during peak travel periods.
                 </p>
               </div>
 
@@ -275,32 +240,13 @@ export default function BestTimeToVisitKoreaFirstTimePage() {
                   Spring
                 </h2>
 
-                <p>Spring is also a favorite for first-time visitors.</p>
-
                 <p>
-                  The city feels lighter after winter. Flowers, parks, palace
-                  grounds, cafe streets, and walking routes can feel very
-                  pretty. Spring is especially popular because many travelers
-                  imagine Korea with cherry blossoms, soft weather, and bright
-                  streets.
-                </p>
-
-                <p>But spring also has trade-offs.</p>
-
-                <p>
-                  Flower timing changes every year, and famous blossom spots can
-                  become crowded. Weather can also shift more than people
-                  expect. Some days feel warm and lovely, while others can feel
-                  chilly, dusty, or rainy.
-                </p>
-
-                <p>Do not build your whole trip around one flower date.</p>
-
-                <p>Use spring as a mood, not a guarantee.</p>
-
-                <p>
-                  Choose spring if you want a bright city feeling, flowers,
-                  lighter clothes, and outdoor walks.
+                  Spring is a favorite too — the city feels lighter after winter,
+                  with flowers, palace grounds, and cafe streets that photograph
+                  well. Flower timing shifts every year, famous blossom spots get
+                  crowded, and weather can swing from warm to chilly, dusty, or
+                  rainy. Treat spring as a mood, not a guarantee; build flexible
+                  plans rather than one fixed flower date.
                 </p>
               </div>
 
@@ -310,43 +256,13 @@ export default function BestTimeToVisitKoreaFirstTimePage() {
                 </h2>
 
                 <p>
-                  Summer in Korea can be fun, but it is not the easiest season
-                  for everyone.
-                </p>
-
-                <p>
-                  It can be hot, humid, rainy, and tiring if your itinerary has
-                  too much walking. Subway stations, shopping streets, and
-                  outdoor attractions can feel heavy when the weather is sticky.
-                </p>
-
-                <p>This does not mean summer is bad.</p>
-
-                <p>
-                  Summer has its own energy. Nights can feel lively, cafes feel
-                  useful, convenience stores become your friend, and indoor
-                  plans like malls, museums, food courts, and shopping streets
-                  can save the day.
-                </p>
-
-                <p>But you need to plan more gently.</p>
-
-                <p>Do not pack every day with outdoor walking.</p>
-
-                <p>
-                  Leave room for air-conditioning breaks, cafes, and indoor
-                  stops.
-                </p>
-
-                <p>
-                  Also remember that rain can change transport. Taxis may be
-                  harder to catch or slower in traffic, and walking routes can
-                  feel less comfortable.
-                </p>
-
-                <p>
-                  Choose summer if you do not mind heat and humidity, and if you
-                  are willing to slow down during the day.
+                  Summer can be fun but tiring — hot, humid, and heavy on outdoor
+                  walking. Subway stations and shopping streets feel sticky when
+                  the weather is at its worst. Nights stay lively, cafes and
+                  convenience stores become useful, and indoor plans like malls,
+                  museums, and food courts can save the day. Plan gently: leave
+                  room for air-conditioning breaks, and remember rain can slow
+                  taxis and make walking routes less comfortable.
                 </p>
               </div>
 
@@ -356,34 +272,13 @@ export default function BestTimeToVisitKoreaFirstTimePage() {
                 </h2>
 
                 <p>
-                  Winter is cold, but it can be a good choice for some travelers.
-                </p>
-
-                <p>
-                  Seoul in winter can feel dry, sharp, and quiet compared with
-                  busier seasons. You may spend more time in cafes, restaurants,
-                  malls, museums, and warm indoor places. Korean soups, stews,
-                  street snacks, hot drinks, and convenience store food can feel
-                  especially comforting.
-                </p>
-
-                <p>The trade-off is the cold.</p>
-
-                <p>
-                  Outdoor sightseeing can be harder if you are not dressed well.
-                  Palace walks, night views, and long neighborhood routes may
-                  feel tiring. You may need to plan shorter outdoor blocks and
-                  more indoor breaks.
-                </p>
-
-                <p>
-                  Winter can be good if you like a calmer city mood, warm food,
-                  cafes, shopping, and fewer outdoor expectations.
-                </p>
-
-                <p>
-                  Choose winter if you can handle cold weather and prefer a
-                  slower trip.
+                  Winter is cold but can suit travelers who prefer a calmer mood
+                  — dry, sharp Seoul with more time in cafes, restaurants, malls,
+                  and museums. Korean soups, stews, street snacks, and hot drinks
+                  hit differently. The trade-off is outdoor sightseeing: palace
+                  walks and night views need proper clothing and shorter outdoor
+                  blocks. Good if you can handle cold and want warm food, shopping,
+                  and fewer outdoor expectations.
                 </p>
               </div>
 
@@ -392,17 +287,11 @@ export default function BestTimeToVisitKoreaFirstTimePage() {
                   Quick season guide
                 </p>
 
-                <p>Choose autumn if you want comfort.</p>
-
-                <p>Choose spring if you want a bright, pretty mood.</p>
-
                 <p>
-                  Choose winter if you want a calmer city trip and do not mind
-                  cold.
-                </p>
-
-                <p>
-                  Be careful with summer if you dislike heat, humidity, or rain.
+                  Autumn for comfort, spring for a bright pretty mood, winter
+                  for a calmer city trip if you can handle cold — and summer
+                  only if you are willing to slow down and you do not mind heat,
+                  humidity, or rain.
                 </p>
               </div>
 
@@ -411,25 +300,12 @@ export default function BestTimeToVisitKoreaFirstTimePage() {
                   Cost and crowds
                 </h2>
 
-                <p>Cost can also change by season.</p>
-
                 <p>
-                  Popular travel periods can make hotels and flights more
-                  expensive, especially in famous areas like Myeongdong,
-                  Hongdae, Gangnam, Insadong, Seoul Station, and Jamsil. Spring
-                  and autumn can feel more competitive because many visitors
-                  want those seasons.
-                </p>
-
-                <p>That does not mean you should avoid them.</p>
-
-                <p>It just means you should book with clear expectations.</p>
-
-                <p>
-                  If budget matters, look at practical station access instead
-                  of only the most famous neighborhood name. Staying one or two
-                  subway stops away from the busiest area can sometimes feel
-                  like better value.
+                  Popular travel periods can push up hotels and flights,
+                  especially in Myeongdong, Hongdae, Gangnam, Insadong, Seoul
+                  Station, and Jamsil during spring and autumn. Book with clear
+                  expectations; if budget matters, look at practical station
+                  access and stays one or two subway stops from the busiest area.
                 </p>
               </div>
 
@@ -438,41 +314,17 @@ export default function BestTimeToVisitKoreaFirstTimePage() {
                   Match the season to your itinerary
                 </h2>
 
-                <p>Your itinerary also matters.</p>
-
                 <p>
-                  If your trip is mostly palaces, walking streets,
-                  neighborhoods, and outdoor views, spring or autumn will
-                  probably feel better.
+                  Match the season to your itinerary. Palaces, walking streets,
+                  and outdoor views usually feel better in spring or autumn.
+                  Shopping, cafes, food, beauty, museums, and malls can work in
+                  winter or summer too. If you hate crowds, skip building the
+                  trip around the most famous seasonal photo spots; if you hate
+                  heat, do not pack summer with outdoor-only days; if you hate
+                  cold, winter&apos;s calmer mood may not be worth the trade-off.
+                  Choose the season that matches your daily energy, not only
+                  photos online.
                 </p>
-
-                <p>
-                  If your trip is mostly shopping, cafes, food, beauty,
-                  museums, malls, and indoor experiences, winter or summer can
-                  still work.
-                </p>
-
-                <p>
-                  If you hate crowds, avoid building your trip around the most
-                  famous seasonal photo spots.
-                </p>
-
-                <p>
-                  If you hate walking in heat, avoid making summer a packed
-                  outdoor trip.
-                </p>
-
-                <p>
-                  If you hate cold, winter may not be worth the calmer mood.
-                </p>
-
-                <p>A good local-style way to think is this:</p>
-
-                <p>
-                  Do not choose a season only because of photos online.
-                </p>
-
-                <p>Choose the season that matches your daily energy.</p>
               </div>
 
               <div className="space-y-4">
@@ -480,73 +332,24 @@ export default function BestTimeToVisitKoreaFirstTimePage() {
                   Walking and comfort
                 </h2>
 
-                <p>Korea is a walking-heavy destination.</p>
-
                 <p>
-                  You will walk inside subway stations, through markets, up
-                  hills, around palaces, across shopping streets, and between
-                  cafes and restaurants.
+                  Korea is a walking-heavy destination — subway stations, markets,
+                  palace grounds, hills, and shopping streets add up. The same
+                  place feels different in good walking weather versus heavy rain,
+                  freezing wind, or summer heat. Myeongdong, palaces, and Hongdae
+                  at night all change with what your body can handle.
                 </p>
-
-                <p>Comfort matters.</p>
-
-                <p>
-                  Weather affects how much you enjoy the same place.
-                </p>
-
-                <p>
-                  Myeongdong in good walking weather feels different from
-                  Myeongdong in heavy rain.
-                </p>
-
-                <p>
-                  A palace in autumn feels different from a palace in freezing
-                  wind.
-                </p>
-
-                <p>
-                  Hongdae at night feels different in summer heat and winter
-                  cold.
-                </p>
-
-                <p>The place is the same, but your body feels it differently.</p>
               </div>
 
               <div className="space-y-4">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
-                  Final note
-                </p>
-
                 <p>
-                  For HAEMIL readers, the best time to visit Korea is not only
-                  the prettiest season.
-                </p>
-
-                <p>
-                  It is the season that lets you enjoy the trip without fighting
-                  the weather all day.
-                </p>
-
-                <p>
-                  Spring and autumn are the safest answers for most first-time
-                  visitors.
-                </p>
-
-                <p>Autumn is probably the easiest for walking.</p>
-
-                <p>Spring is beautiful if you keep your plans flexible.</p>
-
-                <p>Summer needs slower planning.</p>
-
-                <p>Winter needs warm clothes and more indoor breaks.</p>
-
-                <p>
-                  Choose the season that fits your comfort, your budget, and
-                  your itinerary.
-                </p>
-
-                <p>
-                  That is better than chasing the perfect travel photo.
+                  The best time to visit is not only the prettiest season — it is
+                  the one that lets you enjoy the trip without fighting weather
+                  all day. Spring and autumn work for most first-timers; autumn
+                  is probably the easiest for walking, spring needs flexible
+                  plans, summer needs slower pacing, winter needs warm clothes
+                  and more indoor breaks. Match comfort, budget, and itinerary —
+                  that beats chasing the perfect travel photo.
                 </p>
               </div>
             </div>

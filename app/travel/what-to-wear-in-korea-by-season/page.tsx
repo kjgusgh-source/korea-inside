@@ -205,23 +205,14 @@ export default function WhatToWearInKoreaBySeasonPage() {
                   The easiest rule
                 </p>
 
-                <p>Dress for walking first, then style second.</p>
-
                 <p>
-                  You will walk inside subway stations. You will walk up and down
-                  stairs. You will walk through markets, palaces, shopping
-                  streets, cafe alleys, hills, parks, and long station
-                  transfers.
+                  Dress for walking first, style second. You will climb subway
+                  stairs, cross markets, walk palace grounds, and transfer between
+                  stations for hours — Korea can look stylish in Hongdae, Seongsu,
+                  Gangnam, and department-store districts, but as a visitor you
+                  are moving all day, not living one calm local routine. Clothes
+                  should help the trip, not fight it.
                 </p>
-
-                <p>
-                  Korea can feel stylish, especially in areas like Hongdae,
-                  Seongsu, Gangnam, Myeongdong, and department-store districts.
-                  But as a visitor, you are not living one calm local day. You
-                  are moving from place to place, often for hours.
-                </p>
-
-                <p>So your clothes should help the trip, not fight it.</p>
               </div>
 
               <div className="space-y-4">
@@ -230,41 +221,14 @@ export default function WhatToWearInKoreaBySeasonPage() {
                 </h2>
 
                 <p>
-                  Spring in Korea can feel bright and pretty, but the weather
-                  can shift.
+                  Spring can feel bright and pretty, but weather shifts — warm
+                  afternoons, cool mornings and nights, rain or dust on some days.
+                  Pack light layers: jacket, cardigan, thin knit, or hoodie you
+                  can remove midday and put back on at night. Comfortable walking
+                  shoes matter because spring draws palace, park, and flower walks.
+                  Cherry blossom photos online can make the season look softer
+                  than it feels; bring layers, not only light clothes.
                 </p>
-
-                <p>Some days feel warm.</p>
-
-                <p>Some mornings and nights feel cool.</p>
-
-                <p>Rain or dust can also change how the day feels.</p>
-
-                <p>For spring, pack light layers.</p>
-
-                <p>
-                  A light jacket, cardigan, thin knit, long-sleeve shirt, or
-                  hoodie can be useful. You may take it off during the day and
-                  put it back on at night.
-                </p>
-
-                <p>
-                  Comfortable walking shoes are still important because spring
-                  is a popular season for palaces, parks, flowers, and
-                  neighborhood walks.
-                </p>
-
-                <p>
-                  The trade-off is that spring photos online can make the
-                  season look softer than it feels in real life.
-                </p>
-
-                <p>
-                  Do not pack only light clothes because of pretty cherry
-                  blossom pictures.
-                </p>
-
-                <p>Bring layers.</p>
               </div>
 
               <div className="space-y-4">
@@ -272,45 +236,14 @@ export default function WhatToWearInKoreaBySeasonPage() {
                   Summer
                 </h2>
 
-                <p>Summer in Korea can be hot, humid, and tiring.</p>
-
-                <p>This is the season when comfort matters most.</p>
-
                 <p>
-                  Breathable clothes, light fabrics, comfortable sandals or
-                  sneakers, sun protection, and rain-friendly items can help.
-                </p>
-
-                <p>
-                  Summer rain can affect your plans, and humid days can make
-                  long outdoor routes feel harder than expected.
-                </p>
-
-                <p>A small umbrella is useful.</p>
-
-                <p>
-                  You can also buy one easily in Korea, especially at
-                  convenience stores, but prices and availability can vary by
-                  area and timing.
-                </p>
-
-                <p>
-                  The main mistake in summer is planning too much outdoor
-                  walking.
-                </p>
-
-                <p>
-                  If you wear clothes that trap heat or shoes that hurt, the
-                  day becomes difficult quickly.
-                </p>
-
-                <p>
-                  Plan cafe breaks, indoor stops, malls, museums, food courts,
-                  or convenience store rests.
-                </p>
-
-                <p>
-                  Summer can still be fun, but you need to move more gently.
+                  Summer is hot, humid, and tiring — breathable clothes, light
+                  fabrics, comfortable sneakers or sandals, sun protection, and
+                  rain-friendly items help most. A small umbrella is useful; you
+                  can buy one at convenience stores, though prices vary. The main
+                  mistake is planning too much outdoor walking in clothes that
+                  trap heat or shoes that hurt — build in cafe breaks, malls,
+                  museums, and convenience store rests, and move more gently.
                 </p>
               </div>
 
@@ -320,31 +253,12 @@ export default function WhatToWearInKoreaBySeasonPage() {
                 </h2>
 
                 <p>
-                  Autumn is usually one of the easiest seasons for clothing.
-                </p>
-
-                <p>
-                  Many visitors find it comfortable for walking, sightseeing,
-                  shopping, and cafe hopping. A light jacket, knit,
-                  long-sleeve top, or layered outfit usually works well
-                  depending on the day.
-                </p>
-
-                <p>
-                  Autumn is also a good season for palaces, riverside walks,
-                  parks, and neighborhoods.
-                </p>
-
-                <p>But it can still get cooler in the morning or evening.</p>
-
-                <p>Do not assume every autumn day feels the same.</p>
-
-                <p>Layering is safer than packing only one type of outfit.</p>
-
-                <p>
-                  Autumn can also be a popular travel season, so famous areas
-                  may be crowded. Comfortable shoes matter because you may spend
-                  more time standing, waiting, or walking than planned.
+                  Autumn is usually the easiest season for clothing — comfortable
+                  for walking, sightseeing, and cafe hopping with a light jacket,
+                  knit, or layered outfit. Mornings and evenings can still cool
+                  down, so layering beats packing one type of outfit. Popular
+                  areas get crowded in peak autumn travel; comfortable shoes matter
+                  because you may stand and walk more than planned.
                 </p>
               </div>
 
@@ -353,44 +267,15 @@ export default function WhatToWearInKoreaBySeasonPage() {
                   Winter
                 </h2>
 
-                <p>Winter in Korea can feel cold and dry.</p>
-
-                <p>If you are not used to cold weather, winter can surprise you.</p>
-
                 <p>
-                  A warm coat, scarf, gloves, thick socks, and shoes that keep
-                  your feet comfortable are helpful. Layers matter because
-                  indoor spaces can be heated while outside air feels sharp.
+                  Winter is cold and dry — a warm coat, scarf, gloves, thick
+                  socks, and comfortable shoes help if you are not used to Korean
+                  winter. Layers matter because you move from cold streets into
+                  heated subways, cafes, malls, and restaurants; an outfit that
+                  works outside should still feel manageable indoors. Palace walks
+                  and night views get harder if you are underdressed — comfort
+                  beats looking perfect.
                 </p>
-
-                <p>
-                  You may go from a cold street into a warm subway, cafe, mall,
-                  restaurant, or museum.
-                </p>
-
-                <p>
-                  That temperature difference can feel uncomfortable if your
-                  outfit is too heavy or too light.
-                </p>
-
-                <p>
-                  A good winter outfit should keep you warm outside but still
-                  manageable indoors.
-                </p>
-
-                <p>
-                  Winter is also a good season for warm food, cafes, shopping,
-                  museums, malls, and slower city travel.
-                </p>
-
-                <p>The trade-off is outdoor sightseeing.</p>
-
-                <p>
-                  Palace walks, night views, and long neighborhood routes can
-                  feel harder if you are underdressed.
-                </p>
-
-                <p>Comfort matters more than looking perfect.</p>
               </div>
 
               <div className="space-y-4 rounded-[1.25rem] border border-[var(--border)] bg-[var(--surface)] p-5">
@@ -398,30 +283,14 @@ export default function WhatToWearInKoreaBySeasonPage() {
                   Shoes matter most
                 </p>
 
-                <p>Shoes deserve their own section.</p>
-
                 <p>
-                  For a Korea trip, shoes can make or break the day.
-                </p>
-
-                <p>
-                  Seoul has many subway stairs, station corridors, hills,
-                  uneven alleys, palace grounds, markets, and long shopping
-                  streets. Even if you use public transport, you may walk much
-                  more than expected.
-                </p>
-
-                <p>Avoid bringing only new shoes.</p>
-
-                <p>Avoid shoes that look good but hurt after one hour.</p>
-
-                <p>Avoid thin soles if you plan long walking days.</p>
-
-                <p>Bring shoes you already trust.</p>
-
-                <p>
-                  If you want stylish shoes, choose the pair that still works
-                  after subway transfers and a full day outside.
+                  Shoes can make or break a Korea trip. Seoul means subway stairs,
+                  long station corridors, hills, uneven alleys, palace grounds,
+                  markets, and shopping streets — even with public transport, you
+                  walk more than expected. Bring shoes you already trust, not
+                  brand-new pairs or thin soles for long days. If you want
+                  stylish shoes, pick ones that still work after transfers and a
+                  full day outside.
                 </p>
               </div>
 
@@ -430,47 +299,14 @@ export default function WhatToWearInKoreaBySeasonPage() {
                   Rain and shopping
                 </h2>
 
-                <p>Rain is also worth planning for.</p>
-
                 <p>
-                  A small umbrella, light rain jacket, or shoes that do not
-                  become miserable in wet weather can help. Korea has many
-                  convenience stores, so buying an umbrella is usually possible,
-                  but it is still better not to be completely unprepared.
-                </p>
-
-                <p>
-                  Rain can also make taxis harder to catch and roads slower.
-                </p>
-
-                <p>
-                  So a rainy-day outfit should be comfortable enough for subway
-                  movement too.
-                </p>
-
-                <p>For shopping, Korea is useful if you forget something.</p>
-
-                <p>
-                  You can find socks, basic clothes, skincare, umbrellas, heat
-                  items, cooling items, and travel goods in many areas.
-                </p>
-
-                <p>
-                  But do not assume buying everything after arrival is always
-                  cheaper.
-                </p>
-
-                <p>
-                  Famous shopping areas like Myeongdong, Hongdae, Gangnam,
-                  Seongsu, Insadong, and major malls can be convenient, but they
-                  can also cost more because of location and demand.
-                </p>
-
-                <p>If you need something, buy it.</p>
-
-                <p>
-                  But do not rely on tourist-area shopping as your whole packing
-                  plan.
+                  Pack for rain — a small umbrella, light rain jacket, or shoes
+                  that handle wet weather. Convenience stores sell umbrellas, but
+                  coming somewhat prepared helps. Rain can slow taxis too, so
+                  rainy-day outfits should work for subway movement. You can buy
+                  socks, basic clothes, umbrellas, and travel goods in Korea, but
+                  tourist areas like Myeongdong, Hongdae, Gangnam, Seongsu, and
+                  major malls may cost more than quieter shops.
                 </p>
               </div>
 
@@ -479,61 +315,23 @@ export default function WhatToWearInKoreaBySeasonPage() {
                   Simple packing mindset
                 </p>
 
-                <p>A simple first-time packing mindset is:</p>
-
-                <p>Bring comfortable shoes.</p>
-
-                <p>Bring layers.</p>
-
-                <p>Prepare for rain.</p>
-
                 <p>
-                  Dress for the season, but leave room for weather changes.
-                </p>
-
-                <p>Do not overpack heavy clothes unless it is winter.</p>
-
-                <p>Do not pack only photo outfits.</p>
-
-                <p>
-                  And do not forget that you will probably buy a few things
-                  during the trip.
+                  Simple first-time packing: comfortable shoes, layers, rain
+                  prep, season-appropriate clothes with room for weather shifts.
+                  Skip heavy packing unless it is winter, and skip suitcases
+                  full of photo-only outfits — you will probably buy a few things
+                  during the trip anyway.
                 </p>
               </div>
 
               <div className="space-y-4">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
-                  Final note
-                </p>
-
                 <p>
-                  For HAEMIL readers, the best Korea travel outfit is not the
-                  trendiest one.
+                  The best Korea travel outfit is the one that still feels good
+                  after subway stairs, a palace walk, shopping, a cafe stop, one
+                  wrong station exit, and one extra street you did not plan.
+                  Style is welcome; comfort is the base. Korea is more fun when
+                  you have energy left at night.
                 </p>
-
-                <p>It is the outfit that still feels good at night.</p>
-
-                <p>After subway stairs.</p>
-
-                <p>After a palace walk.</p>
-
-                <p>After a cafe stop.</p>
-
-                <p>After shopping.</p>
-
-                <p>After one wrong station exit.</p>
-
-                <p>After standing in a line.</p>
-
-                <p>After walking one more street than you planned.</p>
-
-                <p>Korea is fun when you have energy left.</p>
-
-                <p>So wear clothes that help you keep that energy.</p>
-
-                <p>Style is welcome.</p>
-
-                <p>Comfort is the base.</p>
               </div>
             </div>
           </section>
