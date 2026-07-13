@@ -75,6 +75,16 @@ const STANDALONE_TRAVEL_GUIDES = [
     readingTime: "10 min read",
   },
   {
+    id: "seoul-neighborhood-guide-first-time",
+    category: "travel",
+    categoryLabel: "Travel guide",
+    title: "Seoul Neighborhood Guide for First-Time Visitors",
+    description:
+      "A practical guide to Seoul neighborhoods, from Myeongdong and Hongdae to Gangnam, Insadong, Euljiro, Seongsu, Jamsil, and Itaewon.",
+    href: "/travel/seoul-neighborhood-guide-first-time",
+    readingTime: "9 min read",
+  },
+  {
     id: "how-to-get-around-seoul-first-time",
     category: "travel",
     categoryLabel: "Travel guide",
