@@ -35,6 +35,16 @@ const STANDALONE_FOOD_GUIDES = [
     readingTime: "10 min read",
   },
   {
+    id: "korean-pocha-night-food-guide-first-time",
+    category: "food",
+    categoryLabel: "Food guide",
+    title: "Korean Pocha and Night Food Guide for First-Time Visitors",
+    description:
+      "A practical guide to Korean pocha night food, with anju, pojangmacha, eomuk-tang, tteokbokki, dakbal, jeon, cash tips, price checks, and local etiquette.",
+    href: "/food/korean-pocha-night-food-guide-first-time",
+    readingTime: "9 min read",
+  },
+  {
     id: "gwangjang-market-food-guide-first-time",
     category: "food",
     categoryLabel: "Food guide",
