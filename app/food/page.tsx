@@ -25,6 +25,16 @@ const STANDALONE_FOOD_GUIDES = [
     readingTime: "8 min read",
   },
   {
+    id: "gwangjang-market-food-guide-first-time",
+    category: "food",
+    categoryLabel: "Food guide",
+    title: "Gwangjang Market Food Guide for First-Time Visitors",
+    description:
+      "A practical first-time guide to eating at Gwangjang Market, with bindaetteok, mayak gimbap, yukhoe, noodles, cash tips, crowds, and tourist-pricing cautions.",
+    href: "/food/gwangjang-market-food-guide-first-time",
+    readingTime: "9 min read",
+  },
+  {
     id: "what-to-eat-at-korean-convenience-store",
     category: "food",
     categoryLabel: "Food guide",

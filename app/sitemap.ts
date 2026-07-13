@@ -172,6 +172,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/food/gwangjang-market-food-guide-first-time`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/food/what-is-korean-street-toast`,
       lastModified: new Date(),
       changeFrequency: "monthly",
