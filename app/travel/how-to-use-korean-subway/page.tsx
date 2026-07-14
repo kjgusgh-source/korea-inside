@@ -160,7 +160,11 @@ export default function HowToUseKoreanSubwayPage() {
             </h1>
 
             <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
-              The Korean subway can look complicated at first.
+              The Korean subway can look complicated at first — many lines,
+              colors, and exits, and in Seoul one station can feel like a small
+              underground city. The routine is simpler than the map suggests:
+              choose a route, tap in, transfer if needed, find the right exit,
+              and tap out.
             </p>
           </article>
 
@@ -181,234 +185,97 @@ export default function HowToUseKoreanSubwayPage() {
 
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
             <div className="space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
-              <p>There are many lines.</p>
-
-              <p>Many colors.</p>
-
-              <p>Many exits.</p>
-
               <p>
-                And if you are in Seoul, one station can feel almost like a small
-                underground city.
+                Memorizing the whole map is not the goal — you need a
+                transportation card or ticket, a map app for routes and exits,
+                and a little patience when a station feels bigger than expected.
               </p>
-
-              <p>
-                But the basic routine is simple once you understand it. You do
-                not need to memorize the whole map. You only need to know how to
-                choose a route, tap in, transfer, find the right exit, and not
-                panic when a station feels bigger than expected.
-              </p>
-
-              <p>Start with a transportation card.</p>
 
               <p>
                 For most first-time visitors, a T-money card or another
                 rechargeable Korean transportation card is the easiest choice.
-                You can use it for subway rides, and it is much more convenient
-                than buying a single ticket every time. You tap the card when
-                you enter the gate, ride the subway, then tap again when you
-                leave.
-              </p>
-
-              <p>That second tap matters.</p>
-
-              <p>
-                Do not just walk out behind someone else or assume the gate
-                already knows where you went. The fare system needs both taps.
+                Tap when you enter the gate, ride, then tap again when you leave
+                — that second tap matters, because the fare system needs both
+                reads. You can also buy a single-journey subway ticket at a
+                station machine for one ride, but it is less convenient if you
+                will move around more than once, and single-journey tickets work
+                for subway only, not buses.
               </p>
 
               <p>
-                You can also buy a single-journey subway ticket at a station
-                machine. This is fine if you only need one ride, but it is less
-                convenient if you will use public transportation more than once.
-                Also, single-journey subway tickets are for subway use only, so
-                they are not as flexible as a rechargeable transportation card.
+                If you are staying in Seoul and riding a lot, you may hear about
+                the Climate Card — worth checking, not something every traveler
+                needs automatically. Short-term options exist, including 1-day,
+                2-day, 3-day, 5-day, and 7-day passes, and it can help if you
+                plan many rides inside Seoul. The valid area matters, though, so
+                confirm coverage before buying; it may not include every train,
+                airport route, or trip outside Seoul. For simple trips, T-money
+                is usually easier; for Seoul-heavy, subway-heavy days, Climate
+                Card may be worth comparing.
               </p>
 
               <p>
-                If you are staying in Seoul and riding a lot, you may also hear
-                about the Climate Card.
+                Naver Map and KakaoMap save the most stress — they show which
+                line to take, where to transfer, which exit to use, and how long
+                the walk is after you leave the station. Check your route before
+                entering a large station, especially during rush hour. The exit
+                number matters a lot: exit 1 and exit 8 can put you on opposite
+                sides of a huge road, several minutes apart. If the app says
+                exit 6, follow exit 6 — &quot;any exit&quot; is one of the most
+                common first-time mistakes.
               </p>
 
               <p>
-                Think of it as something to check, not something every traveler
-                needs automatically. It can be useful if you plan to use public
-                transportation many times inside Seoul. Short-term options
-                exist, including 1-day, 2-day, 3-day, 5-day, and 7-day passes.
-                But the valid area matters, so do not assume it covers every
-                train, airport route, or trip outside Seoul.
-              </p>
-
-              <p>If your trip is simple, T-money is usually easier.</p>
-
-              <p>
-                If your trip is Seoul-heavy and subway-heavy, Climate Card may
-                be worth comparing.
-              </p>
-
-              <p>Next, use an app.</p>
-
-              <p>
-                This is the part that saves you the most stress. In Korea, Naver
-                Map and KakaoMap are often more useful than trying to read the
-                whole subway map by yourself. They can show which line to take,
-                where to transfer, which exit to use, and how long the walk is
-                after you leave the station.
-              </p>
-
-              <p>The exit number is very important.</p>
-
-              <p>
-                In Korea, subway stations often have many exits. Exit 1 and Exit
-                8 can place you on different sides of a huge road, or several
-                minutes away from each other. If your map app says Exit 6, try
-                to follow Exit 6. Do not think, &quot;Any exit is fine.&quot;
-                Sometimes any exit is not fine.
-              </p>
-
-              <p>That is one of the most common first-time mistakes.</p>
-
-              <p>The station signs are usually helpful.</p>
-
-              <p>
-                Major subway stations in Seoul and other big cities often show
-                Korean, English, Chinese characters, and Japanese. Line colors
-                and numbers also help. If you are taking Line 2, follow the
-                green Line 2 signs. If you are transferring to Line 4, follow
-                the blue Line 4 signs. The color system is useful when the
-                station feels busy.
-              </p>
-
-              <p>Transfers can be long.</p>
-
-              <p>
-                This surprises many visitors. A transfer in Korea does not
-                always mean walking across one small platform. At large
-                stations, you may walk up stairs, down stairs, through a
-                corridor, around a corner, and then down again. It can still be
-                normal. Just keep following the line color and transfer signs.
-              </p>
-
-              <p>Do not rush unless you really have to.</p>
-
-              <p>Another thing to know: the direction matters.</p>
-
-              <p>
-                Before you go down to the platform, check the final station or
-                direction. Some stations have platforms on opposite sides, and
-                if you enter the wrong direction, you may need to go back up or
-                cross through another passage. Apps usually help with this, but
-                it is still worth checking the station names on the sign.
-              </p>
-
-              <p>When the train arrives, stand to the side of the doors.</p>
-
-              <p>Let people get off first.</p>
-
-              <p>Then get on.</p>
-
-              <p>
-                This sounds simple, but it is one of those small rules that
-                makes the subway flow. During rush hour, people move quickly,
-                and standing in the middle of the door can make you feel very
-                visible in the wrong way.
-              </p>
-
-              <p>Inside the train, keep your voice low.</p>
-
-              <p>
-                Korean subways are not always silent, but they are usually
-                calmer than some visitors expect. Loud phone calls or loud group
-                conversations can feel out of place. If you are traveling with
-                friends, use a softer voice than you would on a street.
-              </p>
-
-              <p>Priority seats are another thing to notice.</p>
-
-              <p>
-                You will see seats for older people, pregnant passengers, people
-                with disabilities, or people who need extra care. It is safest
-                not to sit there unless you really need the seat. Some locals
-                are relaxed about it when the train is empty, but as a visitor,
-                avoiding those seats is the easier choice.
-              </p>
-
-              <p>There are also pink pregnancy seats in many trains.</p>
-
-              <p>Even if the train is not full, it is better to leave them open.</p>
-
-              <p>
-                At the gate, do not worry if everyone seems faster than you.
+                Station signs at major stops usually show Korean, English,
+                Chinese characters, and Japanese, and line colors help when
+                things feel busy — follow green for Line 2, blue for Line 4,
+                and so on. Transfers can surprise visitors: at large stations
+                you may walk up stairs, down stairs, through a corridor, and
+                around a corner before you reach the next platform. Keep following
+                the line color and transfer signs; the fastest-looking route is
+                not always the easiest one with luggage or during rush hour.
               </p>
 
               <p>
-                Locals move through subway gates very quickly because they do it
-                every day. You can take one second to check your card. Just step
-                slightly to the side if you need to search your bag or check
-                your phone.
-              </p>
-
-              <p>If your card does not work, do not panic.</p>
-
-              <p>
-                Try tapping again. Check whether the card has enough balance. If
-                the gate still does not open, look for station staff or a help
-                gate. It happens.
-              </p>
-
-              <p>For a simple first ride, follow this routine:</p>
-
-              <p>Open Naver Map or KakaoMap.</p>
-
-              <p>Search your destination.</p>
-
-              <p>Check the line, transfer, and exit number.</p>
-
-              <p>Tap in with your transportation card.</p>
-
-              <p>Follow the line color.</p>
-
-              <p>Transfer slowly if needed.</p>
-
-              <p>Get off.</p>
-
-              <p>Follow the exit number.</p>
-
-              <p>Tap out.</p>
-
-              <p>That is enough.</p>
-
-              <p>
-                The Korean subway is not hard because the system is bad. It
-                feels hard because it is big, fast, and full of small details.
-                Once you learn those details, it becomes one of the most useful
-                parts of traveling in Korea.
+                Before you go down to the platform, check the direction and
+                final station name — some stations have platforms on opposite
+                sides, and entering the wrong direction can mean going back up
+                or crossing through another passage. When the train arrives, stand
+                to the side of the doors, let people off first, then board.
+                During rush hour the cars fill up and the flow moves quickly;
+                blocking the door or standing in the middle draws attention you
+                do not want.
               </p>
 
               <p>
-                It can take you to palaces, markets, cafés, riverside parks,
-                shopping streets, universities, food alleys, and quiet
-                neighborhoods.
+                Inside the train, keep your voice lower than on the street —
+                Korean subways are not always silent, but loud phone calls and
+                group conversations feel out of place. Priority seats and pink
+                pregnancy seats are marked for people who need them; even when
+                the train is empty, leaving them open is the easier choice as a
+                visitor. At the gate, locals move fast because they do it daily —
+                hold your card ready before the reader, and step slightly aside
+                if you need to search your bag. If the gate does not open, tap
+                again, check your balance, or ask station staff; it happens.
               </p>
-
-              <p>And after a few rides, the feeling changes.</p>
-
-              <p>The first time, you may stare at every sign.</p>
-
-              <p>The third time, you start following colors.</p>
-
-              <p>The fifth time, you understand why the exit number matters.</p>
 
               <p>
-                By the end of the trip, tapping your card and walking into the
-                station may feel completely normal.
+                A simple first-ride routine: open Naver Map or KakaoMap, search
+                your destination, check line, transfer, and exit number, tap in,
+                follow the line color, transfer if needed, get off, follow the
+                exit number, tap out. The subway feels hard because it is big,
+                fast, and full of small details — once those details click, it
+                becomes one of the most useful parts of traveling in Korea,
+                linking palaces, markets, cafes, riverside parks, and quiet
+                neighborhoods without fighting traffic.
               </p>
 
-              <p>That is when Korea starts to feel easier.</p>
-
-              <p>Not because you know every line.</p>
-
-              <p>Because you know the rhythm.</p>
+              <p>
+                After a few rides the rhythm changes — you stop staring at every
+                sign, start following colors, and learn why the exit number
+                mattered all along. By trip&apos;s end, tapping in and walking
+                into a station may feel completely normal.
+              </p>
             </div>
           </section>
 
