@@ -190,12 +190,11 @@ export default function ThingsToKnowBeforeVisitingKoreaFirstTimePage() {
             </h1>
 
             <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
-              If it is your first time visiting Korea, the country can feel both
-              easy and confusing. Easy because Seoul is connected, convenient,
-              fast, and full of things to do. Confusing because the small
-              systems may be different from what you expect. This guide is not
-              here to scare you — but your trip becomes much smoother when you
-              know a few practical things before you arrive.
+              Korea can feel both easy and confusing on a first trip — connected
+              and convenient, but with small systems that work differently from
+              what many visitors expect. This is practical prep, not a warning
+              list: a few things to know before you arrive can make the first days
+              much smoother.
             </p>
           </article>
 
@@ -217,22 +216,14 @@ export default function ThingsToKnowBeforeVisitingKoreaFirstTimePage() {
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
             <div className="space-y-8 text-base leading-8 text-[var(--muted)] md:text-lg">
               <div className="space-y-4">
-                <p>Maps work differently.</p>
-
-                <p>Restaurants work differently.</p>
-
-                <p>Subway stations can be huge.</p>
-
-                <p>Famous areas can be more expensive.</p>
-
-                <p>Taxis are not always the fastest choice.</p>
-
                 <p>
-                  And a day that looks simple on your phone can feel tiring
-                  when you are actually walking through the city.
+                  Maps work differently, restaurants use different ordering
+                  systems, subway stations can be huge, famous areas often cost
+                  more, and taxis are not always faster — a day that looks simple
+                  on your phone can feel tiring once you are walking the city.
+                  Korea is very rewarding to visit; these are the small frictions
+                  worth knowing upfront.
                 </p>
-
-                <p>Korea is a very rewarding place to visit.</p>
               </div>
 
               <div className="space-y-4">
@@ -240,30 +231,13 @@ export default function ThingsToKnowBeforeVisitingKoreaFirstTimePage() {
                   Prepare Naver Map or KakaoMap
                 </h2>
 
-                <p>First, prepare Naver Map or KakaoMap.</p>
-
                 <p>
-                  Google Maps can still help with general searching, but in
-                  Korea, Naver Map and KakaoMap are usually more useful for
-                  local routes, subway exits, buses, walking directions, and
-                  place details.
-                </p>
-
-                <p>This matters more than people expect.</p>
-
-                <p>
-                  In Seoul, choosing the right station exit can save a lot of
-                  walking. Exit 2 and Exit 8 may place you on completely
-                  different sides of a large road.
-                </p>
-
-                <p>
-                  If you are visiting for the first time, do not rely only on
-                  memory or screenshots.
-                </p>
-
-                <p>
-                  Use a local map app and follow the exit guidance.
+                  Prepare Naver Map or KakaoMap — Google Maps helps for general
+                  searching, but local apps are usually better for routes, subway
+                  exits, buses, and walking directions. In Seoul, the right exit
+                  can save a lot of walking; exit 2 and exit 8 may put you on
+                  opposite sides of a wide road. Follow exit guidance rather than
+                  relying on memory or screenshots alone.
                 </p>
               </div>
 
@@ -272,47 +246,15 @@ export default function ThingsToKnowBeforeVisitingKoreaFirstTimePage() {
                   Use the subway as your base
                 </h2>
 
-                <p>Second, use the subway as your main transport base.</p>
-
                 <p>
-                  Seoul&apos;s subway is usually the most predictable way to
-                  move between major areas like Myeongdong, Hongdae, Jongno,
-                  Gangnam, Jamsil, Seoul Station, and Dongdaemun.
+                  Use the subway as your main transport base — it connects
+                  Myeongdong, Hongdae, Jongno, Gangnam, Jamsil, Seoul Station,
+                  and Dongdaemun predictably, even when crowded or transfer-heavy.
+                  Taxis help with heavy luggage, late nights, or bad weather, but
+                  during rush hour or rain they can stall while the subway stays
+                  more reliable. Subway for most city movement; taxi when it
+                  actually reduces stress.
                 </p>
-
-                <p>It can be crowded.</p>
-
-                <p>Transfers can be long.</p>
-
-                <p>Some stations feel like underground cities.</p>
-
-                <p>
-                  But the subway helps you avoid traffic, and that matters in
-                  Seoul.
-                </p>
-
-                <p>Taxis can be useful, but they are not always better.</p>
-
-                <p>
-                  A taxi is helpful when you have heavy luggage, when it is
-                  late, when the weather is bad, or when the subway route is too
-                  complicated.
-                </p>
-
-                <p>
-                  But during morning and evening rush hour, rain, events, or
-                  heavy traffic, a taxi can become slow and stressful.
-                </p>
-
-                <p>
-                  Sometimes the subway is crowded, but still more predictable.
-                </p>
-
-                <p>A good rule is simple:</p>
-
-                <p>Subway for most city movement.</p>
-
-                <p>Taxi when it actually reduces stress.</p>
               </div>
 
               <div className="space-y-4 rounded-[1.25rem] border border-[var(--border)] bg-[var(--surface)] p-5">
@@ -320,31 +262,13 @@ export default function ThingsToKnowBeforeVisitingKoreaFirstTimePage() {
                   Rush hour
                 </p>
 
-                <p>Rush hour is real.</p>
-
                 <p>
-                  During weekday commute times, subway cars, stations, buses,
-                  and roads can become very crowded.
+                  Weekday rush hour fills subway cars, stations, buses, and roads
+                  — if you can, wait with coffee or a slower breakfast, start
+                  sightseeing after the worst crowd, or stay near dinner instead
+                  of crossing the city late. A small timing shift makes Seoul feel
+                  much easier.
                 </p>
-
-                <p>
-                  If you do not need to move at that exact time, wait a little.
-                </p>
-
-                <p>Have coffee.</p>
-
-                <p>Eat breakfast slowly.</p>
-
-                <p>
-                  Start sightseeing after the busiest movement passes.
-                </p>
-
-                <p>
-                  Or stay near your dinner area instead of crossing the city
-                  late.
-                </p>
-
-                <p>This small choice can make Seoul feel much easier.</p>
               </div>
 
               <div className="space-y-4">
@@ -353,33 +277,13 @@ export default function ThingsToKnowBeforeVisitingKoreaFirstTimePage() {
                 </h2>
 
                 <p>
-                  Another common mistake is planning too many distant areas in
-                  one day.
+                  Planning too many distant areas in one day is a common mistake
+                  — Seoul is connected but big. Palace morning, Gangnam afternoon,
+                  Hongdae evening, and Jamsil at night can turn the day into
+                  transportation. Group nearby spots: Myeongdong, Namsan, Euljiro,
+                  Jongno, Insadong, and palaces; Hongdae, Yeonnam, and Mangwon;
+                  Gangnam, Sinsa, COEX, and Jamsil depending on your plan.
                 </p>
-
-                <p>Seoul is connected, but it is still big.</p>
-
-                <p>
-                  Doing a palace in the morning, Gangnam in the afternoon,
-                  Hongdae in the evening, and Jamsil at night may look possible
-                  on a map, but it can turn your day into transportation.
-                </p>
-
-                <p>Group nearby areas instead.</p>
-
-                <p>
-                  Myeongdong, Namsan, Euljiro, Jongno, Insadong, and palace
-                  areas can work together.
-                </p>
-
-                <p>Hongdae, Yeonnam, and Mangwon can work together.</p>
-
-                <p>
-                  Gangnam, Sinsa, Apgujeong, COEX, and Jamsil can work
-                  together depending on your plan.
-                </p>
-
-                <p>This is one of the easiest ways to save energy.</p>
               </div>
 
               <div className="space-y-4">
@@ -388,31 +292,12 @@ export default function ThingsToKnowBeforeVisitingKoreaFirstTimePage() {
                 </h2>
 
                 <p>
-                  Famous areas are convenient, but not always cheap.
-                </p>
-
-                <p>
-                  Myeongdong, Hongdae, Gangnam, Insadong, Jamsil, and popular
-                  cafe streets are well-known for a reason. They are easy to
-                  reach, full of options, and comfortable for visitors.
-                </p>
-
-                <p>
-                  But because they are central, tourist-friendly, or
-                  commercial, food, cafes, shopping, and hotels in the busiest
-                  spots can cost more than quieter local neighborhoods.
-                </p>
-
-                <p>That does not mean you should avoid them.</p>
-
-                <p>For a first trip, convenience can be worth it.</p>
-
-                <p>Just understand the trade-off.</p>
-
-                <p>
-                  If you want better value, try walking one or two streets away
-                  from the main road or staying one or two subway stops away
-                  from the most famous station.
+                  Famous areas like Myeongdong, Hongdae, Gangnam, Insadong, and
+                  Jamsil are convenient and full of options, but food, cafes,
+                  shopping, and hotels on the busiest streets often cost more.
+                  That trade-off can be worth it on a first trip; for better value,
+                  try one or two streets away from the main road or staying one
+                  or two subway stops from the famous station.
                 </p>
               </div>
 
@@ -422,32 +307,12 @@ export default function ThingsToKnowBeforeVisitingKoreaFirstTimePage() {
                 </h2>
 
                 <p>
-                  Do not choose your hotel only by neighborhood name.
+                  Choose your hotel by station, not only neighborhood name — three
+                  minutes from a useful line beats a famous address with a long
+                  uphill walk with luggage. You will walk inside stations, from
+                  exits, through markets, palace grounds, and cafe alleys more
+                  than expected; comfortable shoes matter.
                 </p>
-
-                <p>Choose by station.</p>
-
-                <p>
-                  A hotel three minutes from a useful subway station can feel
-                  better than a more famous address that requires a long uphill
-                  walk with luggage.
-                </p>
-
-                <p>
-                  This is especially important in Seoul because you will walk
-                  more than expected.
-                </p>
-
-                <p>You walk inside stations.</p>
-
-                <p>You walk from exits.</p>
-
-                <p>
-                  You walk through markets, shopping streets, palace grounds,
-                  cafe alleys, and river parks.
-                </p>
-
-                <p>Comfortable shoes matter.</p>
               </div>
 
               <div className="space-y-4">
@@ -455,54 +320,13 @@ export default function ThingsToKnowBeforeVisitingKoreaFirstTimePage() {
                   Ordering food
                 </h2>
 
-                <p>Ordering food may feel confusing at first.</p>
-
-                <p>Some restaurants use staff ordering.</p>
-
-                <p>Some use kiosks.</p>
-
-                <p>Some use tablets at the table.</p>
-
-                <p>Some ask you to pay first.</p>
-
                 <p>
-                  Some let you eat first and pay at the counter later.
-                </p>
-
-                <p>Some have self-service water.</p>
-
-                <p>Some have a table bell.</p>
-
-                <p>This is normal.</p>
-
-                <p>Look around before you panic.</p>
-
-                <p>
-                  If there is a kiosk, check for an English or language button.
-                </p>
-
-                <p>
-                  If there is a table bell, you can press it when you need
-                  staff.
-                </p>
-
-                <p>
-                  If water is not brought to you, check for a self-service
-                  corner.
-                </p>
-
-                <p>
-                  If there are side dishes, try a little first and refill only
-                  where it seems clearly allowed.
-                </p>
-
-                <p>
-                  You do not have to understand everything perfectly on your
-                  first meal.
-                </p>
-
-                <p>
-                  Korean restaurants become easier after a few tries.
+                  Restaurant ordering varies — staff may take your order, or you
+                  may use a kiosk, tablet, pay-first system, or pay at the counter
+                  after eating. Self-service water corners and table bells are
+                  common; look around before you panic, check for a language
+                  button on kiosks, and take side dishes in reasonable amounts.
+                  Korean restaurants get easier after a few tries.
                 </p>
               </div>
 
@@ -511,56 +335,17 @@ export default function ThingsToKnowBeforeVisitingKoreaFirstTimePage() {
                   Spice, convenience stores, and cafes
                 </h2>
 
-                <p>Spicy food can be stronger than expected.</p>
-
                 <p>
-                  Not all Korean food is spicy, but spicy dishes are common.
-                  Tteokbokki, spicy stews, spicy noodles, and red-sauce dishes
-                  can vary a lot.
+                  Not all Korean food is spicy, but spicy dishes are common and
+                  intensity varies — if you are sensitive, start with gentler
+                  options like gimbap, kalguksu, gukbap, dumplings, or non-spicy
+                  noodles. Convenience stores are more useful than many visitors
+                  expect for breakfast, late-night food, triangle gimbap, and
+                  small travel needs when you are tired or between plans. Cafes
+                  are part of the experience too — good for rest and planning —
+                  but famous-area cafes can be expensive when you are paying for
+                  atmosphere and location.
                 </p>
-
-                <p>
-                  If you are sensitive to spice, start with gentler foods like
-                  gimbap, kalguksu, seolleongtang, gukbap, dumplings, grilled
-                  meat, porridge, or non-spicy noodles.
-                </p>
-
-                <p>
-                  You can enjoy Korea without eating spicy food every day.
-                </p>
-
-                <p>
-                  Convenience stores are more useful than you may think.
-                </p>
-
-                <p>
-                  They are good for quick breakfast, late-night snacks, drinks,
-                  triangle gimbap, cup ramyeon, lunch boxes, desserts, and
-                  small travel needs.
-                </p>
-
-                <p>
-                  Convenience store food is not the same as a full restaurant
-                  experience, but it can save your day when you are tired,
-                  jet-lagged, or between plans.
-                </p>
-
-                <p>Cafes are part of the travel experience too.</p>
-
-                <p>
-                  Korea has many cafes, from simple chain cafes to beautiful
-                  dessert spaces. They are good places to rest, plan your next
-                  move, charge your energy, and enjoy the neighborhood mood.
-                </p>
-
-                <p>
-                  But cafes in famous areas can be expensive, especially when
-                  you are paying for atmosphere and location.
-                </p>
-
-                <p>It can still be worth it.</p>
-
-                <p>Just do not expect every cafe stop to be cheap.</p>
               </div>
 
               <div className="space-y-4">
@@ -568,33 +353,12 @@ export default function ThingsToKnowBeforeVisitingKoreaFirstTimePage() {
                   Weather and flexibility
                 </h2>
 
-                <p>Weather changes the trip more than people expect.</p>
-
-                <p>Summer can feel hot and humid.</p>
-
-                <p>Winter can feel cold and dry.</p>
-
                 <p>
-                  Spring and autumn are popular because walking is easier, but
-                  popular areas can also become crowded.
-                </p>
-
-                <p>
-                  Rainy days can make taxis harder to catch and roads slower.
-                </p>
-
-                <p>
-                  Very hot or cold days can make long outdoor plans tiring.
-                </p>
-
-                <p>
-                  Do not build an itinerary that depends on perfect weather
-                  every day.
-                </p>
-
-                <p>
-                  Have a flexible indoor option, like a cafe, mall, museum,
-                  food court, or shopping street.
+                  Weather reshapes the trip — summer heat and humidity, winter
+                  cold and dryness, spring and autumn crowds on popular walking
+                  routes, rainy days that slow taxis and roads. Build flexible
+                  indoor options like cafes, malls, museums, or food courts
+                  rather than an itinerary that needs perfect weather every day.
                 </p>
               </div>
 
@@ -604,70 +368,23 @@ export default function ThingsToKnowBeforeVisitingKoreaFirstTimePage() {
                 </p>
 
                 <p>
-                  Korea is convenient, but not every moment is effortless.
+                  Korea is convenient, but not every moment is effortless — wrong
+                  subway exit, kiosk confusion, a restaurant that is not what you
+                  expected, walking farther than the app suggested, or a famous
+                  place too crowded so you pick somewhere nearby instead. That is
+                  normal; a good first trip does not have to be perfect.
                 </p>
-
-                <p>That is actually part of real travel.</p>
-
-                <p>You may choose the wrong subway exit.</p>
-
-                <p>You may stand in front of a kiosk too long.</p>
-
-                <p>
-                  You may enter a restaurant and realize it is not what you
-                  expected.
-                </p>
-
-                <p>You may walk more than your app suggested.</p>
-
-                <p>
-                  You may find that the famous place is too crowded and choose
-                  somewhere nearby instead.
-                </p>
-
-                <p>That is okay.</p>
-
-                <p>A good Korea trip does not have to be perfect.</p>
               </div>
 
               <div className="space-y-4">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
-                  Final note
-                </p>
-
                 <p>
-                  For HAEMIL readers, the best first Korea trip is built with a
-                  little space.
+                  A good first Korea trip leaves a little space — local map apps,
+                  subway as your base, fewer unnecessary city-crossings, taxis
+                  when they truly help, realistic expectations about famous-area
+                  prices, and room for convenience store meals and unplanned
+                  streets. Plan enough to feel safe; leave enough room to enjoy
+                  the city without controlling every minute.
                 </p>
-
-                <p>Use local map apps.</p>
-
-                <p>Use the subway as your base.</p>
-
-                <p>Avoid unnecessary city-crossing.</p>
-
-                <p>Be careful during rush hour.</p>
-
-                <p>Use taxis when they truly help.</p>
-
-                <p>Expect famous areas to cost more.</p>
-
-                <p>Learn restaurant systems slowly.</p>
-
-                <p>
-                  Leave room for convenience store meals, cafe breaks, and
-                  unplanned streets.
-                </p>
-
-                <p>
-                  Korea is easiest when you do not try to control every minute.
-                </p>
-
-                <p>Plan enough to feel safe.</p>
-
-                <p>Leave enough room to enjoy the city.</p>
-
-                <p>That balance is what makes the first trip feel good.</p>
               </div>
             </div>
           </section>

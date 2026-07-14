@@ -188,11 +188,10 @@ export default function ThreeDaysInSeoulItineraryFirstTimePage() {
             </h1>
 
             <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
-              If it is your first time visiting Seoul, three days is enough to
-              get a good first feeling of the city. Not everything — Seoul is
-              too big for that. But three days can give you a nice mix of
-              classic sightseeing, food, walking streets, older neighborhoods,
-              cafes, shopping, and modern city energy.
+              Three days in Seoul is enough for a good first feeling of the city
+              — not everything, Seoul is too big for that — but a solid mix of
+              classic sightseeing, food, older neighborhoods, cafes, and modern
+              energy. The key is keeping each day full but not rushed.
             </p>
           </article>
 
@@ -215,19 +214,10 @@ export default function ThreeDaysInSeoulItineraryFirstTimePage() {
             <div className="space-y-8 text-base leading-8 text-[var(--muted)] md:text-lg">
               <div className="space-y-4">
                 <p>
-                  The key is not to put too much into one day.
-                </p>
-
-                <p>
                   Seoul looks easy on a map, but subway transfers, hills, crowds,
-                  and walking time can make a packed itinerary tiring.
+                  and walking time can make a packed itinerary tiring — group
+                  nearby areas and leave room for cafe breaks or weather shifts.
                 </p>
-
-                <p>
-                  A good first Seoul route should feel full, but not rushed.
-                </p>
-
-                <p>This HAEMIL itinerary is built around that idea.</p>
               </div>
 
               <div className="space-y-4">
@@ -235,57 +225,18 @@ export default function ThreeDaysInSeoulItineraryFirstTimePage() {
                   Day 1: Myeongdong, Namsan, Euljiro
                 </h2>
 
-                <p>Day 1 is for arriving into Seoul slowly.</p>
-
-                <p>Start with Myeongdong.</p>
-
                 <p>
-                  Myeongdong is touristy, but it is useful for a first day. You
-                  can walk around without needing a perfect plan. There are
-                  shops, street food, cafes, cosmetics stores, convenience
-                  stores, and easy subway access.
-                </p>
-
-                <p>It is not the cheapest area.</p>
-
-                <p>
-                  Because Myeongdong is central and visitor-friendly, food,
-                  snacks, cafes, and shopping around the busiest streets can
-                  cost more than in quieter local neighborhoods.
-                </p>
-
-                <p>
-                  Still, for a first day, the convenience can be worth it.
-                </p>
-
-                <p>Use Myeongdong to get used to Seoul.</p>
-
-                <p>Walk the main streets.</p>
-
-                <p>Try simple street snacks if you want.</p>
-
-                <p>Look around the shops.</p>
-
-                <p>
-                  Then move toward Namsan Seoul Tower or the Namsan area if you
-                  still have energy.
-                </p>
-
-                <p>
-                  Namsan is a good first Seoul view because it helps you
-                  understand the city&apos;s size. Seoul is not just one
-                  downtown. It spreads across mountains, rivers, old districts,
-                  apartment areas, and modern business zones.
-                </p>
-
-                <p>In the evening, Euljiro is a nice contrast.</p>
-
-                <p>
-                  It is close to Myeongdong, but the feeling is different.
-                  Euljiro has older alleys, small restaurants, bars, cafes, and
-                  a more local-cool mood. Some parts can feel hidden or
-                  confusing for first-time visitors, so use Naver Map or
-                  KakaoMap instead of relying only on instinct.
+                  Day 1 eases you into Seoul — start in Myeongdong, touristy but
+                  useful for a first day with shops, street food, cafes, and easy
+                  subway access. Food and snacks on the busiest streets cost more
+                  than quieter neighborhoods, but the convenience can be worth
+                  it when you are still finding your feet. Walk the main streets,
+                  try simple snacks if you want, then head toward Namsan for a
+                  first city view that shows how Seoul spreads across mountains,
+                  rivers, and old and new districts. In the evening, Euljiro is a
+                  nice contrast — older alleys, small restaurants, and a
+                  local-cool mood close to Myeongdong but harder to read without
+                  Naver Map or KakaoMap.
                 </p>
 
                 <div className="space-y-2 rounded-[1.25rem] border border-[var(--border)] bg-[var(--surface)] p-5">
@@ -311,55 +262,15 @@ export default function ThreeDaysInSeoulItineraryFirstTimePage() {
                   Day 2: Palace, Bukchon, Insadong, Ikseon-dong
                 </h2>
 
-                <p>Day 2 is for older Seoul.</p>
-
-                <p>Start with Gyeongbokgung or Changdeokgung.</p>
-
                 <p>
-                  You do not need to visit every palace. One palace is enough
-                  for most first-time visitors unless you really love history.
-                </p>
-
-                <p>
-                  After the palace, walk toward Bukchon, Insadong, or
-                  Ikseon-dong.
-                </p>
-
-                <p>
-                  Bukchon has hanok-style streets and hill views, but it is
-                  also a real neighborhood. Walk quietly and do not treat every
-                  alley like a photo studio.
-                </p>
-
-                <p>
-                  Insadong is easier for tea, crafts, galleries, souvenirs,
-                  and slower walking.
-                </p>
-
-                <p>
-                  Ikseon-dong is more cafe-heavy and stylish, with narrow
-                  alleys and hanok-style spaces. It can be charming, but it can
-                  also feel crowded on weekends.
-                </p>
-
-                <p>
-                  This day is good because it shows a different Seoul from
-                  Myeongdong or Gangnam.
-                </p>
-
-                <p>Less neon.</p>
-
-                <p>More walking.</p>
-
-                <p>More old streets.</p>
-
-                <p>More small details.</p>
-
-                <p>But the trade-off is physical energy.</p>
-
-                <p>
-                  You may walk more than expected, and some areas have narrow
-                  streets or slopes. Comfortable shoes matter.
+                  Day 2 is older Seoul — one palace such as Gyeongbokgung or
+                  Changdeokgung is enough for most first-timers, then walk toward
+                  Bukchon, Insadong, or Ikseon-dong. Bukchon has hanok streets and
+                  hill views but is a real neighborhood; walk quietly. Insadong
+                  suits tea, crafts, and slower walking; Ikseon-dong is more
+                  cafe-heavy and can feel crowded on weekends. Expect more walking
+                  than you planned — narrow streets, slopes, and comfortable shoes
+                  matter.
                 </p>
 
                 <div className="space-y-2 rounded-[1.25rem] border border-[var(--border)] bg-[var(--surface)] p-5">
@@ -384,34 +295,20 @@ export default function ThreeDaysInSeoulItineraryFirstTimePage() {
                   Day 3: Pick your style
                 </h2>
 
-                <p>Day 3 should depend on your travel style.</p>
-
                 <p>
-                  Do not try to do Hongdae, Gangnam, Jamsil, Seongsu, and
-                  Itaewon all in one day.
+                  Day 3 depends on your style — pick one direction, not Hongdae,
+                  Gangnam, Jamsil, Seongsu, and Itaewon in one day.
                 </p>
-
-                <p>Pick one main direction.</p>
 
                 <h3 className="text-xl font-semibold text-[var(--text)]">
                   Hongdae
                 </h3>
 
-                <p>Choose Hongdae if you want young energy.</p>
-
                 <p>
-                  Hongdae is good for cafes, casual shopping, street mood,
-                  late-night food, busking, small shops, and a more youthful
-                  Seoul feeling. It is also useful if you like walking without
-                  a strict plan.
-                </p>
-
-                <p>The trade-off is noise and crowds.</p>
-
-                <p>
-                  Weekend evenings can feel very busy. The most central streets
-                  around Hongik University Station are convenient, but not
-                  always the best value.
+                  Hongdae suits young energy — cafes, casual shopping, street
+                  mood, late-night food, and a playful Seoul feeling. Weekend
+                  evenings get loud and crowded, and the most central streets are
+                  convenient but not always the best value.
                 </p>
 
                 <p>
@@ -426,21 +323,11 @@ export default function ThreeDaysInSeoulItineraryFirstTimePage() {
                   Gangnam
                 </h3>
 
-                <p>Choose Gangnam if you want modern Seoul.</p>
-
                 <p>
-                  Gangnam is better for polished shopping streets, restaurants,
-                  clinics, offices, big roads, and a cleaner commercial city
-                  feeling. It is useful if your plans are south of the Han
-                  River.
-                </p>
-
-                <p>The trade-off is distance.</p>
-
-                <p>
-                  If you are staying near Myeongdong or Jongno, Gangnam can
-                  take more time than you expect. It can also feel expensive
-                  because it is a major business and commercial district.
+                  Gangnam fits modern Seoul — polished shopping, restaurants, and
+                  south-of-river plans. If you are staying near Myeongdong or
+                  Jongno, it adds subway time and can feel expensive as a major
+                  business district.
                 </p>
 
                 <p>
@@ -456,20 +343,10 @@ export default function ThreeDaysInSeoulItineraryFirstTimePage() {
                 </h3>
 
                 <p>
-                  Choose Jamsil if you are traveling with family or want Lotte
-                  World.
-                </p>
-
-                <p>
-                  Jamsil is practical for Lotte World, Lotte World Tower,
-                  malls, lake walks, and family-friendly plans.
-                </p>
-
-                <p>
-                  The trade-off is that it is farther from many classic
-                  first-time Seoul areas. If your trip is mostly palaces,
-                  Myeongdong, Hongdae, and old neighborhoods, Jamsil may feel
-                  out of the way.
+                  Jamsil works for family plans or Lotte World — malls, lake
+                  walks, and a clean organized area. Farther from classic
+                  first-time spots like palaces and Myeongdong if that is most
+                  of your trip.
                 </p>
 
                 <p>
@@ -501,9 +378,10 @@ export default function ThreeDaysInSeoulItineraryFirstTimePage() {
                   modern city mood, or Jamsil if you want family plans
                 </p>
 
-                <p>This keeps each day focused.</p>
-
-                <p>That matters more than people think.</p>
+                <p>
+                  This keeps each day focused — central Seoul, old Seoul, then
+                  young or modern Seoul on day three.
+                </p>
               </div>
 
               <div className="space-y-4">
@@ -512,30 +390,13 @@ export default function ThreeDaysInSeoulItineraryFirstTimePage() {
                 </h2>
 
                 <p>
-                  A common Seoul travel mistake is crossing the city too many
-                  times in one day.
+                  A common mistake is crossing Seoul too many times in one day —
+                  palace in the morning, Gangnam afternoon, Hongdae evening,
+                  Jamsil after that looks possible on a map but feels exhausting
+                  once transfers add up. Group nearby areas: central Seoul one
+                  day, old Seoul another, Hongdae or Gangnam or Jamsil on day
+                  three.
                 </p>
-
-                <p>
-                  For example, doing a palace in the morning, Gangnam in the
-                  afternoon, Hongdae at night, and Jamsil after that may look
-                  possible, but it can feel exhausting.
-                </p>
-
-                <p>
-                  Seoul&apos;s subway is useful, but transfers take time and
-                  energy.
-                </p>
-
-                <p>A better plan is to group nearby areas.</p>
-
-                <p>Central Seoul day.</p>
-
-                <p>Old Seoul day.</p>
-
-                <p>Young or modern Seoul day.</p>
-
-                <p>That is enough for a first trip.</p>
               </div>
 
               <div className="space-y-4">
@@ -543,77 +404,26 @@ export default function ThreeDaysInSeoulItineraryFirstTimePage() {
                   Food, transport, and walking
                 </h2>
 
-                <p>Food also matters.</p>
-
-                <p>Do not plan every meal too perfectly.</p>
-
-                <p>Leave space for simple meals near where you already are.</p>
-
                 <p>
-                  In tourist-heavy areas like Myeongdong, Hongdae, Gangnam, and
-                  Insadong, popular restaurants and cafes can cost more,
-                  especially on main streets. That does not mean you should
-                  avoid them, but it helps to walk one or two streets away from
-                  the busiest spot if you want better value.
-                </p>
-
-                <p>
-                  Convenience stores, bunsik shops, gimbap places, casual Korean
-                  restaurants, and food courts can help balance the budget.
-                </p>
-
-                <p>For transport, get used to the subway early.</p>
-
-                <p>
-                  A T-money card or transit card makes movement easier. Naver
-                  Map or KakaoMap will usually be more useful in Korea than
-                  guessing routes from memory.
-                </p>
-
-                <p>Also, do not underestimate walking.</p>
-
-                <p>
-                  Even if you use the subway, you may walk a lot between
-                  stations, exits, alleys, shops, and attractions.
+                  Leave meals flexible — simple spots near where you already are
+                  beat viral restaurants across the city. Myeongdong, Hongdae,
+                  Gangnam, and Insadong can run pricier on main streets; walking
+                  one or two blocks off the busiest spot often helps. Convenience
+                  stores, bunsik, gimbap, and food courts balance the budget. Get
+                  comfortable with the subway early — T-money and Naver Map or
+                  KakaoMap beat guessing routes — and expect more walking than
+                  the app suggests between stations, exits, and alleys.
                 </p>
               </div>
 
               <div className="space-y-4">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
-                  Final note
-                </p>
-
                 <p>
-                  For HAEMIL readers, the best 3-day Seoul itinerary is not the
-                  one with the most stops.
+                  The best three-day Seoul route is not the one with the most
+                  stops — it is the one that still feels good at night, with
+                  energy left for dinner and a walk instead of only checking
+                  places off a list. Use this as a base, not a rule; the unplanned
+                  cafe or street snack often becomes the memory you keep.
                 </p>
-
-                <p>
-                  It is the one that still feels good at night.
-                </p>
-
-                <p>
-                  You should have enough energy to eat dinner, walk a little,
-                  and enjoy the city instead of only checking places off a list.
-                </p>
-
-                <p>Seoul is better when you leave room for small surprises.</p>
-
-                <p>A cafe you did not plan.</p>
-
-                <p>A street snack.</p>
-
-                <p>A quiet palace corner.</p>
-
-                <p>
-                  A subway ride that suddenly makes the city feel huge.
-                </p>
-
-                <p>A night walk that becomes your favorite memory.</p>
-
-                <p>Use this itinerary as a base, not a rule.</p>
-
-                <p>That is the best way to enjoy Seoul for the first time.</p>
               </div>
             </div>
           </section>

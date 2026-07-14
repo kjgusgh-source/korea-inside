@@ -183,11 +183,10 @@ export default function HowToGetAroundSeoulFirstTimePage() {
             </h1>
 
             <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
-              If it is your first time visiting Seoul, the easiest way to move
-              around is usually the subway. Not always — but usually. Seoul has
-              taxis, buses, airport trains, local trains, walking streets, and
-              very busy roads. For most first-time visitors, the subway is the
-              most predictable way to travel between major areas.
+              For most first-time visitors, the subway is the most predictable
+              way to move around Seoul — not always the only option, but usually
+              the base. Taxis, buses, airport trains, and walking all matter
+              too; this guide is about when each one actually helps.
             </p>
           </article>
 
@@ -209,18 +208,11 @@ export default function HowToGetAroundSeoulFirstTimePage() {
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
             <div className="space-y-8 text-base leading-8 text-[var(--muted)] md:text-lg">
               <div className="space-y-4">
-                <p>It is not perfect.</p>
-
-                <p>It can be crowded.</p>
-
-                <p>Transfers can be tiring.</p>
-
-                <p>Some stations are huge.</p>
-
-                <p>Some exits are confusing.</p>
-
                 <p>
-                  But the subway helps you avoid one big Seoul problem: traffic.
+                  The subway is not perfect — it can be crowded, transfers tiring,
+                  some stations huge, some exits confusing — but it helps you
+                  avoid Seoul traffic, which is the bigger daily problem for most
+                  visitors.
                 </p>
               </div>
 
@@ -230,23 +222,12 @@ export default function HowToGetAroundSeoulFirstTimePage() {
                 </h2>
 
                 <p>
-                  Seoul traffic can be heavy, especially during weekday commute
-                  hours. In the morning and evening rush hour, roads can move
-                  slowly and subway cars can become very crowded.
-                </p>
-
-                <p>This is why a taxi is not always the easy answer.</p>
-
-                <p>
-                  A taxi may feel comfortable when you are tired, carrying
-                  luggage, or traveling late at night. But during rush hour,
-                  rain, events, or busy weekend nights, a taxi can get stuck in
-                  traffic and feel slower than the subway.
-                </p>
-
-                <p>
-                  For a first Seoul trip, think of taxis as useful sometimes,
-                  not as your main plan.
+                  Seoul traffic gets heavy during weekday commutes — morning and
+                  evening rush hour crowd subways and slow roads. Taxis help when
+                  you are tired, carrying luggage, or traveling late at night, but
+                  during rush hour, rain, or events they can stall while the subway
+                  stays more predictable. Think of taxis as useful sometimes, not
+                  your main plan.
                 </p>
               </div>
 
@@ -255,25 +236,14 @@ export default function HowToGetAroundSeoulFirstTimePage() {
                   Why the subway is your base
                 </h2>
 
-                <p>The subway should usually be your base.</p>
-
                 <p>
-                  It connects most places visitors want to go: Myeongdong,
-                  Hongdae, Jongno, Gangnam, Jamsil, Seoul Station, Dongdaemun,
-                  Itaewon, and many more.
-                </p>
-
-                <p>The biggest advantage is predictability.</p>
-
-                <p>
-                  If a subway route says you need a transfer, you can usually
-                  understand the movement clearly. A taxi route may look simple,
-                  but traffic can change the feeling completely.
-                </p>
-
-                <p>
-                  That is why locals often choose the subway even when a taxi
-                  looks more comfortable on the map.
+                  Use the subway as your base — it connects Myeongdong, Hongdae,
+                  Jongno, Gangnam, Jamsil, Seoul Station, Dongdaemun, Itaewon,
+                  and most visitor areas. The advantage is predictability: a
+                  subway route with a transfer is usually clearer than a taxi route
+                  that looks simple until traffic hits. That is why locals often
+                  choose the subway even when a taxi looks more comfortable on the
+                  map.
                 </p>
               </div>
 
@@ -323,31 +293,13 @@ export default function HowToGetAroundSeoulFirstTimePage() {
                 </h2>
 
                 <p>
-                  Buses can be useful, but they are less beginner-friendly.
+                  Buses go where the subway does not, but they are less
+                  beginner-friendly — you need direction, stop names, and timing
+                  more carefully, and traffic slows them during rush hour too.
+                  With Naver Map or KakaoMap they get easier; on a nervous first
+                  day, start with the subway and add buses when the map clearly
+                  shows they save effort.
                 </p>
-
-                <p>
-                  Seoul buses go many places the subway does not. They can be
-                  great for locals and repeat visitors. But for first-time
-                  visitors, buses can feel harder because you need to know the
-                  direction, stop name, and timing more carefully.
-                </p>
-
-                <p>Traffic also affects buses.</p>
-
-                <p>During rush hour, buses can be slow too.</p>
-
-                <p>
-                  If you are comfortable using Naver Map or KakaoMap, buses
-                  become easier. But if this is your first Seoul trip and you are
-                  nervous, start with the subway first.
-                </p>
-
-                <p>
-                  Use buses when the map clearly shows that they save effort.
-                </p>
-
-                <p>Do not force them on your first day.</p>
               </div>
 
               <div className="space-y-4">
@@ -355,33 +307,13 @@ export default function HowToGetAroundSeoulFirstTimePage() {
                   When taxis help — and when they do not
                 </h2>
 
-                <p>Taxis are useful in the right situation.</p>
-
                 <p>
-                  Use a taxi when you have heavy luggage, when it is late, when
-                  the weather is bad, when the subway route requires too many
-                  transfers, or when the distance is short but annoying to walk.
+                  Taxis help with heavy luggage, late nights, bad weather, too
+                  many subway transfers, or short annoying walks — but crossing
+                  Seoul during commute time can make them expensive, slow, and
+                  stressful, especially over the Han River. A taxi is comfort;
+                  the subway is predictability.
                 </p>
-
-                <p>But be careful with taxis during rush hour.</p>
-
-                <p>
-                  If you are going from one side of Seoul to another during
-                  commute time, a taxi can become expensive, slow, and stressful.
-                  The subway may be crowded, but it can still be more
-                  predictable.
-                </p>
-
-                <p>
-                  This is especially true when crossing the Han River or moving
-                  between major business and tourist areas at busy times.
-                </p>
-
-                <p>A taxi is comfort.</p>
-
-                <p>The subway is predictability.</p>
-
-                <p>That is the simple way to think about it.</p>
               </div>
 
               <div className="space-y-4">
@@ -389,32 +321,14 @@ export default function HowToGetAroundSeoulFirstTimePage() {
                   Airport travel
                 </h2>
 
-                <p>For airport travel, choose based on your destination.</p>
-
                 <p>
-                  If you are going to Seoul Station or an area connected easily
-                  by rail, the airport train can be simple.
+                  For airport travel, match the mode to your hotel — AREX or
+                  airport train if Seoul Station or a rail-connected area works,
+                  limousine bus if your stop is close and you want fewer subway
+                  transfers with luggage, taxi if you arrive late, travel with
+                  family, or have heavy bags. Traffic still matters; a car route
+                  can feel very different by time of day and destination.
                 </p>
-
-                <p>
-                  If your hotel is closer to an airport bus stop, the airport
-                  limousine bus may be more comfortable because you avoid
-                  carrying luggage through subway transfers.
-                </p>
-
-                <p>
-                  If you arrive late, have a lot of luggage, or travel with
-                  family, a taxi can make sense.
-                </p>
-
-                <p>But again, traffic matters.</p>
-
-                <p>
-                  Airport-to-Seoul by car can feel very different depending on
-                  time of day, destination, and road conditions.
-                </p>
-
-                <p>Do not assume taxi is always fastest.</p>
               </div>
 
               <div className="space-y-4">
@@ -422,45 +336,15 @@ export default function HowToGetAroundSeoulFirstTimePage() {
                   Maps, exits, and payment
                 </h2>
 
-                <p>For maps, use Naver Map or KakaoMap.</p>
-
                 <p>
-                  Google Maps can be helpful for general location checking, but
-                  in Korea, Naver Map and KakaoMap are usually more useful for
-                  local routes, exits, buses, and walking directions.
-                </p>
-
-                <p>For a first trip, install at least one before you arrive.</p>
-
-                <p>When using the subway, pay attention to exits.</p>
-
-                <p>In Seoul, the station exit can matter a lot.</p>
-
-                <p>
-                  Exit 1 and Exit 8 may be on very different sides of a huge
-                  road.
-                </p>
-
-                <p>
-                  Choosing the wrong exit can add ten minutes of walking or make
-                  you cross busy streets.
-                </p>
-
-                <p>Map apps usually tell you which exit to use.</p>
-
-                <p>Follow that.</p>
-
-                <p>For payment, use a T-money card or another transit card.</p>
-
-                <p>
-                  It makes subway and bus travel easier because you do not need
-                  to buy a ticket every time. It also makes transfers simpler.
-                </p>
-
-                <p>
-                  If you plan to use public transportation often, prepare your
-                  transit card early instead of figuring it out when you are
-                  already tired.
+                  Install Naver Map or KakaoMap before you arrive — they are
+                  usually more useful than Google Maps for local routes, exits,
+                  buses, and walking directions. Station exits matter a lot in
+                  Seoul; exit 1 and exit 8 can put you on opposite sides of a
+                  wide road, and the wrong one adds ten minutes or a busy
+                  crossing. Follow the exit guidance in the app. A T-money card
+                  simplifies subway and bus taps and transfers; set it up early
+                  rather than when you are already tired.
                 </p>
               </div>
 
@@ -469,38 +353,13 @@ export default function HowToGetAroundSeoulFirstTimePage() {
                   Walking and pacing
                 </h2>
 
-                <p>Walking is part of Seoul travel.</p>
-
-                <p>Even if you use the subway, you will walk a lot.</p>
-
-                <p>You walk inside stations.</p>
-
-                <p>You walk from exits.</p>
-
-                <p>You walk through alleys.</p>
-
                 <p>
-                  You walk around palaces, shopping streets, cafes, riverside
-                  parks, and markets.
-                </p>
-
-                <p>
-                  This is why comfortable shoes matter more than people expect.
-                </p>
-
-                <p>
-                  Do not plan your itinerary only by travel time in an app.
-                </p>
-
-                <p>
-                  A route that says 25 minutes may still include stairs, long
-                  station walks, waiting time, and crowded streets.
-                </p>
-
-                <p>Leave space.</p>
-
-                <p>
-                  Seoul is more enjoyable when you are not rushing every hour.
+                  Walking is part of Seoul travel even when you use the subway
+                  — stations, exits, alleys, palaces, markets, and shopping
+                  streets add up. Comfortable shoes matter more than people
+                  expect. A route that says 25 minutes may still include stairs,
+                  long underground walks, waiting, and crowded streets; leave
+                  space and Seoul feels much easier.
                 </p>
               </div>
 
@@ -510,35 +369,12 @@ export default function HowToGetAroundSeoulFirstTimePage() {
                 </h2>
 
                 <p>
-                  One common mistake is crossing the city too many times in one
-                  day.
+                  Group nearby areas instead of crossing the city all day —
+                  Gyeongbokgung morning, Jamsil afternoon, Hongdae evening, Gangnam
+                  at night can turn the day into transportation. Myeongdong, Namsan,
+                  Euljiro, Jongno, and Insadong fit together; Hongdae, Yeonnam, and
+                  Mangwon; Gangnam, Sinsa, COEX, or Jamsil depending on your plan.
                 </p>
-
-                <p>
-                  For example, doing Gyeongbokgung in the morning, Jamsil in the
-                  afternoon, Hongdae in the evening, and Gangnam at night may
-                  look possible.
-                </p>
-
-                <p>
-                  But it can make your day feel like transportation, not travel.
-                </p>
-
-                <p>Group nearby areas instead.</p>
-
-                <p>
-                  Myeongdong, Namsan, Euljiro, Jongno, and Insadong can work
-                  together.
-                </p>
-
-                <p>Hongdae, Yeonnam, and Mangwon can work together.</p>
-
-                <p>
-                  Gangnam, Sinsa, Apgujeong, COEX, or Jamsil can work together
-                  depending on your plan.
-                </p>
-
-                <p>This is the easiest way to save energy.</p>
               </div>
 
               <div className="space-y-4 rounded-[1.25rem] border border-[var(--border)] bg-[var(--surface)] p-5">
@@ -547,79 +383,23 @@ export default function HowToGetAroundSeoulFirstTimePage() {
                 </p>
 
                 <p>
-                  Rush hour is the main thing first-time visitors underestimate.
+                  Rush hour is what first-time visitors underestimate — weekday
+                  mornings and evenings fill stations, trains, buses, and roads.
+                  If you can, wait it out with coffee or a later breakfast, start
+                  sightseeing after the worst crowd, or finish dinner slowly
+                  instead of crossing the city at peak commute time.
                 </p>
-
-                <p>
-                  Morning and evening commute times can be crowded in stations,
-                  trains, buses, and roads. People are going to work, school,
-                  appointments, and home. Everyone is moving at once.
-                </p>
-
-                <p>If you do not need to travel then, wait a little.</p>
-
-                <p>Have coffee.</p>
-
-                <p>Eat breakfast later.</p>
-
-                <p>
-                  Start sightseeing after the worst commute crowd passes.
-                </p>
-
-                <p>
-                  Or finish dinner slowly instead of trying to move across the
-                  city at the busiest time.
-                </p>
-
-                <p>This small change can make Seoul feel much easier.</p>
               </div>
 
               <div className="space-y-4">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
-                  Final note
-                </p>
-
                 <p>
-                  For HAEMIL readers, the best way to get around Seoul is not
-                  to choose one perfect method.
+                  Subway as your base, taxis when they reduce stress, buses when
+                  the route is simple, map apps for exits and transfers, and days
+                  built around areas rather than random famous spots — Seoul is
+                  very connected but still a big city. Smoother movement leaves
+                  more energy for food, streets, cafes, and the parts that make a
+                  first trip feel real.
                 </p>
-
-                <p>Use the subway as your main base.</p>
-
-                <p>Use taxis when they actually reduce stress.</p>
-
-                <p>Use buses when the route is simple.</p>
-
-                <p>
-                  Use airport trains or airport buses depending on your hotel.
-                </p>
-
-                <p>Use map apps for exits and transfers.</p>
-
-                <p>And build your day around areas, not random famous spots.</p>
-
-                <p>Seoul is very connected.</p>
-
-                <p>But it is still a big city.</p>
-
-                <p>
-                  The smoother your movement is, the more energy you have left
-                  for the parts that actually matter:
-                </p>
-
-                <p>food,</p>
-
-                <p>streets,</p>
-
-                <p>cafes,</p>
-
-                <p>palaces,</p>
-
-                <p>night views,</p>
-
-                <p>small surprises,</p>
-
-                <p>and the feeling of being in Seoul for the first time.</p>
               </div>
             </div>
           </section>

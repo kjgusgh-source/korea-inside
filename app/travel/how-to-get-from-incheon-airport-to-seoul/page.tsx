@@ -162,7 +162,11 @@ export default function HowToGetFromIncheonAirportToSeoulPage() {
             </h1>
 
             <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
-              Landing at Incheon Airport feels exciting.
+              Landing at Incheon Airport is exciting — and then practical fast.
+              You have luggage, you may be tired, and you need to reach Seoul
+              without turning the first hour into stress. The airport is well
+              connected; the right choice depends on your hotel, luggage, arrival
+              time, and energy more than any single &quot;best&quot; option.
             </p>
           </article>
 
@@ -183,290 +187,121 @@ export default function HowToGetFromIncheonAirportToSeoulPage() {
 
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
             <div className="space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
-              <p>And then, very quickly, it becomes practical.</p>
-
-              <p>You have luggage.</p>
-
-              <p>You may be tired.</p>
-
-              <p>Your phone battery may already be lower than you want.</p>
-
               <p>
-                And now you need to get from the airport to Seoul without making
-                the first hour of your trip stressful.
+                AREX, the Airport Railroad, connects Incheon Airport with Seoul
+                and is usually the cleanest, most predictable option because it
+                avoids road traffic. If your destination is Seoul Station, Hongdae,
+                Gongdeok, Digital Media City, or somewhere easy to reach by subway
+                transfer, the train is often the smartest first choice.
               </p>
 
               <p>
-                The good news is that Incheon Airport is well connected. You
-                have several real choices: AREX train, airport limousine bus,
-                taxi, taxi app, and sometimes a late-night bus or private
-                transfer.
+                There are two main types. The AREX Express Train runs non-stop
+                between Incheon Airport and Seoul Station — simple and comfortable
+                if Seoul Station works for your hotel or next transfer. Official
+                travel guidance lists the Express Train at about 43 minutes from
+                Terminal 1 to Seoul Station and about 51 minutes from Terminal 2.
+                The all-stop train is cheaper and stops at several stations along
+                the way; it takes longer, but it can be more useful than visitors
+                expect. If you are going to Hongdae, Gongdeok, Digital Media City,
+                Gimpo Airport, or another area on the Airport Railroad line, the
+                all-stop train may save you from riding all the way to Seoul
+                Station and coming back again.
               </p>
 
               <p>
-                The best choice depends less on what is &quot;best&quot; in
-                general, and more on where your hotel is, how much luggage you
-                have, what time you arrive, and how tired you are.
-              </p>
-
-              <p>Start with the train.</p>
-
-              <p>
-                AREX, the Airport Railroad, connects Incheon Airport with Seoul.
-                It is usually the cleanest and most predictable option because
-                it avoids road traffic. If your destination is Seoul Station,
-                Hongdae, Gongdeok, Digital Media City, or somewhere easy to
-                reach by subway transfer, the train can be the smartest first
-                choice.
-              </p>
-
-              <p>There are two main types.</p>
-
-              <p>
-                The AREX Express Train runs non-stop between Incheon Airport and
-                Seoul Station. It is simple, comfortable, and good if Seoul
-                Station is useful for your hotel or your next transfer. As a
-                current reference, official travel guidance lists the Express
-                Train at about 43 minutes from Terminal 1 to Seoul Station and
-                about 51 minutes from Terminal 2.
+                Seoul Station is famous, but it is not always the best destination.
+                Check your hotel location first. If you are staying in Myeongdong,
+                Euljiro, Dongdaemun, Gangnam, Hongdae, or Itaewon, the best route
+                may be different. Open Naver Map or KakaoMap before leaving the
+                airport and search your hotel name or Korean address — the app will
+                usually tell you whether train, bus, or taxi makes more sense.
               </p>
 
               <p>
-                The all-stop train is cheaper and stops at several stations
-                along the way. It takes longer, but it can be more useful than
-                visitors expect. If you are going to Hongdae, Gongdeok, Digital
-                Media City, Gimpo Airport, or another area connected to the
-                Airport Railroad line, the all-stop train may save you from
-                going all the way to Seoul Station and coming back again.
-              </p>
-
-              <p>That is an important local point.</p>
-
-              <p>
-                Seoul Station is famous, but it is not always the best
-                destination.
-              </p>
-
-              <p>Check your hotel location first.</p>
-
-              <p>
-                If your hotel is in Myeongdong, Euljiro, Dongdaemun, Gangnam,
-                Hongdae, or Itaewon, the best route may be different. Open Naver
-                Map or KakaoMap before leaving the airport and search your hotel
-                name or Korean address. The app will usually tell you whether
-                train, bus, or taxi makes more sense.
-              </p>
-
-              <p>The airport limousine bus is another good option.</p>
-
-              <p>
-                It is not always the fastest, because traffic can change
-                everything. But it can be much easier with luggage. You put your
-                bag under the bus, sit down, and get off near your hotel area.
-                If your hotel is close to a limousine bus stop, this can feel
-                much softer than carrying a suitcase through subway transfers.
-              </p>
-
-              <p>This is especially true after a long flight.</p>
-
-              <p>
-                The bus is good for people who want fewer stairs, fewer
-                transfers, and less thinking.
-              </p>
-
-              <p>The downside is traffic.</p>
-
-              <p>
-                A bus that feels perfect in the middle of the day can feel slow
-                during rush hour. As a current reference, Seoul guidance often
-                describes airport limousine bus rides as around 60 to 80 minutes
-                depending on route, area, and traffic. Treat that as a guide,
-                not a promise.
-              </p>
-
-              <p>If you are arriving late at night, check carefully.</p>
-
-              <p>
-                Public transportation does not run the same way all night. Some
-                airport buses and trains stop before very late arrivals. Night
-                buses may exist on some routes, but they are not always the
-                easiest first choice if you are tired, carrying luggage, or
-                staying far from the stop.
-              </p>
-
-              <p>This is when taxis become more tempting.</p>
-
-              <p>
-                A taxi from Incheon Airport can be the easiest option if you
-                are arriving late, traveling with family, carrying heavy
-                luggage, or staying somewhere awkward to reach by train. You do
-                not need to transfer. You do not need to carry your suitcase
-                through a big station. You just go to your destination.
-              </p>
-
-              <p>But a taxi is more expensive.</p>
-
-              <p>
-                Tolls, late-night surcharges, traffic, and taxi type can affect
-                the final cost. Deluxe or jumbo taxis cost more than regular
-                taxis. International taxis may offer language support, but they
-                can also cost more or require reservation.
-              </p>
-
-              <p>So the rule is simple:</p>
-
-              <p>Use an official taxi stand or a trusted taxi app.</p>
-
-              <p>
-                Do not follow random people inside the terminal offering a taxi
-                or van.
+                The airport limousine bus is another good option. It is not always
+                the fastest, because traffic can change everything, but it can be
+                much easier with luggage: put your bag under the bus, sit down, and
+                get off near your hotel area. If your hotel is close to a limousine
+                bus stop, that can feel much softer than carrying a suitcase through
+                subway transfers — especially after a long flight, when you want
+                fewer stairs, fewer transfers, and less thinking. The downside is
+                traffic; a bus that feels fine in the middle of the day can crawl
+                during rush hour. Seoul guidance often describes airport limousine
+                bus rides as around 60 to 80 minutes depending on route, area, and
+                traffic — treat that as a guide, not a promise.
               </p>
 
               <p>
-                This is not to scare you. Most taxi rides are normal. But
-                airports everywhere attract people who know visitors are tired
-                and confused. Incheon Airport itself warns travelers about
-                illegal solicitation and overcharging by call vans pretending
-                to be taxis, and advises people to use designated taxi stands.
-              </p>
-
-              <p>That advice is worth following.</p>
-
-              <p>
-                If someone approaches you inside the terminal and says
-                &quot;taxi?&quot; too aggressively, you do not need to argue.
-                Just smile, say no, and go to the official taxi area. If you
-                feel unsure, ask airport staff.
-              </p>
-
-              <p>Kakao T is also worth knowing.</p>
-
-              <p>
-                Kakao T is Korea&apos;s common taxi-hailing app. If you are used
-                to apps like Grab or Uber in other countries, Kakao T plays a
-                similar role in Korea, though the details can feel different. You
-                can set your destination before the ride, reduce language
-                stress, and keep a record of the trip.
-              </p>
-
-              <p>That record is useful.</p>
-
-              <p>
-                It helps because the driver can see where you want to go. You
-                do not have to pronounce a hotel name perfectly in Korean. You
-                also have the route and ride information inside the app.
-              </p>
-
-              <p>For visitors, the only tricky part is setup.</p>
-
-              <p>
-                Depending on your phone, payment method, and account situation,
-                Kakao T may not feel as smooth as apps you use at home. Some
-                travelers may use card registration. Some may choose to pay the
-                driver. Some may also try Uber Taxi, which is available in Korea
-                in some areas. The safest advice is to install and check your
-                taxi app before you actually need it at midnight.
+                If you are arriving late at night, check carefully. Public
+                transportation does not run the same way all night; some airport
+                buses and trains stop before very late arrivals. Night buses may
+                exist on some routes, but they are not always the easiest first
+                choice if you are tired, carrying luggage, or staying far from the
+                stop — which is when taxis become more tempting.
               </p>
 
               <p>
-                Do not wait until you are standing outside the airport tired.
+                A taxi from Incheon Airport can be the easiest option if you arrive
+                late, travel with family, carry heavy luggage, or stay somewhere
+                awkward to reach by train — no transfers, no suitcase through a big
+                station. But taxis cost more: tolls, late-night surcharges, traffic,
+                and taxi type all affect the final price. Deluxe or jumbo taxis cost
+                more than regular taxis; international taxis may offer language
+                support but can also cost more or require reservation. Use an
+                official taxi stand or a trusted taxi app, and do not follow random
+                people inside the terminal offering a taxi or van. Most rides are
+                normal, but airports everywhere attract people who know visitors are
+                tired — Incheon Airport itself warns about illegal solicitation and
+                overcharging by call vans pretending to be taxis, and advises using
+                designated stands. If someone approaches too aggressively inside the
+                terminal, smile, say no, and go to the official taxi area; ask
+                airport staff if you feel unsure.
               </p>
 
               <p>
-                If you plan to use a taxi app, open it after landing, enter
-                your hotel, and compare the route. If the app feels confusing,
-                use the official taxi stand instead.
-              </p>
-
-              <p>For many first-time visitors, this is the easiest decision guide:</p>
-
-              <p>
-                If you want the cheapest simple route, take the AREX all-stop
-                train.
-              </p>
-
-              <p>
-                If you want the fastest train to Seoul Station, take the AREX
-                Express Train.
+                Kakao T is Korea&apos;s common taxi-hailing app — similar in role to
+                Grab or Uber elsewhere, though setup can feel different. You can set
+                your destination before the ride, reduce language stress, and keep a
+                record of the trip so the driver sees where you want to go without
+                you pronouncing a hotel name perfectly in Korean. Depending on your
+                phone, payment method, and account, Kakao T may not feel as smooth as
+                apps at home; some travelers register a card, others pay the driver,
+                and some try Uber Taxi in areas where it is available. Install and
+                check your taxi app before you actually need it at midnight — open it
+                after landing, enter your hotel, and compare the route. If the app
+                feels confusing, use the official taxi stand instead.
               </p>
 
               <p>
-                If your hotel is near an airport bus stop and you have luggage,
-                take the airport limousine bus.
+                A simple decision guide for many first-time visitors: take the AREX
+                all-stop train for the cheapest simple route; take the AREX Express
+                Train for the fastest rail link to Seoul Station; take the airport
+                limousine bus if your hotel is near a stop and you have luggage; use
+                an official taxi stand or trusted taxi app if you arrive very late,
+                have heavy luggage, or travel as a group; avoid anyone offering a
+                taxi inside the terminal.
               </p>
 
               <p>
-                If you arrive very late, have heavy luggage, or travel as a
-                group, use an official taxi stand or a trusted taxi app.
+                Know your first move before you land — save your hotel name and
+                address in Korean, save it in Naver Map or KakaoMap, take a
+                screenshot, and check whether your hotel is closer to Seoul Station,
+                Hongdae, Myeongdong, Gangnam, or another area. Do not choose Seoul
+                Station just because everyone mentions it; Seoul is large. If you
+                are staying in Hongdae, the all-stop train may be more direct. If you
+                are in Myeongdong, you may need a subway transfer or taxi after Seoul
+                Station. If you are in Gangnam, an airport bus might feel easier than
+                crossing the city with luggage. Pick the route that gets you close
+                to your bed with the least stress — train if your hotel is easy to
+                reach by rail, bus if your luggage is heavy and the stop is close,
+                taxi if it is late or you are exhausted.
               </p>
 
               <p>
-                If someone offers you a taxi inside the terminal, avoid it.
-              </p>
-
-              <p>That is enough.</p>
-
-              <p>
-                You do not need to over-plan every detail, but you should know
-                your first move before you land. Save your hotel name and
-                address in Korean. Save it in Naver Map or KakaoMap. Take a
-                screenshot. Check whether your hotel is closer to Seoul
-                Station, Hongdae, Myeongdong, Gangnam, or another area.
-              </p>
-
-              <p>This small preparation makes the airport feel easier.</p>
-
-              <p>
-                One more local tip: do not choose Seoul Station just because
-                everyone mentions it.
-              </p>
-
-              <p>
-                Seoul Station is useful, but Seoul is large. If you are staying
-                in Hongdae, the all-stop train may be more direct. If you are
-                staying in Myeongdong, you may need a subway transfer or taxi
-                after Seoul Station. If you are staying in Gangnam, an airport
-                bus might feel easier than crossing the city with luggage.
-              </p>
-
-              <p>
-                The best route is the route that gets you close to your bed
-                with the least stress.
-              </p>
-
-              <p>
-                For HAEMIL readers, my honest local-friend advice is this:
-              </p>
-
-              <p>Take the train if your hotel is easy to reach by rail.</p>
-
-              <p>
-                Take the bus if your luggage is heavy and the stop is close.
-              </p>
-
-              <p>
-                Take a taxi if it is late, you are exhausted, or you are
-                traveling with people.
-              </p>
-
-              <p>
-                Use Kakao T or an official taxi stand if you choose taxi.
-              </p>
-
-              <p>Avoid unofficial offers.</p>
-
-              <p>
-                And before you leave the arrival hall, check your route once on
-                Naver Map or KakaoMap.
-              </p>
-
-              <p>Your first ride into Seoul does not have to be perfect.</p>
-
-              <p>It just has to be calm.</p>
-
-              <p>
-                Once you are in the city, have checked in, and put your suitcase
-                down, Korea will feel much easier.
+                Your first ride into Seoul does not have to be perfect — it just
+                needs to be calm. Once you are in the city, checked in, and your
+                suitcase is down, the rest of the trip usually feels much easier.
               </p>
             </div>
           </section>
