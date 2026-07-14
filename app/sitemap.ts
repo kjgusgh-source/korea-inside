@@ -220,6 +220,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/food/what-to-eat-at-korean-convenience-store`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/food/what-is-korean-street-toast`,
       lastModified: new Date(),
       changeFrequency: "monthly",

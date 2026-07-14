@@ -189,11 +189,10 @@ export default function WhatToEatInKoreaFirstTimePage() {
             </h1>
 
             <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
-              If it is your first time visiting Korea, food can feel exciting
-              and confusing at the same time. You may know Korean BBQ,
-              tteokbokki, kimchi, fried chicken, or convenience store food from
-              videos. But when you actually arrive, the question becomes more
-              practical: what should I eat first?
+              On a first trip to Korea, food can feel exciting and confusing at
+              once — you may know BBQ, tteokbokki, kimchi, fried chicken, or
+              convenience store meals from videos, but the practical question is
+              simpler: what should you eat first, and what fits your day?
             </p>
           </article>
 
@@ -215,28 +214,14 @@ export default function WhatToEatInKoreaFirstTimePage() {
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
             <div className="space-y-8 text-base leading-8 text-[var(--muted)] md:text-lg">
               <div className="space-y-4">
-                <p>Where should I start?</p>
-
-                <p>What is easy if I am tired?</p>
-
-                <p>What works if I am alone?</p>
-
-                <p>What if I cannot handle spicy food?</p>
-
-                <p>The honest answer is simple:</p>
-
-                <p>Do not try to eat everything in one trip.</p>
-
-                <p>Choose a few meals that match your day.</p>
-
                 <p>
-                  A good first Korea food plan should have a mix of one proper
-                  meal, one casual snack meal, one comfort food meal, one
-                  convenience store moment, and one cafe or dessert stop.
-                </p>
-
-                <p>
-                  That is enough to make the trip feel full without turning
+                  Where to start, what works when you are tired or alone, and
+                  what to do if spice is a problem — the short answer is not to
+                  eat every famous Korean dish in one trip. Choose meals that
+                  match your energy, group size, weather, and neighborhood. A
+                  good first food plan mixes one proper meal, one casual snack
+                  meal, one comfort-food bowl, one convenience store moment, and
+                  one cafe or dessert stop — enough to feel full without turning
                   every meal into homework.
                 </p>
               </div>
@@ -246,40 +231,16 @@ export default function WhatToEatInKoreaFirstTimePage() {
                   Korean BBQ
                 </h2>
 
-                <p>Korean BBQ is a classic first meal.</p>
-
                 <p>
-                  It feels social, warm, and very Korean for many visitors. You
-                  grill meat at the table, eat it with lettuce, sauces, garlic,
-                  side dishes, and maybe rice or stew.
-                </p>
-
-                <p>It is fun because the meal is not only about the food.</p>
-
-                <p>It is about the table.</p>
-
-                <p>The sound of grilling meat.</p>
-
-                <p>The side dishes.</p>
-
-                <p>The way people wrap one bite and eat slowly.</p>
-
-                <p>But Korean BBQ is not always the easiest meal for everyone.</p>
-
-                <p>
-                  It can be more expensive than simple local meals, especially
-                  in famous tourist areas. Some restaurants are better for
-                  groups than solo travelers. Some places may expect you to
-                  order a certain amount of meat.
-                </p>
-
-                <p>
-                  So Korean BBQ is a great first experience, but it does not
-                  have to be your first meal right after landing.
-                </p>
-
-                <p>
-                  Choose it when you have time, energy, and someone to eat with.
+                  Korean BBQ is a classic first proper meal — social, warm, and
+                  very Korean for many visitors. You grill meat at the table,
+                  wrap bites with lettuce, sauces, garlic, and side dishes, and
+                  the meal is as much about the table rhythm as the food itself.
+                  It can cost more than simple local meals, especially in famous
+                  tourist areas, and some places work better for groups than
+                  solo travelers or expect a minimum meat order. Choose BBQ when
+                  you have time, energy, and someone to eat with — not
+                  necessarily your first meal right after landing.
                 </p>
               </div>
 
@@ -288,26 +249,13 @@ export default function WhatToEatInKoreaFirstTimePage() {
                   Gimbap
                 </h2>
 
-                <p>For an easier casual meal, try gimbap.</p>
-
                 <p>
-                  Gimbap is rice and fillings rolled in seaweed, then sliced
-                  into small pieces. It is simple, portable, and good when you
-                  do not want a heavy meal.
+                  For an easier casual meal, try gimbap — rice and fillings
+                  rolled in seaweed and sliced into small pieces. It is simple,
+                  portable, familiar enough to understand, and still very Korean
+                  in daily life. Gimbap works well for lunch, a travel day, or
+                  eating alone before sightseeing.
                 </p>
-
-                <p>
-                  It is also one of the easiest foods for first-time visitors
-                  because it is familiar enough to understand, but still very
-                  Korean in daily life.
-                </p>
-
-                <p>
-                  Gimbap works well for lunch, a travel day, or a quick meal
-                  before sightseeing.
-                </p>
-
-                <p>It is also useful when you are eating alone.</p>
               </div>
 
               <div className="space-y-4">
@@ -316,28 +264,13 @@ export default function WhatToEatInKoreaFirstTimePage() {
                 </h2>
 
                 <p>
-                  If you want a more street-food feeling, try tteokbokki.
+                  For a street-food feeling, try tteokbokki — chewy rice cakes
+                  in a spicy-sweet red sauce you can find in bunsik shops,
+                  markets, food courts, and casual snack spots. Spice varies a
+                  lot; if you are sensitive, share it with gimbap, fried snacks,
+                  or fish cake soup. Tteokbokki is fun as part of a casual
+                  snack-style meal rather than a full dinner on its own.
                 </p>
-
-                <p>
-                  Tteokbokki is chewy rice cakes in a spicy-sweet red sauce.
-                  Many visitors imagine it as a street food, but you can also
-                  find it in bunsik restaurants, food courts, markets, and
-                  casual snack shops.
-                </p>
-
-                <p>The trade-off is spice.</p>
-
-                <p>
-                  Tteokbokki can be stronger than it looks. Some versions are
-                  mild, but others are very spicy. If you are sensitive to
-                  spice, share it with another food like gimbap, fried snacks,
-                  or fish cake soup.
-                </p>
-
-                <p>Tteokbokki is fun, but it is not always a full meal by itself.</p>
-
-                <p>It is better as part of a casual snack-style meal.</p>
               </div>
 
               <div className="space-y-4">
@@ -345,13 +278,11 @@ export default function WhatToEatInKoreaFirstTimePage() {
                   Bunsik
                 </h2>
 
-                <p>That kind of casual Korean snack food is called bunsik.</p>
-
                 <p>
-                  Bunsik can include tteokbokki, gimbap, twigim, fish cake,
-                  ramen, sundae, and other simple foods. It is not fancy, but
-                  it is one of the easiest ways to understand everyday Korean
-                  eating.
+                  That casual snack-shop style is called bunsik — tteokbokki,
+                  gimbap, twigim, fish cake, ramen, sundae, and other simple
+                  foods on one table. Not fancy, but one of the easiest ways to
+                  understand everyday Korean eating.
                 </p>
               </div>
 
@@ -360,35 +291,14 @@ export default function WhatToEatInKoreaFirstTimePage() {
                   Soup and stew
                 </h2>
 
-                <p>For a comforting meal, try soup or stew.</p>
-
                 <p>
-                  Korea has many warm, practical meals built around rice and
-                  soup.
-                </p>
-
-                <p>
-                  Gukbap, seolleongtang, kalguksu, soft tofu stew, kimchi
-                  stew, soybean paste stew, and similar dishes can be good when
-                  you are tired from walking.
-                </p>
-
-                <p>These meals are often easier than they look.</p>
-
-                <p>
-                  You sit down, eat with rice, add side dishes, and go at your
-                  own pace.
-                </p>
-
-                <p>
-                  Some soups are spicy, but not all. If you want something
-                  gentler, look for clear broths, beef bone soup, noodle soup,
-                  or non-spicy options.
-                </p>
-
-                <p>
-                  Soup meals are especially good in colder weather or after a
-                  long travel day.
+                  For a comforting meal, try soup or stew — gukbap,
+                  seolleongtang, kalguksu, soft tofu stew, kimchi stew, soybean
+                  paste stew, and similar one-bowl meals built around rice and
+                  broth. You sit down, eat at your own pace, and add side dishes
+                  as they come. Not all are spicy; clear broths, beef bone soup,
+                  and noodle soups are gentler options. Soup meals shine in cold
+                  weather or after a long walking day.
                 </p>
               </div>
 
@@ -397,31 +307,14 @@ export default function WhatToEatInKoreaFirstTimePage() {
                   Korean fried chicken
                 </h2>
 
-                <p>Korean fried chicken is another easy choice.</p>
-
                 <p>
-                  It is popular, familiar, and good for sharing. Many visitors
-                  like trying Korean-style fried chicken because the texture,
-                  sauces, and side dishes can feel different from fried chicken
-                  at home.
-                </p>
-
-                <p>It is also useful at night.</p>
-
-                <p>
-                  If you are tired after sightseeing and do not want a
-                  complicated restaurant experience, fried chicken can be a
-                  comfortable dinner.
-                </p>
-
-                <p>
-                  The trade-off is that portions can be large, and some famous
-                  places can have long waits or delivery-focused systems. It can
-                  also feel heavy if you eat it too often.
-                </p>
-
-                <p>
-                  Treat it as a fun meal, not the only Korean food experience.
+                  Korean fried chicken is popular, familiar, and good for
+                  sharing — texture, sauces, and side dishes can feel different
+                  from fried chicken at home, and it works well at night when
+                  you want a comfortable dinner without a complicated restaurant
+                  experience. Portions can be large, famous places may have long
+                  waits, and it can feel heavy if you eat it too often — treat it
+                  as a fun meal, not your only Korean food experience.
                 </p>
               </div>
 
@@ -430,29 +323,12 @@ export default function WhatToEatInKoreaFirstTimePage() {
                   Convenience store food
                 </h2>
 
-                <p>Convenience store food is worth trying too.</p>
-
                 <p>
-                  In Korea, convenience stores are not only for emergency
-                  snacks. They can be useful for breakfast, late-night food,
-                  drinks, triangle gimbap, cup ramyeon, lunch boxes, desserts,
-                  and travel snacks.
-                </p>
-
-                <p>
-                  This does not mean convenience store food is always the best
-                  food in Korea.
-                </p>
-
-                <p>It means it is part of the real travel experience.</p>
-
-                <p>
-                  When you are tired, jet-lagged, or between plans, a
-                  convenience store can save your day.
-                </p>
-
-                <p>
-                  It is also a good way to try small things without committing
+                  Convenience store food is part of the real trip — useful for
+                  breakfast, late-night snacks, triangle gimbap, cup ramyeon,
+                  lunch boxes, and small bites when you are tired, jet-lagged, or
+                  between plans. It is not always the best food in Korea, but it
+                  saves a day and lets you try small things without committing
                   to a full restaurant meal.
                 </p>
               </div>
@@ -462,31 +338,16 @@ export default function WhatToEatInKoreaFirstTimePage() {
                   Cafes and dessert
                 </h2>
 
-                <p>For cafes and dessert, leave space.</p>
-
                 <p>
-                  Korea has a strong cafe culture. Some cafes are simple, some
-                  are beautiful, some are dessert-focused, and some are more
-                  about atmosphere than coffee.
+                  Leave space for cafes and dessert — Korea has a strong cafe
+                  culture, from simple coffee stops to dessert-focused spaces and
+                  atmosphere-heavy streets. Bingsu, cakes, pastries, and
+                  seasonal sweets are common; famous areas like Myeongdong,
+                  Hongdae, Gangnam, and Insadong can run pricier when you are
+                  paying for location as much as the drink. That trade-off can
+                  still be worth it — just expect cafe stops in tourist streets
+                  to cost more than a quick chain coffee.
                 </p>
-
-                <p>
-                  Desserts can include bingsu, cakes, pastries, traditional
-                  sweets, or seasonal items.
-                </p>
-
-                <p>The trade-off is cost.</p>
-
-                <p>
-                  Cafes in famous areas like Myeongdong, Hongdae, Seongsu,
-                  Gangnam, Insadong, or near major tourist streets can feel
-                  expensive. Sometimes you are paying for the location and
-                  atmosphere as much as the drink.
-                </p>
-
-                <p>That can still be worth it.</p>
-
-                <p>Just do not expect every cafe stop to be cheap.</p>
               </div>
 
               <div className="space-y-4 rounded-[1.25rem] border border-[var(--border)] bg-[var(--surface)] p-5">
@@ -495,24 +356,12 @@ export default function WhatToEatInKoreaFirstTimePage() {
                 </p>
 
                 <p>
-                  One important local tip is to avoid planning every famous
-                  restaurant.
-                </p>
-
-                <p>
-                  Popular places can have lines, limited seating, break times,
-                  or ordering systems that feel confusing. If your schedule
-                  depends on too many famous restaurants, the trip can become
-                  stressful.
-                </p>
-
-                <p>
-                  Instead, plan a few key meals and leave the rest flexible.
-                </p>
-
-                <p>
-                  A simple local restaurant near your hotel can be better than
-                  crossing the city for one viral place when you are tired.
+                  Avoid planning every famous restaurant — popular places can
+                  have lines, limited seating, break times, or ordering systems
+                  that feel confusing, and a schedule built on too many viral
+                  spots gets stressful fast. Plan a few key meals and leave the
+                  rest flexible; a simple local restaurant near your hotel can
+                  beat crossing the city for one famous place when you are tired.
                 </p>
               </div>
 
@@ -522,33 +371,13 @@ export default function WhatToEatInKoreaFirstTimePage() {
                 </h2>
 
                 <p>
-                  Tourist areas are convenient, but they are not always the
-                  best value.
+                  Tourist areas like Myeongdong, Hongdae, Gangnam, and Insadong
+                  are convenient and full of options, but food and cafes on the
+                  busiest streets often cost more because they are central and
+                  visitor-friendly. That does not mean avoiding them — on a first
+                  trip, convenience matters. For better value, walk one or two
+                  streets off the main road or eat near a less famous station.
                 </p>
-
-                <p>
-                  Myeongdong, Hongdae, Gangnam, Insadong, and other famous
-                  areas are popular for a reason. They are easy to reach, full
-                  of options, and comfortable for visitors.
-                </p>
-
-                <p>
-                  But because they are central, commercial, or tourist-friendly,
-                  food and cafes on the busiest streets can cost more.
-                </p>
-
-                <p>That does not mean you should avoid them.</p>
-
-                <p>For a first trip, convenience matters.</p>
-
-                <p>
-                  But if you want better value, walk one or two streets away
-                  from the busiest road, or eat near a less famous station.
-                </p>
-
-                <p>You do not need to chase the cheapest food.</p>
-
-                <p>You just need to understand the trade-off.</p>
               </div>
 
               <div className="space-y-4 rounded-[1.25rem] border border-[var(--border)] bg-[var(--surface)] p-5">
@@ -557,23 +386,12 @@ export default function WhatToEatInKoreaFirstTimePage() {
                 </p>
 
                 <p>
-                  For first-time visitors, a simple food plan could look like
-                  this:
+                  A simple first Korea food week could include one Korean BBQ
+                  meal, one bunsik stop with tteokbokki and gimbap, one soup
+                  or stew bowl, one fried chicken night, one convenience store
+                  breakfast or late snack, and one cafe or dessert stop — already
+                  a solid first experience without chasing every famous dish.
                 </p>
-
-                <p>One Korean BBQ meal.</p>
-
-                <p>One bunsik meal with tteokbokki and gimbap.</p>
-
-                <p>One soup or stew meal.</p>
-
-                <p>One fried chicken night.</p>
-
-                <p>One convenience store breakfast or late-night snack.</p>
-
-                <p>One cafe or dessert stop.</p>
-
-                <p>That is already a good first Korea food experience.</p>
               </div>
 
               <div className="space-y-4">
@@ -581,71 +399,27 @@ export default function WhatToEatInKoreaFirstTimePage() {
                   Spice and solo dining
                 </h2>
 
-                <p>If you are worried about spice, start slowly.</p>
-
                 <p>
-                  Not all Korean food is spicy, but spicy food is common. Red
-                  sauce does not always mean impossible, but it can be stronger
-                  than expected.
-                </p>
-
-                <p>
-                  Look for soups, noodles, grilled meat, gimbap, dumplings, rice
-                  bowls, porridge, or non-spicy stews when you need a break.
-                </p>
-
-                <p>It is okay not to eat spicy food every day.</p>
-
-                <p>If you are traveling alone, choose easier meals.</p>
-
-                <p>
-                  Gimbap, noodles, soups, convenience store meals, food courts,
-                  simple rice dishes, and cafes are usually easier than
-                  group-style meals.
-                </p>
-
-                <p>
-                  Korean BBQ can still be possible alone in some places, but it
-                  is not always the smoothest beginner option.
-                </p>
-
-                <p>
-                  If you are with friends, BBQ, fried chicken, and shared
-                  dishes become easier.
+                  If spice worries you, start slowly — not all Korean food is
+                  spicy, but red-sauce dishes can run stronger than expected.
+                  Gimbap, soups, noodles, grilled meat, dumplings, rice bowls,
+                  and porridge give you breaks between spicy meals. Solo dining
+                  is easier with gimbap, noodles, soups, convenience store food,
+                  food courts, and cafes; Korean BBQ can work alone in some
+                  places but is smoother with friends or when you are ready for a
+                  group-style meal.
                 </p>
               </div>
 
               <div className="space-y-4">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
-                  Final note
-                </p>
-
                 <p>
-                  For HAEMIL readers, the best food trip in Korea is not about
-                  checking off the longest list.
-                </p>
-
-                <p>It is about matching food to the moment.</p>
-
-                <p>BBQ when you want a social meal.</p>
-
-                <p>Gimbap when you want something easy.</p>
-
-                <p>Tteokbokki when you want a casual snack.</p>
-
-                <p>Soup when you are tired.</p>
-
-                <p>Fried chicken when you want a relaxed night.</p>
-
-                <p>
-                  Convenience store food when the day does not go as planned.
-                </p>
-
-                <p>Cafe dessert when you want to sit down and enjoy the mood.</p>
-
-                <p>
-                  That balance will teach you more about Korean food than
-                  forcing every famous dish into one trip.
+                  The best first food trip matches food to the moment — BBQ when
+                  you want something social, gimbap when you want easy, tteokbokki
+                  for a casual snack, soup when you are tired, fried chicken for a
+                  relaxed night, convenience store food when the day shifts, cafe
+                  dessert when you want to sit with the mood. That balance teaches
+                  you more about Korean eating than forcing every famous dish into
+                  one visit.
                 </p>
               </div>
             </div>

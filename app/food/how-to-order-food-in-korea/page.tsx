@@ -209,22 +209,14 @@ export default function HowToOrderFoodInKoreaPage() {
             <div className="space-y-8 text-base leading-8 text-[var(--muted)] md:text-lg">
               <div className="space-y-4">
                 <p>
-                  Some restaurants have staff who take your order.
+                  Some restaurants have staff who take your order; others use
+                  kiosks, tablets at the table, or counter ordering where you pay
+                  first. Some let you eat first and pay at the counter later.
+                  Water may be self-service, and a table bell may be how you
+                  call staff. During busy hours, everything can move quickly —
+                  none of this is wrong, just different from what you might know
+                  at home.
                 </p>
-
-                <p>Some use kiosks.</p>
-
-                <p>Some use tablets at the table.</p>
-
-                <p>Some ask you to order and pay first.</p>
-
-                <p>Some let you eat first and pay at the counter later.</p>
-
-                <p>Some have self-service water.</p>
-
-                <p>Some have a table bell.</p>
-
-                <p>Some move very quickly during busy hours.</p>
               </div>
 
               <div className="space-y-4 rounded-[1.25rem] border border-[var(--border)] bg-[var(--surface)] p-5">
@@ -233,32 +225,15 @@ export default function HowToOrderFoodInKoreaPage() {
                 </p>
 
                 <p>
-                  There is not one single restaurant system in Korea.
+                  There is not one single restaurant system in Korea. A small
+                  gimbap shop, a Korean BBQ restaurant, a cafe, a food court, a
+                  bunsik place, and a traditional soup restaurant may all work
+                  differently — so if one place feels confusing, look around for
+                  small clues: a kiosk near the entrance, a menu on the wall, a
+                  tablet on the table, people paying before they sit, a table
+                  bell, or water near a self-service corner. These usually tell
+                  you what to do.
                 </p>
-
-                <p>
-                  A small gimbap shop, a Korean BBQ restaurant, a cafe, a food
-                  court, a bunsik place, and a traditional soup restaurant may
-                  all work differently.
-                </p>
-
-                <p>So do not worry if one place feels confusing.</p>
-
-                <p>Look around for small clues.</p>
-
-                <p>Is there a kiosk near the entrance?</p>
-
-                <p>Is there a menu on the wall?</p>
-
-                <p>Is there a tablet on the table?</p>
-
-                <p>Are people paying before they sit down?</p>
-
-                <p>Is there a table bell?</p>
-
-                <p>Is water near a self-service corner?</p>
-
-                <p>These clues usually tell you what to do.</p>
               </div>
 
               <div className="space-y-4">
@@ -267,27 +242,15 @@ export default function HowToOrderFoodInKoreaPage() {
                 </h2>
 
                 <p>
-                  In many simple restaurants, you sit down, look at the menu,
-                  and order from staff.
-                </p>
-
-                <p>
-                  If you do not speak Korean, pointing is completely normal.
-                </p>
-
-                <p>You can point to the menu and say:</p>
-
-                <p className="rounded-[1rem] border border-[var(--border)] bg-[var(--surface)] px-4 py-3 text-[var(--text)]">
-                  &ldquo;이거 하나 주세요.&rdquo;
-                </p>
-
-                <p>It means &ldquo;One of this, please.&rdquo;</p>
-
-                <p>You do not need perfect pronunciation.</p>
-
-                <p>
-                  Most staff will understand the situation if you point clearly
-                  and stay polite.
+                  In many simple restaurants, you sit down, look at the menu, and
+                  order from staff. If you do not speak Korean, pointing is
+                  completely normal — point to the menu and say{" "}
+                  <span className="rounded-[1rem] border border-[var(--border)] bg-[var(--surface)] px-2 py-1 text-[var(--text)]">
+                    &ldquo;이거 하나 주세요.&rdquo;
+                  </span>{" "}
+                  (&ldquo;One of this, please&rdquo;). Pronunciation does not
+                  need to be perfect; most staff will understand if you point
+                  clearly and stay polite.
                 </p>
               </div>
 
@@ -299,24 +262,12 @@ export default function HowToOrderFoodInKoreaPage() {
                 <p>
                   In tourist-heavy areas like Myeongdong, Hongdae, Insadong,
                   Gangnam, or near major attractions, restaurants may be more
-                  used to foreign visitors. Some may have English menus or
-                  picture menus.
-                </p>
-
-                <p>That can make ordering easier.</p>
-
-                <p>
-                  The trade-off is that these areas can be more expensive or
-                  crowded because they are convenient and visitor-friendly.
-                </p>
-
-                <p>That does not mean you should avoid them.</p>
-
-                <p>For a first trip, easy ordering can be worth it.</p>
-
-                <p>
-                  But if you want better value, try walking one or two streets
-                  away from the busiest road.
+                  used to foreign visitors — some have English or picture menus,
+                  which can make ordering easier. The trade-off is that these
+                  areas can be more expensive or crowded because they are
+                  convenient and visitor-friendly. For a first trip, easy
+                  ordering can be worth it; for better value, walk one or two
+                  streets away from the busiest road.
                 </p>
               </div>
 
@@ -326,40 +277,16 @@ export default function HowToOrderFoodInKoreaPage() {
                 </h2>
 
                 <p>
-                  Kiosks are common in many casual restaurants, cafes, fast-food
-                  places, and food courts.
+                  Kiosks are common in casual restaurants, cafes, fast-food
+                  places, and food courts — you choose food and pay on a machine
+                  before eating. Some have English and accept foreign cards
+                  smoothly; others do not. If a kiosk feels difficult, look for a
+                  language button first (English, EN, or a globe icon). If it
+                  still does not work, choose another place or ask staff politely.
+                  Kiosks are convenient when they work, but they can feel
+                  stressful when the line behind you is moving fast — that is
+                  normal.
                 </p>
-
-                <p>
-                  A kiosk is a machine where you choose your food and pay before
-                  eating.
-                </p>
-
-                <p>Some kiosks have English.</p>
-
-                <p>Some do not.</p>
-
-                <p>Some accept foreign cards smoothly.</p>
-
-                <p>Some may be confusing.</p>
-
-                <p>
-                  If the kiosk feels difficult, do not panic. Look for a
-                  language button first. It may say English, EN, or show a globe
-                  icon.
-                </p>
-
-                <p>
-                  If it still does not work for you, choose another place or ask
-                  staff politely.
-                </p>
-
-                <p>
-                  Kiosks are convenient when they work, but they can be
-                  stressful when the line behind you is moving fast.
-                </p>
-
-                <p>This is normal.</p>
               </div>
 
               <div className="space-y-4">
@@ -367,48 +294,17 @@ export default function HowToOrderFoodInKoreaPage() {
                   Table tablets and counter ordering
                 </h2>
 
-                <p>Table tablets are also common in some restaurants.</p>
-
                 <p>
-                  You sit down, choose food on the tablet, and send the order
-                  from the table.
-                </p>
-
-                <p>
-                  This can be easier than speaking, but the menu may still be
-                  mostly Korean.
-                </p>
-
-                <p>Photos help a lot.</p>
-
-                <p>
-                  If you are unsure, choose simple dishes you recognize or use a
-                  translation app carefully.
-                </p>
-
-                <p>At some restaurants, you order at the counter first.</p>
-
-                <p>
-                  This is common in cafes, food courts, some noodle places, and
-                  casual restaurants.
-                </p>
-
-                <p>
-                  You pay, get a receipt or number, and wait for your food.
-                </p>
-
-                <p>
-                  When your number is called or shown on a screen, you pick it
-                  up.
-                </p>
-
-                <p>After eating, you may need to return the tray yourself.</p>
-
-                <p>This is why looking around helps.</p>
-
-                <p>
-                  If other people are carrying trays back, you probably should
-                  too.
+                  Table tablets let you sit down, choose food, and send the order
+                  from the table — easier than speaking, though menus may still
+                  be mostly Korean, so photos help. If you are unsure, choose
+                  simple dishes you recognize or use a translation app carefully.
+                  At some restaurants you order at the counter first, pay, get a
+                  receipt or number, and wait — common in cafes, food courts,
+                  noodle places, and casual spots. When your number is called or
+                  shown on a screen, pick up your food. After eating, you may
+                  need to return the tray yourself; if other people are carrying
+                  trays back, you probably should too.
                 </p>
               </div>
 
@@ -417,37 +313,16 @@ export default function HowToOrderFoodInKoreaPage() {
                   Water and utensils
                 </h2>
 
-                <p>Water is often self-service.</p>
-
                 <p>
-                  Many Korean restaurants have a water machine, cups, or a
-                  water bottle area.
-                </p>
-
-                <p>Sometimes water is already on the table.</p>
-
-                <p>Sometimes staff bring it.</p>
-
-                <p>Sometimes you get it yourself.</p>
-
-                <p>
-                  If you do not see water, look near the wall, counter, or
-                  self-service corner.
-                </p>
-
-                <p>You may also see utensils there.</p>
-
-                <p>
-                  Spoons, chopsticks, napkins, scissors, tongs, or extra side
-                  dishes can sometimes be in a drawer under the table or near a
-                  self-service station.
-                </p>
-
-                <p>This can surprise first-time visitors.</p>
-
-                <p>
-                  In Korea, it is very normal to open the table drawer for
-                  spoons and chopsticks.
+                  Water is often self-service — many restaurants have a water
+                  machine, cups, or a water bottle area, though sometimes water
+                  is already on the table or staff bring it. If you do not see
+                  water, look near the wall, counter, or self-service corner;
+                  utensils may be there too. Spoons, chopsticks, napkins,
+                  scissors, tongs, or extra side dishes can sit in a drawer under
+                  the table or near a self-service station, which can surprise
+                  first-time visitors — in Korea, opening the table drawer for
+                  spoons and chopsticks is very normal.
                 </p>
               </div>
 
@@ -456,38 +331,16 @@ export default function HowToOrderFoodInKoreaPage() {
                   Side dishes (banchan)
                 </h2>
 
-                <p>Side dishes are called banchan.</p>
-
-                <p>Many Korean meals come with small side dishes.</p>
-
                 <p>
-                  They may include kimchi, pickled vegetables, fish cake, salad,
-                  or other small plates.
+                  Side dishes are called banchan — many Korean meals come with
+                  small plates like kimchi, pickled vegetables, fish cake, or
+                  salad. In some restaurants, side dishes are refilled for free;
+                  in others, only some are refillable, and in self-service places
+                  you may get more from a side-dish corner. Do not assume every
+                  side dish can be refilled endlessly, but if the place clearly
+                  has a self-service banchan area, taking a reasonable amount is
+                  usually fine. Take a little first and go back if you need more.
                 </p>
-
-                <p>
-                  In some restaurants, side dishes are refilled for free.
-                </p>
-
-                <p>In others, only some are refillable.</p>
-
-                <p>
-                  In self-service places, you may get more from a side-dish
-                  corner.
-                </p>
-
-                <p>
-                  Do not assume every side dish can be refilled endlessly.
-                </p>
-
-                <p>
-                  But if the place clearly has a self-service banchan area, it
-                  is usually okay to take a reasonable amount.
-                </p>
-
-                <p>Take a little first.</p>
-
-                <p>You can go back if you need more.</p>
               </div>
 
               <div className="space-y-4">
@@ -495,56 +348,19 @@ export default function HowToOrderFoodInKoreaPage() {
                   Table bell and payment
                 </h2>
 
-                <p>Table bells are common.</p>
-
                 <p>
-                  If there is a small button on the table, you can press it
-                  when you need staff.
+                  If there is a small button on the table, press it when you need
+                  staff — to order, get more water, ask for extra side dishes, or
+                  get help. This is not rude; it is part of the system. Without a
+                  bell, raise your hand slightly or make eye contact — in busy
+                  restaurants, staff may not check on your table unless you call
+                  them. Payment often happens at the counter after eating: you
+                  finish, stand up, and pay near the entrance or cashier, and
+                  staff may already know your table number. At kiosks or cafes,
+                  you usually pay first — both systems are normal, so watch what
+                  other customers do. Tipping is not part of Korean restaurant
+                  culture; just pay the amount shown.
                 </p>
-
-                <p>This is not rude.</p>
-
-                <p>It is part of the restaurant system.</p>
-
-                <p>
-                  Use it when you are ready to order, need more water, want
-                  extra side dishes, or need help.
-                </p>
-
-                <p>
-                  If there is no bell, raise your hand slightly or make eye
-                  contact with staff.
-                </p>
-
-                <p>
-                  In a busy restaurant, staff may not check on your table often
-                  unless you call them.
-                </p>
-
-                <p>That is normal in Korea.</p>
-
-                <p>Payment often happens at the counter after eating.</p>
-
-                <p>
-                  In many Korean restaurants, you finish your meal, stand up,
-                  and pay near the entrance or cashier.
-                </p>
-
-                <p>The staff may already know your table number.</p>
-
-                <p>
-                  In other places, especially kiosks or cafes, you pay first.
-                </p>
-
-                <p>Both systems are normal.</p>
-
-                <p>If you are unsure, watch what other customers do.</p>
-
-                <p>Tipping is not a normal part of Korean restaurant culture.</p>
-
-                <p>You do not need to add a tip after a meal.</p>
-
-                <p>Just pay the amount shown.</p>
               </div>
 
               <div className="space-y-4">
@@ -552,56 +368,21 @@ export default function HowToOrderFoodInKoreaPage() {
                   Spicy food and solo dining
                 </h2>
 
-                <p>For spicy food, be careful at first.</p>
-
                 <p>
-                  Some Korean food is mild, but spicy food can be stronger than
-                  expected.
-                </p>
-
-                <p>
-                  Tteokbokki, spicy stews, spicy noodles, and red-sauce dishes
-                  can vary a lot by restaurant.
-                </p>
-
-                <p>
-                  If you are sensitive to spice, start with foods like gimbap,
-                  kalguksu, seolleongtang, gukbap, dumplings, grilled meat,
-                  porridge, or non-spicy noodles.
-                </p>
-
-                <p>
-                  You can still enjoy Korean food without eating spicy dishes
-                  every day.
-                </p>
-
-                <p>
-                  Solo dining is possible, but some foods are easier than
-                  others.
-                </p>
-
-                <p>
-                  Gimbap, noodles, soups, stews, convenience store meals,
-                  bunsik, food courts, cafes, and simple rice dishes are
-                  usually solo-friendly.
-                </p>
-
-                <p>
-                  Korean BBQ can be harder alone because some restaurants expect
-                  at least two servings of meat or are designed for groups.
-                </p>
-
-                <p>That does not mean solo BBQ is impossible.</p>
-
-                <p>
-                  It just may not be the easiest first restaurant experience.
-                </p>
-
-                <p>If you are eating alone on your first day, choose something simple.</p>
-
-                <p>
-                  A gimbap place, noodle shop, soup restaurant, food court, or
-                  convenience store meal can feel much less stressful.
+                  Some Korean food is mild, but spicy dishes can run stronger
+                  than expected — tteokbokki, spicy stews, spicy noodles, and
+                  red-sauce dishes vary a lot by restaurant. If you are sensitive
+                  to spice, start with gimbap, kalguksu, seolleongtang, gukbap,
+                  dumplings, grilled meat, porridge, or non-spicy noodles. Solo
+                  dining is possible, but some foods are easier: gimbap, noodles,
+                  soups, stews, convenience store meals, bunsik, food courts,
+                  cafes, and simple rice dishes are usually solo-friendly. Korean
+                  BBQ can be harder alone because some restaurants expect at
+                  least two servings of meat or are designed for groups — not
+                  impossible, but maybe not the smoothest first restaurant
+                  experience. On your first day alone, a gimbap place, noodle
+                  shop, soup restaurant, food court, or convenience store meal
+                  can feel much less stressful.
                 </p>
               </div>
 
@@ -610,27 +391,13 @@ export default function HowToOrderFoodInKoreaPage() {
                   Busy times
                 </p>
 
-                <p>Busy times matter.</p>
-
                 <p>
-                  During lunch, dinner, weekends, or after work hours,
-                  restaurants can move quickly.
-                </p>
-
-                <p>Staff may not have time to explain everything slowly.</p>
-
-                <p>Popular restaurants can have waiting lines.</p>
-
-                <p>Tourist areas can be crowded.</p>
-
-                <p>
+                  During lunch, dinner, weekends, or after work hours, restaurants
+                  can move quickly — staff may not have time to explain
+                  everything slowly, and popular or tourist areas can have lines.
                   If you feel nervous, eat a little earlier or later than the
-                  busiest meal time.
-                </p>
-
-                <p>
-                  A quiet restaurant is much easier for your first ordering
-                  experience.
+                  busiest meal time; a quieter restaurant makes the first ordering
+                  experience much easier.
                 </p>
               </div>
 
@@ -640,73 +407,25 @@ export default function HowToOrderFoodInKoreaPage() {
                 </h2>
 
                 <p>
-                  One useful habit is to save a few food names before you go.
-                </p>
-
-                <p>You do not need to memorize the whole menu.</p>
-
-                <p>Just know a few beginner-friendly options:</p>
-
-                <p>
-                  gimbap, tteokbokki, kal-guksu, gukbap, bibimbap, fried
-                  chicken, Korean BBQ, soft tofu stew, or convenience store cup
-                  ramyeon.
-                </p>
-
-                <p>
-                  When you recognize even one word on a menu, the restaurant
-                  feels less intimidating.
+                  Saving a few food names before you go helps — gimbap,
+                  tteokbokki, kalguksu, gukbap, bibimbap, fried chicken, Korean
+                  BBQ, soft tofu stew, or convenience store cup ramyeon. When you
+                  recognize even one word on a menu, the restaurant feels less
+                  intimidating.
                 </p>
               </div>
 
               <div className="space-y-4">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
-                  Final note
-                </p>
-
                 <p>
-                  For HAEMIL readers, the best way to order food in Korea is to
-                  stay flexible.
-                </p>
-
-                <p>If there is a kiosk, try the language button.</p>
-
-                <p>If there is a table bell, use it.</p>
-
-                <p>
-                  If water is not brought to you, check for self-service.
-                </p>
-
-                <p>If there are side dishes, try a little first.</p>
-
-                <p>If the restaurant feels too busy, choose an easier place.</p>
-
-                <p>
-                  If Korean BBQ feels complicated alone, save it for another
-                  meal.
-                </p>
-
-                <p>You do not have to do everything perfectly.</p>
-
-                <p>
-                  Most first-time visitors learn by watching the room.
-                </p>
-
-                <p>That is very normal.</p>
-
-                <p>
-                  Look around, point clearly, stay polite, and choose food that
-                  matches your energy.
-                </p>
-
-                <p>
-                  Korean restaurants become much easier after the first few
-                  meals.
-                </p>
-
-                <p>
-                  And once ordering feels less stressful, the food becomes much
-                  more fun.
+                  Stay flexible: try the language button on a kiosk, use the
+                  table bell when you need staff, check for self-service water,
+                  try side dishes a little at a time, and pick an easier place
+                  if the room feels too busy. Save Korean BBQ for when you have
+                  company or more energy. Most first-time visitors learn by
+                  watching the room — look around, point clearly, stay polite,
+                  and choose food that matches your energy. Korean restaurants
+                  become much easier after the first few meals, and once ordering
+                  feels less stressful, the food becomes much more fun.
                 </p>
               </div>
             </div>
