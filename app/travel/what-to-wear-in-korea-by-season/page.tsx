@@ -176,10 +176,11 @@ export default function WhatToWearInKoreaBySeasonPage() {
             </h1>
 
             <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
-              If you are visiting Korea for the first time, what you wear matters
-              more than you may expect. Not because Korea has one strict travel
-              outfit rule — but because you will probably walk a lot. A cute
-              outfit is nice. Comfortable shoes are more important.
+              What you wear in Korea matters more than you might expect — not
+              because there is one strict outfit rule, but because you will walk
+              a lot: subway stairs, palace grounds, market alleys, and long
+              station transfers. A cute outfit is nice; comfortable shoes matter
+              more.
             </p>
           </article>
 

@@ -184,10 +184,10 @@ export default function BestTimeToVisitKoreaFirstTimePage() {
 
             <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
               If you are visiting Korea for the first time, the best time to go
-              is usually spring or autumn. But that does not mean they are
-              perfect for everyone. Korea has four clear seasons, and each one
-              changes the feeling of the trip. The best season depends on what
-              kind of traveler you are.
+              is usually spring or autumn — but neither is perfect for everyone.
+              Korea has four clear seasons, and each one changes how walking,
+              crowds, and daily plans feel. Pick the season that matches your
+              energy, not only the photos you saw online.
             </p>
           </article>
 
@@ -315,15 +315,14 @@ export default function BestTimeToVisitKoreaFirstTimePage() {
                 </h2>
 
                 <p>
-                  Match the season to your itinerary. Palaces, walking streets,
-                  and outdoor views usually feel better in spring or autumn.
-                  Shopping, cafes, food, beauty, museums, and malls can work in
-                  winter or summer too. If you hate crowds, skip building the
-                  trip around the most famous seasonal photo spots; if you hate
-                  heat, do not pack summer with outdoor-only days; if you hate
-                  cold, winter&apos;s calmer mood may not be worth the trade-off.
-                  Choose the season that matches your daily energy, not only
-                  photos online.
+                  Palaces, walking streets, and outdoor views usually feel better
+                  in spring or autumn. Shopping, cafes, food, beauty, museums, and
+                  malls can work in winter or summer too. If you hate crowds, skip
+                  building the trip around the most famous seasonal photo spots; if
+                  you hate heat, do not pack summer with outdoor-only days; if you
+                  hate cold, winter&apos;s calmer mood may not be worth the
+                  trade-off. Choose the season that matches your daily energy, not
+                  only photos online.
                 </p>
               </div>
 

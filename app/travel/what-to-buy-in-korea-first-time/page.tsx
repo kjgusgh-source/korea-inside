@@ -208,14 +208,6 @@ export default function WhatToBuyInKoreaFirstTimePage() {
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
             <div className="space-y-8 text-base leading-8 text-[var(--muted)] md:text-lg">
               <div className="space-y-4">
-                <p>
-                  The best things to buy are not always the most viral online —
-                  think small, practical, and easy to pack: items you will use,
-                  carry home safely, or enjoy sharing.
-                </p>
-              </div>
-
-              <div className="space-y-4">
                 <h2 className="text-2xl font-semibold text-[var(--text)]">
                   Skincare
                 </h2>
