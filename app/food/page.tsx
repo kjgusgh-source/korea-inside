@@ -10,7 +10,7 @@ const STANDALONE_FOOD_GUIDES = [
     categoryLabel: "Food guide",
     title: "What to Eat in Korea for the First Time",
     description:
-      "A friendly food guide for first-time Korea visitors, with Korean BBQ, gimbap, tteokbokki, soups, fried chicken, convenience stores, cafes, and realistic local tips.",
+      "Where to start with Korean food on a first trip — everyday meals, street bites, and dishes locals actually order without overplanning every meal.",
     href: "/food/what-to-eat-in-korea-first-time",
     readingTime: "9 min read",
   },
@@ -20,7 +20,7 @@ const STANDALONE_FOOD_GUIDES = [
     categoryLabel: "Food guide",
     title: "How to Order Food in Korea",
     description:
-      "A practical guide for first-time visitors, with Korean restaurant ordering tips, kiosks, table bells, side dishes, self-service water, paying, solo dining, and spicy food notes.",
+      "How to handle kiosks, table bells, side dishes, and pay-at-the-counter moments when a Korean restaurant works differently from home.",
     href: "/food/how-to-order-food-in-korea",
     readingTime: "8 min read",
   },
@@ -30,7 +30,7 @@ const STANDALONE_FOOD_GUIDES = [
     categoryLabel: "Food guide",
     title: "Korean Soups and Stews Guide for First-Time Visitors",
     description:
-      "A practical guide to Korean soups and stews, from kimchi-jjigae and doenjang-jjigae to sundubu, seolleongtang, galbitang, samgyetang, rice, side dishes, and local tips.",
+      "What to expect from jjigae, gukbap, and hot pots — warming one-bowl Korean meals that are easier to order once you know the basics.",
     href: "/food/korean-soups-and-stews-guide-first-time",
     readingTime: "10 min read",
   },
@@ -40,7 +40,7 @@ const STANDALONE_FOOD_GUIDES = [
     categoryLabel: "Food guide",
     title: "Korean Pocha and Night Food Guide for First-Time Visitors",
     description:
-      "A practical guide to Korean pocha night food, with anju, pojangmacha, eomuk-tang, tteokbokki, dakbal, jeon, cash tips, price checks, and local etiquette.",
+      "Pocha nights explained — anju with drinks, old street tents vs indoor pocha, and the cash and price checks worth doing first.",
     href: "/food/korean-pocha-night-food-guide-first-time",
     readingTime: "9 min read",
   },
@@ -50,7 +50,7 @@ const STANDALONE_FOOD_GUIDES = [
     categoryLabel: "Food guide",
     title: "Korean Breakfast Guide for First-Time Visitors",
     description:
-      "A practical guide to breakfast in Korea, from gimbap, convenience stores, gukbap, haejangguk, and seolleongtang to street toast, bakeries, brunch cafes, and hotel breakfast.",
+      "A realistic look at breakfast in Korea — gimbap, convenience stores, soup shops, and street toast, not one fixed traditional morning meal.",
     href: "/food/korean-breakfast-guide-first-time",
     readingTime: "8 min read",
   },
@@ -60,7 +60,7 @@ const STANDALONE_FOOD_GUIDES = [
     categoryLabel: "Food guide",
     title: "Korean Fried Chicken and Chimaek Guide for First-Time Visitors",
     description:
-      "A practical guide to Korean fried chicken and chimaek, with banban chicken, yangnyeom, soy garlic, boneless chicken, chicken-mu, delivery, takeout, Han River tips, and local etiquette.",
+      "Banban, yangnyeom, chicken-mu, and chimaek — Korean fried chicken without the menu confusion, from dine-in to delivery.",
     href: "/food/korean-fried-chicken-chimaek-guide-first-time",
     readingTime: "8 min read",
   },
@@ -70,7 +70,7 @@ const STANDALONE_FOOD_GUIDES = [
     categoryLabel: "Food guide",
     title: "Korean Noodles Guide for First-Time Visitors",
     description:
-      "A practical guide to Korean noodle dishes, from ramyeon, kalguksu, and naengmyeon to bibim guksu, makguksu, kongguksu, jjajangmyeon, jjamppong, and local eating tips.",
+      "Ramyeon vs restaurant noodles, cold naengmyeon in summer, and solo-friendly bowls when you want a simple Korean meal.",
     href: "/food/korean-noodles-guide-first-time",
     readingTime: "9 min read",
   },
@@ -80,7 +80,7 @@ const STANDALONE_FOOD_GUIDES = [
     categoryLabel: "Food guide",
     title: "Gwangjang Market Food Guide for First-Time Visitors",
     description:
-      "A practical first-time guide to eating at Gwangjang Market, with bindaetteok, mayak gimbap, yukhoe, noodles, cash tips, crowds, and tourist-pricing cautions.",
+      "What to expect at Gwangjang Market — crowded aisles, bindaetteok and mayak gimbap, cash, and checking prices before you sit down.",
     href: "/food/gwangjang-market-food-guide-first-time",
     readingTime: "9 min read",
   },
@@ -90,7 +90,7 @@ const STANDALONE_FOOD_GUIDES = [
     categoryLabel: "Food guide",
     title: "Myeongdong Street Food Guide for First-Time Visitors",
     description:
-      "A practical first-time guide to Myeongdong street food, with egg bread, tteokbokki, eomuk, hotteok, chicken bites, skewers, tourist prices, and cash tips.",
+      "Fun first-time snacks in Myeongdong, with tourist-price reality on the main streets and easier bites one alley over.",
     href: "/food/myeongdong-street-food-guide-first-time",
     readingTime: "8 min read",
   },
@@ -100,7 +100,7 @@ const STANDALONE_FOOD_GUIDES = [
     categoryLabel: "Food guide",
     title: "Korean Cafe Culture Guide for First-Time Visitors",
     description:
-      "A practical guide to Korean cafes, including ordering, Wi-Fi, receipts, outlets, desserts, study mood, photo spots, one-drink rules, and local etiquette.",
+      "The local details that make Korean cafes work — Wi-Fi, receipts, outlets, one-drink seating, and pretty cafes vs everyday ones.",
     href: "/food/korean-cafe-culture-guide-first-time",
     readingTime: "9 min read",
   },
@@ -110,7 +110,7 @@ const STANDALONE_FOOD_GUIDES = [
     categoryLabel: "Food guide",
     title: "What to Eat at a Korean Convenience Store",
     description:
-      "A local-friendly first guide to Korean convenience store food, quick meals, snacks, drinks, 24-hour culture, and how locals follow new items.",
+      "For days when a CU or GS25 meal is the plan — triangle gimbap, hot counter food, and what locals grab between sightseeing stops.",
     href: "/food/what-to-eat-at-korean-convenience-store",
     readingTime: "7 min read",
   },
@@ -120,7 +120,7 @@ const STANDALONE_FOOD_GUIDES = [
     categoryLabel: "Food guide",
     title: "What Is Korean Street Toast?",
     description:
-      "A local-friendly guide to Korea’s sweet egg sandwich, from old street stalls to modern toast chains like Isaac Toast and Eggdrop.",
+      "Korea’s sweet egg sandwich from old stalls to Isaac Toast — what goes inside and why it fits a quick Seoul morning.",
     href: "/food/what-is-korean-street-toast",
     readingTime: "6 min read",
   },
@@ -130,7 +130,7 @@ const STANDALONE_FOOD_GUIDES = [
     categoryLabel: "Food guide",
     title: "What Is Bungeoppang?",
     description:
-      "A local-friendly guide to Korea’s fish-shaped winter snack, from red bean filling to the cold-weather street stall feeling.",
+      "Fish-shaped winter street snacks — red bean bungeoppang and the cold-day stall mood that feels local, not staged.",
     href: "/food/what-is-bungeoppang",
     readingTime: "6 min read",
   },
@@ -140,7 +140,7 @@ const STANDALONE_FOOD_GUIDES = [
     categoryLabel: "Food guide",
     title: "How to Eat Cup Ramyeon at a Korean Convenience Store",
     description:
-      "A local-friendly guide to Korean cup ramyeon, hot water machines, convenience store counters, spicy flavors, and easy local pairings.",
+      "How to use the hot water machine, pick a cup ramyeon, and eat at the convenience store counter without guessing the steps.",
     href: "/food/how-to-eat-cup-ramyeon-at-a-korean-convenience-store",
     readingTime: "6 min read",
   },
@@ -150,7 +150,7 @@ const STANDALONE_FOOD_GUIDES = [
     categoryLabel: "Food guide",
     title: "What Is Tteokbokki?",
     description:
-      "A local-friendly guide to Korea’s spicy rice cake snack, from chewy tteok and red sauce to bunsik shops, markets, and classic add-ons.",
+      "Chewy rice cakes in red sauce — what tteokbokki is, where you find it, and the classic add-ons at bunsik shops.",
     href: "/food/what-is-tteokbokki",
     readingTime: "7 min read",
   },
@@ -160,7 +160,7 @@ const STANDALONE_FOOD_GUIDES = [
     categoryLabel: "Food guide",
     title: "What Is Eomuk?",
     description:
-      "A local-friendly guide to Korean fish cake, from street-stall skewers and warm broth to the many shapes you see in tteokbokki, soup, and snack shops.",
+      "Warm fish-cake skewers and broth at street stalls — the snack you see beside tteokbokki almost everywhere in Korea.",
     href: "/food/what-is-eomuk-korean-fish-cake",
     readingTime: "7 min read",
   },
@@ -170,7 +170,7 @@ const STANDALONE_FOOD_GUIDES = [
     categoryLabel: "Food guide",
     title: "What Is Twigim?",
     description:
-      "A local-friendly guide to Korean fried snacks, from gimmari and fried mandu to the very Korean habit of dipping twigim in tteokbokki sauce.",
+      "Korean fried snack-shop sides — gimmari, mandu, and dipping twigim back into tteokbokki sauce like locals do.",
     href: "/food/what-is-twigim-korean-fried-snacks",
     readingTime: "7 min read",
   },
@@ -180,7 +180,7 @@ const STANDALONE_FOOD_GUIDES = [
     categoryLabel: "Food guide",
     title: "What Is Sundae?",
     description:
-      "A local-friendly guide to Korean blood sausage, from market stalls and bunsik shops to tteokbokki sauce, dipping salts, and regional styles.",
+      "Korean blood sausage at markets and bunsik shops — what sundae tastes like and how locals eat it with sauce or salt.",
     href: "/food/what-is-sundae-korean-blood-sausage",
     readingTime: "7 min read",
   },
@@ -190,7 +190,7 @@ const STANDALONE_FOOD_GUIDES = [
     categoryLabel: "Food guide",
     title: "What Is Gimbap?",
     description:
-      "A local-friendly guide to Korea’s seaweed rice roll, from everyday bunsik shops and convenience stores to tuna gimbap, mini gimbap, and picnic memories.",
+      "Korea’s everyday seaweed rice roll — from bunsik counters and convenience stores to picnic-style tuna gimbap.",
     href: "/food/what-is-gimbap-korean-seaweed-rice-roll",
     readingTime: "7 min read",
   },
@@ -200,7 +200,7 @@ const STANDALONE_FOOD_GUIDES = [
     categoryLabel: "Food culture guide",
     title: "What Is Bunsik?",
     description:
-      "A local-friendly guide to Korean snack-shop food culture, where tteokbokki, gimbap, twigim, sundae, and eomuk all belong on the same table.",
+      "Snack-shop food culture where tteokbokki, gimbap, twigim, and eomuk share one table — a good lens for cheap Korean eating.",
     href: "/food/what-is-bunsik-korean-snack-food",
     readingTime: "8 min read",
   },

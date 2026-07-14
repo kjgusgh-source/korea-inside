@@ -10,7 +10,7 @@ const STANDALONE_TRAVEL_GUIDES = [
     categoryLabel: "Travel guide",
     title: "Things to Know Before Visiting Korea for the First Time",
     description:
-      "A practical first-time Korea travel guide with local tips on Seoul transport, maps, rush hour, food ordering, costs, cafes, weather, and common travel mistakes.",
+      "Small systems that surprise first-time visitors — maps, subway rush hour, restaurant ordering, and famous-area prices without a warning-list tone.",
     href: "/travel/things-to-know-before-visiting-korea-first-time",
     readingTime: "9 min read",
   },
@@ -20,7 +20,7 @@ const STANDALONE_TRAVEL_GUIDES = [
     categoryLabel: "Travel guide",
     title: "Korea Etiquette Tips for Tourists",
     description:
-      "A practical first-time Korea etiquette guide with subway manners, restaurant habits, table bells, tipping, trash, shoes, public noise, and local travel tips.",
+      "Subway manners, restaurant habits, tipping, trash, shoes, and the quiet rules that help you blend in without overthinking every step.",
     href: "/travel/korea-etiquette-tips-for-tourists",
     readingTime: "8 min read",
   },
@@ -30,7 +30,7 @@ const STANDALONE_TRAVEL_GUIDES = [
     categoryLabel: "Travel guide",
     title: "Best Time to Visit Korea for First-Time Visitors",
     description:
-      "A practical first-time Korea travel guide comparing spring, summer, autumn, and winter by weather, crowds, costs, clothing, and travel style.",
+      "Spring cherry blossoms, humid summer, autumn walking weather, and cold winter — what each season actually feels like for a first Korea trip.",
     href: "/travel/best-time-to-visit-korea-first-time",
     readingTime: "8 min read",
   },
@@ -40,7 +40,7 @@ const STANDALONE_TRAVEL_GUIDES = [
     categoryLabel: "Travel guide",
     title: "What to Wear in Korea by Season",
     description:
-      "A practical first-time Korea packing guide with spring, summer, autumn, and winter outfit tips, walking shoes, rain, subway stairs, and local travel notes.",
+      "Packing for Seoul walks — comfortable shoes, subway stairs, rain layers, and what to wear season by season without overpacking.",
     href: "/travel/what-to-wear-in-korea-by-season",
     readingTime: "8 min read",
   },
@@ -50,7 +50,7 @@ const STANDALONE_TRAVEL_GUIDES = [
     categoryLabel: "Travel guide",
     title: "Is Korea Expensive to Visit?",
     description:
-      "An honest first-time traveler's guide to Korea costs, with Seoul hotels, tourist areas, food, cafes, transport, taxis, shopping, and better-value local tips.",
+      "An honest cost picture for first-time travelers — hotels, food, cafes, transport, and where famous Seoul areas quietly raise the bill.",
     href: "/travel/is-korea-expensive-to-visit-first-time",
     readingTime: "8 min read",
   },
@@ -60,7 +60,7 @@ const STANDALONE_TRAVEL_GUIDES = [
     categoryLabel: "Travel guide",
     title: "What to Buy in Korea for the First Time",
     description:
-      "A practical first-time Korea shopping guide with skincare, snacks, stationery, fashion, traditional souvenirs, convenience store finds, and honest local tips.",
+      "Skincare, snacks, stationery, and souvenirs worth the suitcase space — plus what is easy to overbuy in tourist shopping streets.",
     href: "/travel/what-to-buy-in-korea-first-time",
     readingTime: "8 min read",
   },
@@ -70,7 +70,7 @@ const STANDALONE_TRAVEL_GUIDES = [
     categoryLabel: "Travel guide",
     title: "3 Days in Seoul Itinerary for First-Time Visitors",
     description:
-      "A practical local-friendly Seoul route for first-time visitors, with Myeongdong, Namsan, palaces, Insadong, Hongdae or Gangnam, plus honest travel trade-offs.",
+      "A first-time Seoul itinerary grouped by area — Myeongdong and Namsan, palace day, then Hongdae or Gangnam without crossing the city all day.",
     href: "/travel/3-days-in-seoul-itinerary-first-time",
     readingTime: "9 min read",
   },
@@ -80,7 +80,7 @@ const STANDALONE_TRAVEL_GUIDES = [
     categoryLabel: "Travel guide",
     title: "7 Days in Korea Itinerary for First-Time Visitors",
     description:
-      "A practical one-week Korea route for first-time visitors, with Seoul, Busan, Gyeongju, transport tips, food ideas, and realistic travel trade-offs.",
+      "One week split between Seoul and a second city — realistic pacing, transport between stops, and room for food detours.",
     href: "/travel/7-days-in-korea-itinerary-first-time",
     readingTime: "12 min read",
   },
@@ -90,7 +90,7 @@ const STANDALONE_TRAVEL_GUIDES = [
     categoryLabel: "Travel guide",
     title: "Where to Stay in Seoul for the First Time",
     description:
-      "A practical local-style guide to choosing your Seoul base, from Myeongdong and Hongdae to Gangnam, Insadong, Seoul Station, and Jamsil.",
+      "Choosing a Seoul base by subway stop, not just neighborhood name — Myeongdong, Hongdae, Gangnam, Jongno, and when convenience beats hype.",
     href: "/travel/where-to-stay-in-seoul-first-time",
     readingTime: "10 min read",
   },
@@ -100,7 +100,7 @@ const STANDALONE_TRAVEL_GUIDES = [
     categoryLabel: "Travel guide",
     title: "Seoul Neighborhood Guide for First-Time Visitors",
     description:
-      "A practical guide to Seoul neighborhoods, from Myeongdong and Hongdae to Gangnam, Insadong, Euljiro, Seongsu, Jamsil, and Itaewon.",
+      "How Myeongdong, Hongdae, Gangnam, Insadong, Euljiro, and Jamsil feel different — so you pick an area that matches your trip mood.",
     href: "/travel/seoul-neighborhood-guide-first-time",
     readingTime: "9 min read",
   },
@@ -110,7 +110,7 @@ const STANDALONE_TRAVEL_GUIDES = [
     categoryLabel: "Travel guide",
     title: "How to Get Around Seoul for First-Time Visitors",
     description:
-      "A practical Seoul transport guide for first-time visitors, with subway, taxi, rush hour, airport routes, walking, maps, and local trade-offs.",
+      "Subway as your base, taxis when traffic allows, Naver Map exits, rush hour, and why a simple route beats a fast-looking one.",
     href: "/travel/how-to-get-around-seoul-first-time",
     readingTime: "8 min read",
   },
@@ -120,7 +120,7 @@ const STANDALONE_TRAVEL_GUIDES = [
     categoryLabel: "Travel guide",
     title: "How to Use the Korean Subway",
     description:
-      "A local-friendly first guide to Korean subway rides, T-money cards, transfers, station signs, apps, etiquette, and simple mistakes to avoid.",
+      "Tap in and out, follow line colors, survive long transfers, and find the right exit before a huge Seoul station swallows you.",
     href: "/travel/how-to-use-korean-subway",
     readingTime: "8 min read",
   },
@@ -130,7 +130,7 @@ const STANDALONE_TRAVEL_GUIDES = [
     categoryLabel: "Travel guide",
     title: "How to Use a T-money Card in Korea",
     description:
-      "A local-friendly guide to buying, recharging, tapping, transferring, and avoiding common T-money mistakes on Korean subways and buses.",
+      "Buy, recharge, tap on buses twice, and keep enough balance — T-money for daily Seoul subway and bus movement without fare guesswork.",
     href: "/travel/how-to-use-t-money-card-in-korea",
     readingTime: "7 min read",
   },
@@ -140,7 +140,7 @@ const STANDALONE_TRAVEL_GUIDES = [
     categoryLabel: "Travel guide",
     title: "Naver Map or KakaoMap?",
     description:
-      "A local-friendly guide to Korean map apps, why Google Maps can feel limited in Korea, and how to find subway exits, buses, restaurants, and saved places.",
+      "Why Google Maps is not enough in Korea — Naver Map and KakaoMap for subway exits, bus stops, Korean place names, and saved hotel addresses.",
     href: "/travel/naver-map-kakaomap-korea-travel-guide",
     readingTime: "8 min read",
   },
@@ -150,7 +150,7 @@ const STANDALONE_TRAVEL_GUIDES = [
     categoryLabel: "Travel guide",
     title: "Best Korea Travel Apps for First-Time Visitors",
     description:
-      "A practical guide to Korean apps travelers may actually use, from Naver Map, KakaoMap, Papago, Kakao T, and subway apps to Baemin, CatchTable, Yanolja, and Yeogi Eottae.",
+      "Apps worth setting up before landing — Naver Map, KakaoMap, Papago, Kakao T, and a few others for maps, rides, and reservations.",
     href: "/travel/korea-travel-apps-first-time",
     readingTime: "10 min read",
   },
@@ -160,7 +160,7 @@ const STANDALONE_TRAVEL_GUIDES = [
     categoryLabel: "Travel guide",
     title: "Korea SIM, eSIM, and Wi-Fi Guide for First-Time Visitors",
     description:
-      "A practical first-time Korea internet guide comparing eSIM, SIM cards, roaming, pocket Wi-Fi, cafe Wi-Fi, public Wi-Fi, phone numbers, and power bank tips.",
+      "eSIM vs SIM vs pocket Wi-Fi for a first Korea trip — what to activate at the airport and when cafe Wi-Fi is not enough.",
     href: "/travel/korea-sim-esim-wifi-guide-first-time",
     readingTime: "9 min read",
   },
@@ -170,7 +170,7 @@ const STANDALONE_TRAVEL_GUIDES = [
     categoryLabel: "Travel guide",
     title: "Korea Arrival Day Checklist for First-Time Visitors",
     description:
-      "A practical first-day Korea guide covering airport arrival, internet setup, maps, transport, hotel check-in, first meal, Wi-Fi, and local travel tips.",
+      "Your first hours after landing — internet, maps, airport train or bus, hotel check-in, and a low-stress first meal in Seoul.",
     href: "/travel/korea-arrival-day-checklist-first-time",
     readingTime: "8 min read",
   },
@@ -180,7 +180,7 @@ const STANDALONE_TRAVEL_GUIDES = [
     categoryLabel: "Travel guide",
     title: "Luggage Storage in Seoul for First-Time Visitors",
     description:
-      "A practical Seoul luggage guide covering hotel storage, station lockers, airport options, suitcase movement, subway stairs, rush hour, and local travel tips.",
+      "Hotel storage, station lockers, and moving with a suitcase — where to drop bags so subway stairs do not ruin the day.",
     href: "/travel/luggage-storage-in-seoul-first-time",
     readingTime: "8 min read",
   },
@@ -190,7 +190,7 @@ const STANDALONE_TRAVEL_GUIDES = [
     categoryLabel: "Travel guide",
     title: "How to Get from Incheon Airport to Seoul",
     description:
-      "A local-friendly first guide to AREX trains, airport buses, taxis, Kakao T, late-night arrivals, luggage, and choosing the easiest route into Seoul.",
+      "AREX, airport bus, or taxi from Incheon Airport — pick the route that matches your hotel, luggage, and arrival time, not only the cheapest fare.",
     href: "/travel/how-to-get-from-incheon-airport-to-seoul",
     readingTime: "8 min read",
   },
@@ -200,7 +200,7 @@ const STANDALONE_TRAVEL_GUIDES = [
     categoryLabel: "Travel guide",
     title: "What to Do in Myeongdong",
     description:
-      "A local-friendly first guide to Myeongdong, from K-beauty shops and street food to Myeongdong Cathedral, money exchange, subway exits, and nearby Namsan.",
+      "K-beauty streets, snack alleys, cathedral side walks, money exchange, and the subway exit that saves ten minutes of walking in Myeongdong.",
     href: "/travel/what-to-do-in-myeongdong-first-time",
     readingTime: "8 min read",
   },
