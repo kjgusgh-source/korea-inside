@@ -183,257 +183,72 @@ export default function WhatIsEomukKoreanFishCakePage() {
 
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
             <div className="space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
-              <p>You may see it in tteokbokki.</p>
-
-              <p>You may see it on a wooden skewer in hot broth.</p>
-
               <p>
-                You may see it folded, rolled, flat, round, spicy, or stuffed
-                with cheese.
+                You may see it in tteokbokki, on a wooden skewer in hot broth,
+                folded, rolled, flat, round, spicy, or stuffed with cheese — and
+                hear people call it eomuk or odeng. Eomuk, or 어묵, is Korean fish
+                cake made from processed fish paste mixed with starch and
+                seasoning. In English &quot;fish cake&quot; can sound strange —
+                it is not sweet and not dessert at all. It is savory, chewy, and
+                very everyday in Korea.
               </p>
-
-              <p>And you may hear people call it eomuk or odeng.</p>
-
-              <p>So what is it?</p>
-
-              <p>
-                Eomuk, or 어묵, is Korean fish cake. It is usually made from
-                processed fish paste mixed with starch, seasoning, and other
-                ingredients depending on the product. In English, &quot;fish
-                cake&quot; can sound a little strange, because it is not a sweet
-                cake and it does not feel like dessert at all.
-              </p>
-
-              <p>It is savory.</p>
-
-              <p>It is chewy.</p>
-
-              <p>And in Korea, it is very everyday.</p>
 
               <p>
                 The version many travelers notice first is skewered eomuk in hot
-                broth. This is the one you often see at street stalls, markets,
-                or bunsik shops. A long piece of fish cake is folded onto a
-                wooden skewer and kept warm in a light broth. People stand near
-                the stall, eat the skewer, and sometimes sip the broth from a
-                paper cup.
-              </p>
-
-              <p>In cold weather, that broth matters.</p>
-
-              <p>Sometimes the broth is the reason people stop.</p>
-
-              <p>
-                A warm eomuk skewer on a winter street does not feel fancy, but
-                it feels deeply comforting. It is quick, cheap, and easy to eat
-                while standing. That is why many Koreans connect eomuk with
-                winter, late-night snacks, and old market streets.
-              </p>
-
-              <p>You may also hear the word odeng.</p>
-
-              <p>
-                In Korea, odeng, or 오뎅, is a very common casual word,
-                especially when people are talking about skewered fish cake in
-                broth. The word comes from Japanese oden, so eomuk is the more
-                Korean standard word. But in daily life, many people still say
-                odeng naturally.
-              </p>
-
-              <p>A simple way to understand it is this:</p>
-
-              <p>Eomuk is the Korean word for fish cake.</p>
-
-              <p>
-                Odeng is the casual street-food word many people use, especially
-                for the skewered version.
-              </p>
-
-              <p>Do not worry too much if you hear both.</p>
-
-              <p>Koreans use both depending on the situation.</p>
-
-              <p>
-                The important thing to know is that eomuk is not only one
-                shape.
-              </p>
-
-              <p>There are many types.</p>
-
-              <p>
-                Flat sheet eomuk is common in home cooking and bunsik food. You
-                may see it sliced into tteokbokki, stir-fried as a side dish, or
-                added to soup. It is thin, flexible, and easy to cut.
+                broth — a long piece folded onto a wooden skewer, kept warm in
+                light broth at street stalls, markets, or bunsik shops. People
+                stand near the stall, eat the skewer, and sometimes sip the broth
+                from a paper cup. In cold weather that broth matters; sometimes
+                it is the reason people stop. A warm eomuk skewer on a winter
+                street is quick, cheap, and deeply comforting.
               </p>
 
               <p>
-                Skewered eomuk is the street-stall version. It is often folded
-                on a stick and served in warm broth. This is the one many people
-                casually call odeng.
+                You may also hear odeng (오뎅), a casual word especially for
+                skewered fish cake in broth — from Japanese oden, while eomuk is
+                the more standard Korean word. Koreans use both naturally. Eomuk
+                is not only one shape: flat sheets sliced into tteokbokki or
+                soup; skewered street-stall versions; ball-shaped pieces in
+                soups; long bar-style snacks with vegetables, spicy flavor, or
+                cheese; and Busan-style shops with many shapes and gift-box
+                products. Busan is strongly connected with fish cake culture as a
+                port city — when Koreans say Busan eomuk they often imagine a
+                more serious shop, though even there styles range from simple to
+                fancy.
               </p>
 
               <p>
-                Ball-shaped eomuk can appear in soups or snack shops. Some are
-                plain, and some may have bits of vegetables or different
-                seasoning inside.
+                Eomuk also appears inside tteokbokki — pieces soak up the red
+                sauce and make the dish feel more like a snack meal. Some people
+                like the fish cake as much as the rice cakes. Eomuk and
+                tteokbokki belong to the same casual world: bunsik shops, school
+                areas, market stalls, winter streets, paper cups of broth, and
+                people eating quickly before going somewhere else. It is usually
+                a familiar supporting character, not the star of a fancy meal —
+                in soups, lunch boxes, side dishes, convenience store snacks, and
+                whole shops in Busan.
               </p>
 
               <p>
-                Long bar-style eomuk is often eaten as a snack. You may see
-                versions with vegetables, spicy flavor, cheese, crab-style
-                filling, or other additions depending on the shop.
-              </p>
-
-              <p>There are also premium or Busan-style eomuk shops.</p>
-
-              <p>
-                Busan is strongly connected with Korean fish cake culture,
-                partly because of its port city identity and long food industry
-                around seafood. When Koreans say Busan eomuk, they often
-                imagine a slightly more serious fish cake shop with many shapes,
-                fillings, and gift-box style products.
-              </p>
-
-              <p>But even Busan eomuk is not one single thing.</p>
-
-              <p>Some are simple.</p>
-
-              <p>Some are fancy.</p>
-
-              <p>Some are for soup.</p>
-
-              <p>Some are for snacking.</p>
-
-              <p>
-                Some are filled with cheese, vegetables, shrimp-style flavors,
-                spicy fillings, or glass noodles.
-              </p>
-
-              <p>That variety is part of why eomuk can surprise visitors.</p>
-
-              <p>
-                At first, it may look like one small side ingredient. Then you
-                walk into a bigger eomuk shop and see a whole display case full
-                of different shapes. Suddenly it feels less like &quot;one fish
-                cake&quot; and more like a small category of Korean food.
-              </p>
-
-              <p>Eomuk also appears inside tteokbokki.</p>
-
-              <p>
-                In many tteokbokki shops, the red spicy rice cakes come with
-                pieces of fish cake. The eomuk soaks up the sauce and makes the
-                dish feel more like a snack meal. Some people even like the fish
-                cake pieces as much as the rice cakes.
+                For a first try, choose one skewer at a street stall or bunsik
+                shop, eat it while warm, sip the broth if offered, then try
+                tteokbokki next to it for the classic pairing. If you are worried
+                about seafood flavor, the broth-skewer version is usually mild and
+                savory — not raw fish, more like a soft, warm, slightly chewy
+                snack with a seafood-based background. Good eomuk has a gentle
+                chew; some versions are soft and smooth, others bouncier or
+                thicker depending on the fish paste and starch. Quality varies —
+                a convenience store snack, a market skewer, and a good Busan shop
+                belong to different situations, none automatically wrong.
               </p>
 
               <p>
-                This is why eomuk and tteokbokki feel so close in Korean food
-                culture.
+                Once you recognize eomuk, you start seeing it everywhere — in
+                tteokbokki sauce, warm soup, street skewers, snack-shop menus,
+                next to fried food, at winter markets. It stops being &quot;that
+                fish cake thing&quot; and starts feeling like part of daily Korea:
+                warm, savory, chewy, and always nearby.
               </p>
-
-              <p>They belong to the same casual world.</p>
-
-              <p>
-                Bunsik shops, school areas, market stalls, winter streets, paper
-                cups of broth, red sauce, fried snacks, and people eating
-                quickly before going somewhere else.
-              </p>
-
-              <p>Eomuk is not usually the star of a fancy meal.</p>
-
-              <p>
-                It is more like a familiar supporting character that Koreans see
-                everywhere.
-              </p>
-
-              <p>You can find it in soups.</p>
-
-              <p>You can find it in lunch boxes.</p>
-
-              <p>You can find it as a side dish.</p>
-
-              <p>You can find it in convenience store snacks.</p>
-
-              <p>You can find it on skewers at markets.</p>
-
-              <p>
-                And if you visit Busan, you may find whole shops built around
-                it.
-              </p>
-
-              <p>
-                For first-time visitors, the easiest way to try eomuk is at a
-                street stall or bunsik shop.
-              </p>
-
-              <p>Choose one skewer.</p>
-
-              <p>Eat it while it is warm.</p>
-
-              <p>Sip the broth if the shop offers it.</p>
-
-              <p>
-                Then try tteokbokki next to it if you want the classic pairing.
-              </p>
-
-              <p>
-                If you are worried about seafood flavor, start with the
-                broth-skewer version. It is usually mild, savory, and easy to
-                understand. It does not taste like raw fish. It tastes more like
-                a soft, warm, slightly chewy snack with a seafood-based
-                background.
-              </p>
-
-              <p>The texture is important.</p>
-
-              <p>
-                Good eomuk should not feel like bread or cake. It should have a
-                gentle chew. Some versions are soft and smooth. Some are
-                bouncier. Some are thicker and richer. The texture depends on
-                the fish paste, the amount of starch, and how it is made.
-              </p>
-
-              <p>That is why quality can vary.</p>
-
-              <p>
-                A cheap convenience store fish cake snack may feel different from
-                a good Busan eomuk shop. A market skewer may feel different
-                from packaged eomuk cooked at home. None of these is
-                automatically wrong. They just belong to different situations.
-              </p>
-
-              <p>
-                For HAEMIL readers, eomuk is worth knowing because it helps
-                unlock a lot of Korean casual food.
-              </p>
-
-              <p>Once you recognize it, you start seeing it everywhere.</p>
-
-              <p>In tteokbokki sauce.</p>
-
-              <p>In warm soup.</p>
-
-              <p>On street skewers.</p>
-
-              <p>Inside snack-shop menus.</p>
-
-              <p>Next to fried food.</p>
-
-              <p>At winter markets.</p>
-
-              <p>
-                That is when eomuk stops being &quot;that fish cake thing&quot;
-                and starts feeling like part of daily Korea.
-              </p>
-
-              <p>Not dramatic.</p>
-
-              <p>Not expensive.</p>
-
-              <p>Not difficult.</p>
-
-              <p>Just warm, savory, chewy, and always nearby.</p>
             </div>
           </section>
 

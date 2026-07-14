@@ -183,159 +183,76 @@ export default function WhatIsBungeoppangPage() {
 
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
             <div className="space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
-              <p>It is shaped like a fish.</p>
-
-              <p>But it does not taste like fish.</p>
-
-              <p>And it does not contain fish.</p>
-
               <p>
-                Bungeoppang, or 붕어빵, is a warm fish-shaped snack usually filled
-                with sweet red bean paste. The name roughly means &quot;carp
-                bread,&quot; because the mold looks like a small fish. For many
-                Koreans, though, the important part is not the shape. It is the
-                season.
+                It is shaped like a fish, but it does not taste like fish and
+                does not contain fish. Bungeoppang, or 붕어빵, is a warm
+                fish-shaped snack usually filled with sweet red bean paste. The
+                name roughly means &quot;carp bread,&quot; because the mold
+                looks like a small fish — but for many Koreans, the important
+                part is the season.
               </p>
 
-              <p>Bungeoppang feels like winter.</p>
-
               <p>
-                You usually start noticing it when the air gets cold. A small
-                stall appears near a subway station, market street, school area,
-                or neighborhood corner. There is a metal mold, warm batter,
-                sweet filling, and that smell that makes people check their
-                pockets for coins or a card.
+                Bungeoppang feels like winter. You usually start noticing it
+                when the air gets cold — a small stall near a subway station,
+                market street, school area, or neighborhood corner, with a metal
+                mold, warm batter, sweet filling, and that smell that makes
+                people check their pockets for coins or a card. A good
+                bungeoppang is lightly crisp outside, soft inside, warm enough to
+                hold carefully, and sweet without feeling like a big dessert.
+                The classic filling is red bean paste (pat); if you are new to
+                Korean sweets, it may feel unusual at first, but it is one of
+                the most familiar sweet flavors here — gentle, earthy, and not
+                too loud.
               </p>
 
-              <p>It is not fancy.</p>
-
-              <p>That is why it works.</p>
-
               <p>
-                A good bungeoppang is simple: lightly crisp on the outside, soft
-                inside, warm enough to hold carefully, and sweet without feeling
-                like a big dessert. The classic version has red bean paste,
-                called pat in Korean. If you are new to Korean sweets, red bean
-                may feel unusual at first, but it is one of the most familiar
-                sweet flavors in Korea.
-              </p>
-
-              <p>It is gentle, earthy, and not too loud.</p>
-
-              <p>
-                These days, you may also find custard or cream-filled
-                bungeoppang. Some places sell sweet potato, chocolate, cheese,
-                or seasonal fillings. The fillings depend on the vendor, the
-                neighborhood, and the trend at the time. So do not expect every
-                stall to have the same menu.
-              </p>
-
-              <p>The red bean one is the old classic.</p>
-
-              <p>
-                The custard one is the easy modern favorite for many first-time
-                visitors.
-              </p>
-
-              <p>Part of the fun is choosing between them.</p>
-
-              <p>
-                In Korea, people sometimes joke about bungeoppang like it is a
-                small winter test of personality. Do you like red bean or
-                custard? Do you eat the head first or the tail first? Do you like
-                it crisp or soft? These are not serious questions, but they show
+                These days you may also find custard or cream-filled bungeoppang,
+                plus sweet potato, chocolate, cheese, or seasonal fillings
+                depending on the vendor and neighborhood. The red bean one is
+                the old classic; custard is the easy modern favorite for many
+                first-time visitors. Part of the fun is choosing between them —
+                Koreans sometimes joke about red bean vs custard, head first vs
+                tail first, crisp vs soft. Not serious questions, but they show
                 how familiar the snack feels.
               </p>
 
-              <p>It is the kind of food people talk about casually.</p>
-
-              <p>Not because it is rare.</p>
-
-              <p>Because it is ordinary in a warm way.</p>
-
               <p>
-                For travelers, bungeoppang is a good food to try because it
-                gives you a very local winter moment. You do not need a
-                restaurant reservation. You do not need to understand a full
-                menu. You just find a stall, choose a filling, and eat it while
-                it is still warm.
+                For travelers, bungeoppang gives you a very local winter moment.
+                Find a stall, choose a filling, and eat it while it is still
+                warm — the outside still has a little crispness and the filling
+                is hot. If you carry it around too long, it becomes softer; still
+                good, but not the same.
               </p>
 
-              <p>That is the best way to eat it.</p>
-
-              <p>Do not wait too long.</p>
-
               <p>
-                Bungeoppang is much better when the outside still has a little
-                crispness and the filling is warm. If you carry it around for
-                too long, it becomes softer. Still good, but not the same.
+                Bungeoppang can be seasonal. In Korea it is much easier to find
+                in winter than in the middle of summer. Some shops sell it
+                year-round, and some cafés or snack brands make their own
+                versions, but the classic street-stall feeling belongs to cold
+                weather. Visit in December, January, or February and the charm
+                clicks faster — cold hands really do make bungeoppang taste
+                better in feeling, not just as a joke.
               </p>
-
-              <p>One thing to know: bungeoppang can be seasonal.</p>
-
-              <p>
-                In Korea, it is much easier to find in winter than in the middle
-                of summer. Some shops may sell it year-round, and some cafés or
-                snack brands may make their own versions, but the classic
-                street-stall feeling belongs to cold weather. If you visit Korea
-                in December, January, or February, you will probably understand
-                the charm more quickly.
-              </p>
-
-              <p>Cold hands make bungeoppang taste better.</p>
-
-              <p>That sounds like a joke, but it is true in feeling.</p>
 
               <p>
                 When the weather is cold, a warm fish-shaped snack becomes more
-                than a snack. It becomes a small comfort. People buy a few pieces
-                to share. Office workers grab one on the way home. Students eat
-                them after class. Someone brings a paper bag of them back to the
-                family.
-              </p>
-
-              <p>That is why bungeoppang can feel nostalgic.</p>
-
-              <p>
-                It reminds people of winter streets, school days, neighborhood
-                stalls, and ordinary evenings. It is not a luxury dessert. It is
-                closer to a small seasonal memory you can eat.
+                than a snack — a small comfort. People buy a few pieces to
+                share; office workers grab one on the way home; students eat them
+                after class. It reminds people of winter streets, school days,
+                neighborhood stalls, and ordinary evenings — closer to a small
+                seasonal memory you can eat than a luxury dessert.
               </p>
 
               <p>
-                You may also hear people compare it to Japanese taiyaki.
-              </p>
-
-              <p>
-                The two snacks are related in shape and idea, and they can look
-                similar to visitors. But in Korea, bungeoppang has its own
-                everyday feeling. It is tied strongly to winter street stalls and
-                the small emotional comfort of finding one when the weather gets
-                cold.
-              </p>
-
-              <p>
-                For HAEMIL readers, the easiest way to understand bungeoppang is
-                this:
-              </p>
-
-              <p>It is not about the fish.</p>
-
-              <p>It is about the cold day.</p>
-
-              <p>
-                It is about standing near a warm stall for a minute, choosing
-                red bean or custard, and eating something simple before you keep
-                walking.
-              </p>
-
-              <p>If you see it in Korea, try one.</p>
-
-              <p>Especially in winter.</p>
-
-              <p>
-                And if someone asks whether there is fish inside, you can smile
-                and say no.
+                You may hear comparisons to Japanese taiyaki. The two snacks are
+                related in shape and idea, but in Korea bungeoppang has its own
+                everyday feeling, tied to winter street stalls and the comfort of
+                finding one when the weather turns cold. It is not about the fish
+                shape — it is about the cold day, standing near a warm stall for
+                a minute, choosing red bean or custard, and eating something
+                simple before you keep walking. If you see it in Korea, try one,
+                especially in winter.
               </p>
             </div>
           </section>

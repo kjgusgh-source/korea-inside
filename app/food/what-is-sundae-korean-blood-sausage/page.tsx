@@ -183,206 +183,77 @@ export default function WhatIsSundaeKoreanBloodSausagePage() {
 
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
             <div className="space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
-              <p>Korean blood sausage.</p>
-
               <p>
-                For some visitors, that name makes it feel like a food challenge
-                before they even see it. But in Korea, sundae is not usually
-                treated like a strange or extreme food. It is everyday snack
-                food. You see it at markets, bunsik shops, street stalls,
-                late-night food places, and delivery menus.
+                Korean blood sausage — for some visitors the English name makes
+                it feel like a food challenge before they even see it. In Korea,
+                though, sundae is everyday snack food at markets, bunsik shops,
+                street stalls, late-night places, and delivery menus. It belongs
+                to the same world as tteokbokki, twigim, eomuk, and gimbap.
               </p>
 
               <p>
-                It belongs to the same world as tteokbokki, twigim, eomuk, and
-                gimbap.
-              </p>
-
-              <p>That is the first thing to understand.</p>
-
-              <p>
-                Sundae, or 순대, is a Korean blood sausage. A common snack-shop
-                version is made with glass noodles, blood, and casing, though the
-                exact ingredients and texture can vary. It is usually sliced
-                into thick pieces and served warm.
+                Sundae, or 순대, is usually made with glass noodles, blood, and
+                casing, though ingredients and texture vary. It is sliced into
+                thick pieces and served warm. The taste is milder than many
+                first-time visitors expect — not sharp or bloody in a dramatic
+                way. The texture is soft, slightly chewy, and filling; the flavor
+                is savory and calm, which is why it works so well next to spicy
+                tteokbokki sauce.
               </p>
 
               <p>
-                The taste is milder than many first-time visitors expect.
+                One of the most natural ways to eat sundae is to dip it into
+                tteokbokki sauce. The sundae is mild; the red sauce adds heat,
+                sweetness, and stickiness. Order sundae with tteokbokki at a
+                bunsik shop and the two foods feel meant for the same table —
+                tteokbokki for spicy chew, twigim for fried crunch, eomuk for
+                warm broth, sundae for something soft and heavier. For a first
+                try, order it with tteokbokki rather than alone; that is how
+                Koreans usually experience it.
               </p>
 
               <p>
-                It is not usually sharp or bloody in the dramatic way people
-                imagine. The texture is soft, slightly chewy, and filling. The
-                flavor is savory and calm, which is why it works so well next to
-                spicy tteokbokki sauce.
-              </p>
-
-              <p>That sauce matters.</p>
-
-              <p>
-                One of the most natural ways to eat sundae in Korea is to dip it
-                into tteokbokki sauce. The sundae itself is mild, and the red
-                sauce adds heat, sweetness, and stickiness. If you order sundae
-                with tteokbokki at a bunsik shop, the two foods start to feel
-                like they were meant to sit on the same table.
+                Some places serve sundae with liver, lung, or other offal pieces,
+                which can surprise visitors. At a market or old-style shop, the
+                owner may ask whether you want &quot;everything&quot; included —
+                sundae plus extra organ pieces. Some people love those parts;
+                some skip them. Both are normal; start with only sundae if you
+                are unsure. Dipping sauce also varies: salt or seasoned salt in
+                some places, ssamjang or chojang in others depending on region
+                and shop.
               </p>
 
               <p>
-                This is why sundae is easier to understand as part of a set.
-              </p>
-
-              <p>Tteokbokki gives you spicy chew.</p>
-
-              <p>Twigim gives you fried crunch.</p>
-
-              <p>Eomuk gives you warm broth.</p>
-
-              <p>Sundae gives you something soft, savory, and heavier.</p>
-
-              <p>
-                Together, they create the classic Korean snack-shop feeling.
+                Sundae is not one fixed food either. The basic bunsik-shop version
+                is simple and made for quick eating. Chapssal sundae uses
+                glutinous rice and can feel fuller and more old-fashioned.
+                Regional styles use more blood, different fillings, or richer
+                texture — Byeongcheon sundae is a regional name many Koreans
+                recognize. A school-area bunsik shop, a market stall, and a
+                regional specialty restaurant will not feel the same; they are
+                just different sundae moods.
               </p>
 
               <p>
-                You do not have to eat sundae alone like a formal dish. In
-                fact, for a first try, it may be better not to. Order it with
-                tteokbokki or eat it with other bunsik foods. That way, you
-                understand how Koreans usually experience it: not as one isolated
-                sausage, but as part of a casual meal.
-              </p>
-
-              <p>
-                Some places also serve sundae with liver, lung, or other offal
-                pieces.
-              </p>
-
-              <p>This can surprise visitors.</p>
-
-              <p>
-                If you order sundae at a market or old-style shop, the owner may
-                ask whether you want &quot;everything&quot; included. In Korean,
-                that can mean sundae plus extra organ pieces. Some people love
-                those parts. Some people skip them. Both are normal.
-              </p>
-
-              <p>If you are not sure, you can start with only sundae.</p>
-
-              <p>
-                The dipping sauce can also change depending on where you are.
-              </p>
-
-              <p>
-                In some places, sundae comes with salt or seasoned salt. In
-                other regions or shops, people may eat it with ssamjang, a thick
-                savory dipping paste, or chojang, a red vinegared chili sauce.
-                This is one of those small Korean food details that locals
-                notice quickly.
-              </p>
-
-              <p>
-                Ask two Koreans how they dip sundae, and you may get different
-                answers.
-              </p>
-
-              <p>That is part of the fun.</p>
-
-              <p>Sundae is not one single fixed food either.</p>
-
-              <p>
-                The basic bunsik-shop sundae is the easiest version to find. It
-                is simple, soft, and made for quick eating. Chapssal sundae uses
-                glutinous rice and can feel fuller and more old-fashioned. Some
-                regional styles use more blood, different fillings, or a richer
-                texture. Byeongcheon sundae is one regional name many Koreans
-                recognize when talking about famous sundae areas.
-              </p>
-
-              <p>For a traveler, you do not need to memorize every type.</p>
-
-              <p>
-                Just know that sundae can change a lot depending on where you
-                eat it.
-              </p>
-
-              <p>
-                A simple plate at a school-area bunsik shop will not feel the
-                same as a regional specialty sundae restaurant. A market stall
-                may serve it one way, while a delivery tteokbokki set may
-                include a softer, more casual version.
-              </p>
-
-              <p>None of these is automatically wrong.</p>
-
-              <p>They are just different sundae moods.</p>
-
-              <p>
-                The most approachable way to try sundae is at a bunsik shop or
-                market stall.
-              </p>
-
-              <p>Order a small portion.</p>
-
-              <p>Add tteokbokki if you can.</p>
-
-              <p>Try one piece plain first.</p>
-
-              <p>Then dip the next piece in sauce.</p>
-
-              <p>If the shop gives you salt, try that too.</p>
-
-              <p>
-                You may find that sundae makes more sense after the second or
-                third bite. The first bite is often about getting used to the
-                idea. After that, the texture and the pairing with sauce become
-                easier.
-              </p>
-
-              <p>
-                That is why sundae has stayed in Korean daily food culture.
-              </p>
-
-              <p>It is cheap enough to share.</p>
-
-              <p>Filling enough to count as a snack meal.</p>
-
-              <p>Mild enough to balance spicy food.</p>
-
-              <p>
-                And familiar enough that many Koreans connect it with school
-                days, market streets, winter evenings, or late-night delivery.
-              </p>
-
-              <p>It is not fancy.</p>
-
-              <p>It is not trying to be beautiful.</p>
-
-              <p>But it has a place.</p>
-
-              <p>
-                For HAEMIL readers, the best way to think about sundae is this:
+                The most approachable first try is at a bunsik shop or market
+                stall: a small portion with tteokbokki if you can. Try one
+                piece plain, then dip the next in sauce; if the shop gives you
+                salt, try that too. Sundae often makes more sense after the
+                second or third bite — the first is about getting used to the
+                idea, then texture and sauce pairing become easier. It is cheap
+                enough to share, filling enough for a snack meal, mild enough to
+                balance spicy food, and familiar enough that many Koreans connect
+                it with school days, market streets, and late-night delivery.
               </p>
 
               <p>
                 Do not treat it like a scary food just because the English
-                translation says blood sausage.
+                translation says blood sausage. Treat it like Korean snack-shop
+                food — a soft, savory piece on the same table as red tteokbokki,
+                fried twigim, and warm eomuk broth, with someone saying,
+                &quot;Just try one.&quot; That is usually when sundae makes the
+                most sense: not alone, not as a dare, but as part of the plate.
               </p>
-
-              <p>Treat it like a Korean snack-shop food.</p>
-
-              <p>
-                A soft, savory piece on the same table as red tteokbokki, fried
-                twigim, warm eomuk broth, and a few friends saying,
-                &quot;Just try one.&quot;
-              </p>
-
-              <p>That is usually how sundae makes the most sense.</p>
-
-              <p>Not alone.</p>
-
-              <p>Not as a dare.</p>
-
-              <p>But as part of the plate.</p>
             </div>
           </section>
 

@@ -176,193 +176,76 @@ export default function WhatIsKoreanStreetToastPage() {
 
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
             <div className="space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
-              <p>It is warmer, sweeter, messier, and much more everyday.</p>
-
               <p>
-                In Korea, 길거리 토스트 means &quot;street toast.&quot; It usually
-                means a simple toasted sandwich made with buttered bread, egg,
-                cabbage or vegetables, and a sweet sauce. Depending on the stall,
-                it may also have ham, cheese, ketchup, sugar, or other small
-                additions.
-              </p>
-
-              <p>It is not fancy food.</p>
-
-              <p>That is why people like it.</p>
-
-              <p>
-                Street toast feels like something you buy on the way somewhere.
-                On the way to school. Before work. Near a subway station. Around
-                a market. In a busy morning street where the smell of butter,
-                egg, and toasted bread makes people slow down for a minute.
-              </p>
-
-              <p>The first thing to understand is the taste.</p>
-
-              <p>Korean street toast is often sweet.</p>
-
-              <p>
-                For some visitors, that can be surprising. You may expect an egg
-                sandwich to be salty, but Korean street toast often has a soft
-                sweetness from sugar, sauce, or ketchup-style flavor. The egg and
-                cabbage make it feel like a meal, while the sweetness makes it
-                feel almost like comfort food.
-              </p>
-
-              <p>That balance is the point.</p>
-
-              <p>
-                It is not trying to be a perfect sandwich. It is trying to be
-                quick, warm, cheap, and satisfying.
-              </p>
-
-              <p>The egg is usually the heart of it.</p>
-
-              <p>
-                Many versions use a flat egg patty mixed with shredded cabbage,
-                carrot, or other vegetables. The bread is toasted on a griddle
-                with butter or margarine. Then the vendor adds sauce, maybe
-                cheese or ham, folds everything together, and wraps it so you can
-                carry it away.
-              </p>
-
-              <p>When it is good, the outside is lightly crisp and the inside is soft.</p>
-
-              <p>That is why street toast is especially nice in the morning.</p>
-
-              <p>
-                It feels simple, but it has a very Korean kind of comfort. Rice is
-                still central to Korean meals, but bread foods like toast have
-                become part of everyday quick eating too. Street toast sits
-                somewhere between breakfast, snack, and cheap meal.
-              </p>
-
-              <p>It is not a traditional Korean dish in the old sense.</p>
-
-              <p>But it is very Korean in the way people actually eat it.</p>
-
-              <p>You can think of it as Korean busy-morning food.</p>
-
-              <p>
-                The kind of thing that does not need a long explanation when you
-                are standing near a stall. You see the bread. You smell the egg.
-                You hear the griddle. You order one, hold it in paper, and eat it
-                before it gets cold.
-              </p>
-
-              <p>That small scene is part of the taste.</p>
-
-              <p>
-                At many old-school toast stalls, the feeling is not only about
-                the recipe. It is also about the rhythm: bread on the griddle,
-                egg cooking flat, sauce added quickly, the sandwich wrapped, and
-                the next person waiting nearby.
-              </p>
-
-              <p>That is very different from a café brunch mood.</p>
-
-              <p>It is also different from modern toast chains.</p>
-
-              <p>
-                In Korea, you may see Isaac Toast or Eggdrop and think, &quot;Is
-                this the same thing as street toast?&quot; The answer is: related,
-                but not exactly the same.
+                It is warmer, sweeter, messier, and much more everyday than café
+                toast. In Korea, 길거리 토스트 means &quot;street toast&quot; — a
+                simple toasted sandwich with buttered bread, egg, cabbage or
+                vegetables, and a sweet sauce, sometimes with ham, cheese,
+                ketchup, or sugar depending on the stall. Street toast feels
+                like something you buy on the way somewhere: before school, before
+                work, near a subway station, around a market, in a busy morning
+                street where butter, egg, and toasted bread make people slow
+                down for a minute.
               </p>
 
               <p>
-                Isaac Toast is probably the chain many people connect with Korean
-                toast. It feels more organized than a street stall, with a set
-                menu, consistent flavors, and a familiar takeout style. It still
-                keeps the sweet-and-savory Korean toast feeling, but it is
-                cleaner, more standardized, and easier to find as a brand.
+                The taste is often sweet, which can surprise visitors who expect
+                a salty egg sandwich. Korean street toast usually has a soft
+                sweetness from sugar, sauce, or ketchup-style flavor — the egg
+                and cabbage make it feel like a meal, while the sweetness makes
+                it comfort food. It is not trying to be a perfect sandwich; it is
+                quick, warm, cheap, and satisfying. Many versions use a flat egg
+                patty mixed with shredded cabbage or carrot; the bread is toasted
+                on a griddle with butter or margarine, then sauce, cheese, or
+                ham is added, everything folded and wrapped so you can carry it
+                away. When it is good, the outside is lightly crisp and the inside
+                is soft — especially nice in the morning.
               </p>
-
-              <p>Eggdrop feels different again.</p>
 
               <p>
-                Eggdrop is more like a modern egg sandwich brand, with a softer,
-                more brunch-like image. The sandwiches often feel thicker, richer,
-                and more designed for photos. It belongs to Korea&apos;s wider
-                toast and egg sandwich culture, but it does not feel like the
-                same old street-cart toast you might find near a market.
+                It is not a traditional Korean dish in the old sense, but very
+                Korean in how people actually eat it — busy-morning food where
+                you see the bread, smell the egg, hear the griddle, order one,
+                hold it in paper, and eat before it gets cold. At old-school
+                stalls, the rhythm matters as much as the recipe: bread on the
+                griddle, egg cooking flat, sauce added quickly, sandwich wrapped,
+                next person waiting — very different from a café brunch mood.
               </p>
-
-              <p>So the easiest way to separate them is this:</p>
-
-              <p>Street toast feels like morning street food.</p>
-
-              <p>Isaac Toast feels like a Korean toast chain.</p>
-
-              <p>Eggdrop feels like a modern egg sandwich café brand.</p>
-
-              <p>All three can be good, but they give different moods.</p>
-
-              <p>For a traveler, that difference matters.</p>
 
               <p>
-                If you want the old local feeling, look for a small stall or
-                market-style toast shop. If you want an easy chain version, Isaac
-                Toast is a comfortable place to start. If you want a softer, more
-                modern egg sandwich, Eggdrop may feel more familiar.
+                You may see Isaac Toast or Eggdrop and wonder if they are the
+                same thing. Related, but not exactly. Isaac Toast is a Korean
+                toast chain — more organized, with a set menu and consistent
+                sweet-and-savory flavors, cleaner and easier to find as a brand.
+                Eggdrop is a modern egg sandwich brand with a softer, more
+                brunch-like image — thicker, richer, more designed for photos.
+                Street toast feels like morning street food; Isaac Toast feels
+                like a Korean toast chain; Eggdrop feels like a modern egg
+                sandwich café. All three can be good, but they give different
+                moods.
               </p>
-
-              <p>None of these is the &quot;only correct&quot; version.</p>
-
-              <p>Korean toast culture is flexible.</p>
 
               <p>
-                That is also why recipes online can look different from each
-                other. Some use cabbage. Some use cheese. Some use ham. Some add
-                sugar. Some use ketchup. Some use a special sweet sauce. A street
-                vendor may make it one way, while a chain store builds a whole
-                menu around it.
+                For the old local feeling, look for a small stall or
+                market-style toast shop. For an easy chain version, Isaac Toast
+                is a comfortable start. For a softer modern sandwich, Eggdrop may
+                feel more familiar. Recipes vary — some use cabbage, cheese, ham,
+                sugar, ketchup, or special sweet sauce — so the warm version you
+                can eat right away is a fine first try.
               </p>
-
-              <p>Do not worry too much about finding the most authentic one.</p>
-
-              <p>For a first try, the best version is the one you can eat warm.</p>
 
               <p>
                 Order it, hold it carefully, and take a bite while the bread is
-                still crisp. Notice the sweetness first. Then the egg. Then the
-                cabbage. Then the buttery bread. If you expected a salty
-                sandwich, it may feel strange for two seconds. After that, it
-                usually starts to make sense.
+                still crisp. Notice the sweetness first, then the egg, cabbage,
+                and buttery bread. If you expected salty, it may feel strange for
+                two seconds — then it usually clicks. Korean street toast is not
+                trying to impress you; it feeds you quickly and makes the morning
+                feel a little better. In a city where food can be trendy and
+                fast-changing, street toast has stayed because it is small, warm,
+                and familiar even if you have never eaten it before — not spicy,
+                not dramatic, just bread, egg, cabbage, sauce, and a few minutes
+                on a hot griddle.
               </p>
-
-              <p>Korean street toast is not trying to impress you.</p>
-
-              <p>
-                It is trying to feed you quickly and make the morning feel a
-                little better.
-              </p>
-
-              <p>That is why it has stayed around.</p>
-
-              <p>
-                In a city like Seoul, food can be trendy, expensive, beautiful,
-                and fast-changing. But street toast is still one of those foods
-                that feels easy to understand. It is small. It is warm. It is
-                familiar even if you have never eaten it before.
-              </p>
-
-              <p>
-                For HAEMIL readers, this is a good food to try because it shows
-                a softer side of Korean street food.
-              </p>
-
-              <p>Not spicy.</p>
-
-              <p>Not dramatic.</p>
-
-              <p>Not something you need a group to enjoy.</p>
-
-              <p>
-                Just bread, egg, cabbage, sauce, and a few minutes on a hot
-                griddle.
-              </p>
-
-              <p>Sometimes that is enough.</p>
             </div>
           </section>
 

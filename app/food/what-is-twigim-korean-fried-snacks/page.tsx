@@ -183,237 +183,65 @@ export default function WhatIsTwigimKoreanFriedSnacksPage() {
 
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
             <div className="space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
-              <p>You see something fried.</p>
-
-              <p>You point at it.</p>
-
-              <p>You eat it with tteokbokki sauce.</p>
-
-              <p>That is already half the story.</p>
-
               <p>
-                Twigim, or 튀김, simply means fried food. But when Koreans talk
-                about twigim at a bunsik shop or street stall, they usually mean
-                casual fried snacks served next to foods like tteokbokki, eomuk,
-                sundae, and gimbap.
-              </p>
-
-              <p>It is not fancy food.</p>
-
-              <p>It is snack food.</p>
-
-              <p>That is why it feels so natural beside tteokbokki.</p>
-
-              <p>
-                Tteokbokki is spicy, sweet, chewy, and covered in red sauce.
-                Twigim is fried, usually crisp on the outside, and easy to dip.
-                Put them together, and the sauce suddenly has a second job. It
-                is not only for the rice cakes anymore. It becomes a dipping
-                sauce for everything on the plate.
-              </p>
-
-              <p>This is one of the most Korean ways to eat twigim.</p>
-
-              <p>You do not always eat it dry.</p>
-
-              <p>You dip it into tteokbokki sauce.</p>
-
-              <p>Sometimes you ask the shop to pour sauce over it.</p>
-
-              <p>
-                Sometimes the twigim sits next to the tteokbokki long enough
-                that the crisp edges become softer and red. That may sound like
-                a problem if you only think fried food should stay crunchy, but
-                in Korea, saucy twigim has its own charm.
-              </p>
-
-              <p>Fresh and crispy is good.</p>
-
-              <p>Soft with tteokbokki sauce is also good.</p>
-
-              <p>They are just different moods.</p>
-
-              <p>
-                The most famous twigim for many Koreans is probably gimmari.
+                You see something fried, point at it, eat it with tteokbokki
+                sauce — that is already half the story. Twigim, or 튀김, simply
+                means fried food, but at a bunsik shop or street stall it usually
+                means casual fried snacks served next to tteokbokki, eomuk,
+                sundae, and gimbap. Tteokbokki is spicy, sweet, and chewy;
+                twigim is fried and easy to dip. Put them together and the red
+                sauce becomes a dipping sauce for everything on the plate.
               </p>
 
               <p>
-                Gimmari is a fried seaweed roll filled with glass noodles. It
-                looks simple, but it is one of the best foods to dip into
-                tteokbokki sauce. The seaweed outside gets fried, the noodles
-                inside stay soft, and the sauce fills in the flavor.
+                You do not always eat twigim dry — dip it into tteokbokki sauce,
+                or ask the shop to pour sauce over it. Sometimes the pieces sit
+                next to the tteokbokki long enough that crisp edges turn soft
+                and red. Fresh and crispy is good; soft with sauce is also good.
+                They are just different moods.
               </p>
 
               <p>
-                If you are trying Korean bunsik food for the first time, gimmari
-                is a good place to start.
-              </p>
-
-              <p>Fried mandu is another easy choice.</p>
-
-              <p>
-                These are fried dumplings, often crisp and simple. They are not
-                always the most delicate dumplings in the world, but that is
-                not the point. At a bunsik shop, fried mandu works because it is
-                easy, familiar, and very good with sauce.
-              </p>
-
-              <p>Fried squid is also common.</p>
-
-              <p>
-                It can be chewy, salty, and satisfying, especially when the
-                batter is still crisp. Some shops sell squid pieces, some sell
-                longer pieces, and some may not have it at all. Like most bunsik
-                food, the exact menu depends on the shop.
-              </p>
-
-              <p>Fried sweet potato is a softer option.</p>
-
-              <p>
-                It is a little sweet, warm, and less intense than squid or
-                dumplings. If you do not want something too salty, sweet potato
-                twigim can feel comforting.
+                Gimmari is probably the most famous twigim — a fried seaweed
+                roll filled with glass noodles, simple but one of the best foods
+                to dip. Fried mandu (dumplings) are another easy choice: crisp,
+                familiar, and very good with sauce. Fried squid is common too —
+                chewy, salty, satisfying when the batter is still crisp. Fried
+                sweet potato is a softer option if you want something less salty.
+                You may also see fried vegetables, shrimp, or shop-specific
+                pieces; there is no single correct plate, and menus vary a lot by
+                shop.
               </p>
 
               <p>
-                You may also see fried vegetables, fried shrimp, or other
-                shop-specific pieces.
-              </p>
-
-              <p>This is why twigim can be fun.</p>
-
-              <p>There is no single correct plate.</p>
-
-              <p>
-                One small shop may have five basic types. A market stall may
-                have a big display. A school-area bunsik shop may keep it
-                simple. A busy place may fry in larger batches, while a smaller
-                place may have fewer choices.
-              </p>
-
-              <p>Do not worry about finding the perfect one.</p>
-
-              <p>Look for what seems fresh.</p>
-
-              <p>
-                If the pieces look too old or too oily, skip them. If people
-                are ordering and the fried snacks are moving quickly, that is
-                usually a better sign.
+                Look for what seems fresh. If pieces look too old or oily, skip
+                them; if people are ordering and fried snacks are moving quickly,
+                that is usually a better sign. Twigim is sometimes compared to
+                tempura, but bunsik-style twigim is more casual and
+                sauce-friendly — think red tteokbokki tray, paper cups of eomuk
+                broth, and people choosing from a warm display case, not a clean
+                light-batter plate.
               </p>
 
               <p>
-                Twigim is sometimes compared to tempura, and the comparison is
-                understandable because both are fried. But Korean bunsik-style
-                twigim does not always feel like delicate Japanese tempura. It
-                is often more casual, more sauce-friendly, and more connected to
-                snack-shop eating.
-              </p>
-
-              <p>The mood is different.</p>
-
-              <p>
-                Tempura may make you think of a clean plate and light batter.
+                Twigim is not usually the main character, but it makes the whole
+                snack meal better. Order tteokbokki alone and it can feel like
+                one spicy dish; add twigim and you get chew from the rice cakes,
+                crunch from the fried snacks, warmth from eomuk broth if you
+                have it, and maybe sundae or gimbap on the side — the classic
+                bunsik feeling of a small table full of things that work together.
               </p>
 
               <p>
-                Twigim may make you think of a red tteokbokki tray, paper cups
-                of eomuk broth, and people choosing pieces from a warm display
-                case.
+                For a first try: one tteokbokki, a few pieces of twigim, and a
+                cup of eomuk broth if the shop offers it. Take one fried piece,
+                dip it in the red sauce while it is warm, then try another after
+                it has soaked a little — the softer, saucier version can feel
+                just as good as the crispy one. Korean fried snacks are about
+                sauce, sharing, and eating something simple with something spicy.
+                Once you notice twigim, Korean snack food stops looking like
+                separate items and starts looking like one full plate.
               </p>
-
-              <p>That difference matters.</p>
-
-              <p>Twigim is not only about frying. It is about where it lives.</p>
-
-              <p>It lives beside tteokbokki.</p>
-
-              <p>It lives near market alleys.</p>
-
-              <p>It lives in bunsik shops where students stop after school.</p>
-
-              <p>
-                It lives on small plates shared between friends who say they are
-                not that hungry, then finish everything anyway.
-              </p>
-
-              <p>That is why twigim feels so familiar in Korea.</p>
-
-              <p>
-                It is not usually the main character, but it makes the whole
-                snack meal better.
-              </p>
-
-              <p>If you order tteokbokki alone, it can feel like one spicy dish.</p>
-
-              <p>
-                If you add twigim, the meal becomes more fun. You get chew from
-                the rice cakes, crunch from the fried snacks, warmth from eomuk
-                broth if you have it, and maybe sundae or gimbap on the side.
-              </p>
-
-              <p>This is the classic bunsik feeling.</p>
-
-              <p>Not one perfect dish.</p>
-
-              <p>A small table full of things that work together.</p>
-
-              <p>For first-time visitors, an easy order is:</p>
-
-              <p>One tteokbokki.</p>
-
-              <p>A few pieces of twigim.</p>
-
-              <p>One cup of eomuk broth if the shop offers it.</p>
-
-              <p>That is enough to understand the rhythm.</p>
-
-              <p>
-                Take one fried piece. Dip it in the red sauce. Eat it while it
-                is still warm. Then try another piece after it has soaked a
-                little. You may find that the softer, saucier version feels
-                just as good as the crispy one.
-              </p>
-
-              <p>That is the small discovery.</p>
-
-              <p>
-                Korean fried snacks are not only about crunch. They are about
-                sauce, sharing, and the comfort of eating something simple with
-                something spicy.
-              </p>
-
-              <p>
-                For HAEMIL readers, twigim is worth knowing because it makes
-                tteokbokki culture easier to understand. Once you notice twigim,
-                you stop seeing Korean snack food as separate items. You start
-                seeing the full plate.
-              </p>
-
-              <p>Tteokbokki gives the sauce.</p>
-
-              <p>Twigim gives the crunch.</p>
-
-              <p>Eomuk gives the broth.</p>
-
-              <p>Sundae gives the heavier side.</p>
-
-              <p>Gimbap makes it feel like a meal.</p>
-
-              <p>
-                Together, they create the kind of casual Korean food scene that
-                many locals grew up with.
-              </p>
-
-              <p>
-                So if you see twigim at a market or bunsik shop, do not
-                overthink it.
-              </p>
-
-              <p>Choose two or three pieces.</p>
-
-              <p>Dip them in tteokbokki sauce.</p>
-
-              <p>That is the most natural way in.</p>
             </div>
           </section>
 

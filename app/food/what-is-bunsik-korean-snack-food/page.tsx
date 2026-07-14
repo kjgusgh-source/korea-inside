@@ -205,234 +205,80 @@ export default function WhatIsBunsikKoreanSnackFoodPage() {
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
             <div className="space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
               <p>
-                You may not see it translated perfectly in English.
-              </p>
-
-              <p>Sometimes people call it Korean snack food.</p>
-
-              <p>Sometimes it feels like street food.</p>
-
-              <p>Sometimes it feels like a small restaurant meal.</p>
-
-              <p>
-                The easiest way to understand it is this: bunsik is the food you
-                eat when you want something quick, cheap, warm, spicy, and
-                familiar.
+                You may not see it translated perfectly in English — sometimes
+                Korean snack food, sometimes street food, sometimes a small
+                restaurant meal. Bunsik, or 분식, is the food you eat when you
+                want something quick, cheap, warm, spicy, and familiar. A
+                bunsikjip (분식집) is a casual snack shop where you might find
+                tteokbokki, gimbap, twigim, sundae, eomuk, ramyeon, and other
+                simple foods on the same menu.
               </p>
 
               <p>
-                Bunsik, or 분식, has roots in the idea of light or flour-based
-                meals, but in daily Korean life, people often use it to talk
-                about casual snack-shop food. A bunsikjip, or 분식집, is a place
-                where you might find tteokbokki, gimbap, twigim, sundae, eomuk,
-                ramyeon, and other simple foods on the same menu.
-              </p>
-
-              <p>It is not fancy.</p>
-
-              <p>That is exactly why people love it.</p>
-
-              <p>
-                A bunsik shop can be near a school, a market, a subway station, a
-                neighborhood street, or a busy shopping area. Some are tiny.
-                Some are chain-style. Some feel old and local. Some are clean and
-                modern. The menus can change a lot, but the feeling is usually
-                similar: fast food, but Korean and more emotional than the
-                phrase &quot;fast food&quot; sounds.
-              </p>
-
-              <p>For many Koreans, bunsik has an after-school feeling.</p>
-
-              <p>
-                You finish class, stop by a small shop with friends, order
-                tteokbokki, add twigim, maybe share gimbap, and eat quickly
-                before going home or going to an academy. That memory is not the
-                same for everyone, but the feeling is familiar enough that
-                bunsik often carries a little nostalgia.
-              </p>
-
-              <p>It is food for small money and big cravings.</p>
-
-              <p>Tteokbokki is often the center.</p>
-
-              <p>
-                The red sauce is spicy, sweet, thick, and easy to share. It
-                covers chewy rice cakes, fish cake pieces, and sometimes noodles
-                or eggs. But the sauce does not stay only with the rice cakes.
-                At a bunsik shop, tteokbokki sauce becomes the thing that
-                connects the table.
-              </p>
-
-              <p>You dip twigim in it.</p>
-
-              <p>You dip sundae in it.</p>
-
-              <p>You might even touch a piece of gimbap to it.</p>
-
-              <p>
-                That is why bunsik is better understood as a set of foods, not
-                just separate menu items.
-              </p>
-
-              <p>Twigim gives you the fried side.</p>
-
-              <p>
-                Twigim simply means fried food, but in a bunsik shop it usually
-                means fried snacks like gimmari, fried mandu, squid, sweet
-                potato, vegetables, or shrimp depending on the shop. Fresh
-                twigim is crispy, but when it meets tteokbokki sauce, it becomes
-                softer and saucier. Both versions are good.
-              </p>
-
-              <p>That is very Korean.</p>
-
-              <p>
-                Crunch is nice, but sauce is also part of the comfort.
-              </p>
-
-              <p>Eomuk gives you warmth.</p>
-
-              <p>
-                Eomuk is Korean fish cake, and you often see it inside tteokbokki
-                or on skewers in warm broth. At some shops, the broth is served
-                in a paper cup or from a self-serve area. On a cold day, that
-                simple broth can feel just as important as the food itself.
-              </p>
-
-              <p>It is light, savory, and comforting.</p>
-
-              <p>Gimbap makes the meal feel complete.</p>
-
-              <p>
-                A roll of gimbap gives you rice, seaweed, vegetables, egg, and
-                fillings in neat slices. It balances spicy food well. If
-                tteokbokki is the red, loud part of the meal, gimbap is the calm
-                part that makes you feel like you actually ate something.
+                A bunsik shop can be near a school, market, subway station,
+                neighborhood street, or busy shopping area — tiny or chain-style,
+                old and local or clean and modern. Menus change, but the feeling
+                is usually similar: fast food, but Korean and more emotional than
+                the phrase sounds. For many Koreans, bunsik carries an
+                after-school feeling — finish class, stop with friends, order
+                tteokbokki, add twigim, share gimbap, eat quickly before going
+                home. Food for small money and big cravings.
               </p>
 
               <p>
-                This is why tteokbokki and gimbap appear together so often.
-              </p>
-
-              <p>They make sense as a pair.</p>
-
-              <p>Sundae is the one that may surprise visitors.</p>
-
-              <p>
-                In English, Korean sundae is usually described as blood sausage,
-                which can sound intense. But inside bunsik culture, it is not
-                treated like a scary food. It is just one of the common things
-                people order with tteokbokki. Its soft, mild, savory taste works
-                well with the spicy sauce.
+                Tteokbokki is often the center — red sauce that is spicy, sweet,
+                thick, and easy to share, covering chewy rice cakes, fish cake,
+                and sometimes noodles or eggs. At a bunsik shop, tteokbokki sauce
+                connects the table: you dip twigim in it, dip sundae in it, maybe
+                touch gimbap to it. Twigim gives the fried side — gimmari, fried
+                mandu, squid, sweet potato, vegetables, or shrimp depending on the
+                shop. Fresh twigim is crispy; in sauce it turns softer and
+                saucier. Both are good, and that mix is very Korean.
               </p>
 
               <p>
-                Some shops also serve liver, lung, or other pieces on the side.
-              </p>
-
-              <p>You can try those later if you want.</p>
-
-              <p>
-                For a first time, just sundae with tteokbokki sauce is enough.
-              </p>
-
-              <p>Ramyeon also belongs to this world.</p>
-
-              <p>
-                At a bunsik shop, ramyeon can be a quick hot bowl next to
-                gimbap. At a convenience store, cup ramyeon becomes its own
-                everyday meal. Different setting, similar comfort: noodles, heat,
-                salt, spice, and something easy when you do not want to think
-                too hard.
-              </p>
-
-              <p>That is the deeper feeling of bunsik.</p>
-
-              <p>It is food that does not ask too much from you.</p>
-
-              <p>You do not need a reservation.</p>
-
-              <p>You do not need a long menu explanation.</p>
-
-              <p>You do not need to dress nicely.</p>
-
-              <p>You just walk in, choose a few familiar things, and eat.</p>
-
-              <p>
-                For travelers, the hardest part may be knowing what to order
-                first.
+                Eomuk gives warmth — inside tteokbokki or on skewers in broth,
+                sometimes served in a paper cup or from a self-serve area. On a
+                cold day that simple broth can matter as much as the food.
+                Gimbap makes the meal feel complete — rice, seaweed, vegetables,
+                and fillings in neat slices that balance spicy food well. If
+                tteokbokki is the loud red part, gimbap is the calm part that
+                makes you feel like you actually ate something.
               </p>
 
               <p>
-                A safe first order is tteokbokki and twigim. That gives you the
-                spicy sauce and the fried snack pairing. If you want something
-                more filling, add gimbap. If the shop has eomuk broth, try a
-                cup. If you feel curious, add sundae and dip one piece in the
-                tteokbokki sauce.
+                Sundae may surprise visitors — in English it is usually blood
+                sausage, which can sound intense — but in bunsik culture it is
+                just a common order with tteokbokki. Soft, mild, savory, it
+                works well with spicy sauce. Some shops serve liver, lung, or
+                other pieces on the side; for a first time, just sundae with
+                tteokbokki sauce is fine. Ramyeon belongs here too — a hot bowl
+                at a bunsik shop next to gimbap, or cup ramyeon at a convenience
+                store. Different setting, similar comfort: noodles, heat, salt,
+                spice, something easy when you do not want to think too hard.
               </p>
 
               <p>
-                That one table will explain more than a long definition.
+                For travelers, a safe first order is tteokbokki and twigim for
+                the spicy sauce and fried pairing. Add gimbap if you want
+                something more filling; try a cup of eomuk broth if the shop has
+                it; add sundae and dip one piece in the sauce if you feel
+                curious. That one table explains more than a long definition.
+                Bunsik is not one perfect dish — it is a small food system of
+                spicy rice cakes, fried snacks, seaweed rolls, fish cake broth,
+                blood sausage, instant noodles, cheap plates, and shared bites.
               </p>
 
-              <p>Bunsik is not one perfect dish.</p>
-
-              <p>It is a small food system.</p>
-
-              <p>Spicy rice cakes.</p>
-
-              <p>Fried snacks.</p>
-
-              <p>Seaweed rice rolls.</p>
-
-              <p>Fish cake broth.</p>
-
-              <p>Blood sausage.</p>
-
-              <p>Instant noodles.</p>
-
-              <p>Cheap plates.</p>
-
-              <p>Shared bites.</p>
-
-              <p>A little mess.</p>
-
-              <p>A lot of comfort.</p>
-
               <p>
-                Every shop is different, so do not expect the same exact menu
-                everywhere. A market stall may focus on tteokbokki and eomuk. A
-                neighborhood bunsikjip may sell gimbap, ramyeon, and simple rice
-                dishes. A modern chain may make everything cleaner and more
-                standardized. None of these is the only real version.
-              </p>
-
-              <p>Bunsik changes with the place.</p>
-
-              <p>But the mood stays familiar.</p>
-
-              <p>
-                For HAEMIL readers, bunsik is worth understanding because it
-                connects many Korean foods that may look separate at first. Once
-                you know the idea of a bunsik shop, tteokbokki, gimbap, twigim,
-                sundae, and eomuk stop feeling random.
-              </p>
-
-              <p>They become one table.</p>
-
-              <p>
-                And that table is one of the easiest ways to taste everyday
-                Korea.
-              </p>
-
-              <p>Not fancy Korea.</p>
-
-              <p>Not expensive Korea.</p>
-
-              <p>
-                Just the Korea of school streets, market corners, late snacks,
-                quick lunches, and people saying, &quot;Let&apos;s just get
-                bunsik.&quot;
+                Every shop is different. A market stall may focus on tteokbokki
+                and eomuk; a neighborhood bunsikjip may sell gimbap, ramyeon,
+                and simple rice dishes; a modern chain may standardize everything.
+                None is the only real version, but the mood stays familiar. Once
+                you know bunsik, tteokbokki, gimbap, twigim, sundae, and eomuk
+                stop feeling random and become one table — one of the easiest
+                ways to taste everyday Korea, the Korea of school streets, market
+                corners, late snacks, and people saying, &quot;Let&apos;s just
+                get bunsik.&quot;
               </p>
             </div>
           </section>
