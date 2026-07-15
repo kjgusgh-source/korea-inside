@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "../../../components/SiteHeader";
 import JsonLd from "../../../components/JsonLd";
+import PostImageFigure from "../../../components/PostImageFigure";
 
 const siteUrl = "https://haemilkorea.com";
 const pageUrl = `${siteUrl}/food/what-is-twigim-korean-fried-snacks`;
@@ -9,6 +10,13 @@ const pageUrl = `${siteUrl}/food/what-is-twigim-korean-fried-snacks`;
 const pageTitle = "What Is Twigim? Korea’s Fried Snacks for Tteokbokki Sauce";
 const pageDescription =
   "A friendly HAEMIL guide to twigim, Korean fried snacks often eaten with tteokbokki sauce, from gimmari and fried mandu to squid, sweet potato, and bunsik shop pairings.";
+
+const heroImage = {
+  src: "/images/food/twigim.png",
+  alt: "Assorted Korean twigim fried snacks",
+  credit: "Photo by HAEMIL",
+  license: "Owned by HAEMIL",
+};
 
 const quickFacts = [
   "Korean name: Twigim / 튀김",
@@ -165,6 +173,8 @@ export default function WhatIsTwigimKoreanFriedSnacksPage() {
               eyes.
             </p>
           </article>
+
+          <PostImageFigure image={heroImage} variant="hero" priority />
 
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "../../../components/SiteHeader";
 import JsonLd from "../../../components/JsonLd";
+import PostImageFigure from "../../../components/PostImageFigure";
 
 const siteUrl = "https://haemilkorea.com";
 const pageUrl = `${siteUrl}/food/what-is-sundae-korean-blood-sausage`;
@@ -9,6 +10,13 @@ const pageUrl = `${siteUrl}/food/what-is-sundae-korean-blood-sausage`;
 const pageTitle = "What Is Sundae? Korea’s Blood Sausage Street Food Explained";
 const pageDescription =
   "A friendly HAEMIL guide to sundae, Korea’s blood sausage street food, from bunsik shops and market stalls to tteokbokki sauce, dipping salts, offal sides, and regional styles.";
+
+const heroImage = {
+  src: "/images/food/sundae.png",
+  alt: "Korean sundae blood sausage with assorted offal",
+  credit: "Photo by HAEMIL",
+  license: "Owned by HAEMIL",
+};
 
 const quickFacts = [
   "Korean name: Sundae / 순대",
@@ -165,6 +173,8 @@ export default function WhatIsSundaeKoreanBloodSausagePage() {
               Sundae can sound surprising in English.
             </p>
           </article>
+
+          <PostImageFigure image={heroImage} variant="hero" priority />
 
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">

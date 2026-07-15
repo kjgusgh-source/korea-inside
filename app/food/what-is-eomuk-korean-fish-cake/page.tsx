@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "../../../components/SiteHeader";
 import JsonLd from "../../../components/JsonLd";
+import PostImageFigure from "../../../components/PostImageFigure";
 
 const siteUrl = "https://haemilkorea.com";
 const pageUrl = `${siteUrl}/food/what-is-eomuk-korean-fish-cake`;
@@ -9,6 +10,13 @@ const pageUrl = `${siteUrl}/food/what-is-eomuk-korean-fish-cake`;
 const pageTitle = "What Is Eomuk? Korea’s Fish Cake Street Snack Explained";
 const pageDescription =
   "A friendly HAEMIL guide to eomuk, Korean fish cake, from hot skewers and winter broth to flat sheets, balls, Busan-style varieties, and why it appears next to tteokbokki so often.";
+
+const heroImage = {
+  src: "/images/food/eomuk.png",
+  alt: "Korean eomuk fish cake skewers in warm broth",
+  credit: "Photo by HAEMIL",
+  license: "Owned by HAEMIL",
+};
 
 const quickFacts = [
   "Korean name: Eomuk / 어묵",
@@ -165,6 +173,8 @@ export default function WhatIsEomukKoreanFishCakePage() {
               nobody explains it.
             </p>
           </article>
+
+          <PostImageFigure image={heroImage} variant="hero" priority />
 
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">

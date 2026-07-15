@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "../../../components/SiteHeader";
 import JsonLd from "../../../components/JsonLd";
+import PostImageFigure from "../../../components/PostImageFigure";
 
 const siteUrl = "https://haemilkorea.com";
 const pageUrl = `${siteUrl}/food/what-is-bungeoppang`;
@@ -9,6 +10,13 @@ const pageUrl = `${siteUrl}/food/what-is-bungeoppang`;
 const pageTitle = "What Is Bungeoppang? Korea’s Fish-Shaped Winter Snack";
 const pageDescription =
   "A friendly HAEMIL guide to bungeoppang, Korea’s fish-shaped winter street snack filled with red bean, custard, or other sweet fillings — and why it feels so nostalgic in cold weather.";
+
+const heroImage = {
+  src: "/images/food/bungeoppang.png",
+  alt: "Fresh bungeoppang fish-shaped Korean pastries",
+  credit: "Photo by HAEMIL",
+  license: "Owned by HAEMIL",
+};
 
 const quickFacts = [
   "Korean name: Bungeoppang / 붕어빵",
@@ -165,6 +173,8 @@ export default function WhatIsBungeoppangPage() {
               about two seconds.
             </p>
           </article>
+
+          <PostImageFigure image={heroImage} variant="hero" priority />
 
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">

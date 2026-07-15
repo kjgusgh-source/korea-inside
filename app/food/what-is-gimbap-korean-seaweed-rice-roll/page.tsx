@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "../../../components/SiteHeader";
 import JsonLd from "../../../components/JsonLd";
+import PostImageFigure from "../../../components/PostImageFigure";
 
 const siteUrl = "https://haemilkorea.com";
 const pageUrl = `${siteUrl}/food/what-is-gimbap-korean-seaweed-rice-roll`;
@@ -9,6 +10,13 @@ const pageUrl = `${siteUrl}/food/what-is-gimbap-korean-seaweed-rice-roll`;
 const pageTitle = "What Is Gimbap? Korea’s Seaweed Rice Roll Explained";
 const pageDescription =
   "A friendly HAEMIL guide to gimbap, Korea’s seaweed rice roll, from bunsik shops and convenience stores to picnic memories, tuna gimbap, mini gimbap, and tteokbokki sauce pairings.";
+
+const heroImage = {
+  src: "/images/food/gimbap.jpg",
+  alt: "Sliced Korean gimbap wrapped in seaweed",
+  credit: "Photo by HAEMIL",
+  license: "Owned by HAEMIL",
+};
 
 const quickFacts = [
   "Korean name: Gimbap / 김밥",
@@ -164,6 +172,8 @@ export default function WhatIsGimbapKoreanSeaweedRiceRollPage() {
               Gimbap is one of the easiest Korean foods to like.
             </p>
           </article>
+
+          <PostImageFigure image={heroImage} variant="hero" priority />
 
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
@@ -383,47 +393,17 @@ export default function WhatIsGimbapKoreanSeaweedRiceRollPage() {
 
               <p>
                 Do not worry too much about finding the &quot;best&quot;
-                gimbap.
+                gimbap. A good first gimbap is usually fresh, easy to eat, and
+                next to something warm or spicy.
               </p>
 
               <p>
-                The best first gimbap is usually the one that is fresh, easy to
-                eat, and next to something warm or spicy.
+                Gimbap is a food for movement — mornings, buses, small shops,
+                school memories, hiking bags, quick lunches, and dipping into
+                tteokbokki sauce when nobody is trying to be elegant. That
+                everyday feeling is why gimbap has stayed so close to Korean
+                daily life: useful, familiar, and quietly comforting.
               </p>
-
-              <p>That is the HAEMIL way to understand it.</p>
-
-              <p>Gimbap is not only a Korean roll.</p>
-
-              <p>It is a food for movement.</p>
-
-              <p>For mornings.</p>
-
-              <p>For buses.</p>
-
-              <p>For small shops.</p>
-
-              <p>For school memories.</p>
-
-              <p>For hiking bags.</p>
-
-              <p>For quick lunches.</p>
-
-              <p>
-                For dipping into tteokbokki sauce when nobody is trying to be
-                elegant.
-              </p>
-
-              <p>
-                That everyday feeling is why gimbap has stayed so close to
-                Korean daily life.
-              </p>
-
-              <p>It is not dramatic.</p>
-
-              <p>It is not expensive.</p>
-
-              <p>It is just useful, familiar, and quietly comforting.</p>
             </div>
           </section>
 

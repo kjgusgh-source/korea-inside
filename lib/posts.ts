@@ -2224,13 +2224,13 @@ export const POSTS: Post[] = [
     categorySlug: "food",
     categoryLabel: "Food",
     description:
-      "A warm beginner-friendly Korean BBQ guide for first-time visitors, covering what to order first, how to eat with banchan and ssam, who grills the meat, whether alcohol is required, and why Korean barbecue feels social.",
+      "A warm beginner-friendly Korean BBQ guide for first-time visitors, covering samgyeopsal, what to order first, how to eat with banchan and ssam, who grills the meat, whether alcohol is required, and why Korean barbecue feels social.",
     excerpt:
-      "Korean BBQ can feel confusing the first time, but it does not have to be. Start simple, share the table, use the side dishes, and enjoy the meal as a social experience rather than a perfect technique.",
+      "Korean BBQ can feel confusing the first time, but it does not have to be. If you only remember one meat name before your first meal, samgyeopsal—grilled pork belly—is a good start. Share the table, use the side dishes, and enjoy the meal as a social experience rather than a perfect technique.",
     content: [
-      "Korean BBQ can feel a little confusing the first time. There is a grill in the middle of the table, side dishes arrive before you fully understand what is happening, someone may start cutting the meat with scissors, and everyone seems to know the rhythm already.",
+      "Korean BBQ can feel a little confusing the first time. There is a grill in the middle of the table, side dishes arrive before you fully understand what is happening, someone may start cutting the meat with scissors, and everyone seems to know the rhythm already. Korean BBQ can include beef, pork, galbi, and other cuts, but samgyeopsal is one of the most familiar everyday choices.",
       "You do not need to know everything before you sit down. If it is your first time, start simple. Order one or two cuts, watch the table, use the side dishes, and let the meal feel social instead of trying to do everything perfectly.",
-      "Samgyeopsal is one of the easiest starting points. It is pork belly, usually rich, simple, and familiar enough for many visitors. It works well because you can eat it plain, dip it in sauce, wrap it in lettuce, or pair it with kimchi and garlic.",
+      "Samgyeopsal, grilled pork belly, is one of the easiest Korean BBQ names for first-time visitors to remember. It is usually rich, simple, and familiar enough for many visitors. It works well because you can eat it plain, dip it in sauce, wrap it in lettuce, or pair it with kimchi and garlic.",
       "Moksal is another good pork choice. It is usually meatier and less fatty than samgyeopsal, so it can feel easier if you want something a little firmer. If you are not sure what to order, samgyeopsal and moksal together are a comfortable first table.",
       "Galbi is often marinated and a little sweeter. It can be a gentle option for visitors who want something flavorful without thinking too much about sauces or wraps. Beef galbi can feel more expensive, while pork galbi can feel more casual.",
       "Beef BBQ and pork BBQ do not always feel the same. Beef often feels a little more polished or special. Pork often feels more relaxed and everyday. Neither is better for everyone. Choose the mood you want, not the one that sounds more impressive.",
@@ -2270,7 +2270,7 @@ export const POSTS: Post[] = [
         {
           title: "Start simple",
           items: [
-            "Samgyeopsal: Pork belly, easy to understand, rich, familiar, and common for a first Korean BBQ meal.",
+            "Samgyeopsal: Grilled pork belly — one of the easiest meat names to remember for a first Korean BBQ meal.",
             "Moksal: Pork neck, usually meatier and less fatty than samgyeopsal.",
             "Galbi: Marinated ribs, often sweeter and easier for visitors who want a softer flavor.",
             "Beef BBQ: Usually feels a little more expensive and polished.",
@@ -2315,6 +2315,12 @@ export const POSTS: Post[] = [
           ],
         },
       ],
+    },
+    heroImage: {
+      src: "/images/food/korean-bbq-samgyeopsal.jpg",
+      alt: "Samgyeopsal pork belly grilling at a Korean barbecue restaurant",
+      credit: "Photo by HAEMIL",
+      license: "Owned by HAEMIL",
     },
     relatedGuides: [
       {

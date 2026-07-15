@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "../../../components/SiteHeader";
 import JsonLd from "../../../components/JsonLd";
+import PostImageFigure from "../../../components/PostImageFigure";
 
 const siteUrl = "https://haemilkorea.com";
 const pageUrl = `${siteUrl}/food/what-is-korean-street-toast`;
@@ -10,6 +11,13 @@ const pageTitle =
   "What Is Korean Street Toast? A Local-Friendly Guide to Korea’s Sweet Egg Sandwich";
 const pageDescription =
   "A friendly HAEMIL guide to Korean street toast, the sweet egg sandwich found near markets, stations, and morning food stalls — plus how it differs from chains like Isaac Toast and Eggdrop.";
+
+const heroImage = {
+  src: "/images/food/korean-street-toast.png",
+  alt: "Korean street toast cooked on a flat griddle",
+  credit: "Photo by HAEMIL",
+  license: "Owned by HAEMIL",
+};
 
 const quickFacts = [
   "Korean name: 길거리 토스트 / gilgeori toast",
@@ -158,6 +166,8 @@ export default function WhatIsKoreanStreetToastPage() {
               from a café.
             </p>
           </article>
+
+          <PostImageFigure image={heroImage} variant="hero" priority />
 
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
