@@ -12,7 +12,7 @@ const pageDescription =
   "A friendly HAEMIL guide to sundae, Korea’s blood sausage street food, from bunsik shops and market stalls to tteokbokki sauce, dipping salts, offal sides, and regional styles.";
 
 const heroImage = {
-  src: "/images/food/sundae.png",
+  src: "/images/food/sundae.webp",
   alt: "Korean sundae blood sausage with assorted offal",
   credit: "Photo by HAEMIL",
   license: "Owned by HAEMIL",

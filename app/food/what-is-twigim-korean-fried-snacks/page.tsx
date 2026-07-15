@@ -12,7 +12,7 @@ const pageDescription =
   "A friendly HAEMIL guide to twigim, Korean fried snacks often eaten with tteokbokki sauce, from gimmari and fried mandu to squid, sweet potato, and bunsik shop pairings.";
 
 const heroImage = {
-  src: "/images/food/twigim.png",
+  src: "/images/food/twigim.webp",
   alt: "Assorted Korean twigim fried snacks",
   credit: "Photo by HAEMIL",
   license: "Owned by HAEMIL",

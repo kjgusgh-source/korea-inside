@@ -13,7 +13,7 @@ const pageDescription =
   "A friendly HAEMIL guide to Korean street toast, the sweet egg sandwich found near markets, stations, and morning food stalls — plus how it differs from chains like Isaac Toast and Eggdrop.";
 
 const heroImage = {
-  src: "/images/food/korean-street-toast.png",
+  src: "/images/food/korean-street-toast.webp",
   alt: "Korean street toast cooked on a flat griddle",
   credit: "Photo by HAEMIL",
   license: "Owned by HAEMIL",

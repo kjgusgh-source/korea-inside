@@ -12,7 +12,7 @@ const pageDescription =
   "A friendly HAEMIL guide to bungeoppang, Korea’s fish-shaped winter street snack filled with red bean, custard, or other sweet fillings — and why it feels so nostalgic in cold weather.";
 
 const heroImage = {
-  src: "/images/food/bungeoppang.png",
+  src: "/images/food/bungeoppang.webp",
   alt: "Fresh bungeoppang fish-shaped Korean pastries",
   credit: "Photo by HAEMIL",
   license: "Owned by HAEMIL",

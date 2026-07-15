@@ -12,7 +12,7 @@ const pageDescription =
   "A friendly HAEMIL guide to eomuk, Korean fish cake, from hot skewers and winter broth to flat sheets, balls, Busan-style varieties, and why it appears next to tteokbokki so often.";
 
 const heroImage = {
-  src: "/images/food/eomuk.png",
+  src: "/images/food/eomuk.webp",
   alt: "Korean eomuk fish cake skewers in warm broth",
   credit: "Photo by HAEMIL",
   license: "Owned by HAEMIL",
