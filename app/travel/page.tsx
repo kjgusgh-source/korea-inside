@@ -204,6 +204,16 @@ const STANDALONE_TRAVEL_GUIDES = [
     href: "/travel/what-to-do-in-myeongdong-first-time",
     readingTime: "8 min read",
   },
+  {
+    id: "gangneung-travel-guide-first-time",
+    category: "travel",
+    categoryLabel: "Travel guide",
+    title: "Gangneung Travel Guide for First-Time Visitors",
+    description:
+      "Korea’s east coast city for clear sea views, seafood, markets, coffee, and the BTS Bus Stop near Jumunjin and Hyangho Beach.",
+    href: "/travel/gangneung-travel-guide-first-time",
+    readingTime: "9 min read",
+  },
 ];
 
 export const metadata: Metadata = {
