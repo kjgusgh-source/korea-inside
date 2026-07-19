@@ -740,7 +740,11 @@ export const KPOP_GROUPS: KpopGroup[] = [
           "Look at how she balances leader-like control with a lighter, more playful image.",
           "If you are new to LE SSERAFIM, use her fancam as a way to understand the group’s confident stage color first.",
         ],
-        relatedMediaIds: ["lesserafim-kim-chaewon-hot-fancam"],
+        relatedMediaIds: [
+          "lesserafim-kim-chaewon-hot-fancam",
+          "lesserafim-kim-chaewon-fancam-r-psLVwFpYk",
+          "lesserafim-kim-chaewon-fancam-WLcxeo5de1o",
+        ],
       },
     ],
     starterTags: [

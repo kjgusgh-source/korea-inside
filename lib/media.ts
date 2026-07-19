@@ -109,6 +109,34 @@ export const MEDIA_ITEMS: MediaItem[] = [
     guideHref: "/kpop/le-sserafim/kim-chaewon",
   },
   {
+    id: "lesserafim-kim-chaewon-fancam-r-psLVwFpYk",
+    title: "Kim Chaewon fancam",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A Kim Chaewon fancam that keeps the camera close enough to notice her clean facial focus and sharp stage control.",
+    cultureNote:
+      "When the camera stays tight on Chaewon, small timing choices and expression shifts are easier to catch than in a wide group shot.",
+    tags: ["LE SSERAFIM", "Kim Chaewon", "fancam", "performance"],
+    youtubeId: "r_psLVwFpYk",
+    guideHref: "/kpop/le-sserafim/kim-chaewon",
+  },
+  {
+    id: "lesserafim-kim-chaewon-fancam-WLcxeo5de1o",
+    title: "Kim Chaewon fancam",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A Kim Chaewon fancam that is useful for seeing how her expressions change through the performance.",
+    cultureNote:
+      "Following one member through a full stage makes mood changes easier to read — from relaxed moments to sharper, more focused ones.",
+    tags: ["LE SSERAFIM", "Kim Chaewon", "fancam", "performance"],
+    youtubeId: "WLcxeo5de1o",
+    guideHref: "/kpop/le-sserafim/kim-chaewon",
+  },
+  {
     id: "triples-kim-chaeyeon-baby-flower-facecam",
     title: "Kim ChaeYeon “Baby Flower” close-up fancam",
     category: "kpop",
