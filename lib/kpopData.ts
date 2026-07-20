@@ -663,7 +663,12 @@ export const KPOP_GROUPS: KpopGroup[] = [
           "Notice how a nickname or short clip can make a rookie member easier to remember.",
           "Compare the fancam with a full CORTIS stage to see why member-focused videos matter.",
         ],
-        relatedMediaIds: ["cortis-keonho-joyride-fancam"],
+        relatedMediaIds: [
+          "cortis-keonho-joyride-fancam",
+          "cortis-keonho-redred-mcountdown-fancam",
+          "cortis-keonho-fashion-music-core-fancam",
+          "cortis-keonho-redred-music-bank-fancam",
+        ],
       },
     ],
     starterTags: [

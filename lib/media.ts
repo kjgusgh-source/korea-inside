@@ -72,6 +72,54 @@ export const MEDIA_ITEMS: MediaItem[] = [
     guideHref: "/kpop/cortis/keonho",
   },
   {
+    id: "cortis-keonho-redred-mcountdown-fancam",
+    title:
+      "[입덕직캠] 코르티스 건호 직캠 4K 'REDRED' (CORTIS KEONHO FanCam) | @MCOUNTDOWN_2026.4.23",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A REDRED MCOUNTDOWN fancam that works well for showing Keonho’s performance energy and facial focus.",
+    cultureNote:
+      "MCOUNTDOWN fancams often stay tight on one member, which makes rookie stage energy and expression changes easier to notice than in a wide group shot.",
+    tags: ["CORTIS", "Keonho", "REDRED", "Fancam", "MCOUNTDOWN"],
+    youtubeId: "cxcxx0f6caM",
+    sourceLabel: "M2 / @MnetM2",
+    guideHref: "/kpop/cortis/keonho",
+  },
+  {
+    id: "cortis-keonho-fashion-music-core-fancam",
+    title:
+      "[#최애직캠] CORTIS KEONHO (코르티스 건호) – FaSHioN | 쇼! 음악중심 | MBC250913",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A FaSHioN Music Core close-up style fancam that gives the page a different stage mood from REDRED.",
+    cultureNote:
+      "Music Core close-up fancams can feel softer or more camera-facing than high-energy comeback stages — useful if you want to see Keonho in a different performance mood.",
+    tags: ["CORTIS", "Keonho", "FaSHioN", "Fancam", "Music Core"],
+    youtubeId: "kPjbIP7kaqs",
+    sourceLabel: "MBCkpop / @MBCkpop",
+    guideHref: "/kpop/cortis/keonho",
+  },
+  {
+    id: "cortis-keonho-redred-music-bank-fancam",
+    title:
+      "[K-Fancam] CORTIS KEONHO Fancam 'REDRED' @Music Bank 260508",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A Music Bank REDRED fancam that can sit beside the MCOUNTDOWN version as another broadcast-stage reference.",
+    cultureNote:
+      "Comparing the same song across music shows is a common K-pop fan habit — small differences in camera style, staging, and member focus show up more clearly.",
+    tags: ["CORTIS", "Keonho", "REDRED", "Fancam", "Music Bank"],
+    youtubeId: "jskLPqKkHG8",
+    sourceLabel: "KBS Kpop / @KBSKpop",
+    guideHref: "/kpop/cortis/keonho",
+  },
+  {
     id: "babymonster-ahyeon-favorite-fancam-compilation",
     title: "BABYMONSTER Ahyeon Favorite Fancam Compilation",
     category: "kpop",
