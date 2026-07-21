@@ -42,6 +42,70 @@ export const MEDIA_ITEMS: MediaItem[] = [
     guideHref: "/kpop/rescene-woni-fancam-spotlight",
   },
   {
+    id: "rescene-woni-pretty-girl-music-core-fancam",
+    title:
+      "[#최애직캠] RESCENE WONI (리센느 원이) – Pretty Girl | 쇼! 음악중심 | MBC260711",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A Pretty Girl close-up fancam that shows Woni’s bright expressions and camera awareness.",
+    cultureNote:
+      "Music Core close-up fancams stay tight on one member, which makes small expression changes and camera-facing moments easier to notice.",
+    tags: ["RESCENE", "Woni", "Pretty Girl", "Fancam", "Music Core"],
+    youtubeId: "hBMeBdWSqwk",
+    sourceLabel: "MBCkpop / @MBCkpop",
+    guideHref: "/kpop/rescene/woni",
+  },
+  {
+    id: "rescene-woni-runaway-music-bank-fancam",
+    title:
+      "[K-Fancam] 리센느 원이 직캠 'Runaway' (RESCENE WONI Fancam) @뮤직뱅크(Music Bank) 260410",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A Music Bank Runaway fancam that adds a clean broadcast-stage reference to the page.",
+    cultureNote:
+      "Music Bank fancams often give a clear, broadcast-style read on one member’s stage focus and expression control.",
+    tags: ["RESCENE", "Woni", "Runaway", "Fancam", "Music Bank"],
+    youtubeId: "SVJfQP3g-fk",
+    sourceLabel: "KBSKpop",
+    guideHref: "/kpop/rescene/woni",
+  },
+  {
+    id: "rescene-woni-bloom-festival-fancam",
+    title:
+      "260601 원이 WONI 리센느 RESCENE 💿Bloom [8K 30P] 직캠 FANCAM @순천대 축제 by GalaxyMaru",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A festival fancam that shows Woni in a more open live-event setting.",
+    cultureNote:
+      "University festival stages feel different from music-show broadcasts — louder crowd energy and a more open live-event mood.",
+    tags: ["RESCENE", "Woni", "Bloom", "Fancam", "Festival"],
+    youtubeId: "ij95u6h84-E",
+    sourceLabel: "GalaxyMaru",
+    guideHref: "/kpop/rescene/woni",
+  },
+  {
+    id: "rescene-woni-ansan-love-attack-glow-up-fancam",
+    title:
+      '250504 리센느 원이 (RESCENE WONI) 안산 Full Ver. "LOVE ATTACK, Glow Up" 4K 60p 세로 직캠 @안산그리너스 축하공연 FANCAM',
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A longer Ansan Greeners event fancam that connects LOVE ATTACK and Glow Up in one live-event clip.",
+    cultureNote:
+      "Longer festival or event fancams can show how one member handles multiple songs back to back outside a typical music-show format.",
+    tags: ["RESCENE", "Woni", "LOVE ATTACK", "Glow Up", "Fancam", "Festival"],
+    youtubeId: "Vn77XofUdf8",
+    sourceLabel: "Emerald Dream",
+    guideHref: "/kpop/rescene/woni",
+  },
+  {
     id: "illit-wonhee-its-me-fancam",
     title: "ILLIT Wonhee “It’s Me” Fancam",
     category: "kpop",

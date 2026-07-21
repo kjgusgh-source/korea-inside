@@ -500,7 +500,43 @@ export const KPOP_GROUPS: KpopGroup[] = [
         name: "Woni",
         note: "A RESCENE member who is becoming easier for new fans to notice through close-up stages, short clips, and facecam-friendly performance moments.",
         intro:
-          "Woni is a member of RESCENE. This page is a beginner-friendly starting point for fans who first noticed her through a facecam, a short clip, or RESCENE’s recent stage content.",
+          "Woni is a member of RESCENE. This page is a beginner-friendly starting point for fans who first noticed her through a facecam, a short clip, or RESCENE’s recent stage content. For many Korean fans, Woni is also connected with the recent “Geoje yaho” / “거제야호” wave, a playful local keyword tied to her Geoje image and RESCENE’s variety-style charm.",
+        profileFacts: [
+          {
+            label: "Stage name",
+            value: "Woni.",
+          },
+          {
+            label: "Korean name",
+            value: "원이.",
+          },
+          {
+            label: "Birth name",
+            value: "Jeong Woni / 정원이.",
+          },
+          {
+            label: "Born",
+            value: "May 25, 2004.",
+          },
+          {
+            label: "Hometown",
+            value: "Geoje, Gyeongsangnam-do, South Korea.",
+          },
+          {
+            label: "Group",
+            value:
+              "RESCENE, a five-member girl group from The Muze Entertainment.",
+          },
+          {
+            label: "Role",
+            value: "Leader of RESCENE.",
+          },
+          {
+            label: "Fan keyword",
+            value:
+              "Geoje yaho / 거제야호 — a playful local keyword tied to her Geoje hometown image.",
+          },
+        ],
         whyFansLike: [
           "Woni is easy to notice in close-up performance clips because her expressions feel controlled rather than forced.",
           "Her appeal is not only one big moment. It is the small replayable details: eye contact, timing, and the way she keeps the camera alive.",
@@ -512,7 +548,13 @@ export const KPOP_GROUPS: KpopGroup[] = [
           "Compare a full-stage video with a close-up facecam to see why member-focused videos matter in K-pop.",
           "If you remember her after the clip ends, that is exactly why fancams can create a bias candidate.",
         ],
-        relatedMediaIds: ["rescene-woni-runaway-facecam"],
+        relatedMediaIds: [
+          "rescene-woni-runaway-facecam",
+          "rescene-woni-pretty-girl-music-core-fancam",
+          "rescene-woni-runaway-music-bank-fancam",
+          "rescene-woni-bloom-festival-fancam",
+          "rescene-woni-ansan-love-attack-glow-up-fancam",
+        ],
       },
       {
         id: "liv",
