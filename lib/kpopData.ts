@@ -927,7 +927,13 @@ export const KPOP_GROUPS: KpopGroup[] = [
           "Try a three-pass watch: casual first, then expressions, then camera timing.",
           "Compare one clip with a full-group stage to see why member-focused videos matter in K-pop.",
         ],
-        relatedMediaIds: ["babymonster-ahyeon-favorite-fancam-compilation"],
+        relatedMediaIds: [
+          "babymonster-ahyeon-favorite-fancam-compilation",
+          "babymonster-ahyeon-choom-concert-fancam",
+          "babymonster-ahyeon-choom-m2-fancam",
+          "babymonster-ahyeon-lee-mujin-service",
+          "babymonster-ahyeon-drip-inkigayo-fancam",
+        ],
       },
     ],
     starterTags: [

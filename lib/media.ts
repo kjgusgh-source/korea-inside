@@ -206,6 +206,70 @@ export const MEDIA_ITEMS: MediaItem[] = [
     guideHref: "/kpop/babymonster-ahyeon-fancam-spotlight",
   },
   {
+    id: "babymonster-ahyeon-choom-concert-fancam",
+    title:
+      "260626 베이비몬스터 아현 직캠 'CHOOM' (BABYMONSTER AHYEON FanCam)",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A CHOOM concert fancam that shows Ahyeon’s stage energy in a live setting.",
+    cultureNote:
+      "Concert fancams often feel more open than music-show broadcasts — louder crowd energy and a fuller live-stage read on one member.",
+    tags: ["BABYMONSTER", "Ahyeon", "CHOOM", "Fancam", "Concert"],
+    youtubeId: "kV1iN31Ssfs",
+    sourceLabel: "KpopFanCam",
+    guideHref: "/kpop/babymonster/ahyeon",
+  },
+  {
+    id: "babymonster-ahyeon-choom-m2-fancam",
+    title:
+      "[Becoming a Fan] BABYMONSTER AHYEON - CHOOM [Meltin' FanCam]",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "An M2 CHOOM fancam that works well as a clean broadcast-style performance reference.",
+    cultureNote:
+      "M2 fancams often give a tighter, broadcast-style focus on one member’s timing and stage control.",
+    tags: ["BABYMONSTER", "Ahyeon", "CHOOM", "Fancam", "M2"],
+    youtubeId: "TmTdFZ4IpCk",
+    sourceLabel: "M2",
+    guideHref: "/kpop/babymonster/ahyeon",
+  },
+  {
+    id: "babymonster-ahyeon-lee-mujin-service",
+    title:
+      "[리무진서비스] EP.140 베이비몬스터 아현 | BABYMONSTER AHYEON | Love, Maybe, vampire, HATELOVE, 꽃 길",
+    category: "kpop",
+    categoryLabel: "Vocal performance",
+    mediaType: "youtube",
+    description:
+      "A Lee Mujin Service episode focused on Ahyeon’s vocal performances — useful if you want to hear her outside a music-show fancam format.",
+    cultureNote:
+      "Lee Mujin Service is a popular KBS vocal show where idols sing live in a car-studio setting — a different entry point from stage fancams.",
+    tags: ["BABYMONSTER", "Ahyeon", "Lee Mujin Service", "Vocal"],
+    youtubeId: "UTfHawj9Z6w",
+    sourceLabel: "KBSKpop / Lee Mujin Service",
+    guideHref: "/kpop/babymonster/ahyeon",
+  },
+  {
+    id: "babymonster-ahyeon-drip-inkigayo-fancam",
+    title:
+      "[안방1열 직캠4K] 베이비몬스터 아현 'DRIP' (BABYMONSTER AHYEON FanCam)",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A DRIP Inkigayo fancam that adds a strong music-show stage reference for Ahyeon.",
+    cultureNote:
+      "Inkigayo fancams can give a clear read on one member’s expression control and camera awareness during a comeback stage.",
+    tags: ["BABYMONSTER", "Ahyeon", "DRIP", "Fancam", "Inkigayo"],
+    youtubeId: "karQAIwewUk",
+    sourceLabel: "SBSKPOP ZOOM",
+    guideHref: "/kpop/babymonster/ahyeon",
+  },
+  {
     id: "lesserafim-kim-chaewon-hot-fancam",
     title: "Kim Chaewon “HOT” fancam",
     category: "kpop",
