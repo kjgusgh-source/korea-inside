@@ -39,6 +39,13 @@ const relatedGuides = [
   },
   {
     label: "Food guide",
+    title: "Korean Fried Chicken Menu Guide: Yangnyeom, Soy Garlic, Snow Cheese, and Boneless Chicken",
+    description:
+      "What yangnyeom, soy garlic, snow cheese, sunsal, and banban mean on a Korean chicken menu — for first-time orders without the guesswork.",
+    href: "/food/korean-fried-chicken-menu-guide-first-time",
+  },
+  {
+    label: "Food guide",
     title: "Korean pocha and night food guide for first-time visitors",
     description:
       "A practical guide to Korean pocha night food, with anju, pojangmacha, eomuk-tang, tteokbokki, dakbal, jeon, cash tips, price checks, and local etiquette.",
@@ -228,7 +235,16 @@ export default function KoreanFriedChickenChimaekGuideFirstTimePage() {
 
                 <p>
                   For fried chicken, it usually means you can choose two styles in
-                  one order.
+                  one order. If menu names like yangnyeom, soy garlic, or snow
+                  cheese feel confusing, see the{" "}
+                  <Link
+                    href="/food/korean-fried-chicken-menu-guide-first-time"
+                    className="font-semibold text-[var(--accent)] transition hover:opacity-80"
+                  >
+                    menu guide
+                  </Link>{" "}
+                  first — then come back here for banban, delivery, and chimaek
+                  tips.
                 </p>
 
                 <p>

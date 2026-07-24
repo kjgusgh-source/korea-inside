@@ -65,6 +65,16 @@ const STANDALONE_FOOD_GUIDES = [
     readingTime: "8 min read",
   },
   {
+    id: "korean-fried-chicken-menu-guide-first-time",
+    category: "food",
+    categoryLabel: "Food guide",
+    title: "Korean Fried Chicken Menu Guide: Yangnyeom, Soy Garlic, Snow Cheese, and Boneless Chicken",
+    description:
+      "What yangnyeom, soy garlic, snow cheese, sunsal, and banban mean on a Korean chicken menu — for first-time orders without brand rankings.",
+    href: "/food/korean-fried-chicken-menu-guide-first-time",
+    readingTime: "7 min read",
+  },
+  {
     id: "korean-noodles-guide-first-time",
     category: "food",
     categoryLabel: "Food guide",

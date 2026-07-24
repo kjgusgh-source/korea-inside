@@ -202,6 +202,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/food/korean-fried-chicken-menu-guide-first-time`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/food/korean-noodles-guide-first-time`,
       lastModified: new Date(),
       changeFrequency: "monthly",
