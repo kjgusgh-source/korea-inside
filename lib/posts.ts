@@ -2245,6 +2245,7 @@ export const POSTS: Post[] = [
       "The pace matters. You do not need to cook all the meat at once or eat every bite as soon as it leaves the grill. Korean BBQ is often about letting the meal stretch a little: one bite of meat, one side dish, one wrap, one conversation, one more piece on the grill.",
       "Compared with market food, Korean BBQ feels slower and more social. Compared with convenience-store food, it asks you to sit down and share space. Compared with a cafe, it is louder and more physical. That is why it feels like more than just eating meat.",
       "For first-time visitors, the best Korean BBQ meal is not the most expensive one or the most famous one. It is the one where you feel comfortable enough to try a wrap, use the side dishes, laugh a little if something is awkward, and leave understanding why people like eating this way together.",
+      "After Korean BBQ, some people order naengmyeon — cold noodles in broth or spicy sauce — as a final bowl. The cold noodles cut through the richness of grilled meat. HAEMIL's naengmyeon guide explains mul, bibim, and regional styles if you want to order that next step confidently.",
       "Korean BBQ also appears often in dramas because it naturally creates conversation. People sit close, cook together, pour drinks or water, argue, apologize, celebrate, or sit in silence while the grill keeps going. The food gives the scene something to do while the emotions move underneath.",
     ],
     culturalContext:
@@ -2323,6 +2324,11 @@ export const POSTS: Post[] = [
       license: "Owned by HAEMIL",
     },
     relatedGuides: [
+      {
+        label: "Food guide",
+        title: "Naengmyeon Guide: Korean Cold Noodles",
+        href: "/food/naengmyeon-korean-cold-noodles-guide-first-time",
+      },
       {
         label: "Food guide",
         title: "What to Eat in Seoul for First-Time Visitors",

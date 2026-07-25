@@ -85,6 +85,16 @@ const STANDALONE_FOOD_GUIDES = [
     readingTime: "9 min read",
   },
   {
+    id: "naengmyeon-korean-cold-noodles-guide-first-time",
+    category: "food",
+    categoryLabel: "Food guide",
+    title: "Naengmyeon Guide: Korean Cold Noodles, Regional Styles, and What to Eat with Them",
+    description:
+      "Mul vs bibim, Pyongyang and Hamheung styles, hoe and yukhoe menus, and what to order with galbi or Korean BBQ — a first-time naengmyeon guide.",
+    href: "/food/naengmyeon-korean-cold-noodles-guide-first-time",
+    readingTime: "8 min read",
+  },
+  {
     id: "gwangjang-market-food-guide-first-time",
     category: "food",
     categoryLabel: "Food guide",

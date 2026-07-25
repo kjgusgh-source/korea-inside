@@ -240,7 +240,15 @@ export default function WhatToEatInKoreaFirstTimePage() {
                   tourist areas, and some places work better for groups than
                   solo travelers or expect a minimum meat order. Choose BBQ when
                   you have time, energy, and someone to eat with — not
-                  necessarily your first meal right after landing.
+                  necessarily your first meal right after landing. After the
+                  grill, some tables order cold naengmyeon to finish — see the{" "}
+                  <Link
+                    href="/food/naengmyeon-korean-cold-noodles-guide-first-time"
+                    className="font-semibold text-[var(--accent)] transition hover:opacity-80"
+                  >
+                    naengmyeon guide
+                  </Link>{" "}
+                  for mul, bibim, and what to expect.
                 </p>
               </div>
 
