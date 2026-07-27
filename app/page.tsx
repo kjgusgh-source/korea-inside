@@ -1,5 +1,6 @@
 import Link from "next/link";
 import SiteHeader from "../components/SiteHeader";
+import HomeHero from "../components/HomeHero";
 import ContentHubCard from "../components/ContentHubCard";
 import MediaFeatureCard from "../components/MediaFeatureCard";
 import OnStageCard from "../components/OnStageCard";
@@ -55,8 +56,10 @@ export default function Home() {
       <section className="mx-auto max-w-7xl px-5 py-6 md:px-8">
         <SiteHeader />
 
-        <section className="grid items-start gap-8 pt-6 pb-12 md:grid-cols-[1.2fr_0.8fr] md:pt-8 md:pb-14">
-          <div className="flex flex-col justify-start md:-mt-2">
+        <HomeHero />
+
+        <section className="grid items-start gap-8 py-12 md:grid-cols-[1.2fr_0.8fr] md:py-14">
+          <div className="flex flex-col justify-start">
             <div className="mb-7 inline-flex w-fit rounded-full border border-[var(--border)] bg-[var(--surface)] px-4 py-2 text-sm text-[var(--muted)]">
               Friendly cultural notes from the inside
             </div>
@@ -65,11 +68,7 @@ export default function Home() {
               HAEMIL
             </p>
 
-            <h1 className="mt-6 max-w-4xl text-5xl font-semibold leading-tight tracking-tight md:text-7xl">
-              Beautiful Korean stories, told by a local friend.
-            </h1>
-
-            <p className="mt-7 max-w-2xl text-lg leading-8 text-[var(--muted)] md:text-xl">
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--muted)] md:text-xl">
               Not a textbook. Not a tourist brochure. HAEMIL shares the small
               scenes, living words, and hidden context behind everyday Korean
               culture.

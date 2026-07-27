@@ -41,14 +41,14 @@ export default function ThemeToggle() {
     <button
       type="button"
       onClick={toggleTheme}
-      style={{
-        backgroundColor: theme === "light" ? "#1A1A1A" : "#FAF9F6",
-        color: theme === "light" ? "#FAF9F6" : "#1A1A1A",
-        borderColor: theme === "light" ? "#1A1A1A" : "#FAF9F6",
-      }}
-      className="relative z-50 cursor-pointer rounded-full border px-4 py-2 text-sm font-medium shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+      aria-label={
+        theme === "light" ? "Switch to dark mode" : "Switch to light mode"
+      }
+      aria-pressed={theme === "dark"}
+      title={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
+      className="relative z-50 flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface)] text-base shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
     >
-      {theme === "light" ? "🌙 Dark" : "☀️ Light"}
+      <span aria-hidden="true">{theme === "light" ? "🌙" : "☀️"}</span>
     </button>
   );
 }
