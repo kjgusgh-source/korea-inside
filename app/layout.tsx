@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Newsreader, Manrope } from "next/font/google";
 import "./globals.css";
 import SiteFooter from "../components/SiteFooter";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
-const inter = Inter({
+const newsreader = Newsreader({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-newsreader",
   display: "swap",
 });
 
-const playfair = Playfair_Display({
+const manrope = Manrope({
   subsets: ["latin"],
-  variable: "--font-playfair",
+  variable: "--font-manrope",
   display: "swap",
 });
 
@@ -68,7 +68,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme="light" data-scroll-behavior="smooth">
-      <body className={`${inter.variable} ${playfair.variable}`}>
+      <body className={`${newsreader.variable} ${manrope.variable}`}>
   {children}
   <SiteFooter />
 

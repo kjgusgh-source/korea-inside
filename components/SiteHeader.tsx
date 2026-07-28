@@ -1,88 +1,105 @@
+"use client";
+
 import Link from "next/link";
-import BrandMark from "./BrandMark";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import HeaderLogo from "./HeaderLogo";
+import HeaderMegaMenu from "./HeaderMegaMenu";
+import { HeaderSearchControl, HeaderLanguageControl } from "./HeaderControls";
 import ThemeToggle from "./ThemeToggle";
-import TranslateButton from "./TranslateButton";
 
 type SiteHeaderProps = {
   showNav?: boolean;
 };
 
+const MOBILE_NAV_LINKS = [
+  { label: "K-pop", href: "/kpop" },
+  { label: "Travel", href: "/travel" },
+  { label: "Food", href: "/food" },
+  { label: "Drama", href: "/dramas" },
+  { label: "Glossary", href: "/kpop/glossary" },
+  { label: "Latest", href: "/#latest" },
+];
+
 export default function SiteHeader({ showNav = true }: SiteHeaderProps) {
+  const pathname = usePathname();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    function handleScroll() {
+      setScrolled(window.scrollY > 8);
+    }
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-      <div className="flex items-center justify-between gap-4">
-        <Link href="/" className="group flex items-center gap-2.5">
-          <BrandMark />
-
-          <div>
-            <p className="text-2xl font-semibold tracking-tight md:text-3xl">
-              HAE<span className="text-[var(--accent)]">MIL</span>
-            </p>
-
-            <p className="mt-2 hidden text-sm leading-5 text-[var(--muted)] sm:block">
-              Beautiful Korean stories, told by a local friend.
-            </p>
-          </div>
+    <header
+      className={`sticky top-0 z-40 border-b transition-colors duration-200 ${
+        scrolled
+          ? "border-[var(--border)] bg-[var(--surface)]/80 backdrop-blur-md"
+          : "border-transparent bg-transparent"
+      }`}
+    >
+      <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between gap-6">
+        <Link href="/" className="shrink-0">
+          <HeaderLogo />
         </Link>
 
-        <div className="flex items-center gap-2 md:hidden">
-          <TranslateButton />
+        {showNav && (
+          <div className="hidden flex-1 items-center justify-center gap-8 md:flex">
+            <HeaderMegaMenu />
+            <Link
+              href="/#latest"
+              className="text-sm font-semibold text-[var(--text)] transition duration-150 hover:text-[var(--accent)]"
+            >
+              Latest
+            </Link>
+          </div>
+        )}
+
+        <div className="hidden shrink-0 items-center gap-2 md:flex">
+          <HeaderSearchControl />
+          <HeaderLanguageControl />
+          <ThemeToggle />
+        </div>
+
+        <div className="flex shrink-0 items-center gap-2 md:hidden">
+          <HeaderSearchControl />
+          <HeaderLanguageControl />
           <ThemeToggle />
         </div>
       </div>
 
-      <div className="flex w-full items-center justify-between gap-3 md:w-auto md:mx-auto">
-        {showNav && (
-          <nav className="flex min-w-0 flex-1 items-center gap-2 overflow-x-auto rounded-full border border-[var(--border)] bg-[var(--surface)] p-1 text-sm text-[var(--muted)] md:flex-none md:gap-8 md:overflow-visible md:rounded-none md:border-0 md:bg-transparent md:p-0 md:tracking-wide">
-            <Link
-              href="/kpop"
-              className="shrink-0 rounded-full px-3 py-2 hover:text-[var(--accent)] md:p-0"
-            >
-              K-pop
-            </Link>
+      {showNav && (
+        <nav className="flex items-center gap-6 overflow-x-auto whitespace-nowrap border-b border-[var(--border)] py-3 text-[13px] font-medium [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:hidden">
+          {MOBILE_NAV_LINKS.map((link) => {
+            const isActive =
+              link.href !== "/#latest" &&
+              (pathname === link.href || pathname.startsWith(`${link.href}/`));
 
-            <Link
-              href="/travel"
-              className="shrink-0 rounded-full px-3 py-2 hover:text-[var(--accent)] md:p-0"
-            >
-              Travel
-            </Link>
-
-            <Link
-              href="/food"
-              className="shrink-0 rounded-full px-3 py-2 hover:text-[var(--accent)] md:p-0"
-            >
-              Food
-            </Link>
-
-            <Link
-              href="/dramas"
-              className="shrink-0 rounded-full px-3 py-2 hover:text-[var(--accent)] md:p-0"
-            >
-              Drama
-            </Link>
-
-            <Link
-              href="/kpop/glossary"
-              className="shrink-0 rounded-full px-3 py-2 hover:text-[var(--accent)] md:p-0"
-            >
-              Glossary
-            </Link>
-
-            <Link
-              href="/#latest"
-              className="shrink-0 rounded-full px-3 py-2 hover:text-[var(--accent)] md:p-0"
-            >
-              Latest
-            </Link>
-          </nav>
-        )}
-      </div>
-
-      <div className="hidden items-center gap-2 md:flex">
-        <TranslateButton />
-        <ThemeToggle />
-      </div>
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`relative shrink-0 pb-1 transition-colors duration-150 ${
+                  isActive ? "text-[var(--text)]" : "text-[var(--muted)]"
+                }`}
+              >
+                {link.label}
+                {isActive && (
+                  <span
+                    className="absolute inset-x-0 -bottom-[1px] h-[2px] bg-[var(--accent)]"
+                    aria-hidden="true"
+                  />
+                )}
+              </Link>
+            );
+          })}
+        </nav>
+      )}
     </header>
   );
 }

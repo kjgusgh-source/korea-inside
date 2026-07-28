@@ -4,6 +4,7 @@ import { useState, type FormEvent } from "react";
 
 type IdolRequestFormProps = {
   compact?: boolean;
+  showHeading?: boolean;
 };
 
 const requestTypes = [
@@ -40,7 +41,10 @@ const countries = [
   "Other",
 ];
 
-export default function IdolRequestForm({ compact = false }: IdolRequestFormProps) {
+export default function IdolRequestForm({
+  compact = false,
+  showHeading = true,
+}: IdolRequestFormProps) {
   const [message, setMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -173,21 +177,23 @@ export default function IdolRequestForm({ compact = false }: IdolRequestFormProp
 
   return (
     <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-5 shadow-sm md:p-8">
-      <div className="mb-8">
-        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
-          Help shape HAEMIL
-        </p>
-        <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
-          What should we cover next?
-        </h2>
-        <p className="mt-4 max-w-2xl text-sm leading-7 text-[var(--muted)] md:text-base">
-          Tell us which idol, K-pop word, Korean culture moment, food, place, or
-          site improvement you want to see here. Requests will help shape future
-          pages.
-        </p>
-      </div>
+      {showHeading && (
+        <div className="mb-8">
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+            Help shape HAEMIL
+          </p>
+          <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
+            What should we cover next?
+          </h2>
+          <p className="mt-4 max-w-2xl text-sm leading-7 text-[var(--muted)] md:text-base">
+            Tell us which idol, K-pop word, Korean culture moment, food, place, or
+            site improvement you want to see here. Requests will help shape future
+            pages.
+          </p>
+        </div>
+      )}
 
-      <form onSubmit={handleSubmit} className="grid gap-4 md:grid-cols-2">
+      <form onSubmit={handleSubmit} className="grid gap-3 md:grid-cols-2 md:gap-4">
         <label className="space-y-2">
           <span className="text-sm font-semibold text-[var(--text)]">
             Request type

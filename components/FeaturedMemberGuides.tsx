@@ -5,14 +5,14 @@ export default function FeaturedMemberGuides() {
   const featuredMembers = getPublishedMemberGuides();
 
   return (
-    <section className="mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-16">
+    <section className="mx-auto max-w-7xl border-t border-[var(--border)] px-5 py-10 md:px-8 md:py-14">
       <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
             Featured guides
           </p>
 
-          <h2 className="mt-3 max-w-3xl text-3xl font-semibold leading-tight md:text-5xl">
+          <h2 className="mt-3 max-w-3xl text-3xl font-semibold leading-tight md:text-4xl">
             Start with one member, then understand the world around them.
           </h2>
         </div>

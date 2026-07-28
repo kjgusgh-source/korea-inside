@@ -6,7 +6,7 @@ export default function FeaturedKpopArticles() {
   const articles = getKpopGuideArticles();
 
   return (
-    <section className="mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-16">
+    <section className="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-16">
       <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
