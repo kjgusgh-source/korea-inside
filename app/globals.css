@@ -51,6 +51,8 @@ html.dark,
   --hero-border: rgba(30, 42, 56, 0.12);
   --hero-accent: #d45a4a;
   --hero-overlay: rgba(247, 245, 241, 0.82);
+  --hero-desktop-bg-opacity: 0.55;
+  --hero-desktop-bg-filter: none;
 }
 
 html[data-theme="dark"] .home-hero {
@@ -60,6 +62,8 @@ html[data-theme="dark"] .home-hero {
   --hero-border: rgba(243, 238, 228, 0.14);
   --hero-accent: #e37a6b;
   --hero-overlay: rgba(20, 25, 31, 0.82);
+  --hero-desktop-bg-opacity: 0.19;
+  --hero-desktop-bg-filter: brightness(0.72);
 }
 
 .home-page {

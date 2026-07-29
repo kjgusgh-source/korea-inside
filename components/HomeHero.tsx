@@ -43,6 +43,15 @@ export default function HomeHero() {
       <div className="absolute inset-0 z-0 bg-[url('/images/home/travel-seoul-namsan-tower.jpg')] bg-cover bg-[position:center_35%] md:hidden" />
       <div className="absolute inset-0 z-0 bg-[var(--hero-overlay)] md:hidden" />
 
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 z-0 hidden bg-[url('/images/home/home-hero-hanok-mist.png')] bg-cover bg-bottom md:block"
+        style={{
+          opacity: "var(--hero-desktop-bg-opacity)",
+          filter: "var(--hero-desktop-bg-filter)",
+        }}
+      />
+
       <div className="relative z-10 h-[320px] md:h-[480px]">
         {/* Desktop floating photos */}
         <img
