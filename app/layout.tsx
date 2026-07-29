@@ -48,14 +48,14 @@ export const metadata: Metadata = {
     description:
       "Beautiful Korean stories, told by a local friend. Discover K-pop idols, Korean fan culture, food, travel, language, and everyday moments from inside Korea.",
     locale: "en_US",
-    images: ["/brand/haemil-logo-light.png"],
+    images: ["/brand/haemil-og.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "HAEMIL — Korean culture, K-pop, food, travel, and local stories",
     description:
       "Beautiful Korean stories, told by a local friend. Discover K-pop idols, Korean fan culture, food, travel, language, and everyday moments from inside Korea.",
-    images: ["/brand/haemil-logo-light.png"],
+    images: ["/brand/haemil-og.png"],
   },
   robots: {
     index: true,
