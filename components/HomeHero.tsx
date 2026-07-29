@@ -2,6 +2,20 @@ import Link from "next/link";
 import Image from "next/image";
 import HomeLogo from "./HomeLogo";
 import BlurText from "./BlurText";
+import BorderGlow from "./BorderGlow";
+
+const HERO_PHOTO_GLOW = {
+  edgeSensitivity: 35,
+  glowColor: "12 65 68",
+  backgroundColor: "transparent",
+  borderRadius: 12,
+  glowRadius: 16,
+  glowIntensity: 0.38,
+  coneSpread: 28,
+  fillOpacity: 0.04,
+  animated: false,
+  colors: ["#d96a55", "#ead8c6", "#8ca7a3"],
+};
 
 const HERO_CATEGORIES = [
   { label: "K-pop", href: "/kpop" },
@@ -58,43 +72,99 @@ export default function HomeHero() {
 
       <div className="relative z-10 h-[320px] md:h-[480px]">
         {/* Desktop floating photos */}
-        <img
-          src="https://img.youtube.com/vi/gHoKSBaLP7E/hqdefault.jpg"
-          alt="RESCENE Woni fancam, a K-pop stage moment"
-          className="hero-enter-photos absolute left-2 top-0 hidden h-[150px] w-[130px] -rotate-6 rounded-xl object-cover shadow-lg md:block lg:left-8"
-        />
-        <div className="hero-enter-photos absolute right-4 top-0 hidden h-[125px] w-[160px] rotate-6 overflow-hidden rounded-xl shadow-lg md:block lg:right-12">
-          <Image
-            src="/images/food/tteokbokki-pixabay-709k.jpg"
-            alt="Tteokbokki, a Korean spicy rice cake dish"
-            fill
-            sizes="160px"
-            className="object-cover"
-          />
+        <div className="hero-enter-photos absolute left-[118px] -top-[5px] hidden h-[150px] w-[130px] -rotate-6 shadow-lg md:block">
+          <Link
+            href="/kpop"
+            aria-label="Explore K-pop"
+            className="hero-photo-link block h-full w-full cursor-pointer"
+          >
+            <BorderGlow {...HERO_PHOTO_GLOW} className="h-full w-full">
+              <div className="absolute inset-0 overflow-hidden rounded-xl">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="https://img.youtube.com/vi/gHoKSBaLP7E/hqdefault.jpg"
+                  alt="RESCENE Woni fancam, a K-pop stage moment"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            </BorderGlow>
+          </Link>
         </div>
-        <div className="hero-enter-photos absolute left-6 bottom-0 hidden h-[185px] w-[135px] rotate-3 overflow-hidden rounded-xl shadow-lg md:block lg:left-16">
-          <Image
-            src="/images/home/travel-seoul-alley.jpg"
-            alt="A quiet Seoul alley lined with low-rise buildings, a local corner of the city"
-            fill
-            sizes="135px"
-            className="object-cover object-top"
-          />
+        <div className="hero-enter-photos absolute right-[176px] top-[5px] hidden h-[125px] w-[160px] rotate-6 shadow-lg md:block">
+          <Link
+            href="/food"
+            aria-label="Explore Korean food"
+            className="hero-photo-link block h-full w-full cursor-pointer"
+          >
+            <BorderGlow {...HERO_PHOTO_GLOW} className="h-full w-full">
+              <div className="absolute inset-0 overflow-hidden rounded-xl">
+                <Image
+                  src="/images/food/tteokbokki-pixabay-709k.jpg"
+                  alt="Tteokbokki, a Korean spicy rice cake dish"
+                  fill
+                  sizes="160px"
+                  className="object-cover"
+                />
+              </div>
+            </BorderGlow>
+          </Link>
         </div>
-        <div className="hero-enter-photos absolute right-0 top-[150px] hidden h-[110px] w-[185px] -rotate-2 overflow-hidden rounded-xl shadow-lg md:block lg:right-2">
-          <Image
-            src="/images/home/travel-mookho-skywalk.jpg"
-            alt="Mukho Skywalk, a glass-floor walkway over Korea's East Sea coastline"
-            fill
-            sizes="185px"
-            className="object-cover"
-          />
+        <div className="hero-enter-photos absolute left-6 bottom-0 hidden h-[185px] w-[135px] rotate-3 shadow-lg md:block lg:left-16">
+          <Link
+            href="/travel"
+            aria-label="Explore Korea travel"
+            className="hero-photo-link block h-full w-full cursor-pointer"
+          >
+            <BorderGlow {...HERO_PHOTO_GLOW} className="h-full w-full">
+              <div className="absolute inset-0 overflow-hidden rounded-xl">
+                <Image
+                  src="/images/home/travel-seoul-alley.jpg"
+                  alt="A quiet Seoul alley lined with low-rise buildings, a local corner of the city"
+                  fill
+                  sizes="135px"
+                  className="object-cover object-top"
+                />
+              </div>
+            </BorderGlow>
+          </Link>
         </div>
-        <img
-          src="https://img.youtube.com/vi/67fnZvwVamM/hqdefault.jpg"
-          alt="Itaewon Class, a Korean drama highlight"
-          className="hero-enter-photos absolute bottom-0 right-14 hidden h-[140px] w-[170px] -rotate-3 rounded-xl object-cover shadow-lg md:block lg:right-28"
-        />
+        <div className="hero-enter-photos absolute right-[32px] top-[177px] hidden h-[110px] w-[185px] -rotate-2 shadow-lg md:block">
+          <Link
+            href="/travel"
+            aria-label="Explore Korea travel destinations"
+            className="hero-photo-link block h-full w-full cursor-pointer"
+          >
+            <BorderGlow {...HERO_PHOTO_GLOW} className="h-full w-full">
+              <div className="absolute inset-0 overflow-hidden rounded-xl">
+                <Image
+                  src="/images/home/travel-mookho-skywalk.jpg"
+                  alt="Mukho Skywalk, a glass-floor walkway over Korea's East Sea coastline"
+                  fill
+                  sizes="185px"
+                  className="object-cover"
+                />
+              </div>
+            </BorderGlow>
+          </Link>
+        </div>
+        <div className="hero-enter-photos absolute bottom-[-8px] right-10 hidden h-[140px] w-[170px] -rotate-3 shadow-lg md:block lg:right-24">
+          <Link
+            href="/dramas"
+            aria-label="Explore Korean dramas"
+            className="hero-photo-link block h-full w-full cursor-pointer"
+          >
+            <BorderGlow {...HERO_PHOTO_GLOW} className="h-full w-full">
+              <div className="absolute inset-0 overflow-hidden rounded-xl">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="https://img.youtube.com/vi/67fnZvwVamM/hqdefault.jpg"
+                  alt="Itaewon Class, a Korean drama highlight"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            </BorderGlow>
+          </Link>
+        </div>
 
         {/* Mobile floating photos (4) */}
         <img
@@ -126,7 +196,7 @@ export default function HomeHero() {
           className="hero-enter-photos absolute right-0 top-[233px] h-[68px] w-[88px] -rotate-3 rounded-lg object-cover shadow-md md:hidden"
         />
 
-        <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center">
+        <div className="pointer-events-none relative z-10 flex h-full flex-col items-center justify-center px-4 text-center">
           <div className="hero-enter-logo">
             <HomeLogo />
           </div>
