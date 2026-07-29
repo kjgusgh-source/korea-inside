@@ -1,12 +1,19 @@
 import Link from "next/link";
 import Image from "next/image";
 import HomeLogo from "./HomeLogo";
+import BlurText from "./BlurText";
 
 const HERO_CATEGORIES = [
   { label: "K-pop", href: "/kpop" },
   { label: "Food", href: "/food" },
   { label: "Travel", href: "/travel" },
   { label: "Drama", href: "/dramas" },
+];
+
+const HERO_HEADLINE_BLUR_FROM = { filter: "blur(6px)", opacity: 0, y: 14 };
+const HERO_HEADLINE_BLUR_TO = [
+  { filter: "blur(2px)", opacity: 0.65, y: 4 },
+  { filter: "blur(0px)", opacity: 1, y: 0 },
 ];
 
 export default function HomeHero() {
@@ -18,19 +25,16 @@ export default function HomeHero() {
           to { opacity: 1; transform: translateY(0); }
         }
         .hero-enter-logo,
-        .hero-enter-headline,
         .hero-enter-photos,
         .hero-enter-buttons {
           animation: hero-fade-up 500ms cubic-bezier(0.22, 1, 0.36, 1) both;
         }
         .hero-enter-logo { animation-delay: 0ms; }
-        .hero-enter-headline { animation-delay: 100ms; }
         .hero-enter-photos { animation-delay: 200ms; }
         .hero-enter-buttons { animation-delay: 300ms; }
 
         @media (prefers-reduced-motion: reduce) {
           .hero-enter-logo,
-          .hero-enter-headline,
           .hero-enter-photos,
           .hero-enter-buttons {
             animation: none;
@@ -127,11 +131,62 @@ export default function HomeHero() {
             <HomeLogo />
           </div>
 
-          <h1 className="hero-enter-headline mt-2.5 max-w-[240px] text-[28px] font-semibold leading-[1.08] text-[var(--hero-text)] md:mt-5 md:max-w-3xl md:text-6xl md:leading-[1.15]">
-            Korea feels different when
-            <br className="hidden md:block" />
-            <em className="italic text-[var(--hero-accent)]">someone local</em>{" "}
-            shows you&nbsp;around.
+          <h1
+            aria-label="Korea feels different when someone local shows you around."
+            className="mt-2.5 max-w-[240px] text-[28px] font-semibold leading-[1.08] text-[var(--hero-text)] md:mt-5 md:max-w-3xl md:text-[54px] md:font-medium md:leading-[1.12] md:tracking-[-0.025em]"
+          >
+            <span aria-hidden="true">
+              <BlurText
+                text="Korea feels different when"
+                animateBy="words"
+                direction="bottom"
+                delay={95}
+                stepDuration={0.38}
+                threshold={0}
+                rootMargin="0px"
+                animationFrom={HERO_HEADLINE_BLUR_FROM}
+                animationTo={HERO_HEADLINE_BLUR_TO}
+              />
+              <br className="hidden md:block" />
+              <BlurText
+                text="someone local"
+                animateBy="words"
+                direction="bottom"
+                delay={95}
+                startIndex={4}
+                stepDuration={0.38}
+                threshold={0}
+                rootMargin="0px"
+                animationFrom={HERO_HEADLINE_BLUR_FROM}
+                animationTo={HERO_HEADLINE_BLUR_TO}
+                className="italic text-[var(--hero-accent)]"
+              />{" "}
+              <BlurText
+                text="shows"
+                animateBy="words"
+                direction="bottom"
+                delay={95}
+                startIndex={6}
+                stepDuration={0.38}
+                threshold={0}
+                rootMargin="0px"
+                animationFrom={HERO_HEADLINE_BLUR_FROM}
+                animationTo={HERO_HEADLINE_BLUR_TO}
+              />
+              <br className="hidden md:block" />
+              <BlurText
+                text={"you around."}
+                animateBy="words"
+                direction="bottom"
+                delay={95}
+                startIndex={7}
+                stepDuration={0.38}
+                threshold={0}
+                rootMargin="0px"
+                animationFrom={HERO_HEADLINE_BLUR_FROM}
+                animationTo={HERO_HEADLINE_BLUR_TO}
+              />
+            </span>
           </h1>
         </div>
       </div>
