@@ -241,7 +241,7 @@ export default function HomeCarousel() {
                     src={item.imageSrc}
                     alt=""
                     fill
-                    sizes="(max-width: 768px) 78vw, 400px"
+                    sizes="(max-width: 639px) 78vw, (max-width: 1023px) 45vw, 31vw"
                     className="object-cover transition duration-300 group-hover:scale-[1.03]"
                   />
                 ) : item.youtubeThumbnailId ? (

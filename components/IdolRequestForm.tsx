@@ -121,7 +121,7 @@ export default function IdolRequestForm({
             </span>
             <select
               name="requestType"
-              className="w-full rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-4 py-2.5 text-sm text-[var(--text)] outline-none transition focus:border-[var(--accent)]"
+              className="w-full rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-4 py-2.5 text-sm text-[var(--text)] transition focus:border-[var(--accent)]"
             >
               {requestTypes.map((type) => (
                 <option key={type.value} value={type.value}>
@@ -139,7 +139,7 @@ export default function IdolRequestForm({
               type="text"
               name="topicTitle"
               placeholder="e.g. What does maknae mean?"
-              className="w-full rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-4 py-2.5 text-sm text-[var(--text)] outline-none transition focus:border-[var(--accent)]"
+              className="w-full rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-4 py-2.5 text-sm text-[var(--text)] transition focus:border-[var(--accent)]"
             />
           </label>
   
@@ -151,7 +151,7 @@ export default function IdolRequestForm({
               name="requestMessage"
               rows={2}
               placeholder="Tell us what you want HAEMIL to explain or improve."
-              className="w-full resize-none rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-4 py-2.5 text-sm text-[var(--text)] outline-none transition focus:border-[var(--accent)]"
+              className="w-full resize-none rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-4 py-2.5 text-sm text-[var(--text)] transition focus:border-[var(--accent)]"
             />
           </label>
   
@@ -165,7 +165,10 @@ export default function IdolRequestForm({
             </button>
   
             {message && (
-              <p className="mt-3 rounded-2xl bg-[var(--accent-soft)] px-4 py-2 text-sm leading-6 text-[var(--text)]">
+              <p
+                role="status"
+                className="mt-3 rounded-2xl bg-[var(--accent-soft)] px-4 py-2 text-sm leading-6 text-[var(--text)]"
+              >
                 {message}
               </p>
             )}
@@ -200,7 +203,7 @@ export default function IdolRequestForm({
           </span>
           <select
             name="requestType"
-            className="w-full rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3 text-sm text-[var(--text)] outline-none transition focus:border-[var(--accent)]"
+            className="w-full rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3 text-sm text-[var(--text)] transition focus:border-[var(--accent)]"
           >
             {requestTypes.map((type) => (
               <option key={type.value} value={type.value}>
@@ -218,7 +221,7 @@ export default function IdolRequestForm({
             type="text"
             name="topicTitle"
             placeholder="e.g. What is maknae? / Please cover NewJeans / The page is hard to read"
-            className="w-full rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3 text-sm text-[var(--text)] outline-none transition focus:border-[var(--accent)]"
+            className="w-full rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3 text-sm text-[var(--text)] transition focus:border-[var(--accent)]"
           />
         </label>
 
@@ -230,7 +233,7 @@ export default function IdolRequestForm({
             type="text"
             name="groupName"
             placeholder="e.g. fromis_9, IVE, BTS"
-            className="w-full rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3 text-sm text-[var(--text)] outline-none transition focus:border-[var(--accent)]"
+            className="w-full rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3 text-sm text-[var(--text)] transition focus:border-[var(--accent)]"
           />
         </label>
 
@@ -242,7 +245,7 @@ export default function IdolRequestForm({
             type="text"
             name="memberName"
             placeholder="e.g. Song Hayoung, Karina"
-            className="w-full rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3 text-sm text-[var(--text)] outline-none transition focus:border-[var(--accent)]"
+            className="w-full rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3 text-sm text-[var(--text)] transition focus:border-[var(--accent)]"
           />
         </label>
 
@@ -252,7 +255,7 @@ export default function IdolRequestForm({
           </span>
           <select
             name="videoType"
-            className="w-full rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3 text-sm text-[var(--text)] outline-none transition focus:border-[var(--accent)]"
+            className="w-full rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3 text-sm text-[var(--text)] transition focus:border-[var(--accent)]"
           >
             {videoTypes.map((type) => (
               <option key={type} value={type}>
@@ -268,7 +271,7 @@ export default function IdolRequestForm({
           </span>
           <select
             name="country"
-            className="w-full rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3 text-sm text-[var(--text)] outline-none transition focus:border-[var(--accent)]"
+            className="w-full rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3 text-sm text-[var(--text)] transition focus:border-[var(--accent)]"
           >
             {countries.map((country) => (
               <option key={country} value={country}>
@@ -286,7 +289,7 @@ export default function IdolRequestForm({
             type="url"
             name="youtubeUrl"
             placeholder="https://youtube.com/... or any related link"
-            className="w-full rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3 text-sm text-[var(--text)] outline-none transition focus:border-[var(--accent)]"
+            className="w-full rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3 text-sm text-[var(--text)] transition focus:border-[var(--accent)]"
           />
         </label>
 
@@ -298,7 +301,7 @@ export default function IdolRequestForm({
             name="requestMessage"
             rows={4}
             placeholder="Tell us what you want to understand, watch, improve, or share."
-            className="w-full resize-none rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3 text-sm text-[var(--text)] outline-none transition focus:border-[var(--accent)]"
+            className="w-full resize-none rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3 text-sm text-[var(--text)] transition focus:border-[var(--accent)]"
           />
         </label>
 
@@ -312,7 +315,10 @@ export default function IdolRequestForm({
           </button>
 
           {message && (
-            <p className="mt-4 rounded-2xl bg-[var(--accent-soft)] px-4 py-3 text-sm leading-6 text-[var(--text)]">
+            <p
+              role="status"
+              className="mt-4 rounded-2xl bg-[var(--accent-soft)] px-4 py-3 text-sm leading-6 text-[var(--text)]"
+            >
               {message}
             </p>
           )}
