@@ -165,7 +165,7 @@ export default function WhatDoesBiasMeanPage() {
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 py-6 md:px-8 md:py-8">
           <SiteHeader />
 
-          <article className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-10">
+          <article className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-5 md:p-10">
             <Link
               href="/kpop"
               className="mb-6 inline-flex text-sm font-semibold text-[var(--accent)]"
@@ -177,11 +177,11 @@ export default function WhatDoesBiasMeanPage() {
               K-pop starter guide
             </p>
 
-            <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
+            <h1 className="mt-3 max-w-3xl text-[32px] font-semibold leading-[1.12] tracking-tight md:mt-4 md:text-6xl md:leading-tight">
               {pageTitle}
             </h1>
 
-            <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
+            <p className="mt-4 max-w-3xl text-base leading-8 text-[var(--muted)] md:mt-6 md:text-lg">
               If you search &quot;bias meaning in K-pop,&quot; the simple answer
               is this: a bias is your favorite member in a K-pop group.
             </p>
@@ -203,346 +203,284 @@ export default function WhatDoesBiasMeanPage() {
           </section>
 
           <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
-            <div className="space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
-              <p>
-                But in fandom talk, it usually feels a little warmer than just
-                &quot;favorite.&quot;
-              </p>
-
-              <p>Your bias is the member your eyes keep finding.</p>
-
-              <p>The member whose fancams you click first.</p>
-
-              <p>The member whose photo card you hope to pull.</p>
+            <div className="max-w-3xl space-y-5 text-base leading-8 text-[var(--muted)] md:text-lg">
+              <h2 className="text-xl font-semibold text-[var(--text)] md:text-2xl">
+                What bias actually feels like
+              </h2>
 
               <p>
-                The member whose interviews, funny clips, ending moments, or
-                small habits stay in your head.
-              </p>
-
-              <p>That is the feeling behind bias.</p>
-
-              <p>
-                It does not always mean romantic attraction. For many fans, bias
-                can mean admiration, comfort, performance taste, personality,
-                humor, style, or simply the member they enjoy watching most.
-                Sometimes it starts with a stage. Sometimes it starts with a
-                variety clip. Sometimes it starts with one line in a song.
+                But in fandom talk, it usually feels a little warmer than
+                just &quot;favorite.&quot; Your bias is the member your eyes
+                keep finding.
               </p>
 
               <p>
-                K-pop fandom has many ways for one member to catch your
-                attention.
+                The member whose fancams you click first. The member whose
+                photo card you hope to pull. The member whose interviews,
+                funny clips, ending moments, or small habits stay in your
+                head.
               </p>
 
-              <p>A fancam can do it.</p>
-
               <p>
-                You watch one member for the full performance, and suddenly the
-                group becomes easier to understand through that person.
+                That is the feeling behind bias. It does not always mean
+                romantic attraction. For many fans, bias can mean admiration,
+                comfort, performance taste, personality, humor, style, or
+                simply the member they enjoy watching most. Sometimes it
+                starts with a stage. Sometimes it starts with a variety clip.
+                Sometimes it starts with one line in a song.
               </p>
 
-              <p>A killing part can do it.</p>
+              <p>K-pop fandom has many ways for one member to catch your attention.</p>
+
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                What makes one member catch your attention
+              </h2>
 
               <p>
-                One short line, gesture, or camera moment makes you remember a
-                member&apos;s name.
+                A fancam can do it. You watch one member for the full
+                performance, and suddenly the group becomes easier to
+                understand through that person.
               </p>
 
-              <p>Stage presence can do it.</p>
-
               <p>
-                Even when the member is not in the center, your eyes keep going
-                back to them.
+                A killing part can do it. One short line, gesture, or camera
+                moment makes you remember a member&apos;s name.
               </p>
 
-              <p>Personality can do it too.</p>
-
               <p>
-                A quiet answer in an interview, a funny reaction, a kind fan
-                moment, or a small habit can make someone feel familiar.
+                Stage presence can do it. Even when the member is not in the
+                center, your eyes keep going back to them.
               </p>
 
-              <p>That is why bias is not only about appearance.</p>
-
               <p>
-                Of course, visual image can be part of it. K-pop is a very
-                camera-aware culture, and fans notice styling, photos,
-                thumbnails, stage clips, and facial impressions. But having a
-                bias is not the same as ranking members by looks.
+                Personality can do it too. A quiet answer in an interview, a
+                funny reaction, a kind fan moment, or a small habit can make
+                someone feel familiar.
               </p>
 
-              <p>It is more personal than that.</p>
-
-              <p>One fan may choose a bias because of vocals.</p>
-
-              <p>Another may choose one because of dance.</p>
-
-              <p>Another may notice the maknae image.</p>
-
-              <p>Another may like a member&apos;s calm energy.</p>
+              <p>
+                That is why bias is not only about appearance. Of course,
+                visual image can be part of it. K-pop is a very camera-aware
+                culture, and fans notice styling, photos, thumbnails, stage
+                clips, and facial impressions. But having a bias is not the
+                same as ranking members by looks.
+              </p>
 
               <p>
-                Another may be pulled in by a fancam where the idol looked
-                completely different from the full-group stage.
+                It is more personal than that. One fan may choose a bias
+                because of vocals. Another may choose one because of dance.
+                Another may notice the maknae image. Another may like a
+                member&apos;s calm energy. Another may be pulled in by a
+                fancam where the idol looked completely different from the
+                full-group stage.
               </p>
 
               <p>There is no one correct reason.</p>
 
-              <p>In Korean fandom language, 최애 is close to bias.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                최애, 차애, bias wrecker, ultimate bias, and bias line
+              </h2>
 
               <p>
-                It means the member or person you like the most. You may see fans
-                say 최애 멤버, meaning their favorite member. But fandom words do
+                In Korean fandom language, 최애 is close to bias. It means
+                the member or person you like the most. You may see fans say
+                최애 멤버, meaning their favorite member. But fandom words do
                 not always translate perfectly. Bias is the word many
                 English-speaking K-pop fans use, while 최애 carries its own
                 Korean fan feeling.
               </p>
 
-              <p>You may also see 차애.</p>
-
               <p>
-                This can mean a second favorite, or the member you like right
-                after your 최애. Again, do not treat it like a perfect math
-                system. Fans use these words playfully, emotionally, and
-                sometimes differently depending on the fandom.
-              </p>
-
-              <p>Then there is bias wrecker.</p>
-
-              <p>A bias wrecker is the member who makes you question your bias.</p>
-
-              <p>You thought you had one favorite member.</p>
-
-              <p>
-                Then another member keeps appearing in fancams, interviews, live
-                clips, or funny edits.
-              </p>
-
-              <p>You start noticing them more.</p>
-
-              <p>
-                You still have your bias, but now this other member is causing
-                trouble.
-              </p>
-
-              <p>That is the bias wrecker.</p>
-
-              <p>It is not a serious problem.</p>
-
-              <p>
-                It is fandom language for &quot;Why do I suddenly like this
-                member so much?&quot;
-              </p>
-
-              <p>Some fans also use the phrase ultimate bias.</p>
-
-              <p>
-                Your ultimate bias is the idol you like most across all groups,
-                not only inside one group. For example, you may have one bias in
-                each group you follow, but one ultimate bias overall.
-              </p>
-
-              <p>Another phrase is bias line.</p>
-
-              <p>
-                A bias line is a small group of members you especially like.
-                Maybe you cannot choose only one. Maybe you have a main bias and
-                two other members who keep pulling your attention. Fans may call
-                that their bias line.
+                You may also see 차애. This can mean a second favorite, or
+                the member you like right after your 최애. Again, do not
+                treat it like a perfect math system. Fans use these words
+                playfully, emotionally, and sometimes differently depending
+                on the fandom.
               </p>
 
               <p>
-                These words can sound complicated at first, but the feeling is
-                simple.
+                Then there is bias wrecker. A bias wrecker is the member who
+                makes you question your bias.
               </p>
 
-              <p>K-pop groups have many members.</p>
-
-              <p>Fans naturally connect with different people.</p>
-
-              <p>Bias is the word that helps explain that connection.</p>
-
-              <p>Bias is different from center.</p>
-
               <p>
-                The center is about where the stage places focus. A center may
-                stand in the middle during key choreography or become the main
-                visual focus of a performance moment. Your bias may be the
-                center, but not always.
+                You thought you had one favorite member. Then another member
+                keeps appearing in fancams, interviews, live clips, or funny
+                edits. You start noticing them more. You still have your
+                bias, but now this other member is causing trouble.
               </p>
 
-              <p>Bias is about your attachment.</p>
-
-              <p>Center is about stage focus.</p>
-
-              <p>Bias is also different from visual.</p>
-
               <p>
-                Visual is about image, styling, facial impression, and camera
-                memorability. A visual member may become your bias, but the word
-                bias is broader. You might bias someone because of their voice,
-                humor, performance control, or the way they communicate with
-                fans.
+                That is the bias wrecker. It is not a serious problem. It is
+                fandom language for &quot;Why do I suddenly like this member
+                so much?&quot;
               </p>
 
-              <p>Bias is different from fancam too.</p>
-
               <p>
-                A fancam is a member-focused video. It can help you find your
-                bias, but the fancam itself is not the bias. It is often the
-                doorway.
+                Some fans also use the phrase ultimate bias. Your ultimate
+                bias is the idol you like most across all groups, not only
+                inside one group. For example, you may have one bias in each
+                group you follow, but one ultimate bias overall.
               </p>
 
-              <p>You watch the video.</p>
-
-              <p>You notice one person.</p>
-
-              <p>Then you search their name.</p>
-
-              <p>That is how it starts.</p>
-
-              <p>Bias is also different from killing part.</p>
+              <p>
+                Another phrase is bias line. A bias line is a small group of
+                members you especially like. Maybe you cannot choose only
+                one. Maybe you have a main bias and two other members who
+                keep pulling your attention. Fans may call that their bias
+                line.
+              </p>
 
               <p>
-                A killing part is the short moment fans replay. It can make one
-                member stand out, and that member may become your bias after you
-                keep replaying the clip. But the killing part is the moment. Bias
+                These words can sound complicated at first, but the feeling
+                is simple. K-pop groups have many members. Fans naturally
+                connect with different people. Bias is the word that helps
+                explain that connection.
+              </p>
+
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How bias differs from center, visual, fancam, and killing part
+              </h2>
+
+              <p>
+                Bias is different from center. The center is about where the
+                stage places focus. A center may stand in the middle during
+                key choreography or become the main visual focus of a
+                performance moment. Your bias may be the center, but not
+                always.
+              </p>
+
+              <p>Bias is about your attachment. Center is about stage focus.</p>
+
+              <p>
+                Bias is also different from visual. Visual is about image,
+                styling, facial impression, and camera memorability. A visual
+                member may become your bias, but the word bias is broader.
+                You might bias someone because of their voice, humor,
+                performance control, or the way they communicate with fans.
+              </p>
+
+              <p>
+                Bias is different from fancam too. A fancam is a
+                member-focused video. It can help you find your bias, but the
+                fancam itself is not the bias. It is often the doorway.
+              </p>
+
+              <p>
+                You watch the video. You notice one person. Then you search
+                their name. That is how it starts.
+              </p>
+
+              <p>
+                Bias is also different from killing part. A killing part is
+                the short moment fans replay. It can make one member stand
+                out, and that member may become your bias after you keep
+                replaying the clip. But the killing part is the moment. Bias
                 is the longer feeling that grows after that.
               </p>
 
-              <p>Bias is different from stage presence.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How bias differs from stage presence and maknae
+              </h2>
 
               <p>
-                Stage presence is how an idol holds attention during a
-                performance. Strong stage presence can make someone become your
-                bias, but stage presence is a performance quality. Bias is how
-                you, as a fan, respond to that person.
+                Bias is different from stage presence. Stage presence is how
+                an idol holds attention during a performance. Strong stage
+                presence can make someone become your bias, but stage
+                presence is a performance quality. Bias is how you, as a fan,
+                respond to that person.
               </p>
 
-              <p>Bias is also different from maknae.</p>
-
               <p>
-                Maknae means the youngest member. Some fans are drawn to the
-                maknae because they enjoy watching growth, confidence, and group
-                dynamics. But maknae is age order. Bias is personal preference.
+                Bias is also different from maknae. Maknae means the
+                youngest member. Some fans are drawn to the maknae because
+                they enjoy watching growth, confidence, and group dynamics.
+                But maknae is age order. Bias is personal preference.
               </p>
 
               <p>
                 This is why two fans can watch the same group and choose
-                completely different biases.
-              </p>
-
-              <p>They are noticing different things.</p>
-
-              <p>One person remembers the voice.</p>
-
-              <p>One person remembers the smile.</p>
-
-              <p>One person remembers the dance line.</p>
-
-              <p>
-                One person remembers the quiet member who was funny in a
-                behind-the-scenes clip.
+                completely different biases. They are noticing different
+                things.
               </p>
 
               <p>
-                One person watches a close-up fancam and suddenly cannot look
-                away.
+                One person remembers the voice. One person remembers the
+                smile. One person remembers the dance line. One person
+                remembers the quiet member who was funny in a
+                behind-the-scenes clip. One person watches a close-up fancam
+                and suddenly cannot look away.
               </p>
 
               <p>That variety is normal.</p>
 
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                Having a bias, and keeping it healthy
+              </h2>
+
               <p>
                 Having a bias is one of the most ordinary parts of K-pop
-                fandom.
+                fandom. But there is one small thing to keep in mind.
               </p>
-
-              <p>But there is one small thing to keep in mind.</p>
 
               <p>
                 Having a bias does not mean you need to dislike the other
-                members.
-              </p>
-
-              <p>It does not mean you need to ignore the group.</p>
-
-              <p>
-                It does not mean you should attack people who have a different
+                members. It does not mean you need to ignore the group. It
+                does not mean you should attack people who have a different
                 bias.
               </p>
 
               <p>
-                A healthy bias is just the member you feel closest to as a fan.
+                A healthy bias is just the member you feel closest to as a
+                fan. That is enough.
               </p>
 
-              <p>That is enough.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How to find your bias, and how it fits with the rest of K-pop terms
+              </h2>
+
+              <p>For beginners, the easiest way to find your bias is not to force it.</p>
 
               <p>
-                For beginners, the easiest way to find your bias is not to force
-                it.
+                Watch a full-group stage. Then watch a few fancams. Watch an
+                interview. Watch a funny clip. Listen to the vocals. Look at
+                how members interact.
               </p>
-
-              <p>Watch a full-group stage.</p>
-
-              <p>Then watch a few fancams.</p>
-
-              <p>Watch an interview.</p>
-
-              <p>Watch a funny clip.</p>
-
-              <p>Listen to the vocals.</p>
-
-              <p>Look at how members interact.</p>
 
               <p>
                 Over time, you will probably notice that one member keeps
                 coming back into your attention.
               </p>
 
-              <p>That may be your bias.</p>
-
-              <p>Or maybe it changes.</p>
-
-              <p>That is normal too.</p>
+              <p>That may be your bias. Or maybe it changes. That is normal too.</p>
 
               <p>
                 Fans sometimes change bias after a comeback, a concert, a
-                fancam, a new era, or one unexpectedly strong performance. Some
-                people keep the same bias for years. Some people get
-                bias-wrecked every week.
+                fancam, a new era, or one unexpectedly strong performance.
+                Some people keep the same bias for years. Some people get
+                bias-wrecked every week. K-pop fandom has room for both.
               </p>
-
-              <p>K-pop fandom has room for both.</p>
 
               <p>
-                For HAEMIL readers, the easiest way to understand bias is this:
+                For HAEMIL readers, the easiest way to understand bias is
+                this:
               </p>
-
-              <p>A fancam may introduce you to a member.</p>
-
-              <p>A killing part may make you replay them.</p>
-
-              <p>Stage presence may keep your eyes on them.</p>
-
-              <p>A visual image may make them easy to remember.</p>
-
-              <p>A maknae image may make you notice their growth.</p>
 
               <p>
-                But bias is the member who stays with you after all of that.
+                A fancam may introduce you to a member. A killing part may
+                make you replay them. Stage presence may keep your eyes on
+                them. A visual image may make them easy to remember. A
+                maknae image may make you notice their growth.
               </p>
 
-              <p>It is not always logical.</p>
+              <p>But bias is the member who stays with you after all of that.</p>
 
-              <p>It does not need to be.</p>
+              <p>It is not always logical. It does not need to be.</p>
 
               <p>
                 Sometimes one member just becomes the person you look for
-                first.
+                first. That is your bias.
               </p>
-
-              <p>That is your bias.</p>
             </div>
           </section>
 

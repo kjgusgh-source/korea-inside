@@ -154,7 +154,7 @@ export default function WhatIsMaknaePage() {
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 py-6 md:px-8 md:py-8">
           <SiteHeader />
 
-          <article className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-10">
+          <article className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-5 md:p-10">
             <Link
               href="/kpop"
               className="mb-6 inline-flex text-sm font-semibold text-[var(--accent)]"
@@ -166,11 +166,11 @@ export default function WhatIsMaknaePage() {
               K-pop starter guide
             </p>
 
-            <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
+            <h1 className="mt-3 max-w-3xl text-[32px] font-semibold leading-[1.12] tracking-tight md:mt-4 md:text-6xl md:leading-tight">
               {pageTitle}
             </h1>
 
-            <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
+            <p className="mt-4 max-w-3xl text-base leading-8 text-[var(--muted)] md:mt-6 md:text-lg">
               If you search &quot;maknae meaning,&quot; the simple answer is
               this: maknae, or 막내, means the youngest person in a group.
             </p>
@@ -192,52 +192,48 @@ export default function WhatIsMaknaePage() {
           </section>
 
           <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
-            <div className="space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
-              <p>It can be used in a family.</p>
-
-              <p>It can be used in a team.</p>
-
-              <p>It can be used in a workplace or social group.</p>
-
-              <p>In K-pop, maknae usually means the youngest member of an idol group.</p>
+            <div className="max-w-3xl space-y-5 text-base leading-8 text-[var(--muted)] md:text-lg">
+              <h2 className="text-xl font-semibold text-[var(--text)] md:text-2xl">
+                What maknae actually means
+              </h2>
 
               <p>
-                That sounds simple, but fans use the word with more feeling than
-                just age.
+                It can be used in a family. It can be used in a team. It can
+                be used in a workplace or social group. In K-pop, maknae
+                usually means the youngest member of an idol group.
               </p>
 
-              <p>A maknae is not only &quot;the person born last.&quot;</p>
+              <p>
+                That sounds simple, but fans use the word with more feeling
+                than just age. A maknae is not only &quot;the person born
+                last.&quot;
+              </p>
 
               <p>
                 In a K-pop group, the maknae can become part of how fans
                 understand the group dynamic. Older members may tease them,
-                protect them, guide them, or treat them like the younger sibling
-                of the team. Fans may watch the maknae grow more confident over
-                time, especially across different comebacks and eras.
+                protect them, guide them, or treat them like the younger
+                sibling of the team. Fans may watch the maknae grow more
+                confident over time, especially across different comebacks
+                and eras.
               </p>
 
-              <p>That is why the word appears so often in K-pop conversations.</p>
-
-              <p>It is an age word, but it becomes an image word too.</p>
-
-              <p>Some maknaes feel cute.</p>
-
-              <p>Some feel calm.</p>
-
-              <p>Some feel powerful.</p>
-
-              <p>Some feel shy at first and sharper later.</p>
-
               <p>
-                Some act like the youngest member only off stage, then look
-                completely different when the performance starts.
+                That is why the word appears so often in K-pop conversations.
+                It is an age word, but it becomes an image word too.
               </p>
 
-              <p>That contrast is part of the fun.</p>
+              <p>
+                Some maknaes feel cute. Some feel calm. Some feel powerful.
+                Some feel shy at first and sharper later. Some act like the
+                youngest member only off stage, then look completely
+                different when the performance starts.
+              </p>
 
               <p>
-                This is also why you should not read maknae as &quot;baby of the
-                group&quot; too literally.
+                That contrast is part of the fun. This is also why you should
+                not read maknae as &quot;baby of the group&quot; too
+                literally.
               </p>
 
               <p>
@@ -247,217 +243,198 @@ export default function WhatIsMaknaePage() {
                 serious, or very strong on stage.
               </p>
 
-              <p>Being maknae does not decide someone&apos;s personality.</p>
-
-              <p>It only tells you their place in the group&apos;s age order.</p>
-
-              <p>The feeling around that age order comes from the group.</p>
-
-              <p>One related phrase is maknae line.</p>
-
               <p>
-                Maknae line usually means the younger members of a group, not
-                only the single youngest member. Fans use it when they want to
-                talk about the younger side of the team together. The exact
-                members can depend on the group and how fans divide the ages.
+                Being maknae does not decide someone&apos;s personality. It
+                only tells you their place in the group&apos;s age order. The
+                feeling around that age order comes from the group.
               </p>
 
-              <p>Another phrase is maknae on top.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                Maknae line, maknae on top, and golden maknae
+              </h2>
 
               <p>
-                This is a playful fan phrase. It describes a youngest member
-                who does not feel small or shy in the group dynamic. They may
-                act bold, tease older members, take charge in a funny way, or
-                have a strong stage presence that makes them feel bigger than
-                their age order.
+                One related phrase is maknae line. Maknae line usually means
+                the younger members of a group, not only the single youngest
+                member. Fans use it when they want to talk about the younger
+                side of the team together. The exact members can depend on
+                the group and how fans divide the ages.
               </p>
 
-              <p>It does not mean they are officially above the other members.</p>
-
-              <p>It is fandom language.</p>
-
-              <p>It is playful.</p>
-
-              <p>There is also the phrase golden maknae.</p>
+              <p>
+                Another phrase is maknae on top. This is a playful fan
+                phrase. It describes a youngest member who does not feel
+                small or shy in the group dynamic. They may act bold, tease
+                older members, take charge in a funny way, or have a strong
+                stage presence that makes them feel bigger than their age
+                order.
+              </p>
 
               <p>
-                Fans may use this when the youngest member seems good at many
-                things: singing, dancing, performing, sports, variety, visuals,
-                or other skills. But it is not a role every group has, and it
-                should not be treated like an official title unless the group or
+                It does not mean they are officially above the other members.
+                It is fandom language. It is playful.
+              </p>
+
+              <p>
+                There is also the phrase golden maknae. Fans may use this
+                when the youngest member seems good at many things: singing,
+                dancing, performing, sports, variety, visuals, or other
+                skills. But it is not a role every group has, and it should
+                not be treated like an official title unless the group or
                 fandom clearly uses it that way.
               </p>
 
               <p>
                 K-pop fans love these small labels because they help describe
-                how a group feels.
-              </p>
-
-              <p>Maknae is one of those labels.</p>
-
-              <p>
-                It gives fans a simple way to talk about age, growth, and team
+                how a group feels. Maknae is one of those labels. It gives
+                fans a simple way to talk about age, growth, and team
                 chemistry.
               </p>
 
-              <p>Maknae is different from center.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How it differs from center, visual, and ending fairy
+              </h2>
 
               <p>
-                The center is about stage placement and performance focus. A
-                center may stand in the middle during key choreography or be
-                placed in important visual moments. A maknae can be center
-                sometimes, but the two words mean different things.
+                Maknae is different from center. The center is about stage
+                placement and performance focus. A center may stand in the
+                middle during key choreography or be placed in important
+                visual moments. A maknae can be center sometimes, but the two
+                words mean different things.
               </p>
-
-              <p>Maknae is about being the youngest.</p>
-
-              <p>Center is about where the stage puts attention.</p>
-
-              <p>Maknae is also different from visual.</p>
 
               <p>
-                Visual is about image, styling, facial impression, camera
-                presence, and how memorable a member feels in photos,
-                thumbnails, and stage clips. A maknae can have a strong visual
-                image, but maknae itself is not a beauty role.
+                Maknae is about being the youngest. Center is about where the
+                stage puts attention.
               </p>
-
-              <p>Do not turn it into a ranking.</p>
-
-              <p>That is not the point.</p>
-
-              <p>Maknae is also different from ending fairy.</p>
 
               <p>
-                An ending fairy is the final close-up camera moment after a
-                performance ends. Any member can get that moment. If the maknae
-                gets it, fans may read the expression through the maknae image:
-                cute, playful, shy, fresh, confident, or surprisingly
-                controlled.
+                Maknae is also different from visual. Visual is about image,
+                styling, facial impression, camera presence, and how
+                memorable a member feels in photos, thumbnails, and stage
+                clips. A maknae can have a strong visual image, but maknae
+                itself is not a beauty role.
               </p>
 
-              <p>But ending fairy is a moment.</p>
-
-              <p>Maknae is a group position by age.</p>
-
-              <p>Fancams are another place where maknae talk appears.</p>
+              <p>Do not turn it into a ranking. That is not the point.</p>
 
               <p>
-                A fancam follows one member during a performance, so fans can
-                watch details that a full-group stage may miss. For a maknae,
-                fancams can be especially interesting because fans often compare
-                earlier and later stages.
+                Maknae is also different from ending fairy. An ending fairy is
+                the final close-up camera moment after a performance ends.
+                Any member can get that moment. If the maknae gets it, fans
+                may read the expression through the maknae image: cute,
+                playful, shy, fresh, confident, or surprisingly controlled.
               </p>
-
-              <p>They notice growth.</p>
-
-              <p>They notice confidence.</p>
-
-              <p>They notice expression changes.</p>
 
               <p>
-                They notice when the youngest member starts looking more
-                comfortable with the camera.
+                But ending fairy is a moment. Maknae is a group position by
+                age.
               </p>
 
-              <p>That is a very K-pop way of watching.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How fancams reveal a maknae&apos;s growth
+              </h2>
 
-              <p>You are not only watching one stage.</p>
+              <p>
+                Fancams are another place where maknae talk appears. A fancam
+                follows one member during a performance, so fans can watch
+                details that a full-group stage may miss. For a maknae,
+                fancams can be especially interesting because fans often
+                compare earlier and later stages.
+              </p>
 
-              <p>You are watching time pass.</p>
+              <p>
+                They notice growth. They notice confidence. They notice
+                expression changes. They notice when the youngest member
+                starts looking more comfortable with the camera.
+              </p>
+
+              <p>
+                That is a very K-pop way of watching. You are not only
+                watching one stage. You are watching time pass.
+              </p>
 
               <p>
                 This is why fans sometimes talk about a maknae &quot;growing
-                up&quot; through fancams, photos, styling, and comeback eras. It
-                does not always mean age in a literal way. It can mean the
+                up&quot; through fancams, photos, styling, and comeback eras.
+                It does not always mean age in a literal way. It can mean the
                 idol&apos;s stage image is becoming clearer.
               </p>
 
-              <p>Maybe their expressions are sharper.</p>
-
-              <p>Maybe they look more relaxed.</p>
-
-              <p>Maybe their ending fairy moments feel less nervous.</p>
-
               <p>
+                Maybe their expressions are sharper. Maybe they look more
+                relaxed. Maybe their ending fairy moments feel less nervous.
                 Maybe their styling starts to match the group&apos;s concept
                 more strongly.
               </p>
 
               <p>Fans notice those changes.</p>
 
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How to notice a maknae&apos;s role as a beginner
+              </h2>
+
               <p>
                 For beginners, the safest way to understand maknae is this:
+                Start with the basic meaning. The maknae is the youngest
+                member.
               </p>
 
-              <p>Start with the basic meaning.</p>
-
-              <p>The maknae is the youngest member.</p>
-
-              <p>Then look at the group dynamic.</p>
-
-              <p>How do older members treat them?</p>
+              <p>
+                Then look at the group dynamic. How do older members treat
+                them?
+              </p>
 
               <p>
                 Do fans talk about them as cute, bold, calm, funny, or
-                surprisingly mature?
+                surprisingly mature? Do their fancams show growth over time?
+                Do their ending moments feel playful or controlled? Do they
+                fit the group image in an interesting way?
               </p>
 
-              <p>Do their fancams show growth over time?</p>
-
-              <p>Do their ending moments feel playful or controlled?</p>
-
-              <p>Do they fit the group image in an interesting way?</p>
-
-              <p>Those questions tell you more than the word alone.</p>
-
-              <p>There is one more thing to remember.</p>
+              <p>
+                Those questions tell you more than the word alone. There is
+                one more thing to remember.
+              </p>
 
               <p>
                 Korean age and international age can make idol ages feel
-                confusing, especially in older content or fan posts. Korea has
-                changed its official age-counting system, and fans online may
-                use birth year, international age, or older Korean-style age
-                depending on the context. For K-pop pages, it is usually safest
-                to focus on birth order inside the group.
+                confusing, especially in older content or fan posts. Korea
+                has changed its official age-counting system, and fans online
+                may use birth year, international age, or older Korean-style
+                age depending on the context. For K-pop pages, it is usually
+                safest to focus on birth order inside the group.
               </p>
 
-              <p>Maknae means youngest in the group.</p>
+              <p>Maknae means youngest in the group. That part stays clear.</p>
 
-              <p>That part stays clear.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                Why maknae matters, and what it is not
+              </h2>
 
               <p>
                 For HAEMIL readers, maknae is worth learning because it shows
                 how K-pop fans watch more than performances.
               </p>
 
-              <p>They watch relationships.</p>
-
-              <p>They watch growth.</p>
-
-              <p>They watch image changes.</p>
-
               <p>
-                They watch how one member&apos;s role feels different beside the
-                others.
+                They watch relationships. They watch growth. They watch image
+                changes. They watch how one member&apos;s role feels
+                different beside the others.
               </p>
 
-              <p>A maknae is not automatically the cutest member.</p>
-
-              <p>Not automatically the weakest.</p>
-
-              <p>Not automatically the most protected.</p>
-
-              <p>Not automatically the most childish.</p>
-
-              <p>The maknae is simply the youngest member.</p>
-
               <p>
-                Everything else depends on the idol, the group, and the story
-                fans see over time.
+                A maknae is not automatically the cutest member. Not
+                automatically the weakest. Not automatically the most
+                protected. Not automatically the most childish.
               </p>
 
-              <p>That is why one small Korean word can carry so much feeling.</p>
+              <p>
+                The maknae is simply the youngest member. Everything else
+                depends on the idol, the group, and the story fans see over
+                time. That is why one small Korean word can carry so much
+                feeling.
+              </p>
             </div>
           </section>
 
