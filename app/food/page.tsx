@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import SiteHeader from "../../components/SiteHeader";
 import { getPostsByCategory } from "../../lib/posts";
 
@@ -279,32 +280,61 @@ export default function FoodPage() {
             F
           </div>
 
-          <Link
-            href="/"
-            className="mb-6 inline-flex text-sm font-semibold text-[var(--accent)]"
-          >
-            ← Back home
-          </Link>
+          <div className="relative md:flex md:items-center md:justify-between md:gap-8">
+            <div className="md:min-w-0 md:flex-1">
+              <Link
+                href="/"
+                className="mb-6 inline-flex text-sm font-semibold text-[var(--accent)]"
+              >
+                ← Back home
+              </Link>
 
-          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
-            Food
-          </p>
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+                Food
+              </p>
 
-          <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
-            Food in Korea
-          </h1>
+              <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
+                Food in Korea
+              </h1>
 
-          <p className="mt-6 max-w-2xl text-base leading-8 text-[var(--muted)] md:text-lg">
-            Simple HAEMIL food guides for understanding what to eat in Korea,
-            where certain dishes feel local, and how to order without turning
-            every meal into homework.
-          </p>
+              <p className="mt-6 max-w-2xl text-base leading-8 text-[var(--muted)] md:text-lg">
+                Simple HAEMIL food guides for understanding what to eat in
+                Korea, where certain dishes feel local, and how to order
+                without turning every meal into homework.
+              </p>
 
-          <p className="mt-5 max-w-2xl text-base leading-8 text-[var(--muted)]">
-            Start here when you want Korean food to feel less confusing. HAEMIL
-            food guides explain local dishes, common eating situations, and the
-            small details that help a meal make sense.
-          </p>
+              <p className="mt-5 max-w-2xl text-base leading-8 text-[var(--muted)]">
+                Start here when you want Korean food to feel less confusing.
+                HAEMIL food guides explain local dishes, common eating
+                situations, and the small details that help a meal make
+                sense.
+              </p>
+            </div>
+
+            <div
+              aria-hidden="true"
+              className="relative mx-auto mt-8 h-[160px] w-[220px] md:mx-0 md:mt-0 md:h-[190px] md:w-[260px] md:shrink-0"
+            >
+              <div className="absolute inset-0 overflow-hidden rounded-2xl border border-[var(--border)] shadow-md">
+                <Image
+                  src="/images/food/떡볶이.png"
+                  alt=""
+                  fill
+                  sizes="(max-width: 767px) 220px, 260px"
+                  className="object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-5 -left-5 hidden h-[100px] w-[130px] rotate-3 overflow-hidden rounded-2xl border border-[var(--border)] shadow-md md:block">
+                <Image
+                  src="/images/food/비빔밥.png"
+                  alt=""
+                  fill
+                  sizes="130px"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </div>
         </section>
 
         <section className="mt-12 pb-8">

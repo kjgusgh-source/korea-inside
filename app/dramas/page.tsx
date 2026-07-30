@@ -73,33 +73,47 @@ export default function DramasPage() {
             D
           </div>
 
-          <Link
-            href="/"
-            className="mb-6 inline-flex text-sm font-semibold text-[var(--accent)]"
-          >
-            ← Back home
-          </Link>
+          <div className="relative md:flex md:items-center md:justify-between md:gap-8">
+            <div className="md:min-w-0 md:flex-1">
+              <Link
+                href="/"
+                className="mb-6 inline-flex text-sm font-semibold text-[var(--accent)]"
+              >
+                ← Back home
+              </Link>
 
-          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
-            Drama / Film
-          </p>
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+                Drama / Film
+              </p>
 
-          <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
-            Drama & Film
-          </h1>
+              <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
+                Drama & Film
+              </h1>
 
-          <p className="mt-6 max-w-2xl text-base leading-8 text-[var(--muted)] md:text-lg">
-            HAEMIL guides for understanding Korean dramas, films, city moods,
-            everyday scenes, and the places or cultural details that make them
-            feel familiar.
-          </p>
+              <p className="mt-6 max-w-2xl text-base leading-8 text-[var(--muted)] md:text-lg">
+                HAEMIL guides for understanding Korean dramas, films, city
+                moods, everyday scenes, and the places or cultural details
+                that make them feel familiar.
+              </p>
 
-          <p className="mt-5 max-w-2xl text-base leading-8 text-[var(--muted)]">
-            Start here when you want K-dramas and Korean films to feel easier to
-            understand. These guides do not only list titles. They explain the
-            everyday places, emotions, words, and cultural details that often
-            appear on screen.
-          </p>
+              <p className="mt-5 max-w-2xl text-base leading-8 text-[var(--muted)]">
+                Start here when you want K-dramas and Korean films to feel
+                easier to understand. These guides do not only list titles.
+                They explain the everyday places, emotions, words, and
+                cultural details that often appear on screen.
+              </p>
+            </div>
+
+            <div className="relative mt-8 aspect-video w-full overflow-hidden rounded-2xl border border-[var(--border)] bg-black shadow-md md:mt-0 md:w-[380px] md:shrink-0 lg:w-[420px]">
+              <iframe
+                className="h-full w-full"
+                src="https://www.youtube-nocookie.com/embed/5Jtu4pAH0B0?playsinline=1"
+                title="Our Beloved Summer: When old feelings return on camera (SBS archive clip from 빽드)"
+                allow="clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+          </div>
         </section>
 
         <section className="mt-12 pb-8">

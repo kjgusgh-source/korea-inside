@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import SiteHeader from "../../components/SiteHeader";
 import { getPostsByCategory } from "../../lib/posts";
 
@@ -269,33 +270,50 @@ export default function TravelPage() {
             T
           </div>
 
-          <Link
-            href="/"
-            className="mb-6 inline-flex text-sm font-semibold text-[var(--accent)]"
-          >
-            ← Back home
-          </Link>
+          <div className="relative md:flex md:items-center md:justify-between md:gap-8">
+            <div className="md:min-w-0 md:flex-1">
+              <Link
+                href="/"
+                className="mb-6 inline-flex text-sm font-semibold text-[var(--accent)]"
+              >
+                ← Back home
+              </Link>
 
-          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
-            Travel
-          </p>
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+                Travel
+              </p>
 
-          <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
-            Travel in Korea
-          </h1>
+              <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
+                Travel in Korea
+              </h1>
 
-          <p className="mt-6 max-w-2xl text-base leading-8 text-[var(--muted)] md:text-lg">
-            Map-friendly HAEMIL guides for exploring Korea through neighborhoods,
-            food, local routes, and small details that make a trip easier to
-            understand.
-          </p>
+              <p className="mt-6 max-w-2xl text-base leading-8 text-[var(--muted)] md:text-lg">
+                Map-friendly HAEMIL guides for exploring Korea through
+                neighborhoods, food, local routes, and small details that
+                make a trip easier to understand.
+              </p>
 
-          <p className="mt-5 max-w-2xl text-base leading-8 text-[var(--muted)]">
-            Start here when you want to plan a Korea trip without turning it into
-            a checklist. HAEMIL travel guides focus on places people actually
-            visit, how areas feel, what to eat nearby, and how to choose a route
-            that makes sense.
-          </p>
+              <p className="mt-5 max-w-2xl text-base leading-8 text-[var(--muted)]">
+                Start here when you want to plan a Korea trip without turning
+                it into a checklist. HAEMIL travel guides focus on places
+                people actually visit, how areas feel, what to eat nearby,
+                and how to choose a route that makes sense.
+              </p>
+            </div>
+
+            <div className="relative mt-8 aspect-[16/10] w-full overflow-hidden rounded-2xl border border-[var(--border)] shadow-md md:mt-0 md:w-[340px] md:shrink-0 lg:w-[380px]">
+              <Image
+                src="/images/home/travel-mookho-skywalk.jpg"
+                alt=""
+                fill
+                sizes="(max-width: 767px) 100vw, 380px"
+                className="object-cover object-[center_58%]"
+              />
+              <span className="absolute bottom-3 left-3 rounded-full bg-[var(--surface)]/85 px-3 py-1 text-xs font-semibold text-[var(--text)] shadow-sm">
+                Mukho Skywalk
+              </span>
+            </div>
+          </div>
         </section>
 
         <section className="mt-12 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 shadow-lg shadow-[var(--shadow)] md:p-8">

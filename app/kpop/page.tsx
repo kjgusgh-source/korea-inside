@@ -15,7 +15,7 @@ export default function KpopPage() {
   const guideArticles = getKpopGuideArticles();
 
   return (
-    <main className="min-h-screen bg-[var(--background)] text-[var(--text)]">
+    <main className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-6 py-6 md:px-8 md:py-8">
         <SiteHeader />
 
@@ -24,26 +24,72 @@ export default function KpopPage() {
             K
           </div>
 
-          <Link
-            href="/"
-            className="mb-6 inline-flex text-sm font-semibold text-[var(--accent)]"
-          >
-            ← Back home
-          </Link>
+          <div className="relative md:flex md:items-center md:justify-between md:gap-6">
+            <div className="md:min-w-0 md:flex-1">
+              <Link
+                href="/"
+                className="mb-6 inline-flex text-sm font-semibold text-[var(--accent)]"
+              >
+                ← Back home
+              </Link>
 
-          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
-            K-pop / Idols
-          </p>
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+                K-pop / Idols
+              </p>
 
-          <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
-            Start with the idol you like. Stay for the culture around it.
-          </h1>
+              <h1
+                aria-label="Start with the idol you like. Stay for the culture around it."
+                className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:max-w-4xl md:text-[52px] lg:text-[56px]"
+              >
+                <span aria-hidden="true" className="block md:hidden">
+                  Start with the idol you like. Stay for the culture around it.
+                </span>
+                <span aria-hidden="true" className="hidden md:block md:whitespace-nowrap">
+                  Start with the idol you like.
+                </span>
+                <span aria-hidden="true" className="hidden md:block md:whitespace-nowrap">
+                  Stay for the culture around it.
+                </span>
+              </h1>
 
-          <p className="mt-6 max-w-2xl text-base leading-8 text-[var(--muted)] md:text-lg">
-            K-pop is one of the easiest ways to enter Korean culture. This page
-            helps visitors find groups, members, fancams, stage words, fan
-            culture, and the small moments that make people curious about Korea.
-          </p>
+              <p className="mt-6 max-w-2xl text-base leading-8 text-[var(--muted)] md:text-lg">
+                K-pop is one of the easiest ways to enter Korean culture. This
+                page helps visitors find groups, members, fancams, stage
+                words, fan culture, and the small moments that make people
+                curious about Korea.
+              </p>
+            </div>
+
+            <div
+              aria-hidden="true"
+              className="relative mx-auto mt-[10px] h-[145px] w-[170px] md:mx-0 md:mr-[20px] md:mt-0 md:h-[157px] md:w-[247px] md:shrink-0"
+            >
+              <div className="absolute left-0 top-[2px] h-[143px] w-[110px] -rotate-6 overflow-hidden rounded-2xl border border-[var(--border)] shadow-md md:h-[153px] md:w-[118px]">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="https://img.youtube.com/vi/gHoKSBaLP7E/hqdefault.jpg"
+                  alt=""
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <div className="absolute left-[60px] top-0 h-[143px] w-[110px] rotate-3 overflow-hidden rounded-2xl border border-[var(--border)] shadow-md md:left-[65px] md:h-[153px] md:w-[118px]">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="https://img.youtube.com/vi/ZbxCI7ibDWk/hqdefault.jpg"
+                  alt=""
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <div className="absolute left-[129px] top-[4px] hidden h-[153px] w-[118px] rotate-6 overflow-hidden rounded-2xl border border-[var(--border)] shadow-md md:block">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="https://img.youtube.com/vi/GETUc1c1uAs/hqdefault.jpg"
+                  alt=""
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
         </section>
 
         <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">
