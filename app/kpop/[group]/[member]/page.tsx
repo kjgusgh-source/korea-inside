@@ -175,7 +175,7 @@ const structuredData = [
   return (
     <>
     <JsonLd data={structuredData} />
-    <main className="min-h-screen bg-[var(--background)] text-[var(--text)]">
+    <main className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
       <SiteHeader />
 
       <section className="mx-auto max-w-6xl px-5 py-10 md:px-8 md:py-14">

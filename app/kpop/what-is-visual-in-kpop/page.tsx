@@ -146,7 +146,7 @@ export default function WhatIsVisualInKpopPage() {
     <>
       <JsonLd data={structuredData} />
 
-      <main className="min-h-screen bg-[var(--background)] text-[var(--text)]">
+      <main className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 py-6 md:px-8 md:py-8">
           <SiteHeader />
 
