@@ -158,7 +158,7 @@ export default function WhatIsAMusicShowInKpopPage() {
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 py-6 md:px-8 md:py-8">
           <SiteHeader />
 
-          <article className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-10">
+          <article className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-5 md:p-10">
             <Link
               href="/kpop"
               className="mb-6 inline-flex text-sm font-semibold text-[var(--accent)]"
@@ -170,11 +170,11 @@ export default function WhatIsAMusicShowInKpopPage() {
               K-pop starter guide
             </p>
 
-            <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
+            <h1 className="mt-3 max-w-3xl text-[32px] font-semibold leading-[1.12] tracking-tight md:mt-4 md:text-6xl md:leading-tight">
               {pageTitle}
             </h1>
 
-            <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
+            <p className="mt-4 max-w-3xl text-base leading-8 text-[var(--muted)] md:mt-6 md:text-lg">
               If you search &quot;music show meaning in K-pop,&quot; the simple
               answer is this: a K-pop music show is a Korean broadcast program
               where idols perform current songs.
@@ -197,165 +197,141 @@ export default function WhatIsAMusicShowInKpopPage() {
           </section>
 
           <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
-            <div className="space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
-              <p>In Korean, music show is 음악방송.</p>
+            <div className="max-w-3xl space-y-5 text-base leading-8 text-[var(--muted)] md:text-lg">
+              <h2 className="text-xl font-semibold text-[var(--text)] md:text-2xl">
+                What a music show actually is
+              </h2>
 
-              <p>Fans often shorten it to 음방.</p>
+              <p>
+                In Korean, music show is 음악방송. Fans often shorten it to
+                음방.
+              </p>
 
               <p>
                 Music shows are one of the main places where K-pop comebacks
                 become visible.
               </p>
 
-              <p>A group releases a title track.</p>
-
-              <p>Then they perform it on music shows.</p>
-
-              <p>Fans watch the stage.</p>
-
-              <p>Then they watch fancams.</p>
-
               <p>
-                Then they notice outfits, choreography, center moments, killing
-                parts, and ending fairy clips.
+                A group releases a title track. Then they perform it on
+                music shows. Fans watch the stage. Then they watch fancams.
+                Then they notice outfits, choreography, center moments,
+                killing parts, and ending fairy clips.
               </p>
 
-              <p>That is why music shows matter so much in K-pop.</p>
-
-              <p>They are not only TV performances.</p>
-
-              <p>They are part of the comeback cycle.</p>
+              <p>
+                That is why music shows matter so much in K-pop. They are not
+                only TV performances. They are part of the comeback cycle.
+              </p>
 
               <p>
                 For beginners, the easiest way to understand a music show is
-                to think of it as a weekly performance stage.
+                to think of it as a weekly performance stage. Artists come to
+                perform songs they are currently promoting.
               </p>
-
-              <p>Artists come to perform songs they are currently promoting.</p>
-
-              <p>Some are big groups.</p>
-
-              <p>Some are rookies.</p>
-
-              <p>Some are solo artists.</p>
-
-              <p>Some are returning with a comeback.</p>
-
-              <p>Some are introducing themselves for the first time.</p>
-
-              <p>Not every artist appears on every show.</p>
-
-              <p>Not every performance has the same level of attention.</p>
 
               <p>
-                But music shows are still one of the easiest ways to follow
-                active K-pop promotions.
+                Some are big groups. Some are rookies. Some are solo
+                artists. Some are returning with a comeback. Some are
+                introducing themselves for the first time.
               </p>
+
+              <p>
+                Not every artist appears on every show. Not every
+                performance has the same level of attention. But music shows
+                are still one of the easiest ways to follow active K-pop
+                promotions.
+              </p>
+
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How a music show stage differs from the music video
+              </h2>
 
               <p>
                 A music show stage is often where fans first see how a title
-                track works outside the music video.
+                track works outside the music video. A music video can show
+                concept, editing, sets, story, styling, and camera
+                direction.
               </p>
 
               <p>
-                A music video can show concept, editing, sets, story, styling,
-                and camera direction.
-              </p>
-
-              <p>A music show stage shows the performance version.</p>
-
-              <p>The choreography becomes clearer.</p>
-
-              <p>The outfits are different.</p>
-
-              <p>The camera work is different.</p>
-
-              <p>The live-stage energy feels different.</p>
-
-              <p>
-                Sometimes a song becomes easier to understand after watching a
-                music show stage.
-              </p>
-
-              <p>That is very normal in K-pop.</p>
-
-              <p>A title track is not only heard.</p>
-
-              <p>It is watched again and again through stages.</p>
-
-              <p>One phrase you may see often is comeback stage.</p>
-
-              <p>
-                A comeback stage is a promoted performance of a new song during
-                the comeback period.
+                A music show stage shows the performance version. The
+                choreography becomes clearer. The outfits are different. The
+                camera work is different. The live-stage energy feels
+                different.
               </p>
 
               <p>
-                For many fans, the comeback stage is exciting because it is the
-                first time they can see the new choreography, styling, and stage
-                image together.
+                Sometimes a song becomes easier to understand after watching
+                a music show stage. That is very normal in K-pop.
               </p>
 
-              <p>Fans may ask:</p>
+              <p>
+                A title track is not only heard. It is watched again and
+                again through stages.
+              </p>
 
-              <p>How does the title track look on stage?</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                Comeback stages, and the questions fans ask
+              </h2>
 
-              <p>Who stands out this era?</p>
+              <p>
+                One phrase you may see often is comeback stage. A comeback
+                stage is a promoted performance of a new song during the
+                comeback period.
+              </p>
 
-              <p>What is the point choreography?</p>
+              <p>
+                For many fans, the comeback stage is exciting because it is
+                the first time they can see the new choreography, styling,
+                and stage image together.
+              </p>
 
-              <p>What is the killing part?</p>
-
-              <p>Who gets the center moment?</p>
-
-              <p>How does the concept feel outside the music video?</p>
+              <p>
+                Fans may ask: How does the title track look on stage? Who
+                stands out this era? What is the point choreography? What is
+                the killing part? Who gets the center moment? How does the
+                concept feel outside the music video?
+              </p>
 
               <p>Music shows help answer those questions.</p>
 
-              <p>They also create fancams.</p>
-
-              <p>A fancam is a member-focused video.</p>
-
-              <p>
-                Instead of watching the whole group, you follow one idol through
-                the performance.
-              </p>
-
-              <p>Many official fancams come from music shows.</p>
-
-              <p>That is why music shows are important for member discovery.</p>
-
-              <p>A full stage shows the group.</p>
-
-              <p>A fancam shows one person inside the group.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How music shows create fancams, and how members get discovered
+              </h2>
 
               <p>
-                A close-up fancam or facecam shows expressions and camera
-                awareness more clearly.
+                They also create fancams. A fancam is a member-focused video.
+                Instead of watching the whole group, you follow one idol
+                through the performance.
               </p>
 
               <p>
-                For new fans, this can be the moment a member becomes easier to
-                remember.
-              </p>
-
-              <p>You may watch the full stage first.</p>
-
-              <p>Then you watch one fancam.</p>
-
-              <p>Then another.</p>
-
-              <p>Then you notice a bias or bias wrecker.</p>
-
-              <p>That path often starts with music show content.</p>
-
-              <p>
-                Music shows are also where ending fairy moments became part of
-                modern K-pop watching.
+                Many official fancams come from music shows. That is why
+                music shows are important for member discovery.
               </p>
 
               <p>
-                An ending fairy is the final close-up after a performance ends.
+                A full stage shows the group. A fancam shows one person
+                inside the group. A close-up fancam or facecam shows
+                expressions and camera awareness more clearly.
+              </p>
+
+              <p>
+                For new fans, this can be the moment a member becomes easier
+                to remember.
+              </p>
+
+              <p>
+                You may watch the full stage first. Then you watch one
+                fancam. Then another. Then you notice a bias or bias
+                wrecker. That path often starts with music show content.
+              </p>
+
+              <p>
+                Music shows are also where ending fairy moments became part
+                of modern K-pop watching. An ending fairy is the final
+                close-up after a performance ends.
               </p>
 
               <p>
@@ -363,271 +339,200 @@ export default function WhatIsAMusicShowInKpopPage() {
                 reacts to the camera, or gives a small playful moment.
               </p>
 
-              <p>Not every ending is serious.</p>
-
-              <p>Not every ending is perfect.</p>
-
-              <p>That is part of the charm.</p>
-
               <p>
-                The ending fairy became popular because music show cameras often
-                give one or more idols a final close-up after the stage.
+                Not every ending is serious. Not every ending is perfect.
+                That is part of the charm.
               </p>
 
-              <p>Fans clip those moments.</p>
-
-              <p>They share them.</p>
-
-              <p>They compare them.</p>
-
-              <p>They remember them.</p>
-
               <p>
-                So if you want to understand ending fairy culture, music shows
-                are one of the best places to start.
+                The ending fairy became popular because music show cameras
+                often give one or more idols a final close-up after the
+                stage.
               </p>
 
-              <p>Music shows also make stage outfits important.</p>
+              <p>
+                Fans clip those moments. They share them. They compare them.
+                They remember them.
+              </p>
 
               <p>
-                During a comeback, a group may perform the same title track many
+                So if you want to understand ending fairy culture, music
+                shows are one of the best places to start.
+              </p>
+
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                Stage outfits, and how a music show can reveal stage presence
+              </h2>
+
+              <p>
+                Music shows also make stage outfits important. During a
+                comeback, a group may perform the same title track many
                 times.
               </p>
 
-              <p>The song is the same.</p>
-
-              <p>The choreography is mostly the same.</p>
-
-              <p>But the outfits change.</p>
-
-              <p>The hair styling may change.</p>
-
-              <p>The camera angles may change.</p>
-
-              <p>The stage background may change.</p>
+              <p>
+                The song is the same. The choreography is mostly the same.
+                But the outfits change.
+              </p>
 
               <p>
-                The expressions may become more relaxed after a few
-                performances.
+                The hair styling may change. The camera angles may change.
+                The stage background may change. The expressions may become
+                more relaxed after a few performances.
               </p>
 
               <p>
                 That is why fans watch multiple stages of the same song.
+                They are not only watching the song again. They are watching
+                the era from different angles.
               </p>
-
-              <p>They are not only watching the song again.</p>
-
-              <p>They are watching the era from different angles.</p>
-
-              <p>A music show can also reveal stage presence.</p>
 
               <p>
-                Stage presence is how an idol holds attention during a
-                performance.
+                A music show can also reveal stage presence. Stage presence
+                is how an idol holds attention during a performance.
               </p>
 
-              <p>On a music show, fans can compare several things:</p>
+              <p>
+                On a music show, fans can compare several things: How a
+                member uses the camera. How they handle transitions. How
+                they perform the point choreography. How they keep the mood
+                when they are not in the center. How they react during
+                close-up moments.
+              </p>
 
-              <p>How a member uses the camera.</p>
-
-              <p>How they handle transitions.</p>
-
-              <p>How they perform the point choreography.</p>
-
-              <p>How they keep the mood when they are not in the center.</p>
-
-              <p>How they react during close-up moments.</p>
-
-              <p>A music video may hide some of that with editing.</p>
-
-              <p>A music show stage can make it easier to feel.</p>
-
-              <p>Fancams make it even clearer.</p>
+              <p>
+                A music video may hide some of that with editing. A music
+                show stage can make it easier to feel. Fancams make it even
+                clearer.
+              </p>
 
               <p>
                 This is why K-pop fans often watch the same comeback through
-                many layers.
-              </p>
-
-              <p>Music video.</p>
-
-              <p>Music show stage.</p>
-
-              <p>Fancam.</p>
-
-              <p>Facecam.</p>
-
-              <p>Dance practice.</p>
-
-              <p>Dance challenge.</p>
-
-              <p>Behind-the-scenes clip.</p>
-
-              <p>Each one shows a different part of the performance.</p>
-
-              <p>Music shows sit near the center of that system.</p>
-
-              <p>
-                They connect the comeback to the weekly fan experience.
+                many layers. Music video. Music show stage. Fancam. Facecam.
+                Dance practice. Dance challenge. Behind-the-scenes clip.
               </p>
 
               <p>
-                Another phrase beginners may see is music show win.
+                Each one shows a different part of the performance. Music
+                shows sit near the center of that system. They connect the
+                comeback to the weekly fan experience.
+              </p>
+
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                Music show wins, and why they&apos;re not the whole story
+              </h2>
+
+              <p>
+                Another phrase beginners may see is music show win. A music
+                show win means an artist receives first place or a trophy on
+                a music show for that week.
               </p>
 
               <p>
-                A music show win means an artist receives first place or a
-                trophy on a music show for that week.
+                Fans often celebrate these wins, especially a group&apos;s
+                first win. It can feel meaningful because it shows that the
+                comeback was recognized during that promotion period.
               </p>
 
               <p>
-                Fans often celebrate these wins, especially a group&apos;s first
-                win.
+                But it is important to be careful. Music show rules can vary
+                by program and time. Different shows may use different
+                scoring systems.
               </p>
 
               <p>
-                It can feel meaningful because it shows that the comeback was
-                recognized during that promotion period.
-              </p>
-
-              <p>But it is important to be careful.</p>
-
-              <p>Music show rules can vary by program and time.</p>
-
-              <p>Different shows may use different scoring systems.</p>
-
-              <p>
-                Digital results, album sales, voting, broadcasts, video views,
-                or other factors may matter depending on the program.
-              </p>
-
-              <p>
+                Digital results, album sales, voting, broadcasts, video
+                views, or other factors may matter depending on the program.
                 Because those rules can change, HAEMIL does not treat music
-                show wins as a simple universal ranking.
+                show wins as a simple universal ranking. It is better to
+                understand them as part of K-pop promotion culture.
               </p>
 
               <p>
-                It is better to understand them as part of K-pop promotion
-                culture.
-              </p>
-
-              <p>A music show win can be emotional for fans.</p>
-
-              <p>It can be a milestone.</p>
-
-              <p>
-                But it is not the only way to measure an artist&apos;s value.
-              </p>
-
-              <p>Some songs become loved without many wins.</p>
-
-              <p>Some artists grow slowly.</p>
-
-              <p>
-                Some performances become famous through fancams or short clips.
+                A music show win can be emotional for fans. It can be a
+                milestone. But it is not the only way to measure an
+                artist&apos;s value.
               </p>
 
               <p>
-                Some stages matter because of fan memory, not only trophies.
+                Some songs become loved without many wins. Some artists grow
+                slowly. Some performances become famous through fancams or
+                short clips. Some stages matter because of fan memory, not
+                only trophies.
               </p>
 
               <p>That balance is important.</p>
 
-              <p>Music shows are also useful for rookie groups.</p>
-
               <p>
-                When a rookie group debuts, music show stages help viewers learn
-                the members.
-              </p>
-
-              <p>The camera introduces faces.</p>
-
-              <p>The choreography introduces performance style.</p>
-
-              <p>Fancams help fans choose who to follow.</p>
-
-              <p>
-                A rookie group may not be familiar yet, but a good music show
-                stage can make one member or one point move easier to remember.
-              </p>
-
-              <p>This is why early music show performances can matter.</p>
-
-              <p>They give the group repeated chances to be seen.</p>
-
-              <p>
-                Music shows also help explain why K-pop promotions can feel so
-                busy.
+                Music shows are also useful for rookie groups. When a rookie
+                group debuts, music show stages help viewers learn the
+                members.
               </p>
 
               <p>
-                During a comeback, an artist may release a music video, perform
-                on several shows, upload fancams, appear in interviews, post
-                dance challenges, and share behind-the-scenes content.
+                The camera introduces faces. The choreography introduces
+                performance style. Fancams help fans choose who to follow.
               </p>
 
-              <p>For fans, this creates a rhythm.</p>
+              <p>
+                A rookie group may not be familiar yet, but a good music
+                show stage can make one member or one point move easier to
+                remember.
+              </p>
 
-              <p>A new stage comes out.</p>
+              <p>
+                This is why early music show performances can matter. They
+                give the group repeated chances to be seen.
+              </p>
 
-              <p>A new outfit appears.</p>
+              <p>
+                Music shows also help explain why K-pop promotions can feel
+                so busy. During a comeback, an artist may release a music
+                video, perform on several shows, upload fancams, appear in
+                interviews, post dance challenges, and share
+                behind-the-scenes content.
+              </p>
 
-              <p>A fancam is uploaded.</p>
-
-              <p>A member has a funny ending fairy.</p>
-
-              <p>A killing part starts spreading.</p>
-
-              <p>A challenge clip gets shared.</p>
-
-              <p>The comeback keeps moving.</p>
+              <p>
+                For fans, this creates a rhythm. A new stage comes out. A new
+                outfit appears. A fancam is uploaded. A member has a funny
+                ending fairy. A killing part starts spreading. A challenge
+                clip gets shared. The comeback keeps moving.
+              </p>
 
               <p>That rhythm is part of why K-pop fandom feels active.</p>
 
-              <p>
-                For beginners, one simple way to watch music show content is
-                this:
-              </p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How to watch music show content, and how it all connects to a comeback
+              </h2>
 
-              <p>Start with the music video.</p>
-
-              <p>Then watch a music show stage.</p>
-
-              <p>Then watch a dance practice.</p>
-
-              <p>Then choose one fancam.</p>
+              <p>For beginners, one simple way to watch music show content is this:</p>
 
               <p>
-                Then watch the ending fairy or close-up clips if they interest
+                Start with the music video. Then watch a music show stage.
+                Then watch a dance practice. Then choose one fancam. Then
+                watch the ending fairy or close-up clips if they interest
                 you.
               </p>
 
-              <p>
-                This order helps you understand the comeback from wide to close.
-              </p>
-
-              <p>The music video shows concept.</p>
-
-              <p>The music show shows performance.</p>
-
-              <p>The dance practice shows choreography.</p>
-
-              <p>The fancam shows one member.</p>
-
-              <p>The close-up shows expression.</p>
-
-              <p>The ending fairy shows the final camera moment.</p>
-
-              <p>You do not have to watch everything.</p>
-
-              <p>But knowing the difference makes K-pop easier to follow.</p>
+              <p>This order helps you understand the comeback from wide to close.</p>
 
               <p>
-                Music shows are also a good place to understand title tracks.
+                The music video shows concept. The music show shows
+                performance. The dance practice shows choreography. The
+                fancam shows one member. The close-up shows expression. The
+                ending fairy shows the final camera moment.
               </p>
 
               <p>
-                The title track is the main song promoted during a comeback.
+                You do not have to watch everything. But knowing the
+                difference makes K-pop easier to follow.
+              </p>
+
+              <p>
+                Music shows are also a good place to understand title
+                tracks. The title track is the main song promoted during a
+                comeback.
               </p>
 
               <p>
@@ -636,52 +541,42 @@ export default function WhatIsAMusicShowInKpopPage() {
               </p>
 
               <p>
-                If the title track has strong point choreography, music shows
-                show it repeatedly.
+                If the title track has strong point choreography, music
+                shows show it repeatedly. If a member has a memorable
+                killing part, music show clips can help it spread. If the
+                concept depends on styling, different music show outfits can
+                shape how fans remember the comeback.
               </p>
 
               <p>
-                If a member has a memorable killing part, music show clips can
-                help it spread.
+                So music shows are not separate from the comeback. They are
+                one of the main ways a comeback lives.
               </p>
 
               <p>
-                If the concept depends on styling, different music show outfits
-                can shape how fans remember the comeback.
+                For HAEMIL readers, the easiest way to understand music
+                shows is this:
               </p>
-
-              <p>So music shows are not separate from the comeback.</p>
-
-              <p>They are one of the main ways a comeback lives.</p>
 
               <p>
-                For HAEMIL readers, the easiest way to understand music shows
-                is this:
+                A comeback gives fans a new era. A title track gives that
+                era its main song. A music show gives that song a stage.
               </p>
 
-              <p>A comeback gives fans a new era.</p>
-
-              <p>A title track gives that era its main song.</p>
-
-              <p>A music show gives that song a stage.</p>
-
-              <p>A fancam lets fans follow one member.</p>
-
-              <p>An ending fairy gives the final close-up.</p>
-
-              <p>A music show win can become a milestone.</p>
+              <p>
+                A fancam lets fans follow one member. An ending fairy gives
+                the final close-up. A music show win can become a milestone.
+              </p>
 
               <p>
                 And week by week, fans watch the comeback unfold through
                 performances.
               </p>
 
-              <p>That is why K-pop music shows matter.</p>
-
-              <p>They are where a song becomes a stage.</p>
-
               <p>
-                And where a stage becomes many small moments fans remember.
+                That is why K-pop music shows matter. They are where a song
+                becomes a stage. And where a stage becomes many small
+                moments fans remember.
               </p>
             </div>
           </section>

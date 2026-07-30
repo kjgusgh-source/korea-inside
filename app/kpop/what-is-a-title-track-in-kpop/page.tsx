@@ -158,7 +158,7 @@ export default function WhatIsATitleTrackInKpopPage() {
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 py-6 md:px-8 md:py-8">
           <SiteHeader />
 
-          <article className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-10">
+          <article className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-5 md:p-10">
             <Link
               href="/kpop"
               className="mb-6 inline-flex text-sm font-semibold text-[var(--accent)]"
@@ -170,11 +170,11 @@ export default function WhatIsATitleTrackInKpopPage() {
               K-pop starter guide
             </p>
 
-            <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
+            <h1 className="mt-3 max-w-3xl text-[32px] font-semibold leading-[1.12] tracking-tight md:mt-4 md:text-6xl md:leading-tight">
               {pageTitle}
             </h1>
 
-            <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
+            <p className="mt-4 max-w-3xl text-base leading-8 text-[var(--muted)] md:mt-6 md:text-lg">
               If you search &quot;title track meaning in K-pop,&quot; the simple
               answer is this: a title track is the main song promoted during a
               K-pop comeback.
@@ -197,477 +197,343 @@ export default function WhatIsATitleTrackInKpopPage() {
           </section>
 
           <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
-            <div className="space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
+            <div className="max-w-3xl space-y-5 text-base leading-8 text-[var(--muted)] md:text-lg">
+              <h2 className="text-xl font-semibold text-[var(--text)] md:text-2xl">
+                What a title track actually is
+              </h2>
+
               <p>
-                It is usually the song with the music video.
+                It is usually the song with the music video. The main
+                choreography. The music show stages. The fancams. The dance
+                challenges. The song most casual viewers notice first.
               </p>
 
-              <p>The main choreography.</p>
-
-              <p>The music show stages.</p>
-
-              <p>The fancams.</p>
-
-              <p>The dance challenges.</p>
-
-              <p>The song most casual viewers notice first.</p>
-
-              <p>In Korean, fans often call it 타이틀곡.</p>
-
-              <p>That means title track.</p>
+              <p>
+                In Korean, fans often call it 타이틀곡. That means title
+                track.
+              </p>
 
               <p>
                 But the title track is not always the only good song on an
-                album.
+                album. It is the song chosen to represent the comeback. That
+                difference matters.
               </p>
 
-              <p>It is the song chosen to represent the comeback.</p>
-
-              <p>That difference matters.</p>
-
-              <p>A K-pop album can have several songs.</p>
-
-              <p>One song becomes the title track.</p>
-
-              <p>The other songs are often called B-sides.</p>
-
               <p>
-                In Korean, fans may call them 수록곡, which means songs included
+                A K-pop album can have several songs. One song becomes the
+                title track. The other songs are often called B-sides. In
+                Korean, fans may call them 수록곡, which means songs included
                 on the album.
               </p>
 
-              <p>A B-side is not necessarily less loved.</p>
-
               <p>
-                Sometimes fans like a B-side more than the title track.
+                A B-side is not necessarily less loved. Sometimes fans like a
+                B-side more than the title track. Sometimes a B-side becomes
+                popular through performances, fan edits, concerts, or short
+                clips.
               </p>
 
               <p>
-                Sometimes a B-side becomes popular through performances, fan
-                edits, concerts, or short clips.
+                But the title track is usually the song the company chooses
+                as the main face of the comeback. That is why title tracks
+                matter so much in K-pop.
               </p>
 
-              <p>
-                But the title track is usually the song the company chooses as
-                the main face of the comeback.
-              </p>
-
-              <p>That is why title tracks matter so much in K-pop.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                What fans want from a title track, and how it shapes the music video
+              </h2>
 
               <p>
                 When a group has a comeback, fans wait to see what the title
-                track will sound like.
-              </p>
-
-              <p>They want to know the concept.</p>
-
-              <p>They want to see the choreography.</p>
-
-              <p>They want to know the killing part.</p>
-
-              <p>They want to see which member stands out.</p>
-
-              <p>
-                They want to know whether the song feels like the group&apos;s
-                image or a new direction.
+                track will sound like. They want to know the concept. They
+                want to see the choreography. They want to know the killing
+                part. They want to see which member stands out. They want to
+                know whether the song feels like the group&apos;s image or a
+                new direction.
               </p>
 
               <p>The title track carries a lot of that attention.</p>
 
-              <p>A title track is also connected to the music video.</p>
-
               <p>
-                For many international fans, the music video is the first full
-                look at a comeback.
+                A title track is also connected to the music video. For many
+                international fans, the music video is the first full look
+                at a comeback.
               </p>
 
-              <p>The styling becomes clearer.</p>
-
-              <p>The concept becomes easier to read.</p>
-
-              <p>The main choreography appears.</p>
-
               <p>
-                The members&apos; images for the era become more memorable.
+                The styling becomes clearer. The concept becomes easier to
+                read. The main choreography appears. The members&apos;
+                images for the era become more memorable.
               </p>
 
               <p>
                 That is why a title track can shape how people remember an
-                entire comeback.
+                entire comeback. Even if the album has many songs, the title
+                track often becomes the entry point.
               </p>
 
-              <p>
-                Even if the album has many songs, the title track often becomes
-                the entry point.
-              </p>
-
-              <p>A title track is also connected to stages.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How the title track works as a performance
+              </h2>
 
               <p>
-                After the song is released, K-pop artists usually perform the
-                title track on music shows and other stages.
+                A title track is also connected to stages. After the song is
+                released, K-pop artists usually perform the title track on
+                music shows and other stages.
               </p>
 
               <p>
                 This is where fans start watching live performances, comeback
-                stages, fancams, facecams, and dance practices.
-              </p>
-
-              <p>
-                The title track has to work not only as a song, but also as a
+                stages, fancams, facecams, and dance practices. The title
+                track has to work not only as a song, but also as a
                 performance.
               </p>
 
               <p>
                 That is one reason K-pop title tracks often have clear
-                choreography.
+                choreography. They need moments people can remember.
               </p>
 
-              <p>They need moments people can remember.</p>
-
-              <p>A chorus move.</p>
-
-              <p>A point choreography.</p>
-
-              <p>A center moment.</p>
-
-              <p>A killing part.</p>
-
-              <p>A camera close-up.</p>
-
-              <p>A performance detail that fans want to replay.</p>
-
-              <p>The title track gives those moments a place to happen.</p>
+              <p>
+                A chorus move. A point choreography. A center moment. A
+                killing part. A camera close-up. A performance detail that
+                fans want to replay.
+              </p>
 
               <p>
-                This is also why some songs feel different after you watch the
+                The title track gives those moments a place to happen. This
+                is also why some songs feel different after you watch the
                 stage.
               </p>
 
-              <p>You may hear the title track once and feel unsure.</p>
-
-              <p>Then you watch a comeback stage.</p>
-
-              <p>You see the choreography.</p>
-
-              <p>You notice the point move.</p>
-
-              <p>You watch a fancam.</p>
-
-              <p>You notice one member&apos;s stage presence.</p>
-
-              <p>Suddenly, the song becomes easier to understand.</p>
-
-              <p>That is very normal in K-pop.</p>
-
-              <p>A title track is not only heard.</p>
-
-              <p>It is watched.</p>
-
-              <p>A B-side works differently.</p>
-
               <p>
-                A B-side may be softer, more experimental, more emotional, more
-                playful, or more fan-focused.
+                You may hear the title track once and feel unsure. Then you
+                watch a comeback stage. You see the choreography. You notice
+                the point move. You watch a fancam. You notice one
+                member&apos;s stage presence.
               </p>
 
-              <p>It may not get the main music video.</p>
-
-              <p>It may not have full promotions.</p>
-
               <p>
-                But fans often care deeply about B-sides because they can show
-                another side of the artist.
+                Suddenly, the song becomes easier to understand. That is
+                very normal in K-pop.
               </p>
 
-              <p>Sometimes a B-side becomes a hidden favorite.</p>
+              <p>A title track is not only heard. It is watched.</p>
+
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How the title track differs from a B-side
+              </h2>
 
               <p>
-                Sometimes fans say, &quot;This should have been the title
-                track.&quot;
+                A B-side works differently. A B-side may be softer, more
+                experimental, more emotional, more playful, or more
+                fan-focused.
               </p>
-
-              <p>That does not mean the actual title track was wrong.</p>
 
               <p>
-                It just means fans connect with different songs in different
-                ways.
+                It may not get the main music video. It may not have full
+                promotions. But fans often care deeply about B-sides because
+                they can show another side of the artist.
               </p>
-
-              <p>The title track represents the comeback publicly.</p>
-
-              <p>A B-side can feel more personal inside the fandom.</p>
-
-              <p>That is the difference.</p>
-
-              <p>Then there is a pre-release.</p>
 
               <p>
-                A pre-release is a song released before the main comeback or
-                title track.
+                Sometimes a B-side becomes a hidden favorite. Sometimes fans
+                say, &quot;This should have been the title track.&quot;
               </p>
 
-              <p>In Korean, fans may call it 선공개곡.</p>
+              <p>
+                That does not mean the actual title track was wrong. It just
+                means fans connect with different songs in different ways.
+              </p>
+
+              <p>
+                The title track represents the comeback publicly. A B-side
+                can feel more personal inside the fandom. That is the
+                difference.
+              </p>
+
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                Pre-release, and how the release cycle fits together
+              </h2>
+
+              <p>
+                Then there is a pre-release. A pre-release is a song released
+                before the main comeback or title track. In Korean, fans may
+                call it 선공개곡.
+              </p>
 
               <p>
                 A pre-release can build attention before the album arrives.
-              </p>
-
-              <p>It can show part of the concept.</p>
-
-              <p>
-                It can give fans something to listen to before the title track.
+                It can show part of the concept. It can give fans something
+                to listen to before the title track. It can also help casual
+                listeners notice the comeback earlier.
               </p>
 
               <p>
-                It can also help casual listeners notice the comeback earlier.
-              </p>
-
-              <p>But a pre-release is not always the main title track.</p>
-
-              <p>
-                Sometimes it is a separate song that opens the door.
-              </p>
-
-              <p>Then the title track arrives later as the main focus.</p>
-
-              <p>
-                This can be confusing for beginners because K-pop release plans
-                can be very detailed.
-              </p>
-
-              <p>A comeback may include:</p>
-
-              <p>a scheduler,</p>
-
-              <p>concept photos,</p>
-
-              <p>track list,</p>
-
-              <p>highlight medley,</p>
-
-              <p>pre-release,</p>
-
-              <p>music video teaser,</p>
-
-              <p>title track,</p>
-
-              <p>album release,</p>
-
-              <p>comeback stage,</p>
-
-              <p>dance practice,</p>
-
-              <p>fancams,</p>
-
-              <p>and promotions.</p>
-
-              <p>The title track sits near the center of that whole cycle.</p>
-
-              <p>
-                It is the song most people use to understand the comeback.
-              </p>
-
-              <p>Title track is also connected to concept.</p>
-
-              <p>
-                A concept is the overall mood, image, and style of a comeback.
-              </p>
-
-              <p>The title track usually shows that concept most clearly.</p>
-
-              <p>If the concept is bright, the title track may sound bright.</p>
-
-              <p>
-                If the concept is dark, the title track may have sharper styling
-                and performance.
+                But a pre-release is not always the main title track.
+                Sometimes it is a separate song that opens the door. Then the
+                title track arrives later as the main focus.
               </p>
 
               <p>
-                If the concept is elegant, the choreography and visuals may feel
-                smoother.
+                This can be confusing for beginners because K-pop release
+                plans can be very detailed. A comeback may include: a
+                scheduler, concept photos, track list, highlight medley,
+                pre-release, music video teaser, title track, album release,
+                comeback stage, dance practice, fancams, and promotions.
               </p>
 
-              <p>The title track helps the concept become real.</p>
+              <p>
+                The title track sits near the center of that whole cycle. It
+                is the song most people use to understand the comeback.
+              </p>
 
-              <p>Not only in the music.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How the title track connects to concept, point choreography, and killing parts
+              </h2>
 
-              <p>In the video.</p>
+              <p>
+                Title track is also connected to concept. A concept is the
+                overall mood, image, and style of a comeback. The title track
+                usually shows that concept most clearly.
+              </p>
 
-              <p>In the stage.</p>
+              <p>
+                If the concept is bright, the title track may sound bright.
+                If the concept is dark, the title track may have sharper
+                styling and performance. If the concept is elegant, the
+                choreography and visuals may feel smoother.
+              </p>
 
-              <p>In the outfits.</p>
-
-              <p>In the expressions.</p>
-
-              <p>In the fan conversation.</p>
+              <p>
+                The title track helps the concept become real. Not only in
+                the music. In the video. In the stage. In the outfits. In
+                the expressions. In the fan conversation.
+              </p>
 
               <p>
                 That is why fans may ask, &quot;Does the title track fit the
-                concept?&quot;
+                concept?&quot; They are asking whether the main song matches
+                the era&apos;s image.
               </p>
 
               <p>
-                They are asking whether the main song matches the era&apos;s
-                image.
-              </p>
-
-              <p>A title track is also connected to point choreography.</p>
-
-              <p>
-                Point choreography is the signature move people remember from a
+                A title track is also connected to point choreography. Point
+                choreography is the signature move people remember from a
                 song.
               </p>
 
               <p>
-                Because the title track gets the main stages and challenges, it
-                often has the clearest point move.
-              </p>
-
-              <p>That move can help the song spread.</p>
-
-              <p>Fans copy it.</p>
-
-              <p>Other idols may do challenges.</p>
-
-              <p>Short clips use it.</p>
-
-              <p>
-                A simple gesture can become part of how people remember the
-                comeback.
-              </p>
-
-              <p>This is one reason title tracks are designed carefully.</p>
-
-              <p>The song needs a hook.</p>
-
-              <p>The performance needs a visual hook too.</p>
-
-              <p>A title track can also create killing parts.</p>
-
-              <p>A killing part is the short moment fans replay.</p>
-
-              <p>
-                It can be a vocal line, dance move, expression, lyric, camera
-                moment, or gesture.
+                Because the title track gets the main stages and challenges,
+                it often has the clearest point move. That move can help the
+                song spread.
               </p>
 
               <p>
-                In many comebacks, the title track is where the most talked-about
-                killing parts appear.
+                Fans copy it. Other idols may do challenges. Short clips use
+                it. A simple gesture can become part of how people remember
+                the comeback.
               </p>
 
-              <p>Not always.</p>
+              <p>
+                This is one reason title tracks are designed carefully. The
+                song needs a hook. The performance needs a visual hook too.
+              </p>
 
-              <p>But often.</p>
+              <p>
+                A title track can also create killing parts. A killing part
+                is the short moment fans replay. It can be a vocal line,
+                dance move, expression, lyric, camera moment, or gesture.
+              </p>
+
+              <p>
+                In many comebacks, the title track is where the most
+                talked-about killing parts appear. Not always. But often.
+              </p>
 
               <p>
                 Because that is the song with the most stages, fancams, and
-                attention.
-              </p>
-
-              <p>
-                The more people watch, the more replay moments they find.
+                attention. The more people watch, the more replay moments
+                they find.
               </p>
 
               <p>
                 That is also how a member can become more noticeable during a
-                comeback.
+                comeback. Maybe they have a strong line in the title track.
+                Maybe they lead a point choreography. Maybe their fancam
+                shows strong stage presence. Maybe a close-up moment makes
+                fans remember them.
               </p>
-
-              <p>Maybe they have a strong line in the title track.</p>
-
-              <p>Maybe they lead a point choreography.</p>
-
-              <p>Maybe their fancam shows strong stage presence.</p>
-
-              <p>Maybe a close-up moment makes fans remember them.</p>
 
               <p>
                 The title track becomes the place where those impressions
                 gather.
               </p>
 
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                The simple map: title track, B-side, and pre-release
+              </h2>
+
               <p>
                 For beginners, the easiest way to understand title track,
                 B-side, and pre-release is this:
               </p>
 
-              <p>The title track is the main promoted song.</p>
-
-              <p>A B-side is another song on the album.</p>
-
               <p>
-                A pre-release is a song released before the main comeback or
-                title track.
+                The title track is the main promoted song. A B-side is
+                another song on the album. A pre-release is a song released
+                before the main comeback or title track.
               </p>
 
-              <p>They can all be good.</p>
-
-              <p>They just play different roles.</p>
-
-              <p>The title track is public-facing.</p>
-
-              <p>The B-side can be fan-favorite.</p>
-
-              <p>The pre-release can build attention.</p>
-
-              <p>That is the simple map.</p>
+              <p>They can all be good. They just play different roles.</p>
 
               <p>
-                It also helps to remember that &quot;title track&quot; does not
-                mean &quot;the song with the album title.&quot;
+                The title track is public-facing. The B-side can be
+                fan-favorite. The pre-release can build attention. That is
+                the simple map.
               </p>
 
               <p>
+                It also helps to remember that &quot;title track&quot; does
+                not mean &quot;the song with the album title.&quot;
                 Sometimes the title track and album title may be connected.
-              </p>
-
-              <p>Sometimes they are different.</p>
-
-              <p>
-                In K-pop fan talk, title track usually means the main promoted
-                song.
-              </p>
-
-              <p>So do not overthink the English phrase.</p>
-
-              <p>Think of it as the comeback&apos;s main song.</p>
-
-              <p>That is usually enough.</p>
-
-              <p>
-                For HAEMIL readers, the easiest way to understand it is this:
-              </p>
-
-              <p>A comeback gives fans a new era.</p>
-
-              <p>A concept gives that era its mood.</p>
-
-              <p>A title track gives that era its main song.</p>
-
-              <p>Point choreography gives people a move to remember.</p>
-
-              <p>Killing parts give people moments to replay.</p>
-
-              <p>Fancams let fans follow individual members.</p>
-
-              <p>
-                B-sides give fans more of the artist beyond the main promotion.
+                Sometimes they are different.
               </p>
 
               <p>
-                And a pre-release can open the door before everything arrives.
+                In K-pop fan talk, title track usually means the main
+                promoted song. So do not overthink the English phrase. Think
+                of it as the comeback&apos;s main song. That is usually
+                enough.
+              </p>
+
+              <p>
+                For HAEMIL readers, the easiest way to understand it is
+                this:
+              </p>
+
+              <p>
+                A comeback gives fans a new era. A concept gives that era its
+                mood. A title track gives that era its main song.
+              </p>
+
+              <p>
+                Point choreography gives people a move to remember. Killing
+                parts give people moments to replay. Fancams let fans follow
+                individual members.
+              </p>
+
+              <p>
+                B-sides give fans more of the artist beyond the main
+                promotion. And a pre-release can open the door before
+                everything arrives.
               </p>
 
               <p>
                 So when K-pop fans ask, &quot;What is the title track?&quot;
-                they are really asking:
+                they are really asking: Which song is going to represent
+                this comeback? That is the title track.
               </p>
-
-              <p>Which song is going to represent this comeback?</p>
-
-              <p>That is the title track.</p>
             </div>
           </section>
 
