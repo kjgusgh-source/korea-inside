@@ -158,7 +158,7 @@ export default function WhatIsKillingPartInKpopPage() {
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 py-6 md:px-8 md:py-8">
           <SiteHeader />
 
-          <article className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-10">
+          <article className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-5 md:p-10">
             <Link
               href="/kpop"
               className="mb-6 inline-flex text-sm font-semibold text-[var(--accent)]"
@@ -170,11 +170,11 @@ export default function WhatIsKillingPartInKpopPage() {
               K-pop starter guide
             </p>
 
-            <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
+            <h1 className="mt-3 max-w-3xl text-[32px] font-semibold leading-[1.12] tracking-tight md:mt-4 md:text-6xl md:leading-tight">
               {pageTitle}
             </h1>
 
-            <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
+            <p className="mt-4 max-w-3xl text-base leading-8 text-[var(--muted)] md:mt-6 md:text-lg">
               If you search &quot;killing part meaning&quot; in K-pop, the simple
               answer is this: a killing part is the short part of a song or
               performance that fans remember, replay, quote, or share.
@@ -197,63 +197,55 @@ export default function WhatIsKillingPartInKpopPage() {
           </section>
 
           <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
-            <div className="space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
-              <p>It might be one vocal line.</p>
-
-              <p>One rap line.</p>
-
-              <p>One hand gesture.</p>
-
-              <p>One facial expression.</p>
-
-              <p>One dance move.</p>
-
-              <p>One camera close-up.</p>
-
-              <p>Sometimes it is only two or three seconds long.</p>
+            <div className="max-w-3xl space-y-5 text-base leading-8 text-[var(--muted)] md:text-lg">
+              <h2 className="text-xl font-semibold text-[var(--text)] md:text-2xl">
+                What a killing part looks like
+              </h2>
 
               <p>
-                But after the stage ends, that is the part people keep talking
-                about.
+                It might be one vocal line. One rap line. One hand gesture. One
+                facial expression. One dance move. One camera close-up.
               </p>
 
               <p>
-                The word can sound strange in English because &quot;killing&quot;
-                looks serious or violent. In K-pop fan language, it does not mean
-                that. It is closer to saying, &quot;That part hits hard,&quot; or
-                &quot;That is the standout moment.&quot;
+                Sometimes it is only two or three seconds long. But after the
+                stage ends, that is the part people keep talking about.
               </p>
 
               <p>
-                In Korean fandom talk, fans often say 킬링파트, written from the
-                English words &quot;killing part.&quot; It is not usually a formal
-                music term. It is more like fan language for the moment that
-                makes a song or stage stick in your head.
+                The word can sound strange in English because
+                &quot;killing&quot; looks serious or violent. In K-pop fan
+                language, it does not mean that. It is closer to saying,
+                &quot;That part hits hard,&quot; or &quot;That is the standout
+                moment.&quot;
               </p>
 
-              <p>A killing part can happen in the chorus.</p>
+              <p>
+                In Korean fandom talk, fans often say 킬링파트, written from
+                the English words &quot;killing part.&quot; It is not usually
+                a formal music term. It is more like fan language for the
+                moment that makes a song or stage stick in your head.
+              </p>
 
-              <p>But it does not have to.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                Where a killing part can happen
+              </h2>
+
+              <p>A killing part can happen in the chorus. But it does not have to.</p>
 
               <p>
                 Sometimes it appears right before the chorus, when the beat is
-                about to drop.
+                about to drop. Sometimes it is a short line in the bridge.
+                Sometimes it is a member&apos;s expression during a quiet
+                second. Sometimes it is the move everyone copies in a dance
+                challenge. Sometimes it is the camera finding one member at
+                exactly the right moment.
               </p>
-
-              <p>Sometimes it is a short line in the bridge.</p>
-
-              <p>Sometimes it is a member&apos;s expression during a quiet second.</p>
-
-              <p>Sometimes it is the move everyone copies in a dance challenge.</p>
 
               <p>
-                Sometimes it is the camera finding one member at exactly the
-                right moment.
+                That is why killing parts are so important in K-pop. K-pop is
+                built for replay.
               </p>
-
-              <p>That is why killing parts are so important in K-pop.</p>
-
-              <p>K-pop is built for replay.</p>
 
               <p>
                 Fans do not only listen once and move on. They watch music
@@ -262,236 +254,185 @@ export default function WhatIsKillingPartInKpopPage() {
                 to replay the same few seconds again.
               </p>
 
-              <p>It becomes the part fans wait for.</p>
-
-              <p>When the song starts, they already know it is coming.</p>
-
-              <p>That small anticipation is part of the fun.</p>
-
-              <p>A killing part can also make one member easier to remember.</p>
-
-              <p>Maybe you do not know all the members yet.</p>
-
               <p>
-                Then one person gets a line, a move, or a camera moment that
-                feels especially clear.
+                It becomes the part fans wait for. When the song starts, they
+                already know it is coming. That small anticipation is part of
+                the fun.
               </p>
 
-              <p>You search the group.</p>
-
-              <p>You watch the fancam.</p>
-
-              <p>You learn the member&apos;s name.</p>
-
-              <p>That is a very normal K-pop path.</p>
-
-              <p>One small part becomes the entry point.</p>
-
-              <p>This is why killing part connects naturally to fancams.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How it becomes an entry point through fancams
+              </h2>
 
               <p>
-                A full-stage video shows the whole group, but a fancam lets you
+                A killing part can also make one member easier to remember.
+                Maybe you do not know all the members yet. Then one person
+                gets a line, a move, or a camera moment that feels especially
+                clear.
+              </p>
+
+              <p>
+                You search the group. You watch the fancam. You learn the
+                member&apos;s name. That is a very normal K-pop path. One
+                small part becomes the entry point.
+              </p>
+
+              <p>
+                This is why killing part connects naturally to fancams. A
+                full-stage video shows the whole group, but a fancam lets you
                 follow one member. If that member has a killing part, the
-                fancam makes it easier to watch how they prepare for it, deliver
-                it, and move on after it.
+                fancam makes it easier to watch how they prepare for it,
+                deliver it, and move on after it.
               </p>
 
-              <p>Sometimes the best part is not only the killing part itself.</p>
-
-              <p>It is the second before.</p>
-
-              <p>The eye contact.</p>
-
-              <p>The breath.</p>
-
-              <p>The tiny expression change.</p>
-
-              <p>The way the member resets after the moment passes.</p>
+              <p>
+                Sometimes the best part is not only the killing part itself.
+                It is the second before. The eye contact. The breath. The tiny
+                expression change. The way the member resets after the moment
+                passes.
+              </p>
 
               <p>A fancam helps you notice those details.</p>
 
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How it differs from center, ending fairy, and visual talk
+              </h2>
+
               <p>
                 Killing part is also related to center, but it is not the same
-                thing.
+                thing. The center is the member placed in the middle or given
+                focus during key stage moments. A center moment can become a
+                killing part if fans remember it strongly. But a killing part
+                does not always belong to the center.
               </p>
 
               <p>
-                The center is the member placed in the middle or given focus
-                during key stage moments. A center moment can become a killing
-                part if fans remember it strongly. But a killing part does not
-                always belong to the center.
+                A member can stand at the side and still have the line
+                everyone replays. A member can get only one short phrase and
+                still make it memorable. That is why killing part is more
+                about impact than position.
               </p>
 
               <p>
-                A member can stand at the side and still have the line everyone
-                replays.
-              </p>
-
-              <p>
-                A member can get only one short phrase and still make it
-                memorable.
-              </p>
-
-              <p>
-                That is why killing part is more about impact than position.
-              </p>
-
-              <p>It is also different from an ending fairy.</p>
-
-              <p>
-                An ending fairy happens after the performance ends. It is the
-                final close-up camera moment when one idol catches their breath,
-                holds an expression, or reacts to the camera.
+                It is also different from an ending fairy. An ending fairy
+                happens after the performance ends. It is the final close-up
+                camera moment when one idol catches their breath, holds an
+                expression, or reacts to the camera.
               </p>
 
               <p>
                 A killing part usually happens inside the song or performance.
+                The killing part is part of the stage. The ending fairy is the
+                final after-moment. Both can go viral, but they work
+                differently.
               </p>
 
-              <p>The killing part is part of the stage.</p>
-
-              <p>The ending fairy is the final after-moment.</p>
-
-              <p>Both can go viral, but they work differently.</p>
-
-              <p>Killing part can also connect to visual talk.</p>
-
               <p>
-                If a member&apos;s styling, expression, or camera presence makes
-                a moment feel especially memorable, fans may talk about their
+                Killing part can also connect to visual talk. If a
+                member&apos;s styling, expression, or camera presence makes a
+                moment feel especially memorable, fans may talk about their
                 visual image. But this should not become a beauty ranking. A
-                killing part is not simply &quot;the prettiest few seconds.&quot;
+                killing part is not simply &quot;the prettiest few
+                seconds.&quot;
               </p>
 
-              <p>It is the moment that lands.</p>
-
-              <p>Sometimes that comes from a strong face.</p>
-
-              <p>Sometimes from timing.</p>
-
-              <p>Sometimes from confidence.</p>
-
-              <p>Sometimes from a clever gesture.</p>
-
               <p>
-                Sometimes from the song giving the member exactly the right
-                line.
+                It is the moment that lands. Sometimes that comes from a
+                strong face. Sometimes from timing. Sometimes from confidence.
+                Sometimes from a clever gesture. Sometimes from the song
+                giving the member exactly the right line.
               </p>
 
               <p>That is the difference.</p>
 
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                Point choreography, and the many forms a killing part can take
+              </h2>
+
               <p>
                 Another related idea is point choreography, or 포인트 안무.
+                Point choreography is the dance move that represents the song.
+                It is often easy to remember, easy to copy, and good for short
+                videos or dance challenges. A point choreography move can
+                become a killing part, but not every killing part is
+                choreography.
               </p>
 
               <p>
-                Point choreography is the dance move that represents the song.
-                It is often easy to remember, easy to copy, and good for short
-                videos or dance challenges. A point choreography move can become
-                a killing part, but not every killing part is choreography.
+                A killing part can be a sound. A face. A lyric. A pause. A
+                camera cut. A move. Or all of those at once.
               </p>
-
-              <p>A killing part can be a sound.</p>
-
-              <p>A face.</p>
-
-              <p>A lyric.</p>
-
-              <p>A pause.</p>
-
-              <p>A camera cut.</p>
-
-              <p>A move.</p>
-
-              <p>Or all of those at once.</p>
 
               <p>That flexibility is why fans use the word so often.</p>
 
+              <p>For beginners, the easiest way to find a killing part is to ask:</p>
+
               <p>
-                For beginners, the easiest way to find a killing part is to
-                ask:
+                Which moment do fans keep clipping? Which line do people
+                quote? Which gesture shows up in short videos? Which member do
+                people suddenly notice? Which few seconds make you want to
+                replay the stage?
               </p>
-
-              <p>Which moment do fans keep clipping?</p>
-
-              <p>Which line do people quote?</p>
-
-              <p>Which gesture shows up in short videos?</p>
-
-              <p>Which member do people suddenly notice?</p>
-
-              <p>Which few seconds make you want to replay the stage?</p>
 
               <p>That is probably the killing part.</p>
 
-              <p>There can also be more than one.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                Why fans care, and how to watch for your own killing part
+              </h2>
 
               <p>
-                A song may have an official-feeling killing part that everyone
-                knows. But different fans may have their own favorite moments.
-                One person may replay the chorus gesture. Another person may
-                love a pre-chorus expression. Another person may care more about
-                a rap line or a final camera shot.
+                There can also be more than one. A song may have an
+                official-feeling killing part that everyone knows. But
+                different fans may have their own favorite moments. One person
+                may replay the chorus gesture. Another person may love a
+                pre-chorus expression. Another person may care more about a
+                rap line or a final camera shot.
               </p>
 
-              <p>That is okay.</p>
-
-              <p>K-pop watching is personal.</p>
-
-              <p>Fan language helps people explain what caught them.</p>
-
-              <p>The killing part is the word for that replay button feeling.</p>
+              <p>
+                That is okay. K-pop watching is personal. Fan language helps
+                people explain what caught them. The killing part is the word
+                for that replay button feeling.
+              </p>
 
               <p>
                 It is also one reason idols practice camera awareness so
-                carefully.
+                carefully. A killing part can be ruined if it feels too flat.
+                It can also feel awkward if it is pushed too hard.
               </p>
-
-              <p>A killing part can be ruined if it feels too flat.</p>
-
-              <p>It can also feel awkward if it is pushed too hard.</p>
 
               <p>
-                The strongest ones often feel confident but not forced. The idol
-                knows the moment matters, but they do not look like they are
-                begging you to notice it.
+                The strongest ones often feel confident but not forced. The
+                idol knows the moment matters, but they do not look like they
+                are begging you to notice it. That balance is difficult. And
+                when it works, fans remember.
               </p>
-
-              <p>That balance is difficult.</p>
-
-              <p>And when it works, fans remember.</p>
 
               <p>
                 For HAEMIL readers, the easiest way to understand killing part
                 is this:
               </p>
 
-              <p>A fancam helps you follow one member.</p>
-
-              <p>A center moment shows where the stage puts focus.</p>
-
-              <p>An ending fairy gives you the final close-up.</p>
-
-              <p>A visual moment makes image and camera presence stand out.</p>
-
-              <p>A killing part is the few seconds you want to replay.</p>
-
               <p>
-                It is small, but it can shape the whole memory of a song.
+                A fancam helps you follow one member. A center moment shows
+                where the stage puts focus. An ending fairy gives you the
+                final close-up. A visual moment makes image and camera
+                presence stand out. A killing part is the few seconds you want
+                to replay.
               </p>
 
-              <p>That is why K-pop fans talk about it so much.</p>
-
-              <p>Not because every song needs one perfect viral moment.</p>
-
               <p>
-                But because sometimes one line, one look, or one move is enough
-                to make people say:
+                It is small, but it can shape the whole memory of a song. That
+                is why K-pop fans talk about it so much.
               </p>
 
-              <p>Wait.</p>
+              <p>
+                Not because every song needs one perfect viral moment. But
+                because sometimes one line, one look, or one move is enough to
+                make people say:
+              </p>
 
-              <p>Play that part again.</p>
+              <p>Wait. Play that part again.</p>
             </div>
           </section>
 

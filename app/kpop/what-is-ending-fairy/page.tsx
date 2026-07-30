@@ -161,7 +161,7 @@ export default function WhatIsEndingFairyPage() {
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 py-6 md:px-8 md:py-8">
           <SiteHeader />
 
-          <article className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-10">
+          <article className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-5 md:p-10">
             <Link
               href="/kpop"
               className="mb-6 inline-flex text-sm font-semibold text-[var(--accent)]"
@@ -173,11 +173,11 @@ export default function WhatIsEndingFairyPage() {
               K-pop starter guide
             </p>
 
-            <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
+            <h1 className="mt-3 max-w-3xl text-[32px] font-semibold leading-[1.12] tracking-tight md:mt-4 md:text-6xl md:leading-tight">
               {pageTitle}
             </h1>
 
-            <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
+            <p className="mt-4 max-w-3xl text-base leading-8 text-[var(--muted)] md:mt-6 md:text-lg">
               If you search &quot;ending fairy meaning,&quot; the simple answer
               is this: an ending fairy is the final close-up camera moment after
               a K-pop performance ends.
@@ -200,167 +200,136 @@ export default function WhatIsEndingFairyPage() {
           </section>
 
           <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
-            <div className="space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
-              <p>The song finishes.</p>
-
-              <p>The choreography stops.</p>
-
-              <p>The idol is still catching their breath.</p>
-
-              <p>Then the camera stays on one member for a few seconds.</p>
-
-              <p>That short moment is the ending fairy.</p>
-
-              <p>It can be cute.</p>
-
-              <p>It can be funny.</p>
-
-              <p>It can be calm.</p>
-
-              <p>It can be intense.</p>
+            <div className="max-w-3xl space-y-5 text-base leading-8 text-[var(--muted)] md:text-lg">
+              <h2 className="text-xl font-semibold text-[var(--text)] md:text-2xl">
+                What happens in an ending fairy moment
+              </h2>
 
               <p>
-                Sometimes it is only a small look into the camera, but fans still
-                replay it because those few seconds can show a lot.
+                The song finishes. The choreography stops. The idol is still
+                catching their breath. Then the camera stays on one member for
+                a few seconds. That short moment is the ending fairy.
+              </p>
+
+              <p>
+                It can be cute. It can be funny. It can be calm. It can be
+                intense.
+              </p>
+
+              <p>
+                Sometimes it is only a small look into the camera, but fans
+                still replay it because those few seconds can show a lot.
               </p>
 
               <p>
                 At first, ending fairy may sound like a strange K-pop word. The
                 &quot;fairy&quot; part makes it sound soft or magical, but in
                 real fan talk, it usually means the member who gets the final
-                camera close-up. The idol becomes the last image people remember
-                from that stage.
-              </p>
-
-              <p>That is why it matters.</p>
-
-              <p>
-                A K-pop performance is full of movement. There are formations,
-                center parts, choreography changes, live expressions, and camera
-                cuts. During the song, the camera does not stay still for long.
-              </p>
-
-              <p>But the ending fairy moment slows everything down.</p>
-
-              <p>
-                For a few seconds, there is no big choreography to hide behind.
-              </p>
-
-              <p>Only the idol, the camera, and the expression they choose.</p>
-
-              <p>That is why fans notice timing.</p>
-
-              <p>
-                If the idol looks into the camera too early, the moment can feel
-                awkward.
+                camera close-up. The idol becomes the last image people
+                remember from that stage.
               </p>
 
               <p>
-                If they hold the expression too long, it can feel forced.
+                That is why it matters. A K-pop performance is full of
+                movement. There are formations, center parts, choreography
+                changes, live expressions, and camera cuts. During the song,
+                the camera does not stay still for long.
+              </p>
+
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                Why timing and control matter
+              </h2>
+
+              <p>
+                But the ending fairy moment slows everything down. For a few
+                seconds, there is no big choreography to hide behind. Only the
+                idol, the camera, and the expression they choose.
               </p>
 
               <p>
-                If they are too tired to react, that can also become part of the
-                charm.
+                That is why fans notice timing. If the idol looks into the
+                camera too early, the moment can feel awkward. If they hold
+                the expression too long, it can feel forced. If they are too
+                tired to react, that can also become part of the charm.
               </p>
 
               <p>
                 A good ending fairy does not always need a dramatic pose.
+                Sometimes the best one is just a natural breath, a quick
+                smile, a shy laugh, or a tiny change in the eyes.
+              </p>
+
+              <p>That is very K-pop. Small details become replay moments.</p>
+
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How it differs from a fancam, facecam, and visual talk
+              </h2>
+
+              <p>
+                Ending fairy is also different from a fancam. A fancam follows
+                one idol during the performance. It can show the full body,
+                choreography, expressions, and how the member carries the
+                whole stage from beginning to end.
               </p>
 
               <p>
-                Sometimes the best one is just a natural breath, a quick smile, a
-                shy laugh, or a tiny change in the eyes.
+                An ending fairy is only the final close-up. A fancam is the
+                performance focus. An ending fairy is the last few seconds.
+                They often connect, but they are not the same thing.
               </p>
-
-              <p>That is very K-pop.</p>
-
-              <p>Small details become replay moments.</p>
-
-              <p>Ending fairy is also different from a fancam.</p>
-
-              <p>
-                A fancam follows one idol during the performance. It can show
-                the full body, choreography, expressions, and how the member
-                carries the whole stage from beginning to end.
-              </p>
-
-              <p>An ending fairy is only the final close-up.</p>
-
-              <p>A fancam is the performance focus.</p>
-
-              <p>An ending fairy is the last few seconds.</p>
-
-              <p>They often connect, but they are not the same thing.</p>
 
               <p>
                 Ending fairy is also different from a facecam or close-up
-                fancam.
+                fancam. A facecam focuses on the idol&apos;s face for more of
+                the performance. It helps fans see expressions, eye contact,
+                and small changes during the song. An ending fairy is shorter
+                and more specific. It happens after the performance ends, when
+                the idol is no longer dancing but still being watched.
               </p>
 
-              <p>
-                A facecam focuses on the idol&apos;s face for more of the
-                performance. It helps fans see expressions, eye contact, and
-                small changes during the song. An ending fairy is shorter and
-                more specific. It happens after the performance ends, when the
-                idol is no longer dancing but still being watched.
-              </p>
-
-              <p>That makes it feel more personal.</p>
-
-              <p>Not always more important.</p>
-
-              <p>Just different.</p>
+              <p>That makes it feel more personal. Not always more important. Just different.</p>
 
               <p>
-                Ending fairy also connects to visual talk, but it should not be
-                reduced to &quot;the prettiest member gets the camera.&quot;
+                Ending fairy also connects to visual talk, but it should not
+                be reduced to &quot;the prettiest member gets the
+                camera.&quot;
               </p>
 
               <p>
                 In K-pop, fans may talk about visual image, styling, facial
                 impression, and camera presence. Ending fairy moments can make
-                those things easier to notice. A member&apos;s styling may look
-                especially good. Their face may suit the concept. Their
+                those things easier to notice. A member&apos;s styling may
+                look especially good. Their face may suit the concept. Their
                 expression may match the song&apos;s mood.
               </p>
 
-              <p>But the moment is not only about appearance.</p>
-
-              <p>A strong ending fairy is about control.</p>
-
-              <p>Can the idol hold the camera?</p>
-
-              <p>Can they make a few seconds feel memorable?</p>
-
               <p>
-                Can they stay in the mood of the song even after the choreography
-                ends?
+                But the moment is not only about appearance. A strong ending
+                fairy is about control.
               </p>
 
-              <p>Can they show personality without overdoing it?</p>
+              <p>
+                Can the idol hold the camera? Can they make a few seconds feel
+                memorable? Can they stay in the mood of the song even after
+                the choreography ends? Can they show personality without
+                overdoing it?
+              </p>
 
-              <p>That is why some ending fairy moments go viral.</p>
-
-              <p>They are short.</p>
-
-              <p>They are easy to screenshot.</p>
-
-              <p>They are easy to share.</p>
-
-              <p>And they give fans a clean final image of the idol.</p>
-
-              <p>Sometimes the idol looks confident.</p>
-
-              <p>Sometimes they look embarrassed.</p>
-
-              <p>Sometimes they do something playful.</p>
-
-              <p>Sometimes they try not to laugh.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                Why these moments go viral
+              </h2>
 
               <p>
-                Sometimes they are clearly out of breath, and fans like that
-                because it feels real.
+                That is why some ending fairy moments go viral. They are
+                short. They are easy to screenshot. They are easy to share.
+                And they give fans a clean final image of the idol.
+              </p>
+
+              <p>
+                Sometimes the idol looks confident. Sometimes they look
+                embarrassed. Sometimes they do something playful. Sometimes
+                they try not to laugh. Sometimes they are clearly out of
+                breath, and fans like that because it feels real.
               </p>
 
               <p>
@@ -368,116 +337,94 @@ export default function WhatIsEndingFairyPage() {
                 appeal.
               </p>
 
-              <p>Ending fairy can also help new fans learn members.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                An entry point for new fans, and how it differs from center
+              </h2>
 
               <p>
-                If you do not know a group well yet, a final close-up can make
-                one member easier to remember. You may not catch their name
-                during the full stage. But after the ending shot, you might
-                search the member, watch a fancam, or look for another
-                performance.
+                Ending fairy can also help new fans learn members. If you do
+                not know a group well yet, a final close-up can make one
+                member easier to remember. You may not catch their name during
+                the full stage. But after the ending shot, you might search
+                the member, watch a fancam, or look for another performance.
               </p>
 
               <p>That is how small K-pop moments become entry points.</p>
 
-              <p>The center of the performance is another related idea.</p>
-
               <p>
-                A center is usually the member placed in key visual or
+                The center of the performance is another related idea. A
+                center is usually the member placed in key visual or
                 choreography positions during the stage. The center helps
-                organize the performance while the song is happening. An ending
-                fairy is not the same thing. A member can be center during the
-                song and not get the final camera. Another member can get the
-                ending fairy even if they were not the main focus of the
-                performance.
+                organize the performance while the song is happening. An
+                ending fairy is not the same thing. A member can be center
+                during the song and not get the final camera. Another member
+                can get the ending fairy even if they were not the main focus
+                of the performance.
               </p>
 
-              <p>So do not mix the terms too quickly.</p>
+              <p>
+                So do not mix the terms too quickly. Center is about stage
+                placement and focus. Ending fairy is about the final camera
+                moment.
+              </p>
 
-              <p>Center is about stage placement and focus.</p>
-
-              <p>Ending fairy is about the final camera moment.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How to watch your first ending fairy
+              </h2>
 
               <p>
                 For beginners, the easiest way to watch an ending fairy is
-                simple:
+                simple: Do not only ask, &quot;Was the idol pretty?&quot; Ask
+                what the idol did with the moment.
               </p>
-
-              <p>Do not only ask, &quot;Was the idol pretty?&quot;</p>
-
-              <p>Ask what the idol did with the moment.</p>
-
-              <p>Did they stay in the concept?</p>
-
-              <p>Did they smile?</p>
-
-              <p>Did they look playful?</p>
-
-              <p>Did they look calm?</p>
-
-              <p>Did they make the camera feel intentional?</p>
-
-              <p>Did the expression match the song?</p>
-
-              <p>Did the moment feel natural or too planned?</p>
-
-              <p>There is no single correct answer.</p>
-
-              <p>Some fans like polished ending fairies.</p>
-
-              <p>Some like funny ones.</p>
-
-              <p>Some like shy reactions.</p>
-
-              <p>Some like idols who look completely in control.</p>
-
-              <p>Some like moments where the idol almost breaks character.</p>
-
-              <p>That variety is why ending fairy clips are fun.</p>
-
-              <p>They are small, but they are not all the same.</p>
-
-              <p>There is also a local fan feeling here.</p>
 
               <p>
-                K-pop fans often enjoy watching how idols handle the camera when
-                the big choreography is over. The ending fairy moment is a tiny
-                test of awareness. The idol knows the camera is there. The fans
-                know the idol knows. That little shared awareness makes the
-                moment feel playful.
+                Did they stay in the concept? Did they smile? Did they look
+                playful? Did they look calm? Did they make the camera feel
+                intentional? Did the expression match the song? Did the moment
+                feel natural or too planned?
               </p>
-
-              <p>It is staged, but it can still feel spontaneous.</p>
-
-              <p>That is the balance.</p>
 
               <p>
-                For HAEMIL readers, the easiest way to understand ending fairy is
-                this:
+                There is no single correct answer. Some fans like polished
+                ending fairies. Some like funny ones. Some like shy reactions.
+                Some like idols who look completely in control. Some like
+                moments where the idol almost breaks character.
               </p>
 
-              <p>A fancam shows how one member performs.</p>
+              <p>
+                That variety is why ending fairy clips are fun. They are
+                small, but they are not all the same.
+              </p>
 
-              <p>A center part shows where the stage places attention.</p>
+              <p>
+                There is also a local fan feeling here. K-pop fans often enjoy
+                watching how idols handle the camera when the big choreography
+                is over. The ending fairy moment is a tiny test of awareness.
+                The idol knows the camera is there. The fans know the idol
+                knows. That little shared awareness makes the moment feel
+                playful.
+              </p>
 
-              <p>A visual moment shows how image and camera presence work.</p>
+              <p>It is staged, but it can still feel spontaneous. That is the balance.</p>
 
-              <p>An ending fairy shows how one idol uses the final few seconds.</p>
+              <p>
+                For HAEMIL readers, the easiest way to understand ending fairy
+                is this: A fancam shows how one member performs. A center part
+                shows where the stage places attention. A visual moment shows
+                how image and camera presence work. An ending fairy shows how
+                one idol uses the final few seconds.
+              </p>
 
               <p>
                 It is a small part of K-pop stage culture, but once you notice
                 it, you will start seeing it everywhere.
               </p>
 
-              <p>The final breath.</p>
-
-              <p>The final look.</p>
-
-              <p>The tiny smile.</p>
-
-              <p>The camera staying just a little longer.</p>
-
-              <p>That is the ending fairy.</p>
+              <p>
+                The final breath. The final look. The tiny smile. The camera
+                staying just a little longer. That is the ending fairy.
+              </p>
             </div>
           </section>
 
