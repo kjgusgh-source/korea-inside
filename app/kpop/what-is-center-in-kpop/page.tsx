@@ -158,7 +158,7 @@ export default function WhatIsCenterInKpopPage() {
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 py-6 md:px-8 md:py-8">
           <SiteHeader />
 
-          <article className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-10">
+          <article className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-5 md:p-10">
             <Link
               href="/kpop"
               className="mb-6 inline-flex text-sm font-semibold text-[var(--accent)]"
@@ -170,11 +170,11 @@ export default function WhatIsCenterInKpopPage() {
               K-pop starter guide
             </p>
 
-            <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
+            <h1 className="mt-3 max-w-3xl text-[32px] font-semibold leading-[1.12] tracking-tight md:mt-4 md:text-6xl md:leading-tight">
               {pageTitle}
             </h1>
 
-            <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
+            <p className="mt-4 max-w-3xl text-base leading-8 text-[var(--muted)] md:mt-6 md:text-lg">
               If you search &quot;center meaning in K-pop,&quot; the simple
               answer is this: the center is the member placed in the main focus
               of a group&apos;s stage, choreography, photo, teaser, or
@@ -198,38 +198,41 @@ export default function WhatIsCenterInKpopPage() {
           </section>
 
           <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
-            <div className="space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
-              <p>That often means standing in the middle.</p>
-
-              <p>But not always.</p>
+            <div className="max-w-3xl space-y-5 text-base leading-8 text-[var(--muted)] md:text-lg">
+              <h2 className="text-xl font-semibold text-[var(--text)] md:text-2xl">
+                What center actually means
+              </h2>
 
               <p>
-                In K-pop, center is not only a map position. It is a focus
+                That often means standing in the middle. But not always. In
+                K-pop, center is not only a map position. It is a focus
                 position.
               </p>
 
               <p>
                 The center is the member the stage wants you to notice at a
-                certain moment. They may start the song, stand in the middle of a
-                chorus formation, appear strongly in a teaser image, take the
-                first camera close-up, or make the group&apos;s concept easier to
-                understand.
+                certain moment. They may start the song, stand in the middle
+                of a chorus formation, appear strongly in a teaser image, take
+                the first camera close-up, or make the group&apos;s concept
+                easier to understand.
               </p>
 
-              <p>That is why fans talk about center so much.</p>
-
-              <p>A center can shape the first impression of a group.</p>
+              <p>
+                That is why fans talk about center so much. A center can shape
+                the first impression of a group.
+              </p>
 
               <p>
                 When a new viewer watches a stage for the first time, they may
-                not know every member yet. The center helps guide the eyes. The
-                camera, choreography, styling, and formation all tell the
+                not know every member yet. The center helps guide the eyes.
+                The camera, choreography, styling, and formation all tell the
                 viewer, &quot;Look here for a second.&quot;
               </p>
 
-              <p>That does not mean the center is the only important member.</p>
-
-              <p>It means the center helps organize attention.</p>
+              <p>
+                That does not mean the center is the only important member. It
+                means the center helps organize attention.
+              </p>
 
               <p>
                 K-pop stages are busy. Many things happen at once: singing,
@@ -238,57 +241,55 @@ export default function WhatIsCenterInKpopPage() {
                 easier to read.
               </p>
 
-              <p>The viewer understands the song faster.</p>
+              <p>
+                The viewer understands the song faster. The group image
+                becomes clearer. The stage feels balanced. That is the job of
+                center.
+              </p>
 
-              <p>The group image becomes clearer.</p>
-
-              <p>The stage feels balanced.</p>
-
-              <p>That is the job of center.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                Center as a role fans use loosely
+              </h2>
 
               <p>
                 Sometimes center is an official or widely recognized role.
-                Sometimes fans use the word more casually. They may say a member
-                &quot;felt like the center this comeback&quot; because the
-                styling, choreography, camera work, or teaser images gave that
-                member more focus.
+                Sometimes fans use the word more casually. They may say a
+                member &quot;felt like the center this comeback&quot; because
+                the styling, choreography, camera work, or teaser images gave
+                that member more focus.
               </p>
 
-              <p>So be careful.</p>
-
-              <p>Center is not always a fixed label in every group.</p>
-
-              <p>It can be a role.</p>
-
-              <p>It can be a stage function.</p>
+              <p>So be careful. Center is not always a fixed label in every group.</p>
 
               <p>
-                It can also be a fan description for who carried the focus in a
-                certain era.
+                It can be a role. It can be a stage function. It can also be a
+                fan description for who carried the focus in a certain era.
               </p>
 
-              <p>Center is different from visual.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How it differs from visual, face of the group, and killing part
+              </h2>
 
               <p>
-                Visual is more about image, styling, facial impression, camera
-                presence, and how memorable a member feels in photos or videos.
-                A visual member may also be center often, because visual image
-                and stage focus can overlap.
+                Center is different from visual. Visual is more about image,
+                styling, facial impression, camera presence, and how
+                memorable a member feels in photos or videos. A visual member
+                may also be center often, because visual image and stage focus
+                can overlap.
               </p>
 
-              <p>But they are not the same word.</p>
-
-              <p>Visual is about how the idol is seen and remembered.</p>
-
-              <p>Center is about where the stage places focus.</p>
-
-              <p>Center is also different from face of the group.</p>
+              <p>
+                But they are not the same word. Visual is about how the idol
+                is seen and remembered. Center is about where the stage places
+                focus.
+              </p>
 
               <p>
-                The face of the group is usually the member most recognized by
-                the public. That can come from variety shows, acting, ads, viral
-                clips, hosting, popularity, or public familiarity. A face of the
-                group may not always be the center on stage.
+                Center is also different from face of the group. The face of
+                the group is usually the member most recognized by the
+                public. That can come from variety shows, acting, ads, viral
+                clips, hosting, popularity, or public familiarity. A face of
+                the group may not always be the center on stage.
               </p>
 
               <p>
@@ -296,151 +297,136 @@ export default function WhatIsCenterInKpopPage() {
                 identical.
               </p>
 
-              <p>Center is also different from a killing part.</p>
-
               <p>
-                A killing part is the short part of a song or performance that
-                fans replay, quote, or share. A center moment can become a
-                killing part if it lands strongly. But a killing part can also
-                belong to someone who is not center.
+                Center is also different from a killing part. A killing part
+                is the short part of a song or performance that fans replay,
+                quote, or share. A center moment can become a killing part if
+                it lands strongly. But a killing part can also belong to
+                someone who is not center.
               </p>
 
               <p>
-                A member at the side can still have the line everyone remembers.
+                A member at the side can still have the line everyone
+                remembers. A quick gesture can become the viral moment. One
+                expression before the beat drops can be the part people
+                replay. That is killing part.
               </p>
 
-              <p>A quick gesture can become the viral moment.</p>
-
               <p>
-                One expression before the beat drops can be the part people
-                replay.
+                Center is about focus and placement. The two can meet, but
+                they are not the same.
               </p>
 
-              <p>That is killing part.</p>
-
-              <p>Center is about focus and placement.</p>
-
-              <p>The two can meet, but they are not the same.</p>
-
-              <p>Center is also different from a fancam.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How it differs from fancam, ending fairy, and maknae
+              </h2>
 
               <p>
-                A fancam is the video format that follows one member during a
-                performance. If a member is often center, their fancam may help
-                you see how they handle those focus moments. But the fancam
-                itself is not the center role.
+                Center is also different from a fancam. A fancam is the video
+                format that follows one member during a performance. If a
+                member is often center, their fancam may help you see how they
+                handle those focus moments. But the fancam itself is not the
+                center role.
               </p>
 
-              <p>A fancam shows one person.</p>
-
-              <p>Center describes how the group stage puts attention on a person.</p>
-
-              <p>Ending fairy is different too.</p>
-
               <p>
-                An ending fairy is the final close-up after the performance
-                ends. It is a short camera moment where one idol catches their
-                breath, holds an expression, or reacts to the camera. A center
-                member may get the ending fairy, but any member can.
+                A fancam shows one person. Center describes how the group
+                stage puts attention on a person.
               </p>
 
-              <p>Center happens inside the stage structure.</p>
-
-              <p>Ending fairy happens at the final after-moment.</p>
-
-              <p>Maknae is different again.</p>
+              <p>
+                Ending fairy is different too. An ending fairy is the final
+                close-up after the performance ends. It is a short camera
+                moment where one idol catches their breath, holds an
+                expression, or reacts to the camera. A center member may get
+                the ending fairy, but any member can.
+              </p>
 
               <p>
-                Maknae means the youngest member. A maknae can be center. A
-                center can be maknae. But maknae is about age order, while
-                center is about stage focus.
+                Center happens inside the stage structure. Ending fairy
+                happens at the final after-moment.
+              </p>
+
+              <p>
+                Maknae is different again. Maknae means the youngest member. A
+                maknae can be center. A center can be maknae. But maknae is
+                about age order, while center is about stage focus.
               </p>
 
               <p>
                 These words often overlap in real fandom talk, which is why
-                beginners get confused.
-              </p>
-
-              <p>
-                One idol can be a maknae, have a strong visual image, take
-                center in the chorus, get a killing part, appear in a fancam,
-                and receive an ending fairy moment.
+                beginners get confused. One idol can be a maknae, have a
+                strong visual image, take center in the chorus, get a killing
+                part, appear in a fancam, and receive an ending fairy moment.
               </p>
 
               <p>
                 But each word points to a different part of how fans watch
-                K-pop.
+                K-pop. That is the useful way to learn them.
               </p>
 
-              <p>That is the useful way to learn them.</p>
-
-              <p>Center is not about saying one member is &quot;the best.&quot;</p>
-
-              <p>The center does not always sing the most.</p>
-
-              <p>The center does not always dance the hardest.</p>
-
-              <p>The center is not always the most popular.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                What center is not about
+              </h2>
 
               <p>
-                The center is the person the performance uses to make the group
-                image clear at a key moment.
-              </p>
-
-              <p>Sometimes that requires strong dance.</p>
-
-              <p>Sometimes it requires a memorable face.</p>
-
-              <p>Sometimes it requires confidence.</p>
-
-              <p>
-                Sometimes it requires balance, because the member has to make
-                the formation feel natural.
+                Center is not about saying one member is &quot;the best.&quot;
+                The center does not always sing the most. The center does not
+                always dance the hardest. The center is not always the most
+                popular.
               </p>
 
               <p>
-                Sometimes it is simply the person who fits that comeback&apos;s
-                concept best.
+                The center is the person the performance uses to make the
+                group image clear at a key moment.
               </p>
 
               <p>
-                For beginners, the easiest way to notice center is to watch the
-                chorus.
+                Sometimes that requires strong dance. Sometimes it requires a
+                memorable face. Sometimes it requires confidence. Sometimes it
+                requires balance, because the member has to make the formation
+                feel natural. Sometimes it is simply the person who fits that
+                comeback&apos;s concept best.
               </p>
 
-              <p>Who is in the middle when the key move happens?</p>
-
-              <p>Who does the camera find first?</p>
-
-              <p>Who makes the formation feel balanced?</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How to notice center as a beginner
+              </h2>
 
               <p>
-                Who seems to introduce the concept before everyone else joins
-                the picture?
+                For beginners, the easiest way to notice center is to watch
+                the chorus.
               </p>
 
-              <p>Then watch another stage of the same song.</p>
+              <p>
+                Who is in the middle when the key move happens? Who does the
+                camera find first? Who makes the formation feel balanced? Who
+                seems to introduce the concept before everyone else joins the
+                picture?
+              </p>
 
-              <p>Is it the same member?</p>
-
-              <p>Does the focus move around?</p>
-
-              <p>Does another member become center for a different part?</p>
+              <p>
+                Then watch another stage of the same song. Is it the same
+                member? Does the focus move around? Does another member become
+                center for a different part?
+              </p>
 
               <p>
                 K-pop stages often shift focus carefully. A group may have one
-                member who feels like the main center, but many songs still move
-                the center position between members. That movement helps the
-                stage feel alive.
+                member who feels like the main center, but many songs still
+                move the center position between members. That movement helps
+                the stage feel alive. It also gives different members their
+                own moments.
               </p>
 
-              <p>It also gives different members their own moments.</p>
+              <p>
+                This is why center should not be understood too stiffly. It is
+                not always a permanent crown. It is often a performance tool.
+              </p>
 
-              <p>This is why center should not be understood too stiffly.</p>
-
-              <p>It is not always a permanent crown.</p>
-
-              <p>It is often a performance tool.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                Why center matters, and how it fits with the rest of K-pop terms
+              </h2>
 
               <p>
                 A good center moment can make a stage easier to remember. It
@@ -449,19 +435,12 @@ export default function WhatIsCenterInKpopPage() {
                 group&apos;s identity faster.
               </p>
 
-              <p>That is why fans care.</p>
-
-              <p>Not because the center is the only member who matters.</p>
-
               <p>
-                But because K-pop is a camera-heavy, formation-heavy,
-                image-heavy performance culture.
-              </p>
-
-              <p>Where the eye goes matters.</p>
-
-              <p>
-                And the center is one of the main ways K-pop guides that eye.
+                That is why fans care. Not because the center is the only
+                member who matters. But because K-pop is a camera-heavy,
+                formation-heavy, image-heavy performance culture. Where the
+                eye goes matters. And the center is one of the main ways
+                K-pop guides that eye.
               </p>
 
               <p>
@@ -469,25 +448,20 @@ export default function WhatIsCenterInKpopPage() {
                 this:
               </p>
 
-              <p>A visual makes the image memorable.</p>
+              <p>
+                A visual makes the image memorable. A killing part makes you
+                replay a few seconds. A fancam helps you follow one member. An
+                ending fairy gives you the final close-up. A maknae tells you
+                the youngest member. Center tells you where the performance
+                wants your attention.
+              </p>
 
-              <p>A killing part makes you replay a few seconds.</p>
-
-              <p>A fancam helps you follow one member.</p>
-
-              <p>An ending fairy gives you the final close-up.</p>
-
-              <p>A maknae tells you the youngest member.</p>
-
-              <p>Center tells you where the performance wants your attention.</p>
-
-              <p>Once you understand that, K-pop stages become easier to read.</p>
-
-              <p>You stop asking only, &quot;Who is in the middle?&quot;</p>
-
-              <p>You start asking, &quot;Why did the stage put them there?&quot;</p>
-
-              <p>That question is where center starts to make sense.</p>
+              <p>
+                Once you understand that, K-pop stages become easier to read.
+                You stop asking only, &quot;Who is in the middle?&quot; You
+                start asking, &quot;Why did the stage put them there?&quot;
+                That question is where center starts to make sense.
+              </p>
             </div>
           </section>
 

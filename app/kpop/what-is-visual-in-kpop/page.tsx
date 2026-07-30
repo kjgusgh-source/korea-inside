@@ -150,7 +150,7 @@ export default function WhatIsVisualInKpopPage() {
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 py-6 md:px-8 md:py-8">
           <SiteHeader />
 
-          <article className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-10">
+          <article className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-5 md:p-10">
             <Link
               href="/kpop"
               className="mb-6 inline-flex text-sm font-semibold text-[var(--accent)]"
@@ -162,11 +162,11 @@ export default function WhatIsVisualInKpopPage() {
               K-pop starter guide
             </p>
 
-            <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
+            <h1 className="mt-3 max-w-3xl text-[32px] font-semibold leading-[1.12] tracking-tight md:mt-4 md:text-6xl md:leading-tight">
               What Does Visual Mean in K-pop? A Friendly Guide to the Role
             </h1>
 
-            <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
+            <p className="mt-4 max-w-3xl text-base leading-8 text-[var(--muted)] md:mt-6 md:text-lg">
               If you are new to K-pop, the word &quot;visual&quot; can sound
               strange at first.
             </p>
@@ -188,66 +188,55 @@ export default function WhatIsVisualInKpopPage() {
           </section>
 
           <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
-            <div className="space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
+            <div className="max-w-3xl space-y-5 text-base leading-8 text-[var(--muted)] md:text-lg">
+              <h2 className="text-xl font-semibold text-[var(--text)] md:text-2xl">
+                What &quot;visual&quot; actually means
+              </h2>
+
               <p>
-                In normal English, visual just means something you can see.
+                In normal English, visual just means something you can see. In
+                K-pop, it can mean something more specific.
               </p>
 
-              <p>In K-pop, it can mean something more specific.</p>
-
               <p>
-                A visual is usually the member who is known for standing out in
-                the group&apos;s image. That might mean their face is very
+                A visual is usually the member who is known for standing out
+                in the group&apos;s image. That might mean their face is very
                 memorable, their styling fits the group concept well, or they
                 often catch attention in photos, thumbnails, stage shots, and
                 public appearances.
               </p>
 
-              <p>But here is the important part:</p>
-
               <p>
-                &quot;Visual&quot; is not just a simple beauty ranking.
+                But here is the important part: &quot;Visual&quot; is not just
+                a simple beauty ranking. It is better to understand it as an
+                image role.
               </p>
-
-              <p>It is better to understand it as an image role.</p>
 
               <p>
                 In Korean K-pop talk, fans may say 비주얼 or 비주얼 멤버.
                 Sometimes a company may describe a member this way. Sometimes
-                fans use it casually even if the group does not have an official
-                visual position.
-              </p>
-
-              <p>That is why you should be careful with the word.</p>
-
-              <p>
-                It does not always mean, &quot;This person is officially the
-                prettiest member.&quot;
+                fans use it casually even if the group does not have an
+                official visual position.
               </p>
 
               <p>
-                It can mean, &quot;This member is strongly remembered for their
-                look, image, and camera presence.&quot;
+                That is why you should be careful with the word. It does not
+                always mean, &quot;This person is officially the prettiest
+                member.&quot; It can mean, &quot;This member is strongly
+                remembered for their look, image, and camera presence.&quot;
               </p>
 
               <p>
-                A visual often helps people recognize the group quickly.
-              </p>
-
-              <p>Think of a group photo.</p>
-
-              <p>Some members may stand out because of styling.</p>
-
-              <p>Some may stand out because of facial features.</p>
-
-              <p>
-                Some may stand out because their image matches the group concept
-                very clearly.
+                A visual often helps people recognize the group quickly. Think
+                of a group photo.
               </p>
 
               <p>
-                Some may become the member casual viewers remember first after
-                seeing a thumbnail, a music video scene, or a stage photo.
+                Some members may stand out because of styling. Some may stand
+                out because of facial features. Some may stand out because
+                their image matches the group concept very clearly. Some may
+                become the member casual viewers remember first after seeing
+                a thumbnail, a music video scene, or a stage photo.
               </p>
 
               <p>
@@ -255,78 +244,79 @@ export default function WhatIsVisualInKpopPage() {
                 &quot;visual.&quot;
               </p>
 
-              <p>Visual is also different from center.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How it differs from center
+              </h2>
 
               <p>
-                The center is usually the member placed in the middle of
-                choreography, formations, teasers, or key performance moments.
-                A center can be chosen because of dance, balance, stage presence,
-                popularity, concept fit, or the way they organize the group
-                visually on stage.
+                Visual is also different from center. The center is usually
+                the member placed in the middle of choreography, formations,
+                teasers, or key performance moments. A center can be chosen
+                because of dance, balance, stage presence, popularity,
+                concept fit, or the way they organize the group visually on
+                stage.
               </p>
 
-              <p>A visual may be the center sometimes.</p>
-
-              <p>But not always.</p>
+              <p>A visual may be the center sometimes. But not always.</p>
 
               <p>
-                A center is about placement and performance focus.
+                A center is about placement and performance focus. A visual is
+                more about image and visual recognition.
               </p>
 
-              <p>A visual is more about image and visual recognition.</p>
-
-              <p>Visual is also different from face of the group.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How it differs from face of the group and ending fairy
+              </h2>
 
               <p>
-                The face of the group is often the member most recognized by the
-                public. That can be because of variety shows, acting,
-                advertisements, viral clips, hosting, past career, or general
-                popularity. A face of the group may be a visual, but the two
-                ideas are not exactly the same.
+                Visual is also different from face of the group. The face of
+                the group is often the member most recognized by the public.
+                That can be because of variety shows, acting, advertisements,
+                viral clips, hosting, past career, or general popularity. A
+                face of the group may be a visual, but the two ideas are not
+                exactly the same.
               </p>
 
-              <p>One is more about public recognition.</p>
-
-              <p>One is more about visual image.</p>
-
-              <p>Visual is also different from ending fairy.</p>
+              <p>
+                One is more about public recognition. One is more about
+                visual image.
+              </p>
 
               <p>
-                An ending fairy is a short camera moment at the end of a K-pop
-                performance. A member looks into the camera after the song ends,
-                usually while catching their breath and holding a memorable
-                expression. Any member can become an ending fairy for a stage.
+                Visual is also different from ending fairy. An ending fairy is
+                a short camera moment at the end of a K-pop performance. A
+                member looks into the camera after the song ends, usually
+                while catching their breath and holding a memorable
+                expression. Any member can become an ending fairy for a
+                stage.
               </p>
 
               <p>
                 A visual may get a lot of attention during ending fairy
-                moments.
+                moments. But ending fairy is a moment. Visual is a broader
+                image role.
               </p>
 
-              <p>But ending fairy is a moment.</p>
-
-              <p>Visual is a broader image role.</p>
-
-              <p>The word also connects to fancams.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How it connects to fancams, and 얼굴천재
+              </h2>
 
               <p>
-                Fancams often make people notice a member&apos;s expressions,
-                styling, proportions, and camera presence more clearly than a
-                full-group stage. That is one reason visual talk often appears
-                around fancams. A person may watch one fancam and suddenly
-                understand why fans say, &quot;Their visual is strong.&quot;
-              </p>
-
-              <p>Still, a good fancam is not only about appearance.</p>
-
-              <p>
-                It is also about timing, confidence, expression, and the way a
-                member holds attention on stage.
+                The word also connects to fancams. Fancams often make people
+                notice a member&apos;s expressions, styling, proportions, and
+                camera presence more clearly than a full-group stage. That is
+                one reason visual talk often appears around fancams. A person
+                may watch one fancam and suddenly understand why fans say,
+                &quot;Their visual is strong.&quot;
               </p>
 
               <p>
-                In Korean fan language, you may also see the phrase 얼굴천재.
+                Still, a good fancam is not only about appearance. It is also
+                about timing, confidence, expression, and the way a member
+                holds attention on stage.
               </p>
+
+              <p>In Korean fan language, you may also see the phrase 얼굴천재.</p>
 
               <p>
                 Literally, it means something like &quot;face genius.&quot;
@@ -336,46 +326,41 @@ export default function WhatIsVisualInKpopPage() {
                 praise like this is common.
               </p>
 
-              <p>Do not read every phrase too literally.</p>
-
-              <p>K-pop fan language often uses playful exaggeration.</p>
-
-              <p>The safest way to understand &quot;visual&quot; is this:</p>
-
               <p>
-                A visual is a member whose appearance and image are especially
-                memorable in the group&apos;s public presentation.
+                Do not read every phrase too literally. K-pop fan language
+                often uses playful exaggeration. The safest way to understand
+                &quot;visual&quot; is this:
               </p>
 
-              <p>That can include beauty.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                Why &quot;visual&quot; is not one fixed thing
+              </h2>
 
               <p>
-                But it can also include styling, mood, expression, proportions,
-                confidence, and how naturally the member fits the concept.
+                A visual is a member whose appearance and image are
+                especially memorable in the group&apos;s public presentation.
+              </p>
+
+              <p>
+                That can include beauty. But it can also include styling,
+                mood, expression, proportions, confidence, and how naturally
+                the member fits the concept.
               </p>
 
               <p>
                 For example, a cute concept, elegant concept, sporty concept,
-                dreamy concept, or powerful concept can all make different kinds
-                of visuals stand out. The &quot;visual&quot; feeling changes
-                depending on the group.
+                dreamy concept, or powerful concept can all make different
+                kinds of visuals stand out. The &quot;visual&quot; feeling
+                changes depending on the group. That is why the word is not
+                as simple as it looks.
               </p>
-
-              <p>That is why the word is not as simple as it looks.</p>
 
               <p>
                 A member can feel like a visual in one comeback because the
-                styling fits them perfectly.
-              </p>
-
-              <p>
-                Another member can go viral because a fancam captures their
-                expression at the right moment.
-              </p>
-
-              <p>
-                Another member can become known for photos, ads, or public
-                appearances.
+                styling fits them perfectly. Another member can go viral
+                because a fancam captures their expression at the right
+                moment. Another member can become known for photos, ads, or
+                public appearances.
               </p>
 
               <p>
@@ -384,38 +369,35 @@ export default function WhatIsVisualInKpopPage() {
                 brand deals, and the way fans share images online.
               </p>
 
-              <p>That does not mean fans only care about looks.</p>
-
               <p>
-                K-pop fans talk about vocals, dance, personality, humor, stage
-                presence, teamwork, fan communication, and many other things.
-                But K-pop is also a very visual culture, so image language
-                becomes part of how fans describe idols.
+                That does not mean fans only care about looks. K-pop fans talk
+                about vocals, dance, personality, humor, stage presence,
+                teamwork, fan communication, and many other things. But K-pop
+                is also a very visual culture, so image language becomes part
+                of how fans describe idols.
               </p>
 
-              <p>For first-time fans, the best approach is simple.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How to use the word carefully
+              </h2>
 
               <p>
-                Use &quot;visual&quot; as a cultural word, not as a harsh
-                ranking.
-              </p>
-
-              <p>Do not use it to put members against each other.</p>
-
-              <p>Do not assume every group has one official visual.</p>
-
-              <p>Do not assume the visual is always the most popular member.</p>
-
-              <p>
-                And do not assume visual means the member has no other talent.
+                For first-time fans, the best approach is simple. Use
+                &quot;visual&quot; as a cultural word, not as a harsh ranking.
               </p>
 
               <p>
-                Many idols called visuals are also strong performers, singers,
-                dancers, hosts, actors, or variety personalities.
+                Do not use it to put members against each other. Do not
+                assume every group has one official visual. Do not assume the
+                visual is always the most popular member. And do not assume
+                visual means the member has no other talent.
               </p>
 
-              <p>The word is only one piece of the picture.</p>
+              <p>
+                Many idols called visuals are also strong performers,
+                singers, dancers, hosts, actors, or variety personalities.
+                The word is only one piece of the picture.
+              </p>
 
               <p>
                 If someone says, &quot;Who is the visual?&quot; they may be
@@ -424,21 +406,19 @@ export default function WhatIsVisualInKpopPage() {
 
               <p>
                 If someone says, &quot;Her visual is crazy,&quot; they usually
-                mean her look, styling, or camera presence is very impressive.
+                mean her look, styling, or camera presence is very
+                impressive.
               </p>
 
               <p>
-                If someone says, &quot;This comeback fits his visual,&quot; they
-                mean the concept makes his image stand out well.
+                If someone says, &quot;This comeback fits his visual,&quot;
+                they mean the concept makes his image stand out well.
               </p>
 
-              <p>Once you understand that, the word becomes less awkward.</p>
-
-              <p>It is not just about looking pretty.</p>
-
               <p>
-                It is about how an idol is seen, remembered, styled, and
-                recognized.
+                Once you understand that, the word becomes less awkward. It
+                is not just about looking pretty. It is about how an idol is
+                seen, remembered, styled, and recognized.
               </p>
 
               <p>
@@ -446,13 +426,14 @@ export default function WhatIsVisualInKpopPage() {
                 conversations.
               </p>
 
-              <p>K-pop is music.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                Why the word matters so much in K-pop
+              </h2>
 
-              <p>But it is also performance.</p>
-
-              <p>It is also image.</p>
-
-              <p>It is also camera language.</p>
+              <p>
+                K-pop is music. But it is also performance. It is also image.
+                It is also camera language.
+              </p>
 
               <p>
                 And &quot;visual&quot; is one of the words fans use to talk
