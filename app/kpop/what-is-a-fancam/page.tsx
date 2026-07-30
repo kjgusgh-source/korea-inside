@@ -161,7 +161,7 @@ export default function WhatIsAFancamPage() {
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 py-6 md:px-8 md:py-8">
           <SiteHeader />
 
-          <article className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-10">
+          <article className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-5 md:p-10">
             <Link
               href="/kpop"
               className="mb-6 inline-flex text-sm font-semibold text-[var(--accent)]"
@@ -173,11 +173,11 @@ export default function WhatIsAFancamPage() {
               K-pop starter guide
             </p>
 
-            <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
+            <h1 className="mt-3 max-w-3xl text-[32px] font-semibold leading-[1.12] tracking-tight md:mt-4 md:text-6xl md:leading-tight">
               {pageTitle}
             </h1>
 
-            <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
+            <p className="mt-4 max-w-3xl text-base leading-8 text-[var(--muted)] md:mt-6 md:text-lg">
               If you search &quot;fancam meaning,&quot; the simple answer is
               this: a fancam is a video that focuses on one idol during a
               performance.
@@ -200,7 +200,11 @@ export default function WhatIsAFancamPage() {
           </section>
 
           <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
-            <div className="space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
+            <div className="max-w-3xl space-y-5 text-base leading-8 text-[var(--muted)] md:text-lg">
+              <h2 className="text-xl font-semibold text-[var(--text)] md:text-2xl">
+                What a fancam actually shows
+              </h2>
+
               <p>
                 Instead of watching the whole group at once, you follow one
                 member. You see their face, movement, styling, timing, small
@@ -208,11 +212,10 @@ export default function WhatIsAFancamPage() {
                 is not choosing them.
               </p>
 
-              <p>That is why fancams matter in K-pop.</p>
-
-              <p>A full-stage video shows the group.</p>
-
-              <p>A fancam lets you study one person.</p>
+              <p>
+                That is why fancams matter in K-pop. A full-stage video shows
+                the group. A fancam lets you study one person.
+              </p>
 
               <p>
                 At first, the word sounds like it should mean &quot;a video
@@ -224,52 +227,42 @@ export default function WhatIsAFancamPage() {
 
               <p>
                 So when fans say &quot;fancam,&quot; they may be talking about
-                an official music-show fancam.
+                an official music-show fancam. They may also be talking about
+                a fan-taken video from a concert, festival, showcase, or
+                public event. The important part is the focus: one idol, one
+                performance, one camera following them.
               </p>
 
-              <p>
-                They may also be talking about a fan-taken video from a concert,
-                festival, showcase, or public event.
-              </p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                Why a full-stage video isn&apos;t always enough
+              </h2>
 
               <p>
-                The important part is the focus: one idol, one performance, one
-                camera following them.
-              </p>
-
-              <p>This is different from a full-group stage.</p>
-
-              <p>
-                In a full-stage video, the camera moves between members. You see
-                the choreography, formations, center moments, and the whole
+                This is different from a full-group stage. In a full-stage
+                video, the camera moves between members. You see the
+                choreography, formations, center moments, and the whole
                 performance shape. That is useful when you want to understand
                 the song and group.
               </p>
 
-              <p>But sometimes a full-stage video moves away too quickly.</p>
-
-              <p>You may notice one member for two seconds and then lose them.</p>
-
-              <p>A fancam fixes that.</p>
-
-              <p>It lets you stay with one person from beginning to end.</p>
+              <p>
+                But sometimes a full-stage video moves away too quickly. You
+                may notice one member for two seconds and then lose them. A
+                fancam fixes that. It lets you stay with one person from
+                beginning to end.
+              </p>
 
               <p>
-                That is why new fans often use fancams to learn members. You may
-                not know everyone&apos;s name yet. You may not understand the
-                group&apos;s roles. But after watching one member-focused
+                That is why new fans often use fancams to learn members. You
+                may not know everyone&apos;s name yet. You may not understand
+                the group&apos;s roles. But after watching one member-focused
                 video, something clicks.
               </p>
 
-              <p>You remember their expression.</p>
-
-              <p>You remember their styling.</p>
-
-              <p>You remember the way they looked at the camera.</p>
-
               <p>
-                You remember a small gesture that the full-stage video almost
-                missed.
+                You remember their expression. You remember their styling.
+                You remember the way they looked at the camera. You remember a
+                small gesture that the full-stage video almost missed.
               </p>
 
               <p>
@@ -277,184 +270,160 @@ export default function WhatIsAFancamPage() {
                 idol.
               </p>
 
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                The small details fans are really watching for
+              </h2>
+
               <p>
                 Fancams are also useful because K-pop performances are built
-                from many tiny details.
-              </p>
-
-              <p>The chorus matters, but it is not the only thing to watch.</p>
-
-              <p>Look at the seconds before the member starts singing.</p>
-
-              <p>Look at how they reset their expression after a hard move.</p>
-
-              <p>
-                Look at whether they keep the mood even when they are not in the
-                center.
+                from many tiny details. The chorus matters, but it is not the
+                only thing to watch.
               </p>
 
               <p>
-                Look at how their face changes between cute, sharp, calm,
-                playful, or intense moments.
+                Look at the seconds before the member starts singing. Look at
+                how they reset their expression after a hard move. Look at
+                whether they keep the mood even when they are not in the
+                center. Look at how their face changes between cute, sharp,
+                calm, playful, or intense moments.
               </p>
 
               <p>
                 Those small changes are part of why K-pop fans replay fancams.
               </p>
 
-              <p>A fancam can also show stage presence more clearly.</p>
-
               <p>
-                Stage presence does not only mean dancing hard. It can mean
-                knowing when to relax, when to look into the camera, when to
-                make a small expression, and when to let the choreography
-                speak. Some idols are loud with their presence. Some are
-                quieter. A fancam makes those differences easier to see.
+                A fancam can also show stage presence more clearly. Stage
+                presence does not only mean dancing hard. It can mean knowing
+                when to relax, when to look into the camera, when to make a
+                small expression, and when to let the choreography speak. Some
+                idols are loud with their presence. Some are quieter. A fancam
+                makes those differences easier to see.
               </p>
 
-              <p>This is also why fancams connect to visual talk.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How a fancam differs from a facecam or ending fairy
+              </h2>
 
               <p>
-                In K-pop, &quot;visual&quot; is not only about saying someone is
-                pretty or handsome. Fans often use it to talk about image,
-                styling, facial impression, camera presence, and how memorable
-                someone feels in clips or photos. A fancam can make that visual
-                image easier to understand.
+                This is also why fancams connect to visual talk. In K-pop,
+                &quot;visual&quot; is not only about saying someone is pretty
+                or handsome. Fans often use it to talk about image, styling,
+                facial impression, camera presence, and how memorable someone
+                feels in clips or photos. A fancam can make that visual image
+                easier to understand.
               </p>
 
-              <p>But it should not become a beauty ranking.</p>
-
-              <p>A good fancam is not only about appearance.</p>
-
-              <p>It is also about performance control.</p>
-
-              <p>A facecam, or close-up fancam, is a little different.</p>
+              <p>
+                But it should not become a beauty ranking. A good fancam is
+                not only about appearance. It is also about performance
+                control.
+              </p>
 
               <p>
-                A regular fancam often shows more of the full body and
+                A facecam, or close-up fancam, is a little different. A
+                regular fancam often shows more of the full body and
                 choreography. A facecam or close-up fancam focuses more on the
                 idol&apos;s face, expressions, and eye contact. If you want to
-                understand why fans talk about expressions so much, a close-up
-                fancam can make that clearer.
+                understand why fans talk about expressions so much, a
+                close-up fancam can make that clearer.
               </p>
 
-              <p>But it may show less of the full dance.</p>
-
-              <p>That is the trade-off.</p>
-
-              <p>A fancam is also different from an ending fairy.</p>
+              <p>But it may show less of the full dance. That is the trade-off.</p>
 
               <p>
-                An ending fairy is the short camera moment after the song ends.
-                The idol looks into the camera, catches their breath, and holds
-                a final expression. It can become a viral moment, but it is only
-                one part of the stage.
+                A fancam is also different from an ending fairy. An ending
+                fairy is the short camera moment after the song ends. The idol
+                looks into the camera, catches their breath, and holds a final
+                expression. It can become a viral moment, but it is only one
+                part of the stage.
               </p>
 
-              <p>A fancam follows the performance.</p>
+              <p>
+                A fancam follows the performance. An ending fairy is the final
+                few seconds. Both matter, but they are not the same thing.
+              </p>
 
-              <p>An ending fairy is the final few seconds.</p>
-
-              <p>Both matter, but they are not the same thing.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                Fancams and member roles
+              </h2>
 
               <p>Fancams can also help you understand member roles.</p>
 
               <p>
                 For example, a center may stand out because the choreography
-                places them in key moments. A maknae may feel different because
-                fans are watching how the youngest member grows over time. A
-                main dancer may show details in movement that are easier to see
-                when the camera stays with them.
+                places them in key moments. A maknae may feel different
+                because fans are watching how the youngest member grows over
+                time. A main dancer may show details in movement that are
+                easier to see when the camera stays with them.
               </p>
 
-              <p>But do not force every fancam into a role.</p>
+              <p>
+                But do not force every fancam into a role. Sometimes the best
+                reason to watch is simple: You noticed someone. Now you want
+                to see more. That is enough.
+              </p>
 
-              <p>Sometimes the best reason to watch is simple:</p>
-
-              <p>You noticed someone.</p>
-
-              <p>Now you want to see more.</p>
-
-              <p>That is enough.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How to watch your first fancam
+              </h2>
 
               <p>
                 If you are watching your first K-pop fancam, do not treat it
-                like homework.
-              </p>
-
-              <p>Pick one member.</p>
-
-              <p>Watch one video.</p>
-
-              <p>Then ask yourself a few small questions.</p>
-
-              <p>What kind of expression do they use most?</p>
-
-              <p>Do they change mood between verses and chorus?</p>
-
-              <p>Do they look relaxed or intense?</p>
-
-              <p>Do they use the camera often?</p>
-
-              <p>Does the styling change how you read the performance?</p>
-
-              <p>
-                Would you have noticed these things in the full-group stage?
-              </p>
-
-              <p>This is the real value of a fancam.</p>
-
-              <p>
-                It slows down the group performance and lets one member become
-                clear.
-              </p>
-
-              <p>There is one more thing to remember.</p>
-
-              <p>
-                Not every fan-taken fancam is filmed under the same rules.
-                Concerts, festivals, fan events, and broadcasts can have
-                different filming policies. Some videos are official. Some are
-                fan-recorded. Some are allowed. Some may be removed. So it is
-                better not to assume every event works the same way.
+                like homework. Pick one member. Watch one video. Then ask
+                yourself a few small questions.
               </p>
 
               <p>
-                For beginners, official fancams are the easiest place to start.
+                What kind of expression do they use most? Do they change mood
+                between verses and chorus? Do they look relaxed or intense? Do
+                they use the camera often? Does the styling change how you
+                read the performance? Would you have noticed these things in
+                the full-group stage?
               </p>
 
               <p>
-                They are usually clean, easy to find, and focused on one member.
+                This is the real value of a fancam. It slows down the group
+                performance and lets one member become clear.
+              </p>
+
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                Official clips vs. fan-taken fancams
+              </h2>
+
+              <p>
+                There is one more thing to remember. Not every fan-taken
+                fancam is filmed under the same rules. Concerts, festivals,
+                fan events, and broadcasts can have different filming
+                policies. Some videos are official. Some are fan-recorded.
+                Some are allowed. Some may be removed. So it is better not to
+                assume every event works the same way.
               </p>
 
               <p>
-                Once you understand the idea, fan-taken fancams can show another
-                side: live crowds, festival energy, tour stages, and moments
-                that feel less polished than a broadcast.
+                For beginners, official fancams are the easiest place to
+                start. They are usually clean, easy to find, and focused on
+                one member.
               </p>
 
-              <p>Both can be useful.</p>
-
-              <p>They just feel different.</p>
+              <p>
+                Once you understand the idea, fan-taken fancams can show
+                another side: live crowds, festival energy, tour stages, and
+                moments that feel less polished than a broadcast. Both can be
+                useful. They just feel different.
+              </p>
 
               <p>
                 For HAEMIL readers, the easiest way to understand a fancam is
-                this:
+                this: A full-stage video tells you what the group did. A
+                fancam tells you how one member carried it.
               </p>
 
-              <p>A full-stage video tells you what the group did.</p>
-
-              <p>A fancam tells you how one member carried it.</p>
-
-              <p>That is why fans love them.</p>
-
-              <p>Not because every fancam is perfect.</p>
-
-              <p>Not because every clip needs to go viral.</p>
-
               <p>
-                But because sometimes one focused camera is enough to make you
-                finally understand why people keep talking about a member.
+                That is why fans love them. Not because every fancam is
+                perfect. Not because every clip needs to go viral. But because
+                sometimes one focused camera is enough to make you finally
+                understand why people keep talking about a member.
               </p>
             </div>
           </section>
