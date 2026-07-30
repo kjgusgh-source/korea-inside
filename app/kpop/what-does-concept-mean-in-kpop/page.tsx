@@ -158,7 +158,7 @@ export default function WhatDoesConceptMeanInKpopPage() {
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 py-6 md:px-8 md:py-8">
           <SiteHeader />
 
-          <article className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-10">
+          <article className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-5 md:p-10">
             <Link
               href="/kpop"
               className="mb-6 inline-flex text-sm font-semibold text-[var(--accent)]"
@@ -170,11 +170,11 @@ export default function WhatDoesConceptMeanInKpopPage() {
               K-pop starter guide
             </p>
 
-            <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
+            <h1 className="mt-3 max-w-3xl text-[32px] font-semibold leading-[1.12] tracking-tight md:mt-4 md:text-6xl md:leading-tight">
               {pageTitle}
             </h1>
 
-            <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
+            <p className="mt-4 max-w-3xl text-base leading-8 text-[var(--muted)] md:mt-6 md:text-lg">
               If you search &quot;concept meaning in K-pop,&quot; the simple
               answer is this: a concept is the overall mood, image, story, and
               style of a K-pop song, comeback, or era.
@@ -197,74 +197,52 @@ export default function WhatDoesConceptMeanInKpopPage() {
           </section>
 
           <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
-            <div className="space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
-              <p>It is not only clothes.</p>
-
-              <p>It is not only the music.</p>
-
-              <p>It is not only the music video.</p>
-
-              <p>In K-pop, concept is the feeling that connects everything.</p>
-
-              <p>The song.</p>
-
-              <p>The styling.</p>
-
-              <p>The hair and makeup.</p>
-
-              <p>The teaser photos.</p>
-
-              <p>The album design.</p>
-
-              <p>The music video.</p>
-
-              <p>The choreography.</p>
-
-              <p>The stage outfits.</p>
-
-              <p>The expressions.</p>
-
-              <p>The way members act on camera.</p>
-
-              <p>The way fans remember that era.</p>
-
-              <p>All of that can be part of a concept.</p>
-
-              <p>This is why K-pop fans talk about concept so often.</p>
+            <div className="max-w-3xl space-y-5 text-base leading-8 text-[var(--muted)] md:text-lg">
+              <h2 className="text-xl font-semibold text-[var(--text)] md:text-2xl">
+                What concept actually means
+              </h2>
 
               <p>
-                When a group has a comeback, fans do not only ask, &quot;Is the
-                song good?&quot;
+                It is not only clothes. It is not only the music. It is not
+                only the music video. In K-pop, concept is the feeling that
+                connects everything.
               </p>
 
-              <p>They also ask:</p>
+              <p>
+                The song. The styling. The hair and makeup. The teaser
+                photos. The album design. The music video. The choreography.
+                The stage outfits. The expressions. The way members act on
+                camera. The way fans remember that era.
+              </p>
 
-              <p>What is the concept?</p>
+              <p>
+                All of that can be part of a concept. This is why K-pop fans
+                talk about concept so often.
+              </p>
 
-              <p>Does the concept fit the group?</p>
+              <p>
+                When a group has a comeback, fans do not only ask, &quot;Is
+                the song good?&quot; They also ask:
+              </p>
 
-              <p>Which member suits this concept?</p>
-
-              <p>Is the styling strong?</p>
-
-              <p>Does the choreography match the mood?</p>
-
-              <p>Does the music video make the concept clear?</p>
+              <p>
+                What is the concept? Does the concept fit the group? Which
+                member suits this concept? Is the styling strong? Does the
+                choreography match the mood? Does the music video make the
+                concept clear?
+              </p>
 
               <p>That is how K-pop is often watched.</p>
 
-              <p>A concept gives a comeback its identity.</p>
-
-              <p>One comeback may feel bright and playful.</p>
-
-              <p>Another may feel dark and sharp.</p>
-
-              <p>Another may feel elegant.</p>
-
-              <p>Another may feel dreamy.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How a comeback&apos;s concept takes shape, and why concept photos matter
+              </h2>
 
               <p>
-                Another may feel sporty, nostalgic, futuristic, school-like,
+                A concept gives a comeback its identity. One comeback may
+                feel bright and playful. Another may feel dark and sharp.
+                Another may feel elegant. Another may feel dreamy. Another
+                may feel sporty, nostalgic, futuristic, school-like,
                 fantasy-like, or summer-like.
               </p>
 
@@ -273,397 +251,284 @@ export default function WhatDoesConceptMeanInKpopPage() {
                 is trying to create.
               </p>
 
-              <p>This is why concept photos matter.</p>
-
               <p>
-                Concept photos are teaser images that show the visual mood of a
-                comeback before the song is released.
+                This is why concept photos matter. Concept photos are teaser
+                images that show the visual mood of a comeback before the
+                song is released.
               </p>
 
               <p>
-                They may show the members in certain outfits, lighting, colors,
-                locations, poses, or facial expressions.
+                They may show the members in certain outfits, lighting,
+                colors, locations, poses, or facial expressions. Fans look at
+                concept photos and start guessing the direction of the
+                comeback.
               </p>
 
               <p>
-                Fans look at concept photos and start guessing the direction of
-                the comeback.
+                Will it be soft? Will it be intense? Will it be cute? Will it
+                be mature? Will it be strange in a good way? Will it be
+                connected to a story?
               </p>
 
-              <p>Will it be soft?</p>
-
-              <p>Will it be intense?</p>
-
-              <p>Will it be cute?</p>
-
-              <p>Will it be mature?</p>
-
-              <p>Will it be strange in a good way?</p>
-
-              <p>Will it be connected to a story?</p>
-
-              <p>Sometimes concept photos are very clear.</p>
-
-              <p>Sometimes they are mysterious.</p>
-
               <p>
-                Either way, they help build the feeling before the music
-                arrives.
+                Sometimes concept photos are very clear. Sometimes they are
+                mysterious. Either way, they help build the feeling before
+                the music arrives.
               </p>
 
-              <p>A concept is also connected to the title track.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How concept connects to the title track and to eras
+              </h2>
 
               <p>
-                The title track is usually the main song promoted during a
-                comeback. Because it gets the music video, stages, choreography,
-                and most public attention, the title track often becomes the
+                A concept is also connected to the title track. The title
+                track is usually the main song promoted during a comeback.
+                Because it gets the music video, stages, choreography, and
+                most public attention, the title track often becomes the
                 clearest expression of the concept.
               </p>
 
               <p>
                 If the title track is bright, the stage may feel bright too.
+                If the title track is intense, the choreography and
+                expressions may become sharper. If the title track is
+                elegant, the styling and body lines may be smoother. The song
+                and concept work together.
               </p>
 
               <p>
-                If the title track is intense, the choreography and expressions
-                may become sharper.
+                This is also why K-pop fans talk about eras. An era is the
+                period around a comeback.
               </p>
-
-              <p>
-                If the title track is elegant, the styling and body lines may
-                be smoother.
-              </p>
-
-              <p>The song and concept work together.</p>
-
-              <p>This is also why K-pop fans talk about eras.</p>
-
-              <p>An era is the period around a comeback.</p>
 
               <p>
                 Fans may say they love a certain era because of the styling,
-                hair, outfits, stage mood, choreography, or member image during
-                that time.
+                hair, outfits, stage mood, choreography, or member image
+                during that time. Sometimes fans remember an era even more
+                clearly than the exact release date. They remember the
+                feeling. That feeling is often the concept.
+              </p>
+
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How concept shapes visual and stage presence
+              </h2>
+
+              <p>
+                Concept is also connected to visual. In K-pop, visual does
+                not only mean &quot;a good-looking member.&quot; It can also
+                include image, styling, facial impression, camera
+                memorability, and how a member is presented to fans.
               </p>
 
               <p>
-                Sometimes fans remember an era even more clearly than the exact
-                release date.
-              </p>
-
-              <p>They remember the feeling.</p>
-
-              <p>That feeling is often the concept.</p>
-
-              <p>Concept is also connected to visual.</p>
-
-              <p>
-                In K-pop, visual does not only mean &quot;a good-looking
-                member.&quot; It can also include image, styling, facial
-                impression, camera memorability, and how a member is presented
-                to fans.
-              </p>
-
-              <p>A concept changes how visuals are read.</p>
-
-              <p>
-                The same member can feel cute in one era, elegant in another,
-                sharp in another, and relaxed in another.
+                A concept changes how visuals are read. The same member can
+                feel cute in one era, elegant in another, sharp in another,
+                and relaxed in another. Hair color, makeup, outfit shape,
+                lighting, camera angles, and expressions can all change how
+                fans see someone.
               </p>
 
               <p>
-                Hair color, makeup, outfit shape, lighting, camera angles, and
-                expressions can all change how fans see someone.
+                That is why fans may say a member &quot;fits the
+                concept.&quot; They mean the member&apos;s image,
+                performance, and mood match the comeback well.
               </p>
 
               <p>
-                That is why fans may say a member &quot;fits the concept.&quot;
+                Concept also affects stage presence. Stage presence is how an
+                idol holds attention during a performance. But stage
+                presence does not look the same in every concept.
               </p>
 
               <p>
-                They mean the member&apos;s image, performance, and mood match
-                the comeback well.
-              </p>
-
-              <p>Concept also affects stage presence.</p>
-
-              <p>
-                Stage presence is how an idol holds attention during a
-                performance.
-              </p>
-
-              <p>
-                But stage presence does not look the same in every concept.
-              </p>
-
-              <p>A bright concept may need playful energy.</p>
-
-              <p>A dark concept may need stronger eye contact.</p>
-
-              <p>An elegant concept may need smoother control.</p>
-
-              <p>A cute concept may need warmth and timing.</p>
-
-              <p>
+                A bright concept may need playful energy. A dark concept may
+                need stronger eye contact. An elegant concept may need
+                smoother control. A cute concept may need warmth and timing.
                 A powerful concept may need sharp movement and confidence.
               </p>
 
-              <p>A good performer adjusts.</p>
-
-              <p>They do not perform every song with the same face.</p>
-
               <p>
-                They read the concept and change their expression, energy, and
-                body control to match it.
+                A good performer adjusts. They do not perform every song
+                with the same face. They read the concept and change their
+                expression, energy, and body control to match it.
               </p>
 
               <p>
                 That is part of why K-pop stages are fun to compare across
-                eras.
+                eras. You can see how idols change.
               </p>
-
-              <p>You can see how idols change.</p>
 
               <p>
                 Sometimes a member who felt quiet in one concept becomes very
-                noticeable in another.
-              </p>
-
-              <p>
-                Sometimes a member&apos;s stage presence grows because the
-                concept fits them better.
-              </p>
-
-              <p>
+                noticeable in another. Sometimes a member&apos;s stage
+                presence grows because the concept fits them better.
                 Sometimes fans discover a new side of someone during a
-                comeback.
+                comeback. That is normal in K-pop.
               </p>
 
-              <p>That is normal in K-pop.</p>
-
-              <p>Concept is also connected to point choreography.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How concept connects to point choreography and killing parts
+              </h2>
 
               <p>
-                Point choreography is the signature move or gesture people
+                Concept is also connected to point choreography. Point
+                choreography is the signature move or gesture people
                 remember from a song.
               </p>
 
               <p>
-                If the concept is playful, the point move may be easy and cute.
-              </p>
-
-              <p>If the concept is intense, the point move may be sharp.</p>
-
-              <p>
-                If the concept is elegant, the point move may use smoother
-                lines.
+                If the concept is playful, the point move may be easy and
+                cute. If the concept is intense, the point move may be
+                sharp. If the concept is elegant, the point move may use
+                smoother lines.
               </p>
 
               <p>
-                The choreography should help the concept become visible.
+                The choreography should help the concept become visible. A
+                song can have a strong sound, but the dance gives fans
+                something to see and copy. That is why concept and
+                choreography work together.
               </p>
 
               <p>
-                A song can have a strong sound, but the dance gives fans
-                something to see and copy.
-              </p>
-
-              <p>That is why concept and choreography work together.</p>
-
-              <p>Concept can also affect killing parts.</p>
-
-              <p>
-                A killing part is the short moment fans replay again and again.
+                Concept can also affect killing parts. A killing part is the
+                short moment fans replay again and again. It may be a vocal
+                line, dance move, expression, lyric, camera moment, or
+                gesture.
               </p>
 
               <p>
-                It may be a vocal line, dance move, expression, lyric, camera
-                moment, or gesture.
-              </p>
-
-              <p>A strong concept can make a killing part feel clearer.</p>
-
-              <p>
-                If the concept is mysterious, a small look can become
-                memorable.
-              </p>
-
-              <p>
-                If the concept is powerful, one sharp movement can stand out.
-              </p>
-
-              <p>
+                A strong concept can make a killing part feel clearer. If the
+                concept is mysterious, a small look can become memorable. If
+                the concept is powerful, one sharp movement can stand out.
                 If the concept is bright, a playful expression can become the
                 part fans replay.
               </p>
 
               <p>The concept gives the moment its mood.</p>
 
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                Concepts can change, and they don&apos;t need to be complicated
+              </h2>
+
               <p>
                 For beginners, it helps to know that K-pop concepts are not
-                always fixed forever.
-              </p>
-
-              <p>Some groups keep a strong overall identity.</p>
-
-              <p>Other groups change concepts often.</p>
-
-              <p>Some idols become known for fitting many concepts.</p>
-
-              <p>Some groups slowly grow from one image to another.</p>
-
-              <p>
-                This is why fans may say a group is versatile.
+                always fixed forever. Some groups keep a strong overall
+                identity. Other groups change concepts often. Some idols
+                become known for fitting many concepts. Some groups slowly
+                grow from one image to another.
               </p>
 
               <p>
-                They mean the group can handle different moods without losing
-                themselves.
+                This is why fans may say a group is versatile. They mean the
+                group can handle different moods without losing themselves.
               </p>
 
               <p>
-                A concept change can be exciting, but it can also divide fans.
-              </p>
-
-              <p>Some fans may prefer the group&apos;s older image.</p>
-
-              <p>Some may like the new direction.</p>
-
-              <p>
-                Some may think the concept fits one member more than another.
-              </p>
-
-              <p>These conversations are common.</p>
-
-              <p>They are part of how fans experience comebacks.</p>
-
-              <p>Concept is also not always deep lore.</p>
-
-              <p>Sometimes a concept is simple.</p>
-
-              <p>
-                A summer concept can just feel fresh, bright, and easy to enjoy.
+                A concept change can be exciting, but it can also divide
+                fans. Some fans may prefer the group&apos;s older image. Some
+                may like the new direction. Some may think the concept fits
+                one member more than another.
               </p>
 
               <p>
-                A school concept can use uniforms, classroom imagery, or
-                youthful energy.
+                These conversations are common. They are part of how fans
+                experience comebacks.
               </p>
 
               <p>
-                An elegant concept can focus on clean styling, graceful
-                movement, and polished visuals.
+                Concept is also not always deep lore. Sometimes a concept is
+                simple.
               </p>
 
               <p>
-                A dark concept can use stronger colors, sharper expressions,
-                and heavier mood.
+                A summer concept can just feel fresh, bright, and easy to
+                enjoy. A school concept can use uniforms, classroom imagery,
+                or youthful energy. An elegant concept can focus on clean
+                styling, graceful movement, and polished visuals. A dark
+                concept can use stronger colors, sharper expressions, and
+                heavier mood.
               </p>
 
-              <p>Not every concept needs a complicated story.</p>
+              <p>
+                Not every concept needs a complicated story. The important
+                thing is that the mood feels clear. That clarity helps fans
+                remember the comeback.
+              </p>
 
-              <p>The important thing is that the mood feels clear.</p>
-
-              <p>That clarity helps fans remember the comeback.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How to notice concept, and how it all fits together
+              </h2>
 
               <p>
                 If you are new to K-pop, the easiest way to notice concept is
                 to look at the whole package.
               </p>
 
-              <p>Watch the music video.</p>
-
-              <p>Then look at the concept photos.</p>
-
-              <p>Then watch a stage.</p>
-
-              <p>Then watch a fancam.</p>
-
-              <p>Ask yourself:</p>
-
-              <p>What mood is this comeback trying to create?</p>
-
-              <p>Do the outfits match the song?</p>
-
-              <p>Do the expressions match the lyrics?</p>
-
-              <p>Does the choreography match the sound?</p>
-
               <p>
-                Does the music video show the same feeling as the stage?
+                Watch the music video. Then look at the concept photos. Then
+                watch a stage. Then watch a fancam.
               </p>
 
-              <p>Do the members seem comfortable in this image?</p>
+              <p>Ask yourself: What mood is this comeback trying to create?</p>
+
+              <p>
+                Do the outfits match the song? Do the expressions match the
+                lyrics? Does the choreography match the sound? Does the music
+                video show the same feeling as the stage? Do the members
+                seem comfortable in this image?
+              </p>
 
               <p>Those questions will help you understand concept quickly.</p>
 
               <p>
                 Concept also explains why the same group can feel different
-                every comeback.
+                every comeback. The members are the same. But the world
+                around them changes.
               </p>
-
-              <p>The members are the same.</p>
-
-              <p>But the world around them changes.</p>
-
-              <p>The styling changes.</p>
-
-              <p>The song changes.</p>
-
-              <p>The stage mood changes.</p>
-
-              <p>The fan conversation changes.</p>
 
               <p>
-                That is why K-pop can feel fresh even when you already know the
-                group.
+                The styling changes. The song changes. The stage mood
+                changes. The fan conversation changes.
               </p>
 
-              <p>A comeback gives fans a new version to watch.</p>
+              <p>
+                That is why K-pop can feel fresh even when you already know
+                the group. A comeback gives fans a new version to watch.
+              </p>
 
               <p>
                 For HAEMIL readers, the easiest way to understand concept is
                 this:
               </p>
 
-              <p>A comeback gives fans a new era.</p>
-
-              <p>A title track gives that era its main song.</p>
-
-              <p>Concept gives the era its mood and image.</p>
-
-              <p>Visual shows how that image is remembered on camera.</p>
+              <p>
+                A comeback gives fans a new era. A title track gives that era
+                its main song. Concept gives the era its mood and image.
+                Visual shows how that image is remembered on camera.
+              </p>
 
               <p>
                 Stage presence shows how idols perform inside that mood.
+                Point choreography gives people a move to remember. Killing
+                parts give fans moments to replay. All of these pieces work
+                together.
               </p>
-
-              <p>Point choreography gives people a move to remember.</p>
-
-              <p>Killing parts give fans moments to replay.</p>
-
-              <p>All of these pieces work together.</p>
 
               <p>
                 So when K-pop fans say, &quot;I love this concept,&quot; they
                 usually mean more than one thing.
               </p>
 
-              <p>They may love the song.</p>
-
-              <p>They may love the styling.</p>
-
-              <p>They may love the stage.</p>
-
-              <p>They may love the way a member fits the mood.</p>
-
-              <p>They may love the whole feeling of that era.</p>
-
-              <p>That is concept in K-pop.</p>
+              <p>
+                They may love the song. They may love the styling. They may
+                love the stage. They may love the way a member fits the
+                mood. They may love the whole feeling of that era.
+              </p>
 
               <p>
-                It is the image, sound, mood, and performance all moving in the
-                same direction.
+                That is concept in K-pop. It is the image, sound, mood, and
+                performance all moving in the same direction.
               </p>
             </div>
           </section>

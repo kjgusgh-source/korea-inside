@@ -158,7 +158,7 @@ export default function WhatDoesDebutMeanInKpopPage() {
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 py-6 md:px-8 md:py-8">
           <SiteHeader />
 
-          <article className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-10">
+          <article className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-5 md:p-10">
             <Link
               href="/kpop"
               className="mb-6 inline-flex text-sm font-semibold text-[var(--accent)]"
@@ -170,11 +170,11 @@ export default function WhatDoesDebutMeanInKpopPage() {
               K-pop starter guide
             </p>
 
-            <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
+            <h1 className="mt-3 max-w-3xl text-[32px] font-semibold leading-[1.12] tracking-tight md:mt-4 md:text-6xl md:leading-tight">
               {pageTitle}
             </h1>
 
-            <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
+            <p className="mt-4 max-w-3xl text-base leading-8 text-[var(--muted)] md:mt-6 md:text-lg">
               If you search &quot;debut meaning in K-pop,&quot; the simple
               answer is this: a debut is the official start of a K-pop idol,
               solo artist, or group.
@@ -197,434 +197,337 @@ export default function WhatDoesDebutMeanInKpopPage() {
           </section>
 
           <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
-            <div className="space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
-              <p>In Korean, people also say 데뷔.</p>
+            <div className="max-w-3xl space-y-5 text-base leading-8 text-[var(--muted)] md:text-lg">
+              <h2 className="text-xl font-semibold text-[var(--text)] md:text-2xl">
+                What debut actually means, and the trainee system
+              </h2>
 
               <p>
-                A debut is not just the first time someone sings or dances.
-              </p>
-
-              <p>
-                It is the moment they are officially introduced to the public as
-                an artist.
-              </p>
-
-              <p>
-                That may happen through a first song, music video, album,
-                showcase, music show stage, or promotion period.
+                In Korean, people also say 데뷔. A debut is not just the
+                first time someone sings or dances. It is the moment they are
+                officially introduced to the public as an artist. That may
+                happen through a first song, music video, album, showcase,
+                music show stage, or promotion period.
               </p>
 
               <p>
                 In K-pop, debut matters because it gives an artist a starting
-                point.
+                point. Before debut, a person may be a trainee. After debut,
+                they become an official idol, group member, or solo artist.
+                That difference is important.
               </p>
-
-              <p>Before debut, a person may be a trainee.</p>
 
               <p>
-                After debut, they become an official idol, group member, or solo
-                artist.
+                A trainee is someone preparing for debut. In Korean, trainee
+                is 연습생.
               </p>
-
-              <p>That difference is important.</p>
-
-              <p>A trainee is someone preparing for debut.</p>
-
-              <p>In Korean, trainee is 연습생.</p>
 
               <p>
                 Trainees may practice singing, dancing, performance, facial
-                expressions, language, media skills, and stage basics. Some train
-                for a short time. Some train for years.
+                expressions, language, media skills, and stage basics. Some
+                train for a short time. Some train for years.
               </p>
 
               <p>
-                But it is better not to explain the trainee system in only one
-                way.
+                But it is better not to explain the trainee system in only
+                one way. It is not always a glamorous dream story. It is also
+                not always only a dark story.
               </p>
-
-              <p>It is not always a glamorous dream story.</p>
-
-              <p>It is also not always only a dark story.</p>
 
               <p>
-                For beginners, the safest way to understand it is simple:
+                For beginners, the safest way to understand it is simple: A
+                trainee is someone preparing for the chance to debut.
               </p>
-
-              <p>A trainee is someone preparing for the chance to debut.</p>
-
-              <p>Not every trainee debuts.</p>
-
-              <p>Not every debut path looks the same.</p>
-
-              <p>Some idols are known before debut.</p>
-
-              <p>Some are introduced very quietly.</p>
-
-              <p>Some appear through survival shows.</p>
-
-              <p>Some appear in pre-debut videos.</p>
 
               <p>
-                Some are revealed through teaser photos and profile films.
+                Not every trainee debuts. Not every debut path looks the
+                same.
               </p>
 
-              <p>Some fans follow them before the official start.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                Pre-debut: following an artist before the official start
+              </h2>
 
-              <p>That period is called pre-debut.</p>
+              <p>
+                Some idols are known before debut. Some are introduced very
+                quietly. Some appear through survival shows. Some appear in
+                pre-debut videos. Some are revealed through teaser photos and
+                profile films. Some fans follow them before the official
+                start.
+              </p>
 
-              <p>Pre-debut means the time before official debut.</p>
-
-              <p>In Korean fan talk, you may see 데뷔 전.</p>
+              <p>
+                That period is called pre-debut. Pre-debut means the time
+                before official debut. In Korean fan talk, you may see 데뷔
+                전.
+              </p>
 
               <p>
                 Pre-debut content can include practice videos, trainee clips,
-                survival show appearances, teaser images, short introductions,
-                or old performance videos.
+                survival show appearances, teaser images, short
+                introductions, or old performance videos.
               </p>
 
               <p>
-                Sometimes pre-debut fans feel especially attached because they
-                watched the artist grow before debut.
+                Sometimes pre-debut fans feel especially attached because
+                they watched the artist grow before debut. But the official
+                debut is still the point where the artist begins publicly
+                under that group or solo name.
               </p>
 
               <p>
-                But the official debut is still the point where the artist
-                begins publicly under that group or solo name.
+                That is why fans often ask: When did they debut? What was
+                their debut song? What was their debut stage? Who was in the
+                debut lineup?
               </p>
-
-              <p>That is why fans often ask:</p>
-
-              <p>When did they debut?</p>
-
-              <p>What was their debut song?</p>
-
-              <p>What was their debut stage?</p>
-
-              <p>Who was in the debut lineup?</p>
 
               <p>
                 These questions help fans understand the beginning of an
                 artist&apos;s career.
               </p>
 
-              <p>Debut is different from comeback.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How debut differs from comeback, and the many kinds of debut
+              </h2>
 
               <p>
-                This is one of the easiest places for beginners to get confused.
+                Debut is different from comeback. This is one of the easiest
+                places for beginners to get confused.
               </p>
-
-              <p>A debut is the first official start.</p>
 
               <p>
-                A comeback is a later release and promotion period after debut.
+                A debut is the first official start. A comeback is a later
+                release and promotion period after debut.
               </p>
-
-              <p>So a new group debuts first.</p>
 
               <p>
-                Then, months later, they may have a comeback with a new song or
-                album.
+                So a new group debuts first. Then, months later, they may
+                have a comeback with a new song or album.
               </p>
 
-              <p>A solo artist can debut too.</p>
+              <p>
+                A solo artist can debut too. A member from a group may later
+                make a solo debut. That does not mean they are new to the
+                industry. It means they are officially starting as a solo
+                artist.
+              </p>
 
-              <p>A member from a group may later make a solo debut.</p>
+              <p>
+                This is why K-pop uses debut in several ways. Group debut.
+                Solo debut. Unit debut. Japanese debut. Acting debut.
+                Official debut.
+              </p>
 
-              <p>That does not mean they are new to the industry.</p>
+              <p>
+                The word depends on the context. But the basic feeling is the
+                same: It is the first official start in that role or market.
+              </p>
 
-              <p>It means they are officially starting as a solo artist.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                Debut and the rookie group&apos;s first image
+              </h2>
 
-              <p>This is why K-pop uses debut in several ways.</p>
-
-              <p>Group debut.</p>
-
-              <p>Solo debut.</p>
-
-              <p>Unit debut.</p>
-
-              <p>Japanese debut.</p>
-
-              <p>Acting debut.</p>
-
-              <p>Official debut.</p>
-
-              <p>The word depends on the context.</p>
-
-              <p>But the basic feeling is the same:</p>
-
-              <p>It is the first official start in that role or market.</p>
-
-              <p>Debut is also connected to rookie group.</p>
-
-              <p>A rookie group is a group that has debuted recently.</p>
-
-              <p>Rookie does not mean bad or unskilled.</p>
-
-              <p>It means new.</p>
+              <p>
+                Debut is also connected to rookie group. A rookie group is a
+                group that has debuted recently. Rookie does not mean bad or
+                unskilled. It means new.
+              </p>
 
               <p>
                 Fans may watch rookie groups closely because the early stages
                 show how the members introduce themselves, how the company
-                presents the group, and what kind of concept they start with.
+                presents the group, and what kind of concept they start
+                with.
               </p>
 
-              <p>A debut can shape a rookie group&apos;s first image.</p>
-
-              <p>The debut song may show the sound.</p>
-
-              <p>The debut music video may show the concept.</p>
-
-              <p>The debut stage may show performance style.</p>
-
-              <p>The debut styling may show visual direction.</p>
+              <p>
+                A debut can shape a rookie group&apos;s first image. The
+                debut song may show the sound. The debut music video may
+                show the concept. The debut stage may show performance
+                style. The debut styling may show visual direction.
+              </p>
 
               <p>
                 The first fancams may help fans notice individual members.
-              </p>
-
-              <p>That first impression can matter a lot.</p>
-
-              <p>But debut is not the whole story.</p>
-
-              <p>Some groups grow slowly after debut.</p>
-
-              <p>Some become more noticeable after a later comeback.</p>
-
-              <p>
-                Some members become easier to recognize through fancams, variety
-                clips, killing parts, or point choreography after the debut
-                period.
-              </p>
-
-              <p>That is normal in K-pop.</p>
-
-              <p>A debut opens the door.</p>
-
-              <p>The career continues after that.</p>
-
-              <p>Debut is also connected to concept.</p>
-
-              <p>
-                A concept is the overall mood, image, story, and style of a
-                comeback or era.
+                That first impression can matter a lot.
               </p>
 
               <p>
-                A debut concept is the first version of how a group wants to be
+                But debut is not the whole story. Some groups grow slowly
+                after debut. Some become more noticeable after a later
+                comeback. Some members become easier to recognize through
+                fancams, variety clips, killing parts, or point choreography
+                after the debut period.
+              </p>
+
+              <p>
+                That is normal in K-pop. A debut opens the door. The career
+                continues after that.
+              </p>
+
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How debut connects to concept and title track
+              </h2>
+
+              <p>
+                Debut is also connected to concept. A concept is the overall
+                mood, image, story, and style of a comeback or era. A debut
+                concept is the first version of how a group wants to be
                 seen.
               </p>
 
-              <p>Maybe the debut feels bright.</p>
-
-              <p>Maybe it feels bold.</p>
-
-              <p>Maybe it feels mysterious.</p>
-
-              <p>Maybe it feels youthful.</p>
-
-              <p>Maybe it feels performance-focused.</p>
-
               <p>
-                Fans often remember debut concepts because they are the first
-                official image of the artist.
-              </p>
-
-              <p>Later, fans may compare future comebacks to the debut.</p>
-
-              <p>They may say the group changed a lot.</p>
-
-              <p>They may say the group kept the same identity.</p>
-
-              <p>
-                They may say the debut concept fit one member especially well.
-              </p>
-
-              <p>Those conversations are part of K-pop watching.</p>
-
-              <p>Debut is also connected to title track.</p>
-
-              <p>
-                A title track is the main song promoted during a comeback or
-                debut release.
+                Maybe the debut feels bright. Maybe it feels bold. Maybe it
+                feels mysterious. Maybe it feels youthful. Maybe it feels
+                performance-focused.
               </p>
 
               <p>
-                For a debut, the title track often becomes the first song casual
+                Fans often remember debut concepts because they are the
+                first official image of the artist. Later, fans may compare
+                future comebacks to the debut.
+              </p>
+
+              <p>
+                They may say the group changed a lot. They may say the group
+                kept the same identity. They may say the debut concept fit
+                one member especially well. Those conversations are part of
+                K-pop watching.
+              </p>
+
+              <p>
+                Debut is also connected to title track. A title track is the
+                main song promoted during a comeback or debut release. For a
+                debut, the title track often becomes the first song casual
                 listeners hear from the group.
               </p>
 
               <p>
                 It usually gets the music video, choreography, stages, and
-                fancams.
+                fancams. That means the debut title track carries a lot of
+                pressure.
               </p>
 
               <p>
-                That means the debut title track carries a lot of pressure.
-              </p>
-
-              <p>It has to introduce the artist quickly.</p>
-
-              <p>It has to show the concept.</p>
-
-              <p>It has to give the group a memorable first stage.</p>
-
-              <p>
-                Sometimes a debut song becomes the song people always associate
-                with the group&apos;s beginning.
-              </p>
-
-              <p>Sometimes later songs become more famous.</p>
-
-              <p>Both can happen.</p>
-
-              <p>That is why debut is important, but not final.</p>
-
-              <p>A strong debut can help.</p>
-
-              <p>
-                But a slower start does not mean the artist has no future.
+                It has to introduce the artist quickly. It has to show the
+                concept. It has to give the group a memorable first stage.
               </p>
 
               <p>
-                K-pop careers can change through later comebacks, viral clips,
-                performances, tours, variety shows, and fandom growth.
+                Sometimes a debut song becomes the song people always
+                associate with the group&apos;s beginning. Sometimes later
+                songs become more famous. Both can happen. That is why debut
+                is important, but not final.
               </p>
 
               <p>
-                For beginners, it helps to watch debut content in a simple order.
+                A strong debut can help. But a slower start does not mean the
+                artist has no future. K-pop careers can change through later
+                comebacks, viral clips, performances, tours, variety shows,
+                and fandom growth.
               </p>
 
-              <p>First, watch the debut music video.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How to watch a debut, and how first impressions form
+              </h2>
 
-              <p>That shows the concept and title track.</p>
+              <p>
+                For beginners, it helps to watch debut content in a simple
+                order. First, watch the debut music video. That shows the
+                concept and title track.
+              </p>
 
-              <p>Second, watch a debut stage.</p>
+              <p>
+                Second, watch a debut stage. That shows how the song works in
+                performance.
+              </p>
 
-              <p>That shows how the song works in performance.</p>
-
-              <p>Third, watch a few fancams.</p>
-
-              <p>That helps you notice individual members.</p>
+              <p>
+                Third, watch a few fancams. That helps you notice individual
+                members.
+              </p>
 
               <p>
                 Fourth, look at the group profile or member introductions.
-              </p>
-
-              <p>That gives you names, roles, and basic context.</p>
-
-              <p>You do not need to learn everything at once.</p>
-
-              <p>
-                K-pop debuts can come with many names, teasers, and terms.
+                That gives you names, roles, and basic context.
               </p>
 
               <p>
-                It is okay to start with one stage and one member who catches
-                your attention.
+                You do not need to learn everything at once. K-pop debuts can
+                come with many names, teasers, and terms. It is okay to
+                start with one stage and one member who catches your
+                attention.
               </p>
 
               <p>Debut is also when fans begin forming first impressions.</p>
 
-              <p>Some fans notice the center.</p>
-
-              <p>Some notice the visual image.</p>
-
-              <p>Some notice the main vocal.</p>
-
-              <p>Some notice the dancer.</p>
-
-              <p>Some notice the maknae.</p>
-
-              <p>Some notice a killing part.</p>
-
-              <p>Some notice stage presence.</p>
-
               <p>
-                Some notice a funny or warm personality in debut content.
+                Some fans notice the center. Some notice the visual image.
+                Some notice the main vocal. Some notice the dancer. Some
+                notice the maknae. Some notice a killing part. Some notice
+                stage presence. Some notice a funny or warm personality in
+                debut content.
               </p>
 
               <p>That is how early fandom starts.</p>
 
-              <p>But a debut image can change.</p>
-
-              <p>Members may become more confident.</p>
-
-              <p>The group may try new concepts.</p>
-
-              <p>The music may shift.</p>
-
-              <p>The choreography may grow harder.</p>
-
-              <p>A member who was quiet at debut may stand out later.</p>
+              <p>
+                But a debut image can change. Members may become more
+                confident. The group may try new concepts. The music may
+                shift. The choreography may grow harder. A member who was
+                quiet at debut may stand out later.
+              </p>
 
               <p>
                 That is one reason fans enjoy watching rookie groups grow.
+                You are not only watching the first song. You are watching
+                the beginning of a path.
               </p>
-
-              <p>You are not only watching the first song.</p>
-
-              <p>You are watching the beginning of a path.</p>
 
               <p>There is one more thing to remember.</p>
 
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                Following an artist before debut, and how it all fits together
+              </h2>
+
               <p>Debut is official, but interest can start before debut.</p>
 
-              <p>Some fans follow pre-debut trainees.</p>
-
-              <p>Some learn names through teaser photos.</p>
-
-              <p>Some watch survival shows.</p>
-
-              <p>Some see practice videos.</p>
-
               <p>
-                Some notice a member through short clips even before the
-                official song arrives.
+                Some fans follow pre-debut trainees. Some learn names through
+                teaser photos. Some watch survival shows. Some see practice
+                videos. Some notice a member through short clips even before
+                the official song arrives.
               </p>
 
               <p>
                 So when a group finally debuts, some fans may already feel
-                familiar with them.
+                familiar with them. Other viewers may be meeting them for the
+                first time. Both experiences are normal.
               </p>
 
               <p>
-                Other viewers may be meeting them for the first time.
-              </p>
-
-              <p>Both experiences are normal.</p>
-
-              <p>
-                For HAEMIL readers, the easiest way to understand debut is this:
-              </p>
-
-              <p>A trainee prepares before debut.</p>
-
-              <p>Pre-debut is the time before the official start.</p>
-
-              <p>Debut is the first official introduction.</p>
-
-              <p>A rookie group is newly debuted.</p>
-
-              <p>A title track gives the debut its main song.</p>
-
-              <p>A concept gives the debut its image.</p>
-
-              <p>A fancam helps fans notice individual members.</p>
-
-              <p>
-                A comeback is what happens later, when the artist returns with a
-                new release.
+                For HAEMIL readers, the easiest way to understand debut is
+                this:
               </p>
 
               <p>
-                So when K-pop fans say, &quot;They debuted,&quot; they usually
-                mean:
+                A trainee prepares before debut. Pre-debut is the time before
+                the official start. Debut is the first official
+                introduction. A rookie group is newly debuted.
               </p>
 
-              <p>This artist has officially started.</p>
+              <p>
+                A title track gives the debut its main song. A concept gives
+                the debut its image. A fancam helps fans notice individual
+                members. A comeback is what happens later, when the artist
+                returns with a new release.
+              </p>
 
-              <p>The first era has begun.</p>
+              <p>
+                So when K-pop fans say, &quot;They debuted,&quot; they
+                usually mean: This artist has officially started. The first
+                era has begun.
+              </p>
             </div>
           </section>
 
