@@ -203,11 +203,11 @@ export default function HomeHero() {
 
           <h1
             aria-label="Korea feels different when someone local shows you around."
-            className="mt-2.5 max-w-[240px] text-[28px] font-semibold leading-[1.08] text-[var(--hero-text)] md:mt-5 md:max-w-3xl md:text-[54px] md:font-medium md:leading-[1.12] md:tracking-[-0.025em]"
+            className="mx-auto mt-2.5 max-w-[260px] text-center text-[28px] font-semibold leading-[1.08] text-[var(--hero-text)] md:mt-5 md:max-w-3xl md:text-[54px] md:font-medium md:leading-[1.12] md:tracking-[-0.025em]"
           >
             <span aria-hidden="true">
               <BlurText
-                text="Korea feels different when"
+                text="Korea feels"
                 animateBy="words"
                 direction="bottom"
                 delay={95}
@@ -217,7 +217,21 @@ export default function HomeHero() {
                 animationFrom={HERO_HEADLINE_BLUR_FROM}
                 animationTo={HERO_HEADLINE_BLUR_TO}
               />
-              <br className="hidden md:block" />
+              <br className="md:hidden" />
+              <span className="hidden md:inline">{" "}</span>
+              <BlurText
+                text="different when"
+                animateBy="words"
+                direction="bottom"
+                delay={95}
+                startIndex={2}
+                stepDuration={0.38}
+                threshold={0}
+                rootMargin="0px"
+                animationFrom={HERO_HEADLINE_BLUR_FROM}
+                animationTo={HERO_HEADLINE_BLUR_TO}
+              />
+              <br />
               <BlurText
                 text="someone local"
                 animateBy="words"
@@ -230,7 +244,8 @@ export default function HomeHero() {
                 animationFrom={HERO_HEADLINE_BLUR_FROM}
                 animationTo={HERO_HEADLINE_BLUR_TO}
                 className="italic text-[var(--hero-accent)]"
-              />{" "}
+              />
+              {" "}
               <BlurText
                 text="shows"
                 animateBy="words"
@@ -243,7 +258,7 @@ export default function HomeHero() {
                 animationFrom={HERO_HEADLINE_BLUR_FROM}
                 animationTo={HERO_HEADLINE_BLUR_TO}
               />
-              <br className="hidden md:block" />
+              <br />
               <BlurText
                 text={"you around."}
                 animateBy="words"
