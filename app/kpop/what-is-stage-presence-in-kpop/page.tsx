@@ -158,7 +158,7 @@ export default function WhatIsStagePresenceInKpopPage() {
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 py-6 md:px-8 md:py-8">
           <SiteHeader />
 
-          <article className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-10">
+          <article className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-5 md:p-10">
             <Link
               href="/kpop"
               className="mb-6 inline-flex text-sm font-semibold text-[var(--accent)]"
@@ -170,11 +170,11 @@ export default function WhatIsStagePresenceInKpopPage() {
               K-pop starter guide
             </p>
 
-            <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
+            <h1 className="mt-3 max-w-3xl text-[32px] font-semibold leading-[1.12] tracking-tight md:mt-4 md:text-6xl md:leading-tight">
               {pageTitle}
             </h1>
 
-            <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
+            <p className="mt-4 max-w-3xl text-base leading-8 text-[var(--muted)] md:mt-6 md:text-lg">
               If you search &quot;stage presence in K-pop,&quot; the simple
               answer is this: stage presence is the way an idol holds attention
               during a performance.
@@ -197,329 +197,277 @@ export default function WhatIsStagePresenceInKpopPage() {
           </section>
 
           <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
-            <div className="space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
+            <div className="max-w-3xl space-y-5 text-base leading-8 text-[var(--muted)] md:text-lg">
+              <h2 className="text-xl font-semibold text-[var(--text)] md:text-2xl">
+                What stage presence looks like
+              </h2>
+
               <p>
-                It is the reason your eyes keep going back to one member.
+                It is the reason your eyes keep going back to one member. Even
+                when they are not singing. Even when they are not in the
+                center. Even when the choreography is busy and everyone is
+                doing the same move.
               </p>
 
-              <p>Even when they are not singing.</p>
-
-              <p>Even when they are not in the center.</p>
-
               <p>
-                Even when the choreography is busy and everyone is doing the
-                same move.
+                Some idols make the stage feel larger when they are on it.
+                That is stage presence.
               </p>
 
               <p>
-                Some idols make the stage feel larger when they are on it. That
-                is stage presence.
-              </p>
-
-              <p>But it is not as simple as &quot;dancing hard.&quot;</p>
-
-              <p>It is not only big facial expressions.</p>
-
-              <p>
-                It is not only being loud, fierce, or dramatic.
+                But it is not as simple as &quot;dancing hard.&quot; It is not
+                only big facial expressions. It is not only being loud,
+                fierce, or dramatic.
               </p>
 
               <p>
                 Stage presence can be powerful, but it can also be quiet. Some
                 idols pull attention with sharp energy. Some do it with calm
                 control. Some are playful. Some are intense. Some barely move
-                their face, but the camera still feels like it belongs to them.
+                their face, but the camera still feels like it belongs to
+                them.
               </p>
-
-              <p>That is why fans talk about stage presence so much.</p>
-
-              <p>It is difficult to measure, but easy to feel.</p>
 
               <p>
-                A strong performer knows how to stay connected to the song. They
-                understand when to push energy forward and when to hold back.
-                They know when to look into the camera, when to focus on the
-                choreography, when to soften their expression, and when to make
-                one small movement feel important.
+                That is why fans talk about stage presence so much. It is
+                difficult to measure, but easy to feel.
               </p>
 
-              <p>That control is part of stage presence.</p>
+              <p>
+                A strong performer knows how to stay connected to the song.
+                They understand when to push energy forward and when to hold
+                back. They know when to look into the camera, when to focus on
+                the choreography, when to soften their expression, and when to
+                make one small movement feel important. That control is part
+                of stage presence.
+              </p>
+
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                The mistake beginners make, and why fancams reveal it
+              </h2>
 
               <p>
                 For beginners, the easiest mistake is thinking stage presence
-                means &quot;the idol who does the most.&quot;
+                means &quot;the idol who does the most.&quot; Sometimes that
+                is true. A high-energy performer can dominate a stage.
               </p>
 
-              <p>Sometimes that is true.</p>
-
-              <p>A high-energy performer can dominate a stage.</p>
-
               <p>
-                But sometimes the idol with the strongest stage presence is not
-                doing the biggest move. They may simply understand the mood
-                better. Their timing may be cleaner. Their expression may change
-                at the right second. Their body may look relaxed even during
-                hard choreography.
+                But sometimes the idol with the strongest stage presence is
+                not doing the biggest move. They may simply understand the
+                mood better. Their timing may be cleaner. Their expression may
+                change at the right second. Their body may look relaxed even
+                during hard choreography.
               </p>
 
-              <p>Stage presence is not only effort.</p>
-
-              <p>It is control.</p>
-
-              <p>This is why fancams are useful.</p>
+              <p>Stage presence is not only effort. It is control.</p>
 
               <p>
-                A full-group stage shows the whole performance. It tells you
-                how the group looks together. But a fancam lets you follow one
-                member from beginning to end. You can see whether they stay
-                interesting during quiet parts, transitions, side positions, and
-                moments when the main camera would usually move away.
+                This is why fancams are useful. A full-group stage shows the
+                whole performance. It tells you how the group looks together.
+                But a fancam lets you follow one member from beginning to end.
+                You can see whether they stay interesting during quiet parts,
+                transitions, side positions, and moments when the main camera
+                would usually move away.
               </p>
 
               <p>That is where stage presence often becomes clear.</p>
 
-              <p>Do they disappear when they are not in the center?</p>
-
-              <p>Do they keep the mood when another member is singing?</p>
-
-              <p>Do they reset their face naturally after a difficult move?</p>
-
-              <p>Do they look aware of the camera without looking stiff?</p>
-
               <p>
-                Do they make the performance feel alive even in small seconds?
+                Do they disappear when they are not in the center? Do they
+                keep the mood when another member is singing? Do they reset
+                their face naturally after a difficult move? Do they look
+                aware of the camera without looking stiff? Do they make the
+                performance feel alive even in small seconds?
               </p>
 
               <p>Those are the things fans notice.</p>
 
-              <p>Stage presence also connects to killing parts.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How it differs from killing part, center, and visual
+              </h2>
 
               <p>
-                A killing part is the short moment fans replay: a line, gesture,
-                expression, camera close-up, or dance move that lands strongly.
-                But a killing part does not work only because the song gives
+                Stage presence also connects to killing parts. A killing part
+                is the short moment fans replay: a line, gesture, expression,
+                camera close-up, or dance move that lands strongly. But a
+                killing part does not work only because the song gives
                 someone a good moment. The idol has to deliver it.
               </p>
 
               <p>
                 The same line can feel ordinary with one performance and
-                unforgettable with another.
-              </p>
-
-              <p>That difference is often stage presence.</p>
-
-              <p>
-                A member with strong stage presence can make a few seconds feel
-                bigger than they look on paper.
+                unforgettable with another. That difference is often stage
+                presence. A member with strong stage presence can make a few
+                seconds feel bigger than they look on paper.
               </p>
 
               <p>
                 Stage presence is also related to center, but it is not the
-                same.
+                same. The center is where the stage places focus. The member
+                may stand in the middle, take the key formation, or receive
+                the main camera attention during an important part. Center is
+                about focus and placement.
               </p>
 
               <p>
-                The center is where the stage places focus. The member may
-                stand in the middle, take the key formation, or receive the main
-                camera attention during an important part. Center is about
-                focus and placement.
+                Stage presence is how the idol uses that focus. Or how they
+                hold attention even without it.
               </p>
-
-              <p>Stage presence is how the idol uses that focus.</p>
-
-              <p>Or how they hold attention even without it.</p>
 
               <p>
                 A center moment can reveal stage presence, but it does not
                 create it by itself. If the camera gives someone the focus and
-                they do nothing with it, the moment may feel flat. If the camera
-                barely focuses on someone and you still notice them, that can be
-                stage presence too.
+                they do nothing with it, the moment may feel flat. If the
+                camera barely focuses on someone and you still notice them,
+                that can be stage presence too. That is why fans often say a
+                member &quot;has presence&quot; even when they are not the
+                official center.
               </p>
 
               <p>
-                That is why fans often say a member &quot;has presence&quot;
-                even when they are not the official center.
+                Stage presence is also different from visual. Visual is about
+                image, styling, facial impression, camera memorability, and
+                how a member is remembered in photos or clips. Stage presence
+                is more about performance pull. It is what happens when the
+                music starts and the idol has to carry energy in real time.
               </p>
-
-              <p>Stage presence is also different from visual.</p>
 
               <p>
-                Visual is about image, styling, facial impression, camera
-                memorability, and how a member is remembered in photos or
-                clips. Stage presence is more about performance pull. It is what
-                happens when the music starts and the idol has to carry energy
-                in real time.
+                The two can overlap. A member with strong visual image may
+                also have strong stage presence. But they are not the same
+                thing.
               </p>
-
-              <p>The two can overlap.</p>
-
-              <p>
-                A member with strong visual image may also have strong stage
-                presence.
-              </p>
-
-              <p>But they are not the same thing.</p>
 
               <p>
                 A beautiful photo does not automatically mean strong stage
-                presence.
+                presence. And strong stage presence does not always need the
+                most polished beauty image. It is about how someone holds the
+                stage.
+              </p>
+
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How it differs from ending fairy
+              </h2>
+
+              <p>
+                Ending fairy is another related idea. An ending fairy is the
+                final close-up after a K-pop performance ends. The idol
+                catches their breath, holds an expression, or reacts to the
+                camera. Stage presence can show there too, because the idol
+                still needs timing and camera awareness.
               </p>
 
               <p>
-                And strong stage presence does not always need the most polished
-                beauty image.
+                But ending fairy is only a short final moment. Stage presence
+                is the feeling across the performance. From the first second
+                to the last. That is the difference.
               </p>
 
-              <p>It is about how someone holds the stage.</p>
-
-              <p>Ending fairy is another related idea.</p>
-
-              <p>
-                An ending fairy is the final close-up after a K-pop performance
-                ends. The idol catches their breath, holds an expression, or
-                reacts to the camera. Stage presence can show there too, because
-                the idol still needs timing and camera awareness.
-              </p>
-
-              <p>But ending fairy is only a short final moment.</p>
-
-              <p>Stage presence is the feeling across the performance.</p>
-
-              <p>From the first second to the last.</p>
-
-              <p>That is the difference.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                Why the camera changes the skill
+              </h2>
 
               <p>
-                K-pop fans often notice stage presence because K-pop stages are
-                camera-heavy. Idols are not only performing for the people in
-                front of them. They are performing for music-show cameras,
+                K-pop fans often notice stage presence because K-pop stages
+                are camera-heavy. Idols are not only performing for the people
+                in front of them. They are performing for music-show cameras,
                 fancams, short clips, thumbnails, edits, and fans watching
-                later on their phones.
+                later on their phones. That changes the skill.
               </p>
 
-              <p>That changes the skill.</p>
-
-              <p>A stage performer needs energy for the room.</p>
-
-              <p>A K-pop idol also needs awareness for the camera.</p>
+              <p>
+                A stage performer needs energy for the room. A K-pop idol also
+                needs awareness for the camera.
+              </p>
 
               <p>
                 They have to know how a small expression will look in a
-                close-up. They have to keep the concept even during transitions.
-                They have to move as part of the group while still giving fans a
-                reason to notice them individually.
+                close-up. They have to keep the concept even during
+                transitions. They have to move as part of the group while
+                still giving fans a reason to notice them individually. That
+                balance is hard. The best performers make it look easy.
               </p>
 
-              <p>That balance is hard.</p>
-
-              <p>The best performers make it look easy.</p>
-
               <p>
-                For a beginner, one good way to watch stage presence is to pick
-                a fancam and ignore the chorus for a moment.
+                For a beginner, one good way to watch stage presence is to
+                pick a fancam and ignore the chorus for a moment. Watch the
+                parts between the obvious highlights.
               </p>
 
-              <p>Watch the parts between the obvious highlights.</p>
-
-              <p>The walk to the next formation.</p>
-
-              <p>The second before their line.</p>
-
-              <p>The way they breathe after a hard move.</p>
-
-              <p>The way their expression changes when the song mood shifts.</p>
-
               <p>
-                The way they act when the camera is not directly centered on
-                them.
+                The walk to the next formation. The second before their line.
+                The way they breathe after a hard move. The way their
+                expression changes when the song mood shifts. The way they act
+                when the camera is not directly centered on them.
               </p>
 
-              <p>Stage presence often lives there.</p>
+              <p>Stage presence often lives there. Not only in the big moment.</p>
 
-              <p>Not only in the big moment.</p>
-
-              <p>Another thing to remember: stage presence changes by song.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How stage presence changes by song, and how to recognize it
+              </h2>
 
               <p>
-                An idol may look powerful in one concept and softer in another.
+                Another thing to remember: stage presence changes by song. An
+                idol may look powerful in one concept and softer in another.
                 They may suit bright songs, elegant songs, dark songs, cute
                 songs, or festival stages differently. A performer with good
                 stage presence understands how to adjust.
               </p>
 
-              <p>They do not perform every song with the same face.</p>
-
-              <p>They read the mood.</p>
-
-              <p>That is why fans compare eras.</p>
-
               <p>
-                They watch how an idol changes across comebacks. Maybe the idol
-                becomes more relaxed. Maybe their expressions become sharper.
-                Maybe they stop overdoing it. Maybe they start trusting smaller
-                gestures. Maybe they learn when not to smile, when not to push,
-                when to let the camera come to them.
+                They do not perform every song with the same face. They read
+                the mood. That is why fans compare eras.
               </p>
 
-              <p>That growth is part of K-pop watching.</p>
-
-              <p>Stage presence is not fixed forever.</p>
-
-              <p>It can improve.</p>
-
-              <p>It can change.</p>
-
-              <p>It can fit one concept better than another.</p>
+              <p>
+                They watch how an idol changes across comebacks. Maybe the
+                idol becomes more relaxed. Maybe their expressions become
+                sharper. Maybe they stop overdoing it. Maybe they start
+                trusting smaller gestures. Maybe they learn when not to smile,
+                when not to push, when to let the camera come to them. That
+                growth is part of K-pop watching.
+              </p>
 
               <p>
-                It can surprise people in a fancam, a festival stage, or a tour
+                Stage presence is not fixed forever. It can improve. It can
+                change. It can fit one concept better than another. It can
+                surprise people in a fancam, a festival stage, or a tour
                 performance.
               </p>
 
               <p>
                 This is why fans argue about it so much. Stage presence is
-                partly skill, partly taste, and partly chemistry with the song.
-                One fan may love clean control. Another may love wild energy.
-                Another may prefer subtle expressions. Another may want strong
-                eye contact.
-              </p>
-
-              <p>There is no single perfect style.</p>
-
-              <p>But there is one useful question:</p>
-
-              <p>Do they make you want to keep watching?</p>
-
-              <p>
-                If the answer is yes, you are probably feeling stage presence.
+                partly skill, partly taste, and partly chemistry with the
+                song. One fan may love clean control. Another may love wild
+                energy. Another may prefer subtle expressions. Another may
+                want strong eye contact.
               </p>
 
               <p>
-                For HAEMIL readers, the easiest way to understand stage presence
-                is this:
+                There is no single perfect style. But there is one useful
+                question: Do they make you want to keep watching? If the
+                answer is yes, you are probably feeling stage presence.
+              </p>
+
+              <p>
+                For HAEMIL readers, the easiest way to understand stage
+                presence is this:
               </p>
 
               <p>
                 Center tells you where the performance wants your attention.
+                Visual tells you how image and camera memorability work. A
+                killing part gives you the few seconds you replay. A fancam
+                lets you follow one member. An ending fairy gives you the
+                final close-up.
               </p>
-
-              <p>Visual tells you how image and camera memorability work.</p>
-
-              <p>A killing part gives you the few seconds you replay.</p>
-
-              <p>A fancam lets you follow one member.</p>
-
-              <p>An ending fairy gives you the final close-up.</p>
 
               <p>
                 Stage presence is the reason someone stays interesting through
-                all of it.
+                all of it. It is not always loud. It is not always obvious.
               </p>
-
-              <p>It is not always loud.</p>
-
-              <p>It is not always obvious.</p>
 
               <p>
                 But once you notice it, K-pop stages become much more fun to

@@ -158,7 +158,7 @@ export default function WhatIsDancePracticeInKpopPage() {
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 py-6 md:px-8 md:py-8">
           <SiteHeader />
 
-          <article className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-10">
+          <article className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-5 md:p-10">
             <Link
               href="/kpop"
               className="mb-6 inline-flex text-sm font-semibold text-[var(--accent)]"
@@ -170,11 +170,11 @@ export default function WhatIsDancePracticeInKpopPage() {
               K-pop starter guide
             </p>
 
-            <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
+            <h1 className="mt-3 max-w-3xl text-[32px] font-semibold leading-[1.12] tracking-tight md:mt-4 md:text-6xl md:leading-tight">
               {pageTitle}
             </h1>
 
-            <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
+            <p className="mt-4 max-w-3xl text-base leading-8 text-[var(--muted)] md:mt-6 md:text-lg">
               If you search &quot;dance practice meaning in K-pop,&quot; the
               simple answer is this: a dance practice is a choreography-focused
               video that shows the full dance more clearly.
@@ -197,521 +197,389 @@ export default function WhatIsDancePracticeInKpopPage() {
           </section>
 
           <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
-            <div className="space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
-              <p>In Korean, fans may call it 안무 연습 영상.</p>
+            <div className="max-w-3xl space-y-5 text-base leading-8 text-[var(--muted)] md:text-lg">
+              <h2 className="text-xl font-semibold text-[var(--text)] md:text-2xl">
+                What a dance practice actually shows
+              </h2>
 
-              <p>That means choreography practice video.</p>
+              <p>
+                In Korean, fans may call it 안무 연습 영상. That means
+                choreography practice video.
+              </p>
 
               <p>
                 But in K-pop, a dance practice is not always just raw practice
-                footage.
+                footage. Many dance practice videos are polished enough to be
+                official content.
               </p>
 
               <p>
-                Many dance practice videos are polished enough to be official
-                content.
-              </p>
-
-              <p>They may be filmed in a practice room.</p>
-
-              <p>They may use a simple camera.</p>
-
-              <p>They may show the whole group from the front.</p>
-
-              <p>
-                They may have casual outfits, training clothes, or coordinated
+                They may be filmed in a practice room. They may use a simple
+                camera. They may show the whole group from the front. They
+                may have casual outfits, training clothes, or coordinated
                 styling.
               </p>
 
-              <p>The main point is simple:</p>
-
-              <p>You can see the dance.</p>
-
-              <p>That is why fans watch them.</p>
+              <p>
+                The main point is simple: You can see the dance. That is why
+                fans watch them.
+              </p>
 
               <p>
                 A music video can be beautiful, but it often cuts between
-                scenes, close-ups, sets, story moments, and visual effects.
+                scenes, close-ups, sets, story moments, and visual effects. A
+                music show stage can be exciting, but the camera may move
+                quickly from member to member. A fancam can help you follow
+                one person. But a dance practice helps you understand the
+                choreography as a whole.
               </p>
 
               <p>
-                A music show stage can be exciting, but the camera may move
-                quickly from member to member.
+                You can see formations. You can see who moves where. You can
+                see the timing. You can see the transitions. You can see the
+                point choreography. You can see how the group works together.
               </p>
-
-              <p>A fancam can help you follow one person.</p>
-
-              <p>
-                But a dance practice helps you understand the choreography as a
-                whole.
-              </p>
-
-              <p>You can see formations.</p>
-
-              <p>You can see who moves where.</p>
-
-              <p>You can see the timing.</p>
-
-              <p>You can see the transitions.</p>
-
-              <p>You can see the point choreography.</p>
-
-              <p>You can see how the group works together.</p>
 
               <p>That is the special role of a dance practice.</p>
 
-              <p>
-                For beginners, this can make a K-pop song much easier to
-                understand.
-              </p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                Why it makes a song easier to understand
+              </h2>
 
-              <p>Sometimes you hear a title track and enjoy it.</p>
-
-              <p>Then you watch the music video and understand the concept.</p>
-
-              <p>Then you watch a stage and feel the performance energy.</p>
+              <p>For beginners, this can make a K-pop song much easier to understand.</p>
 
               <p>
-                But when you watch the dance practice, you finally see how the
-                choreography is built.
-              </p>
-
-              <p>Where the members stand.</p>
-
-              <p>How the center changes.</p>
-
-              <p>How the chorus move repeats.</p>
-
-              <p>How the group creates shapes.</p>
-
-              <p>How the ending pose lands.</p>
-
-              <p>That is why dance practice videos are useful.</p>
-
-              <p>They show the structure behind the stage.</p>
-
-              <p>
-                A dance practice is also closely connected to point choreography.
+                Sometimes you hear a title track and enjoy it. Then you watch
+                the music video and understand the concept. Then you watch a
+                stage and feel the performance energy. But when you watch the
+                dance practice, you finally see how the choreography is
+                built.
               </p>
 
               <p>
-                Point choreography is the signature move or gesture people
-                remember from a song.
+                Where the members stand. How the center changes. How the
+                chorus move repeats. How the group creates shapes. How the
+                ending pose lands.
               </p>
 
-              <p>A dance practice makes that move easier to see.</p>
+              <p>
+                That is why dance practice videos are useful. They show the
+                structure behind the stage.
+              </p>
+
+              <p>
+                A dance practice is also closely connected to point
+                choreography. Point choreography is the signature move or
+                gesture people remember from a song. A dance practice makes
+                that move easier to see.
+              </p>
 
               <p>
                 In a music video, the point move may appear between fast cuts.
-              </p>
-
-              <p>On a stage, the camera may zoom in on one member.</p>
-
-              <p>
-                But in a dance practice, you can usually see how the whole group
+                On a stage, the camera may zoom in on one member. But in a
+                dance practice, you can usually see how the whole group
                 performs the point move together.
               </p>
 
               <p>
                 You can see whether the move is simple, sharp, cute, powerful,
-                or easy to copy.
-              </p>
-
-              <p>
-                You can see why it might become part of a dance challenge.
-              </p>
-
-              <p>
-                You can also see how each member adds a slightly different
-                feeling while staying inside the same choreography.
+                or easy to copy. You can see why it might become part of a
+                dance challenge. You can also see how each member adds a
+                slightly different feeling while staying inside the same
+                choreography.
               </p>
 
               <p>
                 That is one reason dance practice videos are fun to replay.
+                They are not only for dancers. They are for fans who want to
+                understand the performance more clearly.
               </p>
 
-              <p>They are not only for dancers.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How it differs from a fancam
+              </h2>
 
               <p>
-                They are for fans who want to understand the performance more
-                clearly.
+                Dance practice is different from fancam. A fancam follows one
+                member. A dance practice usually shows the whole group.
               </p>
-
-              <p>Dance practice is different from fancam.</p>
-
-              <p>A fancam follows one member.</p>
-
-              <p>A dance practice usually shows the whole group.</p>
 
               <p>
                 If you want to understand one member&apos;s expression, stage
-                presence, or camera awareness, a fancam may be better.
+                presence, or camera awareness, a fancam may be better. If you
+                want to understand the formation and choreography, a dance
+                practice may be better.
               </p>
+
+              <p>Both are useful. They just answer different questions.</p>
 
               <p>
-                If you want to understand the formation and choreography, a
-                dance practice may be better.
+                A fancam asks: How does this member perform? A dance practice
+                asks: How does this choreography work? That difference is
+                important.
               </p>
 
-              <p>Both are useful.</p>
-
-              <p>They just answer different questions.</p>
-
-              <p>A fancam asks:</p>
-
-              <p>How does this member perform?</p>
-
-              <p>A dance practice asks:</p>
-
-              <p>How does this choreography work?</p>
-
-              <p>That difference is important.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How it differs from a close-up fancam and a performance video
+              </h2>
 
               <p>
                 Dance practice is also different from a close-up fancam or
-                facecam.
+                facecam. A close-up fancam focuses on the idol&apos;s face and
+                expressions. A dance practice usually gives you more
+                distance.
               </p>
 
               <p>
-                A close-up fancam focuses on the idol&apos;s face and
-                expressions.
+                You may not see every tiny facial change. But you can see the
+                body movement more clearly.
               </p>
 
-              <p>A dance practice usually gives you more distance.</p>
-
-              <p>You may not see every tiny facial change.</p>
-
-              <p>But you can see the body movement more clearly.</p>
-
-              <p>You can see the footwork.</p>
-
-              <p>You can see the spacing.</p>
-
-              <p>You can see whether the group is synchronized.</p>
-
-              <p>You can see how the choreography fills the room.</p>
-
               <p>
-                That is why people who enjoy dance often like practice videos.
+                You can see the footwork. You can see the spacing. You can see
+                whether the group is synchronized. You can see how the
+                choreography fills the room.
               </p>
 
-              <p>Dance practice is also different from a performance video.</p>
+              <p>That is why people who enjoy dance often like practice videos.</p>
 
               <p>
+                Dance practice is also different from a performance video.
                 This can be confusing because the two can look similar.
               </p>
 
-              <p>A performance video is often more produced.</p>
-
               <p>
-                It may have stronger lighting, styled outfits, camera movement,
-                sets, or cinematic editing.
+                A performance video is often more produced. It may have
+                stronger lighting, styled outfits, camera movement, sets, or
+                cinematic editing.
               </p>
 
-              <p>A dance practice is usually more straightforward.</p>
-
-              <p>The focus is the choreography.</p>
-
-              <p>Of course, the line is not always perfect.</p>
-
               <p>
-                Some official dance practice videos are very clean and planned.
+                A dance practice is usually more straightforward. The focus is
+                the choreography.
               </p>
 
-              <p>Some performance videos are simple.</p>
-
-              <p>But the feeling is different.</p>
-
-              <p>A performance video presents the stage image.</p>
-
-              <p>A dance practice shows the choreography more directly.</p>
-
-              <p>That is the easiest way to understand it.</p>
-
-              <p>Dance practice is also connected to comeback.</p>
-
               <p>
-                When a group has a comeback, fans often wait for several pieces
-                of content.
+                Of course, the line is not always perfect. Some official
+                dance practice videos are very clean and planned. Some
+                performance videos are simple. But the feeling is different.
               </p>
 
-              <p>The music video.</p>
+              <p>
+                A performance video presents the stage image. A dance
+                practice shows the choreography more directly. That is the
+                easiest way to understand it.
+              </p>
 
-              <p>The comeback stage.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How dance practice fits into a comeback
+              </h2>
 
-              <p>The fancams.</p>
+              <p>
+                Dance practice is also connected to comeback. When a group has
+                a comeback, fans often wait for several pieces of content.
+              </p>
 
-              <p>The dance practice.</p>
-
-              <p>The dance challenge.</p>
+              <p>
+                The music video. The comeback stage. The fancams. The dance
+                practice. The dance challenge.
+              </p>
 
               <p>Each one shows a different side of the title track.</p>
 
-              <p>The music video shows concept.</p>
-
-              <p>The stage shows performance energy.</p>
-
-              <p>The fancam shows one member.</p>
-
-              <p>The dance practice shows choreography.</p>
-
-              <p>The dance challenge shows a short, repeatable part.</p>
+              <p>
+                The music video shows concept. The stage shows performance
+                energy. The fancam shows one member. The dance practice shows
+                choreography. The dance challenge shows a short, repeatable
+                part.
+              </p>
 
               <p>Together, they help fans understand the comeback.</p>
 
               <p>
                 A dance practice can also change how people feel about a song.
+                Sometimes a title track feels simple at first.
               </p>
-
-              <p>Sometimes a title track feels simple at first.</p>
 
               <p>
                 Then the dance practice shows clever formations or clean
-                transitions.
+                transitions. Sometimes the chorus becomes more memorable when
+                you see the point choreography clearly.
               </p>
 
               <p>
-                Sometimes the chorus becomes more memorable when you see the
-                point choreography clearly.
+                Sometimes a member&apos;s movement looks sharper in the
+                practice room than it did in the music video. Sometimes the
+                group&apos;s synchronization becomes the most impressive part.
               </p>
 
               <p>
-                Sometimes a member&apos;s movement looks sharper in the practice
-                room than it did in the music video.
+                That is why fans often say they liked a song more after
+                watching the dance practice. The choreography can reveal
+                things the audio alone does not show.
               </p>
 
               <p>
-                Sometimes the group&apos;s synchronization becomes the most
-                impressive part.
+                Dance practice also helps fans notice center changes. In
+                K-pop, center means the member placed in the main focus of a
+                formation or performance moment. A dance practice makes center
+                movement easier to follow.
               </p>
 
               <p>
-                That is why fans often say they liked a song more after watching
-                the dance practice.
+                You can see who starts in the middle. Who moves forward. Who
+                leads the chorus shape. Who moves to the side. Who comes back
+                for the killing part.
               </p>
 
               <p>
-                The choreography can reveal things the audio alone does not
-                show.
+                This is harder to see in a fast-edited music video. But in a
+                dance practice, the full formation is usually visible. That
+                makes the performance easier to read.
               </p>
 
-              <p>Dance practice also helps fans notice center changes.</p>
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How it reveals stage presence and craft
+              </h2>
 
               <p>
-                In K-pop, center means the member placed in the main focus of a
-                formation or performance moment.
+                Dance practice can also show stage presence in a different
+                way. Stage presence is not only about facial expressions or
+                camera close-ups.
               </p>
 
-              <p>A dance practice makes center movement easier to follow.</p>
-
-              <p>You can see who starts in the middle.</p>
-
-              <p>Who moves forward.</p>
-
-              <p>Who leads the chorus shape.</p>
-
-              <p>Who moves to the side.</p>
-
-              <p>Who comes back for the killing part.</p>
-
-              <p>This is harder to see in a fast-edited music video.</p>
+              <p>It can also appear in body control. Timing. Clean lines. Energy.</p>
 
               <p>
-                But in a dance practice, the full formation is usually visible.
+                How strongly a member finishes a move. How naturally they move
+                between positions. How they keep the song&apos;s mood even
+                without stage lighting or dramatic camera work.
               </p>
 
-              <p>That makes the performance easier to read.</p>
+              <p>A practice room can reveal that. There are fewer distractions.</p>
 
               <p>
-                Dance practice can also show stage presence in a different way.
+                No big set. No audience noise. No dramatic editing. Just the
+                performers and the choreography.
               </p>
-
-              <p>
-                Stage presence is not only about facial expressions or camera
-                close-ups.
-              </p>
-
-              <p>It can also appear in body control.</p>
-
-              <p>Timing.</p>
-
-              <p>Clean lines.</p>
-
-              <p>Energy.</p>
-
-              <p>How strongly a member finishes a move.</p>
-
-              <p>How naturally they move between positions.</p>
-
-              <p>
-                How they keep the song&apos;s mood even without stage lighting
-                or dramatic camera work.
-              </p>
-
-              <p>A practice room can reveal that.</p>
-
-              <p>There are fewer distractions.</p>
-
-              <p>No big set.</p>
-
-              <p>No audience noise.</p>
-
-              <p>No dramatic editing.</p>
-
-              <p>Just the performers and the choreography.</p>
 
               <p>That can make strengths and weaknesses easier to see.</p>
 
               <p>
                 This is why dance practice videos are often loved by fans who
-                care about performance.
-              </p>
-
-              <p>They feel closer to the work behind the stage.</p>
-
-              <p>You can see the amount of coordination needed.</p>
-
-              <p>
-                You can see how difficult a simple-looking move may actually be.
+                care about performance. They feel closer to the work behind
+                the stage.
               </p>
 
               <p>
-                You can see how many small details have to match for the group
-                to look clean.
+                You can see the amount of coordination needed. You can see how
+                difficult a simple-looking move may actually be. You can see
+                how many small details have to match for the group to look
+                clean.
               </p>
-
-              <p>A three-minute stage may look effortless.</p>
 
               <p>
-                A dance practice reminds you that it is built from repetition,
-                timing, and teamwork.
+                A three-minute stage may look effortless. A dance practice
+                reminds you that it is built from repetition, timing, and
+                teamwork.
               </p>
+
+              <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                How to watch a dance practice, and how it connects to dance challenges
+              </h2>
 
               <p>
                 For beginners, one good way to watch a dance practice is to
                 compare it with the music video.
               </p>
 
-              <p>Watch the music video first.</p>
+              <p>Watch the music video first. Notice the concept, styling, and main mood.</p>
 
-              <p>Notice the concept, styling, and main mood.</p>
-
-              <p>Then watch the dance practice.</p>
-
-              <p>Notice what was hidden by camera cuts.</p>
-
-              <p>The formations.</p>
-
-              <p>The full chorus.</p>
-
-              <p>The footwork.</p>
-
-              <p>The transitions.</p>
-
-              <p>The point move.</p>
-
-              <p>The way members move around each other.</p>
-
-              <p>After that, watch a fancam.</p>
+              <p>Then watch the dance practice. Notice what was hidden by camera cuts.</p>
 
               <p>
-                Now you can see how one member performs inside the choreography
-                you just learned.
+                The formations. The full chorus. The footwork. The
+                transitions. The point move. The way members move around each
+                other.
+              </p>
+
+              <p>
+                After that, watch a fancam. Now you can see how one member
+                performs inside the choreography you just learned.
               </p>
 
               <p>This order makes K-pop stages easier to understand.</p>
 
-              <p>Music video first.</p>
-
-              <p>Dance practice second.</p>
-
-              <p>Fancam third.</p>
+              <p>Music video first. Dance practice second. Fancam third.</p>
 
               <p>
-                You do not have to watch everything this way, but it helps when
-                you are learning a group.
+                You do not have to watch everything this way, but it helps
+                when you are learning a group.
               </p>
-
-              <p>Dance practice is also useful for dance challenges.</p>
 
               <p>
-                A dance challenge usually uses a short part of the choreography.
+                Dance practice is also useful for dance challenges. A dance
+                challenge usually uses a short part of the choreography.
+                Often, it comes from the point choreography.
               </p>
-
-              <p>Often, it comes from the point choreography.</p>
 
               <p>
                 When fans or other idols copy the challenge, they usually
-                perform a small section of the dance.
+                perform a small section of the dance. If you watch the full
+                dance practice, you can see where that challenge part comes
+                from. You can understand how it fits into the whole song.
               </p>
 
               <p>
-                If you watch the full dance practice, you can see where that
-                challenge part comes from.
+                That makes the short clip feel less random. It becomes part
+                of the larger choreography.
               </p>
-
-              <p>You can understand how it fits into the whole song.</p>
-
-              <p>That makes the short clip feel less random.</p>
-
-              <p>It becomes part of the larger choreography.</p>
 
               <p>
                 That is why dance practice videos are important in modern
-                K-pop.
-              </p>
-
-              <p>They are not only behind-the-scenes content.</p>
-
-              <p>They are part of how fans learn the song.</p>
-
-              <p>They help casual viewers recognize the point choreography.</p>
-
-              <p>They help dancers cover the song.</p>
-
-              <p>They help fans compare members.</p>
-
-              <p>
-                They help people appreciate the teamwork behind a comeback.
+                K-pop. They are not only behind-the-scenes content. They are
+                part of how fans learn the song.
               </p>
 
               <p>
-                For HAEMIL readers, the easiest way to understand dance practice
-                is this:
+                They help casual viewers recognize the point choreography.
+                They help dancers cover the song. They help fans compare
+                members. They help people appreciate the teamwork behind a
+                comeback.
               </p>
 
-              <p>A music video shows the concept.</p>
+              <p>
+                For HAEMIL readers, the easiest way to understand dance
+                practice is this:
+              </p>
 
-              <p>A title track gives the comeback its main song.</p>
+              <p>
+                A music video shows the concept. A title track gives the
+                comeback its main song. A stage shows performance energy. A
+                fancam follows one member.
+              </p>
 
-              <p>A stage shows performance energy.</p>
-
-              <p>A fancam follows one member.</p>
-
-              <p>A close-up fancam shows expressions.</p>
-
-              <p>A dance challenge shows the short part people copy.</p>
-
-              <p>A dance practice shows the full choreography clearly.</p>
+              <p>
+                A close-up fancam shows expressions. A dance challenge shows
+                the short part people copy. A dance practice shows the full
+                choreography clearly.
+              </p>
 
               <p>
                 It is the video you watch when you want to see how the
                 performance is built.
               </p>
 
-              <p>Not only the image.</p>
-
-              <p>Not only the highlight.</p>
-
-              <p>The whole dance.</p>
-
-              <p>That is why K-pop fans keep watching dance practice videos.</p>
-
-              <p>They make the stage easier to understand.</p>
+              <p>Not only the image. Not only the highlight. The whole dance.</p>
 
               <p>
-                And once you understand the choreography, every fancam and stage
-                becomes more fun to watch.
+                That is why K-pop fans keep watching dance practice videos.
+                They make the stage easier to understand.
+              </p>
+
+              <p>
+                And once you understand the choreography, every fancam and
+                stage becomes more fun to watch.
               </p>
             </div>
           </section>
