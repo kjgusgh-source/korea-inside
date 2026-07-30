@@ -520,7 +520,16 @@ export default function WhatIsAFancamPage() {
                 href="/kpop/rescene-woni-fancam-spotlight"
                 className="group rounded-[1.5rem] border border-[var(--border)] bg-[var(--card)] p-5 transition hover:-translate-y-1 hover:shadow-md"
               >
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
+                <div className="aspect-video w-full overflow-hidden rounded-xl">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="https://img.youtube.com/vi/gHoKSBaLP7E/hqdefault.jpg"
+                    alt=""
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+
+                <p className="mt-4 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
                   K-pop Spotlight
                 </p>
 
@@ -542,7 +551,16 @@ export default function WhatIsAFancamPage() {
                 href="/kpop/illit-wonhee-fancam-spotlight"
                 className="group rounded-[1.5rem] border border-[var(--border)] bg-[var(--card)] p-5 transition hover:-translate-y-1 hover:shadow-md"
               >
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
+                <div className="aspect-video w-full overflow-hidden rounded-xl">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="https://img.youtube.com/vi/gOGU2zO4POY/hqdefault.jpg"
+                    alt=""
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+
+                <p className="mt-4 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
                   K-pop Spotlight
                 </p>
 
@@ -565,7 +583,16 @@ export default function WhatIsAFancamPage() {
                 href="/kpop/cortis-keonho-fancam-spotlight"
                 className="group rounded-[1.5rem] border border-[var(--border)] bg-[var(--card)] p-5 transition hover:-translate-y-1 hover:shadow-md"
               >
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
+                <div className="aspect-video w-full overflow-hidden rounded-xl">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="https://img.youtube.com/vi/qx8VbGEWcBo/hqdefault.jpg"
+                    alt=""
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+
+                <p className="mt-4 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
                   K-pop Spotlight
                 </p>
 
