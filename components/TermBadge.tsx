@@ -12,7 +12,13 @@ type TermBadgeName =
   | "concept"
   | "title-track"
   | "music-show"
-  | "waterbomb";
+  | "waterbomb"
+  | "close-up-fancam"
+  | "dance-practice"
+  | "aegyo"
+  | "bias-wrecker"
+  | "rookie-group"
+  | "maknae";
 
 const BADGE_GLYPHS: Record<TermBadgeName, React.ReactNode> = {
   fancam: (
@@ -324,6 +330,99 @@ const BADGE_GLYPHS: Record<TermBadgeName, React.ReactNode> = {
       />
       <circle cx="100" cy="90" r="6" fill="var(--accent)" />
       <circle cx="86" cy="120" r="6" fill="var(--celadon)" />
+    </>
+  ),
+  "close-up-fancam": (
+    <>
+      <rect x="34" y="34" width="188" height="188" rx="46" fill="var(--card)" stroke="var(--accent)" strokeWidth="7" />
+      <path
+        d="M70 84V66a6 6 0 0 1 6-6h18M186 84V66a6 6 0 0 0-6-6h-18M70 172v18a6 6 0 0 0 6 6h18M186 172v18a6 6 0 0 1-6 6h-18"
+        stroke="var(--accent)"
+        strokeWidth="7"
+      />
+      <circle cx="128" cy="128" r="54" stroke="var(--accent)" strokeWidth="9" strokeDasharray="299 40" />
+      <path d="M90 178c6-30 20-46 36-46s30 16 36 46z" fill="var(--celadon)" />
+      <circle cx="126" cy="106" r="25" fill="var(--celadon)" />
+      <rect x="170" y="99" width="26" height="26" rx="7" fill="var(--gold)" />
+    </>
+  ),
+  "dance-practice": (
+    <>
+      <rect x="34" y="34" width="188" height="188" rx="46" fill="var(--card)" stroke="var(--accent)" strokeWidth="7" />
+      <circle cx="128" cy="82" r="15" stroke="var(--accent)" strokeWidth="7" />
+      <path
+        d="M128 97v42M128 109l-36 22M128 109l38 8M128 139l-22 46M128 139l30 42"
+        stroke="var(--accent)"
+        strokeWidth="8"
+      />
+      <path d="M58 124h26" stroke="var(--gold)" strokeWidth="7" />
+      <path d="M58 124l14-8M58 124l14 8" stroke="var(--gold)" strokeWidth="7" />
+      <path d="M60 108h16M64 96h12" stroke="var(--celadon)" strokeWidth="6" strokeOpacity="0.6" />
+      <path d="M198 124h-26" stroke="var(--gold)" strokeWidth="7" />
+      <path d="M198 124l-14-8M198 124l-14 8" stroke="var(--gold)" strokeWidth="7" />
+      <path d="M196 108h-16M192 96h-12" stroke="var(--celadon)" strokeWidth="6" strokeOpacity="0.6" />
+      <path d="M56 196h58M144 196h58" stroke="var(--celadon)" strokeWidth="6" strokeOpacity="0.4" />
+    </>
+  ),
+  aegyo: (
+    <>
+      <rect x="34" y="34" width="188" height="188" rx="46" fill="var(--card)" stroke="var(--accent)" strokeWidth="7" />
+      <path d="M92 122c6-14 26-14 32 0" stroke="var(--accent)" strokeWidth="7" fill="none" />
+      <path d="M164 122c6-14 26-14 32 0" stroke="var(--accent)" strokeWidth="7" fill="none" />
+      <path d="M116 152c4 10 8 10 12 10s8 0 12-10" stroke="var(--accent)" strokeWidth="7" fill="none" />
+      <ellipse cx="94" cy="148" rx="14" ry="9" fill="var(--accent)" fillOpacity="0.22" />
+      <ellipse cx="194" cy="148" rx="14" ry="9" fill="var(--accent)" fillOpacity="0.22" />
+      <circle cx="89" cy="145" r="2.4" fill="var(--card)" />
+      <circle cx="99" cy="151" r="2" fill="var(--card)" />
+      <circle cx="189" cy="145" r="2.4" fill="var(--card)" />
+      <circle cx="199" cy="151" r="2" fill="var(--card)" />
+      <path
+        d="M74,91.6 L71.5,89.4 C62.8,81.4 57,76.2 57,69.8 C57,64.5 61.1,60.4 66.4,60.4 C69.3,60.4 72.2,61.8 74,64 C75.9,61.8 78.7,60.4 81.7,60.4 C86.9,60.4 91,64.5 91,69.8 C91,76.2 85.2,81.4 76.5,89.4 Z"
+        fill="var(--gold)"
+      />
+      <path d="M108,56 L112,62 L118,66 L112,70 L108,76 L104,70 L98,66 L104,62 Z" fill="var(--gold)" />
+    </>
+  ),
+  "bias-wrecker": (
+    <>
+      <rect x="34" y="34" width="188" height="188" rx="46" fill="var(--card)" stroke="var(--accent)" strokeWidth="7" />
+      <path
+        d="M100,139.2 L97,136.5 C86.1,126.7 79,120.2 79,112.3 C79,105.8 84.1,100.7 90.55,100.7 C94.2,100.7 97.7,102.4 100,105.1 C102.3,102.4 105.8,100.7 109.45,100.7 C115.9,100.7 121,105.8 121,112.3 C121,120.2 113.9,126.7 103,136.5 Z"
+        fill="var(--celadon)"
+      />
+      <path
+        d="M138,149.5 L135.2,147 C125.5,138.1 119,132.2 119,125.05 C119,119.2 123.6,114.6 129.45,114.6 C132.8,114.6 135.9,116.1 138,118.6 C140.1,116.1 143.2,114.6 146.55,114.6 C152.4,114.6 157,119.2 157,125.05 C157,132.2 150.5,138.1 140.8,147 Z"
+        fill="none"
+        stroke="var(--accent)"
+        strokeWidth="6"
+      />
+      <path d="M155 84L166 78L172 67L178 78L189 84L178 90L172 101L166 90Z" fill="var(--gold)" />
+      <circle cx="145" cy="70" r="4" fill="var(--gold)" />
+      <circle cx="196" cy="98" r="4" fill="var(--gold)" />
+    </>
+  ),
+  "rookie-group": (
+    <>
+      <rect x="34" y="34" width="188" height="188" rx="46" fill="var(--card)" stroke="var(--accent)" strokeWidth="7" />
+      <path d="M50,168 c3,-16 12,-24 26,-24 s22,8 26,24z" fill="var(--celadon)" />
+      <circle cx="76" cy="132" r="16" fill="var(--celadon)" />
+      <path d="M154,168 c3,-16 12,-24 26,-24 s22,8 26,24z" fill="var(--celadon)" />
+      <circle cx="180" cy="132" r="16" fill="var(--celadon)" />
+      <path d="M92,168 c4,-22 17,-33 36,-33 s32,11 36,33" fill="var(--card)" stroke="var(--accent)" strokeWidth="7" />
+      <circle cx="128" cy="118" r="22" fill="var(--card)" stroke="var(--accent)" strokeWidth="7" />
+      <path d="M180 66l7 16 16 7-16 7-7 16-7-16-16-7 16-7z" fill="var(--gold)" />
+    </>
+  ),
+  maknae: (
+    <>
+      <rect x="34" y="34" width="188" height="188" rx="46" fill="var(--card)" stroke="var(--accent)" strokeWidth="7" />
+      <path d="M50,170 c4,-24 18,-36 32,-36 s28,12 32,36" fill="var(--card)" stroke="var(--accent)" strokeWidth="7" />
+      <circle cx="82" cy="118" r="22" fill="var(--card)" stroke="var(--accent)" strokeWidth="7" />
+      <path d="M142,170 c4,-24 18,-36 32,-36 s28,12 32,36" fill="var(--card)" stroke="var(--accent)" strokeWidth="7" />
+      <circle cx="174" cy="118" r="22" fill="var(--card)" stroke="var(--accent)" strokeWidth="7" />
+      <path d="M111,188 c2,-13 9,-19 17,-19 s15,6 17,19" fill="var(--celadon)" />
+      <circle cx="128" cy="158" r="13" fill="var(--celadon)" />
+      <path d="M128,126 L132,132 L138,136 L132,140 L128,146 L124,140 L118,136 L124,132 Z" fill="var(--gold)" />
     </>
   ),
 };

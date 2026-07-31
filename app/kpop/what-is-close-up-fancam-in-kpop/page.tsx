@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "../../../components/SiteHeader";
 import JsonLd from "../../../components/JsonLd";
+import TermBadge from "../../../components/TermBadge";
 
 const siteUrl = "https://haemilkorea.com";
 const pageUrl = `${siteUrl}/kpop/what-is-close-up-fancam-in-kpop`;
@@ -166,9 +167,12 @@ export default function WhatIsCloseUpFancamInKpopPage() {
               ← Back to K-pop
             </Link>
 
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
-              K-pop starter guide
-            </p>
+            <div className="flex items-center gap-3">
+              <TermBadge term="close-up-fancam" className="h-11 w-11 flex-none" />
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+                K-pop starter guide
+              </p>
+            </div>
 
             <h1 className="mt-3 max-w-3xl text-[32px] font-semibold leading-[1.12] tracking-tight md:mt-4 md:text-6xl md:leading-tight">
               {pageTitle}

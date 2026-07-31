@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "../../../components/SiteHeader";
 import JsonLd from "../../../components/JsonLd";
+import TermBadge from "../../../components/TermBadge";
 import { getPublishedMemberGuides } from "../../../lib/publishedGuides";
 
 const siteUrl = "https://haemilkorea.com";
@@ -124,9 +125,12 @@ export default function WhatIsAegyoPage() {
               ← Back to K-pop
             </Link>
 
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
-              K-pop guide
-            </p>
+            <div className="flex items-center gap-3">
+              <TermBadge term="aegyo" className="h-11 w-11 flex-none" />
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+                K-pop guide
+              </p>
+            </div>
 
             <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
               What is aegyo in K-pop?
