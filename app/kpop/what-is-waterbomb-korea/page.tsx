@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "../../../components/SiteHeader";
 import JsonLd from "../../../components/JsonLd";
+import TermBadge from "../../../components/TermBadge";
 
 const siteUrl = "https://haemilkorea.com";
 const pageUrl = `${siteUrl}/kpop/what-is-waterbomb-korea`;
@@ -135,9 +136,12 @@ export default function WhatIsWaterbombKoreaPage() {
               ← Back to K-pop
             </Link>
 
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
-              K-pop culture guide
-            </p>
+            <div className="flex items-center gap-3">
+              <TermBadge term="waterbomb" className="h-11 w-11 flex-none" />
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+                K-pop culture guide
+              </p>
+            </div>
 
             <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
               What Is WATERBOMB Korea? The Summer Festival Behind Viral K-pop
