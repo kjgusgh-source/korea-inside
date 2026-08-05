@@ -11,7 +11,7 @@ const pageUrl = `${siteUrl}/kpop/what-is-aegyo`;
 const pageTitle =
   "What Is Aegyo in K-pop? | Meaning, Examples & Korean Fan Culture";
 const pageDescription =
-  "A friendly guide to what aegyo means in K-pop, where fans see it, and why it is about mood, timing, and playful charm — not just acting cute.";
+  "Aegyo meaning in K-pop: a friendly guide to where fans see it, and why it is about mood, timing, and playful charm — not just acting cute.";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -137,9 +137,9 @@ export default function WhatIsAegyoPage() {
             </h1>
 
             <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
-              In K-pop, aegyo usually means cute or charming behavior — a playful
-              voice, a soft expression, a small gesture meant to pull people in.
-              But fans do not use the word only like a simple label for “acting
+              Aegyo means cute or charming behavior in K-pop — a playful voice,
+              a soft expression, a small gesture meant to pull people in. But
+              fans do not use the word only like a simple label for “acting
               cute.” Aegyo is often about mood, timing, and the social warmth
               between an idol and the people watching.
             </p>
