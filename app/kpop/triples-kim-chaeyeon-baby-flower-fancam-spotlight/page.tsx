@@ -248,8 +248,12 @@ export default function TriplesKimChaeYeonBabyFlowerFancamSpotlightPage() {
 
               <p>
                 That matters in what Korean fans call an eolbbak fancam
-                (얼빁직칵) — a close-up fancam that keeps the frame tight on
-                one face.
+                (
+                <span lang="ko" className="ko-text font-medium">
+                  얼빁직칵
+                </span>
+                ) — a close-up fancam that keeps the frame tight on one
+                face.
               </p>
 
               <p>
