@@ -29,7 +29,7 @@ const relatedGuides = [
   },
   {
     label: "K-pop term",
-    title: "What Is an “얼빁직칵”?",
+    title: "What Is a Close-Up Fancam in K-pop?",
     description:
       "A friendly guide to Korean close-up fancams, where one face, one expression, or one quick mood change can make a stage easy to replay.",
     href: "/kpop/what-is-close-up-fancam-in-kpop",
@@ -246,14 +246,17 @@ export default function TriplesKimChaeYeonBabyFlowerFancamSpotlightPage() {
                 close.
               </p>
 
-              <p>That matters in an 얼빁직칵.</p>
+              <p>
+                That matters in what Korean fans call an eolbbak fancam
+                (얼빁직칵) — a close-up fancam that keeps the frame tight on
+                one face.
+              </p>
 
               <p>
-                In Korean K-pop spaces, 얼빁직칵 usually means a close-up fancam
-                where the camera stays tight on the idol&apos;s face. It makes
-                small expressions feel more important. A glance, a smile, a
-                quick change in mood — those details can become the reason
-                someone replays the video.
+                This kind of close-up fancam makes small expressions feel
+                more important. A glance, a smile, a quick change in mood —
+                those details can become the reason someone replays the
+                video.
               </p>
 
               <p>
