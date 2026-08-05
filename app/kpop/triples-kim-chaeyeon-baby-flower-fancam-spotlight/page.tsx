@@ -219,9 +219,9 @@ export default function TriplesKimChaeYeonBabyFlowerFancamSpotlightPage() {
                 and Korean TV, especially BoNiHaNi, the kind of children&apos;s
                 program many Koreans remember from after-school television. So
                 when she appears in a tripleS fancam, the feeling is a little
-                different. It is not only, “Who is this new idol?” It
-                can also feel like, “Oh, I remember her — and now she is
-                standing on this kind of stage.”
+                different. It is not only, &quot;Who is this new idol?&quot; It
+                can also feel like, &quot;Oh, I remember her — and now she is
+                standing on this kind of stage.&quot;
               </p>
 
               <p>
@@ -250,7 +250,7 @@ export default function TriplesKimChaeYeonBabyFlowerFancamSpotlightPage() {
                 That matters in what Korean fans call an eolbbak fancam
                 (
                 <span lang="ko" className="ko-text font-medium">
-                  얼빡직칠
+                  얼빡직캠
                 </span>
                 ) — a close-up fancam that keeps the frame tight on one
                 face.
