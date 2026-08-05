@@ -1,263 +1,212 @@
-export type KpopGuideArticle = {
-    title: string;
-    description: string;
-    href: string;
-    label: string;
-  };
-  
-  export const kpopGuideArticles: KpopGuideArticle[] = [
-    {
-      title: "What Is a Fancam?",
-      description:
-        "A friendly guide to K-pop fancam meaning, why member-focused videos matter, and how fancams differ from facecams, ending fairy moments, and full-stage clips.",
-      href: "/kpop/what-is-a-fancam",
-      label: "K-pop starter guide",
-    },
-    {
-      title: "What Is an Ending Fairy?",
-      description:
-        "A friendly guide to K-pop ending fairy meaning, why the final close-up matters, and how it differs from fancams, facecams, visual moments, and center parts.",
-      href: "/kpop/what-is-ending-fairy",
-      label: "K-pop starter guide",
-    },
-    {
-      title: "What Does Maknae Mean?",
-      description:
-        "A friendly guide to maknae meaning in K-pop, why the youngest member matters, and how maknae differs from center, visual, fancam, and ending fairy talk.",
-      href: "/kpop/what-is-maknae",
-      label: "K-pop starter guide",
-    },
-    {
-      title: "What Does Visual Mean in K-pop?",
-      description:
-        "A friendly guide to the K-pop word “visual,” how it differs from center or face of the group, and why fans use it for more than simple looks.",
-      href: "/kpop/what-is-visual-in-kpop",
-      label: "K-pop starter guide",
-    },
-    {
-      title: "What Is Center in K-pop?",
-      description:
-        "A friendly guide to center meaning in K-pop, why the focus member matters, and how center differs from visual, killing part, fancam, and ending fairy moments.",
-      href: "/kpop/what-is-center-in-kpop",
-      label: "K-pop starter guide",
-    },
-    {
-      title: "What Is a Killing Part in K-pop?",
-      description:
-        "A friendly guide to K-pop killing part meaning, why fans replay certain lines or moves, and how it differs from center, fancam, ending fairy, and visual moments.",
-      href: "/kpop/what-is-killing-part-in-kpop",
-      label: "K-pop starter guide",
-    },
-    {
-      title: "What Is Point Choreography in K-pop?",
-      description:
-        "A friendly guide to point choreography and 포인트 안무 in K-pop, the signature move fans remember, copy, replay, and connect to killing parts and dance challenges.",
-      href: "/kpop/what-is-point-choreography-in-kpop",
-      label: "K-pop starter guide",
-    },
-    {
-      title: "What Is a Dance Practice in K-pop?",
-      description:
-        "A friendly guide to K-pop dance practice videos, why fans watch choreography clearly, and how they differ from fancams, stages, performance videos, and dance challenges.",
-      href: "/kpop/what-is-dance-practice-in-kpop",
-      label: "K-pop starter guide",
-    },
-    {
-      title: "What Is Stage Presence in K-pop?",
-      description:
-        "A friendly guide to stage presence in K-pop, why some idols are hard to look away from, and how it connects to fancams, center, visual, and killing parts.",
-      href: "/kpop/what-is-stage-presence-in-kpop",
-      label: "K-pop starter guide",
-    },
-    {
-      title: "What Is a Close-up Fancam?",
-      description:
-        "A friendly guide to close-up fancam, facecam, and 얼빡직캠 meaning in K-pop, and how face-focused videos differ from fancams and ending fairy moments.",
-      href: "/kpop/what-is-close-up-fancam-in-kpop",
-      label: "K-pop starter guide",
-    },
-    {
-      title: "What Does Bias Mean in K-pop?",
-      description:
-        "A friendly guide to K-pop bias meaning, favorite members, bias wreckers, ultimate bias, 최애, 차애, and why one member keeps catching your attention.",
-      href: "/kpop/what-does-bias-mean",
-      label: "K-pop starter guide",
-    },
-    {
-      title: "What Is a Bias Wrecker in K-pop?",
-      description:
-        "A friendly guide to bias wrecker meaning in K-pop, why another member keeps stealing your attention, and how it differs from your bias, ultimate bias, and bias line.",
-      href: "/kpop/what-is-a-bias-wrecker-in-kpop",
-      label: "K-pop starter guide",
-    },
-    {
-      title: "What Does Comeback Mean in K-pop?",
-      description:
-        "A friendly guide to K-pop comeback meaning, why new releases are called comebacks, and how teasers, title tracks, comeback stages, and promotions work.",
-      href: "/kpop/what-does-comeback-mean-in-kpop",
-      label: "K-pop starter guide",
-    },
-    {
-      title: "What Is a Title Track in K-pop?",
-      description:
-        "A friendly guide to title track meaning in K-pop, how it differs from B-sides and pre-releases, and why one song usually represents a comeback.",
-      href: "/kpop/what-is-a-title-track-in-kpop",
-      label: "K-pop starter guide",
-    },
-    {
-      title: "What Is a Music Show in K-pop?",
-      description:
-        "A friendly guide to Korean K-pop music shows, comeback stages, fancams, ending fairy moments, stage outfits, and why weekly performances matter to fans.",
-      href: "/kpop/what-is-a-music-show-in-kpop",
-      label: "K-pop starter guide",
-    },
-    {
-      title: "What Does Concept Mean in K-pop?",
-      description:
-        "A friendly guide to K-pop concept meaning, how idols change their image each comeback, and how music, styling, choreography, stages, and visuals create an era.",
-      href: "/kpop/what-does-concept-mean-in-kpop",
-      label: "K-pop starter guide",
-    },
-    {
-      title: "K-pop Glossary",
-      description:
-        "A friendly guide to Korean K-pop fan words like bias, maknae, fancam, ending fairy, and eolppak-jikcam.",
-      href: "/kpop/glossary",
-      label: "Fan words",
-    },
-    {
-      title: "What Does Debut Mean in K-pop?",
-      description:
-        "A friendly guide to K-pop debut meaning, pre-debut, trainees, rookie groups, and how debut differs from a comeback.",
-      href: "/kpop/what-does-debut-mean-in-kpop",
-      label: "K-pop starter guide",
-    },
-    {
-      title: 'What Does "Rookie Group" Mean in K-pop?',
-      description:
-        "A simple guide to how K-pop fans discover rookie groups through first stages, short clips, fancams, and the first member they remember.",
-      href: "/kpop/what-is-a-rookie-group-in-kpop",
-      label: "K-pop term",
-    },
-    {
-      title: "What is aegyo in K-pop?",
-      description:
-        "Learn what aegyo means in K-pop, where fans see it, and why it is about mood, timing, and playful charm — not just acting cute.",
-      href: "/kpop/what-is-aegyo",
-      label: "Korean fan words",
-    },
-    {
-      title: "What Is WATERBOMB Korea?",
-      description:
-        "A simple guide to the Korean summer festival behind viral K-pop fancams, stage moments, and names like Kwon Eunbi’s “Waterbomb Goddess.”",
-      href: "/kpop/what-is-waterbomb-korea",
-      label: "K-pop culture guide",
-    },
-    {
-      title: "Why Do Some K-pop Idols Feel Like Anime Characters?",
-      description:
-        "A friendly guide to the Korean fan feeling behind anime-like idol images, 2D-style visuals, close-up fancams, and Oshi no Ko comparisons.",
-      href: "/kpop/why-kpop-idols-feel-like-anime-characters",
-      label: "K-pop culture guide",
-    },
-    {
-      title: "Who Is tripleS?",
-      description:
-        "A friendly first guide to tripleS, the big unit-based girl group that becomes easier when you start with one member, one unit, or one fancam.",
-      href: "/kpop/who$is-triples",
-      label: "Girl group guide",
-    },
-    {
-      title: "Who Is CORTIS?",
-      description:
-        "A friendly first guide to CORTIS, the new BIGHIT MUSIC boy group that K-pop fans are starting to watch.",
-      href: "/kpop/who-is-cortis",
-      label: "Boy group guide",
-    },
-    {
-      title: "BABYMONSTER Ahyeon Fancam Spotlight",
-      description:
-        "A friendly look at BABYMONSTER Ahyeon’s MBCkpop #최애ZIP캠 compilation, from DRIP to SUGAR HONEY ICE TEA, and why it is a good entry point for noticing her stage presence.",
-      href: "/kpop/babymonster-ahyeon-fancam-spotlight",
-      label: "K-pop spotlight",
-    },
-    {
-      title:
-        "K-pop Spotlight: Why RESCENE Woni Is Getting Attention Through Fancams",
-      description:
-        "A friendly K-pop spotlight on RESCENE Woni, her Runaway facecam, and why small moments, expressions, and replayable clips can help a new idol catch attention.",
-      href: "/kpop/rescene-woni-fancam-spotlight",
-      label: "K-pop Spotlight",
-    },
-    {
-      title:
-        "K-pop Spotlight: Why ILLIT Wonhee Keeps Catching Attention in Fancams",
-      description:
-        "A friendly K-pop spotlight on ILLIT Wonhee, her “It’s Me” fancam, and why clear expressions, small timing changes, and close-up stage clips make her easy to remember.",
-      href: "/kpop/illit-wonhee-fancam-spotlight",
-      label: "K-pop Spotlight",
-    },
-    {
-      title:
-        "K-pop Spotlight: Who Is CORTIS Keonho, the “French Fry Boy” Fans Keep Noticing?",
-      description:
-        "A friendly K-pop spotlight on CORTIS Keonho, the BIGHIT rookie member fans are noticing through “JoyRide” fancams, Korean nickname moments, and his easy-to-remember stage presence.",
-      href: "/kpop/cortis-keonho-fancam-spotlight",
-      label: "K-pop Spotlight",
-    },
-    {
-      title:
-        "Why tripleS Kim ChaeYeon’s “Baby Flower” Facecam Feels So Easy to Remember",
-      description:
-        "A close-up look at Kim ChaeYeon’s Baby Flower facecam, her familiar Korean TV background, and why she is an easy first door into tripleS.",
-      href: "/kpop/triples-kim-chaeyeon-baby-flower-fancam-spotlight",
-      label: "Fancam spotlight",
-    },
-    {
-      title: "Why Kwon Eunbi Is Called Korea’s “Waterbomb Goddess”",
-      description:
-        "A friendly look at Kwon Eunbi, WATERBOMB Korea, and how one summer festival image reshaped her solo stage identity.",
-      href: "/kpop/kwon-eunbi-waterbomb-fancam-spotlight",
-      label: "Festival spotlight",
-    },
-    {
-      title: "Choi Yena “Catch Catch” Fancam",
-      description:
-        "A friendly spotlight on Choi Yena’s close-up fancam, anime-idol stage image, and the small playful expressions that make the clip easy to replay.",
-      href: "/kpop/choi-yena-catch-catch-fancam-spotlight",
-      label: "Solo spotlight",
-    },
-    {
-      title: "CHUU “XO, My Cyberlove” Fancam Spotlight",
-      description:
-        "A friendly look at CHUU’s Mnet M2 “XO, My Cyberlove” fancam, her solo artist charm, Chuu Can Do It presence, and why her bright but controlled stage style is easy to notice.",
-      href: "/kpop/chuu-xo-my-cyberlove-fancam-spotlight",
-      label: "K-pop spotlight",
-    },
-    {
-      title: "Hearts2Hearts Ian “STYLE” Fancam Spotlight",
-      description:
-        "A friendly look at Hearts2Hearts Ian’s MBCkpop “STYLE” fancam, the Ian challenge effect, and why her point choreography, camera timing, and rookie-stage presence are easy to notice.",
-      href: "/kpop/hearts2hearts-ian-style-fancam-spotlight",
-      label: "K-pop spotlight",
-    },
-    {
-      title: "Stray Kids Felix “Soul Beam” Facecam Spotlight",
-      description:
-        "A friendly look at Stray Kids Felix’s KBSKpop “Soul Beam” facecam, his deep-voice image, camera awareness, and why close-up fancams make his stage details easier to notice.",
-      href: "/kpop/stray-kids-felix-soul-beam-facecam-spotlight",
-      label: "K-pop spotlight",
-    },
-    {
-      title:
-        "K-pop Spotlight: Why LE SSERAFIM Leader Kim Chaewon Is an Easy Member to Start With",
-      description:
-        "A friendly HAEMIL spotlight on LE SSERAFIM leader Kim Chaewon, her “HOT” fancam, and why her IZ*ONE background and quick cute-to-sharp expression changes make her fancams worth watching first.",
-      href: "/kpop/le-sserafim-kim-chaewon-fancam-spotlight",
-      label: "K-pop Spotlight",
-    },
-  ];
-  
-  export function getKpopGuideArticles() {
-    return kpopGuideArticles;
-  }
+ZXhwb3J0IHR5cGUgS3BvcEd1aWRlQXJ0aWNsZSA9IHsKICAgIHRpdGxlOiBzdHJpbmc7CiAgICBk
+ZXNjcmlwdGlvbjogc3RyaW5nOwogICAgaHJlZjogc3RyaW5nOwogICAgbGFiZWw6IHN0cmluZzsK
+ICB9OwogIAogIGV4cG9ydCBjb25zdCBrcG9wR3VpZGVBcnRpY2xlczogS3BvcEd1aWRlQXJ0aWNs
+ZVtdID0gWwogICAgewogICAgICB0aXRsZTogIldoYXQgSXMgYSBGYW5jYW0/IiwKICAgICAgZGVz
+Y3JpcHRpb246CiAgICAgICAgIkEgZnJpZW5kbHkgZ3VpZGUgdG8gSy1wb3AgZmFuY2FtIG1lYW5p
+bmcsIHdoeSBtZW1iZXItZm9jdXNlZCB2aWRlb3MgbWF0dGVyLCBhbmQgaG93IGZhbmNhbXMgZGlm
+ZmVyIGZyb20gZmFjZWNhbXMsIGVuZGluZyBmYWlyeSBtb21lbnRzLCBhbmQgZnVsbC1zdGFnZSBj
+bGlwcy4iLAogICAgICBocmVmOiAiL2twb3Avd2hhdC1pcy1hLWZhbmNhbSIsCiAgICAgIGxhYmVs
+OiAiSy1wb3Agc3RhcnRlciBndWlkZSIsCiAgICB9LAogICAgewogICAgICB0aXRsZTogIldoYXQg
+SXMgYW4gRW5kaW5nIEZhaXJ5PyIsCiAgICAgIGRlc2NyaXB0aW9uOgogICAgICAgICJBIGZyaWVu
+ZGx5IGd1aWRlIHRvIEstcG9wIGVuZGluZyBmYWlyeSBtZWFuaW5nLCB3aHkgdGhlIGZpbmFsIGNs
+b3NlLXVwIG1hdHRlcnMsIGFuZCBob3cgaXQgZGlmZmVycyBmcm9tIGZhbmNhbXMsIGZhY2VjYW1z
+LCB2aXN1YWwgbW9tZW50cywgYW5kIGNlbnRlciBwYXJ0cy4iLAogICAgICBocmVmOiAiL2twb3Av
+d2hhdC1pcy1lbmRpbmctZmFpcnkiLAogICAgICBsYWJlbDogIkstcG9wIHN0YXJ0ZXIgZ3VpZGUi
+LAogICAgfSwKICAgIHsKICAgICAgdGl0bGU6ICJXaGF0IERvZXMgTWFrbmFlIE1lYW4/IiwKICAg
+ICAgZGVzY3JpcHRpb246CiAgICAgICAgIkEgZnJpZW5kbHkgZ3VpZGUgdG8gbWFrbmFlIG1lYW5p
+bmcgaW4gSy1wb3AsIHdoeSB0aGUgeW91bmdlc3QgbWVtYmVyIG1hdHRlcnMsIGFuZCBob3cgbWFr
+bmFlIGRpZmZlcnMgZnJvbSBjZW50ZXIsIHZpc3VhbCwgZmFuY2FtLCBhbmQgZW5kaW5nIGZhaXJ5
+IHRhbGsuIiwKICAgICAgaHJlZjogIi9rcG9wL3doYXQtaXMtbWFrbmFlIiwKICAgICAgbGFiZWw6
+ICJLLXBvcCBzdGFydGVyIGd1aWRlIiwKICAgIH0sCiAgICB7CiAgICAgIHRpdGxlOiAiV2hhdCBE
+b2VzIFZpc3VhbCBNZWFuIGluIEstcG9wPyIsCiAgICAgIGRlc2NyaXB0aW9uOgogICAgICAgICJB
+IGZyaWVuZGx5IGd1aWRlIHRvIHRoZSBLLXBvcCB3b3JkIOKAnHZpc3VhbCzigJ0gaG93IGl0IGRp
+ZmZlcnMgZnJvbSBjZW50ZXIgb3IgZmFjZSBvZiB0aGUgZ3JvdXAsIGFuZCB3aHkgZmFucyB1c2Ug
+aXQgZm9yIG1vcmUgdGhhbiBzaW1wbGUgbG9va3MuIiwKICAgICAgaHJlZjogIi9rcG9wL3doYXQt
+aXMtdmlzdWFsLWluLWtwb3AiLAogICAgICBsYWJlbDogIkstcG9wIHN0YXJ0ZXIgZ3VpZGUiLAog
+ICAgfSwKICAgIHsKICAgICAgdGl0bGU6ICJXaGF0IElzIENlbnRlciBpbiBLLXBvcD8iLAogICAg
+ICBkZXNjcmlwdGlvbjoKICAgICAgICAiQSBmcmllbmRseSBndWlkZSB0byBjZW50ZXIgbWVhbmlu
+ZyBpbiBLLXBvcCwgd2h5IHRoZSBmb2N1cyBtZW1iZXIgbWF0dGVycywgYW5kIGhvdyBjZW50ZXIg
+ZGlmZmVycyBmcm9tIHZpc3VhbCwga2lsbGluZyBwYXJ0LCBmYW5jYW0sIGFuZCBlbmRpbmcgZmFp
+cnkgbW9tZW50cy4iLAogICAgICBocmVmOiAiL2twb3Avd2hhdC1pcy1jZW50ZXItaW4ta3BvcCIs
+CiAgICAgIGxhYmVsOiAiSy1wb3Agc3RhcnRlciBndWlkZSIsCiAgICB9LAogICAgewogICAgICB0
+aXRsZTogIldoYXQgSXMgYSBLaWxsaW5nIFBhcnQgaW4gSy1wb3A/IiwKICAgICAgZGVzY3JpcHRp
+b246CiAgICAgICAgIkEgZnJpZW5kbHkgZ3VpZGUgdG8gSy1wb3Aga2lsbGluZyBwYXJ0IG1lYW5p
+bmcsIHdoeSBmYW5zIHJlcGxheSBjZXJ0YWluIGxpbmVzIG9yIG1vdmVzLCBhbmQgaG93IGl0IGRp
+ZmZlcnMgZnJvbSBjZW50ZXIsIGZhbmNhbSwgZW5kaW5nIGZhaXJ5LCBhbmQgdmlzdWFsIG1vbWVu
+dHMuIiwKICAgICAgaHJlZjogIi9rcG9wL3doYXQtaXMta2lsbGluZy1wYXJ0LWluLWtwb3AiLAog
+ICAgICBsYWJlbDogIkstcG9wIHN0YXJ0ZXIgZ3VpZGUiLAogICAgfSwKICAgIHsKICAgICAgdGl0
+bGU6ICJXaGF0IElzIFBvaW50IENob3Jlb2dyYXBoeSBpbiBLLXBvcD8iLAogICAgICBkZXNjcmlw
+dGlvbjoKICAgICAgICAiQSBmcmllbmRseSBndWlkZSB0byBwb2ludCBjaG9yZW9ncmFwaHkgYW5k
+IO2PrOyduO2KuCDslYjrrLQgaW4gSy1wb3AsIHRoZSBzaWduYXR1cmUgbW92ZSBmYW5zIHJlbWVt
+YmVyLCBjb3B5LCByZXBsYXksIGFuZCBjb25uZWN0IHRvIGtpbGxpbmcgcGFydHMgYW5kIGRhbmNl
+IGNoYWxsZW5nZXMuIiwKICAgICAgaHJlZjogIi9rcG9wL3doYXQtaXMtcG9pbnQtY2hvcmVvZ3Jh
+cGh5LWluLWtwb3AiLAogICAgICBsYWJlbDogIkstcG9wIHN0YXJ0ZXIgZ3VpZGUiLAogICAgfSwK
+ICAgIHsKICAgICAgdGl0bGU6ICJXaGF0IElzIGEgRGFuY2UgUHJhY3RpY2UgaW4gSy1wb3A/IiwK
+ICAgICAgZGVzY3JpcHRpb246CiAgICAgICAgIkEgZnJpZW5kbHkgZ3VpZGUgdG8gSy1wb3AgZGFu
+Y2UgcHJhY3RpY2UgdmlkZW9zLCB3aHkgZmFucyB3YXRjaCBjaG9yZW9ncmFwaHkgY2xlYXJseSwg
+YW5kIGhvdyB0aGV5IGRpZmZlciBmcm9tIGZhbmNhbXMsIHN0YWdlcywgcGVyZm9ybWFuY2Ugdmlk
+ZW9zLCBhbmQgZGFuY2UgY2hhbGxlbmdlcy4iLAogICAgICBocmVmOiAiL2twb3Avd2hhdC1pcy1k
+YW5jZS1wcmFjdGljZS1pbi1rcG9wIiwKICAgICAgbGFiZWw6ICJLLXBvcCBzdGFydGVyIGd1aWRl
+IiwKICAgIH0sCiAgICB7CiAgICAgIHRpdGxlOiAiV2hhdCBJcyBTdGFnZSBQcmVzZW5jZSBpbiBL
+LXBvcD8iLAogICAgICBkZXNjcmlwdGlvbjoKICAgICAgICAiQSBmcmllbmRseSBndWlkZSB0byBz
+dGFnZSBwcmVzZW5jZSBpbiBLLXBvcCwgd2h5IHNvbWUgaWRvbHMgYXJlIGhhcmQgdG8gbG9vayBh
+d2F5IGZyb20sIGFuZCBob3cgaXQgY29ubmVjdHMgdG8gZmFuY2FtcywgY2VudGVyLCB2aXN1YWws
+IGFuZCBraWxsaW5nIHBhcnRzLiIsCiAgICAgIGhyZWY6ICIva3BvcC93aGF0LWlzLXN0YWdlLXBy
+ZXNlbmNlLWluLWtwb3AiLAogICAgICBsYWJlbDogIkstcG9wIHN0YXJ0ZXIgZ3VpZGUiLAogICAg
+fSwKICAgIHsKICAgICAgdGl0bGU6ICJXaGF0IElzIGEgQ2xvc2UtdXAgRmFuY2FtPyIsCiAgICAg
+IGRlc2NyaXB0aW9uOgogICAgICAgICJBIGZyaWVuZGx5IGd1aWRlIHRvIGNsb3NlLXVwIGZhbmNh
+bSwgZmFjZWNhbSwgYW5kIOyWvOu5oeyngey6oCBtZWFuaW5nIGluIEstcG9wLCBhbmQgaG93IGZh
+Y2UtZm9jdXNlZCB2aWRlb3MgZGlmZmVyIGZyb20gZmFuY2FtcyBhbmQgZW5kaW5nIGZhaXJ5IG1v
+bWVudHMuIiwKICAgICAgaHJlZjogIi9rcG9wL3doYXQtaXMtY2xvc2UtdXAtZmFuY2FtLWluLWtw
+b3AiLAogICAgICBsYWJlbDogIkstcG9wIHN0YXJ0ZXIgZ3VpZGUiLAogICAgfSwKICAgIHsKICAg
+ICAgdGl0bGU6ICJXaGF0IERvZXMgQmlhcyBNZWFuIGluIEstcG9wPyIsCiAgICAgIGRlc2NyaXB0
+aW9uOgogICAgICAgICJBIGZyaWVuZGx5IGd1aWRlIHRvIEstcG9wIGJpYXMgbWVhbmluZywgZmF2
+b3JpdGUgbWVtYmVycywgYmlhcyB3cmVja2VycywgdWx0aW1hdGUgYmlhcywg7LWc7JWgLCDssKjs
+laAsIGFuZCB3aHkgb25lIG1lbWJlciBrZWVwcyBjYXRjaGluZyB5b3VyIGF0dGVudGlvbi4iLAog
+ICAgICBocmVmOiAiL2twb3Avd2hhdC1kb2VzLWJpYXMtbWVhbiIsCiAgICAgIGxhYmVsOiAiSy1w
+b3Agc3RhcnRlciBndWlkZSIsCiAgICB9LAogICAgewogICAgICB0aXRsZTogIldoYXQgSXMgYSBC
+aWFzIFdyZWNrZXIgaW4gSy1wb3A/IiwKICAgICAgZGVzY3JpcHRpb246CiAgICAgICAgIkEgZnJp
+ZW5kbHkgZ3VpZGUgdG8gYmlhcyB3cmVja2VyIG1lYW5pbmcgaW4gSy1wb3AsIHdoeSBhbm90aGVy
+IG1lbWJlciBrZWVwcyBzdGVhbGluZyB5b3VyIGF0dGVudGlvbiwgYW5kIGhvdyBpdCBkaWZmZXJz
+IGZyb20geW91ciBiaWFzLCB1bHRpbWF0ZSBiaWFzLCBhbmQgYmlhcyBsaW5lLiIsCiAgICAgIGhy
+ZWY6ICIva3BvcC93aGF0LWlzLWEtYmlhcy13cmVja2VyLWluLWtwb3AiLAogICAgICBsYWJlbDog
+IkstcG9wIHN0YXJ0ZXIgZ3VpZGUiLAogICAgfSwKICAgIHsKICAgICAgdGl0bGU6ICJXaGF0IERv
+ZXMgQ29tZWJhY2sgTWVhbiBpbiBLLXBvcD8iLAogICAgICBkZXNjcmlwdGlvbjoKICAgICAgICAi
+QSBmcmllbmRseSBndWlkZSB0byBLLXBvcCBjb21lYmFjayBtZWFuaW5nLCB3aHkgbmV3IHJlbGVh
+c2VzIGFyZSBjYWxsZWQgY29tZWJhY2tzLCBhbmQgaG93IHRlYXNlcnMsIHRpdGxlIHRyYWNrcywg
+Y29tZWJhY2sgc3RhZ2VzLCBhbmQgcHJvbW90aW9ucyB3b3JrLiIsCiAgICAgIGhyZWY6ICIva3Bv
+cC93aGF0LWRvZXMtY29tZWJhY2stbWVhbi1pbi1rcG9wIiwKICAgICAgbGFiZWw6ICJLLXBvcCBz
+dGFydGVyIGd1aWRlIiwKICAgIH0sCiAgICB7CiAgICAgIHRpdGxlOiAiV2hhdCBJcyBhIFRpdGxl
+IFRyYWNrIGluIEstcG9wPyIsCiAgICAgIGRlc2NyaXB0aW9uOgogICAgICAgICJBIGZyaWVuZGx5
+IGd1aWRlIHRvIHRpdGxlIHRyYWNrIG1lYW5pbmcgaW4gSy1wb3AsIGhvdyBpdCBkaWZmZXJzIGZy
+b20gQi1zaWRlcyBhbmQgcHJlLXJlbGVhc2VzLCBhbmQgd2h5IG9uZSBzb25nIHVzdWFsbHkgcmVw
+cmVzZW50cyBhIGNvbWViYWNrLiIsCiAgICAgIGhyZWY6ICIva3BvcC93aGF0LWlzLWEtdGl0bGUt
+dHJhY2staW4ta3BvcCIsCiAgICAgIGxhYmVsOiAiSy1wb3Agc3RhcnRlciBndWlkZSIsCiAgICB9
+LAogICAgewogICAgICB0aXRsZTogIldoYXQgSXMgYSBNdXNpYyBTaG93IGluIEstcG9wPyIsCiAg
+ICAgIGRlc2NyaXB0aW9uOgogICAgICAgICJBIGZyaWVuZGx5IGd1aWRlIHRvIEtvcmVhbiBLLXBv
+cCBtdXNpYyBzaG93cywgY29tZWJhY2sgc3RhZ2VzLCBmYW5jYW1zLCBlbmRpbmcgZmFpcnkgbW9t
+ZW50cywgc3RhZ2Ugb3V0Zml0cywgYW5kIHdoeSB3ZWVrbHkgcGVyZm9ybWFuY2VzIG1hdHRlciB0
+byBmYW5zLiIsCiAgICAgIGhyZWY6ICIva3BvcC93aGF0LWlzLWEtbXVzaWMtc2hvdy1pbi1rcG9w
+IiwKICAgICAgbGFiZWw6ICJLLXBvcCBzdGFydGVyIGd1aWRlIiwKICAgIH0sCiAgICB7CiAgICAg
+IHRpdGxlOiAiV2hhdCBEb2VzIENvbmNlcHQgTWVhbiBpbiBLLXBvcD8iLAogICAgICBkZXNjcmlw
+dGlvbjoKICAgICAgICAiQSBmcmllbmRseSBndWlkZSB0byBLLXBvcCBjb25jZXB0IG1lYW5pbmcs
+IGhvdyBpZG9scyBjaGFuZ2UgdGhlaXIgaW1hZ2UgZWFjaCBjb21lYmFjaywgYW5kIGhvdyBtdXNp
+Yywgc3R5bGluZywgY2hvcmVvZ3JhcGh5LCBzdGFnZXMsIGFuZCB2aXN1YWxzIGNyZWF0ZSBhbiBl
+cmEuIiwKICAgICAgaHJlZjogIi9rcG9wL3doYXQtZG9lcy1jb25jZXB0LW1lYW4taW4ta3BvcCIs
+CiAgICAgIGxhYmVsOiAiSy1wb3Agc3RhcnRlciBndWlkZSIsCiAgICB9LAogICAgewogICAgICB0
+aXRsZTogIkstcG9wIEdsb3NzYXJ5IiwKICAgICAgZGVzY3JpcHRpb246CiAgICAgICAgIkEgZnJp
+ZW5kbHkgZ3VpZGUgdG8gS29yZWFuIEstcG9wIGZhbiB3b3JkcyBsaWtlIGJpYXMsIG1ha25hZSwg
+ZmFuY2FtLCBlbmRpbmcgZmFpcnksIGFuZCBlb2xwcGFrLWppa2NhbS4iLAogICAgICBocmVmOiAi
+L2twb3AvZ2xvc3NhcnkiLAogICAgICBsYWJlbDogIkZhbiB3b3JkcyIsCiAgICB9LAogICAgewog
+ICAgICB0aXRsZTogIldoYXQgRG9lcyBEZWJ1dCBNZWFuIGluIEstcG9wPyIsCiAgICAgIGRlc2Ny
+aXB0aW9uOgogICAgICAgICJBIGZyaWVuZGx5IGd1aWRlIHRvIEstcG9wIGRlYnV0IG1lYW5pbmcs
+IHByZS1kZWJ1dCwgdHJhaW5lZXMsIHJvb2tpZSBncm91cHMsIGFuZCBob3cgZGVidXQgZGlmZmVy
+cyBmcm9tIGEgY29tZWJhY2suIiwKICAgICAgaHJlZjogIi9rcG9wL3doYXQtZG9lcy1kZWJ1dC1t
+ZWFuLWluLWtwb3AiLAogICAgICBsYWJlbDogIkstcG9wIHN0YXJ0ZXIgZ3VpZGUiLAogICAgfSwK
+ICAgIHsKICAgICAgdGl0bGU6ICdXaGF0IERvZXMgIlJvb2tpZSBHcm91cCIgTWVhbiBpbiBLLXBv
+cD8nLAogICAgICBkZXNjcmlwdGlvbjoKICAgICAgICAiQSBzaW1wbGUgZ3VpZGUgdG8gaG93IEst
+cG9wIGZhbnMgZGlzY292ZXIgcm9va2llIGdyb3VwcyB0aHJvdWdoIGZpcnN0IHN0YWdlcywgc2hv
+cnQgY2xpcHMsIGZhbmNhbXMsIGFuZCB0aGUgZmlyc3QgbWVtYmVyIHRoZXkgcmVtZW1iZXIuIiwK
+ICAgICAgaHJlZjogIi9rcG9wL3doYXQtaXMtYS1yb29raWUtZ3JvdXAtaW4ta3BvcCIsCiAgICAg
+IGxhYmVsOiAiSy1wb3AgdGVybSIsCiAgICB9LAogICAgewogICAgICB0aXRsZTogIldoYXQgaXMg
+YWVneW8gaW4gSy1wb3A/IiwKICAgICAgZGVzY3JpcHRpb246CiAgICAgICAgIkxlYXJuIHdoYXQg
+YWVneW8gbWVhbnMgaW4gSy1wb3AsIHdoZXJlIGZhbnMgc2VlIGl0LCBhbmQgd2h5IGl0IGlzIGFi
+b3V0IG1vb2QsIHRpbWluZywgYW5kIHBsYXlmdWwgY2hhcm0g4oCUIG5vdCBqdXN0IGFjdGluZyBj
+dXRlLiIsCiAgICAgIGhyZWY6ICIva3BvcC93aGF0LWlzLWFlZ3lvIiwKICAgICAgbGFiZWw6ICJL
+b3JlYW4gZmFuIHdvcmRzIiwKICAgIH0sCiAgICB7CiAgICAgIHRpdGxlOiAiV2hhdCBJcyBXQVRF
+UkJPTUIgS29yZWE/IiwKICAgICAgZGVzY3JpcHRpb246CiAgICAgICAgIkEgc2ltcGxlIGd1aWRl
+IHRvIHRoZSBLb3JlYW4gc3VtbWVyIGZlc3RpdmFsIGJlaGluZCB2aXJhbCBLLXBvcCBmYW5jYW1z
+LCBzdGFnZSBtb21lbnRzLCBhbmQgbmFtZXMgbGlrZSBLd29uIEV1bmJp4oCZcyDigJxXYXRlcmJv
+bWIgR29kZGVzcy7igJ0iLAogICAgICBocmVmOiAiL2twb3Avd2hhdC1pcy13YXRlcmJvbWIta29y
+ZWEiLAogICAgICBsYWJlbDogIkstcG9wIGN1bHR1cmUgZ3VpZGUiLAogICAgfSwKICAgIHsKICAg
+ICAgdGl0bGU6ICJXaHkgRG8gU29tZSBLLXBvcCBJZG9scyBGZWVsIExpa2UgQW5pbWUgQ2hhcmFj
+dGVycz8iLAogICAgICBkZXNjcmlwdGlvbjoKICAgICAgICAiQSBmcmllbmRseSBndWlkZSB0byB0
+aGUgS29yZWFuIGZhbiBmZWVsaW5nIGJlaGluZCBhbmltZS1saWtlIGlkb2wgaW1hZ2VzLCAyRC1z
+dHlsZSB2aXN1YWxzLCBjbG9zZS11cCBmYW5jYW1zLCBhbmQgT3NoaSBubyBLbyBjb21wYXJpc29u
+cy4iLAogICAgICBocmVmOiAiL2twb3Avd2h5LWtwb3AtaWRvbHMtZmVlbC1saWtlLWFuaW1lLWNo
+YXJhY3RlcnMiLAogICAgICBsYWJlbDogIkstcG9wIGN1bHR1cmUgZ3VpZGUiLAogICAgfSwKICAg
+IHsKICAgICAgdGl0bGU6ICJXaG8gSXMgdHJpcGxlUz8iLAogICAgICBkZXNjcmlwdGlvbjoKICAg
+ICAgICAiQSBmcmllbmRseSBmaXJzdCBndWlkZSB0byB0cmlwbGVTLCB0aGUgYmlnIHVuaXQtYmFz
+ZWQgZ2lybCBncm91cCB0aGF0IGJlY29tZXMgZWFzaWVyIHdoZW4geW91IHN0YXJ0IHdpdGggb25l
+IG1lbWJlciwgb25lIHVuaXQsIG9yIG9uZSBmYW5jYW0uIiwKICAgICAgaHJlZjogIi9rcG9wL3do
+by1pcy10cmlwbGVzIiwKICAgICAgbGFiZWw6ICJHaXJsIGdyb3VwIGd1aWRlIiwKICAgIH0sCiAg
+ICB7CiAgICAgIHRpdGxlOiAiV2hvIElzIENPUlRJUz8iLAogICAgICBkZXNjcmlwdGlvbjoKICAg
+ICAgICAiQSBmcmllbmRseSBmaXJzdCBndWlkZSB0byBDT1JUSVMsIHRoZSBuZXcgQklHSElUIE1V
+U0lDIGJveSBncm91cCB0aGF0IEstcG9wIGZhbnMgYXJlIHN0YXJ0aW5nIHRvIHdhdGNoLiIsCiAg
+ICAgIGhyZWY6ICIva3BvcC93aG8taXMtY29ydGlzIiwKICAgICAgbGFiZWw6ICJCb3kgZ3JvdXAg
+Z3VpZGUiLAogICAgfSwKICAgIHsKICAgICAgdGl0bGU6ICJCQUJZTU9OU1RFUiBBaHllb24gRmFu
+Y2FtIFNwb3RsaWdodCIsCiAgICAgIGRlc2NyaXB0aW9uOgogICAgICAgICJBIGZyaWVuZGx5IGxv
+b2sgYXQgQkFCWU1PTlNURVIgQWh5ZW9u4oCZcyBNQkNrcG9wICPstZzslaBaSVDsuqAgY29tcGls
+YXRpb24sIGZyb20gRFJJUCB0byBTVUdBUiBIT05FWSBJQ0UgVEVBLCBhbmQgd2h5IGl0IGlzIGEg
+Z29vZCBlbnRyeSBwb2ludCBmb3Igbm90aWNpbmcgaGVyIHN0YWdlIHByZXNlbmNlLiIsCiAgICAg
+IGhyZWY6ICIva3BvcC9iYWJ5bW9uc3Rlci1haHllb24tZmFuY2FtLXNwb3RsaWdodCIsCiAgICAg
+IGxhYmVsOiAiSy1wb3Agc3BvdGxpZ2h0IiwKICAgIH0sCiAgICB7CiAgICAgIHRpdGxlOgogICAg
+ICAgICJLLXBvcCBTcG90bGlnaHQ6IFdoeSBSRVNDRU5FIFdvbmkgSXMgR2V0dGluZyBBdHRlbnRp
+b24gVGhyb3VnaCBGYW5jYW1zIiwKICAgICAgZGVzY3JpcHRpb246CiAgICAgICAgIkEgZnJpZW5k
+bHkgSy1wb3Agc3BvdGxpZ2h0IG9uIFJFU0NFTkUgV29uaSwgaGVyIFJ1bmF3YXkgZmFjZWNhbSwg
+YW5kIHdoeSBzbWFsbCBtb21lbnRzLCBleHByZXNzaW9ucywgYW5kIHJlcGxheWFibGUgY2xpcHMg
+Y2FuIGhlbHAgYSBuZXcgaWRvbCBjYXRjaCBhdHRlbnRpb24uIiwKICAgICAgaHJlZjogIi9rcG9w
+L3Jlc2NlbmUtd29uaS1mYW5jYW0tc3BvdGxpZ2h0IiwKICAgICAgbGFiZWw6ICJLLXBvcCBTcG90
+bGlnaHQiLAogICAgfSwKICAgIHsKICAgICAgdGl0bGU6CiAgICAgICAgIkstcG9wIFNwb3RsaWdo
+dDogV2h5IElMTElUIFdvbmhlZSBLZWVwcyBDYXRjaGluZyBBdHRlbnRpb24gaW4gRmFuY2FtcyIs
+CiAgICAgIGRlc2NyaXB0aW9uOgogICAgICAgICJBIGZyaWVuZGx5IEstcG9wIHNwb3RsaWdodCBv
+biBJTExJVCBXb25oZWUsIGhlciDigJxJdOKAmXMgTWXigJ0gZmFuY2FtLCBhbmQgd2h5IGNsZWFy
+IGV4cHJlc3Npb25zLCBzbWFsbCB0aW1pbmcgY2hhbmdlcywgYW5kIGNsb3NlLXVwIHN0YWdlIGNs
+aXBzIG1ha2UgaGVyIGVhc3kgdG8gcmVtZW1iZXIuIiwKICAgICAgaHJlZjogIi9rcG9wL2lsbGl0
+LXdvbmhlZS1mYW5jYW0tc3BvdGxpZ2h0IiwKICAgICAgbGFiZWw6ICJLLXBvcCBTcG90bGlnaHQi
+LAogICAgfSwKICAgIHsKICAgICAgdGl0bGU6CiAgICAgICAgIkstcG9wIFNwb3RsaWdodDogV2hv
+IElzIENPUlRJUyBLZW9uaG8sIHRoZSDigJxGcmVuY2ggRnJ5IEJveeKAnSBGYW5zIEtlZXAgTm90
+aWNpbmc/IiwKICAgICAgZGVzY3JpcHRpb246CiAgICAgICAgIkEgZnJpZW5kbHkgSy1wb3Agc3Bv
+dGxpZ2h0IG9uIENPUlRJUyBLZW9uaG8sIHRoZSBCSUdISVQgcm9va2llIG1lbWJlciBmYW5zIGFy
+ZSBub3RpY2luZyB0aHJvdWdoIOKAnEpveVJpZGXigJ0gZmFuY2FtcywgS29yZWFuIG5pY2tuYW1l
+IG1vbWVudHMsIGFuZCBoaXMgZWFzeS10by1yZW1lbWJlciBzdGFnZSBwcmVzZW5jZS4iLAogICAg
+ICBocmVmOiAiL2twb3AvY29ydGlzLWtlb25oby1mYW5jYW0tc3BvdGxpZ2h0IiwKICAgICAgbGFi
+ZWw6ICJLLXBvcCBTcG90bGlnaHQiLAogICAgfSwKICAgIHsKICAgICAgdGl0bGU6CiAgICAgICAg
+IldoeSB0cmlwbGVTIEtpbSBDaGFlWWVvbuKAmXMg4oCcQmFieSBGbG93ZXLigJ0gRmFjZWNhbSBG
+ZWVscyBTbyBFYXN5IHRvIFJlbWVtYmVyIiwKICAgICAgZGVzY3JpcHRpb246CiAgICAgICAgIkEg
+Y2xvc2UtdXAgbG9vayBhdCBLaW0gQ2hhZVllb27igJlzIEJhYnkgRmxvd2VyIGZhY2VjYW0sIGhl
+ciBmYW1pbGlhciBLb3JlYW4gVFYgYmFja2dyb3VuZCwgYW5kIHdoeSBzaGUgaXMgYW4gZWFzeSBm
+aXJzdCBkb29yIGludG8gdHJpcGxlUy4iLAogICAgICBocmVmOiAiL2twb3AvdHJpcGxlcy1raW0t
+Y2hhZXllb24tYmFieS1mbG93ZXItZmFuY2FtLXNwb3RsaWdodCIsCiAgICAgIGxhYmVsOiAiRmFu
+Y2FtIHNwb3RsaWdodCIsCiAgICB9LAogICAgewogICAgICB0aXRsZTogIldoeSBLd29uIEV1bmJp
+IElzIENhbGxlZCBLb3JlYeKAmXMg4oCcV2F0ZXJib21iIEdvZGRlc3PigJ0iLAogICAgICBkZXNj
+cmlwdGlvbjoKICAgICAgICAiQSBmcmllbmRseSBsb29rIGF0IEt3b24gRXVuYmksIFdBVEVSQk9N
+QiBLb3JlYSwgYW5kIGhvdyBvbmUgc3VtbWVyIGZlc3RpdmFsIGltYWdlIHJlc2hhcGVkIGhlciBz
+b2xvIHN0YWdlIGlkZW50aXR5LiIsCiAgICAgIGhyZWY6ICIva3BvcC9rd29uLWV1bmJpLXdhdGVy
+Ym9tYi1mYW5jYW0tc3BvdGxpZ2h0IiwKICAgICAgbGFiZWw6ICJGZXN0aXZhbCBzcG90bGlnaHQi
+LAogICAgfSwKICAgIHsKICAgICAgdGl0bGU6ICJDaG9pIFllbmEg4oCcQ2F0Y2ggQ2F0Y2jigJ0g
+RmFuY2FtIiwKICAgICAgZGVzY3JpcHRpb246CiAgICAgICAgIkEgZnJpZW5kbHkgc3BvdGxpZ2h0
+IG9uIENob2kgWWVuYeKAmXMgY2xvc2UtdXAgZmFuY2FtLCBhbmltZS1pZG9sIHN0YWdlIGltYWdl
+LCBhbmQgdGhlIHNtYWxsIHBsYXlmdWwgZXhwcmVzc2lvbnMgdGhhdCBtYWtlIHRoZSBjbGlwIGVh
+c3kgdG8gcmVwbGF5LiIsCiAgICAgIGhyZWY6ICIva3BvcC9jaG9pLXllbmEtY2F0Y2gtY2F0Y2gt
+ZmFuY2FtLXNwb3RsaWdodCIsCiAgICAgIGxhYmVsOiAiU29sbyBzcG90bGlnaHQiLAogICAgfSwK
+ICAgIHsKICAgICAgdGl0bGU6ICJDSFVVIOKAnFhPLCBNeSBDeWJlcmxvdmXigJ0gRmFuY2FtIFNw
+b3RsaWdodCIsCiAgICAgIGRlc2NyaXB0aW9uOgogICAgICAgICJBIGZyaWVuZGx5IGxvb2sgYXQg
+Q0hVVeKAmXMgTW5ldCBNMiDigJxYTywgTXkgQ3liZXJsb3Zl4oCdIGZhbmNhbSwgaGVyIHNvbG8g
+YXJ0aXN0IGNoYXJtLCBDaHV1IENhbiBEbyBJdCBwcmVzZW5jZSwgYW5kIHdoeSBoZXIgYnJpZ2h0
+IGJ1dCBjb250cm9sbGVkIHN0YWdlIHN0eWxlIGlzIGVhc3kgdG8gbm90aWNlLiIsCiAgICAgIGhy
+ZWY6ICIva3BvcC9jaHV1LXhvLW15LWN5YmVybG92ZS1mYW5jYW0tc3BvdGxpZ2h0IiwKICAgICAg
+bGFiZWw6ICJLLXBvcCBzcG90bGlnaHQiLAogICAgfSwKICAgIHsKICAgICAgdGl0bGU6ICJIZWFy
+dHMySGVhcnRzIElhbiDigJxTVFlMReKAnSBGYW5jYW0gU3BvdGxpZ2h0IiwKICAgICAgZGVzY3Jp
+cHRpb246CiAgICAgICAgIkEgZnJpZW5kbHkgbG9vayBhdCBIZWFydHMySGVhcnRzIElhbuKAmXMg
+TUJDa3BvcCDigJxTVFlMReKAnSBmYW5jYW0sIHRoZSBJYW4gY2hhbGxlbmdlIGVmZmVjdCwgYW5k
+IHdoeSBoZXIgcG9pbnQgY2hvcmVvZ3JhcGh5LCBjYW1lcmEgdGltaW5nLCBhbmQgcm9va2llLXN0
+YWdlIHByZXNlbmNlIGFyZSBlYXN5IHRvIG5vdGljZS4iLAogICAgICBocmVmOiAiL2twb3AvaGVh
+cnRzMmhlYXJ0cy1pYW4tc3R5bGUtZmFuY2FtLXNwb3RsaWdodCIsCiAgICAgIGxhYmVsOiAiSy1w
+b3Agc3BvdGxpZ2h0IiwKICAgIH0sCiAgICB7CiAgICAgIHRpdGxlOiAiU3RyYXkgS2lkcyBGZWxp
+eCDigJxTb3VsIEJlYW3igJ0gRmFjZWNhbSBTcG90bGlnaHQiLAogICAgICBkZXNjcmlwdGlvbjoK
+ICAgICAgICAiQSBmcmllbmRseSBsb29rIGF0IFN0cmF5IEtpZHMgRmVsaXjigJlzIEtCU0twb3Ag
+4oCcU291bCBCZWFt4oCdIGZhY2VjYW0sIGhpcyBkZWVwLXZvaWNlIGltYWdlLCBjYW1lcmEgYXdh
+cmVuZXNzLCBhbmQgd2h5IGNsb3NlLXVwIGZhbmNhbXMgbWFrZSBoaXMgc3RhZ2UgZGV0YWlscyBl
+YXNpZXIgdG8gbm90aWNlLiIsCiAgICAgIGhyZWY6ICIva3BvcC9zdHJheS1raWRzLWZlbGl4LXNv
+dWwtYmVhbS1mYWNlY2FtLXNwb3RsaWdodCIsCiAgICAgIGxhYmVsOiAiSy1wb3Agc3BvdGxpZ2h0
+IiwKICAgIH0sCiAgICB7CiAgICAgIHRpdGxlOgogICAgICAgICJLLXBvcCBTcG90bGlnaHQ6IFdo
+eSBMRSBTU0VSQUZJTSBMZWFkZXIgS2ltIENoYWV3b24gSXMgYW4gRWFzeSBNZW1iZXIgdG8gU3Rh
+cnQgV2l0aCIsCiAgICAgIGRlc2NyaXB0aW9uOgogICAgICAgICJBIGZyaWVuZGx5IEhBRU1JTCBz
+cG90bGlnaHQgb24gTEUgU1NFUkFGSU0gbGVhZGVyIEtpbSBDaGFld29uLCBoZXIg4oCcSE9U4oCd
+IGZhbmNhbSwgYW5kIHdoeSBoZXIgSVoqT05FIGJhY2tncm91bmQgYW5kIHF1aWNrIGN1dGUtdG8t
+c2hhcnAgZXhwcmVzc2lvbiBjaGFuZ2VzIG1ha2UgaGVyIGZhbmNhbXMgd29ydGggd2F0Y2hpbmcg
+Zmlyc3QuIiwKICAgICAgaHJlZjogIi9rcG9wL2xlLXNzZXJhZmltLWtpbS1jaGFld29uLWZhbmNh
+bS1zcG90bGlnaHQiLAogICAgICBsYWJlbDogIkstcG9wIFNwb3RsaWdodCIsCiAgICB9LAogIF07
+CiAgCiAgZXhwb3J0IGZ1bmN0aW9uIGdldEtwb3BHdWlkZUFydGljbGVzKCkgewogICAgcmV0dXJu
+IGtwb3BHdWlkZUFydGljbGVzOwogIH0K
