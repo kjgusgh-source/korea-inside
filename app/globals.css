@@ -133,6 +133,15 @@ h2,
   font-family: var(--font-newsreader), Georgia, serif;
 }
 
+[lang="ko"],
+.ko-text {
+  font-family:
+    "Noto Sans KR",
+    "Apple SD Gothic Neo",
+    "Malgun Gothic",
+    sans-serif;
+}
+
 ::selection {
   background: var(--accent-soft);
   color: var(--text);

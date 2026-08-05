@@ -29,7 +29,7 @@ const relatedGuides = [
   },
   {
     label: "K-pop term",
-    title: "What Is an “얼빡직캠”?",
+    title: "What Is a Close-Up Fancam in K-pop?",
     description:
       "A friendly guide to Korean close-up fancams, where one face, one expression, or one quick mood change can make a stage easy to replay.",
     href: "/kpop/what-is-close-up-fancam-in-kpop",
@@ -181,6 +181,30 @@ export default function TriplesKimChaeYeonBabyFlowerFancamSpotlightPage() {
             >
               Watch on YouTube →
             </a>
+
+            <h2 className="mt-10 text-3xl font-semibold">
+              Another official &quot;Baby Flower&quot; facecam
+            </h2>
+
+            <div className="mt-6">
+              <YouTubeEmbed
+                youtubeId="zpWJv459LqE"
+                title="tripleS Kim ChaeYeon Baby Flower facecam, Show! Music Core"
+              />
+            </div>
+
+            <p className="mt-3 text-sm text-[var(--muted)]">
+              Official facecam uploaded by MBCkpop from Show! Music Core.
+            </p>
+
+            <a
+              href="https://www.youtube.com/watch?v=zpWJv459LqE"
+              target="_blank"
+              rel="noreferrer"
+              className="mt-4 inline-flex rounded-full border border-[var(--border)] bg-[var(--card)] px-4 py-2 text-sm font-semibold text-[var(--text)] transition hover:-translate-y-0.5 hover:border-[var(--accent)] hover:text-[var(--accent)]"
+            >
+              Watch on YouTube →
+            </a>
           </section>
 
           <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
@@ -222,14 +246,21 @@ export default function TriplesKimChaeYeonBabyFlowerFancamSpotlightPage() {
                 close.
               </p>
 
-              <p>That matters in an 얼빡직캠.</p>
+              <p>
+                That matters in what Korean fans call an eolbbak fancam
+                (
+                <span lang="ko" className="ko-text font-medium">
+                  얼빡직캠
+                </span>
+                ) — a close-up fancam that keeps the frame tight on one
+                face.
+              </p>
 
               <p>
-                In Korean K-pop spaces, 얼빡직캠 usually means a close-up fancam
-                where the camera stays tight on the idol&apos;s face. It makes
-                small expressions feel more important. A glance, a smile, a
-                quick change in mood — those details can become the reason
-                someone replays the video.
+                This kind of close-up fancam makes small expressions feel
+                more important. A glance, a smile, a quick change in mood —
+                those details can become the reason someone replays the
+                video.
               </p>
 
               <p>
