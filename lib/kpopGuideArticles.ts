@@ -164,7 +164,7 @@ export type KpopGuideArticle = {
       title: "Who Is tripleS?",
       description:
         "A friendly first guide to tripleS, the big unit-based girl group that becomes easier when you start with one member, one unit, or one fancam.",
-      href: "/kpop/who-is-triples",
+      href: "/kpop/woo-is-triples",
       label: "Girl group guide",
     },
     {
@@ -247,6 +247,14 @@ export type KpopGuideArticle = {
         "A friendly look at Stray Kids Felix’s KBSKpop “Soul Beam” facecam, his deep-voice image, camera awareness, and why close-up fancams make his stage details easier to notice.",
       href: "/kpop/stray-kids-felix-soul-beam-facecam-spotlight",
       label: "K-pop spotlight",
+    },
+    {
+      title:
+        "K-pop Spotlight: Why LE SSERAFIM Leader Kim Chaewon Is an Easy Member to Start With",
+      description:
+        "A friendly HAEMIL spotlight on LE SSERAFIM leader Kim Chaewon, her “HOT” fancam, and why her IZ*ONE background and quick cute-to-sharp expression changes make her fancams worth watching first.",
+      href: "/kpop/le-sserafim-kim-chaewon-fancam-spotlight",
+      label: "K-pop Spotlight",
     },
   ];
   

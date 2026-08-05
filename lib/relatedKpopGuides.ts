@@ -48,6 +48,7 @@ const relatedGuidesByMemberId: Record<string, GuideKey[]> = {
   ahyeon: ["fancam", "stagePresence", "closeUpFancam", "killingPart"],
   ian: ["fancam", "pointChoreography", "stagePresence", "killingPart"],
   felix: ["fancam", "closeUpFancam", "stagePresence", "killingPart", "bias"],
+  "kim-chaewon": ["fancam", "closeUpFancam", "glossary"],
 };
 
 export function getRelatedKpopGuidesForMember(
