@@ -164,7 +164,7 @@ export type KpopGuideArticle = {
       title: "Who Is tripleS?",
       description:
         "A friendly first guide to tripleS, the big unit-based girl group that becomes easier when you start with one member, one unit, or one fancam.",
-      href: "/kpop/woo-is-triples",
+      href: "/kpop/who$is-triples",
       label: "Girl group guide",
     },
     {
