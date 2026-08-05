@@ -1,3 +1,4 @@
 HAEMIL preview connection test
 Created for GitHub and Vercel integration verification.
 No production content is included.
+Preview environment variables enabled.
