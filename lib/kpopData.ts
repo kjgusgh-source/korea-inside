@@ -131,11 +131,11 @@ export const KPOP_GROUPS: KpopGroup[] = [
           "Compare her with Hayoung and Nagyung if you already watched their guides. Hayoung feels playful and skilled, Nagyung feels soft and natural, while Jiwon gives the group more vocal brightness and power.",
         ],
         koreanExpression: {
-          hangul: "보컸",
+          hangul: "보컬",
           romanization: "bokeol",
           meaning: "vocal; a member’s singing role or singing presence in a group",
           note:
-            "보컸 comes from the English word vocal, but Korean fans use it naturally when talking about idols who carry singing parts. With Jiwon, this word matters because her appeal is closely tied to how her voice supports fromis_9’s bright and emotional sound.",
+            "보컬 comes from the English word vocal, but Korean fans use it naturally when talking about idols who carry singing parts. With Jiwon, this word matters because her appeal is closely tied to how her voice supports fromis_9’s bright and emotional sound.",
         },
         culturalContext:
           "fromis_9 is often loved for a fresh, friendly, and easy-to-watch charm, but that kind of image still needs strong musical support. Jiwon helps provide that through her vocal presence. For new viewers, her fancam is useful because it shows that fromis_9 is not only about soft visuals or cute brightness. There is also singing energy behind the group’s warmth, and Jiwon is one of the members who makes that easier to hear and feel.",
@@ -444,11 +444,11 @@ export const KPOP_GROUPS: KpopGroup[] = [
     "Compare her with Karina’s stage style. Karina often feels powerful and front-facing, while Winter can feel quieter but surprisingly memorable.",
   ],
   koreanExpression: {
-    hangul: "늴백한 매력",
+    hangul: "담백한 매력",
     romanization: "dambaekhan maeryeok",
     meaning: "a clean, simple charm that does not feel overdone",
     note:
-      "늴백하다 is a Korean word often used for food that is clean and not too heavy, but people also use it for a person’s style or charm. For Winter, 늴백한 매력 fits because her stage appeal often feels neat, calm, and quietly clear rather than dramatic.",
+      "담백하다 is a Korean word often used for food that is clean and not too heavy, but people also use it for a person’s style or charm. For Winter, 담백한 매력 fits because her stage appeal often feels neat, calm, and quietly clear rather than dramatic.",
   },
   culturalContext:
     "aespa’s image is usually strong, sleek, and futuristic. Winter helps that image feel less one-note. She does not have to dominate the screen in a loud way; instead, she gives the group a cleaner texture. For new viewers, a Winter fancam is useful because it shows that aespa’s charm is not only about intensity. Sometimes it is also about restraint, timing, and the small details that make a performance feel polished.",
@@ -1228,11 +1228,11 @@ export const KPOP_GROUPS: KpopGroup[] = [
           "Compare him with Hoshi’s style if you already watched Hoshi’s guide. Hoshi often pushes the stage forward with performance energy, while Mingyu gives the stage a bigger and warmer visual presence.",
         ],
         koreanExpression: {
-          hangul: "피지컸",
+          hangul: "피지컬",
           romanization: "pijikeol",
           meaning: "physical presence; often used for height, proportions, or body frame",
           note:
-            "피지컸 comes from the English word physical, but Korean fans use it a lot when talking about idols with strong height, proportions, or overall body presence. With Mingyu, this word fits because he stands out physically, but his warm image keeps that presence from feeling too intimidating.",
+            "피지컬 comes from the English word physical, but Korean fans use it a lot when talking about idols with strong height, proportions, or overall body presence. With Mingyu, this word fits because he stands out physically, but his warm image keeps that presence from feeling too intimidating.",
         },
         culturalContext:
           "In K-pop, a visual member is not only someone who looks good in photos. Fans also notice how that member changes the feeling of a group: whether they make the stage feel elegant, bright, powerful, distant, or friendly. Mingyu is useful for new viewers because he shows a warmer version of visual presence. He stands out immediately, but the more you watch him, the more his easygoing and team-friendly charm becomes part of the appeal.",
