@@ -452,7 +452,13 @@ export const KPOP_GROUPS: KpopGroup[] = [
   },
   culturalContext:
     "aespa’s image is usually strong, sleek, and futuristic. Winter helps that image feel less one-note. She does not have to dominate the screen in a loud way; instead, she gives the group a cleaner texture. For new viewers, a Winter fancam is useful because it shows that aespa’s charm is not only about intensity. Sometimes it is also about restraint, timing, and the small details that make a performance feel polished.",
-  relatedMediaIds: ["winter-aespa-fancam"],
+  relatedMediaIds: [
+    "winter-aespa-fancam",
+    "winter-aespa-supernova-music-bank-fancam",
+    "winter-aespa-whiplash-music-bank-fancam",
+    "winter-aespa-spicy-music-bank-fancam",
+    "winter-aespa-wda-gdragon-m2-fancam",
+  ],
 },
 {
   id: "ningning",
