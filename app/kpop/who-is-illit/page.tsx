@@ -2,42 +2,42 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "../../../components/SiteHeader";
 import JsonLd from "../../../components/JsonLd";
+import YouTubeEmbed from "../../../components/YouTubeEmbed";
 
 const siteUrl = "https://haemilkorea.com";
 const pageUrl = `${siteUrl}/kpop/who-is-illit`;
 
-const pageTitle =
-  "Who Is ILLIT? A Friendly Guide to the Five-Member Group Behind ‘Magnetic’";
+const pageTitle = "Who Is ILLIT? The Five-Member Group Behind 'Magnetic'";
 const pageDescription =
-  "A friendly HAEMIL guide to ILLIT, the five-member BELIFT LAB girl group behind ‘Magnetic,’ and why new K-pop fans may want to start with their group page and Wonhee fancam spotlight.";
+  "A friendly HAEMIL guide to ILLIT, the five-member BELIFT LAB girl group behind 'Magnetic' — how they formed on R U Next?, why the song caught on, and where their sound has gone since.";
 
 const relatedGuides = [
   {
     label: "Group page",
-    title: "Start with the ILLIT group page",
+    title: "Explore ILLIT's group page",
     description:
-      "See the group overview, starter tags, and the members HAEMIL covers so far.",
+      "See the current five-member lineup and find the ILLIT guides available on HAEMIL.",
     href: "/kpop/illit",
   },
   {
     label: "Member guide",
-    title: "Meet Wonhee",
+    title: "Meet WONHEE",
     description:
-      "Start here if you first noticed Wonhee through a fancam, a close-up clip, or one of ILLIT’s bright stage moments.",
+      "Read WONHEE's member guide and learn more about her place within ILLIT.",
     href: "/kpop/illit/wonhee",
   },
   {
     label: "K-pop Spotlight",
-    title: "Watch the Wonhee fancam spotlight",
+    title: "Watch WONHEE perform \"It's Me\"",
     description:
-      "A closer look at Wonhee’s ‘It’s Me’ fancam and why clear expressions and small timing changes make her easy to remember.",
+      "Take a closer look at WONHEE's expressions and timing in an official SBS Inkigayo fancam.",
     href: "/kpop/illit-wonhee-fancam-spotlight",
   },
   {
     label: "K-pop guide",
-    title: "Learn what a rookie group means in K-pop",
+    title: "What is a rookie group in K-pop?",
     description:
-      "A simple guide to how K-pop fans discover rookie groups through first stages, short clips, fancams, and the first member they remember.",
+      "Learn how the Korean music industry uses the term \"rookie\" during a group's early career.",
     href: "/kpop/what-is-a-rookie-group-in-kpop",
   },
 ];
@@ -147,109 +147,277 @@ export default function WhoIsIllitPage() {
             </p>
 
             <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
-              Who Is ILLIT? A Friendly Guide to the Five-Member Group Behind
-              &apos;Magnetic&apos;
+              Who Is ILLIT? The Five-Member Group Behind &quot;Magnetic&quot;
             </h1>
 
             <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
-              If you are new to K-pop, ILLIT might be a name you have seen
-              everywhere without quite knowing where to start.
+              ILLIT arrived with one of those K-pop debuts that seemed to be
+              everywhere at once. &quot;Magnetic&quot; was light, catchy, and
+              easy to recognize within a few seconds—but the group&apos;s
+              story did not begin with a viral chorus. Here is how YUNAH,
+              MINJU, MOKA, WONHEE, and IROHA came together, why their debut
+              caught on so quickly, and where their music has gone since
+              then.
             </p>
           </article>
 
           <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
-            <div className="space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
-              <p>That is a fair place to be.</p>
+            <h2 className="text-3xl font-semibold">
+              How ILLIT came together
+            </h2>
 
+            <div className="mt-5 space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
               <p>
-                They are a five-member girl group under BELIFT LAB — YUNAH,
-                MINJU, MOKA, Wonhee, and IROHA — and they debuted in March
-                2024 through a very public route: the survival show{" "}
-                <em>R U Next?</em>, a joint project between HYBE and JTBC
-                that let viewers watch the group come together in real time.
+                ILLIT is a five-member girl group under BELIFT LAB. The
+                members are YUNAH, MINJU, MOKA, WONHEE, and IROHA, and they
+                officially debuted on March 25, 2024.
               </p>
 
               <p>
-                For Korean viewers, that already explains a lot of the
-                appeal. A rookie group is not always introduced through a
-                polished profile video. ILLIT arrived through weeks of
-                broadcast, so by debut day, some fans already felt like they
-                had watched the group get built.
+                The group was formed through <em>R U Next?</em>, a survival
+                program produced by BELIFT LAB and JTBC. Like many Korean
+                idol survival shows, it let viewers watch trainees compete
+                through performances before the final lineup was chosen.
               </p>
 
               <p>
-                For international fans discovering ILLIT later, that
-                backstory can be easy to miss. What is easier to notice
-                first is the music.
+                That background matters because ILLIT did not first appear
+                as five completely unfamiliar faces on debut day. Some
+                viewers had already followed the members through the
+                program, debated the lineup, and watched them adjust from
+                individual trainees into one team.
               </p>
 
               <p>
-                Their debut mini album, <em>SUPER REAL ME</em>, and its title
-                track &quot;Magnetic,&quot; did something rookie groups
-                rarely manage this quickly — the song reached both the
-                Billboard Hot 100 and the Billboard Global 200. That is the
-                kind of detail that tends to make new listeners stop and pay
-                closer attention.
+                For people discovering ILLIT from outside Korea, that part
+                of the story can be easy to miss. &quot;Magnetic&quot; may
+                have been the first thing they heard, but Korean viewers had
+                already seen the group&apos;s beginning unfold on
+                television.
+              </p>
+            </div>
+          </section>
+
+          <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">
+            <h2 className="text-3xl font-semibold">
+              Why &quot;Magnetic&quot; became so big
+            </h2>
+
+            <div className="mt-5 space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
+              <p>
+                ILLIT debuted with the mini album <em>SUPER REAL ME</em> and
+                its title track, &quot;Magnetic.&quot;
               </p>
 
               <p>
-                But chart placements are not always the easiest way into a
-                group. A number is hard to feel connected to. A face is not.
-              </p>
-
-              <p>That is where Wonhee comes in.</p>
-
-              <p>
-                For many new HAEMIL readers, Wonhee has been an easy first
-                member to notice inside ILLIT. Her expressions come through
-                clearly on camera, and close-up fancams tend to catch small
-                timing changes — a glance, a smile held a beat too long —
-                that make her presence easy to follow even before you know
-                the rest of the group.
-              </p>
-
-              <p>You do not need to start with all five members at once.</p>
-
-              <p>
-                Watch one Wonhee clip. Let her become familiar. Then widen
-                out to the rest of ILLIT — YUNAH, MINJU, MOKA, and IROHA —
-                once one face already feels like something you recognize.
+                The song stood out almost immediately. Its soft vocals and
+                bright electronic beat gave it a dreamy feel, while the
+                rhythm stayed playful enough to make the chorus stick after
+                one listen. It sounded polished, but not heavy or
+                intimidating.
               </p>
 
               <p>
-                This is also a good moment to mention the name itself,
-                because it is one of those small K-pop details that makes
-                more sense once someone explains it. ILLIT comes from
-                combining &quot;I will&quot; and &quot;it&quot; — the idea of
-                becoming an &quot;it&quot; group, the kind of act people
-                cannot stop talking about. Their fandom name, GLLIT, follows
-                the same idea.
+                The choreography helped too. The small hand movements in the
+                chorus were easy to recognize in a short clip, so
+                &quot;Magnetic&quot; worked naturally as a dance challenge.
+                You did not need to know the members or understand the
+                lyrics to remember that one part.
               </p>
 
               <p>
-                None of this means ILLIT is a finished story. They are still
-                a young group, and several members do not yet have a full
-                individual guide on HAEMIL. That is normal for a group only a
-                couple of years into a career built around a survival-show
-                debut and one breakout title track.
+                That combination—an instantly recognizable chorus, simple
+                point choreography, and a visual style that felt youthful
+                without looking ordinary—made the song especially suited to
+                short-form video. The challenge spread quickly, but the song
+                also held up outside those clips. &quot;Magnetic&quot;
+                entered the Billboard Hot 100, making ILLIT one of the rare
+                K-pop groups to reach the chart with a debut song.
               </p>
 
               <p>
-                What ILLIT already has is a real entry point for new fans — a
-                hit song people can look up, a member who is easy to notice
-                on camera, and a debut story that explains why the group
-                already feels different from a typical rookie introduction.
+                The chart result showed how far the song had travelled. The
+                reason people kept returning to it was simpler: it was fun
+                to replay.
+              </p>
+            </div>
+          </section>
+
+          <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+              Watch &quot;Magnetic&quot;
+            </p>
+
+            <h2 className="mt-3 text-3xl font-semibold">
+              ILLIT — &quot;Magnetic&quot; Official MV
+            </h2>
+
+            <p className="mt-5 max-w-3xl text-base leading-8 text-[var(--muted)]">
+              The official music video is the clearest place to see the idea
+              behind ILLIT&apos;s debut. The song, choreography, styling, and
+              slightly unreal visual world all arrive together rather than
+              feeling like separate concepts.
+            </p>
+
+            <div className="mt-6">
+              <YouTubeEmbed
+                youtubeId="Vk5-c_v4gMU"
+                title="ILLIT Magnetic Official MV"
+              />
+            </div>
+
+            <p className="mt-4 text-sm leading-6 text-[var(--muted)]">
+              Official music video uploaded by HYBE LABELS.
+            </p>
+          </section>
+
+          <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
+            <h2 className="text-3xl font-semibold">What ILLIT sounds like</h2>
+
+            <div className="mt-5 space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
+              <p>
+                &quot;Magnetic&quot; introduced the group through light
+                electronic production, soft voices, and a melody that seemed
+                to bounce rather than push forward. That sound became
+                closely associated with ILLIT, but the group has not simply
+                remade its debut song each time.
               </p>
 
               <p>
-                So if ILLIT is a name you keep half-recognizing without
-                knowing why, that is a fine place to start.
+                Later releases kept the youthful energy while changing its
+                shape. &quot;Cherish (My Love)&quot; leaned further into the
+                feeling of being openly absorbed in a crush, while songs
+                such as &quot;Tick-Tack&quot; played with sharper rhythms and
+                more restless movement. The group&apos;s music continued to
+                feel cute and imaginative, but it was not limited to one
+                version of cuteness.
               </p>
 
               <p>
-                Watch one Wonhee fancam. Read about how the group came
-                together on <em>R U Next?</em>. Then let the rest of ILLIT
-                open up from there, one member at a time.
+                That is an important part of ILLIT&apos;s appeal. Their
+                songs often deal with familiar emotions—liking someone,
+                wondering how they feel, becoming impatient for an
+                answer—but present them through unusual sounds, playful
+                wording, and choreography made for close attention.
+              </p>
+
+              <p>
+                By 2026, &quot;It&apos;s Me&quot; showed a bolder side of
+                that same personality. The song appears on the group&apos;s
+                fourth mini album, <em>MAMIHLAPINATAPAI</em>, which follows
+                the complicated feelings that appear as a relationship grows
+                closer.
+              </p>
+
+              <p>
+                &quot;It&apos;s Me&quot; takes place after a first date,
+                when the excitement has already happened but the
+                relationship is still unclear. Instead of waiting quietly,
+                the song has ILLIT speak up and ask to be chosen. Its lively
+                electronic sound feels more direct and restless than
+                &quot;Magnetic,&quot; but the emotion is still easy to
+                understand: they like someone and no longer want to pretend
+                otherwise.
+              </p>
+
+              <p>
+                That change makes ILLIT more interesting than a group built
+                around one viral debut. Their music is still colorful and
+                playful, but it has gradually become more confident about
+                saying what it wants.
+              </p>
+            </div>
+          </section>
+
+          <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">
+            <h2 className="text-3xl font-semibold">Meet the five members</h2>
+
+            <div className="mt-5 space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
+              <p>
+                ILLIT works because the five members do not present the same
+                kind of energy.
+              </p>
+
+              <p>
+                YUNAH often brings a stronger, more outgoing presence to the
+                group. MINJU has a calmer tone that can soften the center of
+                a song. MOKA is especially good at adjusting small
+                expressions to fit a concept. WONHEE has an open,
+                immediately readable style on camera, while IROHA brings
+                precision and control to the group&apos;s dance line.
+              </p>
+
+              <p>
+                Those differences are easier to notice once you watch a
+                full-group performance rather than focusing only on one
+                viral moment. &quot;Magnetic&quot; may have introduced ILLIT
+                to a wide audience, but the members are what allow the group
+                to move beyond that first impression.
+              </p>
+
+              <p>
+                You do not need to learn every detail at once. Start with
+                the music, notice which voice or performance style catches
+                your attention, and follow that curiosity naturally.
+              </p>
+            </div>
+          </section>
+
+          <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
+            <h2 className="text-3xl font-semibold">
+              What does the name ILLIT mean?
+            </h2>
+
+            <div className="mt-5 space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
+              <p>
+                The name ILLIT combines &quot;I will&quot; with &quot;it.&quot;
+              </p>
+
+              <p>
+                According to BELIFT LAB, &quot;I will&quot; represents an
+                independent and adventurous spirit, while &quot;it&quot;
+                leaves room for the group to become something unique. The
+                idea is that the five members are not restricted to one
+                fixed image or possibility.
+              </p>
+
+              <p>
+                Their fandom is called GLLIT, pronounced like
+                &quot;glit.&quot; The name is connected to the word
+                &quot;glitter,&quot; describing fans as the people who shine
+                alongside ILLIT.
+              </p>
+            </div>
+          </section>
+
+          <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">
+            <h2 className="text-3xl font-semibold">
+              Why ILLIT is worth following
+            </h2>
+
+            <div className="mt-5 space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
+              <p>
+                ILLIT&apos;s debut success was not only the result of being
+                attached to a large company or coming from a survival show.
+                Those things gave the group attention, but
+                &quot;Magnetic&quot; turned that attention into genuine
+                public interest because the song was easy to remember and
+                enjoyable to share.
+              </p>
+
+              <p>
+                What has happened since then matters just as much. The group
+                has kept the playful, electronic character that people first
+                recognized while becoming more direct and varied in how it
+                expresses young emotions.
+              </p>
+
+              <p>
+                That makes ILLIT a useful group to watch beyond a single
+                hit. Their story begins with <em>R U Next?</em> and
+                &quot;Magnetic,&quot; but it is now moving into a stage
+                where the five members are building a clearer identity of
+                their own.
               </p>
             </div>
           </section>
