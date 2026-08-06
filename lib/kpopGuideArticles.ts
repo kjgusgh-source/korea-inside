@@ -248,6 +248,14 @@ export type KpopGuideArticle = {
       href: "/kpop/stray-kids-felix-soul-beam-facecam-spotlight",
       label: "K-pop spotlight",
     },
+    {
+      title:
+        "K-pop Spotlight: Why LE SSERAFIM Leader Kim Chaewon Is an Easy Member to Start With",
+      description:
+        "A friendly HAEMIL spotlight on LE SSERAFIM leader Kim Chaewon, her “HOT” fancam, and why her IZ*ONE background and quick cute-to-sharp expression changes make her fancams worth watching first.",
+      href: "/kpop/le-sserafim-kim-chaewon-fancam-spotlight",
+      label: "K-pop Spotlight",
+    },
   ];
   
   export function getKpopGuideArticles() {
