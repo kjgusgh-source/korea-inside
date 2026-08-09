@@ -8,10 +8,9 @@ import { getPublishedMemberGuides } from "../../../lib/publishedGuides";
 const siteUrl = "https://haemilkorea.com";
 const pageUrl = `${siteUrl}/kpop/what-is-ending-fairy`;
 
-const pageTitle =
-  "What Is an Ending Fairy in K-pop? The Meaning Behind the Final Camera Moment";
+const pageTitle = "Ending Fairy Meaning in K-pop, Explained";
 const pageDescription =
-  "A friendly HAEMIL guide to the meaning of ending fairy in K-pop, why fans notice the final close-up, and how it differs from fancams, facecams, visual moments, and center parts.";
+  "An ending fairy is the final close-up camera moment after a K-pop stage ends. Here is what it means, why fans notice it, and how it differs from a fancam.";
 
 const quickFacts = [
   "Basic meaning: An ending fairy is the final close-up camera moment after a K-pop performance ends.",
