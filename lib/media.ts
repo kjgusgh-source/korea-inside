@@ -676,7 +676,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
     description:
       'An official KBS Kpop close-up fancam of Winter performing "Supernova," the lead single from aespa’s first studio album Armageddon, filmed at Music Bank and posted on May 17, 2024.',
     cultureNote:
-      'This clip is tagged "K-Fancam" by KBS Kpop, the same single-member format used across aespa’s Music Bank appearances. "Supernova" came from an earlier comeback era, about a year before "Whiplash."',
+      'This clip is tagged "K-Fancam" by KBS Kpop, the same single-member format used across aespa’s Music Bank appearances. "Supernova" comes from an earlier 2024 comeback, about five months before the "Whiplash" clip on this page.',
     tags: ["aespa", "Winter", "MY", "Fancam", "Supernova", "Music Bank"],
     youtubeId: "DySkYbG7m-o",
     sourceUrl: "https://www.youtube.com/watch?v=DySkYbG7m-o",
