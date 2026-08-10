@@ -122,6 +122,53 @@ export default function KpopPage() {
         <details className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">
           <summary className="cursor-pointer list-none [&::-webkit-details-marker]:hidden">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+              All K-pop groups
+            </p>
+
+            <h2 className="mt-3 max-w-3xl text-3xl font-semibold leading-tight">
+              Browse every group HAEMIL covers.
+            </h2>
+
+            <p className="mt-4 max-w-3xl text-base leading-8 text-[var(--muted)]">
+              Jump straight to a group page for members, fancams, and stage
+              details.
+            </p>
+
+            <p className="mt-5 text-sm font-semibold text-[var(--accent)]">
+              Show all groups ↓
+            </p>
+          </summary>
+
+          <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {groups.map((group) => (
+              <Link
+                key={group.id}
+                href={`/kpop/${group.id}`}
+                className="group rounded-[1.5rem] border border-[var(--border)] bg-[var(--card)] p-5 transition hover:-translate-y-1 hover:shadow-md"
+              >
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
+                  {group.category === "girl-groups" ? "Girl group" : "Boy group"}
+                </p>
+
+                <h3 className="mt-3 text-xl font-semibold text-[var(--text)]">
+                  {group.name}
+                </h3>
+
+                <p className="mt-3 text-sm leading-6 text-[var(--muted)]">
+                  {group.description}
+                </p>
+
+                <p className="mt-4 text-sm font-semibold text-[var(--accent)]">
+                  Open group page →
+                </p>
+              </Link>
+            ))}
+          </div>
+        </details>
+
+        <details className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">
+          <summary className="cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
               Published member guides
             </p>
 
