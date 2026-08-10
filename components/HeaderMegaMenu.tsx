@@ -176,11 +176,15 @@ export default function HeaderMegaMenu() {
               />
             </Link>
 
-            {isOpen && (
-              <div
-                role="menu"
-                className="animate-[header-pop_220ms_ease-out] motion-reduce:animate-none absolute left-1/2 top-full z-50 w-[420px] -translate-x-1/2 rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6 shadow-lg"
-              >
+            <div
+              role="menu"
+              aria-hidden={!isOpen}
+              className={`absolute left-1/2 top-full z-50 w-[420px] -translate-x-1/2 rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6 shadow-lg transition-[opacity,transform] duration-200 ease-out motion-reduce:transition-none ${
+                isOpen
+                  ? "visible translate-y-0 opacity-100"
+                  : "invisible -translate-y-1 opacity-0 pointer-events-none"
+              }`}
+            >
                 <div className="grid grid-cols-3 gap-6">
                   <div>
                     <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--muted)]">
@@ -244,8 +248,7 @@ export default function HeaderMegaMenu() {
                     </p>
                   </Link>
                 </div>
-              </div>
-            )}
+            </div>
           </div>
         );
       })}
