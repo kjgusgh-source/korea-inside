@@ -14,6 +14,16 @@ const STANDALONE_DRAMA_GUIDES = [
     href: "/dramas/why-itaewon-class-is-a-good-first-kdrama",
     readingTime: "7 min read",
   },
+  {
+    id: "why-teach-you-a-lesson-is-a-good-first-kdrama",
+    category: "dramas",
+    categoryLabel: "K-drama guide",
+    title: "Why Teach You a Lesson Is a Good First K-drama",
+    description:
+      "An honest guide to Netflix's most-watched K-drama of 2026, its ERPB inspectors, the school-violence premise behind it, and who this intense show is really for.",
+    href: "/dramas/why-teach-you-a-lesson-is-a-good-first-kdrama",
+    readingTime: "8 min read",
+  },
 ];
 
 export const metadata: Metadata = {
