@@ -8,9 +8,9 @@ const siteUrl = "https://haemilkorea.com";
 const pageUrl = `${siteUrl}/kpop/what-is-a-title-track-in-kpop`;
 
 const pageTitle =
-  "What Is a Title Track in K-pop? The Song That Represents a Comeback";
+  "What Is a Title Track in K-pop? | Title Track Meaning";
 const pageDescription =
-  "A friendly HAEMIL guide to title track meaning in K-pop, how it differs from B-sides and pre-releases, and why title tracks shape comebacks, stages, fancams, and fan discussions.";
+  "A title track is the main song promoted during a K-pop comeback — this guide explains how it differs from B-sides and pre-releases.";
 
 const quickFacts = [
   "Basic meaning: A title track is the main song promoted during a K-pop comeback.",
