@@ -653,17 +653,82 @@ export const MEDIA_ITEMS: MediaItem[] = [
   },
   {
     id: "winter-aespa-fancam",
-    title: "Why Winter makes small details feel sharp",
+    title: 'aespa Winter "LEMONADE" Fancam (Music Bank)',
     category: "kpop",
     categoryLabel: "On Stage",
     mediaType: "youtube",
     description:
-      "A Winter fancam is a good way to notice aespa’s cleaner, quieter kind of stage power: clear expressions, neat timing, and small details that do not feel overdone.",
+      'An official KBS Kpop close-up fancam of Winter performing "LEMONADE," the title track of aespa’s second album of the same name, filmed at Music Bank and posted on June 7, 2026.',
     cultureNote:
-      "aespa fans are called MY. For many MY, Winter’s charm is not always loud or dramatic. She often stands out through a calm face, a clear vocal color, and a stage style that feels simple but precise.",
-    tags: ["aespa", "Winter", "MY", "Fancam", "Stage detail"],
+      'KBS Kpop labels this kind of single-member clip "K-Fancam," as shown in the video’s own title. "LEMONADE" is one of two title tracks on the album — the other, "WDA (Whole Different Animal)," is also on this page.',
+    tags: ["aespa", "Winter", "MY", "Fancam", "LEMONADE", "Music Bank"],
     youtubeId: "iF9di-AySFo",
+    sourceUrl: "https://www.youtube.com/watch?v=iF9di-AySFo",
     sourceLabel: "video from KBS Kpop",
+    guideHref: "/kpop/aespa/winter",
+  },
+  {
+    id: "winter-aespa-supernova-music-bank-fancam",
+    title: 'aespa Winter "Supernova" Fancam (Music Bank)',
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      'An official KBS Kpop close-up fancam of Winter performing "Supernova," the lead single from aespa’s first studio album Armageddon, filmed at Music Bank and posted on May 17, 2024.',
+    cultureNote:
+      'This clip is tagged "K-Fancam" by KBS Kpop, the same single-member format used across aespa’s Music Bank appearances. "Supernova" comes from an earlier 2024 comeback, about five months before the "Whiplash" clip on this page.',
+    tags: ["aespa", "Winter", "MY", "Fancam", "Supernova", "Music Bank"],
+    youtubeId: "DySkYbG7m-o",
+    sourceUrl: "https://www.youtube.com/watch?v=DySkYbG7m-o",
+    sourceLabel: "video from KBS Kpop",
+    guideHref: "/kpop/aespa/winter",
+  },
+  {
+    id: "winter-aespa-whiplash-music-bank-fancam",
+    title: 'aespa Winter "Whiplash" Fancam (Music Bank)',
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      'An official KBS Kpop close-up fancam of Winter performing "Whiplash," the title track of aespa’s fifth mini album of the same name, filmed at Music Bank and posted on November 1, 2024.',
+    cultureNote:
+      'Like the "Supernova" clip on this page, this is a KBS Kpop "K-Fancam," but from a separate comeback about five months later in the same year.',
+    tags: ["aespa", "Winter", "MY", "Fancam", "Whiplash", "Music Bank"],
+    youtubeId: "IN-0zSBcHSQ",
+    sourceUrl: "https://www.youtube.com/watch?v=IN-0zSBcHSQ",
+    sourceLabel: "video from KBS Kpop",
+    guideHref: "/kpop/aespa/winter",
+  },
+  {
+    id: "winter-aespa-spicy-music-bank-fancam",
+    title: 'aespa Winter "Spicy" Fancam (Music Bank)',
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      'An official KBS Kpop close-up fancam of Winter performing "Spicy," the title track of aespa’s third mini album MY WORLD, filmed at Music Bank and posted on May 19, 2023.',
+    cultureNote:
+      'Of the clips on this page, this "K-Fancam" is from the earliest era — about a year before "Supernova" and "Whiplash."',
+    tags: ["aespa", "Winter", "MY", "Fancam", "Spicy", "Music Bank"],
+    youtubeId: "pewqJxdVG4E",
+    sourceUrl: "https://www.youtube.com/watch?v=pewqJxdVG4E",
+    sourceLabel: "video from KBS Kpop",
+    guideHref: "/kpop/aespa/winter",
+  },
+  {
+    id: "winter-aespa-wda-gdragon-m2-fancam",
+    title: 'aespa Winter "WDA (Whole Different Animal)" feat. G-DRAGON Fancam (M2)',
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      'An official M2 fancam of Winter performing "WDA (Whole Different Animal)," the other title track on aespa’s LEMONADE album, officially released as a single featuring G-DRAGON. Filmed at M Countdown and posted on May 15, 2026.',
+    cultureNote:
+      'M2, Mnet’s official fancam channel, labels this format "입덕직캠" in the video’s own title — a different broadcaster and format name from the KBS Kpop "K-Fancam" clips elsewhere on this page. "WDA" is the only clip here with a featured artist.',
+    tags: ["aespa", "Winter", "MY", "Fancam", "WDA", "G-DRAGON", "M2"],
+    youtubeId: "73wI3vYOX9E",
+    sourceUrl: "https://www.youtube.com/watch?v=73wI3vYOX9E",
+    sourceLabel: "video from M2",
     guideHref: "/kpop/aespa/winter",
   },
   {
