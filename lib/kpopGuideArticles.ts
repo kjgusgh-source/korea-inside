@@ -72,7 +72,7 @@ export type KpopGuideArticle = {
     {
       title: "What Is a Close-up Fancam?",
       description:
-        "A friendly guide to close-up fancam, facecam, and 얼빁직칵 meaning in K-pop, and how face-focused videos differ from fancams and ending fairy moments.",
+        "A friendly guide to close-up fancam, facecam, and 얼빡직캠 meaning in K-pop, and how face-focused videos differ from fancams and ending fairy moments.",
       href: "/kpop/what-is-close-up-fancam-in-kpop",
       label: "K-pop starter guide",
     },
@@ -114,7 +114,7 @@ export type KpopGuideArticle = {
     {
       title: "What Does Concept Mean in K-pop?",
       description:
-        "A friendly guide to K-pop concept meaning, how idols change their image each comeback, and how music, styling, shoreography, stages, and visuals create an era.",
+        "A friendly guide to K-pop concept meaning, how idols change their image each comeback, and how music, styling, choreography, stages, and visuals create an era.",
       href: "/kpop/what-does-concept-mean-in-kpop",
       label: "K-pop starter guide",
     },
@@ -184,7 +184,7 @@ export type KpopGuideArticle = {
     {
       title: "BABYMONSTER Ahyeon Fancam Spotlight",
       description:
-        "A friendly look at BABYMONSTER Ahyeon’s MBCkpop #최애ZIP칵 compilation, from DRIP to SUGAR HONEY ICE TEA, and why it is a good entry point for noticing her stage presence.",
+        "A friendly look at BABYMONSTER Ahyeon’s MBCkpop #최애ZIP캠 compilation, from DRIP to SUGAR HONEY ICE TEA, and why it is a good entry point for noticing her stage presence.",
       href: "/kpop/babymonster-ahyeon-fancam-spotlight",
       label: "K-pop spotlight",
     },
