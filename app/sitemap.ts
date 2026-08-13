@@ -309,6 +309,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    {
+      url: `${baseUrl}/dramas/why-teach-you-a-lesson-is-a-good-first-kdrama`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
    
     {
       url: `${baseUrl}/about`,
