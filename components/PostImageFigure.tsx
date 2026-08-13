@@ -42,7 +42,7 @@ export default function PostImageFigure({
 
     return (
       <figure
-        className={`not-prose float-none clear-none ${alignClass} mb-6 w-full overflow-hidden rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface)] p-2 md:w-[45%]`}
+        className={`not-prose float-none clear-none ${alignClass} mb-6 w-full overflow-hidden rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface)] p-2 md:w-[36%]`}
       >
         <div className="relative w-full overflow-hidden rounded-[1.1rem]">
           <Image

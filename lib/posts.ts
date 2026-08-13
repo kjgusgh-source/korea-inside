@@ -2514,7 +2514,6 @@ export const POSTS: Post[] = [
     content: [
       "Around places like Hongdae or Hyehwa, you may have come across Korea’s four-leaf-clover sellers — people who sell real clovers pressed into small cards for a few thousand won. For a while, unexpectedly finding one of these sellers felt like part of the luck itself.",
       "If you look closely at a friend’s phone in Korea now, you might notice something new attached to the back or the top edge of the case: a tiny turtle, barely bigger than a fingernail, often made in a soft pastel color.",
-      "It is not a charm that dangles from a strap. It sits flat on the case, more like a tiny decorative talisman, and some people have started collecting more than one.",
       {
         type: "image",
         align: "right",
@@ -2525,6 +2524,7 @@ export const POSTS: Post[] = [
           license: "AI-generated example image, not an actual photograph",
         },
       },
+      "It is not a charm that dangles from a strap. It sits flat on the case, more like a tiny decorative talisman, and some people have started collecting more than one.",
       "To understand why a turtle ended up there, it helps to start with the clover. Four-leaf clovers sold on the street were never really a formal business. Someone found a real one, pressed it into a small card, and sold it near a subway exit for two or three thousand won. Students would post things like “the clover seller is near Hongdae exit 3 right now,” and running into one felt like a small stroke of luck even before you bought anything.",
       "Over time, that street-corner luck became easier to buy. Card-sized lucky charms for love, money, job hunting, or even leaving work on time started appearing in small gift shops, sold in packs and traded between friends almost like stickers. The feeling of luck did not disappear — it simply moved from something you happened to find on the street to something you could pick up more easily.",
       {
