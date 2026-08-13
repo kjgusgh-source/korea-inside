@@ -80,7 +80,6 @@ export interface Post {
   heroImage?: PostImage;
   galleryImages?: PostImage[];
   trailers?: PostTrailer[];
-  compactHero?: boolean;
 }
 
 export const POSTS: Post[] = [
@@ -2507,7 +2506,6 @@ export const POSTS: Post[] = [
     id: 22,
     title: "Why Tiny Turtle Lucky Charms Are Showing Up on Korean Phone Cases",
     slug: "tiny-turtle-lucky-charms-korea",
-    compactHero: true,
     category: "lifestyle",
     categorySlug: "lifestyle",
     categoryLabel: "Korean Lifestyle",
