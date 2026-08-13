@@ -2518,7 +2518,7 @@ export const POSTS: Post[] = [
         type: "image",
         align: "right",
         image: {
-          src: "/lifestyle/tiny-turtle-lucky-charms-korea/02-turtle-phone.webp",
+          src: "/lifestyle/tiny-turtle-lucky-charms-korea/01-clover.webp",
           alt: "An example of tiny turtle charms placed on a phone case",
           credit: "AI-generated illustration for HAEMIL",
           license: "AI-generated example image, not an actual photograph",
@@ -2531,7 +2531,7 @@ export const POSTS: Post[] = [
         type: "image",
         align: "left",
         image: {
-          src: "/lifestyle/tiny-turtle-lucky-charms-korea/01-clover.webp",
+          src: "/lifestyle/tiny-turtle-lucky-charms-korea/02-turtle-phone.webp",
           alt: "An example of the four-leaf-clover lucky charm trend in Korea",
           credit: "AI-generated illustration for HAEMIL",
           license: "AI-generated example image, not an actual photograph",
