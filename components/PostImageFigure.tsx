@@ -3,7 +3,8 @@ import type { PostImage } from "../lib/posts";
 
 type PostImageFigureProps = {
   image: PostImage;
-  variant?: "hero" | "gallery";
+  variant?: "hero" | "gallery" | "inline";
+  align?: "left" | "right";
   priority?: boolean;
 };
 
@@ -30,8 +31,36 @@ function ImageCaption({ image }: { image: PostImage }) {
 export default function PostImageFigure({
   image,
   variant = "gallery",
+  align = "right",
   priority = false,
 }: PostImageFigureProps) {
+  if (variant === "inline") {
+    const alignClass =
+      align === "left"
+        ? "md:float-left md:mr-8"
+        : "md:float-right md:ml-8";
+
+    return (
+      <figure
+        className={`not-prose float-none clear-none ${alignClass} mb-6 w-full overflow-hidden rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface)] p-2 md:w-[36%]`}
+      >
+        <div className="relative w-full overflow-hidden rounded-[1.1rem]">
+          <Image
+            src={image.src}
+            alt={image.alt}
+            width={640}
+            height={799}
+            sizes="(max-width: 768px) 100vw, 45vw"
+            className="h-auto w-full object-cover"
+          />
+        </div>
+        <div className="px-1 pb-1 pt-3">
+          <ImageCaption image={image} />
+        </div>
+      </figure>
+    );
+  }
+
   if (variant === "hero") {
     return (
       <figure className="mt-8 overflow-hidden rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-3 shadow-lg shadow-[var(--shadow)] md:p-4">
