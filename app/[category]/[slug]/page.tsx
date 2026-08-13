@@ -85,6 +85,15 @@ export default async function ArticlePage({ params }: PageProps) {
 
   const relatedPosts = getRelatedPosts(post);
   const accent = getPostAccent(post.category);
+  const heroCardClass = post.compactHero
+    ? "mt-10 rounded-[2.5rem] border border-[var(--border)] bg-[var(--surface)] px-6 py-8 shadow-xl shadow-[var(--shadow)] md:px-12 md:py-10"
+    : "mt-10 rounded-[2.5rem] border border-[var(--border)] bg-[var(--surface)] px-6 py-8 shadow-xl shadow-[var(--shadow)] md:px-12 md:py-14";
+  const heroTitleClass = post.compactHero
+    ? "max-w-3xl text-5xl font-semibold leading-[1.05] tracking-tight md:text-[3.5rem]"
+    : "max-w-3xl text-5xl font-semibold leading-[1.05] tracking-tight md:text-7xl";
+  const heroDescClass = post.compactHero
+    ? "mt-6 max-w-2xl text-lg leading-8 text-[var(--muted)] md:text-xl"
+    : "mt-8 max-w-2xl text-lg leading-8 text-[var(--muted)] md:text-xl";
   const backHref =
     post.categorySlug === "travel"
       ? "/travel"
@@ -115,7 +124,7 @@ export default async function ArticlePage({ params }: PageProps) {
             {backLabel}
           </Link>
 
-          <div className="mt-10 rounded-[2.5rem] border border-[var(--border)] bg-[var(--surface)] px-6 py-8 shadow-xl shadow-[var(--shadow)] md:px-12 md:py-14">
+          <div className={heroCardClass}>
             <div className="mb-8 flex flex-wrap items-center gap-3">
               <span
                 className="rounded-full px-4 py-2 text-sm font-medium"
@@ -136,11 +145,11 @@ export default async function ArticlePage({ params }: PageProps) {
               </span>
             </div>
 
-            <h1 className="max-w-3xl text-5xl font-semibold leading-[1.05] tracking-tight md:text-7xl">
+            <h1 className={heroTitleClass}>
               {post.title}
             </h1>
 
-            <p className="mt-8 max-w-2xl text-lg leading-8 text-[var(--muted)] md:text-xl">
+            <p className={heroDescClass}>
               {post.description}
             </p>
           </div>

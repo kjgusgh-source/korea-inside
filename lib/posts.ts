@@ -80,6 +80,7 @@ export interface Post {
   heroImage?: PostImage;
   galleryImages?: PostImage[];
   trailers?: PostTrailer[];
+  compactHero?: boolean;
 }
 
 export const POSTS: Post[] = [
@@ -2506,6 +2507,7 @@ export const POSTS: Post[] = [
     id: 22,
     title: "Why Tiny Turtle Lucky Charms Are Showing Up on Korean Phone Cases",
     slug: "tiny-turtle-lucky-charms-korea",
+    compactHero: true,
     category: "lifestyle",
     categorySlug: "lifestyle",
     categoryLabel: "Korean Lifestyle",
@@ -2518,7 +2520,7 @@ export const POSTS: Post[] = [
         type: "image",
         align: "right",
         image: {
-          src: "/lifestyle/tiny-turtle-lucky-charms-korea/turtle-on-case.webp",
+          src: "/lifestyle/tiny-turtle-lucky-charms-korea/02-turtle-phone.webp",
           alt: "An example of tiny turtle charms placed on a phone case",
           credit: "AI-generated illustration for HAEMIL",
           license: "AI-generated example image, not an actual photograph",
@@ -2531,7 +2533,7 @@ export const POSTS: Post[] = [
         type: "image",
         align: "left",
         image: {
-          src: "/lifestyle/tiny-turtle-lucky-charms-korea/four-leaf-clover-market.webp",
+          src: "/lifestyle/tiny-turtle-lucky-charms-korea/01-clover.webp",
           alt: "An example of the four-leaf-clover lucky charm trend in Korea",
           credit: "AI-generated illustration for HAEMIL",
           license: "AI-generated example image, not an actual photograph",
@@ -2544,9 +2546,9 @@ export const POSTS: Post[] = [
       "That variation is part of the charm rather than a problem. Instead of following one fixed rulebook, each maker can put their own meaning into the turtles they create, and each buyer can choose the color that feels right to them.",
       {
         type: "image",
-        align: "right",
+        align: "left",
         image: {
-          src: "/lifestyle/tiny-turtle-lucky-charms-korea/turtle-colors-variety.webp",
+          src: "/lifestyle/tiny-turtle-lucky-charms-korea/03-turtle-colors.webp",
           alt: "Tiny turtle charms in different colors, often chosen for their own personal meanings",
           credit: "AI-generated illustration for HAEMIL",
           license: "AI-generated example image, not an actual photograph",
