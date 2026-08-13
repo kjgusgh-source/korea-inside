@@ -8,9 +8,9 @@ import { getPublishedMemberGuides } from "../../../lib/publishedGuides";
 const siteUrl = "https://haemilkorea.com";
 const pageUrl = `${siteUrl}/kpop/what-is-a-fancam`;
 
-const pageTitle = "Fancam Meaning in K-pop, Explained";
+const pageTitle = "What Is a Fancam in K-pop? | Fancam Meaning";
 const pageDescription =
-  "A fancam is a video that follows one K-pop idol during a performance. Here is what it means, why fans watch it, and how it differs from a facecam.";
+  "A fancam is a video that follows one K-pop idol during a performance - here's what it means, why fans watch it, and how it differs from a facecam.";
 
 const quickFacts = [
   "Basic meaning: A fancam is a video focused on one idol or member during a performance.",
