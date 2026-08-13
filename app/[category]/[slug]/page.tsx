@@ -108,14 +108,14 @@ export default async function ArticlePage({ params }: PageProps) {
         <SiteHeader />
 
         <article className="mx-auto mt-14 max-w-4xl md:mt-20">
-          <Link
-            href={backHref}
-            className="text-sm font-medium text-[var(--muted)] transition hover:text-[var(--accent)]"
-          >
-            {backLabel}
-          </Link>
-
           <div className="mt-10 rounded-[2.5rem] border border-[var(--border)] bg-[var(--surface)] px-6 py-8 shadow-xl shadow-[var(--shadow)] md:px-12 md:py-14">
+            <Link
+              href={backHref}
+              className="mb-6 inline-flex text-sm font-medium text-[var(--muted)] transition hover:text-[var(--accent)]"
+            >
+              {backLabel}
+            </Link>
+
             <div className="mb-8 flex flex-wrap items-center gap-3">
               <span
                 className="rounded-full px-4 py-2 text-sm font-medium"
