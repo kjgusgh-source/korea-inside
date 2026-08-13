@@ -41,6 +41,13 @@ export type PostImage = {
   group?: string;
 };
 
+export type PostContentImageBlock = {
+  type: "image";
+  image: PostImage;
+};
+
+export type PostContentItem = string | PostContentImageBlock;
+
 export type PostTrailer = {
   title: string;
   koreanTitle?: string;
@@ -58,7 +65,7 @@ export interface Post {
   categoryLabel: string;
   description: string;
   excerpt: string;
-  content: string[];
+  content: PostContentItem[];
   culturalContext: string;
   tags: string[];
   publishedAt: string;
@@ -2493,6 +2500,60 @@ export const POSTS: Post[] = [
         note: "A trailer for a more modern romance mood, with city life, dating imagination, and digital-era relationships.",
       },
     ],
+  },
+  {
+    id: 22,
+    title: "Why Tiny Turtle Lucky Charms Are Showing Up on Korean Phone Cases",
+    slug: "tiny-turtle-lucky-charms-korea",
+    category: "lifestyle",
+    categorySlug: "lifestyle",
+    categoryLabel: "Korean Lifestyle",
+    description: "A new kind of small good-luck object is showing up on phones around Korea right now — and it did not come out of nowhere.",
+    excerpt: "A tiny turtle joins Korea’s long-running habit of carrying small luck around with you.",
+    content: [
+      "If you have spent any time near Hongdae or Hyehwa, you might have run into a man selling four-leaf clovers on the street, laminated and taped to a little card, for a couple thousand won each. For a while, just running into him felt like the lucky part.",
+      "Lately, if you look closely at a friend’s phone in Korea, you might notice something new stuck to the back or the top edge of the case: a tiny turtle, barely bigger than a fingernail, painted in a soft color.",
+      "It’s not a charm that dangles from a strap. It sits flat on the case, like a small ceramic sticker, and people are starting to collect more than one.",
+      "To understand why a turtle ended up there, it helps to start with the clover. Four-leaf clovers sold on the street were never a formal business — someone found a real one, laminated it, and sold it near a subway exit for two or three thousand won. Students would post things like “there’s a clover guy at Hongdae exit 3 right now,” and finding him felt like a small win before you even bought anything.",
+      "Over time, that street-corner luck got easier to buy. Card-sized “lucky charms” for love, money, job hunting, even for leaving work on time, started showing up in small gift shops, sold in packs and traded between friends like stickers. The luck did not disappear — it just moved from something you stumbled into on the street to something you could simply pick up at a shop.",
+      {
+        type: "image",
+        image: {
+          src: "/lifestyle/tiny-turtle-lucky-charms-korea/four-leaf-clover.png",
+          alt: "An illustration of the four-leaf-clover good-luck trend in Korea",
+          credit: "Illustration by HAEMIL",
+          license: "Illustrative graphic, not a photograph",
+        },
+      },
+      "The turtle is the newest version of that same idea, and it arrived fast. Around late July 2026, Korean and international outlets started writing about it around the same time, describing tiny turtle figures attached to phone cases as a new “mini talisman” among Gen Z.",
+      "The animal itself is not a new choice. Turtles have long stood for longevity, stability, and quiet good fortune across Korea and much of East Asia. What changed is the format: instead of a painting or a carving, it is now a fingernail-sized object you stick on the thing you touch a hundred times a day.",
+      "Idols helped push it further into view. Seventeen’s Dino, Twice’s Nayeon, and KISS OF LIFE’s Haneul have all been seen with turtle decorations on their phones, shared through official accounts and fan posts — and that kind of visibility tends to make people curious fast.",
+      "Picking colors has become part of the fun, but there is no single answer key. One Korean news report describes green for health, yellow for wealth, and pink for love. The maker most associated with the trend lists a longer set that includes blue for wisdom and purple for prosperity. An overseas write-up describes blue for heavenly luck and red for money instead. None of these is “the official” chart — meanings vary by seller or creator, and most people seem to just pick whichever combination feels right to them.",
+      "So if you’re choosing colors for what they “mean,” it’s more honest to think of it as picking your own combination than following one fixed rulebook.",
+      {
+        type: "image",
+        image: {
+          src: "/lifestyle/tiny-turtle-lucky-charms-korea/turtle-charms-colors.png",
+          alt: "An example of tiny turtle charms in a few different colors",
+          credit: "Illustration by HAEMIL",
+          license: "Illustrative graphic, not a photograph",
+        },
+      },
+      "There’s a bigger pattern behind this, too. Coverage of the trend has connected it to a wider habit among young Koreans of spending small amounts on things that feel personal during a tense job market — the same instinct that keeps four-leaf clovers, dried-pollack charms, and now turtles in steady rotation.",
+      "None of this reads as serious superstition. Most people describe it closer to a cute habit than a belief — something between decoration and a small private wish. It’s less “I believe this will bring me luck” and more “why not carry a little luck around, just in case, and make it cute while I’m at it.”",
+    ],
+    culturalContext: "Korea has a long-running habit of keeping small good-luck objects close — a clover slipped into a wallet, a charm bought before an exam, an amulet a grandmother once gave. What’s different about the turtle trend is where it lives now: not tucked away, but stuck on the phone case people check dozens of times a day, turning a private hope into something small and visible.",
+    tags: ["Korean trends", "Gen Z Korea", "Lucky charms", "Phone case culture", "Korean lifestyle"],
+    publishedAt: "2026-08-13",
+    readingTime: "5 min read",
+    seoTitle: "Why Tiny Turtle Lucky Charms Are Showing Up on Korean Phone Cases",
+    seoDescription: "A friendly look at Korea’s tiny turtle lucky charm trend on phone cases, its link to street-sold four-leaf clovers, and why the color meanings vary by seller.",
+    heroImage: {
+      src: "/lifestyle/tiny-turtle-lucky-charms-korea/hero.png",
+      alt: "An example of tiny turtle charms placed on a transparent phone case",
+      credit: "Illustration by HAEMIL",
+      license: "Illustrative graphic, not a photograph",
+    },
   }
 ];
 

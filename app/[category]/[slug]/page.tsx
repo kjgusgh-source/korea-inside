@@ -206,9 +206,17 @@ export default async function ArticlePage({ params }: PageProps) {
             </p>
 
             <div className="mt-8 space-y-7 text-lg leading-9 text-[var(--text)]">
-              {post.content.map((paragraph, index) => (
-                <p key={`${post.slug}-paragraph-${index}`}>{paragraph}</p>
-              ))}
+              {post.content.map((item, index) =>
+                typeof item === "string" ? (
+                  <p key={`${post.slug}-paragraph-${index}`}>{item}</p>
+                ) : (
+                  <PostImageFigure
+                    key={`${post.slug}-image-${index}`}
+                    image={item.image}
+                    variant="gallery"
+                  />
+                )
+              )}
             </div>
           </div>
 
