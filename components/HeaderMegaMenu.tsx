@@ -138,8 +138,9 @@ const MEGA_MENU_CATEGORIES: MegaMenuCategory[] = [
     ],
     guideLinks: [],
     featured: {
-      title: "Why Koreans Talk About Dopamine So Much",
-      href: "/lifestyle/dopamine-korean-culture",
+      title: "Why Tiny Turtle Lucky Charms Are Showing Up on Korean Phone Cases",
+      href: "/lifestyle/tiny-turtle-lucky-charms-korea",
+      imageSrc: "/lifestyle/tiny-turtle-lucky-charms-korea/02-turtle-phone.webp",
     },
   },
 ];
