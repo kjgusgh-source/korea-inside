@@ -125,6 +125,23 @@ const MEGA_MENU_CATEGORIES: MegaMenuCategory[] = [
       youtubeThumbnailId: "67fnZvwVamM",
     },
   },
+  {
+    label: "Korea Now",
+    href: "/lifestyle",
+    mainLinks: [
+      { label: "All Korea Now", href: "/lifestyle" },
+      {
+        label: "Korean Convenience Store Culture",
+        href: "/lifestyle/korean-convenience-store-culture",
+      },
+      { label: "PC Bang Culture", href: "/lifestyle/pc-bang-culture" },
+    ],
+    guideLinks: [],
+    featured: {
+      title: "Why Koreans Talk About Dopamine So Much",
+      href: "/lifestyle/dopamine-korean-culture",
+    },
+  },
 ];
 
 export default function HeaderMegaMenu() {

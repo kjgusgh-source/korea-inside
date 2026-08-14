@@ -22,6 +22,7 @@ const HERO_CATEGORIES = [
   { label: "Food", href: "/food" },
   { label: "Travel", href: "/travel" },
   { label: "Drama", href: "/dramas" },
+  { label: "Korea Now", href: "/lifestyle" },
 ];
 
 const HERO_HEADLINE_BLUR_FROM = { filter: "blur(6px)", opacity: 0, y: 14 };
@@ -245,7 +246,7 @@ export default function HomeHero() {
                 animationTo={HERO_HEADLINE_BLUR_TO}
                 className="italic text-[var(--hero-accent)]"
               />
-              {" "}
+              {" "}
               <BlurText
                 text="shows"
                 animateBy="words"
@@ -260,7 +261,7 @@ export default function HomeHero() {
               />
               <br />
               <BlurText
-                text={"you around."}
+                text={"you around."}
                 animateBy="words"
                 direction="bottom"
                 delay={95}
