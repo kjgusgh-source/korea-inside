@@ -215,6 +215,16 @@ const STANDALONE_TRAVEL_GUIDES = [
     href: "/travel/gangneung-travel-guide-first-time",
     readingTime: "9 min read",
   },
+  {
+    id: "chuseok-korea-holiday-guide-first-time",
+    category: "travel",
+    categoryLabel: "Travel guide",
+    title: "Visiting Korea During Chuseok",
+    description:
+      "2026 Chuseok dates, what actually closes versus stays open, KTX and highway travel, and the free palace access that only happens during the holiday.",
+    href: "/travel/chuseok-korea-holiday-guide-first-time",
+    readingTime: "8 min read",
+  },
 ];
 
 export const metadata: Metadata = {
