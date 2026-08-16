@@ -2561,7 +2561,67 @@ export const POSTS: Post[] = [
     readingTime: "5 min read",
     seoTitle: "Why Tiny Turtle Lucky Charms Are Showing Up on Korean Phone Cases",
     seoDescription: "A friendly look at Korea’s tiny turtle lucky charm trend on phone cases, its link to street-sold four-leaf clovers, and why the color meanings vary by seller.",
-  }
+  },
+  {
+    id: 23,
+    title: "What to Expect at a Korean Restaurant: A First-Timer's Guide",
+    slug: "how-to-order-at-a-korean-restaurant",
+    category: "food",
+    categorySlug: "food",
+    categoryLabel: "Food",
+    description:
+      "Not sure when to order, how to call a server, where to get more banchan, or when to pay? Here's how a typical Korean restaurant works from the moment you walk in.",
+    excerpt:
+      "Walking into a Korean restaurant for the first time can feel strangely confusing — no one tells you whether to wait, sit yourself, press a button, or pay at the counter. None of it is difficult once you know the rhythm, and this is what a local friend would tell you before your first meal.",
+    content: [
+      "How Korean restaurants actually work: walking into a restaurant in Korea for the first time can be strangely confusing. No one necessarily tells you whether to wait at the door, choose a seat yourself, press the button on the table, check a tablet, or walk to the counter when you are finished. None of it is particularly difficult once you know the rhythm. The details vary from restaurant to restaurant, but here is what I would tell a friend visiting Korea for the first time.",
+      "First, check how the restaurant works. When you enter, take a second to look around before doing anything. Some restaurants will have a staff member show you to a table. At smaller or more casual places, you may simply be told to sit wherever there is space. Other restaurants use a kiosk near the entrance, and some require you to order and pay before sitting down. There is no single system used everywhere, so watching what the people ahead of you do is often the easiest way to understand the place.",
+      "Water and banchan may be partly self-service. One thing that can confuse first-time visitors is the word “self-service.” It does not always mean you have to get everything yourself from the beginning. In Korean restaurants, banchan (반찬) generally means the smaller dishes served alongside the main food rather than the main dish itself. In many restaurants, the first set of banchan is brought to your table. If you want more, you can usually ask the staff for a refill or get more yourself from a self-service bar. In most ordinary restaurants, you are not charged extra just because you ask for more of the standard banchan. Refilling the basic side dishes is generally treated as part of the meal. There can be exceptions. A restaurant may have a particular side dish, premium item, or separately listed menu item that costs extra, so if something is marked with a price, treat it as a separate order rather than a normal banchan refill.",
+      "It is also worth taking a quick look at the self-service area even if your table already has banchan. Sometimes there are extra side dishes, sauces, vegetables, water, utensils, or other small things there that were not included in the first serving. If you are not sure whether something is free to refill, just ask the staff or check the menu or self-service area for a price notice.",
+      "Check the table before calling someone. Korean restaurants traditionally often have a small call button on the table. You can press it when you are ready to order, want to add something, or need help. But newer restaurants increasingly use table-order tablets or screens instead. Before calling a staff member for something simple, check the screen on your table. Extra banchan, drinks, wet tissues, utensils, or additional dishes may already be available there. Some restaurants combine several systems — a tablet for ordering, a self-service bar for refills, and a call button when you actually need a staff member.",
+      "How do you get a staff member's attention? You do not need perfect Korean to call someone over. If there is a call button, that is usually the easiest option. Otherwise, making eye contact and raising one hand slightly — palm open and visible, not a single pointed finger — is completely normal. In a noisy or busy restaurant, this is what I usually do myself: I look toward a staff member and raise my hand. Once we make eye contact, they normally understand that I need something and come over. If you want to say something, a simple “Excuse me” is fine for a foreign visitor.",
+      "You may also hear Koreans say “sajangnim” (사장님). The word literally means the owner or boss, but in casual restaurants it is also commonly used to call someone working there even when you do not actually know whether that person owns the restaurant. If you are ready to order, you can also simply say: “Jumunhalgeyo” (주문할게요) — “I'd like to order.” Do not worry too much about finding the perfect Korean word. For a visitor, being polite matters much more than using exactly the right phrase.",
+      "What matters more is how you get someone's attention. Avoid whistling at staff, snapping your fingers, clapping sharply, or making clicking or tapping noises at someone as if you are summoning them. Those gestures can come across as very rude or disrespectful in Korea. A call button, eye contact, a raised hand, or a polite “Excuse me” is enough.",
+      "Paying is usually something you do on the way out. This is one of the biggest differences for visitors from countries where the bill is normally brought to the table. In many Korean restaurants, you do not sit and wait for the check. When you are finished eating, you simply get up and pay at the counter near the entrance before leaving. Some restaurants have a self-payment kiosk instead, while others require payment when you first order. So there are exceptions, but if there is no obvious payment system and nobody brings you a bill, the counter by the exit is usually the first place to look. If you are used to paying at the table, this can feel slightly strange the first time.",
+      "Cards work almost everywhere, but carrying some cash still helps. Card payment is accepted at the vast majority of normal restaurants in Korea, so visitors generally do not need to rely on cash for everyday meals. Still, having a little cash can be useful. Some very small stalls, traditional-market vendors, temporary stands, or businesses in tourist areas may be cash-only, and some smaller businesses may simply prefer cash. Do not assume every restaurant requires it, though. For a normal sit-down restaurant, paying by card is completely routine.",
+      "You do not need to tip. Korea does not have a standard restaurant tipping culture. In normal restaurants, you are expected to pay the listed price and nothing more. If you come from a country where leaving 15 or 20 percent is automatic, this is one habit you can leave behind while you are in Korea. You may occasionally see tourist-oriented places suggesting or asking for a tip, but that does not make tipping a general Korean custom, and you should not feel obligated to pay one. Of course, if you personally want to give something because someone went far out of their way to help you, that is your choice.",
+      "But for a first-time visitor, my recommendation is simple: do not worry about tipping. Paying the bill and saying thank you is enough.",
+      "Once you know the rhythm, it is easy. The important thing is not memorizing a long list of Korean restaurant rules. Look around when you enter. Check whether there is a kiosk or table-order screen. See whether banchan refills are self-service. Use the call button if there is one, or make eye contact and raise your hand if there is not. And when you are finished, look for the counter on your way out. After you have done it once or twice, none of this feels unusual anymore.",
+      "Still unsure about something? Korean restaurants can work a little differently depending on the place. If there is something you are confused about before your trip, you can send us a question through HAEMIL's Contact page. If we know the answer, we'll explain how it usually works in Korea.",
+    ],
+    culturalContext:
+      "Politeness matters more than using perfect Korean. Foreign visitors sometimes worry about whether they are using exactly the right Korean word in a restaurant. In reality, most situations are much simpler than that. You can point at a menu, use a little English, raise your hand, or press the call button. People will usually understand what you are trying to do. What tends to matter more is the way you treat the person helping you. You do not need flawless Korean restaurant etiquette. Just be patient, get someone's attention politely, and follow the system the restaurant is using. That is usually enough.",
+    tags: [
+      "Korean food",
+      "Korean restaurant etiquette",
+      "Banchan",
+      "Korea travel",
+      "Food",
+    ],
+    publishedAt: "2026-08-17",
+    readingTime: "7 min read",
+    seoTitle:
+      "What to Expect at a Korean Restaurant | Ordering, Banchan & Paying Explained",
+    seoDescription:
+      "A practical HAEMIL guide to what actually happens inside a Korean restaurant — seating, banchan refills, calling a server, paying at the counter, card vs. cash, and Korea's no-tipping culture.",
+    relatedGuides: [
+      {
+        label: "Food guide",
+        title: "How to Order Food in Korea",
+        href: "/food/how-to-order-food-in-korea",
+      },
+      {
+        label: "Food guide",
+        title: "Korean BBQ Guide for First-Time Visitors",
+        href: "/food/korean-bbq-guide-first-time",
+      },
+      {
+        label: "Travel guide",
+        title: "Korea Etiquette Tips for Tourists",
+        href: "/travel/korea-etiquette-tips-for-tourists",
+      },
+    ],
+  },
 ];
 
 export function getAllPosts() {
