@@ -17,6 +17,7 @@ const MOBILE_NAV_LINKS = [
   { label: "Travel", href: "/travel" },
   { label: "Food", href: "/food" },
   { label: "Drama", href: "/dramas" },
+  { label: "Korea Now", href: "/lifestyle" },
   { label: "Glossary", href: "/kpop/glossary" },
   { label: "Latest", href: "/#latest" },
 ];

@@ -125,6 +125,24 @@ const MEGA_MENU_CATEGORIES: MegaMenuCategory[] = [
       youtubeThumbnailId: "67fnZvwVamM",
     },
   },
+  {
+    label: "Korea Now",
+    href: "/lifestyle",
+    mainLinks: [
+      { label: "All Korea Now", href: "/lifestyle" },
+      {
+        label: "Korean Convenience Store Culture",
+        href: "/lifestyle/korean-convenience-store-culture",
+      },
+      { label: "PC Bang Culture", href: "/lifestyle/pc-bang-culture" },
+    ],
+    guideLinks: [],
+    featured: {
+      title: "Why Tiny Turtle Lucky Charms Are Showing Up on Korean Phone Cases",
+      href: "/lifestyle/tiny-turtle-lucky-charms-korea",
+      imageSrc: "/lifestyle/tiny-turtle-lucky-charms-korea/02-turtle-phone.webp",
+    },
+  },
 ];
 
 export default function HeaderMegaMenu() {
