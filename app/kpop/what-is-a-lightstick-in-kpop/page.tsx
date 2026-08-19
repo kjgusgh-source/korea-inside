@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "../../../components/SiteHeader";
 import JsonLd from "../../../components/JsonLd";
-import TermBadge from "../../../components/TermBadge";
 import { getPublishedMemberGuides } from "../../../lib/publishedGuides";
 
 const siteUrl = "https://haemilkorea.com";
@@ -156,7 +155,6 @@ export default function WhatIsALightstickInKpopPage() {
             </Link>
 
             <div className="flex items-center gap-3">
-              <TermBadge term="lightstick" className="h-11 w-11 flex-none" />
               <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
                 K-pop starter guide
               </p>
