@@ -171,4 +171,107 @@ export type KpopGuideArticle = {
       title: "Who Is tripleS?",
       description:
         "A friendly first guide to tripleS, the big unit-based girl group that becomes easier when you start with one member, one unit, or one fancam.",
-      href: "/kpop/who&—2×G&—ÆW2"À¢Æ&VÃ¢$v—&Âw&÷WwV–FR"À¢ÒÀ¢°¢F—FÆS¢%v†ò—24õ%D•3ò"À¢FW67&—F–öã ¢$g&–VæFÇ’f—'7BwV–FRFò4õ%D•2ÂF†RæWr$”t„•BÕU4”2&÷’w&÷WF†B²×÷fç2&R7F'F–ærFòvF6‚â"À¢‡&Vc¢"ö·÷÷v†òÖ—2Ö6÷'F—2"À¢Æ&VÃ¢$&÷’w&÷WwV–FR"À¢ÒÀ¢°¢F—FÆS¢%v†ò—2”ÄÄ•CòF†Rf—fRÔÖVÖ&W"w&÷W&V†–æBtÖvæWF–2r"À¢FW67&—F–öã ¢$g&–VæFÇ’„TÔ”ÂwV–FRFò”ÄÄ•BÂF†Rf—fRÖÖVÖ&W"$TÄ”eBÄ"v—&Âw&÷W&V†–æBtÖvæWF–2q®(	B†÷rF†W’f÷&ÖVBöâ"RæW‡CòÂv‡’F†R6öær6Vv‡BöâÂæBv†W&RF†V—"6÷VæB†2vöæR6–æ6Râ"À¢‡&Vc¢"ö·÷÷v†òÖ—2Ö–ÆÆ—B"À¢Æ&VÃ¢$v—&Âw&÷WwV–FR"À¢ÒÀ¢°¢F—FÆS¢$$%”Ôôå5DU"‡–Vöâfæ6Ò7÷FÆ–v‡B"À¢FW67&—F–öã ¢$g&–VæFÇ’Æöö²B$%”Ôôå5DU"‡–Vöî(	—2Ô$6·÷>ËYÎÉZ¤•Ëª6ö×–ÆF–öâÂg&öÒE$•Fò5Tt"„ôäU’”4RDTÂæBv‡’—B—2vööBVçG'’ö–çBf÷"æ÷F–6–ær†W"7FvR&W6Væ6Râ"À¢‡&Vc¢"ö·÷ö&'–Ööç7FW"Ö‡–VöâÖfæ6Ò×7÷FÆ–v‡B"À¢Æ&VÃ¢$²×÷7÷FÆ–v‡B"À¢ÒÀ¢°¢F—FÆS ¢$²×÷7÷FÆ–v‡C¢v‡’$U44TäRvöæ’—2vWGF–ærGFVçF–öâF‡&÷Vv‚fæ6×2"À¢FW67&—F–öã ¢$g&–VæFÇ’²×÷7÷FÆ–v‡Böâ$U44TäRvöæ’Â†W"'Væv’f6V6ÒÂæBv‡’6ÖÆÂÖöÖVçG2ÂW‡&W76–öç2ÂæB&WÆ–&ÆR6Æ—26â†VÇæWr–FöÂ6F6‚GFVçF–öââ"À¢‡&Vc¢"ö·÷÷&W66VæR×vöæ’Öfæ6Ò×7÷FÆ–v‡B"À¢Æ&VÃ¢$²×÷7÷FÆ–v‡B"À¢ÒÀ¢°¢F—FÆS ¢$²×÷7÷FÆ–v‡C¢v‡’”ÄÄ•Bvöæ†VR¶VW26F6†–ærGFVçF–öâ–âfæ6×2"À¢FW67&—F–öã ¢$g&–VæFÇ’²×÷7÷FÆ–v‡Böâ”ÄÄ•Bvöæ†VRÂ†W"(	Ä—N(	—2Ö^(	Òfæ6ÒÂæBv‡’6ÆV"W‡&W76–öç2Â6ÖÆÂF–Ö–ær6†ævW2ÂæB6Æ÷6R×W7FvR6Æ—2Ö¶R†W"V7’Fò&VÖVÖ&W"â"À¢‡&Vc¢"ö·÷ö–ÆÆ—B×vöæ†VRÖfæ6Ò×7÷FÆ–v‡B"À¢Æ&VÃ¢$²×÷7÷FÆ–v‡B"À¢ÒÀ¢°¢F—FÆS ¢$²×÷7÷FÆ–v‡C¢v†ò—24õ%D•2¶Vöæ†òÂF†R(	Äg&Væ6‚g'’&÷(	Òfç2¶VWæ÷F–6–æsò"À¢FW67&—F–öã ¢$g&–VæFÇ’²×÷7÷FÆ–v‡Böâ4õ%D•2¶Vöæ†òÂF†R$”t„•B&öö¶–RÖVÖ&W"fç2&Ræ÷F–6–ærF‡&÷Vv‚(	Ä¦÷•&–F^(	Òfæ6×2Â¶÷&Vâæ–6¶æÖRÖöÖVçG2ÂæB†—2V7’×Fò×&VÖVÖ&W"7FvR&W6Væ6Râ"À¢‡&Vc¢"ö·÷ö6÷'F—2Ö¶Vöæ†òÖfæ6Ò×7÷FÆ–v‡B"À¢Æ&VÃ¢$²×÷7÷FÆ–v‡B"À¢ÒÀ¢°¢F—FÆS ¢%v‡’G&—ÆU2¶–Ò6†U–Vöî(	—2(	Ä&'’fÆ÷vW""f6V6ÒfVVÇ26òV7’Fò&VÖVÖ&W""À¢FW67&—F–öã ¢$6Æ÷6R×WÆöö²B¶–Ò6†U–Vöî(	—2&'’fÆ÷vW"f6V6ÒÂ†W"fÖ–Æ–"¶÷&VâEb&6¶w&÷VæBÂæBv‡’6†R—2âV7’f—'7BFö÷"–çFòG&—ÆU2â"À¢‡&Vc¢"ö·÷÷G&—ÆW2Ö¶–ÒÖ6†W–VöâÖ&'’ÖfÆ÷vW"Öfæ6Ò×7÷FÆ–v‡B"À¢Æ&VÃ¢$fæ6Ò7÷FÆ–v‡B"À¢ÒÀ¢°¢F—FÆS¢%v‡’·vöâWVæ&’—26ÆÆVB¶÷&V(	—2(	ÅvFW&&öÖ"vöFFW7>(	Ò"À¢FW67&—F–öã ¢$g&–VæFÇ’Æöö²B·vöâWVæ&’ÂtDU$$ôÔ"¶÷&VÂæB†÷röæR7VÖÖW"fW7F—fÂ–ÖvR&W6†VB†W"6öÆò7FvR–FVçF—G’â"À¢‡&Vc¢"ö·÷ö·vöâÖWVæ&’×vFW&&öÖ"Öfæ6Ò×7÷FÆ–v‡B"À¢Æ&VÃ¢$fW7F—fÂ7÷FÆ–v‡B"À¢ÒÀ¢°¢F—FÆS¢$6†ö’–Væ(	Ä6F6‚6F6(	Òfæ6Ò"À¢FW67&—F–öã ¢$g&–VæFÇ’7÷FÆ–v‡Böâ6†ö’–Væ(	—26Æ÷6R×Wfæ6ÒÂæ–ÖRÖ–FöÂ7FvR–ÖvRÂæBF†R6ÖÆÂÆ–gVÂW‡&W76–öç2F†BÖ¶RF†R6Æ—V7’Fò&WÆ’â"À¢‡&Vc¢"ö·÷ö6†ö’×–VæÖ6F6‚Ö6F6‚Öfæ6Ò×7÷FÆ–v‡B"À¢Æ&VÃ¢%6öÆò7÷FÆ–v‡B"À¢ÒÀ¢°¢F—FÆS¢$4…UR(	Å„òÂ×’7–&W&Æ÷f^(	Òfæ6Ò7÷FÆ–v‡B"À¢FW67&—F–öã ¢$g&–VæFÇ’Æöö²B4…U^(	—2ÖæWBÓ"(	Å„òÂ×’7–&W&Æ÷f^(	Òfæ6ÒÂ†W"6öÆò'F—7B6†&ÒÂ6‡WR6âFò—B&W6Væ6RÂæBv‡’†W"'&–v‡B'WB6öçG&öÆÆVB7FvR7G–ÆR—2V7’Fòæ÷F–6Râ"À¢‡&Vc¢"ö·÷ö6‡WR×†òÖ×’Ö7–&W&Æ÷fRÖfæ6Ò×7÷FÆ–v‡B"À¢Æ&VÃ¢$²×÷7÷FÆ–v‡B"À¢ÒÀ¢°¢F—FÆS¢$†V'G3$†V'G2–â(	Å5E”Ä^(	Òfæ6Ò7÷FÆ–v‡B"À¢FW67&—F–öã ¢$g&–VæFÇ’Æöö²B†V'G3$†V'G2–î(	—2Ô$6·÷(	Å5E”Ä^(	Òfæ6ÒÂF†R–â6†ÆÆVævRVffV7BÂæBv‡’†W"ö–çB6†÷&Vöw&‡’Â6ÖW&F–Ö–ærÂæB&öö¶–R×7FvR&W6Væ6R&RV7’Fòæ÷F–6Râ"À¢‡&Vc¢"ö·÷ö†V'G3&†V'G2Ö–â×7G–ÆRÖfæ6Ò×7÷FÆ–v‡B"À¢Æ&VÃ¢$²×÷7÷FÆ–v‡B"À¢ÒÀ¢°¢F—FÆS¢%7G&’¶–G2fVÆ—‚(	Å6÷VÂ&VŞ(	Òf6V6Ò7÷FÆ–v‡B"À¢FW67&—F–öã ¢$g&–VæFÇ’Æöö²B7G&’¶–G2fVÆ—(	—2´%4·÷(	Å6÷VÂ&VŞ(	Òf6V6ÒÂ†—2FVW×fö–6R–ÖvRÂ6ÖW&v&VæW72ÂæBv‡’6Æ÷6R×Wfæ6×2Ö¶R†—27FvRFWF–Ç2V6–W"Fòæ÷F–6Râ"À¢‡&Vc¢"ö·÷÷7G&’Ö¶–G2ÖfVÆ—‚×6÷VÂÖ&VÒÖf6V6Ò×7÷FÆ–v‡B"À¢Æ&VÃ¢$²×÷7÷FÆ–v‡B"À¢ÒÀ¢°¢F—FÆS ¢$²×÷7÷FÆ–v‡C¢v‡’ÄR54U$d”ÒÆVFW"¶–Ò6†Wvöâ—2âV7’ÖVÖ&W"Fò7F'Bv—F‚"À¢FW67&—F–öã ¢$g&–VæFÇ’„TÔ”Â7÷FÆ–v‡BöâÄR54U$d”ÒÆVFW"¶–Ò6†WvöâÂ†W"(	Ä„õN(	Òfæ6ÒÂæBv‡’†W"•¢¤ôäR&6¶w&÷VæBæBV–6²7WFR×Fò×6†'W‡&W76–öâ6†ævW2Ö¶R†W"fæ6×2v÷'F‚vF6†–ærf—'7Bâ"À¢‡&Vc¢"ö·÷öÆR×76W&f–ÒÖ¶–ÒÖ6†WvöâÖfæ6Ò×7÷FÆ–v‡B"À¢Æ&VÃ¢$²×÷7÷FÆ–v‡B"À¢ÒÀ¢Ó°¢ ¢W‡÷'BgVæ7F–öâvWD·÷wV–FT'F–6ÆW2‚’°¢&WGW&â·÷wV–FT'F–6ÆW3°¢Ğ
+      href: "/kpop/who-is-triples",
+      label: "Girl group guide",
+    },
+    {
+      title: "Who Is CORTIS?",
+      description:
+        "A friendly first guide to CORTIS, the new BIGHIT MUSIC boy group that K-pop fans are starting to watch.",
+      href: "/kpop/who-is-cortis",
+      label: "Boy group guide",
+    },
+    {
+      title: "Who Is ILLIT? The Five-Member Group Behind 'Magnetic'",
+      description:
+        "A friendly HAEMIL guide to ILLIT, the five-member BELIFT LAB girl group behind 'Magnetic' â€” how they formed on R U Next?, why the song caught on, and where their sound has gone since.",
+      href: "/kpop/who-is-illit",
+      label: "Girl group guide",
+    },
+    {
+      title: "BABYMONSTER Ahyeon Fancam Spotlight",
+      description:
+        "A friendly look at BABYMONSTER Ahyeonâ€™s MBCkpop #ìµœì• ZIPìº  compilation, from DRIP to SUGAR HONEY ICE TEA, and why it is a good entry point for noticing her stage presence.",
+      href: "/kpop/babymonster-ahyeon-fancam-spotlight",
+      label: "K-pop spotlight",
+    },
+    {
+      title:
+        "K-pop Spotlight: Why RESCENE Woni Is Getting Attention Through Fancams",
+      description:
+        "A friendly K-pop spotlight on RESCENE Woni, her Runaway facecam, and why small moments, expressions, and replayable clips can help a new idol catch attention.",
+      href: "/kpop/rescene-woni-fancam-spotlight",
+      label: "K-pop Spotlight",
+    },
+    {
+      title:
+        "K-pop Spotlight: Why ILLIT Wonhee Keeps Catching Attention in Fancams",
+      description:
+        "A friendly K-pop spotlight on ILLIT Wonhee, her â€œItâ€™s Meâ€ fancam, and why clear expressions, small timing changes, and close-up stage clips make her easy to remember.",
+      href: "/kpop/illit-wonhee-fancam-spotlight",
+      label: "K-pop Spotlight",
+    },
+    {
+      title:
+        "K-pop Spotlight: Who Is CORTIS Keonho, the â€œFrench Fry Boyâ€ Fans Keep Noticing?",
+      description:
+        "A friendly K-pop spotlight on CORTIS Keonho, the BIGHIT rookie member fans are noticing through â€œJoyRideâ€ fancams, Korean nickname moments, and his easy-to-remember stage presence.",
+      href: "/kpop/cortis-keonho-fancam-spotlight",
+      label: "K-pop Spotlight",
+    },
+    {
+      title:
+        "Why tripleS Kim ChaeYeonâ€™s â€œBaby Flowerâ€ Facecam Feels So Easy to Remember",
+      description:
+        "A close-up look at Kim ChaeYeonâ€™s Baby Flower facecam, her familiar Korean TV background, and why she is an easy first door into tripleS.",
+      href: "/kpop/triples-kim-chaeyeon-baby-flower-fancam-spotlight",
+      label: "Fancam spotlight",
+    },
+    {
+      title: "Why Kwon Eunbi Is Called Koreaâ€™s â€œWaterbomb Goddessâ€",
+      description:
+        "A friendly look at Kwon Eunbi, WATERBOMB Korea, and how one summer festival image reshaped her solo stage identity.",
+      href: "/kpop/kwon-eunbi-waterbomb-fancam-spotlight",
+      label: "Festival spotlight",
+    },
+    {
+      title: "Choi Yena â€œCatch Catchâ€ Fancam",
+      description:
+        "A friendly spotlight on Choi Yenaâ€™s close-up fancam, anime-idol stage image, and the small playful expressions that make the clip easy to replay.",
+      href: "/kpop/choi-yena-catch-catch-fancam-spotlight",
+      label: "Solo spotlight",
+    },
+    {
+      title: "CHUU â€œXO, My Cyberloveâ€ Fancam Spotlight",
+      description:
+        "A friendly look at CHUUâ€™s Mnet M2 â€œXO, My Cyberloveâ€ fancam, her solo artist charm, Chuu Can Do It presence, and why her bright but controlled stage style is easy to notice.",
+      href: "/kpop/chuu-xo-my-cyberlove-fancam-spotlight",
+      label: "K-pop spotlight",
+    },
+    {
+      title: "Hearts2Hearts Ian â€œSTYLEâ€ Fancam Spotlight",
+      description:
+        "A friendly look at Hearts2Hearts Ianâ€™s MBCkpop â€œSTYLEâ€ fancam, the Ian challenge effect, and why her point choreography, camera timing, and rookie-stage presence are easy to notice.",
+      href: "/kpop/hearts2hearts-ian-style-fancam-spotlight",
+      label: "K-pop spotlight",
+    },
+    {
+      title: "Stray Kids Felix â€œSoul Beamâ€ Facecam Spotlight",
+      description:
+        "A friendly look at Stray Kids Felixâ€™s KBSKpop â€œSoul Beamâ€ facecam, his deep-voice image, camera awareness, and why close-up fancams make his stage details easier to notice.",
+      href: "/kpop/stray-kids-felix-soul-beam-facecam-spotlight",
+      label: "K-pop spotlight",
+    },
+    {
+      title:
+        "K-pop Spotlight: Why LE SSERAFIM Leader Kim Chaewon Is an Easy Member to Start With",
+      description:
+        "A friendly HAEMIL spotlight on LE SSERAFIM leader Kim Chaewon, her â€œHOTâ€ fancam, and why her IZ*ONE background and quick cute-to-sharp expression changes make her fancams worth watching first.",
+      href: "/kpop/le-sserafim-kim-chaewon-fancam-spotlight",
+      label: "K-pop Spotlight",
+    },
+  ];
+  
+  export function getKpopGuideArticles() {
+    return kpopGuideArticles;
+  }
