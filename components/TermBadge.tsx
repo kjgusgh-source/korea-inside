@@ -18,7 +18,8 @@ type TermBadgeName =
   | "aegyo"
   | "bias-wrecker"
   | "rookie-group"
-  | "maknae";
+  | "maknae"
+  | "lightstick";
 
 const BADGE_GLYPHS: Record<TermBadgeName, React.ReactNode> = {
   fancam: (
@@ -218,7 +219,7 @@ const BADGE_GLYPHS: Record<TermBadgeName, React.ReactNode> = {
       <circle cx="124" cy="168" r="6" fill="var(--gold)" />
       <circle cx="144" cy="168" r="6" fill="var(--celadon)" />
       <path
-        d="M160 66c-10-8-24-2-24 10 0 10 24 26 24 26s24-16 24-26c0-12-14-18-24-10z"
+        d="M160 66c-10-8-24-2 24 10 0 10 24 26 24 26s24-16 24-26c0-12-14-18-24-10z"
         fill="var(--accent)"
       />
     </>
@@ -423,6 +424,30 @@ const BADGE_GLYPHS: Record<TermBadgeName, React.ReactNode> = {
       <path d="M111,188 c2,-13 9,-19 17,-19 s15,6 17,19" fill="var(--celadon)" />
       <circle cx="128" cy="158" r="13" fill="var(--celadon)" />
       <path d="M128,126 L132,132 L138,136 L132,140 L128,146 L124,140 L118,136 L124,132 Z" fill="var(--gold)" />
+    </>
+  ),
+  lightstick: (
+    <>
+      <rect x="34" y="34" width="188" height="188" rx="46" fill="var(--card)" stroke="var(--accent)" strokeWidth="7" />
+      <rect
+        x="116"
+        y="132"
+        width="24"
+        height="72"
+        rx="10"
+        fill="var(--accent)"
+        fillOpacity="0.16"
+        stroke="var(--accent)"
+        strokeWidth="6"
+      />
+      <circle cx="128" cy="98" r="34" fill="var(--celadon)" fillOpacity="0.4" stroke="var(--accent)" strokeWidth="6" />
+      <circle cx="128" cy="98" r="14" fill="var(--card)" />
+      <path
+        d="M128 56l6 16 16 6-16 6-6 16-6-16-16-6 16-6z"
+        fill="var(--gold)"
+      />
+      <circle cx="70" cy="150" r="6" fill="var(--gold)" />
+      <circle cx="186" cy="160" r="6" fill="var(--celadon)" />
     </>
   ),
 };
