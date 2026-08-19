@@ -254,7 +254,9 @@ export const POSTS: Post[] = [
       "Sometimes in Korea, the most important thing in the room is not what someone says. It is what everyone quietly understands.",
       "That is where 눈치 (nunchi) comes in. It is often translated as “reading the room,” but it feels a little deeper than that.",
       "Nunchi is noticing when someone is uncomfortable, when the mood has changed, when it is better to speak, or when silence is kinder.",
-      "It appears in offices, family meals, group chats, dates, restaurants, schools, and even variety shows. Once you notice it, Korean social life becomes much easier to understand."
+      "It appears in offices, family meals, group chats, dates, restaurants, schools, and even variety shows. Once you notice it, Korean social life becomes much easier to understand.",
+      "Picture a work dinner that has run a little long. Nobody says out loud that it is time to wrap up, but someone quietly starts stacking the empty plates, or catches the server’s eye for the check, and the rest of the table follows without needing to be told. Knowing exactly when to make that move, without making anyone feel rushed, is nunchi in practice.",
+      "It is close to “reading the room,” but the Korean version goes one step further — it asks you to act on what you noticed before anyone has to spell it out. Paying that kind of attention, so the people around you never have to explain themselves, is what makes nunchi feel like consideration rather than caution."
     ],
     culturalContext:
       "Nunchi is connected to Korea’s long tradition of valuing harmony, respect, and group atmosphere. It is not only about being careful. At its best, it is a form of consideration: paying attention so others do not always have to explain themselves.",
