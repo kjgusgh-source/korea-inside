@@ -24,6 +24,16 @@ const STANDALONE_DRAMA_GUIDES = [
     href: "/dramas/why-teach-you-a-lesson-is-a-good-first-kdrama",
     readingTime: "8 min read",
   },
+  {
+    id: "what-is-second-lead-syndrome-in-kdramas",
+    category: "dramas",
+    categoryLabel: "K-drama guide",
+    title: "What Is Second Lead Syndrome in K-Dramas?",
+    description:
+      "A friendly guide to second lead syndrome: what the term means, why viewers end up rooting for the second lead, and how it compares to Korea's own word for the same feeling.",
+    href: "/dramas/what-is-second-lead-syndrome-in-kdramas",
+    readingTime: "5 min read",
+  },
 ];
 
 export const metadata: Metadata = {
