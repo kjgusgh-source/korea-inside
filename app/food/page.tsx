@@ -156,16 +156,6 @@ const STANDALONE_FOOD_GUIDES = [
     readingTime: "6 min read",
   },
   {
-    id: "what-is-a-korean-corn-dog",
-    category: "food",
-    categoryLabel: "Food guide",
-    title: "What Is a Korean Corn Dog?",
-    description:
-      "Panko-crusted street snack that swaps cornmeal batter for a crunchy shell — plus the gamja and ramyeontang variants worth knowing.",
-    href: "/food/what-is-a-korean-corn-dog",
-    readingTime: "7 min read",
-  },
-  {
     id: "how-to-eat-cup-ramyeon-at-a-korean-convenience-store",
     category: "food",
     categoryLabel: "Food guide",
@@ -234,6 +224,16 @@ const STANDALONE_FOOD_GUIDES = [
       "Snack-shop food culture where tteokbokki, gimbap, twigim, and eomuk share one table — a good lens for cheap Korean eating.",
     href: "/food/what-is-bunsik-korean-snack-food",
     readingTime: "8 min read",
+  },
+  {
+    id: "what-is-a-korean-corn-dog",
+    category: "food",
+    categoryLabel: "Food guide",
+    title: "What Is a Korean Corn Dog?",
+    description:
+      "Panko crust instead of cornmeal, plus potato and ramyeon-cracker toppings — how the Korean corn dog differs from the American one, and where to try it.",
+    href: "/food/what-is-a-korean-corn-dog",
+    readingTime: "6 min read",
   },
 ];
 
@@ -361,7 +361,7 @@ export default function FoodPage() {
               >
                 <div className="mb-4 flex flex-wrap items-center gap-3 text-sm">
                   <span style={{ color: getPostAccent(guide.category) }}>
-                  {guide.categoryLabel}
+                    {guide.categoryLabel}
                   </span>
                   <span className="text-[var(--muted)]">{guide.readingTime}</span>
                 </div>
