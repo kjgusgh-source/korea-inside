@@ -2,23 +2,44 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "../../../components/SiteHeader";
 import JsonLd from "../../../components/JsonLd";
+import PostImageFigure from "../../../components/PostImageFigure";
 
 const siteUrl = "https://haemilkorea.com";
 const pageUrl = `${siteUrl}/food/what-is-a-korean-corn-dog`;
 
-const pageTitle = "What Is a Korean Corn Dog? Korea’s Fried Street Snack, Explained";
+const pageTitle = "What Is a Korean Corn Dog? A Local Guide to Korean Hot Dogs";
 const pageDescription =
-  "A friendly HAEMIL guide to the Korean corn dog — the panko-crusted street snack with potato and ramyeon-cracker toppings that looks nothing like an American corn dog, plus where to find one.";
+  "In Korea, the fried snack English speakers call a Korean corn dog is usually just called 핫도그. Here’s how it differs from a bun-style hot dog and which versions you’ll actually see.";
+
+const classicImage = {
+  src: "/images/food/korean-hotdog-classic.webp",
+  alt: "Classic Korean hot dog on a stick",
+  credit: "Photo by HAEMIL",
+  license: "Owned by HAEMIL",
+};
+
+const bunImage = {
+  src: "/images/food/western-hotdog-bun.webp",
+  alt: "Sausage served in a bun for comparison with a Korean fried hot dog",
+  credit: "Photo by HAEMIL",
+  license: "Owned by HAEMIL",
+};
+
+const potatoImage = {
+  src: "/images/food/korean-hotdog-potato.webp",
+  alt: "Korean potato hot dog with potato pieces on the outside",
+  credit: "Photo by HAEMIL",
+  license: "Owned by HAEMIL",
+};
 
 const quickFacts = [
-  "Korean name: Korean corn dog / 콘도그 (also called Korean hot dog)",
-  "Batter: Wheat or glutinous rice flour dough rolled in panko breadcrumbs, not cornmeal",
-  "Common toppings: Cubed potato, crushed ramen noodles (ramyeon-ttang), sugar coating, crushed hot Cheetos",
-  "Common fillings: Sausage, mozzarella cheese, or a half-and-half combination",
-  "Where to find it: Street carts, night markets, college-area stalls, and specialty corn dog shops",
-  "How it differs from the U.S. version: Cornmeal batter and carnival-food context in the U.S., versus panko batter and everyday street food in Korea",
-  "Background: Commonly traced to the 1950s postwar period and localized over time, based on repeated food-media reporting rather than one official source",
-  "Good to know: The social media spike was around 2021; today it is a steady street snack, not a new trend",
+  "Korean name: 핫도그 (hatdog) — “Korean corn dog” is mainly the English-language label",
+  "Basic form: Sausage, cheese, or both on a stick, covered in dough or batter and fried",
+  "Common versions: Classic sausage, mozzarella, half sausage-half cheese, and potato hot dog",
+  "Common finish: Ketchup, mustard, and sometimes sugar depending on the shop and style",
+  "Good to know: A sausage served in a bun is also called a hot dog in Korea — context usually tells you which one people mean",
+  "Where to find it: Bunsik shops, snack stands, markets, and specialty hot dog chains",
+  "Difference from a classic American corn dog: Korean versions usually use a wheat-based dough and often breadcrumbs rather than the classic cornmeal coating, although recipes vary",
 ];
 
 const relatedGuides = [
@@ -164,15 +185,16 @@ export default function WhatIsAKoreanCornDogPage() {
             </p>
 
             <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
-              What Is a Korean Corn Dog? Korea&apos;s Fried Street Snack,
-              Explained
+              What Is a Korean Corn Dog? A Local Guide to Korean Hot Dogs
             </h1>
 
             <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
-              The name translates the same way, but almost nothing else about
-              it does.
+              In Korea, the snack English speakers call a &quot;Korean corn
+              dog&quot; is usually just called 핫도그 (hatdog).
             </p>
           </article>
+
+          <PostImageFigure image={classicImage} variant="hero" priority />
 
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
@@ -190,90 +212,98 @@ export default function WhatIsAKoreanCornDogPage() {
           </section>
 
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
-            <div className="space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
-              <p>
-                If you grew up eating an American corn dog, the first bite of
-                a Korean one can be a small shock. The shape is familiar, the
-                name translates the same way, but everything about the
-                outside is different. Korean corn dogs (콘도그) are one of
-                those foods that gets lost in translation on purpose: the
-                word says corn dog, but the batter usually has no corn in it
-                at all.
-              </p>
+            <h2 className="text-2xl font-semibold md:text-3xl">
+              What does &quot;hot dog&quot; mean in Korea?
+            </h2>
+
+            <div className="mt-6 space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
+              <PostImageFigure image={bunImage} variant="inline" />
 
               <p>
-                American corn dogs are dipped in a cornmeal batter, so the
-                shell fries up smooth, a little grainy, and slightly sweet in
-                that classic carnival-food way. Korean corn dogs skip the
-                cornmeal entirely. The stick goes into a wheat flour or
-                glutinous rice flour dough instead, then gets rolled in panko
-                breadcrumbs before it hits the fryer. That panko coating is
-                the giveaway — it fries up craggy and crunchy rather than
-                smooth, which is exactly why a Korean corn dog looks rougher
-                and lumpier than the one you might remember from a fair back
-                home.
-              </p>
-
-              <p>
-                Once you know the base, the toppings are where Korean corn
-                dogs really separate from the American version. A potato hot
-                dog (감자핫도그) presses small cubes of potato straight into
-                the dough before frying, so the surface turns craggy in a
-                completely different way — half panko crunch, half
-                roasted-potato bite. Some stalls swap the panko for crushed
-                ramen noodles, sold as a ramyeon-ttang style, which fries up
-                nuttier and a little more brittle. Others roll the finished
-                corn dog straight into sugar while it is still hot, so the
-                outside turns sweet against a savory sausage or mozzarella
-                filling, or coat it in crushed hot Cheetos for a
-                spicy-orange crust. Fillings vary too — plain sausage, pure
-                mozzarella that stretches when you pull the first bite apart,
-                or a half-sausage-half-cheese combination that lets you taste
-                both without choosing.
-              </p>
-
-              <p>
-                American corn dogs are mostly festival and amusement-park
-                food, handed over with ketchup and mustard packets and eaten
-                standing near a ride. Korean corn dogs do not really carry
-                that seasonal, special-occasion feeling — they are a normal
-                street snack you can find on almost any night, wrapped in a
-                paper sleeve from a cart, a night-market stall, or a
-                specialty corn dog shop near a university area. That
-                everyday-ness is part of what makes it a corn dog in name
-                only; the fair-food association just does not carry over.
-              </p>
-
-              <p>
-                Where the dish actually came from is less settled. Multiple
-                food outlets trace Korean corn dogs back to the 1950s, after
-                the Korean War, when corn dogs are said to have been
-                introduced through contact with the U.S. military and then
-                gradually localized into the panko-and-toppings version
-                people eat today. That account shows up consistently across
-                food writing, though it comes from repeated reporting rather
-                than one single official source, so it is worth treating as
-                the commonly told history rather than a confirmed fact.
-              </p>
-
-              <p>
-                It is easy to assume Korean corn dogs are a brand-new trend,
-                since international food media keeps circling back to them,
-                but the social media spike mostly happened around 2021, when
-                clips of the cheese-pull and sugar-coated versions spread
-                widely online. What is left now is closer to a steady street
-                food than a fresh discovery — the kind of snack that sits
-                comfortably next to tteokbokki and bungeoppang on a Korean
-                street food list, rather than something trying to go viral
-                again. If you are curious where to start, a plain or
-                half-cheese version from a cart is an easy first order, and
-                the potato or ramyeon-ttang toppings are worth trying once
-                you know what you are biting into.
+                Search for &quot;Korean corn dog&quot; in English and
+                you’ll probably picture a fried snack on a stick. In
+                Korea, though, most people simply call that 핫도그
+                (hatdog). The slightly confusing part is that the
+                sausage-in-a-bun version can also be called a hot dog
+                here. If someone points at a snack-shop menu and says
+                핫도그, they may mean the fried one on a stick; at another
+                shop, the same word can mean a sausage in a bun. Usually,
+                the place and the menu make it obvious.
               </p>
             </div>
           </section>
 
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">
+            <h2 className="text-2xl font-semibold md:text-3xl">
+              How is it different from an American corn dog?
+            </h2>
+
+            <div className="mt-6 space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
+              <p>
+                The biggest difference is the outside. A classic American
+                corn dog is known for its cornmeal batter. Korean hot dogs
+                usually use a wheat-based dough or batter, often finished
+                with breadcrumbs, although the exact recipe changes from
+                shop to shop. That gives the Korean version a thicker,
+                crunchier outside and also makes it easier to add cheese,
+                potato pieces, or other coatings.
+              </p>
+            </div>
+          </section>
+
+          <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
+            <h2 className="text-2xl font-semibold md:text-3xl">
+              The versions you’ll actually see
+            </h2>
+
+            <div className="mt-6 space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
+              <PostImageFigure image={potatoImage} variant="inline" />
+
+              <p>
+                The basic version is still the easiest place to start:
+                sausage inside, fried outside, sauce on top. Cheese
+                versions are also common, including mozzarella-only and
+                half-sausage-half-cheese styles. 감자핫도그 (gamja hot
+                dog) adds small potato pieces around the outside before
+                frying, so it is heavier and crispier than the plain
+                version. Some shops have more elaborate coatings and
+                sauces, but those are variations rather than the
+                definition of a Korean hot dog.
+              </p>
+            </div>
+          </section>
+
+          <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">
+            <h2 className="text-2xl font-semibold md:text-3xl">
+              What should you try first?
+            </h2>
+
+            <div className="mt-6 space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
+              <p>
+                If it is your first one, I would start with the plain
+                sausage version before jumping straight to the
+                cheese-pull versions you see online. It gives you a
+                better idea of what a normal Korean hot dog tastes like.
+                After that, 감자핫도그 is an easy second choice if you
+                want something crunchier and more filling. Depending on
+                the shop, you may be asked whether you want sugar on the
+                outside before ketchup or mustard goes on top. That
+                sweet-and-savory combination can sound strange at first,
+                but it is a familiar hot-dog-shop style in Korea.
+              </p>
+
+              <p>
+                Korean hot dogs became much more visible overseas through
+                cheese-pull videos and &quot;Korean corn dog&quot; shops,
+                but in Korea the food itself does not feel like a new
+                internet trend. It is a familiar snack-shop food — the
+                kind of thing people have eaten long before it became an
+                English-language social-media category.
+              </p>
+            </div>
+          </section>
+
+          <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
             <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
