@@ -1,1 +1,504 @@
-aW1wb3J0IHR5cGUgeyBNZXRhZGF0YSB9IGZyb20gIm5leHQiOwppbXBvcnQgTGluayBmcm9tICJuZXh0L2xpbmsiOwppbXBvcnQgU2l0ZUhlYWRlciBmcm9tICIuLi8uLi8uLi9jb21wb25lbnRzL1NpdGVIZWFkZXIiOwppbXBvcnQgSnNvbkxkIGZyb20gIi4uLy4uLy4uL2NvbXBvbmVudHMvSnNvbkxkIjsKCmNvbnN0IHNpdGVVcmwgPSAiaHR0cHM6Ly9oYWVtaWxrb3JlYS5jb20iOwpjb25zdCBwYWdlVXJsID0gYCR7c2l0ZVVybH0va3BvcC9nbG9zc2FyeWA7Cgpjb25zdCBwYWdlVGl0bGUgPQogICJLLXBvcCBHbG9zc2FyeSB8IEJpYXMsIE1ha25hZSwgRmFuY2FtLCBFbmRpbmcgRmFpcnkgJiBLb3JlYW4gRmFuIFdvcmRzIjsKY29uc3QgcGFnZURlc2NyaXB0aW9uID0KICAiQSBmcmllbmRseSBndWlkZSB0byBLb3JlYW4gSy1wb3AgZmFuIHdvcmRzIGxpa2UgYmlhcywgbWFrbmFlLCBjZW50ZXIsIGZhbmNhbSwgZW5kaW5nIGZhaXJ5LCBlb2xwcGFrLWppa2NhbSwgYWVneW8sIGFuZCBob3JhbmdoYWUuIjsKICBleHBvcnQgY29uc3QgbWV0YWRhdGE6IE1ldGFkYXRhID0gewogICAgdGl0bGU6IHBhZ2VUaXRsZSwKICAgIGRlc2NyaXB0aW9uOiBwYWdlRGVzY3JpcHRpb24sCiAgICBhbHRlcm5hdGVzOiB7CiAgICAgIGNhbm9uaWNhbDogIi9rcG9wL2dsb3NzYXJ5IiwKICAgIH0sCiAgICBvcGVuR3JhcGg6IHsKICAgICAgdGl0bGU6IHBhZ2VUaXRsZSwKICAgICAgZGVzY3JpcHRpb246IHBhZ2VEZXNjcmlwdGlvbiwKICAgICAgdXJsOiBwYWdlVXJsLAogICAgICBzaXRlTmFtZTogIkhBRU1JTCIsCiAgICAgIHR5cGU6ICJhcnRpY2xlIiwKICAgIH0sCiAgICB0d2l0dGVyOiB7CiAgICAgIGNhcmQ6ICJzdW1tYXJ5X2xhcmdlX2ltYWdlIiwKICAgICAgdGl0bGU6IHBhZ2VUaXRsZSwKICAgICAgZGVzY3JpcHRpb246IHBhZ2VEZXNjcmlwdGlvbiwKICAgIH0sCiAgfTsKCmNvbnN0IGdsb3NzYXJ5VGVybXMgPSBbCiAgewogICAgdGVybTogIkJpYXMiLAogICAga29yZWFuOiAi7LWc7JWgIiwKICAgIHJvbWFuaXphdGlvbjogImNob2UtYWUiLAogICAgbWVhbmluZzogIllvdXIgZmF2b3JpdGUgbWVtYmVyIGluIGEgSy1wb3AgZ3JvdXAuIiwKICAgIG5vdGU6CiAgICAgICJJbiBmYW5kb20gdGFsaywgYmlhcyBpcyBvZnRlbiB0aGUgbWVtYmVyIHlvdSBuYXR1cmFsbHkgbm90aWNlLCBmb2xsb3csIHJld2F0Y2gsIG9yIGZlZWwgYXR0YWNoZWQgdG8g4oCUIG5vdCBvbmx5IGEgc2ltcGxlIGZhdm9yaXRlLiBIYXZpbmcgYSBiaWFzIGRvZXMgbm90IG1lYW4geW91IG5lZWQgdG8gaWdub3JlIG90aGVyIG1lbWJlcnMuIiwKICAgIGV4YW1wbGU6CiAgICAgICJZb3Ugd2F0Y2ggb25lIGZhbmNhbSBhbmQgc3VkZGVubHkga2VlcCBzZWFyY2hpbmcgdGhhdCBtZW1iZXIuIiwKICAgIGhyZWY6ICIva3BvcC93aGF0LWRvZXMtYmlhcy1tZWFuIiwKICB9LAogIHsKICAgIHRlcm06ICJCaWFzIHdyZWNrZXIiLAogICAgbWVhbmluZzoKICAgICAgIkEgbWVtYmVyIHdobyBtYWtlcyBhIGZhbiBxdWVzdGlvbiB0aGVpciBiaWFzIG9yIGtlZXBzIHN0ZWFsaW5nIHRoZWlyIGF0dGVudGlvbi4iLAogICAgbm90ZToKICAgICAgIlVzdWFsbHkgcGxheWZ1bCBmYW5kb20gbGFuZ3VhZ2UuIEEgYmlhcyB3cmVja2VyIGNhbiBhcHBlYXIgdGhyb3VnaCBhIGZhbmNhbSwga2lsbGluZyBwYXJ0LCBmdW5ueSBjbGlwLCBpbnRlcnZpZXcgbW9tZW50LCBvciBzdHJvbmcgc3RhZ2UgcHJlc2VuY2UuIiwKICAgIGV4YW1wbGU6CiAgICAgICJZb3UgdGhvdWdodCB5b3UgaGFkIG9uZSBiaWFzLCBidXQgYW5vdGhlciBtZW1iZXIncyBmYW5jYW0ga2VlcHMgcHVsbGluZyB5b3UgaW4uIiwKICAgIGhyZWY6ICIva3BvcC93aGF0LWlzLWEtYmlhcy13cmVja2VyLWluLWtwb3AiLAogIH0sCiAgewogICAgdGVybTogIkNvbWViYWNrIiwKICAgIGtvcmVhbjogIuy7tOuwsSIsCiAgICByb21hbml6YXRpb246ICJrZW9tYmFlayIsCiAgICBtZWFuaW5nOgogICAgICAiQSBuZXcgcmVsZWFzZSBhbmQgcHJvbW90aW9uIHBlcmlvZCBieSBhIEstcG9wIGFydGlzdCBvciBncm91cC4iLAogICAgbm90ZToKICAgICAgIkluIEstcG9wLCBjb21lYmFjayBkb2VzIG5vdCBhbHdheXMgbWVhbiByZXR1cm5pbmcgYWZ0ZXIgYSBsb25nIGFic2VuY2UuIEl0IHVzdWFsbHkgbWVhbnMgYSBuZXcgZXJhIHdpdGggdGVhc2VycywgYSB0aXRsZSB0cmFjaywgbXVzaWMgdmlkZW8sIHN0YWdlcywgYW5kIHByb21vdGlvbnMuIiwKICAgIGV4YW1wbGU6CiAgICAgICJGYW5zIG1heSBzYXkgYSBncm91cCBpcyBoYXZpbmcgYSBjb21lYmFjayB3aGVuIHRoZXkgcmVsZWFzZSBhIG5ldyB0aXRsZSB0cmFjayBhbmQgc3RhcnQgcHJvbW90aW5nIGl0IG9uIG11c2ljIHNob3dzLiIsCiAgICBocmVmOiAiL2twb3Avd2hhdC1kb2VzLWNvbWViYWNrLW1lYW4taW4ta3BvcCIsCiAgfSwKICB7CiAgICB0ZXJtOiAiTXVzaWMgc2hvdyIsCiAgICBrb3JlYW46ICLsnYzslYXrsKnshqEiLAogICAgcm9tYW5pemF0aW9uOiAiZXVtYWtiYW5nc29uZyIsCiAgICBtZWFuaW5nOgogICAgICAiQSBLb3JlYW4gYnJvYWRjYXN0IHByb2dyYW0gd2hlcmUgSy1wb3AgYXJ0aXN0cyBwZXJmb3JtIGN1cnJlbnQgc29uZ3MsIGVzcGVjaWFsbHkgZHVyaW5nIGNvbWViYWNrIHByb21vdGlvbnMuIiwKICAgIG5vdGU6CiAgICAgICJNdXNpYyBzaG93cyBhcmUgd2hlcmUgbWFueSBjb21lYmFjayBzdGFnZXMsIHRpdGxlIHRyYWNrIHBlcmZvcm1hbmNlcywgZmFuY2FtcywgZW5kaW5nIGZhaXJ5IG1vbWVudHMsIGFuZCB3ZWVrbHkgcGVyZm9ybWFuY2UgY2xpcHMgY29tZSBmcm9tLiBGYW5zIG9mdGVuIHNob3J0ZW4g7J2M7JWF67Cp7IahIHRvIOydjOuwqS4iLAogICAgZXhhbXBsZToKICAgICAgIkZhbnMgbWF5IHNheSBhIGdyb3VwIGlzIGRvaW5nIOydjOuwqSDtmZzrj5kgd2hlbiB0aGV5IGFyZSBwcm9tb3RpbmcgYSB0aXRsZSB0cmFjayBvbiBtdXNpYyBzaG93cy4iLAogICAgaHJlZjogIi9rcG9wL3doYXQtaXMtYS1tdXNpYy1zaG93LWluLWtwb3AiLAogIH0sCiAgewogICAgdGVybTogIk11c2ljIHNob3cgd2luIiwKICAgIGtvcmVhbjogIuydjOuwqSAx7JyEIiwKICAgIHJvbWFuaXphdGlvbjogImV1bWJhbmcgaWx3aSIsCiAgICBtZWFuaW5nOiAiQSBmaXJzdC1wbGFjZSByZXN1bHQgb3IgdHJvcGh5IG9uIGEgSy1wb3AgbXVzaWMgc2hvdy4iLAogICAgbm90ZToKICAgICAgIk11c2ljIHNob3cgd2luIHJ1bGVzIGNhbiB2YXJ5IGJ5IHByb2dyYW0gYW5kIHRpbWUsIHNvIGl0IGlzIGJldHRlciB0byB1bmRlcnN0YW5kIGl0IGFzIHBhcnQgb2YgcHJvbW90aW9uIGN1bHR1cmUgcmF0aGVyIHRoYW4gYSBzaW5nbGUgdW5pdmVyc2FsIHJhbmtpbmcgc3lzdGVtLiIsCiAgICBleGFtcGxlOgogICAgICAiRmFucyBtYXkgY2VsZWJyYXRlIGEgZ3JvdXDigJlzIGZpcnN0IG11c2ljIHNob3cgd2luIGR1cmluZyBhIGNvbWViYWNrLiIsCiAgICBocmVmOiAiL2twb3Avd2hhdC1pcy1hLW11c2ljLXNob3ctaW4ta3BvcCIsCiAgfSwKICB7CiAgICB0ZXJtOiAiVGl0bGUgdHJhY2siLAogICAga29yZWFuOiAi7YOA7J207YuA6rOhIiwKICAgIHJvbWFuaXphdGlvbjogInRhaXRldWxnb2siLAogICAgbWVhbmluZzogIlRoZSBtYWluIHNvbmcgcHJvbW90ZWQgZHVyaW5nIGEgSy1wb3AgY29tZWJhY2suIiwKICAgIG5vdGU6CiAgICAgICJBIHRpdGxlIHRyYWNrIHVzdWFsbHkgZ2V0cyB0aGUgbXVzaWMgdmlkZW8sIG1haW4gY2hvcmVvZ3JhcGh5LCBtdXNpYyBzaG93IHN0YWdlcywgZmFuY2FtcywgYW5kIHRoZSBtb3N0IHB1YmxpYyBhdHRlbnRpb24uIEl0IHJlcHJlc2VudHMgdGhlIGNvbWViYWNrLCBidXQgaXQgaXMgbm90IGFsd2F5cyBldmVyeSBmYW7igJlzIGZhdm9yaXRlIHNvbmcuIiwKICAgIGV4YW1wbGU6CiAgICAgICJGYW5zIG1heSB0YWxrIGFib3V0IHdoZXRoZXIgdGhlIHRpdGxlIHRyYWNrIG1hdGNoZXMgdGhlIGNvbWViYWNrIGNvbmNlcHQuIiwKICAgIGhyZWY6ICIva3BvcC93aGF0LWlzLWEtdGl0bGUtdHJhY2staW4ta3BvcCIsCiAgfSwKICB7CiAgICB0ZXJtOiAiQi1zaWRlIiwKICAgIGtvcmVhbjogIuyImOuhneqzoSIsCiAgICByb21hbml6YXRpb246ICJzdXJva2dvayIsCiAgICBtZWFuaW5nOiAiQSBzb25nIG9uIGEgSy1wb3AgYWxidW0gdGhhdCBpcyBub3QgdGhlIG1haW4gdGl0bGUgdHJhY2suIiwKICAgIG5vdGU6CiAgICAgICJCLXNpZGVzIGFyZSBub3QgdXN1YWxseSB0aGUgbWFpbiBwcm9tb3RlZCBzb25nLCBidXQgdGhleSBjYW4gc3RpbGwgYmVjb21lIGZhbiBmYXZvcml0ZXMgb3IgYmUgcGVyZm9ybWVkIG9uIHN0YWdlcy4iLAogICAgZXhhbXBsZToKICAgICAgIlNvbWUgZmFucyBtYXkgcHJlZmVyIGEgQi1zaWRlIGV2ZW4gd2hlbiB0aGUgdGl0bGUgdHJhY2sgZ2V0cyB0aGUgbWFpbiBwcm9tb3Rpb25zLiIsCiAgICBocmVmOiAiL2twb3Avd2hhdC1pcy1hLXRpdGxlLXRyYWNrLWluLWtwb3AiLAogIH0sCiAgewogICAgdGVybTogIlByZS1yZWxlYXNlIiwKICAgIGtvcmVhbjogIuyEoOqzteqwnOqzoSIsCiAgICByb21hbml6YXRpb246ICJzZW9uZ29uZ2dhZWdvayIsCiAgICBtZWFuaW5nOiAiQSBzb25nIHJlbGVhc2VkIGJlZm9yZSB0aGUgbWFpbiBjb21lYmFjayBvciB0aXRsZSB0cmFjay4iLAogICAgbm90ZToKICAgICAgIkEgcHJlLXJlbGVhc2UgY2FuIGJ1aWxkIGludGVyZXN0IGJlZm9yZSB0aGUgZnVsbCBjb21lYmFjaywgYnV0IGl0IGlzIG5vdCBhbHdheXMgdGhlIG1haW4gcHJvbW90ZWQgdGl0bGUgdHJhY2suIiwKICAgIGV4YW1wbGU6CiAgICAgICJBIGdyb3VwIG1heSByZWxlYXNlIGEgcHJlLXJlbGVhc2Ugc29uZyBiZWZvcmUgdGhlIHRpdGxlIHRyYWNrIGFuZCBhbGJ1bSBkcm9wLiIsCiAgICBocmVmOiAiL2twb3Avd2hhdC1pcy1hLXRpdGxlLXRyYWNrLWluLWtwb3AiLAogIH0sCiAgewogICAgdGVybTogIkNvbmNlcHQiLAogICAga29yZWFuOiAi7Luo7IWJIiwKICAgIHJvbWFuaXphdGlvbjogImtlb25zZXB0IiwKICAgIG1lYW5pbmc6CiAgICAgICJUaGUgb3ZlcmFsbCBtb29kLCBpbWFnZSwgc3RvcnksIGFuZCBzdHlsZSBvZiBhIEstcG9wIGNvbWViYWNrLCBzb25nLCBvciBlcmEuIiwKICAgIG5vdGU6CiAgICAgICJBIGNvbmNlcHQgY2FuIGluY2x1ZGUgbXVzaWMsIHN0eWxpbmcsIGNob3Jlb2dyYXBoeSwgbXVzaWMgdmlkZW8sIHRlYXNlciBwaG90b3MsIHN0YWdlIG91dGZpdHMsIGV4cHJlc3Npb25zLCBhbmQgaG93IHRoZSBncm91cCdzIGltYWdlIGlzIHByZXNlbnRlZC4iLAogICAgZXhhbXBsZToKICAgICAgIkZhbnMgbWF5IHNheSBhIGNvbWViYWNrIGhhcyBhIGJyaWdodCBjb25jZXB0LCBkYXJrIGNvbmNlcHQsIGVsZWdhbnQgY29uY2VwdCwgY3V0ZSBjb25jZXB0LCBvciBzdW1tZXIgY29uY2VwdC4iLAogICAgaHJlZjogIi9rcG9wL3doYXQtZG9lcy1jb25jZXB0LW1lYW4taW4ta3BvcCIsCiAgfSwKICB7CiAgICB0ZXJtOiAiTWFrbmFlIiwKICAgIGtvcmVhbjogIuunieuCtCIsCiAgICByb21hbml6YXRpb246ICJtYWtuYWUiLAogICAgbWVhbmluZzogIlRoZSB5b3VuZ2VzdCBwZXJzb24gaW4gYSBncm91cCwgZmFtaWx5LCB0ZWFtLCBvciBzb2NpYWwgc2V0dGluZy4iLAogICAgbm90ZToKICAgICAgIkluIEstcG9wLCBtYWtuYWUgdXN1YWxseSBtZWFucyB0aGUgeW91bmdlc3QgaWRvbCBtZW1iZXIuIEZhbnMgb2Z0ZW4gbm90aWNlIGdyb3d0aCwgZ3JvdXAgZHluYW1pY3MsIGFuZCBob3cgb2xkZXIgbWVtYmVycyBpbnRlcmFjdCB3aXRoIHRoZSB5b3VuZ2VzdCDigJQgbm90IG9ubHkgYWdlLiIsCiAgICBleGFtcGxlOiAiRmFucyBtYXkgd2F0Y2ggYSBtYWtuYWUgZ3JvdyBtb3JlIGNvbmZpZGVudCBhY3Jvc3MgY29tZWJhY2sgZXJhcy4iLAogICAgaHJlZjogIi9rcG9wL3doYXQtaXMtbWFrbmFlIiwKICB9LAogIHsKICAgIHRlcm06ICJHb2xkZW4gbWFrbmFlIiwKICAgIGtvcmVhbjogIu2Zqeq4iOunieuCtCIsCiAgICByb21hbml6YXRpb246ICJod2FuZ2dldW0tbWFrbmFlIiwKICAgIG1lYW5pbmc6ICJBIHlvdW5nZXN0IG1lbWJlciB3aG8gc2VlbXMgZ29vZCBhdCBhbG1vc3QgZXZlcnl0aGluZy4iLAogICAgbm90ZToKICAgICAgIlRoaXMgZXhwcmVzc2lvbiBpcyBzdHJvbmdseSBjb25uZWN0ZWQgd2l0aCBKdW5nIEtvb2sgYmVjYXVzZSBmYW5zIG5vdGljZWQgaGlzIHNpbmdpbmcsIGRhbmNpbmcsIHBlcmZvcm1pbmcsIGFuZCBtYW55IG90aGVyIHNraWxscyBmcm9tIGVhcmx5IG9uLiIsCiAgICBleGFtcGxlOiAiQVJNWSBvZnRlbiBjYWxsIEp1bmcgS29vayB0aGUgZ29sZGVuIG1ha25hZS4iLAogICAgaHJlZjogIi9rcG9wL3doYXQtaXMtbWFrbmFlIgogIH0sCiAgewogICAgdGVybTogIkNlbnRlciIsCiAgICBrb3JlYW46ICLshLzthLAiLAogICAgcm9tYW5pemF0aW9uOiAic2VudGVvIiwKICAgIG1lYW5pbmc6CiAgICAgICJUaGUgbWVtYmVyIHBsYWNlZCBpbiB0aGUgbWFpbiBmb2N1cyBvZiBhIGdyb3Vw4oCZcyBzdGFnZSwgY2hvcmVvZ3JhcGh5LCBwaG90bywgdGVhc2VyLCBvciBwZXJmb3JtYW5jZSBtb21lbnQuIiwKICAgIG5vdGU6CiAgICAgICJDZW50ZXIgaXMgYWJvdXQgZm9jdXMgYW5kIHBsYWNlbWVudCwgbm90IG9ubHkgc3RhbmRpbmcgaW4gdGhlIGxpdGVyYWwgbWlkZGxlLiBJdCBkb2VzIG5vdCBhdXRvbWF0aWNhbGx5IG1lYW4gdGhlIGJlc3Qgc2luZ2VyLCBkYW5jZXIsIG9yIG1vc3QgcG9wdWxhciBtZW1iZXIuIiwKICAgIGV4YW1wbGU6CiAgICAgICJUaGUgbWVtYmVyIGluIHRoZSBtaWRkbGUgb2YgdGhlIGNob3J1cyBmb3JtYXRpb24gaXMgb2Z0ZW4gd2hlcmUgZmFucyBmaXJzdCBub3RpY2UgY2VudGVyLiIsCiAgICBocmVmOiAiL2twb3Avd2hhdC1pcy1jZW50ZXItaW4ta3BvcCIKICB9LAogIHsKICAgIHRlcm06ICJWaXN1YWwiLAogICAga29yZWFuOiAi67mE7KO87Ja8IiwKICAgIHJvbWFuaXphdGlvbjogImJpanVlb2wiLAogICAgbWVhbmluZzoKICAgICAgIlRoZSBtZW1iZXIgb2Z0ZW4gYXNzb2NpYXRlZCB3aXRoIGEgZ3JvdXAncyBwdWJsaWMgaW1hZ2Ugb3IgdmlzdWFsIGlkZW50aXR5LiIsCiAgICBub3RlOgogICAgICAiVmlzdWFsIGRvZXMgbm90IG1lYW4gdGhlIG9ubHkgYXR0cmFjdGl2ZSBtZW1iZXIuIEl0IG9mdGVuIHBvaW50cyB0byB3aG8gZml0cyB0aGUgZ3JvdXAncyBjb25jZXB0IHBob3RvcywgdGVhc2Vycywgb3IgZmlyc3QgaW1wcmVzc2lvbiBlc3BlY2lhbGx5IHdlbGwuIiwKICAgIGV4YW1wbGU6CiAgICAgICJGYW5zIG1heSB0YWxrIGFib3V0IGEgbWVtYmVyJ3MgdmlzdWFsIGZpdCBpbiBhIGNvbWViYWNrIGNvbmNlcHQgcGhvdG8uIiwKICAgIGhyZWY6ICIva3BvcC93aGF0LWlzLXZpc3VhbC1pbi1rcG9wIiwKICB9LAogIHsKICAgIHRlcm06ICJGYW5jYW0iLAogICAga29yZWFuOiAi7KeB7LqgIiwKICAgIHJvbWFuaXphdGlvbjogImppa2NhbSIsCiAgICBtZWFuaW5nOiAiQSB2aWRlbyBmb2N1c2VkIG9uIG9uZSBpZG9sIGR1cmluZyBhIHBlcmZvcm1hbmNlLiIsCiAgICBub3RlOgogICAgICAiSW4gSy1wb3AgdG9kYXksIG1hbnkgZmFuY2FtcyBhcmUgb2ZmaWNpYWwgbXVzaWMtc2hvdyB2aWRlb3MsIG5vdCBvbmx5IGZhbiByZWNvcmRpbmdzLiBUaGV5IGxldCBmYW5zIHdhdGNoIHNtYWxsIGV4cHJlc3Npb25zLCBzdHlsaW5nLCBhbmQgZGV0YWlscyB0aGF0IGFyZSBlYXN5IHRvIG1pc3MgaW4gYSBmdWxsLXN0YWdlIHZpZGVvLiIsCiAgICBleGFtcGxlOiAiQSBLYXJpbmEgZmFuY2FtIGNhbiBzaG93IGhlciBzaGFycCBzdGFnZSBwcmVzZW5jZSBjbGVhcmx5LiIsCiAgICBocmVmOiAiL2twb3Avd2hhdC1pcy1hLWZhbmNhbSIKICB9LAogIHsKICAgIHRlcm06ICJEZWJ1dCIsCiAgICBrb3JlYW46ICLrjbDrt5QiLAogICAgcm9tYW5pemF0aW9uOiAiZGVieXUiLAogICAgbWVhbmluZzogIlRoZSBvZmZpY2lhbCBzdGFydCBvZiBhIEstcG9wIGlkb2wsIHNvbG8gYXJ0aXN0LCBvciBncm91cC4iLAogICAgbm90ZToKICAgICAgIkEgZGVidXQgdXN1YWxseSBpbnRyb2R1Y2VzIGFuIGFydGlzdCB0aHJvdWdoIGEgZmlyc3Qgb2ZmaWNpYWwgcmVsZWFzZSwgbXVzaWMgdmlkZW8sIHN0YWdlLCBvciBwcm9tb3Rpb24gcGVyaW9kLiBJdCBpcyBkaWZmZXJlbnQgZnJvbSBhIGNvbWViYWNrLCB3aGljaCBoYXBwZW5zIGFmdGVyIGRlYnV0LiIsCiAgICBleGFtcGxlOgogICAgICAiRmFucyBtYXkgc2F5IGEgZ3JvdXAgaXMgcHJlcGFyaW5nIGZvciBkZWJ1dCB3aGVuIHRlYXNlcnMgYW5kIGZpcnN0LXJlbGVhc2UgcHJvbW90aW9ucyBiZWdpbi4iLAogICAgaHJlZjogIi9rcG9wL3doYXQtZG9lcy1kZWJ1dC1tZWFuLWluLWtwb3AiLAogIH0sCiAgewogICAgdGVybTogIlByZS1kZWJ1dCIsCiAgICBrb3JlYW46ICLrjbDrt5Qg7KCEIiwKICAgIHJvbWFuaXphdGlvbjogImRlYnl1IGplb24iLAogICAgbWVhbmluZzogIlRoZSBwZXJpb2QgYmVmb3JlIGFuIGlkb2wsIHNvbG8gYXJ0aXN0LCBvciBncm91cCBvZmZpY2lhbGx5IGRlYnV0cy4iLAogICAgbm90ZToKICAgICAgIlByZS1kZWJ1dCBjb250ZW50IGNhbiBpbmNsdWRlIHRyYWluZWUgaGlzdG9yeSwgdGVhc2Vycywgc3Vydml2YWwgc2hvd3MsIHByYWN0aWNlIHZpZGVvcywgb3IgZWFybHkgcHVibGljIGFwcGVhcmFuY2VzIGJlZm9yZSB0aGUgb2ZmaWNpYWwgc3RhcnQuIiwKICAgIGV4YW1wbGU6CiAgICAgICJTb21lIGZhbnMgZm9sbG93IGlkb2xzIGZyb20gcHJlLWRlYnV0IGJlZm9yZSB0aGUgZ3JvdXAgcmVsZWFzZXMgaXRzIGZpcnN0IG9mZmljaWFsIHNvbmcuIiwKICAgIGhyZWY6ICIva3BvcC93aGF0LWRvZXMtZGVidXQtbWVhbi1pbi1rcG9wIiwKICB9LAogIHsKICAgIHRlcm06ICJUcmFpbmVlIiwKICAgIGtvcmVhbjogIuyXsOyKteyDnSIsCiAgICByb21hbml6YXRpb246ICJ5ZW9uc3NldXBzYWVuZyIsCiAgICBtZWFuaW5nOiAiQSBwZXJzb24gcHJlcGFyaW5nIHRvIGJlY29tZSBhbiBpZG9sIGJlZm9yZSBkZWJ1dC4iLAogICAgbm90ZToKICAgICAgIlRyYWluZWVzIG1heSBwcmFjdGljZSBzaW5naW5nLCBkYW5jZSwgcGVyZm9ybWFuY2UsIGxhbmd1YWdlLCBtZWRpYSBza2lsbHMsIGFuZCBzdGFnZSBiYXNpY3MgYmVmb3JlIGFuIG9mZmljaWFsIGRlYnV0LiIsCiAgICBleGFtcGxlOgogICAgICAiQSB0cmFpbmVlIG1heSBiZWNvbWUgcGFydCBvZiBhIGRlYnV0IGxpbmV1cCBhZnRlciB5ZWFycyBvZiBwcmFjdGljZS4iLAogICAgaHJlZjogIi9rcG9wL3doYXQtZG9lcy1kZWJ1dC1tZWFuLWluLWtwb3AiLAogIH0sCiAgewogICAgdGVybTogIlJvb2tpZSBncm91cCIsCiAgICBrb3JlYW46ICLro6jtgqQiLAogICAgcm9tYW5pemF0aW9uOiAicnVraSIsCiAgICBtZWFuaW5nOgogICAgICAiQSBLLXBvcCBncm91cCBpbiBpdHMgZWFybHkgZGVidXQgcGVyaW9kLCB3aGVuIGZhbnMgYXJlIHN0aWxsIGxlYXJuaW5nIHRoZSBtZW1iZXJzIGFuZCB0aGUgdGVhbSdzIHB1YmxpYyBpbWFnZS4iLAogICAgbm90ZToKICAgICAgIkZhbnMgb2Z0ZW4gZGlzY292ZXIgYSByb29raWUgZ3JvdXAgdGhyb3VnaCBvbmUgZmFuY2FtLCBvbmUgc2hvcnQgY2xpcCwgb3IgdGhlIGZpcnN0IG1lbWJlciB0aGV5IHJlbWVtYmVyIOKAlCBub3QgdGhlIHdob2xlIHRlYW0gYXQgb25jZS4iLAogICAgZXhhbXBsZToKICAgICAgIkEgZmFuIG1heSBoZWFyIENPUlRJUyBmaXJzdCwgdGhlbiByZW1lbWJlciBLZW9uaG8gdGhyb3VnaCBhIEpveVJpZGUgZmFuY2FtIGJlZm9yZSBsZWFybmluZyBldmVyeSBtZW1iZXIgbmFtZS4iLAogICAgaHJlZjogIi9rcG9wL3doYXQtaXMtYS1yb29raWUtZ3JvdXAtaW4ta3BvcCIsCiAgfSwKICB7CiAgICB0ZXJtOiAiRW9scHBhay1qaWtjYW0iLAogICAga29yZWFuOiAi7Ja867mh7KeB7LqgIiwKICAgIHJvbWFuaXphdGlvbjogImVvbHBwYWstamlrY2FtIiwKICAgIG1lYW5pbmc6CiAgICAgICJBIEtvcmVhbiBmYW4gc2xhbmcgdGVybSBmb3IgYSBjbG9zZS11cCBmYW5jYW0gd2hlcmUgdGhlIGlkb2zigJlzIGZhY2UgZmlsbHMgbXVjaCBvZiB0aGUgc2NyZWVuLiIsCiAgICBub3RlOgogICAgICAiSXQgaXMgY2FzdWFsIGZhbmRvbSBsYW5ndWFnZSwgbm90IGEgZm9ybWFsIGJyb2FkY2FzdCB0ZXJtLiBGYW5zIHdhdGNoIGZvciBleHByZXNzaW9ucywgZXllIGNvbnRhY3QsIGJyZWF0aGluZywgYW5kIHRpbnkgbW9vZCBjaGFuZ2VzIHRoYXQgYXJlIGVhc3kgdG8gbWlzcyBpbiBhIGZ1bGwtc3RhZ2UgdmlkZW8uIiwKICAgIGV4YW1wbGU6CiAgICAgICJFeWUgY29udGFjdCBkdXJpbmcgYSBxdWlldCBsaW5lIGNhbiBiZWNvbWUgdGhlIG1vbWVudCBmYW5zIHJlcGxheSBpbiBhbiDslrzruaHsp4HsuqAuIiwKICAgIGhyZWY6ICIva3BvcC93aGF0LWlzLWNsb3NlLXVwLWZhbmNhbS1pbi1rcG9wIiwKICB9LAogIHsKICAgIHRlcm06ICJFbmRpbmcgZmFpcnkiLAogICAga29yZWFuOiAi7JeU65Sp7JqU7KCVIiwKICAgIHJvbWFuaXphdGlvbjogImVuZGluZy15b2plb25nIiwKICAgIG1lYW5pbmc6CiAgICAgICJUaGUgZmluYWwgY2xvc2UtdXAgY2FtZXJhIG1vbWVudCBhZnRlciBhIEstcG9wIHBlcmZvcm1hbmNlIGVuZHMuIiwKICAgIG5vdGU6CiAgICAgICJGYW5zIG5vdGljZSB0aW1pbmcsIGJyZWF0aGluZywgZXhwcmVzc2lvbiBjb250cm9sLCBhbmQgY2FtZXJhIGF3YXJlbmVzcyDigJQgbm90IG9ubHkgYXBwZWFyYW5jZS4gQSBzdHJvbmcgZW5kaW5nIGZhaXJ5IGlzIGFib3V0IGhvdyB0aGUgaWRvbCB1c2VzIHRob3NlIGZpbmFsIGZldyBzZWNvbmRzLiIsCiAgICBleGFtcGxlOiAiQW4gZW5kaW5nIGZhaXJ5IGNsaXAgY2FuIGJlY29tZSB2aXJhbCBldmVuIGFmdGVyIHRoZSBzdGFnZSBlbmRzLiIsCiAgICBocmVmOiAiL2twb3Avd2hhdC1pcy1lbmRpbmctZmFpcnkiCiAgfSwKICB7CiAgICB0ZXJtOiAiS2lsbGluZyBwYXJ0IiwKICAgIGtvcmVhbjogIu2CrOunge2MjO2KuCIsCiAgICByb21hbml6YXRpb246ICJraWxsaW5nIHBhcnQiLAogICAgbWVhbmluZzoKICAgICAgIlRoZSBzaG9ydCBwYXJ0IG9mIGEgc29uZyBvciBwZXJmb3JtYW5jZSB0aGF0IGZhbnMgcmVtZW1iZXIsIHJlcGxheSwgcXVvdGUsIG9yIHNoYXJlLiIsCiAgICBub3RlOgogICAgICAi4oCcS2lsbGluZ+KAnSBoZXJlIGRvZXMgbm90IG1lYW4gdmlvbGVuY2UuIEluIEstcG9wIGZhbiBsYW5ndWFnZSwgaXQgbWVhbnMgdGhlIHN0YW5kb3V0IG1vbWVudCB0aGF0IGhpdHMgc3Ryb25nbHkg4oCUIGEgdm9jYWwgbGluZSwgbW92ZSwgZXhwcmVzc2lvbiwgb3IgY2FtZXJhIG1vbWVudC4iLAogICAgZXhhbXBsZToKICAgICAgIkZhbnMgbWF5IHJlcGxheSBvbmUgbGluZSBiZWZvcmUgdGhlIGNob3J1cyBvciBhIGhhbmQgZ2VzdHVyZSBldmVyeW9uZSBjb3BpZXMgaW4gYSBkYW5jZSBjaGFsbGVuZ2UuIiwKICAgIGhyZWY6ICIva3BvcC93aGF0LWlzLWtpbGxpbmctcGFydC1pbi1rcG9wIiwKICB9LAogIHsKICAgIHRlcm06ICJQb2ludCBjaG9yZW9ncmFwaHkiLAogICAga29yZWFuOiAi7Y+s7J247Yq4IOyViOustCIsCiAgICByb21hbml6YXRpb246ICJwb2ludGV1IGFubXUiLAogICAgbWVhbmluZzoKICAgICAgIlRoZSBzaWduYXR1cmUgZGFuY2UgbW92ZSBvciBnZXN0dXJlIHBlb3BsZSByZW1lbWJlciBmcm9tIGEgSy1wb3Agc29uZy4iLAogICAgbm90ZToKICAgICAgIlBvaW50IGNob3Jlb2dyYXBoeSBvZnRlbiBhcHBlYXJzIGluIHRoZSBjaG9ydXMgb3IgaG9vayBhbmQgaGVscHMgYSBzb25nIGJlY29tZSBlYXN5IHRvIHJlY29nbml6ZSwgY29weSwgYW5kIHNoYXJlLiBJdCBjYW4gYmVjb21lIGEga2lsbGluZyBwYXJ0LCBidXQgbm90IGV2ZXJ5IGtpbGxpbmcgcGFydCBpcyBjaG9yZW9ncmFwaHkuIiwKICAgIGV4YW1wbGU6CiAgICAgICJGYW5zIG1heSByZW1lbWJlciBhIGNvbWViYWNrIGJlY2F1c2UgdGhlIGNob3J1cyBoYXMgYSBjbGVhciDtj6zsnbjtirgg7JWI66y0LiIsCiAgICBocmVmOiAiL2twb3Avd2hhdC1pcy1wb2ludC1jaG9yZW9ncmFwaHktaW4ta3BvcCIsCiAgfSwKICB7CiAgICB0ZXJtOiAiRGFuY2UgcHJhY3RpY2UiLAogICAga29yZWFuOiAi7JWI66y0IOyXsOyKtSDsmIHsg4EiLAogICAgcm9tYW5pemF0aW9uOiAiYW5tdSB5ZW9uc2V1cCB5ZW9uZ3NhbmciLAogICAgbWVhbmluZzoKICAgICAgIkEgY2hvcmVvZ3JhcGh5LWZvY3VzZWQgdmlkZW8gdGhhdCBzaG93cyB0aGUgZnVsbCBkYW5jZSBtb3JlIGNsZWFybHkgdGhhbiBhIG11c2ljIHZpZGVvIG9yIGVkaXRlZCBzdGFnZS4iLAogICAgbm90ZToKICAgICAgIkRhbmNlIHByYWN0aWNlIHZpZGVvcyBhcmUgb2Z0ZW4gZmlsbWVkIGluIGEgcHJhY3RpY2Ugcm9vbSBvciBzdHVkaW8gYW5kIGhlbHAgZmFucyBzZWUgZm9ybWF0aW9ucywgdGltaW5nLCBwb2ludCBjaG9yZW9ncmFwaHksIHRyYW5zaXRpb25zLCBhbmQgZ3JvdXAgc3luY2hyb25pemF0aW9uLiIsCiAgICBleGFtcGxlOgogICAgICAiRmFucyBtYXkgd2F0Y2ggYSBkYW5jZSBwcmFjdGljZSBhZnRlciBhIGNvbWViYWNrIHN0YWdlIHRvIHVuZGVyc3RhbmQgdGhlIHBvaW50IGNob3Jlb2dyYXBoeSBtb3JlIGNsZWFybHkuIiwKICAgIGhyZWY6ICIva3BvcC93aGF0LWlzLWRhbmNlLXByYWN0aWNlLWluLWtwb3AiLAogIH0sCiAgewogICAgdGVybTogIlN0YWdlIHByZXNlbmNlIiwKICAgIGtvcmVhbjogIuustOuMgCDsobTsnqzqsJAiLAogICAgcm9tYW5pemF0aW9uOiAibXVkZSBqb25zYWVnYW0iLAogICAgbWVhbmluZzoKICAgICAgIlRoZSB3YXkgYW4gaWRvbCBob2xkcyBhdHRlbnRpb24gZHVyaW5nIGEgcGVyZm9ybWFuY2UuIiwKICAgIG5vdGU6CiAgICAgICJTdGFnZSBwcmVzZW5jZSBpcyBub3Qgb25seSBkYW5jaW5nIGhhcmQgb3IgbWFraW5nIGJpZyBleHByZXNzaW9ucy4gSXQgY2FuIGluY2x1ZGUgdGltaW5nLCBleHByZXNzaW9uIGNvbnRyb2wsIGNhbWVyYSBhd2FyZW5lc3MsIGVuZXJneSBjb250cm9sLCBhbmQgaG93IHdlbGwgdGhlIGlkb2wgZml0cyB0aGUgc29uZyBjb25jZXB0LiIsCiAgICBleGFtcGxlOgogICAgICAiRmFucyBtYXkgbm90aWNlIHN0YWdlIHByZXNlbmNlIHdoZW4gYSBtZW1iZXIgc3RheXMgaW50ZXJlc3RpbmcgZXZlbiB3aGlsZSBub3Qgc2luZ2luZyBvciBzdGFuZGluZyBpbiB0aGUgY2VudGVyLiIsCiAgICBocmVmOiAiL2twb3Avd2hhdC1pcy1zdGFnZS1wcmVzZW5jZS1pbi1rcG9wIiwKICB9LAogIHsKICAgIHRlcm06ICJBZWd5byIsCiAgICBrb3JlYW46ICLslaDqtZAiLAogICAgcm9tYW5pemF0aW9uOiAiYWVneW8iLAogICAgbWVhbmluZzogIkN1dGUgYmVoYXZpb3IsIGV4cHJlc3Npb25zLCBvciBzcGVlY2ggdXNlZCB0byBjaGFybSBwZW9wbGUuIiwKICAgIG5vdGU6CiAgICAgICJBZWd5byBjYW4gYmUgbmF0dXJhbCwgcGxheWZ1bCwgb3IgaW50ZW50aW9uYWxseSBleGFnZ2VyYXRlZC4gU29tZSBpZG9scyBhcmUga25vd24gZm9yIGJlaW5nIGdvb2QgYXQgaXQsIHdoaWxlIG90aGVycyBhcmUgbG92ZWQgYmVjYXVzZSB0aGV5IGZlZWwgYXdrd2FyZCBkb2luZyBpdC4iLAogICAgZXhhbXBsZTogIkZhbnMgc29tZXRpbWVzIGFzayBpZG9scyB0byBzaG93IGFlZ3lvIGR1cmluZyBsaXZlIHN0cmVhbXMuIiwKICAgIGhyZWY6ICIva3BvcC93aGF0LWlzLWFlZ3lvIiwKICB9LAogIHsKICAgIHRlcm06ICJBbGwtcm91bmRlciIsCiAgICBrb3JlYW46ICLsmKzrnbzsmrTrjZQiLAogICAgcm9tYW5pemF0aW9uOiAib2xsYS11bmRlbyIsCiAgICBtZWFuaW5nOgogICAgICAiQW4gaWRvbCB3aG8gY2FuIGRvIG1hbnkgdGhpbmdzIHdlbGwsIHN1Y2ggYXMgc2luZ2luZywgZGFuY2luZywgcmFwcGluZywgYW5kIHBlcmZvcm1pbmcuIiwKICAgIG5vdGU6CiAgICAgICJLb3JlYW4gZmFucyBhbHNvIHVzZSB0aGUgRW5nbGlzaC1iYXNlZCB3b3JkIOyYrOudvOyatOuNlC4gSXQgaXMgb2Z0ZW4gdXNlZCBmb3IgbWVtYmVycyB3aG8gZG8gbm90IGZpdCBpbnRvIG9ubHkgb25lIHJvbGUuIiwKICAgIGV4YW1wbGU6ICJIYXlvdW5nIGlzIG9mdGVuIGFwcHJlY2lhdGVkIGFzIGFuIGFsbC1yb3VuZGVyIHR5cGUgbWVtYmVyLiIsCiAgfSwKICB7CiAgICB0ZXJtOiAiSG9yYW5naGFlIiwKICAgIGtvcmVhbjogIuKZmzLnpHZbC
+import type { Metadata } from "next";
+import Link from "next/link";
+import SiteHeader from "../../../components/SiteHeader";
+import JsonLd from "../../../components/JsonLd";
+
+const siteUrl = "https://haemilkorea.com";
+const pageUrl = `${siteUrl}/kpop/glossary`;
+
+const pageTitle =
+  "K-pop Glossary | Bias, Maknae, Fancam, Ending Fairy & Korean Fan Words";
+const pageDescription =
+  "A friendly guide to Korean K-pop fan words like bias, maknae, center, fancam, ending fairy, eolppak-jikcam, aegyo, and horanghae.";
+  export const metadata: Metadata = {
+    title: pageTitle,
+    description: pageDescription,
+    alternates: {
+      canonical: "/kpop/glossary",
+    },
+    openGraph: {
+      title: pageTitle,
+      description: pageDescription,
+      url: pageUrl,
+      siteName: "HAEMIL",
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: pageTitle,
+      description: pageDescription,
+    },
+  };
+
+const glossaryTerms = [
+  {
+    term: "Bias",
+    korean: "최애",
+    romanization: "choe-ae",
+    meaning: "Your favorite member in a K-pop group.",
+    note:
+      "In fandom talk, bias is often the member you naturally notice, follow, rewatch, or feel attached to — not only a simple favorite. Having a bias does not mean you need to ignore other members.",
+    example:
+      "You watch one fancam and suddenly keep searching that member.",
+    href: "/kpop/what-does-bias-mean",
+  },
+  {
+    term: "Bias wrecker",
+    meaning:
+      "A member who makes a fan question their bias or keeps stealing their attention.",
+    note:
+      "Usually playful fandom language. A bias wrecker can appear through a fancam, killing part, funny clip, interview moment, or strong stage presence.",
+    example:
+      "You thought you had one bias, but another member's fancam keeps pulling you in.",
+    href: "/kpop/what-is-a-bias-wrecker-in-kpop",
+  },
+  {
+    term: "Comeback",
+    korean: "컴백",
+    romanization: "keombaek",
+    meaning:
+      "A new release and promotion period by a K-pop artist or group.",
+    note:
+      "In K-pop, comeback does not always mean returning after a long absence. It usually means a new era with teasers, a title track, music video, stages, and promotions.",
+    example:
+      "Fans may say a group is having a comeback when they release a new title track and start promoting it on music shows.",
+    href: "/kpop/what-does-comeback-mean-in-kpop",
+  },
+  {
+    term: "Music show",
+    korean: "음악방송",
+    romanization: "eumakbangsong",
+    meaning:
+      "A Korean broadcast program where K-pop artists perform current songs, especially during comeback promotions.",
+    note:
+      "Music shows are where many comeback stages, title track performances, fancams, ending fairy moments, and weekly performance clips come from. Fans often shorten 음악방송 to 음방.",
+    example:
+      "Fans may say a group is doing 음방 활동 when they are promoting a title track on music shows.",
+    href: "/kpop/what-is-a-music-show-in-kpop",
+  },
+  {
+    term: "Music show win",
+    korean: "음방 1위",
+    romanization: "eumbang ilwi",
+    meaning: "A first-place result or trophy on a K-pop music show.",
+    note:
+      "Music show win rules can vary by program and time, so it is better to understand it as part of promotion culture rather than a single universal ranking system.",
+    example:
+      "Fans may celebrate a group’s first music show win during a comeback.",
+    href: "/kpop/what-is-a-music-show-in-kpop",
+  },
+  {
+    term: "Title track",
+    korean: "타이틀곡",
+    romanization: "taiteulgok",
+    meaning: "The main song promoted during a K-pop comeback.",
+    note:
+      "A title track usually gets the music video, main choreography, music show stages, fancams, and the most public attention. It represents the comeback, but it is not always every fan’s favorite song.",
+    example:
+      "Fans may talk about whether the title track matches the comeback concept.",
+    href: "/kpop/what-is-a-title-track-in-kpop",
+  },
+  {
+    term: "B-side",
+    korean: "수록곡",
+    romanization: "surokgok",
+    meaning: "A song on a K-pop album that is not the main title track.",
+    note:
+      "B-sides are not usually the main promoted song, but they can still become fan favorites or be performed on stages.",
+    example:
+      "Some fans may prefer a B-side even when the title track gets the main promotions.",
+    href: "/kpop/what-is-a-title-track-in-kpop",
+  },
+  {
+    term: "Pre-release",
+    korean: "선공개곡",
+    romanization: "seongonggaegok",
+    meaning: "A song released before the main comeback or title track.",
+    note:
+      "A pre-release can build interest before the full comeback, but it is not always the main promoted title track.",
+    example:
+      "A group may release a pre-release song before the title track and album drop.",
+    href: "/kpop/what-is-a-title-track-in-kpop",
+  },
+  {
+    term: "Concept",
+    korean: "컨셉",
+    romanization: "keonsept",
+    meaning:
+      "The overall mood, image, story, and style of a K-pop comeback, song, or era.",
+    note:
+      "A concept can include music, styling, choreography, music video, teaser photos, stage outfits, expressions, and how the group's image is presented.",
+    example:
+      "Fans may say a comeback has a bright concept, dark concept, elegant concept, cute concept, or summer concept.",
+    href: "/kpop/what-does-concept-mean-in-kpop",
+  },
+  {
+    term: "Maknae",
+    korean: "막내",
+    romanization: "maknae",
+    meaning: "The youngest person in a group, family, team, or social setting.",
+    note:
+      "In K-pop, maknae usually means the youngest idol member. Fans often notice growth, group dynamics, and how older members interact with the youngest — not only age.",
+    example: "Fans may watch a maknae grow more confident across comeback eras.",
+    href: "/kpop/what-is-maknae",
+  },
+  {
+    term: "Golden maknae",
+    korean: "황금막내",
+    romanization: "hwanggeum-maknae",
+    meaning: "A youngest member who seems good at almost everything.",
+    note:
+      "This expression is strongly connected with Jung Kook because fans noticed his singing, dancing, performing, and many other skills from early on.",
+    example: "ARMY often call Jung Kook the golden maknae.",
+    href: "/kpop/what-is-maknae"
+  },
+  {
+    term: "Center",
+    korean: "센터",
+    romanization: "senteo",
+    meaning:
+      "The member placed in the main focus of a group’s stage, choreography, photo, teaser, or performance moment.",
+    note:
+      "Center is about focus and placement, not only standing in the literal middle. It does not automatically mean the best singer, dancer, or most popular member.",
+    example:
+      "The member in the middle of the chorus formation is often where fans first notice center.",
+    href: "/kpop/what-is-center-in-kpop"
+  },
+  {
+    term: "Visual",
+    korean: "비주얼",
+    romanization: "bijueol",
+    meaning:
+      "The member often associated with a group's public image or visual identity.",
+    note:
+      "Visual does not mean the only attractive member. It often points to who fits the group's concept photos, teasers, or first impression especially well.",
+    example:
+      "Fans may talk about a member's visual fit in a comeback concept photo.",
+    href: "/kpop/what-is-visual-in-kpop",
+  },
+  {
+    term: "Fancam",
+    korean: "직캠",
+    romanization: "jikcam",
+    meaning: "A video focused on one idol during a performance.",
+    note:
+      "In K-pop today, many fancams are official music-show videos, not only fan recordings. They let fans watch small expressions, styling, and details that are easy to miss in a full-stage video.",
+    example: "A Karina fancam can show her sharp stage presence clearly.",
+    href: "/kpop/what-is-a-fancam"
+  },
+  {
+    term: "Debut",
+    korean: "데뷔",
+    romanization: "debyu",
+    meaning: "The official start of a K-pop idol, solo artist, or group.",
+    note:
+      "A debut usually introduces an artist through a first official release, music video, stage, or promotion period. It is different from a comeback, which happens after debut.",
+    example:
+      "Fans may say a group is preparing for debut when teasers and first-release promotions begin.",
+    href: "/kpop/what-does-debut-mean-in-kpop",
+  },
+  {
+    term: "Pre-debut",
+    korean: "데뷔 전",
+    romanization: "debyu jeon",
+    meaning: "The period before an idol, solo artist, or group officially debuts.",
+    note:
+      "Pre-debut content can include trainee history, teasers, survival shows, practice videos, or early public appearances before the official start.",
+    example:
+      "Some fans follow idols from pre-debut before the group releases its first official song.",
+    href: "/kpop/what-does-debut-mean-in-kpop",
+  },
+  {
+    term: "Trainee",
+    korean: "연습생",
+    romanization: "yeonsseupsaeng",
+    meaning: "A person preparing to become an idol before debut.",
+    note:
+      "Trainees may practice singing, dance, performance, language, media skills, and stage basics before an official debut.",
+    example:
+      "A trainee may become part of a debut lineup after years of practice.",
+    href: "/kpop/what-does-debut-mean-in-kpop",
+  },
+  {
+    term: "Rookie group",
+    korean: "루키",
+    romanization: "ruki",
+    meaning:
+      "A K-pop group in its early debut period, when fans are still learning the members and the team's public image.",
+    note:
+      "Fans often discover a rookie group through one fancam, one short clip, or the first member they remember — not the whole team at once.",
+    example:
+      "A fan may hear CORTIS first, then remember Keonho through a JoyRide fancam before learning every member name.",
+    href: "/kpop/what-is-a-rookie-group-in-kpop",
+  },
+  {
+    term: "Eolppak-jikcam",
+    korean: "얼빡직캠",
+    romanization: "eolppak-jikcam",
+    meaning:
+      "A Korean fan slang term for a close-up fancam where the idol’s face fills much of the screen.",
+    note:
+      "It is casual fandom language, not a formal broadcast term. Fans watch for expressions, eye contact, breathing, and tiny mood changes that are easy to miss in a full-stage video.",
+    example:
+      "Eye contact during a quiet line can become the moment fans replay in an 얼빡직캠.",
+    href: "/kpop/what-is-close-up-fancam-in-kpop",
+  },
+  {
+    term: "Ending fairy",
+    korean: "엔딩요정",
+    romanization: "ending-yojeong",
+    meaning:
+      "The final close-up camera moment after a K-pop performance ends.",
+    note:
+      "Fans notice timing, breathing, expression control, and camera awareness — not only appearance. A strong ending fairy is about how the idol uses those final few seconds.",
+    example: "An ending fairy clip can become viral even after the stage ends.",
+    href: "/kpop/what-is-ending-fairy"
+  },
+  {
+    term: "Killing part",
+    korean: "킬링파트",
+    romanization: "killing part",
+    meaning:
+      "The short part of a song or performance that fans remember, replay, quote, or share.",
+    note:
+      "“Killing” here does not mean violence. In K-pop fan language, it means the standout moment that hits strongly — a vocal line, move, expression, or camera moment.",
+    example:
+      "Fans may replay one line before the chorus or a hand gesture everyone copies in a dance challenge.",
+    href: "/kpop/what-is-killing-part-in-kpop",
+  },
+  {
+    term: "Point choreography",
+    korean: "포인트 안무",
+    romanization: "pointeu anmu",
+    meaning:
+      "The signature dance move or gesture people remember from a K-pop song.",
+    note:
+      "Point choreography often appears in the chorus or hook and helps a song become easy to recognize, copy, and share. It can become a killing part, but not every killing part is choreography.",
+    example:
+      "Fans may remember a comeback because the chorus has a clear 포인트 안무.",
+    href: "/kpop/what-is-point-choreography-in-kpop",
+  },
+  {
+    term: "Dance practice",
+    korean: "안무 연습 영상",
+    romanization: "anmu yeonseup yeongsang",
+    meaning:
+      "A choreography-focused video that shows the full dance more clearly than a music video or edited stage.",
+    note:
+      "Dance practice videos are often filmed in a practice room or studio and help fans see formations, timing, point choreography, transitions, and group synchronization.",
+    example:
+      "Fans may watch a dance practice after a comeback stage to understand the point choreography more clearly.",
+    href: "/kpop/what-is-dance-practice-in-kpop",
+  },
+  {
+    term: "Stage presence",
+    korean: "무대 존재감",
+    romanization: "mude jonsaegam",
+    meaning:
+      "The way an idol holds attention during a performance.",
+    note:
+      "Stage presence is not only dancing hard or making big expressions. It can include timing, expression control, camera awareness, energy control, and how well the idol fits the song concept.",
+    example:
+      "Fans may notice stage presence when a member stays interesting even while not singing or standing in the center.",
+    href: "/kpop/what-is-stage-presence-in-kpop",
+  },
+  {
+    term: "Aegyo",
+    korean: "애교",
+    romanization: "aegyo",
+    meaning: "Cute behavior, expressions, or speech used to charm people.",
+    note:
+      "Aegyo can be natural, playful, or intentionally exaggerated. Some idols are known for being good at it, while others are loved because they feel awkward doing it.",
+    example: "Fans sometimes ask idols to show aegyo during live streams.",
+    href: "/kpop/what-is-aegyo",
+  },
+  {
+    term: "All-rounder",
+    korean: "올라운더",
+    romanization: "olla-undeo",
+    meaning:
+      "An idol who can do many things well, such as singing, dancing, rapping, and performing.",
+    note:
+      "Korean fans also use the English-based word 올라운더. It is often used for members who do not fit into only one role.",
+    example: "Hayoung is often appreciated as an all-rounder type member.",
+  },
+  {
+    term: "Horanghae",
+    korean: "호랑해",
+    romanization: "horanghae",
+    meaning: "A playful Hoshi phrase mixing tiger and love.",
+    note:
+      "It sounds like 사랑해, meaning 'I love you,' but uses 호랑 from 호랑이, meaning tiger. It is closely connected with Hoshi’s tiger character.",
+    example: "CARAT know horanghae as one of Hoshi’s signature expressions.",
+  },
+  {
+    term: "Photocard",
+    korean: "포토카드",
+    romanization: "potokadeu",
+    meaning:
+      "A small photo card of one member, usually included at random inside a K-pop album.",
+    note:
+      "Fans often shorten it to PC, or 포카 in Korean fan chatter — a casual fandom term, not something a label prints on the packaging. A POB (pre-order benefit) is a separate, store-exclusive bonus fans get only by pre-ordering from a specific seller.",
+    example:
+      "You order the same album from two different stores and get two different POB cards.",
+    href: "/kpop/what-is-a-photocard",
+  },
+];
+
+export default function KpopGlossaryPage() {
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: pageTitle,
+      description: pageDescription,
+      url: pageUrl,
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": pageUrl,
+      },
+      author: {
+        "@type": "Organization",
+        name: "HAEMIL",
+        url: siteUrl,
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "HAEMIL",
+        url: siteUrl,
+      },
+      inLanguage: "en",
+      about: [
+        {
+          "@type": "Thing",
+          name: "K-pop glossary",
+        },
+        {
+          "@type": "Thing",
+          name: "Korean fan words",
+        },
+        {
+          "@type": "Thing",
+          name: "K-pop fandom culture",
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: siteUrl,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "K-pop",
+          item: `${siteUrl}/kpop`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "K-pop Glossary",
+          item: pageUrl,
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "DefinedTermSet",
+      name: "K-pop Glossary",
+      description: pageDescription,
+      url: pageUrl,
+      inLanguage: "en",
+      hasDefinedTerm: glossaryTerms.map((item) => ({
+        "@type": "DefinedTerm",
+        name: item.term,
+        description: item.meaning,
+        termCode: item.korean,
+        alternateName: [item.korean, item.romanization],
+      })),
+    },
+  ];
+  return (
+    <>
+      <JsonLd data={structuredData} />
+
+    <main className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 py-6 md:px-8 md:py-8">
+        <SiteHeader />
+
+        <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-10">
+          <Link
+            href="/kpop"
+            className="mb-6 inline-flex text-sm font-semibold text-[var(--accent)]"
+          >
+            ← Back to K-pop
+          </Link>
+
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+            K-pop glossary
+          </p>
+
+          <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
+            K-pop fan words, explained like a local friend would.
+          </h1>
+
+          <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
+            K-pop has its own language. Some words come from Korean, some come
+            from English-speaking fandoms, and some only make sense after you
+            watch a few stages. This glossary keeps things simple so new fans
+            can understand the words they see in comments, fancams, and idol
+            guides.
+          </p>
+        </section>
+
+        <section className="grid gap-5 md:grid-cols-2">
+          {glossaryTerms.map((item) => (
+            <article
+              key={item.term}
+              className="rounded-[1.75rem] border border-[var(--border)] bg-[var(--card)] p-6 shadow-sm"
+            >
+              <div className="flex flex-col gap-2">
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
+                  {item.korean} · {item.romanization}
+                </p>
+
+                <h2 className="text-2xl font-semibold">{item.term}</h2>
+              </div>
+
+              <p className="mt-4 text-base font-medium leading-7">
+                {item.meaning}
+              </p>
+
+              <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
+                {item.note}
+              </p>
+
+              <div className="mt-5 rounded-[1.25rem] border border-[var(--border)] bg-[var(--surface)] p-4">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
+                  Example
+                </p>
+                <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
+                  {item.example}
+                </p>
+              </div>
+              {"href" in item && item.href && (
+  <Link
+    href={item.href}
+    className="mt-4 inline-flex text-sm font-semibold text-[var(--accent)] transition hover:opacity-80"
+  >
+    Read full guide →
+  </Link>
+)}
+            </article>
+          ))}
+        </section>
+      </div>
+    </main>
+    </>
+  );
+}
