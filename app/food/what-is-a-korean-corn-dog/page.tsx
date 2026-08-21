@@ -33,13 +33,11 @@ const potatoImage = {
 };
 
 const quickFacts = [
-  "Korean name: 핫도그 (hatdog) — “Korean corn dog” is mainly the English-language label",
-  "Basic form: Sausage, cheese, or both on a stick, covered in dough or batter and fried",
-  "Common versions: Classic sausage, mozzarella, half sausage-half cheese, and potato hot dog",
-  "Common finish: Ketchup, mustard, and sometimes sugar depending on the shop and style",
-  "Good to know: A sausage served in a bun is also called a hot dog in Korea — context usually tells you which one people mean",
-  "Where to find it: Bunsik shops, snack stands, markets, and specialty hot dog chains",
-  "Difference from a classic American corn dog: Korean versions usually use a wheat-based dough and often breadcrumbs rather than the classic cornmeal coating, although recipes vary",
+  "Korean name: 핫도그 (hatdog) — “Korean corn dog” is mainly an English-language label",
+  "Fillings vary: sausage is the classic base, but cheese and even rice cake (tteok) show up too",
+  "Common types: classic sausage, mozzarella, half sausage-half cheese, and potato-coated versions",
+  "Finish: ketchup, mustard, and sometimes sugar, depending on the shop and style",
+  "A sausage in a bun is also called a hot dog in Korea — context usually makes it clear which one",
 ];
 
 const relatedGuides = [
@@ -172,10 +170,10 @@ export default function WhatIsAKoreanCornDogPage() {
         <section className="mx-auto max-w-6xl px-5 py-6 md:px-8">
           <SiteHeader />
 
-          <article className="mt-8 rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-10">
+          <article className="mt-8 rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-5 md:p-7">
             <Link
               href="/food"
-              className="mb-6 inline-flex text-sm font-semibold text-[var(--accent)]"
+              className="mb-4 inline-flex text-sm font-semibold text-[var(--accent)]"
             >
               ← Back to Food
             </Link>
@@ -184,17 +182,23 @@ export default function WhatIsAKoreanCornDogPage() {
               Food guide
             </p>
 
-            <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
-              What Is a Korean Corn Dog? A Local Guide to Korean Hot Dogs
+            <h1 className="mt-3 max-w-3xl text-3xl font-semibold leading-tight tracking-tight md:text-5xl">
+              What Is a Korean Corn Dog?
             </h1>
 
-            <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
+            <p className="mt-2 max-w-3xl text-lg font-medium text-[var(--muted)] md:text-xl">
+              A Local Guide to Korean Hot Dogs
+            </p>
+
+            <p className="mt-4 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
               In Korea, the snack English speakers call a &quot;Korean corn
               dog&quot; is usually just called 핫도그 (hatdog).
             </p>
           </article>
 
-          <PostImageFigure image={classicImage} variant="hero" priority />
+          <div className="mx-auto max-w-[820px] [&>figure]:mt-6 [&>figure]:shadow-sm">
+            <PostImageFigure image={classicImage} variant="hero" priority />
+          </div>
 
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
@@ -216,10 +220,8 @@ export default function WhatIsAKoreanCornDogPage() {
               What does &quot;hot dog&quot; mean in Korea?
             </h2>
 
-            <div className="mt-6 space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
-              <PostImageFigure image={bunImage} variant="inline" />
-
-              <p>
+            <div className="mt-6 grid gap-6 md:grid-cols-[1fr_300px] md:items-start md:gap-8">
+              <p className="text-base leading-8 text-[var(--muted)] md:text-lg">
                 Search for &quot;Korean corn dog&quot; in English and
                 you’ll probably picture a fried snack on a stick. In
                 Korea, though, most people simply call that 핫도그
@@ -230,6 +232,8 @@ export default function WhatIsAKoreanCornDogPage() {
                 shop, the same word can mean a sausage in a bun. Usually,
                 the place and the menu make it obvious.
               </p>
+
+              <PostImageFigure image={bunImage} variant="gallery" />
             </div>
           </section>
 
@@ -256,20 +260,31 @@ export default function WhatIsAKoreanCornDogPage() {
               The versions you’ll actually see
             </h2>
 
-            <div className="mt-6 space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
-              <PostImageFigure image={potatoImage} variant="inline" />
+            <div className="mt-6 grid gap-6 md:grid-cols-[1fr_300px] md:items-start md:gap-8">
+              <div className="space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
+                <p>
+                  Korean hot dogs are more flexible than one
+                  sausage-and-batter formula. Sausage is the familiar
+                  starting point, but you can also find mozzarella,
+                  half-sausage-half-cheese versions, and hot dogs with
+                  rice cake (tteok) inside instead of sausage. The
+                  outside changes too: some are kept simple, while
+                  others are coated with potato pieces or other crunchy
+                  toppings.
+                </p>
 
-              <p>
-                The basic version is still the easiest place to start:
-                sausage inside, fried outside, sauce on top. Cheese
-                versions are also common, including mozzarella-only and
-                half-sausage-half-cheese styles. 감자핫도그 (gamja hot
-                dog) adds small potato pieces around the outside before
-                frying, so it is heavier and crispier than the plain
-                version. Some shops have more elaborate coatings and
-                sauces, but those are variations rather than the
-                definition of a Korean hot dog.
-              </p>
+                <p>
+                  Chains also occasionally play with the format for
+                  limited-time or novelty menus. One memorable example
+                  came from Myungrang Hot Dog, which temporarily sold a
+                  cucumber hot dog with a whole cucumber in place of the
+                  sausage. These experimental versions are not what
+                  Koreans mean by a standard hot dog, but they show how
+                  loosely the basic idea can be interpreted.
+                </p>
+              </div>
+
+              <PostImageFigure image={potatoImage} variant="gallery" />
             </div>
           </section>
 
@@ -280,16 +295,19 @@ export default function WhatIsAKoreanCornDogPage() {
 
             <div className="mt-6 space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
               <p>
-                If it is your first one, I would start with the plain
-                sausage version before jumping straight to the
-                cheese-pull versions you see online. It gives you a
-                better idea of what a normal Korean hot dog tastes like.
-                After that, 감자핫도그 is an easy second choice if you
-                want something crunchier and more filling. Depending on
-                the shop, you may be asked whether you want sugar on the
-                outside before ketchup or mustard goes on top. That
-                sweet-and-savory combination can sound strange at first,
-                but it is a familiar hot-dog-shop style in Korea.
+                If it is your first one, start with the plain
+                sausage version rather than jumping straight to the
+                cheese-pull versions you see online — it gives you the
+                clearest idea of what a normal Korean hot dog tastes
+                like. From there, it is easy to branch out: mozzarella
+                if you want the cheese pull, 감자핫도그 (potato hot
+                dog) if you want something crunchier and more filling,
+                or a tteok (rice cake) version if you want the inside
+                swapped out entirely. Depending on the shop, you may
+                be asked whether you want sugar on the outside before
+                ketchup or mustard goes on top — that sweet-and-savory
+                combination can sound strange at first, but it is a
+                familiar hot-dog-shop style in Korea.
               </p>
 
               <p>

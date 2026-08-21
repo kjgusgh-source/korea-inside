@@ -231,7 +231,7 @@ const STANDALONE_FOOD_GUIDES = [
     categoryLabel: "Food guide",
     title: "What Is a Korean Corn Dog?",
     description:
-      "Panko crust instead of cornmeal, plus potato and ramyeon-cracker toppings — how the Korean corn dog differs from the American one, and where to try it.",
+      "In Korea, the fried snack often called a Korean corn dog overseas is usually just 핫도그 — with sausage, cheese, potato, and plenty of variations.",
     href: "/food/what-is-a-korean-corn-dog",
     readingTime: "6 min read",
   },
