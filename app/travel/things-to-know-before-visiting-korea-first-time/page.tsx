@@ -25,6 +25,13 @@ const quickAnswer = [
 const relatedGuides = [
   {
     label: "Travel guide",
+    title: "Korea arrival day checklist for first-time visitors",
+    description:
+      "A practical first-day Korea guide covering airport arrival, internet setup, maps, transport, hotel check-in, first meal, Wi-Fi, and local travel tips.",
+    href: "/travel/korea-arrival-day-checklist-first-time",
+  },
+  {
+    label: "Travel guide",
     title: "How to get around Seoul for first-time visitors",
     description:
       "A practical Seoul transport guide for first-time visitors, with subway, taxi, rush hour, airport routes, walking, maps, and local trade-offs.",
@@ -223,6 +230,53 @@ export default function ThingsToKnowBeforeVisitingKoreaFirstTimePage() {
                   on your phone can feel tiring once you are walking the city.
                   Korea is very rewarding to visit; these are the small frictions
                   worth knowing upfront.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <h2 className="text-2xl font-semibold text-[var(--text)]">
+                  Check your K-ETA and entry paperwork first
+                </h2>
+
+                <p>
+                  This part actually changed in 2026, so it is worth checking
+                  even if you have been to Korea before. Travelers from 22
+                  countries and regions — including the United States, Canada,
+                  the United Kingdom, most of Western Europe, Japan,
+                  Australia, and New Zealand — do not need a K-ETA (Korea's
+                  electronic travel authorization) through December 31, 2026,
+                  under an extended exemption. You can still apply for one
+                  voluntarily if you want it (10,000 won, up to 72 hours to
+                  process), and doing so has one real upside: it exempts you
+                  from filling out the newer online arrival form.
+                </p>
+
+                <p>
+                  That form is the e-Arrival Card, and it is not optional for
+                  most visitors. Korea retired the paper arrival card in
+                  January 2026, so unless you hold a K-ETA, you now file this
+                  online instead through the official{" "}
+                  <a
+                    href="https://www.e-arrivalcard.go.kr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold text-[var(--accent)] underline"
+                  >
+                    e-arrivalcard.go.kr
+                  </a>{" "}
+                  site — free, anytime from three days before your flight up
+                  to the day you land. It only takes a few minutes, but it is
+                  better handled before you leave than discovered in the
+                  immigration line.
+                </p>
+
+                <p>
+                  Korea has also signaled that K-ETA is meant to eventually
+                  apply to everyone entering visa-free, not just the
+                  countries currently required to get one, starting sometime
+                  in 2027 — but that later timeline is not locked in yet, so
+                  it is not something to plan around. What matters for a 2026
+                  trip is the rules above.
                 </p>
               </div>
 
