@@ -18,7 +18,8 @@ type TermBadgeName =
   | "aegyo"
   | "bias-wrecker"
   | "rookie-group"
-  | "maknae";
+  | "maknae"
+  | "photocard";
 
 const BADGE_GLYPHS: Record<TermBadgeName, React.ReactNode> = {
   fancam: (
@@ -411,6 +412,36 @@ const BADGE_GLYPHS: Record<TermBadgeName, React.ReactNode> = {
       <path d="M92,168 c4,-22 17,-33 36,-33 s32,11 36,33" fill="var(--card)" stroke="var(--accent)" strokeWidth="7" />
       <circle cx="128" cy="118" r="22" fill="var(--card)" stroke="var(--accent)" strokeWidth="7" />
       <path d="M180 66l7 16 16 7-16 7-7 16-7-16-16-7 16-7z" fill="var(--gold)" />
+    </>
+  ),
+  photocard: (
+    <>
+      <rect x="34" y="34" width="188" height="188" rx="46" fill="var(--card)" stroke="var(--accent)" strokeWidth="7" />
+      <rect
+        x="66"
+        y="70"
+        width="82"
+        height="114"
+        rx="14"
+        fill="var(--card)"
+        stroke="var(--celadon)"
+        strokeWidth="6"
+        transform="rotate(-9 107 127)"
+      />
+      <rect
+        x="104"
+        y="66"
+        width="82"
+        height="114"
+        rx="14"
+        fill="var(--card)"
+        stroke="var(--accent)"
+        strokeWidth="7"
+        transform="rotate(7 145 123)"
+      />
+      <circle cx="145" cy="104" r="19" fill="var(--accent)" fillOpacity="0.4" stroke="var(--accent)" strokeWidth="4" />
+      <path d="M120 154c6-15 20-22 33-15" stroke="var(--accent)" strokeWidth="5" fill="none" strokeLinecap="round" />
+      <path d="M184 82l7 16 16 7-16 7-7 16-7-16-16-7 16-7z" fill="var(--gold)" />
     </>
   ),
   maknae: (
