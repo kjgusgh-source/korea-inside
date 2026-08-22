@@ -225,6 +225,16 @@ const STANDALONE_FOOD_GUIDES = [
     href: "/food/what-is-bunsik-korean-snack-food",
     readingTime: "8 min read",
   },
+  {
+    id: "what-is-a-korean-corn-dog",
+    category: "food",
+    categoryLabel: "Food guide",
+    title: "What Is a Korean Corn Dog?",
+    description:
+      "In Korea, the fried snack often called a Korean corn dog overseas is usually just 핫도그 — with sausage, cheese, potato, and plenty of variations.",
+    href: "/food/what-is-a-korean-corn-dog",
+    readingTime: "6 min read",
+  },
 ];
 
 export const metadata: Metadata = {
