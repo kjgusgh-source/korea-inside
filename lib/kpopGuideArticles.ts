@@ -147,6 +147,13 @@ export type KpopGuideArticle = {
       label: "Korean fan words",
     },
     {
+      title: "What Is a K-pop Lightstick?",
+      description:
+        "A friendly guide to eungwonbong (응원봉) meaning, where the idea of an official group lightstick is said to have started, and why fans want their own group's design.",
+      href: "/kpop/what-is-a-lightstick-in-kpop",
+      label: "K-pop starter guide",
+    },
+    {
       title: "What Is WATERBOMB Korea?",
       description:
         "A simple guide to the Korean summer festival behind viral K-pop fancams, stage moments, and names like Kwon Eunbi’s “Waterbomb Goddess.”",
