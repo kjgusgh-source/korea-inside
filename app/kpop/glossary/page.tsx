@@ -331,6 +331,18 @@ const glossaryTerms = [
       "It sounds like 사랑해, meaning 'I love you,' but uses 호랑 from 호랑이, meaning tiger. It is closely connected with Hoshi’s tiger character.",
     example: "CARAT know horanghae as one of Hoshi’s signature expressions.",
   },
+  {
+    term: "Photocard",
+    korean: "포토카드",
+    romanization: "potokadeu",
+    meaning:
+      "A small photo card of one member, usually included at random inside a K-pop album.",
+    note:
+      "Fans often shorten it to PC, or 포카 in Korean fan chatter — a casual fandom term, not something a label prints on the packaging. A POB (pre-order benefit) is a separate, store-exclusive bonus fans get only by pre-ordering from a specific seller.",
+    example:
+      "You order the same album from two different stores and get two different POB cards.",
+    href: "/kpop/what-is-a-photocard",
+  },
 ];
 
 export default function KpopGlossaryPage() {
