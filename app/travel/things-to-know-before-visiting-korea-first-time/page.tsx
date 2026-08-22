@@ -264,19 +264,10 @@ export default function ThingsToKnowBeforeVisitingKoreaFirstTimePage() {
                   >
                     e-arrivalcard.go.kr
                   </a>{" "}
-                  site — free, anytime from three days before your flight up
-                  to the day you land. It only takes a few minutes, but it is
+                  site — free, anytime from three days before your arrival in
+                  Korea up to the day you land. It only takes a few minutes, but it is
                   better handled before you leave than discovered in the
                   immigration line.
-                </p>
-
-                <p>
-                  Korea has also signaled that K-ETA is meant to eventually
-                  apply to everyone entering visa-free, not just the
-                  countries currently required to get one, starting sometime
-                  in 2027 — but that later timeline is not locked in yet, so
-                  it is not something to plan around. What matters for a 2026
-                  trip is the rules above.
                 </p>
               </div>
 
