@@ -20,6 +20,31 @@ type PageProps = {
   }>;
 };
 
+// Meta title/description overrides for a small set of published member pages
+// whose Search Console CTR is low relative to their ranking (Notion: K-pop
+// member profile pages meta title/description review). Scoped to these 3
+// pages only -- does not change the shared template for any other member.
+const memberMetaOverrides: Record<
+  string,
+  { title: string; description: string }
+> = {
+  "triples/kim-chaeyeon": {
+    title: "Kim ChaeYeon (tripleS) Fancam & Profile Guide | HAEMIL",
+    description:
+      "Meet tripleS's Kim ChaeYeon (S4), a former child actress known from Korean TV, now winning new fans with the bright, camera-friendly charm of her Baby Flower fancam.",
+  },
+  "cortis/keonho": {
+    title: "Keonho (CORTIS) Fancam & Profile Guide | HAEMIL",
+    description:
+      "Get to know CORTIS's Keonho, the rookie idol fans nicknamed \"French Fry Boy\" - see why his JoyRide fancam energy is making him easy to remember.",
+  },
+  "illit/wonhee": {
+    title: "Wonhee (ILLIT) Fancam & Profile Guide | HAEMIL",
+    description:
+      "Discover ILLIT's Wonhee, whose clear expressions and small stage moments make her fancams easy to rewatch - a good first member to follow.",
+  },
+};
+
 export function generateStaticParams() {
   return getKpopGroups().flatMap((group) =>
     group.members.map((member) => ({
@@ -42,8 +67,13 @@ export async function generateMetadata({
     };
   }
 
-  const title = `${member.name} ${group.name} Guide | Fancam, Stage Charm & Korean Fan Words`;
+  const override = memberMetaOverrides[`${groupId}/${memberId}`];
+
+  const title =
+    override?.title ??
+    `${member.name} ${group.name} Guide | Fancam, Stage Charm & Korean Fan Words`;
   const description =
+    override?.description ??
     member.intro ??
     `A friendly guide to ${member.name} of ${group.name}, including stage charm, fancam points, Korean fan expressions, and cultural context.`;
 
