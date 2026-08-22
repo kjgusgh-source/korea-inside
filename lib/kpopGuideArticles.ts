@@ -263,6 +263,13 @@ export type KpopGuideArticle = {
       href: "/kpop/le-sserafim-kim-chaewon-fancam-spotlight",
       label: "K-pop Spotlight",
     },
+    {
+      title: "What Is a Photocard in K-pop?",
+      description:
+        "A friendly guide to photocard meaning in K-pop, including PC, POB, and 포토카드 (poca), and why the random-pull system makes every album pull different.",
+      href: "/kpop/what-is-a-photocard",
+      label: "K-pop starter guide",
+    },
   ];
   
   export function getKpopGuideArticles() {
