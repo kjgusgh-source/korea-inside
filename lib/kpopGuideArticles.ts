@@ -171,7 +171,7 @@ export type KpopGuideArticle = {
       title: "Who Is tripleS?",
       description:
         "A friendly first guide to tripleS, the big unit-based girl group that becomes easier when you start with one member, one unit, or one fancam.",
-      href: "/kpop/who"-is-triples",
+      href: "/kpop/who-is-triples",
       label: "Girl group guide",
     },
     {
@@ -273,7 +273,7 @@ export type KpopGuideArticle = {
     {
       title: "What Is a Photocard in K-pop?",
       description:
-        "A friendly guide to photocard meaning in K-pop, including PC, POB, and 포标카드 (poca), and why the random-pull system makes every album pull different.",
+        "A friendly guide to photocard meaning in K-pop, including PC, POB, and 포토카드 (poca), and why the random-pull system makes every album pull different.",
       href: "/kpop/what-is-a-photocard",
       label: "K-pop starter guide",
     },
