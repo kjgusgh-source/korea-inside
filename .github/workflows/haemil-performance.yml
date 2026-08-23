@@ -65,5 +65,5 @@ jobs:
           NOTION_API_KEY: ${{ secrets.HAEMIL_NOTION_API_KEY }}
           GSC_SITE_URL: "sc-domain:haemilkorea.com"
           GA4_PROPERTY_ID: "properties/543892649"
-          NOTION_DATABASE_ID: "b7c8f793-2576-4f5c-b3db-62774a824693"
+          NOTION_DATA_SOURCE_ID: "5d87509f-e039-4a1c-8430-a64df97052d0"
         run: python scripts/haemil_performance.py --mode "${{ steps.mode.outputs.mode }}"
