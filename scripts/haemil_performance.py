@@ -33,6 +33,7 @@ import os
 import sys
 from datetime import date, datetime, timedelta, timezone
 from typing import Any
+from zoneinfo import ZoneInfo
 
 import requests
 from google.analytics.data_v1beta import BetaAnalyticsDataClient
@@ -47,6 +48,11 @@ NOTION_VERSION = "2025-09-03"
 NOTION_API_BASE = "https://api.notion.com/v1"
 
 KST = timezone(timedelta(hours=9))
+# Search Console Search Analytics API의 startDate/endDate 및
+# metadata.firstIncompleteDate는 KST가 아니라 America/Los_Angeles(PT) 기준이다
+# (공식 문서 명시). GSC 조회 날짜 계산에는 이 시간대를 사용하고, Notion에
+# 기록하는 Report Date는 HAEMIL 기준시인 KST를 그대로 사용한다.
+GSC_TZ = ZoneInfo("America/Los_Angeles")
 
 
 def load_credentials(scopes: list[str]) -> service_account.Credentials:
@@ -141,10 +147,9 @@ def fetch_search_console(site_url: str) -> dict[str, Any]:
         result["errors"].append(f"GSC 인증 실패: {exc}")
         return result
 
-    # GitHub Actions 러너는 UTC로 동작한다. UTC 기준 date.today()를 쓰면 KST
-    # 00:00~08:59 사이 수동 workflow_dispatch 실행 시 "오늘" 날짜가 하루
-    # 어긋날 수 있으므로, HAEMIL 기준시(KST)로 오늘 날짜를 계산한다.
-    today = datetime.now(KST).date()
+    # Search Console API의 날짜 범위/메타데이터는 America/Los_Angeles(PT) 기준이므로
+    # (모듈 상단 GSC_TZ 주석 참고), GSC 조회용 "오늘" 날짜도 명시적으로 PT로 계산한다.
+    today = datetime.now(GSC_TZ).date()
     range_start = (today - timedelta(days=10)).isoformat()
     range_end = today.isoformat()
 
