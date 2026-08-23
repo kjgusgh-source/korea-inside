@@ -141,7 +141,10 @@ def fetch_search_console(site_url: str) -> dict[str, Any]:
         result["errors"].append(f"GSC 인증 실패: {exc}")
         return result
 
-    today = date.today()
+    # GitHub Actions 러너는 UTC로 동작한다. UTC 기준 date.today()를 쓰면 KST
+    # 00:00~08:59 사이 수동 workflow_dispatch 실행 시 "오늘" 날짜가 하루
+    # 어긋날 수 있으므로, HAEMIL 기준시(KST)로 오늘 날짜를 계산한다.
+    today = datetime.now(KST).date()
     range_start = (today - timedelta(days=10)).isoformat()
     range_end = today.isoformat()
 
@@ -176,11 +179,14 @@ def fetch_search_console(site_url: str) -> dict[str, Any]:
         result["errors"].append(f"확정일 단일일 지표 조회 실패: {exc}")
         return result
 
-    # 비교 대상(직전) 날짜: 이번 수정에서는 값을 바꾸지 않고 "확정일 하루 전날"을
-    # 그대로 사용한다. 원본 SKILL.md의 "직전 조회일" 개념(주 3회 실행 기준 보통
-    # 2~3일 전 = 사실상 "지난 실행 회차의 확정일")과 정확히 같은 정의는 아니며,
-    # 이 차이는 채팅 보고에서 별도로 설명한다. 이번에는 0-impression 날짜를
-    # 오류로 처리하지 않고 정상 데이터(0)로 반영하는 부분만 고쳤다.
+    # 비교 대상(직전) 날짜: "확정일 하루 전날"을 고정 기준으로 사용한다.
+    #
+    # 원본 SKILL.md(월/수/금 주 3회 실행)의 "직전 조회일" 개념(보통 2~3일 전 =
+    # 사실상 "지난 실행 회차의 확정일")과 정확히 같은 정의는 아니다. 이 자동화를
+    # 매일 실행(daily cadence)으로 전환하면서, Notion에서 직전 리포트를 추가로
+    # 조회해 정확히 재현하는 방식 대신 confirmed_date-1 고정 비교를 그대로
+    # 유지하기로 결정했다(2026-08-23, 현호님 확인) — 일일 실행 전환에 따른
+    # 의도적인 최소 변경이며, 향후 다시 논의될 수 있다.
     try:
         previous_date = (date.fromisoformat(confirmed_date) - timedelta(days=1)).isoformat()
         previous_metrics = fetch_single_day_metrics(service, site_url, previous_date)
@@ -261,8 +267,8 @@ def fetch_ga4(property_id: str) -> dict[str, Any]:
 def judge_trend(gsc: dict[str, Any]) -> tuple[str, bool]:
     """Replicates SKILL step 6 (>=20% change, or a drop to 0, is notable).
 
-    비교 기준일(previous_day)의 선택 방식 자체는 이번 수정 범위가 아니다 —
-    fetch_search_console()의 주석 참고.
+    비교 기준일(previous_day = confirmed_date-1)은 일일 실행 전환에 따른
+    의도적인 최소 변경이다 — fetch_search_console()의 주석 참고.
     """
     if gsc.get("status") == "failed" or not gsc.get("previous_day"):
         return "Insufficient Data", False
