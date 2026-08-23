@@ -1,0 +1,69 @@
+name: HAEMIL Daily Performance (GSC + GA4 -> Notion)
+
+# Performance 자동화만 GitHub Actions로 이전하는 워크플로우입니다.
+# Proposals / Research / Production 파이프라인은 이 워크플로우에서
+# 전혀 호출하지 않으며, 기존 Cowork 스케줄 작업도 그대로 유지됩니다.
+
+on:
+  schedule:
+    - cron: "20 11 * * *"  # 매일 20:20 Asia/Seoul (UTC+9)
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "dry-run: GSC/GA4 조회+계산만 (Notion 미기록) / write: Notion에 실제 기록"
+        type: choice
+        options:
+          - dry-run
+          - write
+        default: dry-run
+
+permissions:
+  contents: read
+
+concurrency:
+  group: haemil-performance
+  cancel-in-progress: false
+
+jobs:
+  performance-report:
+    # 정기 schedule은 저장소 변수 HAEMIL_PERFORMANCE_SCHEDULE_ENABLED가
+    # 사람이 명시적으로 "true"로 설정하기 전까지 아무 것도 하지 않습니다
+    # (변수가 없으면 이 조건은 false이고 job 자체가 skip됩니다).
+    # workflow_dispatch(수동 실행)는 이 잠금과 무관하게 항상 동작하며,
+    # 위 mode 입력으로 dry-run/write를 그때그때 선택합니다.
+    if: ${{ github.event_name == 'workflow_dispatch' || vars.HAEMIL_PERFORMANCE_SCHEDULE_ENABLED == 'true' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements-performance.txt
+
+      - name: Determine run mode
+        id: mode
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "mode=${{ github.event.inputs.mode }}" >> "$GITHUB_OUTPUT"
+          else
+            # 정기 schedule 실행은 항상 실제 기록(write) 모드입니다.
+            echo "mode=write" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Run HAEMIL performance report (read-only GSC/GA4 -> Notion)
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.HAEMIL_GOOGLE_SERVICE_ACCOUNT_JSON }}
+          NOTION_API_KEY: ${{ secrets.HAEMIL_NOTION_API_KEY }}
+          GSC_SITE_URL: "sc-domain:haemilkorea.com"
+          GA4_PROPERTY_ID: "properties/543892649"
+          NOTION_DATABASE_ID: "b7c8f793-2576-4f5c-b3db-62774a824693"
+        run: python scripts/haemil_performance.py --mode "${{ steps.mode.outputs.mode }}"
