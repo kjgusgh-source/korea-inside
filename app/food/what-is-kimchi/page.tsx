@@ -9,7 +9,7 @@ const pageUrl = `${siteUrl}/food/what-is-kimchi`;
 
 const pageTitle = "What Is Kimchi? Korea's Fermented Vegetable Side Dish Explained";
 const pageDescription =
-  "A friendly HAEMIL guide to kimchi, Korea's iconic fermented side dish, from everyday baechu-kimchi to kkakdugi and oi-sobagi, regional differences, and the shared kimjang tradition behind it.";
+  "A friendly HAEMIL guide to kimchi, Korea's iconic side dish, covering baechu-kimchi, kkakdugi, oi-sobagi, regional differences, and the kimjang tradition.";
 
 const heroImage = {
   src: "/images/food/baechu-kimchi.webp",
@@ -34,13 +34,11 @@ const oiSobagiImage = {
 
 const quickFacts = [
   "Korean name: Kimchi / 김치",
-  "Meaning: A general term for salted and fermented vegetable side dishes, not one single recipe",
-  "Main idea: Vegetables, most often napa cabbage or radish, are salted, seasoned, and left to ferment",
+  "Meaning: A general term for salted, seasoned, and often fermented vegetable side dishes made mostly from napa cabbage or radish, not one single recipe",
   "Most common type: Baechu-kimchi, made with whole napa cabbage",
   "Other common types: Kkakdugi (cubed radish kimchi) and oi-sobagi (stuffed cucumber kimchi)",
-  "Where you'll see it: On almost every Korean table as banchan, plus inside stews, fried rice, and pancakes",
   "Recognition: Kimjang, the shared tradition of making kimchi together, was added to UNESCO's Intangible Cultural Heritage list in 2013",
-  "Important: Flavor, spice level, and saltiness change from household to household and region to region",
+  "Important: Flavor, sourness, and saltiness change from household to household and region to region",
 ];
 
 const relatedGuides = [
@@ -179,8 +177,12 @@ export default function WhatIsKimchiPage() {
             </p>
 
             <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
-              What Is Kimchi? Korea&apos;s Fermented Vegetable Side Dish Explained
+              What Is Kimchi?
             </h1>
+
+            <p className="mt-4 max-w-3xl text-lg font-medium text-[var(--muted)] md:text-xl">
+              Korea&apos;s fermented vegetable side dish, explained simply.
+            </p>
 
             <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
               Kimchi is the Korean food most people have already heard of before they ever land in Korea.
@@ -209,10 +211,11 @@ export default function WhatIsKimchiPage() {
               <p>But hearing the name and actually understanding it are two different things.</p>
 
               <p>
-                Kimchi is not one dish. It is a whole category of salted and
-                fermented vegetable side dishes. The vegetable, the seasoning,
-                the saltiness, and the amount of time it ferments can all
-                change, and each version has its own name.
+                Kimchi is not one dish. It is a whole category of salted,
+                seasoned, and often fermented vegetable side dishes. The
+                vegetable, the seasoning, the saltiness, and the amount of
+                time it ferments can all change, and each version has its
+                own name.
               </p>
 
               <p>
@@ -293,10 +296,11 @@ export default function WhatIsKimchiPage() {
               </p>
 
               <p>
-                At most Korean meals, kimchi arrives automatically as
-                banchan, one of the small side dishes set on the table
-                without you ordering it. Refills are usually free, so you do
-                not need to be shy about asking for more if you like it.
+                At many Korean restaurants, kimchi often arrives as banchan,
+                one of the small side dishes set on the table without you
+                ordering it. Refills are often free or self-service
+                depending on the restaurant, so it is worth checking rather
+                than assuming.
               </p>
 
               <p>
@@ -310,10 +314,11 @@ export default function WhatIsKimchiPage() {
 
               <p>
                 Kimchi is spicy for some people and completely normal for
-                others. If you are cautious about spice, start with a small
-                piece, and remember that oi-sobagi and freshly made kimchi
-                are usually gentler than a well-aged batch of kkakdugi or
-                baechu-kimchi.
+                others, and the heat mostly comes from the chili paste
+                itself rather than from how long it has fermented. What
+                fermentation changes is the sourness, aroma, and texture —
+                older kimchi turns tangier and softer, not necessarily
+                spicier.
               </p>
 
               <p>
