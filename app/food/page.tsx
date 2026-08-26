@@ -235,6 +235,16 @@ const STANDALONE_FOOD_GUIDES = [
     href: "/food/what-is-a-korean-corn-dog",
     readingTime: "6 min read",
   },
+  {
+    id: "what-is-kimchi",
+    category: "food",
+    categoryLabel: "Food guide",
+    title: "What Is Kimchi?",
+    description:
+      "Kimchi isn’t a single recipe — it’s a whole category of salted, seasoned, and often fermented vegetable dishes, from everyday baechu-kimchi to kkakdugi and oi-sobagi.",
+    href: "/food/what-is-kimchi",
+    readingTime: "7 min read",
+  },
 ];
 
 export const metadata: Metadata = {

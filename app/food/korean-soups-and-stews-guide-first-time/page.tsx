@@ -66,6 +66,13 @@ const relatedGuides = [
     href: "/food/what-is-gimbap-korean-seaweed-rice-roll",
   },
   {
+    label: "Food guide",
+    title: "What is kimchi?",
+    description:
+      "A local-friendly guide to Korea's iconic fermented side dish — what baechu-kimchi, kkakdugi, and oi-sobagi actually are, and why kimchi-jjigae calls for the well-fermented kind.",
+    href: "/food/what-is-kimchi",
+  },
+  {
     label: "Travel guide",
     title: "Korea etiquette tips for tourists",
     description:
