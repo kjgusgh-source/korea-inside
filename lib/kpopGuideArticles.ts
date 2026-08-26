@@ -277,6 +277,13 @@ export type KpopGuideArticle = {
       href: "/kpop/what-is-a-photocard",
       label: "K-pop starter guide",
     },
+    {
+      title: "Who Is BTS? A Guide to Their 2026 Comeback",
+      description:
+        "A friendly guide to BTS's 2026 comeback — how military service kept the group apart, why ARIRANG and 'SWIM' mark their return, and where the 'NORMAL' video fits in.",
+      href: "/kpop/who-is-bts",
+      label: "Boy group guide",
+    },
   ];
   
   export function getKpopGuideArticles() {
