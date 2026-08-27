@@ -2624,6 +2624,35 @@ export const POSTS: Post[] = [
       },
     ],
   },
+  {
+    id: 24,
+    title: "Korean Age Explained: Why Koreans Sometimes Have Two (or Three) Ages",
+    slug: "korean-age",
+    category: "expressions",
+    categorySlug: "expressions",
+    categoryLabel: "Korean Expressions",
+    description:
+      "Korea used to count age differently from most of the world, and even after a 2023 law tried to fix that, a few exceptions are still around.",
+    excerpt:
+      "If a K-drama character’s age never quite adds up, you were not doing the math wrong.",
+    content: [
+      "If you have ever tried to work out exactly how old a K-drama character or a K-pop idol is, and ended up with two or three different numbers, you were not doing the math wrong. Korea genuinely used more than one way to count age for decades, and even after a 2023 law tried to simplify things, a few of the old habits are still around.",
+      "The older method is sometimes called Korean age or counting age (세는 나이, se-neun nai). Under this system, a baby is already 1 year old the moment they are born, and everyone in the country gets a year older together on January 1st, no matter when their actual birthday falls. A baby born on December 30th turns 2 just two days later, on New Year’s Day.",
+      "That extra year, and the shared birthday for the whole country, is exactly what the government set out to fix. In December 2022, the National Assembly passed a law standardizing age counting, and it officially took effect on June 28, 2023. From that date, 만 나이 (man nai) — international age, the same birthday-based counting used in most of the world — became the single legal standard for contracts, medical records, government documents, and everyday official use. The change was reported outside Korea too, including by the BBC and CNN, and the U.S. Library of Congress covered it on its Law Library blog as a notable piece of Korean legal reform.",
+      "But man nai did not erase every older age rule overnight. According to reporting by the Korea Herald, three areas still run on 연 나이 (yeon nai) — a birth-year-based age that ignores your exact birthday but is not the same as the old counting age either: the legal age for buying alcohol or cigarettes, eligibility for mandatory military service, and the age for starting elementary school. The government’s stated reasoning, per that same reporting, was continuity with existing systems already built around those specific rules.",
+      "There is a third number that sometimes gets mixed into this conversation: 빠른년생 (ppareun-nyeonsaeng), literally “fast birth year.” It has nothing to do with the 2023 man-nai law — it goes back to an older change in how Korea set its school-year cutoff. As it is commonly explained, the government moved the elementary school enrollment cutoff date from March 1st to January 1st starting around 2006, phased in from the 2009 school year for children born between March and December 2002, which made 2002 the last birth year affected by the old rule. Under that earlier system, kids born in January or February could start school a year early, alongside kids born the previous year — hence “fast.” If someone mentions being ppareun-nyeonsaeng, they are talking about this school-entry quirk, not the 2023 legal age change. The clearest primary source for the exact policy timeline was hard to track down during research, so it is worth treating the precise dates here as commonly cited rather than officially confirmed.",
+      "With this many overlapping numbers, it is easy to see why some people skip the question entirely and just give their birth year instead of an age — ‘94년생’ (born in ’94) — since that number stays the same no matter which counting system is in play. And among people who do state an age, some lean toward whichever of their possible numbers happens to be youngest; since the old counting age used to add a year or two, switching to the international number already felt like an easy way to look a little younger.",
+      "This matters for K-content fans specifically because idol profiles, fan wikis, and drama subtitles were not all updated the same way after 2023. An idol’s birth year is a fixed fact, but the age printed next to it might reflect counting age, man nai, or whatever system the source happened to use when it was written. When you see an age attached to someone’s name, it is worth treating it as one possible answer rather than the full picture — the birth year is usually the more reliable thing to hold onto."
+    ],
+    culturalContext:
+      "Age counting reform like this does not happen often, and the fact that it took a national law to standardize something so basic says a lot about how deeply the older system was woven into daily life, contracts, insurance, and school records. The exceptions that were kept also reflect something distinctly Korean: even when a system officially changes, staying consistent with existing institutions — the military, schools, alcohol laws — can matter more than perfect uniformity.",
+    tags: ["Korean Age", "만 나이", "Korean Culture", "Expressions", "빠른년생"],
+    publishedAt: "2026-08-27",
+    readingTime: "5 min read",
+    seoTitle: "Korean Age Explained: Counting Age vs. Man Nai (International Age)",
+    seoDescription:
+      "Confused why Korean ages do not match? Learn the difference between Korea’s old counting age and 만 나이 (man nai), the international age system Korea adopted in 2023."
+  },
 ];
 
 export function getAllPosts() {
