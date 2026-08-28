@@ -35,6 +35,15 @@ export const KPOP_SOLO_ARTISTS: KpopSoloArtist[] = [
     href: "/kpop/chuu",
     tags: ["Solo artist", "Former LOONA", "Chuu Can Do It", "Fancam"],
   },
+  {
+    id: "jennie",
+    name: "JENNIE",
+    note: "Solo artist · BLACKPINK member · Fallen Angel (2026)",
+    description:
+      "Known for BLACKPINK's rap and lead vocals, a solo run that started with \"SOLO\" in 2018, her own label Odd Atelier, and the 2026 EP \"Fallen Angel.\"",
+    href: "/kpop/jennie",
+    tags: ["Solo artist", "BLACKPINK", "Odd Atelier", "Fallen Angel"],
+  },
 ];
 
 export function getKpopSoloArtists() {
