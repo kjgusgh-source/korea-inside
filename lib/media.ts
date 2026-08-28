@@ -27,6 +27,21 @@ export type MediaItem = {
 
 export const MEDIA_ITEMS: MediaItem[] = [
   {
+    id: "jennie-fallen-angel-official-mv-teaser",
+    title: 'JENNIE "FALLEN ANGEL" (Official MV Teaser)',
+    category: "kpop",
+    categoryLabel: "K-pop Spotlight",
+    mediaType: "youtube",
+    description:
+      "The first MV teaser for JENNIE's solo title track \"FALLEN ANGEL,\" released ahead of her 2026 EP of the same name.",
+    cultureNote:
+      "The teaser leans into a dark fairytale look, with JENNIE speaking a line from a puppet-theater-style stage before the color and mood shift for the rest of the clip.",
+    tags: ["BLACKPINK", "JENNIE", "Fallen Angel", "MV Teaser", "Odd Atelier"],
+    youtubeId: "CNQujRtii44",
+    sourceLabel: "Official \"FALLEN ANGEL\" MV teaser, as reported by Soompi",
+    guideHref: "/kpop/jennie",
+  },
+  {
     id: "rescene-woni-runaway-facecam",
     title: 'RESCENE Woni "Runaway" Facecam',
     category: "kpop",
@@ -44,7 +59,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
   {
     id: "rescene-woni-pretty-girl-music-core-fancam",
     title:
-      "[#최애직캠] RESCENE WONI (리센느 원이) – Pretty Girl | 쇼! 음악중심 | MBC260711",
+      "[#최애직캠] RESCENE WONI (리센느 원이) – Pretty Girl | 숇! 음악중심 | MBC260711",
     category: "kpop",
     categoryLabel: "On Stage",
     mediaType: "youtube",
@@ -60,7 +75,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
   {
     id: "rescene-woni-runaway-music-bank-fancam",
     title:
-      "[K-Fancam] 리센느 원이 직캠 'Runaway' (RESCENE WONI Fancam) @뮤직뱅크(Music Bank) 260410",
+      "[K-Fancam] 리센느 원이 직칵 'Runaway' (RESCENE WONI Fancam) @뮤직뱅(Music Bank) 260410",
     category: "kpop",
     categoryLabel: "On Stage",
     mediaType: "youtube",
@@ -76,7 +91,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
   {
     id: "rescene-woni-bloom-festival-fancam",
     title:
-      "260601 원이 WONI 리센느 RESCENE 💿Bloom [8K 30P] 직캠 FANCAM @순천대 축제 by GalaxyMaru",
+      "260601 원이 WONI 리센느 RESCENE 💿Bloom [8K 30P] 직칵 FANCAM @순천대 축제 by GalaxyMaru",
     category: "kpop",
     categoryLabel: "On Stage",
     mediaType: "youtube",
@@ -92,7 +107,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
   {
     id: "rescene-woni-ansan-love-attack-glow-up-fancam",
     title:
-      '250504 리센느 원이 (RESCENE WONI) 안산 Full Ver. "LOVE ATTACK, Glow Up" 4K 60p 세로 직캠 @안산그리너스 축하공연 FANCAM',
+      '250504 리센느 원이 (RESCENE WONI) 안산 Full Ver. "LOVE ATTACK, Glow Up" 4K 60p 세로 직칵 @안산그리너스 축하공연 FANCAM',
     category: "kpop",
     categoryLabel: "On Stage",
     mediaType: "youtube",
@@ -138,7 +153,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
   {
     id: "cortis-keonho-redred-mcountdown-fancam",
     title:
-      "[입덕직캠] 코르티스 건호 직캠 4K 'REDRED' (CORTIS KEONHO FanCam) | @MCOUNTDOWN_2026.4.23",
+      "[입덕직칵] 코르티스 건호 직칵 4K 'REDRED' (CORTIS KEONHO FanCam) | @MCOUNTDOWN_2026.4.23",
     category: "kpop",
     categoryLabel: "On Stage",
     mediaType: "youtube",
@@ -154,7 +169,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
   {
     id: "cortis-keonho-fashion-music-core-fancam",
     title:
-      "[#최애직캠] CORTIS KEONHO (코르티스 건호) – FaSHioN | 쇼! 음악중심 | MBC250913",
+      "[#최애직캠] CORTIS KEONHO (코르티스 건호) – FaSHioN | 숇! 음악중심 | MBC250913",
     category: "kpop",
     categoryLabel: "On Stage",
     mediaType: "youtube",
@@ -208,7 +223,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
   {
     id: "babymonster-ahyeon-choom-concert-fancam",
     title:
-      "260626 베이비몬스터 아현 직캠 'CHOOM' (BABYMONSTER AHYEON FanCam)",
+      "260626 베이비몬스터 아현 직칵 'CHOOM' (BABYMONSTER AHYEON FanCam)",
     category: "kpop",
     categoryLabel: "On Stage",
     mediaType: "youtube",
@@ -240,7 +255,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
   {
     id: "babymonster-ahyeon-lee-mujin-service",
     title:
-      "[리무진서비스] EP.140 베이비몬스터 아현 | BABYMONSTER AHYEON | Love, Maybe, vampire, HATELOVE, 꽃 길",
+      "[리무진서비스] EP.140 베이비몬스터 아현 | BABYMONSTER AHYEON | Love, Maybe, vampire, HATELOVE, 꿃 길",
     category: "kpop",
     categoryLabel: "Vocal performance",
     mediaType: "youtube",
@@ -256,7 +271,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
   {
     id: "babymonster-ahyeon-drip-inkigayo-fancam",
     title:
-      "[안방1열 직캠4K] 베이비몬스터 아현 'DRIP' (BABYMONSTER AHYEON FanCam)",
+      "[안방1열 직칵4K] 베이비몬스터 아현 'DRIP' (BABYMONSTER AHYEON FanCam)",
     category: "kpop",
     categoryLabel: "On Stage",
     mediaType: "youtube",
@@ -321,13 +336,13 @@ export const MEDIA_ITEMS: MediaItem[] = [
     description:
       "A Kim ChaeYeon-focused tripleS Baby Flower close-up fancam that works well as a first entry point for noticing her bright, camera-friendly stage image.",
     cultureNote:
-      "In Korea, an ‘얼빡직캠’ means a close-up fancam where the camera stays tight on the idol’s face. It can make expressions, eye contact, and small mood changes feel more important than the full choreography.",
+      "In Korea, an ‘얼빵직캠’ means a close-up fancam where the camera stays tight on the idol’s face. It can make expressions, eye contact, and small mood changes feel more important than the full choreography.",
     tags: [
       "tripleS",
       "Kim ChaeYeon",
       "Baby Flower",
       "close-up fancam",
-      "얼빡직캠",
+      "얼빵직캠",
     ],
     youtubeId: "4USO1Vxxz18",
     sourceLabel: "KBS Kpop",
@@ -363,13 +378,13 @@ export const MEDIA_ITEMS: MediaItem[] = [
     description:
       "A Choi Yena Catch Catch close-up fancam that shows why her playful expression timing and quick mood changes make a solo stage easy to replay.",
     cultureNote:
-      "In Korea, an ‘얼빡직캠’ means a close-up fancam where the camera stays tight on the idol’s face. For solo artists like Yena, that format can make bright, playful stage energy feel personal and easy to remember.",
+      "In Korea, an ‘얼빵직캠’ means a close-up fancam where the camera stays tight on the idol’s face. For solo artists like Yena, that format can make bright, playful stage energy feel personal and easy to remember.",
     tags: [
       "Choi Yena",
       "YENA",
       "Catch Catch",
       "close-up fancam",
-      "얼빡직캠",
+      "얼빵직캠",
     ],
     youtubeId: "bOVZcRK1fyw",
     sourceLabel: "YouTube",
@@ -426,15 +441,15 @@ export const MEDIA_ITEMS: MediaItem[] = [
     categoryLabel: "K-pop Spotlight",
     mediaType: "youtube",
     description:
-      "A KBSKpop 얼빡직캠 focused on Stray Kids Felix’s “Soul Beam” stage, useful for watching facecam details, camera awareness, and how his visual image contrasts with the deep voice many fans remember from songs like MANIAC.",
+      "A KBSKpop 얼빵직캠 focused on Stray Kids Felix’s “Soul Beam” stage, useful for watching facecam details, camera awareness, and how his visual image contrasts with the deep voice many fans remember from songs like MANIAC.",
     cultureNote:
-      "A KBSKpop 얼빡직캠 focused on Stray Kids Felix’s “Soul Beam” stage, useful for watching facecam details, camera awareness, and how his visual image contrasts with the deep voice many fans remember from songs like MANIAC.",
+      "A KBSKpop 얼빵직캠 focused on Stray Kids Felix’s “Soul Beam” stage, useful for watching facecam details, camera awareness, and how his visual image contrasts with the deep voice many fans remember from songs like MANIAC.",
     tags: [
       "Stray Kids",
       "Felix",
       "Soul Beam",
       "Facecam",
-      "얼빡직캠",
+      "얼빵직캠",
       "KBSKpop",
     ],
     youtubeId: "GETUc1c1uAs",
@@ -450,7 +465,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
     description:
       "A single performance clip can turn a small expression, gesture, or stage detail into a moment fans remember.",
     cultureNote:
-      "Eolppak-jikcam”(=얼빡 직캠) is a close-up fancam that stays almost entirely on an idol’s face. It is the kind of video fans replay to catch small smiles, glances, and expressions that make a stage feel more personal.",
+      "Eolppak-jikcam”(=얼빵 직캠) is a close-up fancam that stays almost entirely on an idol’s face. It is the kind of video fans replay to catch small smiles, glances, and expressions that make a stage feel more personal.",
     tags: ["Performance", "K-pop","fromis_9", "Song Hayoung", "Eolppak", "Facecam"],
     youtubeId: "QGBMQVFNpvI",
     sourceLabel: "video from KBS Kpop",
