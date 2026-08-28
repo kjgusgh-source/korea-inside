@@ -14,7 +14,7 @@ const pageDescription =
   "A friendly HAEMIL profile of JENNIE, BLACKPINK's main rapper and lead vocalist, her solo run from SOLO to Odd Atelier, and her new EP Fallen Angel.";
 
 const intro =
-  "JENNIE is one of the four members of BLACKPINK, and by now her solo career is large enough to stand on its own. Online, she is sometimes introduced as BLACKPINK's “leader,” but that is not an official title — YG Entertainment has said the group has no designated leader, and JENNIE herself has pushed back on the label in interviews. What she does have is seniority: she is the oldest of the four, debuted alongside the others on August 8, 2016, and tends to be the member who speaks first when the group is introduced. This page is about her solo side, centered on her new EP, “Fallen Angel.”";
+  "JENNIE is one of the four members of BLACKPINK, and by now her solo career is large enough to stand on its own. It's easy to see why people sometimes call her BLACKPINK's “leader” — but that's not an official title. YG Entertainment has said the group has no designated leader, and JENNIE herself has pushed back on it in interviews. What she does have is seniority: she is the oldest of the four, debuted alongside the others on August 8, 2016, and tends to be the member who speaks first when the group is introduced. This page is about her solo side, centered on her new EP, “Fallen Angel.”";
 
 const profileFacts = [
   { label: "Stage name", value: "JENNIE / 제니" },
@@ -79,8 +79,8 @@ const epFacts = [
 const whyPeopleCare = [
   "“Fallen Angel” is JENNIE's first EP built entirely through Odd Atelier, the label she started in 2023 — a different setup from a song released as one artist among a bigger company roster.",
   "The MV teaser leaned into a dark fairytale look: JENNIE speaking from a puppet-theater-style stage, with a line about how “we can still fly” before the visual mood shifts for the rest of the clip.",
-  "Odd Atelier described the EP as coming “from a very personal place,” framing it as a more self-directed project than a typical comeback single.",
-  "The digital and physical tracklists are different sizes — three songs digitally, six on the physical release — which is part of why fans are comparing which version to buy rather than treating it as one simple release.",
+  "This EP feels more personal than a typical comeback. Odd Atelier itself described it as coming “from a very personal place.”",
+  "The digital and physical tracklists aren't the same size: three songs digitally, six on the physical release. That's part of why fans are comparing which version to buy instead of treating it as one simple release.",
 ];
 
 const relatedGuides = [
@@ -232,7 +232,7 @@ export default function JennieProfilePage() {
 
             <div className="mt-6 grid gap-5 md:grid-cols-2 md:items-start md:gap-6">
               <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-4 md:p-5">
-                <p className="text-base leading-8 text-[var(--muted)] md:text-lg">
+              <p className="text-base leading-8 text-[var(--muted)] md:text-lg">
                   {intro}
                 </p>
               </div>
@@ -248,8 +248,8 @@ export default function JennieProfilePage() {
                   {profileFacts.map((fact) => (
                     <div key={fact.label}>
                       <dt className="text-xs font-semibold uppercase tracking-[0.15em] text-[var(--text)]">
-                        {fact.label}
-                      </dt>
+                      {fact.label}
+                    </dt>
                       <dd className="mt-1 text-sm leading-6 text-[var(--muted)]">
                         {fact.value}
                       </dd>
@@ -258,7 +258,6 @@ export default function JennieProfilePage() {
                 </dl>
               </div>
             </div>
-          </div>
 
           <section className="mt-8 grid gap-5 lg:grid-cols-3">
             <article className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 shadow-sm lg:col-span-2">
@@ -286,9 +285,9 @@ export default function JennieProfilePage() {
               <ul className="mt-5 space-y-3 text-sm leading-7 text-[var(--muted)]">
                 {soloTimeline.map((item) => (
                   <li
-                    key={item.year}
+                  key={item.year}
                     className="rounded-2xl bg-[var(--surface)] p-4"
-                  >
+                >
                     <span className="font-semibold text-[var(--text)]">
                       {item.year}
                     </span>{" "}
@@ -323,21 +322,20 @@ export default function JennieProfilePage() {
             <div className="mt-6 space-y-6 text-base leading-8 text-[var(--muted)] md:text-lg">
               <p>
                 JENNIE has released solo music before, but “Fallen Angel” is
-                her first project built entirely through Odd Atelier, the label
-                she started in 2023 with Columbia Records as a partner. That
-                matters less as a headline and more as context: it means more
-                of the decisions behind this EP, from timing to how many
-                versions exist, are hers to make rather than shared across a
-                bigger company roster.
+                the first project she has made entirely through Odd Atelier,
+                the label she started in 2023 with Columbia Records as a
+                partner. In practice, that means more of the decisions behind
+                this EP — timing, how many versions to release — are hers to
+                make, instead of being shared across a bigger company roster.
               </p>
 
               <p>
                 The title track shares its name with the EP. Two more songs,
                 “HEAVEN” and “Less Than a Lover,” round out the digital
-                release, while the physical version adds three more tracks
-                for a six-song total — a common way K-pop artists give
-                physical buyers something extra without changing what
-                streaming listeners get on release day.
+                release. The physical version adds three more tracks for a
+                six-song total — a common way K-pop artists give physical
+                buyers something extra without changing what streaming
+                listeners get on release day.
               </p>
             </div>
           </section>
@@ -403,11 +401,11 @@ export default function JennieProfilePage() {
                   </p>
 
                   <h3 className="mt-3 text-xl font-semibold text-[var(--text)]">
-                    {guide.title}
+                  {guide.title}
                   </h3>
 
                   <p className="mt-3 text-sm leading-6 text-[var(--muted)]">
-                    {guide.description}
+                  {guide.description}
                   </p>
 
                   <p className="mt-4 text-sm font-semibold text-[var(--accent)]">
