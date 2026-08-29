@@ -265,7 +265,14 @@ export const POSTS: Post[] = [
     readingTime: "4 min read",
     seoTitle: "What Is Nunchi? Korean Culture Explained",
     seoDescription:
-      "Learn what nunchi means and why this quiet skill of reading the room is important in Korean social life."
+      "Learn what nunchi means and why this quiet skill of reading the room is important in Korean social life.",
+    relatedGuides: [
+      {
+        label: "Expressions guide",
+        title: "Korean Age Explained: Why Koreans Sometimes Have Two (or Three) Ages",
+        href: "/expressions/korean-age",
+      },
+    ],
   },
   {
     id: 8,
@@ -2651,7 +2658,14 @@ export const POSTS: Post[] = [
     readingTime: "5 min read",
     seoTitle: "Korean Age Explained: Counting Age vs. Man Nai (International Age)",
     seoDescription:
-      "Confused why Korean ages do not match? Learn the difference between Korea’s old counting age and 만 나이 (man nai), the international age system Korea adopted in 2023."
+      "Confused why Korean ages do not match? Learn the difference between Korea’s old counting age and 만 나이 (man nai), the international age system Korea adopted in 2023.",
+    relatedGuides: [
+      {
+        label: "Expressions guide",
+        title: "Nunchi: The Quiet Skill Behind Korean Social Life",
+        href: "/expressions/nunchi",
+      },
+    ],
   },
 ];
 
