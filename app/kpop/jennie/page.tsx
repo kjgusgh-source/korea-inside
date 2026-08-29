@@ -332,7 +332,7 @@ export default function JennieProfilePage() {
 
               <p>
                 The title track shares its name with the EP. Two more songs,
-                “HEAVEN” and “Less Than a Lover,⁽ round out the digital
+                “HEAVEN” and “Less Than a Lover,” round out the digital
                 release. The physical version adds three more tracks for a
                 six-song total — a common way K-pop artists give physical
                 buyers something extra without changing what streaming
