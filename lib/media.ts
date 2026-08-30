@@ -27,6 +27,21 @@ export type MediaItem = {
 
 export const MEDIA_ITEMS: MediaItem[] = [
   {
+    id: "jennie-fallen-angel-official-mv-teaser",
+    title: 'JENNIE "FALLEN ANGEL" (Official MV Teaser)',
+    category: "kpop",
+    categoryLabel: "K-pop Spotlight",
+    mediaType: "youtube",
+    description:
+      "The first MV teaser for JENNIE's solo title track \"FALLEN ANGEL,\" released ahead of her 2026 EP of the same name.",
+    cultureNote:
+      "The teaser leans into a dark fairytale look, with JENNIE speaking a line from a puppet-theater-style stage before the color and mood shift for the rest of the clip.",
+    tags: ["BLACKPINK", "JENNIE", "Fallen Angel", "MV Teaser", "Odd Atelier"],
+    youtubeId: "CNQujRtii44",
+    sourceLabel: "Official \"FALLEN ANGEL\" MV teaser, as reported by Soompi",
+    guideHref: "/kpop/jennie",
+  },
+  {
     id: "rescene-woni-runaway-facecam",
     title: 'RESCENE Woni "Runaway" Facecam',
     category: "kpop",
