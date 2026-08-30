@@ -10,7 +10,7 @@ const pageUrl = `${siteUrl}/kpop/what-is-a-fancam`;
 
 const pageTitle = "What Is a Fancam in K-pop? | Fancam Meaning";
 const pageDescription =
-  "A fancam is a video that follows one K-pop idol during a performance - here's what it means, why fans watch it, and how it differs from a facecam.";
+  "A fancam is a video that follows just one K-pop idol, not the whole group. Here's what it means, why fans watch it, and how it differs from a facecam.";
 
 const quickFacts = [
   "Basic meaning: A fancam is a video focused on one idol or member during a performance.",
@@ -498,7 +498,7 @@ export default function WhatIsAFancamPage() {
                     src="https://img.youtube.com/vi/gHoKSBaLP7E/hqdefault.jpg"
                     alt=""
                     className="h-full w-full object-cover"
-                  />
+                />
                 </div>
 
                 <p className="mt-4 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
@@ -529,7 +529,7 @@ export default function WhatIsAFancamPage() {
                     src="https://img.youtube.com/vi/gOGU2zO4POY/hqdefault.jpg"
                     alt=""
                     className="h-full w-full object-cover"
-                  />
+                />
                 </div>
 
                 <p className="mt-4 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
@@ -561,7 +561,7 @@ export default function WhatIsAFancamPage() {
                     src="https://img.youtube.com/vi/qx8VbGEWcBo/hqdefault.jpg"
                     alt=""
                     className="h-full w-full object-cover"
-                  />
+                />
                 </div>
 
                 <p className="mt-4 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
@@ -594,7 +594,7 @@ export default function WhatIsAFancamPage() {
                 <h2 className="mt-3 text-3xl font-semibold">
                   Member guides that use fancams
                 </h2>
-              </div>
+            </div>
 
               <Link
                 href="/kpop"
@@ -629,8 +629,8 @@ export default function WhatIsAFancamPage() {
                 </Link>
               ))}
             </div>
-          </section>
-        </div>
+        </section>
+      </div>
       </main>
     </>
   );
