@@ -757,6 +757,81 @@ export const MEDIA_ITEMS: MediaItem[] = [
     guideHref: "/kpop/ive/an-yujin",
   },
   {
+    id: "ive-an-yujin-i-am-ulsan-fancam",
+    title: "An Yujin “I AM” fancam @ Ulsan",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A fan-filmed “I AM” solo fancam of An Yujin performing at a festival stage in Ulsan, away from the usual weekly broadcast cameras.",
+    cultureNote:
+      "Regional festival stages like this one are filmed by individual fans rather than a broadcaster, so the angle, distance, and sound quality can vary a lot more than a fixed music-show camera.",
+    tags: ["IVE", "An Yujin", "I AM", "Fancam", "Ulsan"],
+    youtubeId: "G_lYBffdIRo",
+    sourceLabel: "Spinel CAM",
+    guideHref: "/kpop/ive/an-yujin",
+  },
+  {
+    id: "izone-an-yujin-sequence-one-reeler-fancam",
+    title: "IZ*ONE An Yujin “Sequence” fancam @ One-reeler Premiere",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A solo fancam of An Yujin performing “Sequence” from her IZ*ONE days, at the group's One-reeler Premiere event — a few years before IVE debuted.",
+    cultureNote:
+      "This one predates IVE: many K-pop idols, Yujin included, were part of a different group first, and an earlier fancam like this is a common way fans trace how a member's stage presence has changed over time.",
+    tags: ["IZ*ONE", "An Yujin", "Sequence", "Fancam", "Pre-IVE"],
+    youtubeId: "IkS7zld2sDM",
+    sourceLabel: "M2",
+    guideHref: "/kpop/ive/an-yujin",
+  },
+  {
+    id: "ive-an-yujin-lion-heart-music-festival-fancam",
+    title: "An Yujin “Lion Heart” close-up fancam @ MBC Music Festival",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A close-up cam of An Yujin performing “Lion Heart” at MBC's year-end Music Festival broadcast, a special year-end program rather than a regular weekly show.",
+    cultureNote:
+      "Year-end 가요제 broadcasts like this one often combine multiple groups and cover stages into one long special, so the camera style and pacing can look different from a normal comeback-week fancam.",
+    tags: ["IVE", "An Yujin", "Lion Heart", "Fancam", "MBC Music Festival"],
+    youtubeId: "25LZxd6Oamk",
+    sourceLabel: "MBCkpop",
+    guideHref: "/kpop/ive/an-yujin",
+  },
+  {
+    id: "ive-an-yujin-accendio-music-core-fancam",
+    title: "An Yujin “Accendio” fancam @ Music Core",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A solo fancam of An Yujin performing “Accendio” on MBC's Music Core, a regular weekly comeback stage.",
+    cultureNote:
+      "Set next to the MBC Music Festival clip above, this is a simple way to compare a normal promotion-week broadcast with a bigger, one-off year-end special.",
+    tags: ["IVE", "An Yujin", "Accendio", "Fancam", "Music Core"],
+    youtubeId: "tapUyvEDtRI",
+    sourceLabel: "MBCkpop",
+    guideHref: "/kpop/ive/an-yujin",
+  },
+  {
+    id: "izone-an-yujin-secret-story-of-the-swan-mcountdown-fancam",
+    title: "IZ*ONE An Yujin “Secret Story of the Swan” fancam @ M COUNTDOWN",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "Another IZ*ONE-era fancam, with An Yujin performing “환상동화 (Secret Story of the Swan)” on M COUNTDOWN in 2020.",
+    cultureNote:
+      "Together with the Sequence fancam above, this is a look at Yujin's earliest solo fancams — filmed years before she became one of IVE's most recognizable members.",
+    tags: ["IZ*ONE", "An Yujin", "Secret Story of the Swan", "Fancam", "Pre-IVE"],
+    youtubeId: "TrUqEnmZUTw",
+    sourceLabel: "M2",
+    guideHref: "/kpop/ive/an-yujin",
+  },
+  {
     id: "gaeul-ive-fancam",
     title: "Watching Gaeul’s calm stage control in IVE",
     category: "kpop",
