@@ -6,7 +6,7 @@ import JsonLd from "../../../components/JsonLd";
 const siteUrl = "https://haemilkorea.com";
 const pageUrl = `${siteUrl}/food/what-is-bunsik-korean-snack-food`;
 
-const pageTitle = "What Is Bunsik? Korea’s Snack-Shop Food Culture Explained";
+const pageTitle = "What Does Bunsik Mean? Korea’s Snack-Shop Food Culture Explained";
 const pageDescription =
   "A friendly HAEMIL guide to bunsik, Korea’s casual snack-shop food culture, from tteokbokki, gimbap, twigim, sundae, and eomuk to the after-school and market-stall feeling behind it.";
 
