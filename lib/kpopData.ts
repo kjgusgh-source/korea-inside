@@ -244,7 +244,15 @@ export const KPOP_GROUPS: KpopGroup[] = [
         },
         culturalContext:
           "IVE’s image is built around confidence rather than cuteness alone. That is why Wonyoung feels so central to the group’s first impression. She gives new viewers an easy way to understand IVE’s mood: elegant, self-aware, and a little untouchable. For DIVE, her appeal is not just her visual image. It is the way she turns that image into performance — through timing, expression, and the calm confidence she brings to the stage.",
-        relatedMediaIds: ["jang-wonyoung-ive-fancam"],
+        relatedMediaIds: [
+          "jang-wonyoung-ive-fancam",
+          "ive-jang-wonyoung-xoxz-tima-fancam",
+          "ive-jang-wonyoung-multi-song-show-what-i-am-fancam",
+          "ive-jang-wonyoung-bang-bang-mcountdown-fancam",
+          "ive-jang-wonyoung-bang-bang-music-bank-fancam",
+          "ive-jang-wonyoung-rebel-heart-music-bank-fancam",
+          "ive-jang-wonyoung-attitude-music-core-fancam",
+        ],
       },
       {
         id: "rei",
