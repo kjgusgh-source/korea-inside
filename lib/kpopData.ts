@@ -180,7 +180,14 @@ export const KPOP_GROUPS: KpopGroup[] = [
         },
         culturalContext:
           "IVE’s confidence does not come from only one member or one image. Wonyoung often represents the elegant, polished side of the group, while Yujin helps make IVE feel more active, direct, and easy to connect with. That balance matters. For new viewers, Yujin can make IVE feel less like a distant concept and more like a group with real energy behind the confidence.",
-        relatedMediaIds: ["an-yujin-ive-fancam"],
+        relatedMediaIds: [
+          "an-yujin-ive-fancam",
+          "ive-an-yujin-i-am-ulsan-fancam",
+          "izone-an-yujin-sequence-one-reeler-fancam",
+          "ive-an-yujin-lion-heart-music-festival-fancam",
+          "ive-an-yujin-accendio-music-core-fancam",
+          "izone-an-yujin-secret-story-of-the-swan-mcountdown-fancam",
+        ],
       },
       {
         id: "gaeul",
