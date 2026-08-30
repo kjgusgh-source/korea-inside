@@ -875,7 +875,13 @@ export const KPOP_GROUPS: KpopGroup[] = [
           "If you are new to tripleS, use this fancam as a small first door into the group instead of trying to memorize every member at once.",
           "Think of the WATERBOMB connection only as a fan-imagined future fit: summer styling, bright confidence, and a camera-friendly stage mood.",
         ],
-        relatedMediaIds: ["triples-kim-chaeyeon-baby-flower-facecam"],
+        relatedMediaIds: [
+          "triples-kim-chaeyeon-baby-flower-facecam",
+          "triples-kim-chaeyeon-touch-inkigayo-fancam",
+          "triples-kim-chaeyeon-touch-show-champion-fancam",
+          "triples-kim-chaeyeon-rising-waterbomb-fancam",
+          "triples-kim-chaeyeon-girls-capitalism-mokpo-fancam",
+        ],
       },
     ],
     starterTags: [
