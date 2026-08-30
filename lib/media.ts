@@ -349,6 +349,66 @@ export const MEDIA_ITEMS: MediaItem[] = [
     guideHref: "/kpop/triples/kim-chaeyeon",
   },
   {
+    id: "triples-kim-chaeyeon-touch-inkigayo-fancam",
+    title: "Kim ChaeYeon “Touch” fancam @ SBS Inkigayo",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A solo fancam of Kim ChaeYeon performing tripleS's “Touch” on SBS Inkigayo, filmed indoors as part of a full music-show broadcast.",
+    cultureNote:
+      "Weekly music-show stages like Inkigayo are filmed indoors with a consistent camera setup every week, which is why fancams from these shows tend to look cleaner and more uniform than ones shot outdoors.",
+    tags: ["tripleS", "Kim ChaeYeon", "Touch", "SBS Inkigayo", "music show fancam"],
+    youtubeId: "0ZhwdbhF4mg",
+    sourceLabel: "SBSKPOP ZOOM",
+    guideHref: "/kpop/triples/kim-chaeyeon",
+  },
+  {
+    id: "triples-kim-chaeyeon-touch-show-champion-fancam",
+    title: "Kim ChaeYeon “Touch” fancam @ Show Champion",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "Another “Touch” fancam of Kim ChaeYeon, this time from MBC's Show Champion — a different weekly music show than the Inkigayo stage above.",
+    cultureNote:
+      "Korean groups usually perform the same title track on several different music shows across one promotion week, so watching the same song on two shows is a common way fans compare small staging differences.",
+    tags: ["tripleS", "Kim ChaeYeon", "Touch", "Show Champion", "music show fancam"],
+    youtubeId: "zeDUHs2mfms",
+    sourceLabel: "ALL THE K-POP",
+    guideHref: "/kpop/triples/kim-chaeyeon",
+  },
+  {
+    id: "triples-kim-chaeyeon-rising-waterbomb-fancam",
+    title: "Kim ChaeYeon “Rising” fancam @ WATERBOMB",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A fan-filmed 4K fancam of Kim ChaeYeon performing tripleS's “Rising” at WATERBOMB, one of Korea's largest summer music festivals.",
+    cultureNote:
+      "Festival stages like WATERBOMB happen outdoors with water effects and a live festival crowd, a different setting from the indoor, single-angle world of weekly music shows.",
+    tags: ["tripleS", "Kim ChaeYeon", "Rising", "WATERBOMB", "festival fancam"],
+    youtubeId: "Tca4BIGRsnw",
+    sourceLabel: "DaftTaengk",
+    guideHref: "/kpop/triples/kim-chaeyeon",
+  },
+  {
+    id: "triples-kim-chaeyeon-girls-capitalism-mokpo-fancam",
+    title: "Kim ChaeYeon “Girls' Capitalism” fancam @ Mokpo sports festival",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A fan-filmed fancam of Kim ChaeYeon performing “Girls' Capitalism” at Mokpo's national sports festival, a regional event rather than a televised music show.",
+    cultureNote:
+      "Idols also perform at local festivals and community events like this one, not just televised music shows — these stages are usually only captured by individual fans, since broadcasters don't cover every regional event.",
+    tags: ["tripleS", "Kim ChaeYeon", "Girls' Capitalism", "Mokpo", "festival fancam"],
+    youtubeId: "artOSoC3p5A",
+    sourceLabel: "Zereu",
+    guideHref: "/kpop/triples/kim-chaeyeon",
+  },
+  {
     id: "kwon-eunbi-waterbomb-crazy-in-love-fancam",
     title: "Kwon Eunbi “Crazy in Love” WATERBOMB fancam",
     category: "kpop",
