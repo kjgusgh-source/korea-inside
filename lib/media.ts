@@ -136,6 +136,81 @@ export const MEDIA_ITEMS: MediaItem[] = [
     guideHref: "/kpop/illit/wonhee",
   },
   {
+    id: "illit-wonhee-its-me-mcountdown-fancam",
+    title: "ILLIT Wonhee “It's Me” fancam @ M COUNTDOWN",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A close-up M COUNTDOWN fancam of ILLIT Wonhee performing “It's Me,” the same title track as the Inkigayo fancam above but from a different weekly music show.",
+    cultureNote:
+      "M COUNTDOWN close-up fancams are filmed with a steady single-camera setup, which is why they're a common starting point for watching one member through a full stage.",
+    tags: ["ILLIT", "Wonhee", "It's Me", "Fancam", "M COUNTDOWN"],
+    youtubeId: "GAOf0eWlbSM",
+    sourceLabel: "M2",
+    guideHref: "/kpop/illit/wonhee",
+  },
+  {
+    id: "illit-wonhee-do-the-dance-music-core-fancam",
+    title: "ILLIT Wonhee “Do the Dance” fancam @ Music Core",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A solo fancam of ILLIT Wonhee performing “Do the Dance” on MBC's Music Core, a Saturday music show separate from Inkigayo or M COUNTDOWN.",
+    cultureNote:
+      "Music Core airs on Saturdays, so a comeback stage here usually sits in the middle of a promotion week that also includes Inkigayo and M COUNTDOWN performances of the same song.",
+    tags: ["ILLIT", "Wonhee", "Do the Dance", "Fancam", "Music Core"],
+    youtubeId: "kvQby5gEQrU",
+    sourceLabel: "MBCkpop",
+    guideHref: "/kpop/illit/wonhee",
+  },
+  {
+    id: "illit-wonhee-tick-tack-music-core-fancam",
+    title: "ILLIT Wonhee “Tick-Tack” fancam @ Music Core",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "Another Music Core solo fancam of ILLIT Wonhee, this time for the “Tick-Tack” promotion, filmed about seven months before the Do the Dance stage above.",
+    cultureNote:
+      "Watching the same member on the same show across two different comebacks is a simple way to notice how her styling and stage presence shift from one title track to the next.",
+    tags: ["ILLIT", "Wonhee", "Tick-Tack", "Fancam", "Music Core"],
+    youtubeId: "AqtR0UWCglo",
+    sourceLabel: "MBCkpop",
+    guideHref: "/kpop/illit/wonhee",
+  },
+  {
+    id: "illit-wonhee-magnetic-mcountdown-fancam",
+    title: "ILLIT Wonhee “Magnetic” fancam @ M COUNTDOWN",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A 4K M COUNTDOWN fancam of ILLIT Wonhee performing “Magnetic,” ILLIT's debut single, from a special M COUNTDOWN stage called “I'LL (SHOW) IT.”",
+    cultureNote:
+      "Not every M COUNTDOWN fancam comes from a regular weekly broadcast — some, like this one, are filmed for a dedicated special stage built around one group, which is why the show name looks different here.",
+    tags: ["ILLIT", "Wonhee", "Magnetic", "Fancam", "M COUNTDOWN"],
+    youtubeId: "0zAdPbMhd2E",
+    sourceLabel: "M2",
+    guideHref: "/kpop/illit/wonhee",
+  },
+  {
+    id: "illit-wonhee-its-me-kworld-dream-awards-fancam",
+    title: "ILLIT Wonhee “It's Me” fancam @ 2026 K-World Dream Awards",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A fan-filmed solo fancam of ILLIT Wonhee performing “It's Me” at the 2026 K-World Dream Awards, an annual K-pop awards ceremony held at KINTEX.",
+    cultureNote:
+      "Award-show stages like this one are a different setting from weekly music shows — fewer performances overall, a bigger stage, and often a one-off outfit or arrangement just for that night.",
+    tags: ["ILLIT", "Wonhee", "It's Me", "Fancam", "K-World Dream Awards"],
+    youtubeId: "Pbd6waOT4uE",
+    sourceLabel: "Alexhlb",
+    guideHref: "/kpop/illit/wonhee",
+  },
+  {
     id: "cortis-keonho-joyride-fancam",
     title: "CORTIS Keonho “JoyRide” Fancam",
     category: "kpop",

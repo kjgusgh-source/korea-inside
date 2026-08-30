@@ -630,7 +630,14 @@ export const KPOP_GROUPS: KpopGroup[] = [
           "Notice how the close camera makes her charm easier to follow than a full-stage performance.",
           "If her face, timing, or one small moment stays in your head after the clip ends, that is exactly why fancams matter.",
         ],
-        relatedMediaIds: ["illit-wonhee-its-me-fancam"],
+        relatedMediaIds: [
+          "illit-wonhee-its-me-fancam",
+          "illit-wonhee-its-me-mcountdown-fancam",
+          "illit-wonhee-do-the-dance-music-core-fancam",
+          "illit-wonhee-tick-tack-music-core-fancam",
+          "illit-wonhee-magnetic-mcountdown-fancam",
+          "illit-wonhee-its-me-kworld-dream-awards-fancam",
+        ],
       },
       {
         id: "iroha",
