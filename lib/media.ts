@@ -652,6 +652,96 @@ export const MEDIA_ITEMS: MediaItem[] = [
     guideHref: "/kpop/ive/jang-wonyoung",
   },
   {
+    id: "ive-jang-wonyoung-xoxz-tima-fancam",
+    title: "Jang Wonyoung “XOXZ” fancam @ 2026 TIMA",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A fan-filmed close-up fancam of Jang Wonyoung performing “XOXZ” at an event called 2026 TIMA, outside the usual run of weekly music shows.",
+    cultureNote:
+      "A one-off event stage like this one has a different rhythm from a weekly music show — usually a single performance with no repeat the next day, which can change how a stage is styled and shot.",
+    tags: ["IVE", "Jang Wonyoung", "XOXZ", "Fancam", "TIMA"],
+    youtubeId: "RI-skOmND7c",
+    sourceLabel: "Alexhlb",
+    guideHref: "/kpop/ive/jang-wonyoung",
+  },
+  {
+    id: "ive-jang-wonyoung-multi-song-show-what-i-am-fancam",
+    title: "Jang Wonyoung multi-song fancam (ATTITUDE / LOVE DIVE / REBEL HEART / Kitsch) @ SHOW WHAT I AM",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A continuous vertical fancam that follows Jang Wonyoung through four different IVE songs back to back — ATTITUDE, LOVE DIVE, REBEL HEART, and Kitsch — at a 2025 event called SHOW WHAT I AM.",
+    cultureNote:
+      "Watching one member move between four songs in a single take makes it easier to notice how her expression and energy shift with each track's mood, instead of comparing separate clips side by side.",
+    tags: ["IVE", "Jang Wonyoung", "ATTITUDE", "LOVE DIVE", "REBEL HEART", "Kitsch", "Fancam"],
+    youtubeId: "fc0AdZS4l1Q",
+    sourceLabel: "The Sin",
+    guideHref: "/kpop/ive/jang-wonyoung",
+  },
+  {
+    id: "ive-jang-wonyoung-bang-bang-mcountdown-fancam",
+    title: "Jang Wonyoung “BANG BANG” fancam @ M COUNTDOWN",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A close-up M COUNTDOWN fancam of Jang Wonyoung performing “BANG BANG,” filmed the day before the Music Bank version below.",
+    cultureNote:
+      "M COUNTDOWN's close-up camera work tends to stay tight on one member's face and upper body for the whole song, which is part of why this fancam style became a common way to watch individual expressions.",
+    tags: ["IVE", "Jang Wonyoung", "BANG BANG", "Fancam", "M COUNTDOWN"],
+    youtubeId: "8xiTH1H-dcc",
+    sourceLabel: "M2",
+    guideHref: "/kpop/ive/jang-wonyoung",
+  },
+  {
+    id: "ive-jang-wonyoung-bang-bang-music-bank-fancam",
+    title: "Jang Wonyoung “BANG BANG” fancam @ Music Bank",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "The same “BANG BANG” promotion, one day later, filmed by KBS's Music Bank fancam channel — a useful side-by-side with the M COUNTDOWN version above.",
+    cultureNote:
+      "Comparing the same stage across two broadcasters shows how much the framing, distance, and pacing of a fancam depend on which show's camera team filmed it, not just on the performance itself.",
+    tags: ["IVE", "Jang Wonyoung", "BANG BANG", "Fancam", "Music Bank"],
+    youtubeId: "1YU3hbFlc7U",
+    sourceLabel: "KBS Kpop",
+    guideHref: "/kpop/ive/jang-wonyoung",
+  },
+  {
+    id: "ive-jang-wonyoung-rebel-heart-music-bank-fancam",
+    title: "Jang Wonyoung “REBEL HEART” fancam @ Music Bank",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A Music Bank fancam of Jang Wonyoung performing “REBEL HEART,” from an earlier promotion than the BANG BANG stages above.",
+    cultureNote:
+      "Placed next to the BANG BANG fancams, this stage is a chance to see how her expression and styling shift between two different comeback concepts, months apart.",
+    tags: ["IVE", "Jang Wonyoung", "REBEL HEART", "Fancam", "Music Bank"],
+    youtubeId: "aQJt-fmHKW0",
+    sourceLabel: "KBS Kpop",
+    guideHref: "/kpop/ive/jang-wonyoung",
+  },
+  {
+    id: "ive-jang-wonyoung-attitude-music-core-fancam",
+    title: "Jang Wonyoung “ATTITUDE” fancam @ Music Core",
+    category: "kpop",
+    categoryLabel: "On Stage",
+    mediaType: "youtube",
+    description:
+      "A solo fancam of Jang Wonyoung performing “ATTITUDE” on MBC's Music Core, rounding out this set with a third weekly music show.",
+    cultureNote:
+      "Music Core, Music Bank, and M COUNTDOWN each have their own house style for filming fancams, so watching the same member across all three is a simple way to notice those small production differences.",
+    tags: ["IVE", "Jang Wonyoung", "ATTITUDE", "Fancam", "Music Core"],
+    youtubeId: "BLA0BB3zGIc",
+    sourceLabel: "MBCkpop",
+    guideHref: "/kpop/ive/jang-wonyoung",
+  },
+  {
     id: "an-yujin-ive-fancam",
     title: "Why An Yujin feels like IVE’s steady spark",
     category: "kpop",
