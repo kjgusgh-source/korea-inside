@@ -34,6 +34,16 @@ const STANDALONE_DRAMA_GUIDES = [
     href: "/dramas/what-is-second-lead-syndrome-in-kdramas",
     readingTime: "5 min read",
   },
+  {
+    id: "what-is-a-sageuk-in-kdramas",
+    category: "dramas",
+    categoryLabel: "K-drama guide",
+    title: "What Is a Sageuk in K-dramas?",
+    description:
+      "A friendly guide to sageuk, the Korean historical drama genre — how jeongtong, fusion, and faction sageuk differ, and the details that often confuse first-time viewers.",
+    href: "/dramas/what-is-a-sageuk-in-kdramas",
+    readingTime: "5 min read",
+  },
 ];
 
 export const metadata: Metadata = {
