@@ -2667,6 +2667,51 @@ export const POSTS: Post[] = [
       },
     ],
   },
+  {
+    id: 25,
+    title: "What Is Chuseok? Korea's Biggest Family Holiday Explained",
+    slug: "what-is-chuseok",
+    category: "expressions",
+    categorySlug: "expressions",
+    categoryLabel: "Korean Expressions",
+    description:
+      "Chuseok is Korea's biggest family holiday of the year - the harvest festival built around ancestral rites, homemade rice cakes, and a countrywide trip back to the hometown.",
+    excerpt:
+      "If you keep seeing \"Chuseok\" or \"Hangawi\" around late September, this is the holiday behind both names.",
+    content: [
+      "Chuseok (\uCD94\uC11D) is Korea's biggest family holiday of the year. In 2026, the holiday runs from September 24 to 26, with the actual day falling on September 25. Because it follows the lunar calendar - always the 15th day of the 8th lunar month, the night of the full moon - the exact dates move around every year on the Western calendar.",
+      "Along with Seollal, the Lunar New Year, Chuseok is one of only two holidays that really slow the whole country down. Offices close, schools break, and for a few days, a huge share of Korea is on the move. If a Korean friend or coworker says they are \"heading down\" (\uB0B4\uB824\uAC00\uB2E4) for Chuseok, they usually mean leaving Seoul and going back to their hometown or another region. In everyday Korean, people often say they are \"going up\" to Seoul and \"going down\" from Seoul to other parts of the country - that is just how the direction is talked about, and it does not always match the actual direction on a map.",
+      "You will also see Chuseok translated as \"Korean Thanksgiving,\" and the comparison is not baseless - it is a harvest holiday, and food is a big part of it. But it can also be a little misleading, since it suggests every Korean household marks the day the same way. The center of a traditional Chuseok is \uCC28\uB840 (charye), a short ceremony where the family sets out food for their ancestors and takes turns bowing in front of the table, and that is still true for many families today. These days, though, there is no single version of Chuseok that every household follows - some families keep charye close to how it has always been done, some simplify it, some skip it and just visit the family graves, and others gather for a meal with no set ritual at all.",
+      "In families that still hold charye, the table is usually put together at home before anyone eats, with rice, fruit, and other freshly harvested food arranged in an order that can vary by family or region. Songpyeon almost always has a place on it too.",
+      "Songpyeon (\uC1A1\uD3B8) is the rice cake most people associate with Chuseok: small, shaped like a half-moon, and steamed over a layer of pine needles. Traditionally, families made songpyeon together the evening before the holiday, filling the dough with things like sesame seeds, sweetened beans, or chestnuts and pinching each one closed by hand. Some families still do this, but these days it is just as common to buy songpyeon from a rice-cake shop or supermarket instead. Depending on the household, you might be handed a plate of songpyeon well before anyone brings up the word charye at all.",
+      "The other common Chuseok activity is \uC131\uBB18 (seongmyo) - visiting the family's ancestral graves to pay respects and tidy up the site. Some families fold this into the same day as charye, others treat it as its own trip, and there is no single rule that every household follows.",
+      "There is also an older, purely Korean name for the holiday: \uD55C\uAC00\uC704 (Hangawi), which roughly translates to \"the great middle of autumn.\" You will see both names used in greetings - \"\uD55C\uAC00\uC704 \uC798 \uBCF4\uB0B4\uC138\uC694\" is a common way to wish someone a good holiday - so if you come across Hangawi somewhere, it is not a different occasion.",
+      "For visitors, most of what actually shows up day-to-day is logistical rather than ceremonial: some shops and markets close while others stay open, and the highways get considerably heavier as everyone makes the same trip at once. HAEMIL's guide to visiting Korea during Chuseok goes into exactly what closes, what stays open, and how to get around the city during the holiday.",
+      "If you follow Korean variety shows, music broadcasts, or drama schedules, Chuseok also explains the occasional gap. Casts and crews are going home for the holiday too, so it is common for regular programming to pause or shift around for these few days.",
+    ],
+    culturalContext:
+      "Chuseok used to be much more closely tied to rites like charye and \uC131\uBB18 (seongmyo). Those traditions still matter in a lot of families, but the holiday has been changing. For a growing number of Koreans, Chuseok is less about getting every ritual exactly right and more about having a reason to gather - especially for family members who live in different cities and might not see much of each other the rest of the year. That does not mean the old traditions have disappeared; charye and seongmyo are still a real part of the holiday for many households. It is more that today's Chuseok sits somewhere between tradition, a sense of obligation to family, and simply making time to be together - which is also exactly why the roads fill up every single year.",
+    tags: ["Chuseok", "Hangawi", "Korean holidays", "Korean culture", "Korean expressions"],
+    publishedAt: "2026-08-30",
+    readingTime: "5 min read",
+    seoTitle: "What Is Chuseok? Korea's Autumn Harvest Holiday Explained",
+    seoDescription:
+      "Learn what Chuseok actually is - the meaning behind charye, songpyeon, and seongmyo - plus the 2026 Chuseok dates and why the holiday shuts down so much of Korea.",
+    heroImage: {
+      src: "/images/expressions/what-is-chuseok/chuseok-songpyeon.webp",
+      alt: "Songpyeon rice cakes with chestnuts and jujubes for Chuseok",
+      credit: "Photo by HAEMIL",
+      license: "Owned by HAEMIL",
+    },
+    relatedGuides: [
+      {
+        label: "Travel guide",
+        title:
+          "Visiting Korea During Chuseok: 2026 Dates, What Closes, and What You Can Only See Now",
+        href: "/travel/chuseok-korea-holiday-guide-first-time",
+      },
+    ],
+  },
 ];
 
 export function getAllPosts() {
