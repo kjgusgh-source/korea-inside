@@ -22,7 +22,7 @@ type PageProps = {
 
 // Meta title/description overrides for a small set of published member pages
 // whose Search Console CTR is low relative to their ranking (Notion: K-pop
-// member profile pages meta title/description review). Scoped to these 3
+// member profile pages meta title/description review). Scoped to these 4
 // pages only -- does not change the shared template for any other member.
 const memberMetaOverrides: Record<
   string,
@@ -42,6 +42,11 @@ const memberMetaOverrides: Record<
     title: "Wonhee (ILLIT) Fancam & Profile Guide | HAEMIL",
     description:
       "Discover ILLIT's Wonhee, whose clear expressions and small stage moments make her fancams easy to rewatch - a good first member to follow.",
+  },
+  "ive/leeseo": {
+    title: "Leeseo IVE Profile & Fancam Guide (Lee Seo) | HAEMIL",
+    description:
+      "Meet IVE's Leeseo, often searched as “Lee Seo IVE.” Learn about IVE's maknae through fancams, ending fairy moments, stage growth, and Korean fan context.",
   },
 };
 
