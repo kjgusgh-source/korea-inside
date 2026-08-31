@@ -34,6 +34,16 @@ const STANDALONE_DRAMA_GUIDES = [
     href: "/dramas/what-is-second-lead-syndrome-in-kdramas",
     readingTime: "5 min read",
   },
+  {
+    id: "what-is-makjang",
+    category: "dramas",
+    categoryLabel: "K-drama guide",
+    title: "What Is Makjang? K-Drama's Wildest Genre, Explained",
+    description:
+      "A friendly guide to makjang (막장), the K-drama genre built on secret identities, revenge, and affairs, from its coal-mine origins to The Penthouse and the daytime classic Temptation of Wife.",
+    href: "/dramas/what-is-makjang",
+    readingTime: "6 min read",
+  },
 ];
 
 export const metadata: Metadata = {
