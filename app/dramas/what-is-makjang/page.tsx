@@ -207,9 +207,8 @@ export default function WhatIsMakjangPage() {
               <p>
                 Makjang was a mining term first. It described the very end of
                 a coal mine tunnel — the deepest, furthest point a miner
-                could reach, with nowhere left to go. That original meaning
-                is why the word later got attached to a certain kind of
-                television drama. When Koreans call a show makjang, they are
+                could reach, with nowhere left to go. The mining meaning helps explain
+                the image behind the modern expression. When Koreans call a show makjang, they are
                 saying it has gone all the way to the end of the tunnel: the
                 writers pushed the plot past any believable stopping point,
                 and there is nowhere further left to escalate to.
@@ -304,15 +303,13 @@ export default function WhatIsMakjangPage() {
 
             <div className="mt-5 max-w-3xl space-y-5 text-base leading-8 text-[var(--muted)] md:text-lg">
               <p>
-                When international outlets explain makjang, two recent shows
-                come up constantly: The Penthouse: War in Life (2020) and SKY
-                Castle (2018). Both are polished, well-produced dramas about
-                wealthy families, and both lean hard into the ingredients
-                above — hidden identities, obsessive revenge, and reversal
-                after reversal. They are often cited as proof that makjang
-                does not have to mean low-budget or badly made. A drama can
-                have a big cast, strong ratings, and critical praise while
-                still being, structurally, makjang.
+                The Penthouse: War in Life is one of the clearest modern
+                examples of makjang. SKY Castle is a more borderline case: it
+                uses some makjang-like ingredients — wealthy families,
+                shocking secrets, crime, and extreme reversals — but wraps
+                them inside a sharper satire of Korea's education culture.
+                That difference is why Korean viewers could debate whether it
+                was really makjang at all.
               </p>
 
               <p>
@@ -323,9 +320,10 @@ export default function WhatIsMakjangPage() {
                 to the purest version of the genre: a wife is betrayed by her
                 husband and best friend, seemingly dies, then returns under a
                 new identity and a changed face to work her way back into
-                their lives. The show was a genuine ratings hit, averaging
-                around 30 percent viewership, and lead actress Jang Seo-hee
-                won the SBS Drama Awards grand prize (daesang) for the role.
+                their lives. The show was a genuine ratings hit, averaging 26.9 percent
+                nationwide and peaking at 37.5 percent, while lead actress
+                Jang Seo-hee won the SBS Drama Awards grand prize (daesang)
+                for the role.
                 If you want to see where the makjang reputation really comes
                 from, Temptation of Wife is usually the drama people mean.
               </p>
