@@ -1300,6 +1300,31 @@ export const KPOP_GROUPS: KpopGroup[] = [
     ],
     starterTags: ["Choreography", "Group stage", "Performance"],
   },
+  {
+    id: "hyorisoo",
+    name: "HYORISOO",
+    category: "girl-groups",
+    description:
+      "HYORISOO (officially Girls' Generation-HRS) is Girls' Generation's third unit, made up of Hyoyeon, Yuri, and Sooyoung. The trio debuted on August 31, 2026 with the digital single \"Skibidi,\" a new entry point into a group with a much longer history.",
+    members: [
+      {
+        id: "hyoyeon",
+        name: "Hyoyeon",
+        note: "A member of HYORISOO. Full HAEMIL member guide may be added later.",
+      },
+      {
+        id: "yuri",
+        name: "Yuri",
+        note: "A member of HYORISOO. Full HAEMIL member guide may be added later.",
+      },
+      {
+        id: "sooyoung",
+        name: "Sooyoung",
+        note: "A member of HYORISOO. Full HAEMIL member guide may be added later.",
+      },
+    ],
+    starterTags: ["Girls' Generation", "Unit", "Comeback", "Girl group"],
+  },
 ];
 
 export function getKpopGroups() {

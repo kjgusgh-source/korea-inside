@@ -284,6 +284,13 @@ export type KpopGuideArticle = {
       href: "/kpop/who-is-bts",
       label: "Boy group guide",
     },
+    {
+      title: "Who Is HYORISOO? A Friendly Guide to Girls' Generation's New Unit",
+      description:
+        "A friendly guide to HYORISOO (Girls' Generation-HRS), the new unit built from Hyoyeon, Yuri, and Sooyoung, their \"Skibidi\" single, and how a K-pop unit differs from a brand-new group.",
+      href: "/kpop/who-is-hyorisoo",
+      label: "Girl group guide",
+    },
   ];
   
   export function getKpopGuideArticles() {
