@@ -815,6 +815,15 @@ export const KPOP_GROUPS: KpopGroup[] = [
           "Look at how she balances leader-like control with a lighter, more playful image.",
           "If you are new to LE SSERAFIM, use her fancam as a way to understand the group’s confident stage color first.",
         ],
+        koreanExpression: {
+          hangul: "쌈무",
+          romanization: "ssam-mu",
+          meaning: "thin pickled radish slices often eaten with Korean BBQ",
+          note:
+            "쌈무 is a familiar Korean side dish: thin, lightly pickled radish that is often wrapped around grilled meat. Chaewon picked up the nickname during Produce 48 in 2018, after fans compared the pale-green outfit she wore for “To Reach You” to the color of ssam-mu. The joke stuck, and fans even used names such as 쌈무단 (Ssam-mu-dan) around the nickname during that period.",
+        },
+        culturalContext:
+          "For fans who have followed Chaewon since Produce 48, 쌈무 is one of those nicknames that instantly brings back her early idol days. It came from something very ordinary: the pale-green color of her stage outfit reminded Korean viewers of the pickled radish often served with grilled meat. What started as a playful visual comparison ended up becoming one of her most recognizable nicknames. For readers outside Korea, it is also a good example of how Korean idol nicknames can come from everyday food, wordplay, or a single memorable moment rather than from an official stage image.",
         relatedMediaIds: [
           "lesserafim-kim-chaewon-hot-fancam",
           "lesserafim-kim-chaewon-fancam-r-psLVwFpYk",
