@@ -11,16 +11,6 @@ const pageTitle =
 const pageDescription =
   "Is kimchi vegan? Is Korean food vegan at all? A local friend explains how to eat vegan or vegetarian in Korea — from hidden fish sauce to how to actually order in Korean.";
 
-const quickAnswer = [
-  "“No meat” and “vegan” do not always mean the same thing at a Korean restaurant.",
-  "Hidden bases like anchovy broth, fish sauce, and salted shrimp do not always show up on the surface of a dish.",
-  "MSG itself is generally not the problem for vegans; the seasoning blend or stock base might be.",
-  "Kimchi, tteokbokki, gimbap, naengmyeon, japchae, and jeon can all include animal-derived ingredients depending on the restaurant.",
-  "Even staff may not know every ingredient once premade sauces and stock bases are involved — this is a structural reality, not carelessness.",
-  "Naming your ingredients in Korean usually works better than relying on the word “vegan” alone.",
-  "If your diet is strict, a dedicated vegan restaurant or clearly labeled vegan menu is the most reliable option.",
-];
-
 const relatedGuides = [
   {
     label: "Food guide",
@@ -194,21 +184,6 @@ export default function VeganVegetarianKoreaGuideFirstTimePage() {
               ask about it in Korean.
             </p>
           </article>
-
-          <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
-              Quick answer
-            </p>
-
-            <ul className="mt-4 space-y-3 text-base leading-7 text-[var(--muted)] md:text-lg">
-              {quickAnswer.map((item) => (
-                <li key={item} className="flex gap-3">
-                  <span className="text-[var(--celadon)]">•</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </section>
 
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
             <div className="space-y-8 text-base leading-8 text-[var(--muted)] md:text-lg">
