@@ -171,7 +171,7 @@ export type KpopGuideArticle = {
       title: "Who Is tripleS?",
       description:
         "A friendly first guide to tripleS, the big unit-based girl group that becomes easier when you start with one member, one unit, or one fancam.",
-      href: "/kpop/who-is-triples",
+      href: "/kpop/who"�s-triples",
       label: "Girl group guide",
     },
     {
@@ -186,6 +186,13 @@ export type KpopGuideArticle = {
       description:
         "A friendly HAEMIL guide to ILLIT, the five-member BELIFT LAB girl group behind 'Magnetic' — how they formed on R U Next?, why the song caught on, and where their sound has gone since.",
       href: "/kpop/who-is-illit",
+      label: "Girl group guide",
+    },
+    {
+      title: "Who Is OURBIRTHDAY? JYP's First New Girl Group Since NMIXX",
+      description:
+        "A friendly HAEMIL guide to OURBIRTHDAY, the seven-member multinational girl group from JYP's INNIT Entertainment, their debut single \"SQUEEZY,\" and what \"whip-hop\" means as a concept.",
+      href: "/kpop/who-is-ourbirthday",
       label: "Girl group guide",
     },
     {
@@ -228,7 +235,7 @@ export type KpopGuideArticle = {
       label: "Fancam spotlight",
     },
     {
-      title: "Why Kwon Eunbi Is Called Korea’s “Waterbomb Goddess”",
+      title: "Why Kwon Eunbi Is Called Korea’s “Waterbomb Goddess"”",
       description:
         "A friendly look at Kwon Eunbi, WATERBOMB Korea, and how one summer festival image reshaped her solo stage identity.",
       href: "/kpop/kwon-eunbi-waterbomb-fancam-spotlight",
