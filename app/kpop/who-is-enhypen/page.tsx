@@ -195,10 +195,8 @@ export default function WhoIsEnhypenPage() {
               <p>
                 One detail is easy for newer fans to misread here: Heeseung
                 leaving the group did not mean leaving the company. He stayed
-                with BELIFT LAB and is expected to build a solo career there.
-                That distinction matters: Heeseung left ENHYPEN but remained
-                under BELIFT LAB and is preparing solo activities and a solo
-                album there. In Korean idol culture, a
+                with BELIFT LAB, where he is preparing solo activities and a
+                solo album. In Korean idol culture, a
                 member can step back from group promotions while remaining
                 under the same agency, so his departure from ENHYPEN is a
                 change in the group&apos;s lineup, not a full exit from the
@@ -206,9 +204,8 @@ export default function WhoIsEnhypenPage() {
               </p>
 
               <p>
-                So &ldquo;Bloody Paradise&rdquo; is not only a comeback. It is
-                the first time fans are hearing what six-member ENHYPEN
-                sounds like.
+                So &ldquo;Bloody Paradise&rdquo; is the first title track
+                released by ENHYPEN as a six-member group.
               </p>
 
               <p>
