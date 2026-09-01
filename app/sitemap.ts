@@ -340,6 +340,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/dramas/what-is-makjang`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/lifestyle`,
       lastModified: new Date(),
       changeFrequency: "weekly",
