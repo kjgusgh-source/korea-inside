@@ -196,9 +196,9 @@ export default function WhoIsEnhypenPage() {
                 One detail is easy for newer fans to misread here: Heeseung
                 leaving the group did not mean leaving the company. He stayed
                 with BELIFT LAB and is expected to build a solo career there.
-                That distinction can trip people up if they are used to
-                thinking about band breakups the Western way, where leaving
-                usually means leaving everything. In Korean idol culture, a
+                That distinction matters: Heeseung left ENHYPEN but remained
+                under BELIFT LAB and is preparing solo activities and a solo
+                album there. In Korean idol culture, a
                 member can step back from group promotions while remaining
                 under the same agency, so his departure from ENHYPEN is a
                 change in the group&apos;s lineup, not a full exit from the
@@ -213,23 +213,16 @@ export default function WhoIsEnhypenPage() {
 
               <p>
                 The current lineup is Jungwon, Jay, Jake, Sunghoon, Sunoo, and
-                Ni-ki, with Jungwon serving as leader. That title usually
-                means less about musical ranking and more about a
-                coordinating role &mdash; being the member who speaks first
-                in interviews, represents the group at official events, and
-                helps keep schedules and group decisions moving. Almost every
-                K-pop group assigns this role to one member, though the exact
-                responsibilities can vary from company to company.
+                Ni-ki, with Jungwon serving as leader. The exact
+                responsibilities of a K-pop leader vary by group.
               </p>
 
               <p>
                 HAEMIL is not pointing to one member here as the easiest way
                 into the group, the way a brand-new rookie act sometimes gets
                 introduced through a single standout face. ENHYPEN has been
-                active for six years, long enough that fans usually come to
-                know the members as a set rather than through one entry
-                point, and there is not yet a clear, well-documented reason to
-                push one member ahead of the rest.
+                active for six years, and there is not yet a clear,
+                well-documented reason to push one member ahead of the rest.
               </p>
 
               <p>
@@ -238,29 +231,24 @@ export default function WhoIsEnhypenPage() {
                 changing its member count is not a small internal update. It
                 changes how fans talk about the group from here &mdash; how
                 formations look on stage, how vocal lines get redistributed on
-                a new title track, how a fandom adjusts to a lineup nobody
-                involved actually chose. Long-time followers were watching
-                &ldquo;Bloody Paradise&rdquo; closely for exactly that reason,
-                which is part of why this comeback drew heavier coverage than
-                an average release.
+                a new title track, and how the group presents itself as six
+                members instead of seven. &ldquo;THE SIN : BLISS&rdquo; is
+                ENHYPEN&apos;s first album released as a six-member group.
               </p>
 
               <p>
-                ENHYPEN&apos;s fandom is called ENGENE, and if you spend time
-                in K-pop spaces, you will see the name constantly, in comment
-                sections, fan edits, and concert footage. Like most K-pop
-                fandom names, ENGENE is not just a nickname fans use for
-                themselves. Members use it to talk about fans too, and it
-                shows up in lyrics, stage talk, and merchandise, so it works
-                closer to a shared identity between the group and the people
-                who follow them.
+                ENHYPEN&apos;s fandom is called ENGENE. According to BELIFT
+                LAB, the name works two ways: ENGENE reads as fans being the
+                &ldquo;engine&rdquo; that helps ENHYPEN move forward, and as
+                EN + GENE, pointing to ENHYPEN and fans connecting,
+                developing, and growing together.
               </p>
 
               <p>
                 For now, &ldquo;Bloody Paradise&rdquo; is the clearest signal
                 of where ENHYPEN stands: six members who spent years building
-                a shared stage presence, adjusting together to a lineup none
-                of them chose, and showing up anyway with a new title track.
+                a shared stage presence, and are now releasing a new title
+                track together as a six-member group.
                 That is usually a more interesting starting point than any
                 single fact about the group.
               </p>
