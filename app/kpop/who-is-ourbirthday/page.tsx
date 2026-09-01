@@ -199,7 +199,7 @@ export default function WhoIsOurbirthdayPage() {
             <div className="mt-5 space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
               <p>
                 OURBIRTHDAY (often shortened to OBD) is a seven-member girl
-                group under INNIT Entertainment, a sub-label of JYP
+                group under INNIT Entertainment, a subsidiary of JYP
                 Entertainment. That JYP connection is the first thing worth
                 understanding, because it is a bigger deal than it might
                 sound.
@@ -215,13 +215,13 @@ export default function WhoIsOurbirthdayPage() {
               </p>
 
               <p>
-                Before the official debut, the group put out a pre-release
-                track called &quot;HUNGRY&quot; on July 22, 2026, released in
-                two separate versions split between different member units.
-                That is a fairly common rollout in K-pop now: let people hear
-                smaller groupings of the lineup before the full team performs
-                together. It gives new fans a softer entry point instead of
-                seven unfamiliar names arriving all at once.
+                Before the full-group debut, OURBIRTHDAY introduced the
+                lineup in two pre-debut units. HUNGRY (Side A), featuring Cho
+                Hyejin, Baby, and Achiraya, arrived on July 22, followed by
+                HUNGRY (Side B), featuring Kuk Chorok, Shin Hyewon, U, and
+                Kilala, on July 29. It was an unusual rollout that let the
+                seven members appear in smaller units before coming together
+                for the official debut.
               </p>
 
               <p>
@@ -270,8 +270,8 @@ export default function WhoIsOurbirthdayPage() {
               memorize on day one. You do not need to learn all seven names
               in one sitting. Watch the &quot;SQUEEZY&quot; video below once,
               see who your eyes keep going back to, and start there. That is
-              usually how a new group becomes familiar in Korea too — piece
-              by piece, not all at once.
+              an easier way to learn a new seven-member lineup than trying
+              to memorize every name at once.
             </p>
           </section>
 
@@ -282,37 +282,24 @@ export default function WhoIsOurbirthdayPage() {
 
             <div className="mt-5 space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
               <p>
-                A Korea-Japan-Thailand-Taiwan lineup is not unusual in K-pop
-                anymore, but it is still worth explaining if you are new to
-                the industry. Companies like JYP run trainee systems across
-                several Asian markets, and a multinational lineup is
-                partly a promotion strategy: members who already speak
-                Japanese or Thai can front local promotion, interviews, and
-                fan events in those countries once the group is established.
-                So when you see a group with members from four countries,
-                that usually reflects years of company planning, not
-                coincidence.
+                OURBIRTHDAY brings together members from Korea, Japan,
+                Thailand, and Taiwan, giving the seven-member lineup an
+                international mix from the start.
               </p>
 
               <p>
-                OURBIRTHDAY also describes its own sound as &quot;whip-hop,&quot;
-                a genre label the company created rather than an existing
-                music term. This kind of self-made genre name shows up a lot
-                in K-pop — it is a way for a new group to claim a specific
-                identity early, instead of being described only as
-                &quot;another JYP girl group.&quot; Whether the label sticks
-                usually depends on whether later songs keep the sound
-                consistent enough for fans to recognize it as its own thing.
+                INNIT describes OURBIRTHDAY&apos;s signature style as
+                &quot;WHIP-HOP,&quot; combining a free-spirited vibe — with
+                the seven members&apos; personalities mixed like whipped
+                cream — and hip-hop performance.
               </p>
 
               <p>
-                The name OURBIRTHDAY itself is usually explained in
-                fan-compiled sources as the idea that being together with
-                these members makes every day feel like a birthday — a
-                small, upbeat concept rather than a deep backstory. HAEMIL
-                has not been able to confirm this directly through an
-                official company statement, so take it as the commonly
-                repeated explanation rather than a confirmed fact.
+                INNIT explains the name OURBIRTHDAY as the energy of
+                enjoying exciting moments freely, as if every day were a
+                birthday. The idea is to turn ordinary moments into
+                something celebratory through the group&apos;s music and
+                performances.
               </p>
             </div>
           </section>
@@ -341,7 +328,7 @@ export default function WhoIsOurbirthdayPage() {
             </div>
 
             <p className="mt-4 text-sm leading-6 text-[var(--muted)]">
-              Official music video uploaded by JYP Entertainment.
+              Official music video for &quot;SQUEEZY.&quot;
             </p>
           </section>
 
