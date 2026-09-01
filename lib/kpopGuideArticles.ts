@@ -72,7 +72,7 @@ export type KpopGuideArticle = {
     {
       title: "What Is a Close-up Fancam?",
       description:
-        "A friendly guide to close-up fancam, facecam, and 얼빡직캠 meaning in K-pop, and how face-focused videos differ from fancams and ending fairy moments.",
+        "A friendly guide to close-up fancam, facecam, and 얼븡직칵 meaning in K-pop, and how face-focused videos differ from fancams and ending fairy moments.",
       href: "/kpop/what-is-close-up-fancam-in-kpop",
       label: "K-pop starter guide",
     },
@@ -191,7 +191,7 @@ export type KpopGuideArticle = {
     {
       title: "BABYMONSTER Ahyeon Fancam Spotlight",
       description:
-        "A friendly look at BABYMONSTER Ahyeon’s MBCkpop #최애ZIP캠 compilation, from DRIP to SUGAR HONEY ICE TEA, and why it is a good entry point for noticing her stage presence.",
+        "A friendly look at BABYMONSTER Ahyeon’s MBCkpop #최애ZIP칵 compilation, from DRIP to SUGAR HONEY ICE TEA, and why it is a good entry point for noticing her stage presence.",
       href: "/kpop/babymonster-ahyeon-fancam-spotlight",
       label: "K-pop spotlight",
     },
@@ -283,6 +283,13 @@ export type KpopGuideArticle = {
         "A friendly guide to BTS's 2026 comeback — how military service kept the group apart, why ARIRANG and 'SWIM' mark their return, and where the 'NORMAL' video fits in.",
       href: "/kpop/who-is-bts",
       label: "Boy group guide",
+    },
+    {
+      title: "Who Is HYORISOO? A Friendly Guide to Girls' Generation's New Unit",
+      description:
+        "A friendly guide to HYORISOO (Girls' Generation-HRS), the new unit built from Hyoyeon, Yuri, and Sooyoung, their \"Skibidi\" single, and how a K-pop unit differs from a brand-new group.",
+      href: "/kpop/who-is-hyorisoo",
+      label: "Girl group guide",
     },
   ];
   
