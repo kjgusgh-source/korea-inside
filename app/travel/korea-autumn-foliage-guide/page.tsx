@@ -278,9 +278,10 @@ export default function KoreaAutumnFoliageGuidePage() {
               <p>
                 One honest caveat worth repeating: none of the specific dates
                 above are locked in this far ahead of the season. Korean
-                autumn foliage forecasts shift from year to year based on
-                temperature and rainfall, and the closer estimates only
-                firm up once the KMA releases its own numbers. If your travel
+                autumn foliage timing shifts from year to year based on
+                temperature and rainfall, and the estimates become more
+                useful as the season gets closer and more current
+                observations become available. If your travel
                 dates are flexible, it is worth checking an updated forecast
                 a few weeks before you go rather than booking everything
                 around a prediction made months in advance.
