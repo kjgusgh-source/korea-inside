@@ -9,7 +9,7 @@ const pageUrl = `${siteUrl}/food/what-is-butter-tteok`;
 
 const pageTitle = "What Is Butter Tteok? Korea’s Viral Butter Rice Cake, Explained";
 const pageDescription =
-  "A friendly HAEMIL guide to butter tteok, Korea’s shell-shaped butter rice cake trend from early 2026 — what it tastes like, where it came from, and how it compares to Dubai chewy cookies.";
+  "A friendly HAEMIL guide to butter tteok, Korea’s viral butter rice cake trend from early 2026 — what it tastes like, where it came from, and how it compares to Dubai chewy cookies.";
 
 const heroImage = {
   src: "/images/food/butter-tteok.webp",
@@ -27,11 +27,10 @@ const dubaiCookieImage = {
 
 const quickFacts = [
   "Korean name: Butter tteok / 버터떡",
-  "What it is: A shell-shaped rice cake pastry baked with butter and milk",
+  "What it is: A baked glutinous-rice dessert made with butter and milk",
   "Texture: Crisp and caramelized outside, soft and chewy inside",
-  "Origin: Adapted from a Shanghai-style butter rice cake by Korean bakeries",
+  "Background: Popularized in Korea as 'Shanghai butter tteok,' a baked glutinous-rice dessert commonly linked in Korean coverage to Shanghai-style huangyou niangao",
   "Trend timing: Went viral across Korea in early 2026, peaking around March",
-  "Common fillings: Plain butter, cheese, chocolate, and matcha",
   "Also trending in 2026: Dubai chewy cookies (두바이쫀득쿠키), a pistachio-kunafa treat that became popular just before butter tteok",
 ];
 
@@ -208,10 +207,7 @@ export default function WhatIsButterTteokPage() {
               <p>
                 Butter tteok did not start in Korea. The base idea, a buttery
                 rice cake baked in a shell mold, traces back to a Shanghai-style
-                dessert. Korean bakeries picked it up, added more butter, and
-                leaned harder into the shell shape and the glossy, photogenic
-                crust — the kind of detail that travels well on Instagram.
-                Fillings followed soon after: plain butter is the classic
+                dessert. Fillings followed soon after: plain butter is the classic
                 version, but cheese, chocolate, and matcha all showed up as
                 bakeries competed for attention.
               </p>
@@ -253,8 +249,8 @@ export default function WhatIsButterTteokPage() {
                 customers lining up for hours when Dubai chewy cookies first
                 landed. Butter tteok arrived a little after, cheaper and
                 easier to find, and picked up plenty of media coverage of its
-                own — but by most local accounts, it never quite matched the
-                intensity of that earlier Dubai cookie rush. That kind of
+                own. Butter tteok followed as the next major viral dessert
+                trend as interest in Dubai chewy cookies cooled. That kind of
                 quick handoff, one dessert trend giving way to the next, is
                 fairly normal in Korea right now.
               </p>
@@ -266,10 +262,10 @@ export default function WhatIsButterTteokPage() {
               />
 
               <p>
-                If you want to try butter tteok while traveling in Korea, look
-                for it at independent bakeries and dessert cafés rather than
-                large chains — it is still a small-bakery item more than a
-                mass-market one. Ask for the plain version first; the butter
+                If you want to try butter tteok while traveling in Korea,
+                versions have appeared at independent bakeries, cafés,
+                convenience stores, and larger chains, although availability
+                varies as the trend has cooled. Ask for the plain version first; the butter
                 and caramelized crust do most of the work, and the filled
                 versions build on that base flavor rather than replacing it.
                 Like a lot of Korean dessert trends, it may not stay on every
