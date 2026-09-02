@@ -164,8 +164,8 @@ export default function WhoIsHyorisooPage() {
               <p>
                 HYORISOO is not a brand-new rookie act. It is a new unit from
                 Girls&apos; Generation, built around three of its members —
-                Hyoyeon, Yuri, and Sooyoung — and its debut single,
-                &quot;Skibidi,&quot; arrives on August 31, 2026.
+                Hyoyeon, Yuri, and Sooyoung — and the unit debuted on
+                August 31, 2026 with the digital single &quot;Skibidi.&quot;
               </p>
 
               <p>
