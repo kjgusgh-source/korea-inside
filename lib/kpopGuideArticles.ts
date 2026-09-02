@@ -284,6 +284,13 @@ export type KpopGuideArticle = {
       href: "/kpop/who-is-bts",
       label: "Boy group guide",
     },
+    {
+      title: "Who Is ENHYPEN? A Guide to Their First Comeback as Six",
+      description:
+        "A friendly guide to ENHYPEN's 2026 comeback — how the group became six members after Heeseung's departure, and what 'Bloody Paradise' means for ENGENE.",
+      href: "/kpop/who-is-enhypen",
+      label: "Boy group guide",
+    },
   ];
   
   export function getKpopGuideArticles() {
