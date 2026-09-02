@@ -14,25 +14,41 @@ const pageDescription =
 
 const heroImage = {
   src: "/images/travel/korea-autumn-foliage/korea-autumn-foliage.webp",
-  alt: "Autumn foliage colors across a hillside in Korea.",
-  credit: "Photo by HAEMIL",
+  alt: "Red and orange autumn foliage around a Korean-style garden.",
+  credit: "AI-generated image by HAEMIL",
   license: "Owned by HAEMIL",
 };
 
 const leavesImage = {
   src: "/images/travel/korea-autumn-foliage/korean-autumn-leaves.webp",
-  alt: "Close-up of red and orange autumn leaves in Korea.",
-  credit: "Photo by HAEMIL",
+  alt: "Autumn leaves in green, yellow, orange, and red arranged on stone.",
+  credit: "AI-generated image by HAEMIL",
   license: "Owned by HAEMIL",
 };
 
 const quickFacts = [
   "General pattern: colors move north to south, and high mountains to lower cities, over several weeks",
   "Earliest color: northern mountain areas such as Seoraksan and Odaesan, typically late September to mid-October",
+  "2026 note: early color was already observed around the high-elevation Daecheongbong area of Seoraksan in late August, but this does not mean the whole mountain had reached first foliage or peak color",
   "Mid-season: Seoul and central Korea, typically late October to early November",
   "Latest color: southern regions such as Busan and Naejangsan, typically mid-to-late November",
-  "Official forecast: Korea's weather agency (KMA) usually releases its own foliage forecast in early September — treat any dates before that as travel-industry estimates, not confirmed figures",
+  "Official forecast: An official nationwide 2026 foliage forecast had not been confirmed at the time of writing — check updated Korea Forest Service, KMA, or VisitKorea information closer to your trip",
   "This guide covers general timing and regions, not a full map — pair it with a maps app once you pick a destination",
+];
+
+const regionList = [
+  {
+    region: "Northern mountains — Seoraksan / Odaesan",
+    timing: "Typically the earliest color, from late September to mid-October",
+  },
+  {
+    region: "Seoul & central Korea",
+    timing: "Typically late October to early November",
+  },
+  {
+    region: "Southern Korea — Naejangsan / Busan region",
+    timing: "Typically the latest color, mid-to-late November",
+  },
 ];
 
 const relatedGuides = [
@@ -193,20 +209,44 @@ export default function KoreaAutumnFoliageGuidePage() {
           </section>
 
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+              Where to look as the season moves south
+            </p>
+
+            <ul className="mt-4 space-y-4 text-base leading-7 text-[var(--muted)] md:text-lg">
+              {regionList.map((item) => (
+                <li key={item.region} className="flex gap-3">
+                  <span className="text-[var(--celadon)]">•</span>
+                  <span>
+                    <span className="font-semibold text-[var(--text)]">
+                      {item.region}
+                    </span>
+                    {" — "}
+                    {item.timing}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
             <div className="space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
               <p>
                 The easiest way to think about Korean autumn foliage is as a
                 slow wave moving from north to south, and from high ground to
                 low ground. Northern mountain areas — Seoraksan and Odaesan
                 are the two most talked about — usually turn first, from late
-                September into mid-October. A handful of international travel
-                sites have already published 2026 predictions with narrower
-                date ranges for these mountains, but those are travel-industry
-                estimates, not an official forecast. Korea's own weather
-                agency, the KMA, typically publishes its official autumn
-                foliage forecast in early September, so it is worth checking
-                that directly if you want the most current read closer to
-                your trip.
+                September into mid-October. In 2026, early color was already
+                observed around the high-elevation Daecheongbong area of
+                Seoraksan in late August, but that does not mean the whole
+                mountain had reached first foliage or peak color. A handful
+                of international travel sites have also published their own
+                2026 predictions with narrower date ranges for these
+                mountains, but those are travel-industry estimates, not an
+                official forecast. An official nationwide 2026 foliage
+                forecast had not been confirmed at the time of writing —
+                check updated Korea Forest Service, KMA, or VisitKorea
+                information closer to your trip.
               </p>
 
               <PostImageFigure
