@@ -176,6 +176,16 @@ const STANDALONE_FOOD_GUIDES = [
     readingTime: "7 min read",
   },
   {
+    id: "what-is-butter-tteok",
+    category: "food",
+    categoryLabel: "Food guide",
+    title: "What Is Butter Tteok?",
+    description:
+      "Korea’s viral butter rice cake trend from early 2026 — what it tastes like, where it came from, and how it compares to Dubai chewy cookies.",
+    href: "/food/what-is-butter-tteok",
+    readingTime: "6 min read",
+  },
+  {
     id: "what-is-eomuk-korean-fish-cake",
     category: "food",
     categoryLabel: "Food guide",

@@ -274,6 +274,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/food/what-is-butter-tteok`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/food/what-is-eomuk-korean-fish-cake`,
       lastModified: new Date(),
       changeFrequency: "monthly",
