@@ -205,11 +205,10 @@ export default function WhatIsButterTteokPage() {
               </p>
 
               <p>
-                Butter tteok did not start in Korea. The base idea, a buttery
-                rice cake baked in a shell mold, traces back to a Shanghai-style
-                dessert. Fillings followed soon after: plain butter is the classic
-                version, but cheese, chocolate, and matcha all showed up as
-                bakeries competed for attention.
+                In Korea, the trend became widely known as &quot;Shanghai butter
+                tteok.&quot; Korean coverage commonly connects it with
+                Shanghai-style huangyou niangao, although similar baked
+                glutinous-rice desserts also exist in other food traditions.
               </p>
 
               <p>

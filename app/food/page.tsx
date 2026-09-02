@@ -181,7 +181,7 @@ const STANDALONE_FOOD_GUIDES = [
     categoryLabel: "Food guide",
     title: "What Is Butter Tteok?",
     description:
-      "Korea’s shell-shaped butter rice cake trend from early 2026 — what it tastes like, where it came from, and how it compares to Dubai chewy cookies.",
+      "Korea’s viral butter rice cake trend from early 2026 — what it tastes like, where it came from, and how it compares to Dubai chewy cookies.",
     href: "/food/what-is-butter-tteok",
     readingTime: "6 min read",
   },
