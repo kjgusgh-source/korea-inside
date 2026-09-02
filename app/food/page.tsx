@@ -245,6 +245,16 @@ const STANDALONE_FOOD_GUIDES = [
     href: "/food/what-is-kimchi",
     readingTime: "7 min read",
   },
+  {
+    id: "what-is-dujjonku-dubai-chewy-cookie",
+    category: "food",
+    categoryLabel: "Food guide",
+    title: "What Is Dujjonku (두쫀쿠)?",
+    description:
+      "Korea's viral Dubai-chocolate-inspired chewy cookie, explained — what it is, where it came from, and why it tastes different from shop to shop.",
+    href: "/food/what-is-dujjonku-dubai-chewy-cookie",
+    readingTime: "6 min read",
+  },
 ];
 
 export const metadata: Metadata = {
