@@ -271,7 +271,7 @@ export const metadata: Metadata = {
 
 function getPostAccent(category: string) {
   if (category === "travel" || category === "food") {
-  return "var(--celadon)";
+    return "var(--celadon)";
   }
 
   return "var(--accent)";
