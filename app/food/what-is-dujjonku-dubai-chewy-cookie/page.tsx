@@ -9,7 +9,7 @@ const pageUrl = `${siteUrl}/food/what-is-dujjonku-dubai-chewy-cookie`;
 
 const pageTitle = "What Is Dujjonku (두쫀쿠)? Korea's Dubai Chewy Cookie, Explained";
 const pageDescription =
-  "A friendly HAEMIL guide to dujjonku, the Dubai-chocolate-inspired chewy cookie going viral in Korea — what it is, where it came from, and why it tastes different from shop to shop.";
+  "A friendly HAEMIL guide to dujjonku, one of Korea's biggest viral desserts of 2026 — what it is, where it came from, and why it tastes different from shop to shop.";
 
 const heroImage = {
   src: "/images/food/dubai-chewy-cookie.webp",
@@ -166,9 +166,9 @@ export default function WhatIsDujjonkuPage() {
             </h1>
 
             <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
-              If you have seen a ball-shaped cookie dusted in cocoa powder
-              taking over Korean dessert cafés lately, that is dujjonku — and
-              it did not come out of nowhere.
+              If you saw a ball-shaped cocoa-dusted dessert spreading through
+              Korean cafés in 2026, that was dujjonku — and it did not come
+              out of nowhere.
             </p>
           </article>
 
@@ -249,15 +249,15 @@ export default function WhatIsDujjonkuPage() {
                 Dujjonku is really just the latest stop in a pattern that
                 keeps repeating in Korea. Tanghulu — candied fruit on a
                 skewer, coated in a hard sugar shell — was one of the biggest
-                viral snacks in Korea before any of this, spreading fast
-                through 2022 and 2023 as ASMR videos of the crackling sugar
-                shell took over social media. Tanghulu did not create
-                dujjonku, and the two trends are not directly connected; the
-                more accurate way to think about it is that Korea's dessert
-                scene simply moves through viral trends quickly, one after
-                another. Tanghulu had its moment, Dubai chocolate followed,
-                and dujjonku is the trend riding that same fast-moving cycle
-                right now.
+                viral snacks in Korea before any of this, surging across
+                Korea in 2023 as ASMR videos of the crackling sugar shell
+                took over social media. Tanghulu did not create dujjonku,
+                and the two trends are not directly connected; the more
+                accurate way to think about it is that Korea's dessert scene
+                simply moves through viral trends quickly, one after another.
+                Tanghulu had its moment, Dubai chocolate followed, and
+                dujjonku became one of 2026's clearest examples of that same
+                fast-moving dessert cycle.
               </p>
 
               <h2 className="text-2xl font-semibold text-[var(--text)]">
@@ -268,15 +268,12 @@ export default function WhatIsDujjonkuPage() {
                 Because dujjonku is really three components layered
                 together — kadayif, marshmallow, and pistachio spread — small
                 differences in each one add up to a very different final
-                bite. Some bakers fry the kadayif longer for a deeper crunch,
-                while others keep it lighter and softer. The marshmallow
-                layer can be light and stretchy or dense and heavily chewy,
-                depending on how it is whipped and set. And the pistachio
-                spread itself ranges from a thin, mildly nutty layer to a
-                thick, deeply flavored one made with a higher ratio of actual
-                pistachio. None of these choices is objectively
-                &quot;correct&quot; — they just explain why two dujjonku from
-                two different cafés can taste like fairly different desserts.
+                bite. Recipes vary in how crisp the kadayif is, how thick and
+                chewy the marshmallow layer feels, and how generous or
+                strongly flavored the pistachio filling is. None of these
+                choices is objectively &quot;correct&quot; — they just
+                explain why two dujjonku from two different cafés can taste
+                like fairly different desserts.
               </p>
             </div>
           </section>
