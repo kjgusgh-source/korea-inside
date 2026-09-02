@@ -14,14 +14,14 @@ const pageDescription =
 const heroImage = {
   src: "/images/food/butter-tteok.webp",
   alt: "A shell-shaped butter tteok pastry with a crisp, caramelized crust.",
-  credit: "Photo by HAEMIL",
+  credit: "AI-generated image by HAEMIL",
   license: "Owned by HAEMIL",
 };
 
 const dubaiCookieImage = {
   src: "/images/food/dubai-chewy-cookie.webp",
   alt: "A Dubai chewy cookie, the Korean bakery take on the pistachio-kunafa Dubai chocolate trend.",
-  credit: "Photo by HAEMIL",
+  credit: "AI-generated image by HAEMIL",
   license: "Owned by HAEMIL",
 };
 
@@ -191,7 +191,7 @@ export default function WhatIsButterTteokPage() {
           </section>
 
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
-            <div className="space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
+            <div className="flow-root space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
               <p>
                 The name is a little confusing at first. Butter tteok is not the
                 chewy rice cake you get in tteokbokki, floating in red sauce at a
@@ -238,6 +238,12 @@ export default function WhatIsButterTteokPage() {
                 line out the door today.
               </p>
 
+              <PostImageFigure
+                image={dubaiCookieImage}
+                variant="inline"
+                align="right"
+              />
+
               <p>
                 If you have spent any time around Korean dessert cafés, you
                 will notice these viral treats rarely arrive alone — one trend
@@ -253,12 +259,6 @@ export default function WhatIsButterTteokPage() {
                 quick handoff, one dessert trend giving way to the next, is
                 fairly normal in Korea right now.
               </p>
-
-              <PostImageFigure
-                image={dubaiCookieImage}
-                variant="inline"
-                align="right"
-              />
 
               <p>
                 If you want to try butter tteok while traveling in Korea,
