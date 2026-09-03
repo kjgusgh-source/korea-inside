@@ -10,6 +10,12 @@ const baseUrl = "https://haemilkorea.com";
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     {
+      url: `${baseUrl}/food/what-is-dujjonku-dubai-chewy-cookie`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: baseUrl,
       lastModified: new Date(),
       changeFrequency: "weekly",
@@ -322,7 +328,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/food/what-is-dujjonku-dubai-chewy-cookie`,
+      url: `${baseUrl}/food/vegan-vegetarian-korea-guide-first-time`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
@@ -332,6 +338,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/dramas/what-is-a-sageuk-in-kdramas`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
     },
     {
       url: `${baseUrl}/dramas/why-itaewon-class-is-a-good-first-kdrama`,

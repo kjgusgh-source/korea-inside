@@ -6,6 +6,16 @@ import { getPostsByCategory } from "../../lib/posts";
 
 const STANDALONE_FOOD_GUIDES = [
   {
+    id: "what-is-dujjonku-dubai-chewy-cookie",
+    category: "food",
+    categoryLabel: "Food guide",
+    title: "What Is Dujjonku (두쫀쿠)?",
+    description:
+      "Korea's viral Dubai-chocolate-inspired chewy cookie, explained — what it is, where it came from, and why it tastes different from shop to shop.",
+    href: "/food/what-is-dujjonku-dubai-chewy-cookie",
+    readingTime: "6 min read",
+  },
+  {
     id: "what-to-eat-in-korea-first-time",
     category: "food",
     categoryLabel: "Food guide",
@@ -256,14 +266,14 @@ const STANDALONE_FOOD_GUIDES = [
     readingTime: "7 min read",
   },
   {
-    id: "what-is-dujjonku-dubai-chewy-cookie",
+    id: "vegan-vegetarian-korea-guide-first-time",
     category: "food",
     categoryLabel: "Food guide",
-    title: "What Is Dujjonku (두쫀쿠)?",
+    title: "Vegan and Vegetarian in Korea: Why “No Meat” Isn’t Enough",
     description:
-      "Korea's viral Dubai-chocolate-inspired chewy cookie, explained — what it is, where it came from, and why it tastes different from shop to shop.",
-    href: "/food/what-is-dujjonku-dubai-chewy-cookie",
-    readingTime: "6 min read",
+      "Hidden anchovy broth, fish sauce, and MSG myths explained — a local friend’s guide to eating vegan or vegetarian in Korea.",
+    href: "/food/vegan-vegetarian-korea-guide-first-time",
+    readingTime: "10 min read",
   },
 ];
 
