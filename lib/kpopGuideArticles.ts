@@ -285,6 +285,13 @@ export type KpopGuideArticle = {
       label: "Boy group guide",
     },
     {
+      title: "Who Is ENHYPEN? A Guide to Their First Comeback as Six",
+      description:
+        "A friendly guide to ENHYPEN's 2026 comeback — how the group became six members after Heeseung's departure, and what 'Bloody Paradise' means for ENGENE.",
+      href: "/kpop/who-is-enhypen",
+      label: "Boy group guide",
+    },
+    {
       title: "Who Is HYORISOO? A Friendly Guide to Girls' Generation's New Unit",
       description:
         "A friendly guide to HYORISOO (Girls' Generation-HRS), the new unit built from Hyoyeon, Yuri, and Sooyoung, their \"Skibidi\" single, and how a K-pop unit differs from a brand-new group.",

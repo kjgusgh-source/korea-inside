@@ -1310,6 +1310,46 @@ export const KPOP_GROUPS: KpopGroup[] = [
     starterTags: ["Choreography", "Group stage", "Performance"],
   },
   {
+    id: "enhypen",
+    name: "ENHYPEN",
+    category: "boy-groups",
+    description:
+      "ENHYPEN is a six-member boy group from BELIFT LAB, formed through the I-LAND survival show and debuting in November 2020. After member Heeseung's departure from the group in March 2026, the current lineup returned in August 2026 with 'Bloody Paradise,' their first comeback as six.",
+    members: [
+      {
+        id: "jungwon",
+        name: "Jungwon",
+        note: "ENHYPEN's leader. Full HAEMIL member guide may be added later.",
+      },
+      {
+        id: "jay",
+        name: "Jay",
+        note: "A member of ENHYPEN. Full HAEMIL member guide may be added later.",
+      },
+      {
+        id: "jake",
+        name: "Jake",
+        note: "A member of ENHYPEN. Full HAEMIL member guide may be added later.",
+      },
+      {
+        id: "sunghoon",
+        name: "Sunghoon",
+        note: "A member of ENHYPEN. Full HAEMIL member guide may be added later.",
+      },
+      {
+        id: "sunoo",
+        name: "Sunoo",
+        note: "A member of ENHYPEN. Full HAEMIL member guide may be added later.",
+      },
+      {
+        id: "ni-ki",
+        name: "Ni-ki",
+        note: "A member of ENHYPEN. Full HAEMIL member guide may be added later.",
+      },
+    ],
+    starterTags: ["Boy group", "BELIFT LAB", "Comeback", "I-LAND", "Bloody Paradise"],
+  },
+  {
     id: "hyorisoo",
     name: "HYORISOO",
     category: "girl-groups",
