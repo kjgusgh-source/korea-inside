@@ -192,6 +192,10 @@ export default function WhatIsTteokbokkiPage() {
 
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
             <div className="space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
+              <h2 className="mt-2 text-xl font-semibold text-[var(--text)]">
+                The Basics: What Tteokbokki Actually Is
+              </h2>
+
               <p>
                 It is red, chewy, usually spicy — and for many Koreans it feels
                 more like a memory than a normal snack. Tteokbokki, or 떡볶이, is
@@ -202,6 +206,10 @@ export default function WhatIsTteokbokkiPage() {
                 standing near a small shop, sharing a plate with friends, or
                 ordering when you want something spicy and comforting at once.
               </p>
+
+              <h2 className="mt-2 text-xl font-semibold text-[var(--text)]">
+                The Texture, and the Classic Red Style
+              </h2>
 
               <p>
                 The texture is the first thing to notice. Tteokbokki rice cakes
@@ -214,6 +222,10 @@ export default function WhatIsTteokbokkiPage() {
                 extra fish cake depending on the shop.
               </p>
 
+              <h2 className="mt-2 text-xl font-semibold text-[var(--text)]">
+                Bunsik Culture: Why Every Shop Tastes a Little Different
+              </h2>
+
               <p>
                 There is no single fixed version. A market stall, a school-area
                 bunsik shop, and a modern chain or delivery restaurant may all
@@ -224,6 +236,10 @@ export default function WhatIsTteokbokkiPage() {
                 sundae, fish cake soup, and other simple foods. For many Koreans
                 a bunsik shop is a small piece of school and neighborhood life.
               </p>
+
+              <h2 className="mt-2 text-xl font-semibold text-[var(--text)]">
+                What People Usually Order Alongside It
+              </h2>
 
               <p>
                 Tteokbokki is good by itself but often feels better with
@@ -236,6 +252,10 @@ export default function WhatIsTteokbokkiPage() {
                 cheese stretch the sauce further.
               </p>
 
+              <h2 className="mt-2 text-xl font-semibold text-[var(--text)]">
+                Spice Level, and Old-School vs. Modern Versions
+              </h2>
+
               <p>
                 If you are worried about spice, start carefully — Korean
                 tteokbokki can be much hotter than it looks. Some versions are
@@ -247,6 +267,10 @@ export default function WhatIsTteokbokkiPage() {
                 cheese, rose sauce, or big sets with fried food and noodles. Both
                 can be fun; they do not give the same feeling.
               </p>
+
+              <h2 className="mt-2 text-xl font-semibold text-[var(--text)]">
+                How to Recognize a Good Spot
+              </h2>
 
               <p>
                 Tteokbokki shows a side of Korean food that is casual and
