@@ -255,6 +255,16 @@ const STANDALONE_FOOD_GUIDES = [
     href: "/food/what-is-kimchi",
     readingTime: "7 min read",
   },
+  {
+    id: "vegan-vegetarian-korea-guide-first-time",
+    category: "food",
+    categoryLabel: "Food guide",
+    title: "Vegan and Vegetarian in Korea: Why “No Meat” Isn’t Enough",
+    description:
+      "Hidden anchovy broth, fish sauce, and MSG myths explained — a local friend’s guide to eating vegan or vegetarian in Korea.",
+    href: "/food/vegan-vegetarian-korea-guide-first-time",
+    readingTime: "10 min read",
+  },
 ];
 
 export const metadata: Metadata = {
