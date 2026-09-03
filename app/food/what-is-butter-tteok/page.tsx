@@ -31,7 +31,7 @@ const quickFacts = [
   "Texture: Crisp and caramelized outside, soft and chewy inside",
   "Background: Popularized in Korea as 'Shanghai butter tteok,' a baked glutinous-rice dessert commonly linked in Korean coverage to Shanghai-style huangyou niangao",
   "Trend timing: Went viral across Korea in early 2026, peaking around March",
-  "Also trending in 2026: Dubai chewy cookies (두바이쫀득쿠키), a pistachio-kunafa treat that became popular just before butter tteok",
+  "Also trending in 2026: Dubai chewy cookies (두바이쪽득쿼키), a pistachio-kunafa treat that became popular just before butter tteok",
 ];
 
 const relatedGuides = [
@@ -48,6 +48,13 @@ const relatedGuides = [
     description:
       "Fish-shaped winter street snacks — another Korean treat that trades on shape and nostalgia as much as flavor.",
     href: "/food/what-is-bungeoppang",
+  },
+  {
+    label: "Food guide",
+    title: "What Is Dujjonku (두쫀쿠)?",
+    description:
+      "Korea's Dubai chewy cookie trend — pistachio, kadayif, marshmallow, and why texture can vary so much from shop to shop.",
+    href: "/food/what-is-dujjonku-dubai-chewy-cookie",
   },
   {
     label: "Food",
@@ -248,7 +255,7 @@ export default function WhatIsButterTteokPage() {
                 If you have spent any time around Korean dessert cafés, you
                 will notice these viral treats rarely arrive alone — one trend
                 tends to fade just as another takes its place. Before butter
-                tteok, it was Dubai chewy cookies (두바이쫀득쿠키), the Korean
+                tteok, it was Dubai chewy cookies (두바이쪽득쿼키), the Korean
                 take on the pistachio-and-kunafa Dubai chocolate that went
                 viral worldwide. In Seoul, some bakeries reportedly had
                 customers lining up for hours when Dubai chewy cookies first
