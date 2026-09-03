@@ -263,7 +263,13 @@ export default function WhatIsASageukInKdramasPage() {
                 </span>{" "}
                 stays close to recorded history, with a more formal tone and
                 careful attention to real events, court records, and
-                period-accurate detail.
+                period-accurate detail. KBS&apos;s{" "}
+                <span className="font-semibold text-[var(--text)]">
+                  Jeong Do-jeon
+                </span>{" "}
+                (2014) is a well-known example, following the real-life
+                scholar-official through the fall of Goryeo and the founding
+                of the Joseon dynasty.
               </li>
               <li>
                 <span className="font-semibold text-[var(--text)]">
@@ -271,7 +277,13 @@ export default function WhatIsASageukInKdramasPage() {
                 </span>{" "}
                 keeps the historical setting but tells the story with more
                 modern pacing and romance-driven plots, sometimes with music
-                or humor that would not have existed at the time.
+                or humor that would not have existed at the time.{" "}
+                <span className="font-semibold text-[var(--text)]">
+                  Sungkyunkwan Scandal
+                </span>{" "}
+                (2010) is a useful example, sending a young woman disguised as
+                a man into Joseon&apos;s elite all-male academy for a story
+                that leans into romance and modern pacing.
               </li>
               <li>
                 <span className="font-semibold text-[var(--text)]">
@@ -280,7 +292,13 @@ export default function WhatIsASageukInKdramasPage() {
                 </span>{" "}
                 builds around real historical figures or events, then
                 invents relationships, motives, or plot twists that are not
-                part of the historical record.
+                part of the historical record.{" "}
+                <span className="font-semibold text-[var(--text)]">
+                  Tree with Deep Roots
+                </span>{" "}
+                (2011) is one familiar example, weaving a fictional court
+                murder mystery around the real history of King Sejong&apos;s
+                creation of Hangul.
               </li>
             </ul>
 
