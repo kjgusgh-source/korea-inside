@@ -328,6 +328,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
+      url: `${baseUrl}/dramas/what-is-a-sageuk-in-kdramas`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/dramas/why-itaewon-class-is-a-good-first-kdrama`,
       lastModified: new Date(),
       changeFrequency: "monthly",
@@ -347,12 +353,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/dramas/what-is-makjang`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/dramas/what-is-a-sageuk-in-kdramas`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
