@@ -6,6 +6,16 @@ import { getPostsByCategory } from "../../lib/posts";
 
 const STANDALONE_FOOD_GUIDES = [
   {
+    id: "what-is-dujjonku-dubai-chewy-cookie",
+    category: "food",
+    categoryLabel: "Food guide",
+    title: "What Is Dujjonku (두쫀쿠)?",
+    description:
+      "Korea's viral Dubai-chocolate-inspired chewy cookie, explained — what it is, where it came from, and why it tastes different from shop to shop.",
+    href: "/food/what-is-dujjonku-dubai-chewy-cookie",
+    readingTime: "6 min read",
+  },
+  {
     id: "what-to-eat-in-korea-first-time",
     category: "food",
     categoryLabel: "Food guide",
