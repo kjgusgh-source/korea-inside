@@ -50,6 +50,13 @@ const relatedGuides = [
     href: "/food/what-is-bungeoppang",
   },
   {
+    label: "Food guide",
+    title: "What Is Dujjonku (두쫀쿠)?",
+    description:
+      "Korea's Dubai chewy cookie trend — pistachio, kadayif, marshmallow, and why texture can vary so much from shop to shop.",
+    href: "/food/what-is-dujjonku-dubai-chewy-cookie",
+  },
+  {
     label: "Food",
     title: "Open the Food hub",
     description:
