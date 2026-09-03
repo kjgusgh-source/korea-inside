@@ -189,6 +189,13 @@ export type KpopGuideArticle = {
       label: "Girl group guide",
     },
     {
+      title: "Who Is OURBIRTHDAY? JYP's First New Girl Group Since NMIXX",
+      description:
+        "A friendly HAEMIL guide to OURBIRTHDAY, the seven-member multinational girl group from JYP's INNIT Entertainment, their debut single \"SQUEEZY,\" and what \"whip-hop\" means as a concept.",
+      href: "/kpop/who-is-ourbirthday",
+      label: "Girl group guide",
+    },
+    {
       title: "BABYMONSTER Ahyeon Fancam Spotlight",
       description:
         "A friendly look at BABYMONSTER Ahyeon’s MBCkpop #최애ZIP캠 compilation, from DRIP to SUGAR HONEY ICE TEA, and why it is a good entry point for noticing her stage presence.",
