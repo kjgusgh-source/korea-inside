@@ -7,6 +7,13 @@ export type KpopGuideArticle = {
   
   export const kpopGuideArticles: KpopGuideArticle[] = [
     {
+      title: "Who Is HYORISOO? A Friendly Guide to Girls' Generation's New Unit",
+      description:
+        "A friendly guide to HYORISOO (Girls' Generation-HRS), the new unit built from Hyoyeon, Yuri, and Sooyoung, their \"Skibidi\" single, and how a K-pop unit differs from a brand-new group.",
+      href: "/kpop/who-is-hyorisoo",
+      label: "Girl group guide",
+    },
+    {
       title: "What Is a Fancam?",
       description:
         "A friendly guide to K-pop fancam meaning, why member-focused videos matter, and how fancams differ from facecams, ending fairy moments, and full-stage clips.",
@@ -290,13 +297,6 @@ export type KpopGuideArticle = {
         "A friendly guide to ENHYPEN's 2026 comeback — how the group became six members after Heeseung's departure, and what 'Bloody Paradise' means for ENGENE.",
       href: "/kpop/who-is-enhypen",
       label: "Boy group guide",
-    },
-    {
-      title: "Who Is HYORISOO? A Friendly Guide to Girls' Generation's New Unit",
-      description:
-        "A friendly guide to HYORISOO (Girls' Generation-HRS), the new unit built from Hyoyeon, Yuri, and Sooyoung, their \"Skibidi\" single, and how a K-pop unit differs from a brand-new group.",
-      href: "/kpop/who-is-hyorisoo",
-      label: "Girl group guide",
     },
   ];
   
