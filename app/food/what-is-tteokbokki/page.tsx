@@ -3,6 +3,7 @@ import Link from "next/link";
 import SiteHeader from "../../../components/SiteHeader";
 import JsonLd from "../../../components/JsonLd";
 import PostImageFigure from "../../../components/PostImageFigure";
+import Image from "next/image";
 
 const siteUrl = "https://haemilkorea.com";
 const pageUrl = `${siteUrl}/food/what-is-tteokbokki`;
@@ -26,6 +27,58 @@ const quickFacts = [
   "Where to find it: Bunsik shops, markets, street stalls, school areas, casual restaurants, and delivery menus",
   "Taste: Spicy, sweet, chewy, saucy, and comforting",
   "Spice note: It can be very spicy, so first-time visitors should start carefully",
+];
+
+const wheatVsRiceCards = [
+  {
+    title: "Ssal-tteok (Rice Tteok)",
+    description:
+      "Made from real rice flour, ssal-tteok has a firmer bite and a denser, chewier texture. Some people prefer it for the rice cake itself, not just the sauce.",
+  },
+  {
+    title: "Mil-tteok (Wheat Tteok)",
+    description:
+      "Made from wheat starch, mil-tteok is softer and a bit more elastic, and tends to soak up the sauce more easily. It shows up often in delivery and packaged versions.",
+  },
+];
+
+const tteokStyleCards = [
+  {
+    src: "/images/food/tteokbokki-classic-red.webp",
+    alt: "Classic red tteokbokki with rice cakes in spicy gochujang sauce.",
+    title: "Classic Red Tteokbokki",
+    description:
+      "The familiar spicy-sweet version most people picture first, made with a gochujang and gochugaru-based sauce.",
+    credit: "AI-generated image by HAEMIL",
+    license: "Owned by HAEMIL",
+  },
+  {
+    src: "/images/food/tteokbokki-rose.webp",
+    alt: "Rosé tteokbokki with a creamy, lighter red sauce.",
+    title: "Rosé Tteokbokki",
+    description:
+      "A creamier, more modern take that adds cream to the spicy sauce for a milder, richer flavor. Mala flavors have also become more familiar in Korea recently, and mala-rosé tteokbokki shows up more often now too.",
+    credit: "AI-generated image by HAEMIL",
+    license: "Owned by HAEMIL",
+  },
+  {
+    src: "/images/food/tteokbokki-jjajang.webp",
+    alt: "Jjajang tteokbokki with dark black bean sauce.",
+    title: "Jjajang Tteokbokki",
+    description:
+      "Made with a dark, jjajang-style black bean sauce, this version is less spicy than the classic red style, with a sweet-savory flavor instead.",
+    credit: "AI-generated image by HAEMIL",
+    license: "Owned by HAEMIL",
+  },
+  {
+    src: "/images/food/tteokbokki-gungjung.webp",
+    alt: "Gungjung tteokbokki with soy sauce, beef, and vegetables.",
+    title: "Gungjung Tteokbokki",
+    description:
+      "A soy-sauce-based style that is quite different from the red gochujang version, often cooked with beef and vegetables instead of a thick spicy sauce. It has a different feel from typical modern bunsik tteokbokki.",
+    credit: "AI-generated image by HAEMIL",
+    license: "Owned by HAEMIL",
+  },
 ];
 
 const relatedGuides = [
@@ -208,6 +261,51 @@ export default function WhatIsTteokbokkiPage() {
               </p>
 
               <h2 className="mt-2 text-xl font-semibold text-[var(--text)]">
+                Rice Tteok vs. Wheat Tteok: A Real Preference in Korea
+              </h2>
+
+              <p>
+                Not all tteokbokki rice cakes are the same, and the difference
+                is not just about texture — it is a real preference among
+                Koreans. Tteok can be made from rice (ssal-tteok, 쌀떡) or from
+                wheat (mil-tteok, 밀떡), and both show up in tteokbokki
+                depending on the shop. Ask a few Korean friends which one they
+                like better and you will probably get different answers;
+                there is no single &quot;correct&quot; choice, just personal
+                taste.
+              </p>
+
+              <div className="grid gap-4 md:grid-cols-2">
+                {wheatVsRiceCards.map((card) => (
+                  <div
+                    key={card.title}
+                    className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--card)] p-5"
+                  >
+                    <h3 className="text-lg font-semibold text-[var(--text)]">
+                      {card.title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-6 text-[var(--muted)] md:text-base">
+                      {card.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface)] p-5">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
+                  A local note from HAEMIL
+                </p>
+                <p className="mt-3 text-sm leading-6 text-[var(--muted)] md:text-base">
+                  I personally prefer ssal-tteok. Mil-tteok feels like it
+                  takes on the sauce more easily, but with rice tteok, I like
+                  the rice cake itself more — the flavor, the firmer bite, and
+                  especially that chewy texture. That said, this is just one
+                  personal preference; plenty of people feel the opposite
+                  way.
+                </p>
+              </div>
+
+              <h2 className="mt-2 text-xl font-semibold text-[var(--text)]">
                 The Texture, and the Classic Red Style
               </h2>
 
@@ -236,6 +334,47 @@ export default function WhatIsTteokbokkiPage() {
                 sundae, fish cake soup, and other simple foods. For many Koreans
                 a bunsik shop is a small piece of school and neighborhood life.
               </p>
+
+              <h2 className="mt-2 text-xl font-semibold text-[var(--text)]">
+                Tteokbokki Isn&apos;t Always Red
+              </h2>
+
+              <p>
+                The red, gochujang-based version is what most people picture
+                first, but it is really just one style among several. Here
+                are a few you will come across in Korea:
+              </p>
+
+              <div className="grid gap-4 md:grid-cols-2">
+                {tteokStyleCards.map((style) => (
+                  <div
+                    key={style.src}
+                    className="overflow-hidden rounded-[1.5rem] border border-[var(--border)] bg-[var(--card)] p-4"
+                  >
+                    <div className="relative h-40 w-full overflow-hidden rounded-[1.1rem] md:h-[200px]">
+                      <Image
+                        src={style.src}
+                        alt={style.alt}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 420px"
+                        className="object-cover"
+                      />
+                    </div>
+
+                    <h3 className="mt-4 text-lg font-semibold text-[var(--text)]">
+                      {style.title}
+                    </h3>
+
+                    <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
+                      {style.description}
+                    </p>
+
+                    <p className="mt-3 text-xs leading-5 text-[var(--muted)]">
+                      {style.credit} · {style.license}
+                    </p>
+                  </div>
+                ))}
+              </div>
 
               <h2 className="mt-2 text-xl font-semibold text-[var(--text)]">
                 What People Usually Order Alongside It
