@@ -6,6 +6,13 @@ export type KpopGuideArticle = {
   };
   
   export const kpopGuideArticles: KpopGuideArticle[] = [
+  {
+    title: "Who Is PENTAGON? A Friendly Guide to Their 10th Anniversary Comeback",
+    description:
+      "A friendly HAEMIL guide to PENTAGON's 10th anniversary comeback, the new single 'Coward,' their seven-member lineup, and what has changed since their debut.",
+    href: "/kpop/who-is-pentagon",
+    label: "Boy group guide",
+  },
     {
       title: "Who Is HYORISOO? A Friendly Guide to Girls' Generation's New Unit",
       description:
@@ -191,7 +198,7 @@ export type KpopGuideArticle = {
     {
       title: "Who Is ILLIT? The Five-Member Group Behind 'Magnetic'",
       description:
-        "A friendly HAEMIL guide to ILLIT, the five-member BELIFT LAB girl group behind 'Magnetic' — how they formed on R U Next?, why the song caught on, and where their sound has gone since.",
+        "A friendly HAEMIL guide to ILLIT, the five-member BELIFT LAB girl group behind 'Magnetic'"— how they formed on R U Next?, why the song caught on, and where their sound has gone since.",
       href: "/kpop/who-is-illit",
       label: "Girl group guide",
     },
@@ -235,7 +242,7 @@ export type KpopGuideArticle = {
       label: "Fancam spotlight",
     },
     {
-      title: "Why Kwon Eunbi Is Called Korea’s “Waterbomb Goddess”",
+      title: "Why Kwon Eunbi Is Called Korea’s “Waterbomb Goddess\"",
       description:
         "A friendly look at Kwon Eunbi, WATERBOMB Korea, and how one summer festival image reshaped her solo stage identity.",
       href: "/kpop/kwon-eunbi-waterbomb-fancam-spotlight",
@@ -256,7 +263,7 @@ export type KpopGuideArticle = {
       label: "K-pop spotlight",
     },
     {
-      title: "Hearts2Hearts Ian “STYLE” Fancam Spotlight",
+      title: "Hearts2Hearts Ian “STYLE\" Fancam Spotlight",
       description:
         "A friendly look at Hearts2Hearts Ian’s MBCkpop “STYLE” fancam, the Ian challenge effect, and why her point choreography, camera timing, and rookie-stage presence are easy to notice.",
       href: "/kpop/hearts2hearts-ian-style-fancam-spotlight",
