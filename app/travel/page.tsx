@@ -136,6 +136,16 @@ const STANDALONE_TRAVEL_GUIDES = [
     readingTime: "7 min read",
   },
   {
+    id: "do-i-need-to-tap-out-on-korean-buses",
+    category: "travel",
+    categoryLabel: "Travel guide",
+    title: "Do I Need to Tap Out on Korean Buses?",
+    description:
+      "A quick, practical answer on when to tap your transit card on Korean buses, why the exit tap affects fares and transfers, and what happens if you forget.",
+    href: "/travel/do-i-need-to-tap-out-on-korean-buses",
+    readingTime: "4 min read",
+  },
+  {
     id: "naver-map-kakaomap-korea-travel-guide",
     category: "travel",
     categoryLabel: "Travel guide",
