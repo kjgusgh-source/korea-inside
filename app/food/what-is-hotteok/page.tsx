@@ -13,21 +13,21 @@ const pageDescription =
 
 const heroImage = {
   src: "/images/food/hotteok-classic.webp",
-  alt: "A classic sweet hotteok cut open to show the melted brown sugar filling inside.",
+  alt: "A hand holding a white paper cup with two whole, golden-brown hotteok on a Korean street.",
   credit: "AI-generated image by HAEMIL",
   license: "Owned by HAEMIL",
 };
 
 const gireumImage = {
   src: "/images/food/hotteok-gireum.webp",
-  alt: "Gireum hotteok frying in a generous layer of oil on a street griddle.",
+  alt: "A round, golden-brown hotteok held by hand in front of a street stall sign that reads 호떡.",
   credit: "AI-generated image by HAEMIL",
   license: "Owned by HAEMIL",
 };
 
 const vegetableImage = {
   src: "/images/food/hotteok-vegetable.webp",
-  alt: "Vegetable hotteok filled with shredded vegetables instead of sweet syrup.",
+  alt: "Two whole, golden-brown hotteok served on a piece of paper wrapping.",
   credit: "AI-generated image by HAEMIL",
   license: "Owned by HAEMIL",
 };
@@ -292,12 +292,14 @@ export default function WhatIsHotteokPage() {
                     Gireum Hotteok (기름호떡)
                   </h3>
                   <p className="mt-2 text-sm leading-6 text-[var(--muted)] md:text-base">
-                    Gireum means &quot;oil,&quot; and this style is fried in
-                    noticeably more of it than the classic version. That extra
-                    oil gives the outside a deeper golden color and a
-                    crispier edge, closer to a shallow-fried pastry than a
-                    lightly pan-cooked one. It&apos;s a familiar sight at
-                    street stalls that keep a wide, oil-filled griddle going.
+                    Gireum literally means &quot;oil,&quot; and it&apos;s one
+                    of the names you&apos;ll sometimes see used for hotteok
+                    cooked this way. Exactly how much oil goes into the pan,
+                    and how thin or crisp the result turns out, tends to
+                    depend on the stall — hotteok-making style varies quite a
+                    bit from vendor to vendor, even for what looks like the
+                    same snack. This one came from a small street stand
+                    simply marked 호떡.
                   </p>
                 </div>
 
@@ -326,17 +328,14 @@ export default function WhatIsHotteokPage() {
               <PostImageFigure image={toppingsImage} variant="inline" align="left" />
 
               <p>
-                These days, it&apos;s also common to see hotteok finished
-                with toppings piled on the outside — crushed nuts, seeds, and
-                similar mix-ins pressed onto the surface after cooking.
-                Unlike seed or gireum hotteok, which are recognizable styles
-                with their own long-running identity, this topped-on-top
-                approach is more of a newer, eye-catching variation that has
-                become popular more recently, especially at stalls in busy
-                markets and tourist-friendly areas. It&apos;s less about a
-                fixed recipe and more about vendors making a familiar snack
-                look a little more eye-catching, so the exact toppings can
-                vary a lot from stall to stall.
+                You may also come across hotteok finished with toppings
+                pressed onto the outside — crushed nuts, seeds, sesame, or
+                sliced almonds added after cooking. Compared with seed or
+                gireum hotteok, which are established names people already
+                recognize, this topped-on-top look feels like a newer
+                variation, and it&apos;s not something every stall does.
+                Where you do see it, the exact toppings vary a lot from
+                vendor to vendor, so no two trays look quite the same.
               </p>
 
               <div className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface)] p-5">
@@ -344,13 +343,12 @@ export default function WhatIsHotteokPage() {
                   A local note from HAEMIL
                 </p>
                 <p className="mt-3 text-sm leading-6 text-[var(--muted)] md:text-base">
-                  Hotteok is one of those snacks where the &quot;correct&quot;
-                  version really depends on which stall you grew up walking
-                  past. Some people are loyal to the plain sweet version,
-                  some only want it with seeds, and some will only eat it
-                  fried in extra oil. If you try a few different stalls while
-                  you&apos;re here, don&apos;t be surprised if they all feel
-                  like a slightly different snack.
+                  Lately, I&apos;ve been noticing more hotteok with toppings
+                  pressed onto the outside — nuts, seeds, sesame, sliced
+                  almonds — more often than I used to. I can&apos;t say
+                  exactly when this started or how common it is everywhere,
+                  but it&apos;s the kind of small shift you start noticing
+                  once you&apos;ve been eating hotteok for years.
                 </p>
               </div>
             </div>
