@@ -186,6 +186,16 @@ const STANDALONE_FOOD_GUIDES = [
     readingTime: "7 min read",
   },
   {
+    id: "what-is-hotteok",
+    category: "food",
+    categoryLabel: "Food guide",
+    title: "What Is Hotteok?",
+    description:
+      "Korea’s warm street pancake, from the classic brown-sugar filling to seed, gireum, and vegetable hotteok, plus the newer topped-on-top variations.",
+    href: "/food/what-is-hotteok",
+    readingTime: "6 min read",
+  },
+  {
     id: "what-is-butter-tteok",
     category: "food",
     categoryLabel: "Food guide",
