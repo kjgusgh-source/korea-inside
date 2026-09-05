@@ -225,6 +225,16 @@ const STANDALONE_TRAVEL_GUIDES = [
     href: "/travel/chuseok-korea-holiday-guide-first-time",
     readingTime: "8 min read",
   },
+  {
+    id: "korea-autumn-foliage-guide",
+    category: "travel",
+    categoryLabel: "Travel guide",
+    title: "Korea Autumn Foliage 2026: When and Where to See Fall Colors",
+    description:
+      "How Korea's autumn colors move from northern mountains to the southern coast, and how to time a trip around the 2026 season.",
+    href: "/travel/korea-autumn-foliage-guide",
+    readingTime: "7 min read",
+  },
 ];
 
 export const metadata: Metadata = {
