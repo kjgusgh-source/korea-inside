@@ -44,6 +44,15 @@ export const KPOP_SOLO_ARTISTS: KpopSoloArtist[] = [
     href: "/kpop/jennie",
     tags: ["Solo artist", "BLACKPINK", "Odd Atelier", "Fallen Angel"],
   },
+  {
+    id: "jisoo",
+    name: "JISOO",
+    note: "Solo artist · BLACKPINK member · CLICK (2026)",
+    description:
+      "Known for BLACKPINK's vocals, her own label Blissoo, and \"CLICK,\" her first single recorded fully in English, released in 2026.",
+    href: "/kpop/jisoo",
+    tags: ["Solo artist", "BLACKPINK", "Blissoo", "CLICK"],
+  },
 ];
 
 export function getKpopSoloArtists() {
