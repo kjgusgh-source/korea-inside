@@ -27,6 +27,21 @@ export type MediaItem = {
 
 export const MEDIA_ITEMS: MediaItem[] = [
   {
+    id: "jisoo-click-official-mv",
+    title: 'JISOO "CLICK" (Official MV)',
+    category: "kpop",
+    categoryLabel: "K-pop Spotlight",
+    mediaType: "youtube",
+    description:
+      "The official music video for JISOO's solo single \"CLICK,\" her first single recorded fully in English, released September 4, 2026.",
+    cultureNote:
+      "The video leans into a dark carnival fairytale look, with JISOO holding up what looks like an amusement park ticket as animatronic-style dolls appear around her, directed by Joseph Kahn (Taylor Swift's \"Bad Blood,\" Eminem's \"Without Me\") and filmed in Bangkok, Thailand.",
+    tags: ["BLACKPINK", "JISOO", "CLICK", "Official MV", "Blissoo"],
+    youtubeId: "sf02ugzPFE4",
+    sourceLabel: "Official \"CLICK\" MV, cross-verified via press coverage of JISOO's official YouTube channel",
+    guideHref: "/kpop/jisoo",
+  },
+  {
     id: "jennie-fallen-angel-official-mv-teaser",
     title: 'JENNIE "FALLEN ANGEL" (Official MV Teaser)',
     category: "kpop",
