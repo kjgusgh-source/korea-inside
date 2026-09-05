@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "../../../components/SiteHeader";
 import JsonLd from "../../../components/JsonLd";
-import PostImageFigure from "../../../components/PostImageFigure";
+import Image from "next/image";
 
 const siteUrl = "https://haemilkorea.com";
 const pageUrl = `${siteUrl}/food/what-is-hotteok`;
@@ -195,7 +195,18 @@ export default function WhatIsHotteokPage() {
             </p>
           </article>
 
-          <PostImageFigure image={heroImage} variant="hero" priority />
+          <div className="mt-10 overflow-hidden rounded-[2rem] border border-[var(--border)]">
+            <div className="relative aspect-[16/9] w-full">
+              <Image
+                src={heroImage.src}
+                alt={heroImage.alt}
+                fill
+                priority
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 1024px"
+              />
+            </div>
+          </div>
 
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
@@ -285,39 +296,56 @@ export default function WhatIsHotteokPage() {
                   </p>
                 </div>
 
-                <PostImageFigure image={gireumImage} variant="inline" align="left" />
-
-                <div className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface)] p-5">
-                  <h3 className="text-lg font-semibold text-[var(--text)]">
-                    Gireum Hotteok (기름호떡)
-                  </h3>
-                  <p className="mt-2 text-sm leading-6 text-[var(--muted)] md:text-base">
-                    Gireum literally means &quot;oil,&quot; and it&apos;s one
-                    of the names you&apos;ll sometimes see used for hotteok
-                    cooked this way. Exactly how much oil goes into the pan,
-                    and how thin or crisp the result turns out, tends to
-                    depend on the stall — hotteok-making style varies quite a
-                    bit from vendor to vendor, even for what looks like the
-                    same snack. This one came from a small street stand
-                    simply marked 호떡.
-                  </p>
+                <div className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface)] p-5 md:grid md:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] md:items-center md:gap-6">
+                  <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[1rem]">
+                    <Image
+                      src={gireumImage.src}
+                      alt={gireumImage.alt}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 400px"
+                    />
+                  </div>
+                  <div className="mt-4 md:mt-0">
+                    <h3 className="text-lg font-semibold text-[var(--text)]">
+                      Gireum Hotteok (기름호떡)
+                    </h3>
+                    <p className="mt-2 text-sm leading-6 text-[var(--muted)] md:text-base">
+                      Gireum literally means &quot;oil,&quot; and it&apos;s one
+                      of the names you&apos;ll sometimes see used for hotteok
+                      cooked this way. Exactly how much oil goes into the pan,
+                      and how thin or crisp the result turns out, tends to
+                      depend on the stall — hotteok-making style varies quite a
+                      bit from vendor to vendor, even for what looks like the
+                      same snack.
+                    </p>
+                  </div>
                 </div>
 
-                <PostImageFigure image={vegetableImage} variant="inline" align="right" />
-
-                <div className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface)] p-5">
-                  <h3 className="text-lg font-semibold text-[var(--text)]">
-                    Vegetable Hotteok (야채호떡)
-                  </h3>
-                  <p className="mt-2 text-sm leading-6 text-[var(--muted)] md:text-base">
-                    Not every hotteok is sweet. Vegetable hotteok swaps the
-                    sugar filling for shredded vegetables, sometimes mixed
-                    with glass noodles and a light savory sauce, so it eats
-                    more like a handheld savory pancake than a dessert. It
-                    shows up less often than the sweet versions, but it&apos;s
-                    a good option if you want something filling that
-                    isn&apos;t sugary.
-                  </p>
+                <div className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface)] p-5 md:grid md:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] md:items-center md:gap-6">
+                  <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[1rem]">
+                    <Image
+                      src={vegetableImage.src}
+                      alt={vegetableImage.alt}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 400px"
+                    />
+                  </div>
+                  <div className="mt-4 md:mt-0">
+                    <h3 className="text-lg font-semibold text-[var(--text)]">
+                      Vegetable Hotteok (야채호떡)
+                    </h3>
+                    <p className="mt-2 text-sm leading-6 text-[var(--muted)] md:text-base">
+                      Not every hotteok is sweet. Vegetable hotteok swaps the
+                      sugar filling for shredded vegetables, sometimes mixed
+                      with glass noodles and a light savory sauce, so it eats
+                      more like a handheld savory pancake than a dessert. It
+                      shows up less often than the sweet versions, but it&apos;s
+                      a good option if you want something filling that
+                      isn&apos;t sugary.
+                    </p>
+                  </div>
                 </div>
               </div>
 
@@ -325,32 +353,42 @@ export default function WhatIsHotteokPage() {
                 Why Some Hotteok Now Come with Toppings
               </h2>
 
-              <PostImageFigure image={toppingsImage} variant="inline" align="left" />
+              <div className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface)] p-5 md:grid md:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] md:items-start md:gap-6">
+                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[1rem]">
+                  <Image
+                    src={toppingsImage.src}
+                    alt={toppingsImage.alt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 400px"
+                  />
+                </div>
+                <div className="mt-4 space-y-4 md:mt-0">
+                  <p className="text-sm leading-6 text-[var(--muted)] md:text-base">
+                    You may also come across hotteok finished with toppings
+                    pressed onto the outside — crushed nuts, seeds, sesame, or
+                    sliced almonds added after cooking. Compared with seed or
+                    gireum hotteok, which are established names people already
+                    recognize, this topped-on-top look feels like a newer
+                    variation, and it&apos;s not something every stall does.
+                    Where you do see it, the exact toppings vary a lot from
+                    vendor to vendor, so no two trays look quite the same.
+                  </p>
 
-              <p>
-                You may also come across hotteok finished with toppings
-                pressed onto the outside — crushed nuts, seeds, sesame, or
-                sliced almonds added after cooking. Compared with seed or
-                gireum hotteok, which are established names people already
-                recognize, this topped-on-top look feels like a newer
-                variation, and it&apos;s not something every stall does.
-                Where you do see it, the exact toppings vary a lot from
-                vendor to vendor, so no two trays look quite the same.
-              </p>
-
-              <div className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface)] p-5">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
-                  A local note from HAEMIL
-                </p>
-                <p className="mt-3 text-sm leading-6 text-[var(--muted)] md:text-base">
-                  Lately, I&apos;ve been noticing more hotteok with toppings
-                  pressed onto the outside — nuts, seeds, sesame, sliced
-                  almonds — more often than I used to. I can&apos;t say
-                  exactly when this started or how common it is everywhere,
-                  but it&apos;s the kind of small shift you start noticing.
-                </p>
+                  <div className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--card)] p-5">
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
+                      A local note from HAEMIL
+                    </p>
+                    <p className="mt-3 text-sm leading-6 text-[var(--muted)] md:text-base">
+                      Lately, I&apos;ve been noticing more hotteok with toppings
+                      pressed onto the outside — nuts, seeds, sesame, sliced
+                      almonds — more often than I used to. I can&apos;t say
+                      exactly when this started or how common it is everywhere,
+                      but it&apos;s the kind of small shift you start noticing.
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
           </section>
 
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">
