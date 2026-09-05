@@ -389,6 +389,7 @@ export default function WhatIsHotteokPage() {
                   </div>
                 </div>
               </div>
+            </div>
           </section>
 
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">
