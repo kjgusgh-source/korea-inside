@@ -6,6 +6,20 @@ export type KpopGuideArticle = {
   };
   
   export const kpopGuideArticles: KpopGuideArticle[] = [
+  {
+    title: "Who Is PENTAGON? A Friendly Guide to Their 10th Anniversary Comeback",
+    description:
+      "A friendly HAEMIL guide to PENTAGON's 10th anniversary comeback, the new single 'Coward,' their seven-member lineup, and what has changed since their debut.",
+    href: "/kpop/who-is-pentagon",
+    label: "Boy group guide",
+  },
+    {
+      title: "Who Is HYORISOO? A Friendly Guide to Girls' Generation's New Unit",
+      description:
+        "A friendly guide to HYORISOO (Girls' Generation-HRS), the new unit built from Hyoyeon, Yuri, and Sooyoung, their \"Skibidi\" single, and how a K-pop unit differs from a brand-new group.",
+      href: "/kpop/who-is-hyorisoo",
+      label: "Girl group guide",
+    },
     {
       title: "What Is a Fancam?",
       description:
@@ -282,6 +296,13 @@ export type KpopGuideArticle = {
       description:
         "A friendly guide to BTS's 2026 comeback — how military service kept the group apart, why ARIRANG and 'SWIM' mark their return, and where the 'NORMAL' video fits in.",
       href: "/kpop/who-is-bts",
+      label: "Boy group guide",
+    },
+    {
+      title: "Who Is ENHYPEN? A Guide to Their First Comeback as Six",
+      description:
+        "A friendly guide to ENHYPEN's 2026 comeback — how the group became six members after Heeseung's departure, and what 'Bloody Paradise' means for ENGENE.",
+      href: "/kpop/who-is-enhypen",
       label: "Boy group guide",
     },
   ];
