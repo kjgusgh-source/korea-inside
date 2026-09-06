@@ -182,38 +182,85 @@ export default function DoINeedToTapOutOnKoreanBusesPage() {
               HAEMIL Short
             </p>
 
-            <h2 className="mt-3 text-2xl font-semibold text-[var(--text)] md:text-3xl">
-              Watch the 40-second bus tip
-            </h2>
+            <div className="mt-4 grid gap-6 md:grid-cols-[2fr_3fr] md:items-start md:gap-8">
+              <div className="flex flex-col items-center md:items-start">
+                <div className="aspect-[9/16] w-full max-w-xs overflow-hidden rounded-[1.5rem] border border-[var(--border)] bg-black md:max-w-sm">
+                  <iframe
+                    className="h-full w-full"
+                    src="https://www.youtube-nocookie.com/embed/sTrkC9DucNQ"
+                    title="Do I need to tap out on Korean buses? — HAEMIL Short"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                </div>
 
-            <p className="mt-3 max-w-2xl text-base leading-7 text-[var(--muted)] md:text-lg">
-              Prefer the quick version? Here&apos;s the same tap-out rule in a
-              short video.
-            </p>
+                <a
+                  href="https://youtube.com/shorts/sTrkC9DucNQ"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-4 text-sm font-semibold text-[var(--accent)] transition hover:opacity-80"
+                >
+                  Watch on YouTube →
+                </a>
+              </div>
 
-            <div className="mx-auto mt-6 aspect-[9/16] w-full max-w-sm overflow-hidden rounded-[1.5rem] border border-[var(--border)] bg-black">
-              <iframe
-                className="h-full w-full"
-                src="https://www.youtube-nocookie.com/embed/sTrkC9DucNQ"
-                title="Do I need to tap out on Korean buses? — HAEMIL Short"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              />
-            </div>
+              <div>
+                <h2 className="text-2xl font-semibold text-[var(--text)] md:text-3xl">
+                  Watch the 40-second bus tip
+                </h2>
 
-            <div className="mt-4 text-center">
-              <a
-                href="https://youtube.com/shorts/sTrkC9DucNQ"
-                target="_blank"
-                rel="noreferrer"
-                className="text-sm font-semibold text-[var(--accent)] transition hover:opacity-80"
-              >
-                Watch on YouTube →
-              </a>
+                <p className="mt-3 text-base leading-7 text-[var(--muted)] md:text-lg">
+                  Prefer the quick version? Here&apos;s the same tap-out rule
+                  in a short video.
+                </p>
+
+                <p className="mt-5 text-sm font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
+                  What to remember
+                </p>
+
+                <div className="mt-3 grid gap-3 sm:grid-cols-2">
+                  <div className="rounded-[1.25rem] border border-[var(--border)] bg-[var(--surface)] p-4">
+                    <p className="text-2xl font-semibold text-[var(--celadon)]">
+                      30 min
+                    </p>
+                    <p className="mt-1 text-sm leading-6 text-[var(--muted)]">
+                      Standard transfer window after tapping out.
+                    </p>
+                  </div>
+
+                  <div className="rounded-[1.25rem] border border-[var(--border)] bg-[var(--surface)] p-4">
+                    <p className="text-2xl font-semibold text-[var(--celadon)]">
+                      60 min
+                    </p>
+                    <p className="mt-1 text-sm leading-6 text-[var(--muted)]">
+                      Extended window from 9 PM to 7 AM.
+                    </p>
+                  </div>
+
+                  <div className="rounded-[1.25rem] border border-[var(--border)] bg-[var(--surface)] p-4">
+                    <p className="text-sm font-semibold text-[var(--text)]">
+                      Distance-based
+                    </p>
+                    <p className="mt-1 text-sm leading-6 text-[var(--muted)]">
+                      An extra fare may apply after the basic distance.
+                    </p>
+                  </div>
+
+                  <div className="rounded-[1.25rem] border border-[var(--border)] bg-[var(--surface)] p-4">
+                    <p className="text-sm font-semibold text-[var(--text)]">
+                      Missed tap-out
+                    </p>
+                    <p className="mt-1 text-sm leading-6 text-[var(--muted)]">
+                      The transfer chain breaks, and an extra base fare may be
+                      charged on your next ride.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
 
-          <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
+          <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">
             <div className="space-y-8 text-base leading-8 text-[var(--muted)] md:text-lg">
               <div className="space-y-4">
                 <h2 className="text-2xl font-semibold text-[var(--text)]">
