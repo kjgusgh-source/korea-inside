@@ -178,6 +178,42 @@ export default function DoINeedToTapOutOnKoreanBusesPage() {
           </section>
 
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+              HAEMIL Short
+            </p>
+
+            <h2 className="mt-3 text-2xl font-semibold text-[var(--text)] md:text-3xl">
+              Watch the 40-second bus tip
+            </h2>
+
+            <p className="mt-3 max-w-2xl text-base leading-7 text-[var(--muted)] md:text-lg">
+              Prefer the quick version? Here&apos;s the same tap-out rule in a
+              short video.
+            </p>
+
+            <div className="mx-auto mt-6 aspect-[9/16] w-full max-w-sm overflow-hidden rounded-[1.5rem] border border-[var(--border)] bg-black">
+              <iframe
+                className="h-full w-full"
+                src="https://www.youtube-nocookie.com/embed/sTrkC9DucNQ"
+                title="Do I need to tap out on Korean buses? — HAEMIL Short"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+
+            <div className="mt-4 text-center">
+              <a
+                href="https://youtube.com/shorts/sTrkC9DucNQ"
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm font-semibold text-[var(--accent)] transition hover:opacity-80"
+              >
+                Watch on YouTube →
+              </a>
+            </div>
+          </section>
+
+          <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
             <div className="space-y-8 text-base leading-8 text-[var(--muted)] md:text-lg">
               <div className="space-y-4">
                 <h2 className="text-2xl font-semibold text-[var(--text)]">
