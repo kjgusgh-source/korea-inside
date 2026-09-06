@@ -260,7 +260,7 @@ export default function DoINeedToTapOutOnKoreanBusesPage() {
             </div>
           </section>
 
-          <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">
+          <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
             <div className="space-y-8 text-base leading-8 text-[var(--muted)] md:text-lg">
               <div className="space-y-4">
                 <h2 className="text-2xl font-semibold text-[var(--text)]">
