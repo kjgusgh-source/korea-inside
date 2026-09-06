@@ -260,10 +260,11 @@ export default function DoINeedToTapOutOnKoreanBusesPage() {
                 </p>
 
                 <p>
-                  A practical rule of thumb: if a bus has a card reader by the
-                  door, tap it both when you board and when you get off. It
-                  costs nothing extra if it is not required, and it protects
-                  you in every system where it is.
+                  A practical rule of thumb: in systems where the exit reader
+                  is part of the fare or transfer system, tap the same card
+                  again when you get off. If you are unsure in a different
+                  city or region, follow the local reader instructions or
+                  transit guidance.
                 </p>
               </div>
 
