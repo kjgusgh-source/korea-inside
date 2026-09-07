@@ -136,6 +136,16 @@ const STANDALONE_TRAVEL_GUIDES = [
     readingTime: "7 min read",
   },
   {
+    id: "do-i-need-to-tap-out-on-korean-buses",
+    category: "travel",
+    categoryLabel: "Travel guide",
+    title: "Do I Need to Tap Out on Korean Buses?",
+    description:
+      "A quick, practical answer on when to tap your transit card on Korean buses, why the exit tap affects fares and transfers, and what happens if you forget.",
+    href: "/travel/do-i-need-to-tap-out-on-korean-buses",
+    readingTime: "4 min read",
+  },
+  {
     id: "naver-map-kakaomap-korea-travel-guide",
     category: "travel",
     categoryLabel: "Travel guide",
@@ -224,6 +234,16 @@ const STANDALONE_TRAVEL_GUIDES = [
       "2026 Chuseok dates, what actually closes versus stays open, KTX and highway travel, and the free palace access that only happens during the holiday.",
     href: "/travel/chuseok-korea-holiday-guide-first-time",
     readingTime: "8 min read",
+  },
+  {
+    id: "korea-autumn-foliage-guide",
+    category: "travel",
+    categoryLabel: "Travel guide",
+    title: "Korea Autumn Foliage 2026: When and Where to See Fall Colors",
+    description:
+      "How Korea's autumn colors move from northern mountains to the southern coast, and how to time a trip around the 2026 season.",
+    href: "/travel/korea-autumn-foliage-guide",
+    readingTime: "7 min read",
   },
 ];
 
