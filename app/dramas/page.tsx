@@ -5,6 +5,16 @@ import { getPostsByCategory } from "../../lib/posts";
 
 const STANDALONE_DRAMA_GUIDES = [
   {
+    id: "what-is-a-sageuk-in-kdramas",
+    category: "dramas",
+    categoryLabel: "K-drama guide",
+    title: "What Is a Sageuk in K-dramas?",
+    description:
+      "A friendly guide to sageuk, the Korean historical drama genre — how jeongtong, fusion, and faction sageuk differ, and the details that often confuse first-time viewers.",
+    href: "/dramas/what-is-a-sageuk-in-kdramas",
+    readingTime: "5 min read",
+  },
+  {
     id: "why-itaewon-class-is-a-good-first-kdrama",
     category: "dramas",
     categoryLabel: "K-drama guide",
@@ -33,6 +43,16 @@ const STANDALONE_DRAMA_GUIDES = [
       "A friendly guide to second lead syndrome: what the term means, why viewers end up rooting for the second lead, and how it compares to Korea's own word for the same feeling.",
     href: "/dramas/what-is-second-lead-syndrome-in-kdramas",
     readingTime: "5 min read",
+  },
+  {
+    id: "what-is-makjang",
+    category: "dramas",
+    categoryLabel: "K-drama guide",
+    title: "What Is Makjang? K-Drama's Wildest Genre, Explained",
+    description:
+      "A friendly guide to makjang (막장), the K-drama genre built on secret identities, revenge, and affairs, from its coal-mine origins to The Penthouse and the daytime classic Temptation of Wife.",
+    href: "/dramas/what-is-makjang",
+    readingTime: "6 min read",
   },
 ];
 

@@ -6,6 +6,16 @@ import { getPostsByCategory } from "../../lib/posts";
 
 const STANDALONE_FOOD_GUIDES = [
   {
+    id: "what-is-dujjonku-dubai-chewy-cookie",
+    category: "food",
+    categoryLabel: "Food guide",
+    title: "What Is Dujjonku (두쫀쿠)?",
+    description:
+      "Korea's viral Dubai-chocolate-inspired chewy cookie, explained — what it is, where it came from, and why it tastes different from shop to shop.",
+    href: "/food/what-is-dujjonku-dubai-chewy-cookie",
+    readingTime: "6 min read",
+  },
+  {
     id: "what-to-eat-in-korea-first-time",
     category: "food",
     categoryLabel: "Food guide",
@@ -176,6 +186,26 @@ const STANDALONE_FOOD_GUIDES = [
     readingTime: "7 min read",
   },
   {
+    id: "what-is-hotteok",
+    category: "food",
+    categoryLabel: "Food guide",
+    title: "What Is Hotteok?",
+    description:
+      "Korea’s warm street pancake, from the classic brown-sugar filling to seed, gireum, and vegetable hotteok, plus the newer topped-on-top variations.",
+    href: "/food/what-is-hotteok",
+    readingTime: "6 min read",
+  },
+  {
+    id: "what-is-butter-tteok",
+    category: "food",
+    categoryLabel: "Food guide",
+    title: "What Is Butter Tteok?",
+    description:
+      "Korea’s viral butter rice cake trend from early 2026 — what it tastes like, where it came from, and how it compares to Dubai chewy cookies.",
+    href: "/food/what-is-butter-tteok",
+    readingTime: "6 min read",
+  },
+  {
     id: "what-is-eomuk-korean-fish-cake",
     category: "food",
     categoryLabel: "Food guide",
@@ -244,6 +274,16 @@ const STANDALONE_FOOD_GUIDES = [
       "Kimchi isn’t a single recipe — it’s a whole category of salted, seasoned, and often fermented vegetable dishes, from everyday baechu-kimchi to kkakdugi and oi-sobagi.",
     href: "/food/what-is-kimchi",
     readingTime: "7 min read",
+  },
+  {
+    id: "vegan-vegetarian-korea-guide-first-time",
+    category: "food",
+    categoryLabel: "Food guide",
+    title: "Vegan and Vegetarian in Korea: Why “No Meat” Isn’t Enough",
+    description:
+      "Hidden anchovy broth, fish sauce, and MSG myths explained — a local friend’s guide to eating vegan or vegetarian in Korea.",
+    href: "/food/vegan-vegetarian-korea-guide-first-time",
+    readingTime: "10 min read",
   },
 ];
 

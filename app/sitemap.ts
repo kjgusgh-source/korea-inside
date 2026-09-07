@@ -10,6 +10,12 @@ const baseUrl = "https://haemilkorea.com";
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     {
+      url: `${baseUrl}/food/what-is-dujjonku-dubai-chewy-cookie`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: baseUrl,
       lastModified: new Date(),
       changeFrequency: "weekly",
@@ -41,6 +47,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/travel/how-to-use-t-money-card-in-korea`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/travel/do-i-need-to-tap-out-on-korean-buses`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
@@ -166,6 +178,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/travel/korea-autumn-foliage-guide`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/food`,
       lastModified: new Date(),
       changeFrequency: "weekly",
@@ -274,6 +292,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/food/what-is-hotteok`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/food/what-is-butter-tteok`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/food/what-is-eomuk-korean-fish-cake`,
       lastModified: new Date(),
       changeFrequency: "monthly",
@@ -316,10 +346,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/food/vegan-vegetarian-korea-guide-first-time`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/dramas`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/dramas/what-is-a-sageuk-in-kdramas`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
     },
     {
       url: `${baseUrl}/dramas/why-itaewon-class-is-a-good-first-kdrama`,
@@ -335,6 +377,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/dramas/what-is-second-lead-syndrome-in-kdramas`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/dramas/what-is-makjang`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
