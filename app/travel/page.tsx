@@ -136,6 +136,16 @@ const STANDALONE_TRAVEL_GUIDES = [
     readingTime: "7 min read",
   },
   {
+    id: "how-to-refund-a-t-money-card-in-korea",
+    category: "travel",
+    categoryLabel: "Travel guide",
+    title: "How to Refund a T-money Card in Korea",
+    description:
+      "Where to get your remaining T-money balance back before you leave — convenience stores, subway service desks, T-money Town, refund fees, and limits.",
+    href: "/travel/how-to-refund-a-t-money-card-in-korea",
+    readingTime: "6 min read",
+  },
+  {
     id: "do-i-need-to-tap-out-on-korean-buses",
     category: "travel",
     categoryLabel: "Travel guide",
