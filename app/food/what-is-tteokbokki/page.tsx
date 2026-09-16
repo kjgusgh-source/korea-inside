@@ -104,6 +104,13 @@ const relatedGuides = [
     href: "/food/how-to-eat-cup-ramyeon-at-a-korean-convenience-store",
   },
   {
+    label: "Food guide",
+    title: "Sundae blood sausage guide",
+    description:
+      "A local-friendly guide to Korea’s blood sausage street food, from tteokbokki sauce dips and bunsik shops to offal sides and regional styles.",
+    href: "/food/what-is-sundae-korean-blood-sausage",
+  },
+  {
     label: "Food",
     title: "Open the Food hub",
     description:
@@ -267,7 +274,7 @@ export default function WhatIsTteokbokkiPage() {
               <p>
                 Not all tteokbokki rice cakes are the same, and the difference
                 is not just about texture — it is a real preference among
-                Koreans. Tteok can be made from rice (ssal-tteok, 쌀떡) or from
+                Koreans. Tteok can be made from rice (ssal-tteok, 쑤떡) or from
                 wheat (mil-tteok, 밀떡), and both show up in tteokbokki
                 depending on the shop. Ask a few Korean friends which one they
                 like better and you will probably get different answers;
