@@ -274,7 +274,7 @@ export default function WhatIsTteokbokkiPage() {
               <p>
                 Not all tteokbokki rice cakes are the same, and the difference
                 is not just about texture — it is a real preference among
-                Koreans. Tteok can be made from rice (ssal-tteok, 쑤떡) or from
+                Koreans. Tteok can be made from rice (ssal-tteok, 쌀떡) or from
                 wheat (mil-tteok, 밀떡), and both show up in tteokbokki
                 depending on the shop. Ask a few Korean friends which one they
                 like better and you will probably get different answers;
