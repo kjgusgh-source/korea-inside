@@ -146,6 +146,16 @@ const STANDALONE_TRAVEL_GUIDES = [
     readingTime: "4 min read",
   },
   {
+    id: "how-to-use-subway-lockers-in-seoul",
+    category: "travel",
+    categoryLabel: "Travel guide",
+    title: "How to Use Subway Lockers in Seoul",
+    description:
+      "Where to find T-Locker, how much it costs, what size to pick, and what first-time visitors should know before storing a bag between check-in and check-out.",
+    href: "/travel/how-to-use-subway-lockers-in-seoul",
+    readingTime: "6 min read",
+  },
+  {
     id: "naver-map-kakaomap-korea-travel-guide",
     category: "travel",
     categoryLabel: "Travel guide",
