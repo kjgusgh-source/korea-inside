@@ -52,6 +52,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/travel/how-to-refund-a-t-money-card-in-korea`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/travel/do-i-need-to-tap-out-on-korean-buses`,
       lastModified: new Date(),
       changeFrequency: "monthly",
