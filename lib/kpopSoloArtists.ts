@@ -45,6 +45,15 @@ export const KPOP_SOLO_ARTISTS: KpopSoloArtist[] = [
     tags: ["Solo artist", "BLACKPINK", "Odd Atelier", "Fallen Angel"],
   },
   {
+    id: "lisa",
+    name: "LISA",
+    note: "Solo artist · BLACKPINK member · SaWaDiKa (2026)",
+    description:
+      "Known for BLACKPINK, her own label LLOUD Co., and \"SaWaDiKa,\" the lead single from her upcoming EP \"PRESS PLAY.\"",
+    href: "/kpop/lisa",
+    tags: ["Solo artist", "BLACKPINK", "LLOUD", "SaWaDiKa"],
+  },
+  {
     id: "jisoo",
     name: "JISOO",
     note: "Solo artist · BLACKPINK member · CLICK (2026)",
