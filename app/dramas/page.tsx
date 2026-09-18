@@ -67,7 +67,8 @@ const STANDALONE_DRAMA_GUIDES = [
   },
 ];
 
-export const metadata: Metadata = { \n  title: "Drama & Film | HAEMIL",
+export const metadata: Metadata = {
+  title: "Drama & Film | HAEMIL",
   description:
     "HAEMIL guides for understanding Korean dramas, films, city moods, everyday scenes, and the places or cultural details that make them feel familiar.",
   openGraph: {
@@ -166,7 +167,7 @@ export default function DramasPage() {
           </div>
         </section>
 
-        <section className="mt-12 pb-8";
+        <section className="mt-12 pb-8">
           <p className="mb-8 text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
             Drama guides
           </p>
