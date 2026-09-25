@@ -121,7 +121,7 @@ const STANDALONE_FOOD_GUIDES = [
     categoryLabel: "Food guide",
     title: "Myeongdong Street Food Guide for First-Time Visitors",
     description:
-      "Fun first-time snacks in Myeongdong,with tourist-price reality on the main streets and easier bites one alley over.",
+      "Fun first-time snacks in Myeongdong, with tourist-price reality on the main streets and easier bites one alley over.",
     href: "/food/myeongdong-street-food-guide-first-time",
     readingTime: "8 min read",
   },
@@ -261,7 +261,7 @@ const STANDALONE_FOOD_GUIDES = [
     categoryLabel: "Food guide",
     title: "What Is a Korean Corn Dog?",
     description:
-      "In Korea, the fried snack often called a Korean corn dog overseas is usually just 핫㏄그 — with sausage, cheese, potato, and plenty of variations.",
+      "In Korea, the fried snack often called a Korean corn dog overseas is usually just 핫도그 — with sausage, cheese, potato, and plenty of variations.",
     href: "/food/what-is-a-korean-corn-dog",
     readingTime: "6 min read",
   },
@@ -380,7 +380,7 @@ export default function FoodPage() {
             >
               <div className="absolute inset-0 overflow-hidden rounded-2xl border border-[var(--border)] shadow-md">
                 <Image
-                  src="/images/food/놡볶이.png"
+                  src="/images/food/떡볶이.png"
                   alt=""
                   fill
                   sizes="(max-width: 767px) 220px, 260px"
@@ -389,7 +389,7 @@ export default function FoodPage() {
               </div>
               <div className="absolute -bottom-5 -left-5 hidden h-[100px] w-[130px] rotate-3 overflow-hidden rounded-2xl border border-[var(--border)] shadow-md md:block">
                 <Image
-                  src="/images/food/뙄빔밥.png"
+                  src="/images/food/비빔밥.png"
                   alt=""
                   fill
                   sizes="130px"
