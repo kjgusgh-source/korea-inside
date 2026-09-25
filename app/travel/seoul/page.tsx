@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Seoul Travel Guides | HAEMIL",
   description:
     "Map-friendly HAEMIL guides for understanding Seoul by area, mood, and local movement.",
+  alternates: {
+    canonical: "/travel/seoul",
+  },
   openGraph: {
     title: "Seoul Travel Guides | HAEMIL",
     description:
