@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Korea Now | HAEMIL",
   description:
     "HAEMIL guides to everyday, present-day Korea — the trends, routines, and small cultural habits locals live with right now.",
+  alternates: {
+    canonical: "/lifestyle",
+  },
   openGraph: {
     title: "Korea Now | HAEMIL",
     description:
