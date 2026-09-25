@@ -251,6 +251,9 @@ export const metadata: Metadata = {
   title: "Travel in Korea | HAEMIL",
   description:
     "Map-friendly HAEMIL guides for exploring Korea through neighborhoods, food, local routes, and small details that make a trip easier to understand.",
+  alternates: {
+    canonical: "/travel",
+  },
   openGraph: {
     title: "Travel in Korea | HAEMIL",
     description:
