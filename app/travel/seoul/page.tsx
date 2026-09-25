@@ -91,7 +91,7 @@ export default function SeoulTravelPage() {
             Seoul is too large to explain with one checklist. Start with the
             area that matches your mood: old streets, young neighborhoods, cafe
             streets, shopping, night views, or riverside walks.
-        </p>
+          </p>
         </section>
 
         <section className="mt-12 pb-8">
@@ -109,7 +109,7 @@ export default function SeoulTravelPage() {
               <Link
                 key={guide.href}
                 href={guide.href}
-                className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--card)] p-5 transition hover:-translate-y-1 hover:sshadow-lg hover:shadow-[var(--shadow)]"
+                className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--card)] p-5 transition hover:-translate-y-1 hover:shadow-lg hover:shadow-[var(--shadow)]"
               >
                 <div className="mb-4 flex flex-wrap items-center gap-3 text-sm">
                   <span className="text-[var(--celadon)]">Travel</span>
