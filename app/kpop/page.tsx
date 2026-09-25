@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "../../components/SiteHeader";
 import IdolRequestForm from "../../components/IdolRequestForm";
@@ -7,6 +8,12 @@ import { getKpopGroups } from "../../lib/kpopData";
 import { getPublishedMemberGuides } from "../../lib/publishedGuides";
 import { getKpopGuideArticles } from "../../lib/kpopGuideArticles";
 import { getKpopSoloArtists } from "../../lib/kpopSoloArtists";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/kpop",
+  },
+};
 
 export default function KpopPage() {
   const groups = getKpopGroups();
