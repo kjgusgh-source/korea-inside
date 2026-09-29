@@ -18,7 +18,7 @@ const refundStops = [
   },
   {
     label: "Larger balance",
-    detail: "A customer service center inside a subway station in the Seoul area",
+    detail: "A customer service center inside a subway station in the Seoul metropolitan area",
     note: "Regular balance refunds, plus partial refunds of 10,000–50,000 won",
   },
   {
@@ -363,9 +363,8 @@ export default function HowToRefundATMoneyCardInKoreaPage() {
                 refund usually arrives the next day (up to 5 business days
                 if it needs an extra check), but it never includes the
                 card&apos;s purchase price. You can also go to T-money Town
-                in person, where smaller refunds can be paid on the spot and
-                large ones (100,000 won or more) go to your bank account
-                after 6 p.m. the next day.
+                in person, where smaller refunds may be handled on the spot
+                while larger refunds are paid to a bank account.
               </p>
               <p>
                 Since most of these routes pay into a bank account, it&apos;s
