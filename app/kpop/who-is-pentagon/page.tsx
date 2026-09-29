@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "../../../components/SiteHeader";
 import JsonLd from "../../../components/JsonLd";
+import YouTubeEmbed from "../../../components/YouTubeEmbed";
 
 const siteUrl = "https://haemilkorea.com";
 const pageUrl = `${siteUrl}/kpop/who-is-pentagon`;
@@ -223,13 +224,20 @@ export default function WhoIsPentagonPage() {
               </p>
 
               <p>
-                The new single, &quot;Coward,&quot; is set for release on
-                September 11, 2026, at 6 PM KST. Reports describe the
-                comeback as arriving alongside PENTAGON&apos;s first tour in
-                three years. Since the single had not come out yet at the
-                time of this guide, we could not check the official music
-                video — we will add it here once it is live on the
-                group&apos;s channel.
+                The new single, &quot;Coward,&quot; (겁쟁이) was released on
+                September 11, 2026, at 6 PM KST, alongside PENTAGON&apos;s
+                first tour in three years.
+              </p>
+
+              <div className="mt-2">
+                <YouTubeEmbed
+                  youtubeId="ZEjlls0-4Ag"
+                  title="PENTAGON Coward Official MV"
+                />
+              </div>
+
+              <p className="text-sm leading-6 text-[var(--muted)]">
+                Official music video for &quot;Coward.&quot;
               </p>
 
               <p>
@@ -237,8 +245,7 @@ export default function WhoIsPentagonPage() {
                 PENTAGON&apos;s members yet, so this page is the starting
                 point for now. We plan to add more as the comeback and tour
                 continue, including a clearer read on the group&apos;s
-                company situation once official sources catch up, and the
-                music video once it is out.
+                company situation once official sources catch up.
               </p>
 
               <p>

@@ -48,6 +48,11 @@ const memberMetaOverrides: Record<
     description:
       "Meet IVE's Leeseo, often searched as “Lee Seo IVE.” Learn about IVE's maknae through fancams, ending fairy moments, stage growth, and Korean fan context.",
   },
+  "seventeen/mingyu": {
+    title: "Mingyu (SEVENTEEN) Fancam & Profile Guide | HAEMIL",
+    description:
+      "Get to know SEVENTEEN's Mingyu through fancams, stage moments, Korean fan context, and simple watch points in this friendly HAEMIL member guide.",
+  },
 };
 
 export function generateStaticParams() {

@@ -60,6 +60,9 @@ export const metadata: Metadata = {
   title: "Drama & Film | HAEMIL",
   description:
     "HAEMIL guides for understanding Korean dramas, films, city moods, everyday scenes, and the places or cultural details that make them feel familiar.",
+  alternates: {
+    canonical: "/dramas",
+  },
   openGraph: {
     title: "Drama & Film | HAEMIL",
     description:

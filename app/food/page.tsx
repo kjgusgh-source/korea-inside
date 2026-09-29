@@ -291,6 +291,9 @@ export const metadata: Metadata = {
   title: "Food in Korea | HAEMIL",
   description:
     "Simple HAEMIL food guides for understanding what to eat in Korea, where certain dishes feel local, and how to order without turning every meal into homework.",
+  alternates: {
+    canonical: "/food",
+  },
   openGraph: {
     title: "Food in Korea | HAEMIL",
     description:
