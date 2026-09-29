@@ -18,13 +18,13 @@ const refundStops = [
   },
   {
     label: "Larger balance",
-    detail: "A subway station T-money service desk",
-    note: "Handles partial refunds between 10,000 and 50,000 won",
+    detail: "A customer service center inside a subway station in the Seoul area",
+    note: "Regular balance refunds, plus partial refunds of 10,000–50,000 won",
   },
   {
     label: "Very large balance",
     detail: "T-money Town, T-money's own service center",
-    note: "Up to 500,000 won a day; ID check for 50,000 won or more",
+    note: "Up to 500,000 won a day. ID needed from 50,000 won; 100,000 won or more is paid by bank transfer the next day",
   },
 ];
 
@@ -32,14 +32,13 @@ const refundSteps = [
   "Check your remaining balance on the card reader at a subway gate, bus reader, or convenience store register.",
   "Go to a refund location that matches your balance — convenience store for a smaller amount, subway service desk or T-money Town for a larger one.",
   "Hand the physical card to the staff and say you want a T-money balance refund.",
-  "The refund fee is deducted automatically before you're paid.",
-  "Receive the remaining balance in cash (convenience stores and subway service desks) or by bank transfer (T-money Town, for larger amounts).",
-  "Ask whether the card itself is kept or handed back — this can vary by location, and either way the card's purchase price is not part of the refund.",
+  "Any refund fee is taken out of the balance automatically — you don't pay it separately.",
+  "At a convenience store, you get the balance back in cash on the spot. At T-money Town, refunds of 100,000 won or more go to a bank account the next day instead.",
+  "For a normal working card, you usually get the card back after the refund. T-money notes an exception for basic-type cards, which must be handed in to refund the balance. The card's purchase price isn't part of a normal balance refund.",
 ];
 
 const beforeYouLeaveTips = [
   "Don't load a large amount onto the card right before your last day — it's easier to spend it down than to refund it.",
-  "Check your balance before heading to the airport, since airport terminals are not a reliable place to refund a T-money card.",
   "Refund limits vary by location, so a convenience store that can't handle your balance doesn't mean no one can — try a subway service desk instead.",
   "Keep enough balance for your last subway or bus ride before you refund the rest, so you're not caught short at the gate.",
 ];
@@ -180,7 +179,7 @@ export default function HowToRefundATMoneyCardInKoreaPage() {
               Yes — in most cases, you can get the remaining balance on a
               physical T-money card back before you leave Korea. Where you
               should go mainly depends on how much money is left on the
-              card, and a small fee is taken out either way.
+              card, and there&apos;s usually a small fee.
             </p>
 
             <p className="mt-4 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
@@ -192,9 +191,9 @@ export default function HowToRefundATMoneyCardInKoreaPage() {
           </article>
 
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+            <h2 className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
               Where can you refund a T-money card?
-            </p>
+            </h2>
 
             <p className="mt-4 max-w-3xl text-base leading-7 text-[var(--muted)] md:text-lg">
               Think of it in three tiers, from smallest balance to largest.
@@ -223,9 +222,9 @@ export default function HowToRefundATMoneyCardInKoreaPage() {
           </section>
 
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+            <h2 className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
               How to refund your T-money balance
-            </p>
+            </h2>
 
             <ol className="mt-4 space-y-4 text-base leading-7 text-[var(--muted)] md:text-lg">
               {refundSteps.map((step, index) => (
@@ -240,19 +239,18 @@ export default function HowToRefundATMoneyCardInKoreaPage() {
           </section>
 
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+            <h2 className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
               How much is the refund fee?
-            </p>
+            </h2>
 
             <div className="mt-4 space-y-5 text-base leading-7 text-[var(--muted)] md:text-lg">
               <p>
-                For a standard physical T-money card, T-money&apos;s own fee
-                schedule sets a flat{" "}
-                <strong className="text-[var(--text)]">500 won</strong>{" "}
-                refund fee, whether you refund the whole balance or a
-                partial amount at a convenience store, a subway service
-                desk, or T-money Town. That fee is taken out of your balance
-                automatically — you don&apos;t pay it separately.
+                At a convenience store or a subway station customer service
+                center, the refund fee is{" "}
+                <strong className="text-[var(--text)]">500 won</strong>, and
+                it comes out of your balance automatically — you don&apos;t
+                pay it separately. T-money Town has its own fee schedule, so
+                check the current fee before you visit.
               </p>
               <p>
                 This fee is separate from the price you paid for the card
@@ -264,9 +262,9 @@ export default function HowToRefundATMoneyCardInKoreaPage() {
           </section>
 
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+            <h2 className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
               Can you refund at a convenience store?
-            </p>
+            </h2>
 
             <div className="mt-4 space-y-5 text-base leading-7 text-[var(--muted)] md:text-lg">
               <p>
@@ -291,18 +289,19 @@ export default function HowToRefundATMoneyCardInKoreaPage() {
           </section>
 
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+            <h2 className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
               What if you have more than the normal refund limit?
-            </p>
+            </h2>
 
             <div className="mt-4 space-y-5 text-base leading-7 text-[var(--muted)] md:text-lg">
               <p>
-                Once your balance is above what a convenience store can
-                handle, a subway station T-money service desk is the next
-                stop. Service desks (and T-money Town) are also the only
-                places that can do a partial refund — taking out a set
-                amount between 10,000 and 50,000 won, in 10,000 won steps,
-                rather than emptying the whole card.
+                Once your balance is more than a convenience store can
+                handle, head to a customer service center inside a subway
+                station in the Seoul metropolitan area. They handle regular
+                balance refunds, and they&apos;re also one of only two places
+                (T-money Town is the other) that offer partial refunds —
+                taking out a set amount between 10,000 and 50,000 won, in
+                10,000 won steps, instead of emptying the card.
               </p>
               <p>
                 If your balance is over 50,000 won, T-money&apos;s guidance
@@ -314,13 +313,24 @@ export default function HowToRefundATMoneyCardInKoreaPage() {
                 bank ATM route is generally more useful if you already have
                 a Korean bank account than for a short visit.
               </p>
+              <p>
+                One thing to know before you go: a refund of 100,000 won or
+                more at T-money Town isn&apos;t paid in cash on the spot. The
+                balance comes off your card that day, and the money is
+                transferred to a bank account after 6 p.m. the next business
+                day. You&apos;ll need to bring ID and a copy of your bankbook.
+              </p>
+              <p>
+                If you don&apos;t have a Korean bank account, check with
+                T-money before you visit so you know what will work for you.
+              </p>
             </div>
           </section>
 
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+            <h2 className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
               Do you get the price of the card back?
-            </p>
+            </h2>
 
             <p className="mt-4 max-w-3xl text-base leading-7 text-[var(--muted)] md:text-lg">
               No. A refund gives you back the remaining balance you loaded
@@ -331,18 +341,36 @@ export default function HowToRefundATMoneyCardInKoreaPage() {
         </section>
 
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+            <h2 className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
               What if your T-money card is damaged?
-            </p>
+            </h2>
 
             <div className="mt-4 space-y-5 text-base leading-7 text-[var(--muted)] md:text-lg">
               <p>
                 A card that no longer works is handled differently from a
-                normal working card. Instead of a quick counter refund,
-                T-money processes damaged cards through a separate
-                request — by mailing the card in with a refund form, by
-                submitting a photo of the cut-up card online, or in person
-                at T-money Town.
+                normal working card. There&apos;s no quick cash refund at a
+                convenience store counter — you file a refund request
+                instead, and in most cases the money goes to a bank account.
+              </p>
+              <p>
+                You can pick up a refund envelope at a subway station
+                customer service center in the Seoul area, or a mail-in
+                envelope at a participating convenience store. Either way,
+                the refund is paid to the bank account you write on the
+                envelope within 10 business days. Members of the T-money
+                Card &amp; Pay website can also upload photos of the front
+                and back of the card, before and after cutting it. That
+                refund usually arrives the next day (up to 5 business days
+                if it needs an extra check), but it never includes the
+                card&apos;s purchase price. You can also go to T-money Town
+                in person, where smaller refunds can be paid on the spot and
+                large ones (100,000 won or more) go to your bank account
+                after 6 p.m. the next day.
+              </p>
+              <p>
+                Since most of these routes pay into a bank account, it&apos;s
+                worth sorting out a broken card before your last day in
+                Korea.
               </p>
               <p>
                 The outcome also depends on why the card stopped working.
@@ -356,9 +384,9 @@ export default function HowToRefundATMoneyCardInKoreaPage() {
           </section>
 
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+            <h2 className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
               Before you leave Korea
-            </p>
+            </h2>
 
             <ul className="mt-4 space-y-3 text-base leading-7 text-[var(--muted)] md:text-lg">
               {beforeYouLeaveTips.map((tip) => (
