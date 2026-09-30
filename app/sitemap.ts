@@ -55,6 +55,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/travel/how-to-use-subway-lockers-in-seoul`,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/travel/naver-map-kakaomap-korea-travel-guide`,
       changeFrequency: "monthly",
       priority: 0.7,
