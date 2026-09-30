@@ -240,7 +240,7 @@ export default function WhatIsSundaeKoreanBloodSausagePage() {
                 Some shops serve sundae together with liver, lung, or other
                 offal pieces, and this is usually the part that catches
                 visitors off guard. At a market stall or an old-style shop, the
-                owner may ask whether you want it &quot;everything&quot;
+                owner may ask whether you want &quot;everything&quot;
                 included — meaning sundae plus those extra organ pieces on the
                 side. This is a real local preference question, not a test:
                 some people love the extra parts, plenty of others stick to
