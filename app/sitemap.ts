@@ -335,6 +335,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/dramas/what-is-a-chaebol`,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/lifestyle`,
       changeFrequency: "weekly",
       priority: 0.85,
