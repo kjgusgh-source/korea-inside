@@ -363,9 +363,9 @@ export default function WhatIsAChaebolPage() {
                 word — it is standard vocabulary in Korean news and
                 everyday conversation about the economy. When people bring
                 up &quot;Korea&apos;s top four chaebol&quot; or debate
-                chaebol reform, they mean the same handful of family-run
-                business groups a K-drama lead&apos;s family probably
-                belongs to.
+                chaebol reform, they are talking about real family-controlled
+                business groups — the same real-world idea that K-dramas
+                borrow for their fictional chaebol families.
               </p>
 
               <p>
