@@ -104,6 +104,13 @@ const relatedGuides = [
     href: "/food/how-to-eat-cup-ramyeon-at-a-korean-convenience-store",
   },
   {
+    label: "Food guide",
+    title: "Sundae blood sausage guide",
+    description:
+      "A local-friendly guide to Korea’s blood sausage street food, from tteokbokki sauce dips and bunsik shops to offal sides and regional styles.",
+    href: "/food/what-is-sundae-korean-blood-sausage",
+  },
+  {
     label: "Food",
     title: "Open the Food hub",
     description:
