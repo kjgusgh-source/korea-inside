@@ -27,6 +27,21 @@ export type MediaItem = {
 
 export const MEDIA_ITEMS: MediaItem[] = [
   {
+    id: "lisa-sawadika-official-mv",
+    title: 'LISA "SaWaDiKa" (Official Music Video)',
+    category: "kpop",
+    categoryLabel: "K-pop Spotlight",
+    mediaType: "youtube",
+    description:
+      "The official music video for LISA's solo single \"SaWaDiKa,\" the lead single from her upcoming EP \"PRESS PLAY,\" released September 3, 2026 U.S. time (September 4 in Korea).",
+    cultureNote:
+      "The video was directed by Bang Jae Yeob and filmed across Bangkok, in LISA's home country of Thailand.",
+    tags: ["BLACKPINK", "LISA", "SaWaDiKa", "Official MV", "LLOUD"],
+    youtubeId: "FyS5dAywkEo",
+    sourceLabel: "Official \"SaWaDiKa\" music video — LLOUD Official",
+    guideHref: "/kpop/lisa",
+  },
+  {
     id: "jisoo-click-official-mv",
     title: 'JISOO "CLICK" (Official MV)',
     category: "kpop",
