@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "../components/SiteHeader";
 import HomeHero from "../components/HomeHero";
@@ -9,6 +10,22 @@ import BackToTopButton from "../components/BackToTopButton";
 import SectionReveal from "../components/SectionReveal";
 import LightRays from "../components/LightRays";
 import { getAllPosts } from "../lib/posts";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: "HAEMIL",
+    title: "HAEMIL — Korean culture, K-pop, food, travel, and local stories",
+    description:
+      "Beautiful Korean stories, told by a local friend. Discover K-pop idols, Korean fan culture, food, travel, language, and everyday moments from inside Korea.",
+    locale: "en_US",
+    images: ["/brand/haemil-og.png"],
+  },
+};
 
 export default function Home() {
   const posts = getAllPosts();
