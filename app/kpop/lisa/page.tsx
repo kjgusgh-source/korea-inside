@@ -11,10 +11,10 @@ const pageUrl = `${siteUrl}/kpop/lisa`;
 const pageTitle =
   "LISA Profile: BLACKPINK, Her Label LLOUD, and the Single \"SaWaDiKa\"";
 const pageDescription =
-  "A friendly HAEMIL profile of LISA, BLACKPINK's member, her own label LLOUD, and \"SaWaDiKa,\" the lead single from her upcoming EP \"PRESS PLAY.\"";
+  "A friendly HAEMIL profile of LISA from BLACKPINK, covering her own label LLOUD and \"SaWaDiKa,\" the lead single from her upcoming EP \"PRESS PLAY.\"";
 
 const intro =
-  "LISA is one of the four members of BLACKPINK, and like her groupmates JENNIE and JISOO, she now runs her solo work through a label of her own, LLOUD Co. On September 3, 2026, she released “SaWaDiKa,” a solo single distributed worldwide through RCA Records. It is also the first song out from PRESS PLAY, her upcoming EP due on October 23, 2026. This page covers what “SaWaDiKa” is, how it fits into a bigger pattern in BLACKPINK's solo era right now, and where to watch the official video.";
+  "LISA is one of the four members of BLACKPINK, and like her groupmates JENNIE and JISOO, she runs her solo work through a company of her own, LLOUD Co. She released “SaWaDiKa” on September 3, 2026 U.S. time (September 4 in Korea), through LLOUD Co. and RCA Records. It is also the first song out from PRESS PLAY, her upcoming EP due on October 23, 2026. This page covers what “SaWaDiKa” is, how it fits into a bigger pattern in BLACKPINK's solo era right now, and where to watch the official video.";
 
 const profileFacts = [
   { label: "Stage name", value: "LISA" },
@@ -27,7 +27,7 @@ const profileFacts = [
   },
   {
     label: "Latest single",
-    value: "“SaWaDiKa” — released September 3, 2026",
+    value: "“SaWaDiKa” — released September 3, 2026 (U.S. time)",
   },
   {
     label: "Upcoming EP",
@@ -38,7 +38,7 @@ const profileFacts = [
 const soloTimeline = [
   {
     year: "2026",
-    text: "Releases the solo single “SaWaDiKa” on September 3, distributed worldwide through RCA Records under her own label, LLOUD Co.",
+    text: "Releases the solo single “SaWaDiKa” on September 3 (U.S. time; September 4 in Korea) through her own label, LLOUD Co., and RCA Records.",
   },
   {
     year: "2026",
@@ -49,11 +49,11 @@ const soloTimeline = [
 const singleFacts = [
   {
     label: "Release",
-    value: "Thursday, September 3, 2026 (digital single)",
+    value: "September 3, 2026, 5 PM PT / 8 PM ET — September 4 in Korea (digital single)",
   },
   {
-    label: "Label / Distribution",
-    value: "LLOUD Co., distributed worldwide through RCA Records",
+    label: "Label",
+    value: "LLOUD Co. / RCA Records",
   },
   {
     label: "Part of",
@@ -61,15 +61,15 @@ const singleFacts = [
   },
   {
     label: "Music video",
-    value: "Directed by Bang Jae Yeob, filmed in Bangkok",
+    value: "Directed by Bang Jae Yeob, filmed across Bangkok, Thailand",
   },
 ];
 
 const whyPeopleCare = [
   "“SaWaDiKa” is not really a stand-alone single — it's the first song out from PRESS PLAY, the EP LISA has set for October 23. That gives it a different job than most single releases: it's an opening chapter, not the whole story.",
-  "LISA now puts her music out through her own label, LLOUD Co., with RCA Records handling distribution outside Korea. That's the same kind of setup JENNIE built with Odd Atelier and JISOO built with Blissoo, which makes LISA the third of BLACKPINK's four members running her solo career this way. If you assumed BLACKPINK's solo releases all still went through one shared company, this is the update: each member now has her own label behind her own music.",
-  "The official video was directed by Bang Jae Yeob and filmed in Bangkok, described in coverage of the release as LISA's hometown. Her videos have often leaned on elaborate sets, so shooting somewhere personal like this changes how the song is being presented.",
-  "September turned into a busy month for BLACKPINK's individual releases — JISOO put out “CLICK” just one day after “SaWaDiKa.” If you are new to the group, that's worth knowing: even when BLACKPINK is not promoting together, its four members are often still releasing music, just on their own separate schedules.",
+  "LISA puts her music out through her own label, LLOUD Co., working with RCA Records on this release. LISA, JENNIE, and JISOO each run their solo activities through companies of their own — LLOUD, Odd Atelier, and Blissoo. If you assumed BLACKPINK's solo releases all still went through one shared company, that's the part that has changed.",
+  "The official video was directed by Bang Jae Yeob and filmed across Bangkok, in her home country of Thailand. Her videos have often leaned on elaborate sets, so shooting around a real city like this changes how the song is being presented.",
+  "September turned into a busy month for BLACKPINK's individual releases — JISOO's “CLICK” arrived in the same release week as “SaWaDiKa.” If you are new to the group, that's worth knowing: even when BLACKPINK is not promoting together, its four members are often still releasing music, just on their own separate schedules.",
 ];
 
 const relatedGuides = [
@@ -91,7 +91,7 @@ const relatedGuides = [
     label: "BLACKPINK member profile",
     title: "Meet JENNIE, another BLACKPINK member with her own label",
     description:
-      "JENNIE built her own label, Odd Atelier, before LISA started LLOUD — this profile covers her solo run and 2026 EP Fallen Angel.",
+      "JENNIE runs her solo work through her own label, Odd Atelier — this profile covers her solo run and 2026 EP Fallen Angel.",
     href: "/kpop/jennie",
   },
   {
@@ -115,6 +115,8 @@ export const metadata: Metadata = {
     url: pageUrl,
     siteName: "HAEMIL",
     type: "article",
+    locale: "en_US",
+    images: ["/brand/haemil-og.png"],
   },
   twitter: {
     card: "summary_large_image",
@@ -321,24 +323,22 @@ export default function LisaProfilePage() {
 
               <p>
                 The way LISA is putting the song out also says something
-                about how BLACKPINK's solo careers have developed. She
-                releases “SaWaDiKa” through her own label, LLOUD Co., with
-                RCA Records distributing it worldwide. JENNIE has Odd
-                Atelier and JISOO has Blissoo, so LISA becomes the third of
-                BLACKPINK's four members to run her solo music through a
-                company of her own rather than through one label shared by
-                the whole group. If your picture of BLACKPINK's solo era is
+                about how BLACKPINK&apos;s solo careers have developed. She
+                released “SaWaDiKa” through her own label, LLOUD Co.,
+                together with RCA Records. LISA, JENNIE, and JISOO each run
+                their solo activities through companies of their own —
+                LLOUD, Odd Atelier, and Blissoo — rather than through one
+                label shared by the whole group. If your picture of BLACKPINK&apos;s solo era is
                 still “one agency handles everyone,” this is the part that
                 has changed.
               </p>
 
               <p>
                 The official music video was directed by Bang Jae Yeob and
-                filmed in Bangkok — described in coverage of the release as
-                LISA's hometown. For an artist whose videos have often been
-                built around big, constructed sets, filming somewhere with
-                that kind of personal tie is a smaller detail worth
-                noticing, since it puts a different frame around a song that
+                filmed across Bangkok, in her home country of Thailand. For
+                an artist whose videos have often been built around big,
+                constructed sets, filming around a city in her home country
+                is a smaller detail worth noticing, since it puts a different frame around a song that
                 could otherwise read as just another single rollout.
               </p>
             </div>
