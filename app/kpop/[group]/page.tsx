@@ -39,6 +39,8 @@ export async function generateMetadata({ params }: PageProps) {
       url: `https://haemilkorea.com/kpop/${group.id}`,
       siteName: "HAEMIL",
       type: "website",
+      locale: "en_US",
+      images: ["/brand/haemil-og.png"],
     },
   };
 }
