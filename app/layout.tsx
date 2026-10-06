@@ -37,12 +37,8 @@ export const metadata: Metadata = {
   authors: [{ name: "HAEMIL" }],
   creator: "HAEMIL",
   publisher: "HAEMIL",
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     type: "website",
-    url: "/",
     siteName: "HAEMIL",
     title: "HAEMIL — Korean culture, K-pop, food, travel, and local stories",
     description:

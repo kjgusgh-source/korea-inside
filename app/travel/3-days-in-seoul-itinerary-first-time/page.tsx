@@ -9,7 +9,7 @@ const pageUrl = `${siteUrl}/travel/3-days-in-seoul-itinerary-first-time`;
 const pageTitle =
   "3 Days in Seoul Itinerary for First-Time Visitors: A Local-Friendly Route";
 const pageDescription =
-  "A practical HAEMIL 3-day Seoul itinerary for first-time visitors, covering Myeongdong, Namsan, palaces, Insadong, Hongdae, Gangnam, subway tips, and honest trade-offs.";
+  "A practical HAEMIL 3-day Seoul itinerary for first-time visitors: Myeongdong, Namsan, palaces, Insadong, Hongdae, Gangnam, subway tips, honest trade-offs.";
 
 const quickAnswer = [
   "Best base for this itinerary: Myeongdong, Euljiro, Jongno, or Hongdae",

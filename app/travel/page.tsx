@@ -136,6 +136,16 @@ const STANDALONE_TRAVEL_GUIDES = [
     readingTime: "7 min read",
   },
   {
+    id: "how-to-refund-a-t-money-card-in-korea",
+    category: "travel",
+    categoryLabel: "Travel guide",
+    title: "How to Refund a T-money Card in Korea",
+    description:
+      "Where to get your remaining T-money balance back before you leave — convenience stores, subway service desks, T-money Town, refund fees, and limits.",
+    href: "/travel/how-to-refund-a-t-money-card-in-korea",
+    readingTime: "6 min read",
+  },
+  {
     id: "do-i-need-to-tap-out-on-korean-buses",
     category: "travel",
     categoryLabel: "Travel guide",
@@ -144,6 +154,16 @@ const STANDALONE_TRAVEL_GUIDES = [
       "A quick, practical answer on when to tap your transit card on Korean buses, why the exit tap affects fares and transfers, and what happens if you forget.",
     href: "/travel/do-i-need-to-tap-out-on-korean-buses",
     readingTime: "4 min read",
+  },
+  {
+    id: "how-to-use-subway-lockers-in-seoul",
+    category: "travel",
+    categoryLabel: "Travel guide",
+    title: "How to Use Subway Lockers in Seoul",
+    description:
+      "Where to find T-Locker, how much it costs, what size to pick, and what first-time visitors should know before storing a bag between check-in and check-out.",
+    href: "/travel/how-to-use-subway-lockers-in-seoul",
+    readingTime: "6 min read",
   },
   {
     id: "naver-map-kakaomap-korea-travel-guide",
@@ -251,6 +271,9 @@ export const metadata: Metadata = {
   title: "Travel in Korea | HAEMIL",
   description:
     "Map-friendly HAEMIL guides for exploring Korea through neighborhoods, food, local routes, and small details that make a trip easier to understand.",
+  alternates: {
+    canonical: "/travel",
+  },
   openGraph: {
     title: "Travel in Korea | HAEMIL",
     description:

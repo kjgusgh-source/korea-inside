@@ -54,12 +54,26 @@ const STANDALONE_DRAMA_GUIDES = [
     href: "/dramas/what-is-makjang",
     readingTime: "6 min read",
   },
+  {
+    id: "what-is-a-chaebol",
+    category: "dramas",
+    categoryLabel: "K-drama guide",
+    title:
+      "What Is a Chaebol? The K-Drama Word Behind So Many Rich Family Romances, Explained",
+    description:
+      "A friendly guide to chaebol (재벌), the real Korean business term behind many of K-drama's rich-family romances, from King the Land and Crash Landing on You to Queen of Tears, and how it differs from a Western conglomerate.",
+    href: "/dramas/what-is-a-chaebol",
+    readingTime: "7 min read",
+  },
 ];
 
 export const metadata: Metadata = {
   title: "Drama & Film | HAEMIL",
   description:
     "HAEMIL guides for understanding Korean dramas, films, city moods, everyday scenes, and the places or cultural details that make them feel familiar.",
+  alternates: {
+    canonical: "/dramas",
+  },
   openGraph: {
     title: "Drama & Film | HAEMIL",
     description:

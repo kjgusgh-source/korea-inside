@@ -30,6 +30,18 @@ export async function generateMetadata({ params }: PageProps) {
   return {
     title: `${group.name} | HAEMIL`,
     description: `${group.name} fancams, members, stage moments, and the Korean culture around them.`,
+    alternates: {
+      canonical: `/kpop/${group.id}`,
+    },
+    openGraph: {
+      title: `${group.name} | HAEMIL`,
+      description: `${group.name} fancams, members, stage moments, and the Korean culture around them.`,
+      url: `https://haemilkorea.com/kpop/${group.id}`,
+      siteName: "HAEMIL",
+      type: "website",
+      locale: "en_US",
+      images: ["/brand/haemil-og.png"],
+    },
   };
 }
 
