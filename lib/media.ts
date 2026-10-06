@@ -38,7 +38,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
       "The video was directed by Bang Jae Yeob and filmed across Bangkok, in LISA's home country of Thailand.",
     tags: ["BLACKPINK", "LISA", "SaWaDiKa", "Official MV", "LLOUD"],
     youtubeId: "FyS5dAywkEo",
-    sourceLabel: "Official \"SaWaDiKa\" music video — LISA's official YouTube channel (LISAOfficialVEVO)",
+    sourceLabel: "Official \"SaWaDiKa\" music video — LLOUD Official",
     guideHref: "/kpop/lisa",
   },
   {
