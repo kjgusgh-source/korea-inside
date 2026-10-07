@@ -208,7 +208,7 @@ export default function WhatIsBuldakPage() {
                   height={heroImage.height}
                   priority
                   sizes="(max-width: 768px) 100vw, 448px"
-                  className="h-auto w-full"
+                  className="h-auto w-full lg:h-[360px] lg:object-cover lg:object-[center_25%] xl:h-[330px]"
                 />
               </div>
               <figcaption className="mx-auto max-w-md px-2 pb-1 pt-3 text-xs leading-5 text-[var(--muted)] md:px-3">
