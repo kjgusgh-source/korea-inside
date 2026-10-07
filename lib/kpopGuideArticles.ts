@@ -7,6 +7,13 @@ export type KpopGuideArticle = {
   
   export const kpopGuideArticles: KpopGuideArticle[] = [
   {
+    title: "Who Is MONSTA X? Members, Music, and Their 2026 Comeback",
+    description:
+      "A friendly HAEMIL guide to MONSTA X: the six current members, their 2015 debut and 11th anniversary, and the 2026 EP The Phase led by \"MAGIC.\"",
+    href: "/kpop/who-is-monsta-x",
+    label: "Boy group guide",
+  },
+  {
     title: "Who Is PENTAGON? A Friendly Guide to Their 10th Anniversary Comeback",
     description:
       "A friendly HAEMIL guide to PENTAGON's 10th anniversary comeback, the new single 'Coward,' their seven-member lineup, and what has changed since their debut.",
