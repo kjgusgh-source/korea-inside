@@ -6,6 +6,16 @@ import { getPostsByCategory } from "../../lib/posts";
 
 const STANDALONE_FOOD_GUIDES = [
   {
+    id: "what-is-buldak",
+    category: "food",
+    categoryLabel: "Food guide",
+    title: "What Is Buldak?",
+    description:
+      "A friendly guide to Korea's famous spicy stir-fried noodles, from the original flavor to the Fire Noodle Challenge.",
+    href: "/food/what-is-buldak",
+    readingTime: "7 min read",
+  },
+  {
     id: "what-is-dujjonku-dubai-chewy-cookie",
     category: "food",
     categoryLabel: "Food guide",

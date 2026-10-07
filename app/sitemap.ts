@@ -10,6 +10,11 @@ const baseUrl = "https://haemilkorea.com";
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     {
+      url: `${baseUrl}/food/what-is-buldak`,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/food/what-is-dujjonku-dubai-chewy-cookie`,
       changeFrequency: "monthly",
       priority: 0.7,
