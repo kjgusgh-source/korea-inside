@@ -245,6 +245,15 @@ export default function JjimjilbangGuidePage() {
                   guide as the common pattern, not a promise of what every
                   single place looks like.
                 </p>
+
+                <p>
+                  To me, a jjimjilbang is less about doing an activity and
+                  more about warming up and letting your body relax when you
+                  feel tired. It can be social, too. From a local
+                  perspective, it works as a casual date spot for couples, or
+                  as a place where friends spend a few hours bathing, eating,
+                  talking, and resting together.
+                </p>
               </div>
 
               <div className="space-y-4">
@@ -293,10 +302,25 @@ export default function JjimjilbangGuidePage() {
                 </ol>
 
                 <p>
-                  Some places hand you the clothes at the front desk, some keep
-                  them in the changing room, and key systems differ too. If
-                  something is unclear, it is completely fine to ask the staff
-                  or simply watch what the person ahead of you does.
+                  Some places hand you the clothes at the front desk, and some
+                  keep them in the changing room.
+                </p>
+
+                <p>
+                  In my experience, the entry system really does differ quite a
+                  bit from place to place. Some have a kiosk where you pay
+                  yourself, and at others you pay a staff member at the
+                  counter. At some places, the same key opens both your shoe
+                  locker and your clothes locker; at others, you hand in your
+                  shoe locker key and get a separate locker key instead. If the
+                  system confuses you, the easiest thing is to ask the staff on
+                  the men&apos;s or women&apos;s side.
+                </p>
+
+                <p>
+                  Many bathhouses also sell basic toiletries such as
+                  toothbrushes, toothpaste, shampoo, and other bath items, but
+                  what is available varies by place.
                 </p>
               </div>
 
@@ -388,9 +412,14 @@ export default function JjimjilbangGuidePage() {
                   bar or small restaurant, and two snacks come up again and
                   again: baked eggs, often called sauna eggs, and sikhye (식혜),
                   a sweet, chilled rice drink. VisitKorea calls that pairing a
-                  classic. Depending on the place, you may also find simple
-                  meals, cup noodles, or ice cream — but not every facility
-                  offers the same menu.
+                  classic. Cup noodles are common too, and depending on the
+                  place you may also find simple meals or ice cream — but not
+                  every facility offers the same menu.
+                </p>
+
+                <p>
+                  Personally, if the jjimjilbang has a proper restaurant, I
+                  usually go for miyeokguk (미역국), a seaweed soup.
                 </p>
 
                 <p>
@@ -412,6 +441,24 @@ export default function JjimjilbangGuidePage() {
                   is open through the night, and rules for longer stays differ.
                   Sleeping in a shared lounge also means lights, footsteps, and
                   other people around you.
+                </p>
+
+                <p>
+                  From my own experience, some larger jjimjilbangs in the Seoul
+                  area have separate sleeping rooms for men and women, or small
+                  cave-like spaces you can crawl into. Actually sleeping there
+                  is possible and can be fine, but it is still a shared space,
+                  so it can get fairly noisy with people snoring or moving
+                  around. For travelers, the bigger issue may be luggage: a
+                  large suitcase may not fit in the lockers, so it is worth
+                  using{" "}
+                  <Link
+                    href="/travel/luggage-storage-in-seoul-first-time"
+                    className={linkClass}
+                  >
+                    separate luggage storage
+                  </Link>{" "}
+                  or asking at the front desk whether they can keep it for you.
                 </p>
 
                 <p>
@@ -495,12 +542,11 @@ export default function JjimjilbangGuidePage() {
                   A local note from HAEMIL
                 </p>
                 <p className="mt-3 text-sm leading-6 text-[var(--muted)] md:text-base">
-                  The first few minutes are usually the most confusing part —
-                  finding your locker and figuring out where to change. After
-                  that, a jjimjilbang is mostly a slow, quiet place to warm up
-                  and rest. Nobody expects a first-timer to know every rule, so
-                  go slowly, follow the signs, and copy what the people around
-                  you are doing.
+                  You do not need a big plan for a jjimjilbang. When your body
+                  feels tired, washing in hot water and then resting in a warm
+                  room is a good experience on its own. Nobody expects a
+                  first-timer to know every rule, so go slowly, follow the
+                  signs, and copy what the people around you are doing.
                 </p>
               </div>
             </div>
