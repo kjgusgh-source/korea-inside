@@ -265,6 +265,16 @@ const STANDALONE_TRAVEL_GUIDES = [
     href: "/travel/korea-autumn-foliage-guide",
     readingTime: "7 min read",
   },
+  {
+    id: "jjimjilbang-korean-bathhouse-guide-first-time",
+    category: "travel",
+    categoryLabel: "Travel guide",
+    title: "Jjimjilbang Guide",
+    description:
+      "A first-time guide to Korean bathhouses, from the bath area and jjimjil clothes to etiquette, food, rest spaces, and facility rules.",
+    href: "/travel/jjimjilbang-korean-bathhouse-guide-first-time",
+    readingTime: "7 min read",
+  },
 ];
 
 export const metadata: Metadata = {

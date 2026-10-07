@@ -170,6 +170,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/travel/jjimjilbang-korean-bathhouse-guide-first-time`,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/food`,
       changeFrequency: "weekly",
       priority: 0.85,
