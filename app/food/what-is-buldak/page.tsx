@@ -198,7 +198,7 @@ export default function WhatIsBuldakPage() {
             </p>
           </article>
 
-          <figure className="mt-8 overflow-hidden rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-3 shadow-lg shadow-[var(--shadow)] md:p-4">
+          <figure className="mx-auto mt-8 w-full max-w-lg overflow-hidden rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-3 shadow-lg shadow-[var(--shadow)] md:p-4">
             <div className="mx-auto w-full max-w-md overflow-hidden rounded-[1.5rem]">
               <Image
                 src={heroImage.src}
