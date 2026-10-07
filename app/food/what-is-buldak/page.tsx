@@ -172,49 +172,51 @@ export default function WhatIsBuldakPage() {
         <section className="mx-auto max-w-6xl px-5 py-6 md:px-8">
           <SiteHeader />
 
-          <article className="mt-8 rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-10">
-            <Link
-              href="/food"
-              className="mb-6 inline-flex text-sm font-semibold text-[var(--accent)]"
-            >
-              ← Back to Food
-            </Link>
+          <div className="mt-8 grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(320px,420px)] lg:items-start">
+            <article className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-10">
+              <Link
+                href="/food"
+                className="mb-6 inline-flex text-sm font-semibold text-[var(--accent)]"
+              >
+                ← Back to Food
+              </Link>
 
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
-              Food guide
-            </p>
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+                Food guide
+              </p>
 
-            <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
-              What Is Buldak?
-            </h1>
+              <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
+                What Is Buldak?
+              </h1>
 
-            <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
-              If you have watched people online fanning their mouths over a
-              plate of red noodles, there is a good chance it was Buldak. In
-              Korea, it is a spicy stir-fried ramyeon brand from Samyang Foods
-              that sits on convenience store shelves next to everything else
-              — familiar, easy to grab, and a lot hotter than the average
-              instant noodle.
-            </p>
-          </article>
+              <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
+                If you have watched people online fanning their mouths over a
+                plate of red noodles, there is a good chance it was Buldak. In
+                Korea, it is a spicy stir-fried ramyeon brand from Samyang Foods
+                that sits on convenience store shelves next to everything else
+                — familiar, easy to grab, and a lot hotter than the average
+                instant noodle.
+              </p>
+            </article>
 
-          <figure className="mx-auto mt-8 w-full max-w-lg overflow-hidden rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-3 shadow-lg shadow-[var(--shadow)] md:p-4">
-            <div className="mx-auto w-full max-w-md overflow-hidden rounded-[1.5rem]">
-              <Image
-                src={heroImage.src}
-                alt={heroImage.alt}
-                width={heroImage.width}
-                height={heroImage.height}
-                priority
-                sizes="(max-width: 768px) 100vw, 448px"
-                className="h-auto w-full"
-              />
-            </div>
-            <figcaption className="mx-auto max-w-md px-2 pb-1 pt-3 text-xs leading-5 text-[var(--muted)] md:px-3">
-              <span>{heroImage.caption}</span>
-              <span> · {heroImage.license}</span>
-            </figcaption>
-          </figure>
+            <figure className="w-full overflow-hidden rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-3 shadow-lg shadow-[var(--shadow)] md:p-4">
+              <div className="mx-auto w-full max-w-md overflow-hidden rounded-[1.5rem]">
+                <Image
+                  src={heroImage.src}
+                  alt={heroImage.alt}
+                  width={heroImage.width}
+                  height={heroImage.height}
+                  priority
+                  sizes="(max-width: 768px) 100vw, 448px"
+                  className="h-auto w-full"
+                />
+              </div>
+              <figcaption className="mx-auto max-w-md px-2 pb-1 pt-3 text-xs leading-5 text-[var(--muted)] md:px-3">
+                <span>{heroImage.caption}</span>
+                <span> · {heroImage.license}</span>
+              </figcaption>
+            </figure>
+          </div>
 
           <section className="mt-10 rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
