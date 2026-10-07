@@ -4,6 +4,7 @@ import SiteHeader from "../../../components/SiteHeader";
 import { getKpopGroupById, getKpopGroups } from "../../../lib/kpopData";
 import { getKpopGuideArticles } from "../../../lib/kpopGuideArticles";
 import { iveGroupHub } from "../../../lib/iveGroupHub";
+import { publishedMemberIds } from "../../../lib/publishedGuides";
 
 type PageProps = {
   params: Promise<{
@@ -130,25 +131,49 @@ export default async function KpopGroupPage({ params }: PageProps) {
           </div>
 
           <div className="grid gap-5 md:grid-cols-3">
-            {group.members.map((member) => (
-              <Link
-                key={member.id}
-                href={`/kpop/${group.id}/${member.id}`}
-                className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface)] p-5 transition hover:-translate-y-1 hover:shadow-lg hover:shadow-[var(--shadow)]"
-              >
-                <p className="text-xl font-semibold text-[var(--text)]">
-                  {member.name}
-                </p>
+            {group.members.map((member) => {
+              const isPublished = publishedMemberIds.some(
+                (entry) =>
+                  entry.groupId === group.id && entry.memberId === member.id
+              );
 
-                <p className="mt-3 text-sm leading-6 text-[var(--muted)]">
-                  {member.note}
-                </p>
+              if (!isPublished) {
+                return (
+                  <div
+                    key={member.id}
+                    className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface)] p-5"
+                  >
+                    <p className="text-xl font-semibold text-[var(--text)]">
+                      {member.name}
+                    </p>
 
-                <p className="mt-5 text-sm font-semibold text-[var(--accent)]">
-                  Open member page →
-                </p>
-              </Link>
-            ))}
+                    <p className="mt-3 text-sm leading-6 text-[var(--muted)]">
+                      Member
+                    </p>
+                  </div>
+                );
+              }
+
+              return (
+                <Link
+                  key={member.id}
+                  href={`/kpop/${group.id}/${member.id}`}
+                  className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface)] p-5 transition hover:-translate-y-1 hover:shadow-lg hover:shadow-[var(--shadow)]"
+                >
+                  <p className="text-xl font-semibold text-[var(--text)]">
+                    {member.name}
+                  </p>
+
+                  <p className="mt-3 text-sm leading-6 text-[var(--muted)]">
+                    {member.note}
+                  </p>
+
+                  <p className="mt-5 text-sm font-semibold text-[var(--accent)]">
+                    Open member page →
+                  </p>
+                </Link>
+              );
+            })}
           </div>
         </section>
 
