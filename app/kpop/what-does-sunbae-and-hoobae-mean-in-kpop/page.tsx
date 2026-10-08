@@ -105,7 +105,7 @@ export default function SunbaeHoobaePage() {
               </p>
             </header>
 
-            <div className="mx-auto max-w-3xl space-y-11 px-6 py-9 text-base leading-8 md:px-8 md:py-12 md:text-lg md:leading-9">
+            <div className="mx-auto max-w-3xl space-y-11 px-6 py-9 text-base leading-8 md:mx-0 md:max-w-[62rem] md:px-12 md:py-12 md:text-lg md:leading-9">
               <section aria-label="Quick answer" className="space-y-5">
                 <p>
                   If you watch K-pop interviews or variety shows, you have probably heard an
@@ -161,8 +161,16 @@ export default function SunbaeHoobaePage() {
               <section id="age" className="space-y-4 scroll-mt-24">
                 <h2 className="text-2xl font-semibold leading-tight md:text-3xl">Can someone younger be your sunbae?</h2>
                 <p>
-                  Yes. Imagine joining a university club at 22 when a 20-year-old has already
-                  been a member for a year. In that club, the younger person is your sunbae.
+                  Yes. Imagine you join a university club at 22. Another member is 20, but
+                  they joined the club a year before you.
+                </p>
+                <p>
+                  Even though they’re younger than you, they’re your sunbae in that club
+                  because they joined earlier and have been a member longer.
+                </p>
+                <p>
+                  Being a sunbae in this situation is about how long you’ve been part of the
+                  club, not how old you are.
                 </p>
                 <p>
                   Age still matters in Korean social situations. It is just not the same thing
