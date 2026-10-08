@@ -7,6 +7,13 @@ export type KpopGuideArticle = {
   
   export const kpopGuideArticles: KpopGuideArticle[] = [
   {
+    title: "Sunbae vs Hoobae: What These Korean Words Really Mean",
+    description:
+      "What do sunbae and hoobae mean in Korean? A local explains seniority through school, work, military life, and K-pop — and why age isn't the whole story.",
+    href: "/kpop/what-does-sunbae-and-hoobae-mean-in-kpop",
+    label: "K-pop culture guide",
+  },
+  {
     title: "Who Is MONSTA X? Members, Music, and Their 2026 Comeback",
     description:
       "A friendly HAEMIL guide to MONSTA X: the six current members, their 2015 debut and 11th anniversary, and the 2026 EP The Phase led by \"MAGIC.\"",
