@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import type { KpopGroup, KpopGroupCategory } from "../lib/kpopData";
 import type { KpopSoloArtist } from "../lib/kpopSoloArtists";
+import { publishedMemberIds } from "../lib/publishedGuides";
 
 type KpopExplorerProps = {
   groups: KpopGroup[];
@@ -151,23 +152,47 @@ export default function KpopExplorer({ groups, soloArtists }: KpopExplorerProps)
                             </Link>
 
                             <div className="grid gap-3 md:grid-cols-3">
-                              {group.members.map((member) => (
-                                <Link
-                                  key={member.id}
-                                  href={`/kpop/${group.id}/${member.id}`}
-                                  className="rounded-[1rem] border border-[var(--border)] bg-[var(--card)] p-4 transition hover:-translate-y-0.5 hover:border-[var(--accent)] hover:shadow-md"
-                                >
-                                  <p className="font-semibold text-[var(--text)]">
-                                    {member.name}
-                                  </p>
-                                  <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
-                                    {member.note}
-                                  </p>
-                                  <p className="mt-4 text-xs font-semibold text-[var(--accent)]">
-                                    Open member page →
-                                  </p>
-                                </Link>
-                              ))}
+                              {group.members.map((member) => {
+                                const isPublished = publishedMemberIds.some(
+                                  (entry) =>
+                                    entry.groupId === group.id &&
+                                    entry.memberId === member.id
+                                );
+
+                                if (!isPublished) {
+                                  return (
+                                    <div
+                                      key={member.id}
+                                      className="rounded-[1rem] border border-[var(--border)] bg-[var(--card)] p-4"
+                                    >
+                                      <p className="font-semibold text-[var(--text)]">
+                                        {member.name}
+                                      </p>
+                                      <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
+                                        Member
+                                      </p>
+                                    </div>
+                                  );
+                                }
+
+                                return (
+                                  <Link
+                                    key={member.id}
+                                    href={`/kpop/${group.id}/${member.id}`}
+                                    className="rounded-[1rem] border border-[var(--border)] bg-[var(--card)] p-4 transition hover:-translate-y-0.5 hover:border-[var(--accent)] hover:shadow-md"
+                                  >
+                                    <p className="font-semibold text-[var(--text)]">
+                                      {member.name}
+                                    </p>
+                                    <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
+                                      {member.note}
+                                    </p>
+                                    <p className="mt-4 text-xs font-semibold text-[var(--accent)]">
+                                      Open member page →
+                                    </p>
+                                  </Link>
+                                );
+                              })}
                             </div>
                           </div>
                         )}

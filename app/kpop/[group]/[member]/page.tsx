@@ -8,6 +8,7 @@ import {
   getKpopMemberById,
 } from "../../../../lib/kpopData";
 import { getMediaItems } from "../../../../lib/media";
+import { publishedMemberIds } from "../../../../lib/publishedGuides";
 import MoreKpopGuides from "../../../../components/MoreKpopGuides";
 import RelatedKpopGuideLinks from "../../../../components/RelatedKpopGuideLinks";
 import JsonLd from "../../../../components/JsonLd";
@@ -79,6 +80,12 @@ export async function generateMetadata({
 
   const override = memberMetaOverrides[`${groupId}/${memberId}`];
 
+  // Member pages not listed in publishedMemberIds are unfinished stubs:
+  // keep the URL reachable but out of the search index until published.
+  const isPublished = publishedMemberIds.some(
+    (entry) => entry.groupId === group.id && entry.memberId === member.id
+  );
+
   const title =
     override?.title ??
     `${member.name} ${group.name} Guide | Fancam, Stage Charm & Korean Fan Words`;
@@ -93,6 +100,18 @@ export async function generateMetadata({
     alternates: {
       canonical: `/kpop/${group.id}/${member.id}`,
     },
+    ...(isPublished
+      ? {}
+      : {
+          robots: {
+            index: false,
+            follow: true,
+            googleBot: {
+              index: false,
+              follow: true,
+            },
+          },
+        }),
     openGraph: {
       title,
       description,
