@@ -139,3 +139,120 @@ test('source paths with dot segments or backslashes are rejected', () => {
 test('source hashes are deterministic for NFC Unicode', () => {
   assert.equal(sourceHash('e\u0301'), sourceHash('\u00e9'));
 });
+
+// ---------------------------------------------------------------------------
+// Review round 2: tokenizer bypasses, attribute integrity, nesting, paths.
+// ---------------------------------------------------------------------------
+const richEnglish = {
+  schemaVersion: 1,
+  sourceLocale: 'en',
+  sourcePath: '/food/what-is-tteokbokki',
+  blocks: [
+    {
+      id: 'links',
+      html: '<p>See <a href="/food/what-is-bunsik" class="inline-link">bunsik</a> and <a href="/food/what-is-buldak" class="inline-link">buldak</a>.</p>',
+    },
+    { id: 'figure', html: '<p><img src="/images/tteokbokki.jpg" alt="Tteokbokki in a pan" width="800"></p>' },
+    { id: 'nesting', html: '<p><em>Sundae</em> is often ordered with <strong>tteokbokki</strong>.</p>' },
+  ],
+};
+const richJa = {
+  schemaVersion: 1,
+  locale: 'ja',
+  sourcePath: richEnglish.sourcePath,
+  status: 'draft',
+  glossaryVersion: 'pilot-2026-10',
+  blocks: [
+    {
+      id: 'links',
+      sourceHash: sourceHash(richEnglish.blocks[0].html),
+      html: '<p><a href="/food/what-is-bunsik" class="inline-link">粉食</a>と<a href="/food/what-is-buldak" class="inline-link">プルダック</a>を見てください。</p>',
+    },
+    {
+      id: 'figure',
+      sourceHash: sourceHash(richEnglish.blocks[1].html),
+      html: '<p><img src="/images/tteokbokki.jpg" alt="鍋に入ったトッポッキ" width="800"></p>',
+    },
+    {
+      id: 'nesting',
+      sourceHash: sourceHash(richEnglish.blocks[2].html),
+      html: '<p><em>スンデ</em>は<strong>トッポッキ</strong>と一緒によく注文されます。</p>',
+    },
+  ],
+};
+const withBlock = (index, html) => {
+  const altered = clone(richJa);
+  altered.blocks[index].html = html;
+  return validateTranslation(richEnglish, altered);
+};
+
+test('rich fixture passes, including translated alt text', () => {
+  assert.deepEqual(validateTranslation(richEnglish, richJa), []);
+});
+
+test('a quoted ">" inside an attribute value cannot hide an event handler', () => {
+  const errors = withBlock(0, '<p><a href="/food/what-is-bunsik" class=" >" onclick="alert(1)">粉食</a>と<a href="/food/what-is-buldak" class="inline-link">プルダック</a>を見てください。</p>');
+  assert.equal(has(errors, 'UNSAFE_HTML'), true);
+  const single = withBlock(0, "<p><a href='/food/what-is-bunsik' class='>' onmouseover='alert(1)'>粉食</a>と<a href=\"/food/what-is-buldak\" class=\"inline-link\">プルダック</a>を見てください。</p>");
+  assert.equal(has(single, 'UNSAFE_HTML'), true);
+});
+
+test('attributes glued without whitespace are still tokenized as attributes', () => {
+  const errors = withBlock(0, '<p><a href="/food/what-is-bunsik"onclick="alert(1)" class="inline-link">粉食</a>と<a href="/food/what-is-buldak" class="inline-link">プルダック</a>を見てください。</p>');
+  assert.equal(has(errors, 'UNSAFE_HTML'), true);
+});
+
+test('changing a locked attribute value such as img src or class fails', () => {
+  assert.equal(has(withBlock(1, '<p><img src="https://example.com/tracker.png" alt="鍋に入ったトッポッキ" width="800"></p>'), 'ATTRIBUTE_VALUE'), true);
+  assert.equal(has(withBlock(1, '<p><img src="/images/tteokbokki.jpg" alt="鍋に入ったトッポッキ" width="1"></p>'), 'ATTRIBUTE_VALUE'), true);
+  const swappedClass = '<p><a href="/food/what-is-bunsik" class="hidden">粉食</a>と<a href="/food/what-is-buldak" class="inline-link">プルダック</a>を見てください。</p>';
+  assert.equal(has(withBlock(0, swappedClass), 'ATTRIBUTE_VALUE'), true);
+});
+
+test('swapping the destinations of two links fails even though the sorted set is equal', () => {
+  const errors = withBlock(0, '<p><a href="/food/what-is-buldak" class="inline-link">粉食</a>と<a href="/food/what-is-bunsik" class="inline-link">プルダック</a>を見てください。</p>');
+  assert.equal(has(errors, 'LINK_TARGET'), true);
+});
+
+test('moving or re-nesting tags fails even when tag counts are unchanged', () => {
+  assert.equal(has(withBlock(2, '<p><em>スンデは<strong>トッポッキ</strong></em>と一緒によく注文されます。</p>'), 'TAG_STRUCTURE'), true);
+  assert.equal(has(withBlock(2, '<p><strong>スンデ</strong>は<em>トッポッキ</em>と一緒によく注文されます。</p>'), 'TAG_STRUCTURE'), true);
+});
+
+test('duplicate attributes, attributes on end tags and unterminated tags are rejected', () => {
+  assert.equal(has(withBlock(1, '<p><img src="/images/tteokbokki.jpg" src="https://example.com/x.png" alt="鍋に入ったトッポッキ" width="800"></p>'), 'UNSAFE_HTML'), true);
+  assert.equal(has(withBlock(2, '<p><em>スンデ</em onclick="alert(1)">は<strong>トッポッキ</strong>と一緒によく注文されます。</p>'), 'UNSAFE_HTML'), true);
+  assert.equal(has(withBlock(2, '<p><em>スンデ</em>は<strong>トッポッキ</strong>と一緒によく注文されます。</p><a href="/x"'), 'UNSAFE_HTML'), true);
+});
+
+test('elements that switch the tokenizer into raw-text modes are rejected', () => {
+  for (const html of [
+    '<p><em>スンデ</em>は<strong>トッポッキ</strong>と<title></p><img src=x onerror=alert(1)></title></p>',
+    '<p><em>スンデ</em>は<strong>トッポッキ</strong>と<textarea></textarea></p>',
+    '<p><em>スンデ</em>は<strong>トッポッキ</strong>と<noscript></noscript></p>',
+  ]) {
+    assert.equal(has(withBlock(2, html), 'UNSAFE_HTML'), true, html);
+  }
+});
+
+test('percent-encoded, doubled and non-canonical source paths are rejected', () => {
+  for (const sourcePath of [
+    '/kpop/%2e%2e/admin',
+    '/kpop/%2E%2E/admin',
+    '/kpop/%252e%252e/admin',
+    '/kpop/.%2e/admin',
+    '/kpop%2fadmin',
+    '//example.com/kpop',
+    '/kpop//sunbae',
+    '/kpop/sunbae/',
+    '/KPOP/sunbae',
+    '/kpop/sunbae%00',
+    '/kpop/sünbae',
+  ]) {
+    const source = { ...clone(english), sourcePath };
+    const target = { ...clone(ja), sourcePath };
+    assert.equal(has(validateTranslation(source, target), 'SOURCE_PATH'), true, sourcePath);
+  }
+  const root = { ...clone(english), sourcePath: '/' };
+  assert.equal(has(validateTranslation(root, { ...clone(ja), sourcePath: '/' }), 'SOURCE_PATH'), false);
+});

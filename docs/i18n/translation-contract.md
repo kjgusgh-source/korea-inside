@@ -49,26 +49,50 @@ node scripts/i18n/check.mjs path/to/source.json path/to/translation.json
 ```
 
 The checker fails closed for: schema/locale/status errors; invalid or duplicate
-IDs; missing or unexpected blocks; out-of-date source hashes; changed link
-URLs; changed numeric tokens; unsafe embedded HTML; and any change to the
-element structure of a block. Every element (including `<p>`) and every
-attribute **name** must match the English fragment; attribute values other
-than `href` may be translated. Added elements such as `<img>` or `<div>`, or
-added attributes such as `style` or `data-*`, therefore fail as `TAG_STRUCTURE`.
+IDs; missing or unexpected blocks; out-of-date source hashes; and the markup
+rules below. Numbers written out in a target language (e.g. "a year" → `1年`)
+trigger `NUMBER_REVIEW`, a **false positive by design** that requires explicit
+human examination, not silent acceptance.
 
-`UNSAFE_HTML` is raised for comments/doctypes, `script`, `style`, `iframe`,
-`object`, `embed`, `svg`, `math`, `form` and other forbidden elements, any
-`on*` event attribute (including forms like `<svg/onload=…>`), `style` and
-`srcdoc` attributes, and `javascript:`, `vbscript:` or `data:` URLs (also when
-written with character references).
+### How markup is read
 
-`approvedAt` must be an ISO 8601 date-time with a time zone
-(e.g. `2026-10-09T17:00:00+09:00`) and must not be in the future.
-`sourcePath` may not contain `.`/`..` segments or backslashes.
+Each block is read by `tokenizeFragment`, a small dependency-free subset of the
+WHATWG HTML tokenizer (tag, attribute-name and attribute-value states). It
+splits tags and attributes the way browsers do — quoted `>` inside attribute
+values, attributes glued without whitespace (`href="/x"onclick=…`) and `/`
+separators (`<svg/onload=…>`) are handled. It does **not** implement the rest
+of HTML; instead, anything outside the subset is rejected (`UNSAFE_HTML` in
+translations, `SOURCE_MARKUP` in sources): comments, doctypes, CDATA,
+processing instructions, bogus or attribute-bearing end tags, NUL characters,
+tags left open at the end of a block, duplicate attributes, and elements that
+switch the tokenizer into other modes or are never needed in body copy
+(`script`, `style`, `title`, `textarea`, `noscript`, `iframe`, `svg`, `math`,
+`template`, `form`, `input`, `meta`, `link`, `object`, `embed`, …).
 
-Numbers written out in a target language (e.g. "a year" → `1年`) trigger a
-**false positive** that requires explicit human examination, not silent
-acceptance.
+`UNSAFE_HTML` is also raised for any `on*` attribute, `style`, `srcdoc`,
+`formaction`, `action`, `xmlns`, `xlink:href`, and for `javascript:`,
+`vbscript:` or `data:` URLs (also when written with character references).
+
+### Structure and attribute integrity
+
+- `TAG_STRUCTURE`: the ordered sequence of tags must equal the English block —
+  same elements, same order, same nesting, same attribute **names** per tag.
+  Equal tag counts are not enough; moving `<strong>` inside `<em>` fails.
+- `LINK_TARGET`: the ordered list of `<a href>` values must be identical, so
+  swapping two links fails even though the set of URLs is unchanged.
+- `ATTRIBUTE_VALUE`: attribute values are **locked by default** and must be
+  byte-identical to the source (`src`, `class`, `width`, …). Only the values of
+  `TRANSLATABLE_ATTRIBUTES` (`alt`, `title`, `aria-label`) may differ. Any change
+  to that list is a policy change and needs separate approval.
+
+### Other rules
+
+- `approvedAt` must be an ISO 8601 date-time with a time zone
+  (e.g. `2026-10-09T17:00:00+09:00`) and must not be in the future.
+- `sourcePath` must be a canonical HAEMIL path: lowercase ASCII slug segments,
+  single slashes, no trailing slash (`/` is allowed). Percent-encoding
+  (`%2e%2e`, `%2f`, double encoding), dot segments, uppercase, non-ASCII and
+  empty segments are **rejected, not normalized**.
 
 ### Important limitations
 
@@ -77,14 +101,12 @@ acceptance.
   separate glossary checks, bilingual review, and editorial approval.
 - Structural checks cannot see meaning: a link whose boundary moves to the
   wrong words, a mistranslated term, or an invented fact can still PASS.
-- Regular expressions in this checker are an early structural safety net,
-  **not a full HTML parser or sanitizer**. Never render unchecked translated
-  HTML with `dangerouslySetInnerHTML`; the rendering layer needs a trusted
-  parser/sanitizer and controlled component rendering, approved separately.
-- `status` is recorded metadata; this checker does not advance statuses.
-  `draft` -> `qa_passed` -> `reviewed` -> `approved` requires distinct
-  validated editorial steps. `reviewed` requires `reviewedBy`, and `approved`
-  additionally requires `approvedAt`.
+- **PASS is not a rendering-safety certificate.** The tokenizer subset was
+  differentially tested against Chromium, but it is not a sanitizer and does
+  not model tree construction. Never render translated HTML with
+  `dangerouslySetInnerHTML`; the rendering layer must rebuild output from an
+  allowlist of elements and attributes (see "Next format" below), approved
+  separately.
 - A translation with a stale source hash must not appear as a current,
   indexable translation. A future publishing layer must enforce this.
 - **All translations start `noindex`**, and only per-locale page-specific
@@ -92,3 +114,34 @@ acceptance.
   metadata, sitemap, hreflang, robots, or GSC mutations.
 - Future glossary, extraction, rendering and publication steps are separate
   PRs, and must preserve English site behavior and SEO.
+
+## Publication safety principles (for any future publishing layer)
+
+`status`, `reviewedBy` and `approvedAt` are **claims typed into a file**. Anyone
+who can edit the JSON can set them, so they prove nothing on their own.
+
+1. The checker never advances a status and never publishes. PASS only means
+   the file is structurally consistent with the current English source.
+2. A publishing step must verify approval against a **separate, trusted
+   record** that the translation file cannot forge — for example an approval
+   recorded through a protected-branch pull-request review by an allowlisted
+   reviewer, or an authenticated approval log kept outside the content files.
+3. That approval must be bound to the exact content it approves: source path,
+   locale, every block's `sourceHash`, and a hash of the translated blocks.
+   Any later edit to either the English source or the translation invalidates
+   it automatically.
+4. Native review and operator (publishing/SEO) approval are distinct records
+   by distinct roles; one does not imply the other.
+5. Indexing is a third, explicit, per-page decision. Without it the page stays
+   `noindex` and out of the sitemap and hreflang sets.
+6. Missing, stale or unverifiable approval → do not publish (fail closed).
+
+## Next format (proposal, not implemented)
+
+To remove HTML from translator input entirely, a later schema version can store
+the English block as a structure (element tree with locked attributes) and let
+translations supply only text runs with placeholders, e.g.
+`"text": "{a1}粉食{/a1}と{a2}プルダック{/a2}を見てください。"`. The renderer then
+builds React elements from the English structure, so a translation cannot add
+elements, attributes or URLs at all. This needs its own approval because it
+changes the data contract.

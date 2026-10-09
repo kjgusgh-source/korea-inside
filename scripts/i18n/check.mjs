@@ -3,7 +3,8 @@
  * HAEMIL i18n contract and structural QA (no API calls or publication side effects).
  * Usage: node scripts/i18n/check.mjs <source.json> <translation.json>
  * Passing this checker does NOT mean that a translation is factually correct,
- * native-reviewed, publishable, or eligible for Google indexing.
+ * native-reviewed, safe to render as raw HTML, publishable, or eligible for
+ * Google indexing.
  */
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
@@ -11,87 +12,274 @@ import { pathToFileURL } from 'node:url';
 
 export const LOCALES = Object.freeze(['ja', 'zh-Hant', 'zh-Hans', 'es', 'ko']);
 export const STATUSES = Object.freeze(['draft', 'qa_passed', 'reviewed', 'approved']);
+// Attribute values that a translator may change. Every other attribute value
+// (href, src, class, width, ...) must stay byte-identical to the English source.
+export const TRANSLATABLE_ATTRIBUTES = Object.freeze(['alt', 'title', 'aria-label']);
+
 const BLOCK_ID = /^[A-Za-z0-9][A-Za-z0-9_-]*$/;
-const SOURCE_PATH = /^\/(?!\/)[^\s?#\\]*$/;
-const DOT_SEGMENT = /(?:^|\/)\.{1,2}(?:\/|$)/;
+// Canonical HAEMIL site paths only: lowercase ASCII slug segments separated by
+// single slashes, no trailing slash. Percent-encoding, dot segments, uppercase,
+// non-ASCII and empty segments are rejected instead of being normalized.
+const SOURCE_PATH = /^\/(?:[a-z0-9]+(?:-[a-z0-9]+)*(?:\/[a-z0-9]+(?:-[a-z0-9]+)*)*)?$/;
 // ISO 8601 date-time with an explicit UTC offset, e.g. 2026-10-09T08:00:00Z.
 const ISO_DATE_TIME = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(?::\d{2}(?:\.\d{1,3})?)?(?:Z|[+-]\d{2}:\d{2})$/;
 const CLOCK_SKEW_MS = 5 * 60 * 1000;
-// Elements that must never appear in a translated fragment, even if the
-// English source somehow contained them.
-const FORBIDDEN_TAGS = new Set([
-  'script', 'style', 'iframe', 'frame', 'frameset', 'object', 'embed', 'applet',
-  'link', 'meta', 'base', 'form', 'input', 'button', 'textarea', 'select',
-  'svg', 'math', 'template', 'noscript',
+
+// Elements that are never allowed in a fragment. Many of them also switch the
+// browser tokenizer into RAWTEXT/RCDATA/foreign-content modes, which this
+// checker deliberately does not model, so tokenizing stops when one is seen.
+const FORBIDDEN_ELEMENTS = new Set([
+  'script', 'style', 'xmp', 'iframe', 'noembed', 'noframes', 'noscript', 'textarea', 'title', 'plaintext',
+  'svg', 'math', 'template', 'frame', 'frameset', 'object', 'embed', 'applet', 'link', 'meta', 'base',
+  'form', 'input', 'button', 'select', 'option', 'image',
 ]);
-const TAG_PATTERN = /<\s*(\/)?\s*([A-Za-z][A-Za-z0-9-]*)([^>]*)>/g;
-const ATTRIBUTE_PATTERN = /([^\s"'=<>/`]+)(?:\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s"'=<>`]+)))?/g;
+const UNSAFE_ATTRIBUTES = new Set(['style', 'srcdoc', 'formaction', 'action', 'xmlns', 'xlink:href']);
+const WHITESPACE = new Set(['\t', '\n', '\f', '\r', ' ']);
 
 export function sourceHash(html) {
   return createHash('sha256').update(html.normalize('NFC'), 'utf8').digest('hex');
 }
 
-function parseTags(html) {
-  const tags = [];
-  for (const [, closing, name, rest] of html.matchAll(TAG_PATTERN)) {
-    const attributes = [];
-    if (!closing) {
-      for (const [, attrName, dq, sq, bare] of rest.matchAll(ATTRIBUTE_PATTERN)) {
-        attributes.push({ name: attrName.toLowerCase(), value: dq ?? sq ?? bare ?? '' });
+const isAsciiAlpha = (c) => (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z');
+const asciiLower = (c) => (c >= 'A' && c <= 'Z' ? c.toLowerCase() : c);
+
+/**
+ * A deliberately small subset of the WHATWG HTML tokenizer (data, tag open,
+ * end tag open, tag name, attribute name/value and self-closing states).
+ * It reproduces how browsers split tags and attributes, including quoted ">"
+ * characters, attributes glued without whitespace and "/" separators.
+ * Anything outside that subset (comments, doctypes, processing instructions,
+ * bogus end tags, NUL, EOF inside a tag, raw-text elements, duplicate
+ * attributes, attributes on end tags) is reported as an error so callers can
+ * fail closed instead of guessing.
+ */
+export function tokenizeFragment(html) {
+  const tokens = [];
+  const errors = [];
+  let text = '';
+  let i = 0;
+  const flushText = () => {
+    if (text) tokens.push({ type: 'text', value: text });
+    text = '';
+  };
+
+  while (i < html.length) {
+    const c = html[i];
+    if (c === '\u0000') return { tokens, errors: [...errors, 'NUL character'] };
+    if (c !== '<') {
+      text += c;
+      i += 1;
+      continue;
+    }
+    const next = html[i + 1];
+    if (next === '!') return { tokens, errors: [...errors, 'comment, doctype or CDATA section'] };
+    if (next === '?') return { tokens, errors: [...errors, 'processing instruction'] };
+    let closing = false;
+    let j = i + 1;
+    if (next === '/') {
+      closing = true;
+      j = i + 2;
+      if (!isAsciiAlpha(html[j] ?? '')) return { tokens, errors: [...errors, 'bogus or empty end tag'] };
+    } else if (!isAsciiAlpha(next ?? '')) {
+      text += c; // A bare "<" is text for browsers too.
+      i += 1;
+      continue;
+    }
+    flushText();
+
+    const tag = { type: closing ? 'end' : 'start', name: '', attrs: [], selfClosing: false };
+    let state = 'tagName';
+    let attr = null;
+    let emitted = false;
+    const startAttr = () => {
+      attr = { name: '', value: '' };
+      tag.attrs.push(attr);
+    };
+    const finishAttrName = () => {
+      if (attr && tag.attrs.slice(0, -1).some((a) => a.name === attr.name)) {
+        errors.push(`duplicate attribute "${attr.name}"`);
+      }
+    };
+
+    while (j < html.length && !emitted) {
+      const ch = html[j];
+      if (ch === '\u0000') return { tokens, errors: [...errors, 'NUL character'] };
+      switch (state) {
+        case 'tagName':
+          if (WHITESPACE.has(ch)) state = 'beforeAttrName';
+          else if (ch === '/') state = 'selfClosingStart';
+          else if (ch === '>') emitted = true;
+          else tag.name += asciiLower(ch);
+          j += 1;
+          break;
+        case 'beforeAttrName':
+          if (WHITESPACE.has(ch)) {
+            j += 1;
+          } else if (ch === '/' || ch === '>') {
+            state = 'afterAttrName';
+          } else if (ch === '=') {
+            startAttr();
+            attr.name = '=';
+            state = 'attrName';
+            j += 1;
+          } else {
+            startAttr();
+            state = 'attrName';
+          }
+          break;
+        case 'attrName':
+          if (WHITESPACE.has(ch) || ch === '/' || ch === '>') {
+            finishAttrName();
+            state = 'afterAttrName';
+          } else if (ch === '=') {
+            finishAttrName();
+            state = 'beforeAttrValue';
+            j += 1;
+          } else {
+            attr.name += asciiLower(ch);
+            j += 1;
+          }
+          break;
+        case 'afterAttrName':
+          if (WHITESPACE.has(ch)) {
+            j += 1;
+          } else if (ch === '/') {
+            state = 'selfClosingStart';
+            j += 1;
+          } else if (ch === '=') {
+            state = 'beforeAttrValue';
+            j += 1;
+          } else if (ch === '>') {
+            emitted = true;
+            j += 1;
+          } else {
+            startAttr();
+            state = 'attrName';
+          }
+          break;
+        case 'beforeAttrValue':
+          if (WHITESPACE.has(ch)) {
+            j += 1;
+          } else if (ch === '"') {
+            state = 'attrValueDouble';
+            j += 1;
+          } else if (ch === "'") {
+            state = 'attrValueSingle';
+            j += 1;
+          } else if (ch === '>') {
+            emitted = true;
+            j += 1;
+          } else {
+            state = 'attrValueUnquoted';
+          }
+          break;
+        case 'attrValueDouble':
+        case 'attrValueSingle':
+          if (ch === (state === 'attrValueDouble' ? '"' : "'")) state = 'afterAttrValueQuoted';
+          else attr.value += ch;
+          j += 1;
+          break;
+        case 'attrValueUnquoted':
+          if (WHITESPACE.has(ch)) state = 'beforeAttrName';
+          else if (ch === '>') emitted = true;
+          else attr.value += ch;
+          j += 1;
+          break;
+        case 'afterAttrValueQuoted':
+          if (WHITESPACE.has(ch)) {
+            state = 'beforeAttrName';
+            j += 1;
+          } else if (ch === '/') {
+            state = 'selfClosingStart';
+            j += 1;
+          } else if (ch === '>') {
+            emitted = true;
+            j += 1;
+          } else {
+            state = 'beforeAttrName'; // Missing whitespace: the browser starts a new attribute.
+          }
+          break;
+        case 'selfClosingStart':
+          if (ch === '>') {
+            tag.selfClosing = true;
+            emitted = true;
+            j += 1;
+          } else {
+            state = 'beforeAttrName';
+          }
+          break;
+        default:
+          return { tokens, errors: [...errors, `internal tokenizer state ${state}`] };
       }
     }
-    tags.push({ closing: Boolean(closing), name: name.toLowerCase(), attributes, raw: rest });
+    if (!emitted) return { tokens, errors: [...errors, `unterminated <${closing ? '/' : ''}${tag.name}> tag`] };
+    if (closing && tag.attrs.length) errors.push(`attributes on end tag </${tag.name}>`);
+    tokens.push(tag);
+    i = j;
+    if (!closing && FORBIDDEN_ELEMENTS.has(tag.name)) {
+      return { tokens, errors: [...errors, `forbidden element <${tag.name}>`] };
+    }
   }
-  return tags;
+  flushText();
+  return { tokens, errors };
 }
 
-// Every element and every attribute name must match the English fragment.
-// Attribute values (except href, compared separately) may be translated.
-function structureCounts(tags) {
-  const result = new Map();
-  for (const tag of tags) {
-    const names = tag.attributes.map((a) => a.name).sort().join(',');
-    const key = tag.closing ? `/${tag.name}` : `${tag.name}[${names}]`;
-    result.set(key, (result.get(key) ?? 0) + 1);
-  }
-  return result;
-}
-
-function hrefs(tags) {
-  return tags
-    .filter((tag) => !tag.closing && tag.name === 'a')
-    .flatMap((tag) => tag.attributes.filter((a) => a.name === 'href').map((a) => a.value))
-    .sort();
-}
-
-function decodeForSchemeCheck(value) {
+function decodeReferences(value) {
   return value
-    .replace(/&#x([0-9a-f]+);?/gi, (_, hex) => String.fromCodePoint(Number.parseInt(hex, 16)))
-    .replace(/&#([0-9]+);?/g, (_, dec) => String.fromCodePoint(Number.parseInt(dec, 10)))
+    .replace(/&#x([0-9a-f]+);?/gi, (m, hex) => safeCodePoint(Number.parseInt(hex, 16), m))
+    .replace(/&#([0-9]+);?/g, (m, dec) => safeCodePoint(Number.parseInt(dec, 10), m))
     .replace(/&colon;/gi, ':')
     .replace(/&(?:tab|newline);/gi, '')
-    .replace(/[\u0000-\u0020\u007f-\u009f]/g, '')
-    .toLowerCase();
+    .replace(/&nbsp;?/gi, ' ')
+    .replace(/&amp;?/gi, '&');
 }
 
-function unsafeMarkup(html, tags) {
-  // Comments, doctypes and processing instructions are never needed in fragments.
-  if (/<\s*[!?]/.test(html)) return true;
-  return tags.some((tag) =>
-    FORBIDDEN_TAGS.has(tag.name) ||
-    // Belt and braces for parser differences such as <svg/onload=...>.
-    /(?:^|[\s/"'])on[a-z]+\s*=/i.test(tag.raw) ||
-    tag.attributes.some((a) =>
-      a.name.startsWith('on') ||
-      a.name === 'style' ||
-      a.name === 'srcdoc' ||
-      /^(?:javascript|vbscript|data):/.test(decodeForSchemeCheck(a.value))));
+function safeCodePoint(code, fallback) {
+  return Number.isInteger(code) && code > 0 && code <= 0x10ffff ? String.fromCodePoint(code) : fallback;
 }
 
-function visibleNumbers(html) {
+function hasScriptUrl(value) {
+  const normalized = decodeReferences(value).replace(/[\u0000-\u0020\u007f-\u009f]/g, '').toLowerCase();
+  return /^(?:javascript|vbscript|data):/.test(normalized);
+}
+
+const elementTokens = (tokens) => tokens.filter((t) => t.type !== 'text');
+
+function unsafeReasons(parsed) {
+  const reasons = [...parsed.errors];
+  for (const tag of elementTokens(parsed.tokens)) {
+    for (const { name, value } of tag.attrs) {
+      if (name.startsWith('on')) reasons.push(`event handler attribute ${name} on <${tag.name}>`);
+      else if (UNSAFE_ATTRIBUTES.has(name)) reasons.push(`unsafe attribute ${name} on <${tag.name}>`);
+      if (hasScriptUrl(value)) reasons.push(`script-capable URL in ${name} on <${tag.name}>`);
+    }
+  }
+  return reasons;
+}
+
+// Ordered element signature: the browser tree builder is deterministic for a
+// given sequence of tag tokens, so an identical sequence (ignoring the
+// self-closing flag, which HTML elements ignore) means identical nesting.
+function signature(tag) {
+  const names = tag.attrs.map((a) => a.name).sort().join(',');
+  return tag.type === 'end' ? `</${tag.name}>` : `<${tag.name}[${names}]>`;
+}
+
+function orderedHrefs(tokens) {
+  return elementTokens(tokens)
+    .filter((t) => t.type === 'start' && t.name === 'a')
+    .map((t) => t.attrs.find((a) => a.name === 'href')?.value ?? null);
+}
+
+function visibleNumbers(tokens) {
   // Structural check only: written-out numbers can be valid translations.
   // Flag them for review rather than silently treating them as equivalent.
-  return (html.replace(/<[^>]*>/g, ' ').match(/[0-9]+(?:[.,][0-9]+)*/g) ?? []).sort();
+  const parts = [];
+  for (const token of tokens) {
+    if (token.type === 'text') parts.push(decodeReferences(token.value));
+    else for (const a of token.attrs) if (TRANSLATABLE_ATTRIBUTES.includes(a.name)) parts.push(decodeReferences(a.value));
+  }
+  return (parts.join(' ').match(/[0-9]+(?:[.,][0-9]+)*/g) ?? []).sort();
 }
 
 export function validateTranslation(source, translation, { now = Date.now } = {}) {
@@ -107,8 +295,8 @@ export function validateTranslation(source, translation, { now = Date.now } = {}
     fail('SCHEMA_VERSION', 'Both documents must use schemaVersion: 1.');
   }
   if (source.sourceLocale !== 'en') fail('SOURCE_LOCALE', 'Source locale must be en.');
-  if (typeof source.sourcePath !== 'string' || !SOURCE_PATH.test(source.sourcePath) || DOT_SEGMENT.test(source.sourcePath)) {
-    fail('SOURCE_PATH', 'Source path must be an absolute site path without query or fragment.');
+  if (typeof source.sourcePath !== 'string' || !SOURCE_PATH.test(source.sourcePath)) {
+    fail('SOURCE_PATH', 'Source path must be a canonical lowercase site path (no encoding, dot segments or trailing slash).');
   }
   if (translation.sourcePath !== source.sourcePath) fail('SOURCE_PATH_MISMATCH', 'Translation sourcePath differs from source.');
   if (!LOCALES.includes(translation.locale)) fail('LOCALE', 'Unsupported target locale.');
@@ -145,7 +333,10 @@ export function validateTranslation(source, translation, { now = Date.now } = {}
       continue;
     }
     if (sourceBlocks.has(block.id)) fail('DUPLICATE_SOURCE_ID', `Duplicate source block: ${block.id}`, block.id);
-    sourceBlocks.set(block.id, block);
+    const parsed = tokenizeFragment(block.html);
+    const reasons = unsafeReasons(parsed);
+    if (reasons.length) fail('SOURCE_MARKUP', `Source block uses unsupported markup (${reasons[0]}): ${block.id}`, block.id);
+    sourceBlocks.set(block.id, { ...block, parsed });
   }
   const translationIds = new Set();
   for (const block of translation.blocks) {
@@ -163,22 +354,35 @@ export function validateTranslation(source, translation, { now = Date.now } = {}
     if (typeof block.sourceHash !== 'string' || block.sourceHash !== sourceHash(original.html)) {
       fail('STALE_SOURCE', `Translation block does not match current English source: ${block.id}`, block.id);
     }
-    const sourceTags = parseTags(original.html);
-    const targetTags = parseTags(block.html);
-    if (unsafeMarkup(block.html, targetTags)) {
-      fail('UNSAFE_HTML', `Potentially unsafe HTML in translation: ${block.id}`, block.id);
+    const parsed = tokenizeFragment(block.html);
+    const reasons = unsafeReasons(parsed);
+    if (reasons.length) {
+      fail('UNSAFE_HTML', `Potentially unsafe or unsupported HTML in translation (${reasons[0]}): ${block.id}`, block.id);
     }
-    const left = structureCounts(sourceTags);
-    const right = structureCounts(targetTags);
-    for (const tag of new Set([...left.keys(), ...right.keys()])) {
-      if ((left.get(tag) ?? 0) !== (right.get(tag) ?? 0)) {
-        fail('TAG_STRUCTURE', `Markup or attribute set changed (${tag}): ${block.id}`, block.id);
+
+    const left = elementTokens(original.parsed.tokens);
+    const right = elementTokens(parsed.tokens);
+    const firstDifference = Array.from({ length: Math.max(left.length, right.length) }, (_, k) => k)
+      .find((k) => !left[k] || !right[k] || signature(left[k]) !== signature(right[k]));
+    if (firstDifference !== undefined) {
+      const expected = left[firstDifference] ? signature(left[firstDifference]) : 'end of block';
+      const actual = right[firstDifference] ? signature(right[firstDifference]) : 'end of block';
+      fail('TAG_STRUCTURE', `Element order, nesting or attribute set changed at tag ${firstDifference + 1} (expected ${expected}, found ${actual}): ${block.id}`, block.id);
+    } else {
+      for (let k = 0; k < left.length; k += 1) {
+        for (const a of left[k].attrs) {
+          if (a.name === 'href' || TRANSLATABLE_ATTRIBUTES.includes(a.name)) continue;
+          const translated = right[k].attrs.find((b) => b.name === a.name);
+          if (!translated || translated.value !== a.value) {
+            fail('ATTRIBUTE_VALUE', `Locked attribute ${a.name} changed on <${left[k].name}>: ${block.id}`, block.id);
+          }
+        }
       }
     }
-    if (JSON.stringify(hrefs(sourceTags)) !== JSON.stringify(hrefs(targetTags))) {
-      fail('LINK_TARGET', `Link destination changed: ${block.id}`, block.id);
+    if (JSON.stringify(orderedHrefs(original.parsed.tokens)) !== JSON.stringify(orderedHrefs(parsed.tokens))) {
+      fail('LINK_TARGET', `Link destination or order changed: ${block.id}`, block.id);
     }
-    if (JSON.stringify(visibleNumbers(original.html)) !== JSON.stringify(visibleNumbers(block.html))) {
+    if (JSON.stringify(visibleNumbers(original.parsed.tokens)) !== JSON.stringify(visibleNumbers(parsed.tokens))) {
       fail('NUMBER_REVIEW', `Number format/content changed; human review required: ${block.id}`, block.id);
     }
   }
@@ -203,7 +407,7 @@ function cli(argv) {
       console.error(`FAILED: ${issues.length} issue(s). No translation approval or publication performed.`);
       process.exitCode = 1;
     } else {
-      console.log('PASS: file contract and structural checks only. Semantic/native review and SEO approval are still required.');
+      console.log('PASS: file contract and structural checks only. Semantic/native review, render-time sanitizing and SEO approval are still required.');
     }
   } catch (error) {
     console.error(`FAILED: unable to read or parse JSON (${error.message}).`);
