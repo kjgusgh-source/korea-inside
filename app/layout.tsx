@@ -3,6 +3,7 @@ import { Newsreader, Manrope } from "next/font/google";
 import "./globals.css";
 import SiteFooter from "../components/SiteFooter";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import HtmlRoot from "../components/HtmlRoot";
 
 const newsreader = Newsreader({
   subsets: ["latin"],
@@ -65,13 +66,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="light" data-scroll-behavior="smooth">
+    <HtmlRoot>
       <body className={`${newsreader.variable} ${manrope.variable}`}>
   {children}
   <SiteFooter />
 
   <GoogleAnalytics gaId="G-S0KL42RWE7" />
       </body>
-    </html>
+    </HtmlRoot>
   );
 }
