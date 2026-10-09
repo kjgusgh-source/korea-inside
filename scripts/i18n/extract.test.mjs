@@ -1,8 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import {
-  extractFromTsx, cleanJsxText, validateUnitText, reviewNotes, renderUnitHtml, toSchemaV1, compareWithBuiltHtml, plainText,
+  extractFromTsx, cleanJsxText, validateUnitText, reviewNotes, renderUnitHtml, toSchemaV1, compareWithBuiltHtml, plainText, translationStatus,
 } from './extract.mjs';
 
 const PAGE = `
@@ -233,8 +233,8 @@ test('built HTML comparison reports text the extractor missed', () => {
 
 test('real Sunbae page: extraction is complete against the built English HTML snapshot rules', () => {
   const path = 'app/kpop/what-does-sunbae-and-hoobae-mean-in-kpop/page.tsx';
-  let code;
-  try { code = readFileSync(path, 'utf8'); } catch { return; } // Page may be renamed later; fixture tests still cover behaviour.
+  assert.ok(existsSync(path), `real page ${path} not found: update this test when the page moves instead of skipping it`);
+  const code = readFileSync(path, 'utf8');
   const source = extractFromTsx(code, { fileName: path, sourcePath: '/kpop/what-does-sunbae-and-hoobae-mean-in-kpop' });
   const ids = source.units.map((u) => u.id);
   assert.equal(new Set(ids).size, ids.length, 'unique IDs');
@@ -244,4 +244,151 @@ test('real Sunbae page: extraction is complete against the built English HTML sn
   const hrefsInUnits = source.units.flatMap((u) => Object.values(u.placeholders).map((p) => p.attrs.href)).filter(Boolean);
   for (const href of hrefsInCode.filter((h) => h !== '/kpop')) assert.ok(hrefsInUnits.includes(href), `inline link lost: ${href}`);
   for (const unit of source.units) assert.deepEqual(validateUnitText(unit, unit.text), [], `English text must validate against itself: ${unit.id}`);
+});
+
+// ---------------------------------------------------------------------------
+// Review round 2: hashes cover meaningful attributes of the unit itself,
+// v1 keeps standalone link URLs, ambiguous ID matches go to review.
+// ---------------------------------------------------------------------------
+const LINKS_PAGE = `
+import Link from "next/link";
+const guides = [
+  { label: "What Is Maknae?", href: "/kpop/what-is-maknae" },
+  { label: "What Is Nunchi?", href: "/expressions/nunchi" },
+];
+export default function Page() {
+  return (
+    <article>
+      <header>
+        <Link href="/kpop" className="text-sm hover:underline">← Back to K-pop</Link>
+        <h1>Links and images</h1>
+      </header>
+      <section id="body">
+        <p>Read the <a href="https://example.org/dict" className="link" target="_blank" rel="noopener">dictionary</a> first.</p>
+        <img src="/images/club.jpg" alt="Students at a club" className="rounded" />
+      </section>
+      <section id="related">
+        {guides.map((guide) => (
+          <Link key={guide.href} href={guide.href} className="card">{guide.label} →</Link>
+        ))}
+      </section>
+    </article>
+  );
+}
+`;
+const extractLinks = (code = LINKS_PAGE, previous = null) => extractFromTsx(code, { fileName: 'links.tsx', sourcePath: '/kpop/links', previous });
+const translationFor = (source) => ({
+  schemaVersion: 2, sourcePath: source.sourcePath, locale: 'ja', status: 'draft', glossaryVersion: 'test',
+  units: source.units.map((u) => ({ id: u.id, sourceHash: u.hash, text: u.text })),
+});
+const unitByText = (source, text) => source.units.find((u) => plainText(u.text) === text);
+
+test('a standalone link URL change makes its translation stale and keeps its ID', () => {
+  const before = extractLinks();
+  const translation = translationFor(before);
+  const after = extractLinks(LINKS_PAGE.replace('<Link href="/kpop"', '<Link href="/kpop/glossary"'), before);
+  const a = unitByText(before, '← Back to K-pop');
+  const b = unitByText(after, '← Back to K-pop');
+  assert.equal(b.id, a.id, 'same ID');
+  assert.notEqual(b.hash, a.hash, 'hash changes with href');
+  assert.deepEqual(translationStatus(after, translation).stale, [a.id]);
+});
+
+test('data-driven standalone links, inline links and image sources are covered by the hash', () => {
+  const before = extractLinks();
+  const translation = translationFor(before);
+  const related = extractLinks(LINKS_PAGE.replace('href: "/expressions/nunchi"', 'href: "/expressions/jeong"'), before);
+  assert.deepEqual(translationStatus(related, translation).stale, [unitByText(before, 'What Is Nunchi? →').id]);
+  const inline = extractLinks(LINKS_PAGE.replace('https://example.org/dict', 'https://example.org/other'), before);
+  assert.deepEqual(translationStatus(inline, translation).stale, [unitByText(before, 'Read the dictionary first.').id]);
+  const image = extractLinks(LINKS_PAGE.replace('/images/club.jpg', '/images/other.jpg'), before);
+  assert.deepEqual(translationStatus(image, translation).stale, [unitByText(before, 'Students at a club').id], 'alt text is stale when the image changes');
+});
+
+test('presentation-only changes (class, target, rel) do not make translations stale', () => {
+  const before = extractLinks();
+  const translation = translationFor(before);
+  const restyled = extractLinks(LINKS_PAGE
+    .replaceAll('className="card"', 'className="card card--large"')
+    .replace('className="link"', 'className="link link--accent"')
+    .replace('className="rounded"', 'className="rounded-xl"')
+    .replace('rel="noopener"', 'rel="noopener noreferrer"'), before);
+  const status = translationStatus(restyled, translation);
+  assert.deepEqual(status.stale, []);
+  assert.deepEqual(status.missing, []);
+  assert.deepEqual(status.unknown, []);
+});
+
+test('schemaVersion 1 view keeps the URL of standalone links', () => {
+  const v1 = toSchemaV1(extractLinks());
+  const html = v1.blocks.map((b) => b.html);
+  assert.ok(html.includes('<a href="/kpop">← Back to K-pop</a>'), html.join('\n'));
+  assert.ok(html.includes('<a href="/kpop/what-is-maknae">What Is Maknae? →</a>'));
+  assert.ok(html.includes('<a href="/expressions/nunchi">What Is Nunchi? →</a>'));
+});
+
+const DUP_PAGE = `
+export default function Page() {
+  return (
+    <article>
+      <section id="school"><p>See the guide below.</p><p>Seniors can help juniors settle in.</p><p>Seniors can help juniors settle in quickly.</p></section>
+      <section id="work"><p>See the guide below.</p></section>
+    </article>
+  );
+}
+`;
+const extractDup = (code, previous = null) => extractFromTsx(code, { fileName: 'dup.tsx', sourcePath: '/kpop/dup', previous });
+
+test('identical sentences in different sections keep their own IDs with --previous', () => {
+  const before = extractDup(DUP_PAGE);
+  const after = extractDup(DUP_PAGE, before);
+  const ids = (s) => s.units.filter((u) => u.text === 'See the guide below.').map((u) => `${u.anchor}:${u.id}`);
+  assert.deepEqual(ids(after), ids(before));
+  assert.notEqual(before.units.find((u) => u.anchor === 'school' && u.text === 'See the guide below.').id,
+    before.units.find((u) => u.anchor === 'work' && u.text === 'See the guide below.').id);
+  assert.equal(after.review.filter((r) => /ambiguous/.test(r.reason)).length, 0);
+});
+
+test('ambiguous ID matches are flagged for review instead of chosen silently', () => {
+  const before = extractDup(DUP_PAGE);
+  const oldIds = new Set(before.units.map((u) => u.id));
+  // The repeated sentence moves to a new section: two equally good old IDs.
+  const moved = extractDup(DUP_PAGE.replace('<section id="work"><p>See the guide below.</p></section>', '<section id="kpop"><p>See the guide below.</p></section>')
+    .replace('<p>See the guide below.</p><p>Seniors', '<p>Seniors'), before);
+  const movedUnit = moved.units.find((u) => u.text === 'See the guide below.');
+  assert.equal(oldIds.has(movedUnit.id), false, 'no old ID is reused for an ambiguous move');
+  assert.match(moved.review.map((r) => r.reason).join('\n'), /ambiguous/);
+  // An edit that is equally close to two old paragraphs.
+  const edited = extractDup(DUP_PAGE.replace('<p>Seniors can help juniors settle in.</p><p>Seniors can help juniors settle in quickly.</p>', '<p>Seniors can help juniors settle in fast.</p>'), before);
+  const editedUnit = edited.units.find((u) => u.text === 'Seniors can help juniors settle in fast.');
+  assert.equal(oldIds.has(editedUnit.id), false, 'no old ID is reused for an ambiguous edit');
+  assert.match(edited.review.map((r) => r.reason).join('\n'), /ambiguous/);
+});
+
+test('real Sunbae page: 78 units, 8 standalone links keep their URLs in v2 and v1, and re-extraction is stable', () => {
+  const path = 'app/kpop/what-does-sunbae-and-hoobae-mean-in-kpop/page.tsx';
+  assert.ok(existsSync(path), `real page ${path} not found`);
+  const code = readFileSync(path, 'utf8');
+  const sourcePath = '/kpop/what-does-sunbae-and-hoobae-mean-in-kpop';
+  const source = extractFromTsx(code, { fileName: path, sourcePath });
+  assert.equal(source.units.length, 78);
+  assert.equal(new Set(source.units.map((u) => u.id)).size, 78);
+  const expected = ['/kpop', ...[...code.matchAll(/href: "([^"]+)"/g)].map((m) => m[1])];
+  assert.equal(expected.length, 8);
+  const standalone = source.units.filter((u) => u.kind === 'block' && u.tag === 'a');
+  assert.deepEqual(standalone.map((u) => u.attrs?.href), expected);
+  const v1 = toSchemaV1(source);
+  for (const unit of standalone) {
+    const block = v1.blocks.find((b) => b.id === unit.id);
+    assert.ok(block.html.startsWith(`<a href="${unit.attrs.href}">`), block.html);
+  }
+  const again = extractFromTsx(code, { fileName: path, sourcePath, previous: source });
+  assert.deepEqual(again.units.map((u) => [u.id, u.hash]), source.units.map((u) => [u.id, u.hash]));
+  assert.deepEqual(translationStatus(again, translationFor(source)), { current: source.units.map((u) => u.id), stale: [], missing: [], unknown: [] });
+  const edited = extractFromTsx(code.replace('I grew up in a small town in Korea', 'I grew up in a very small town in Korea'), { fileName: path, sourcePath, previous: source });
+  const oldUnit = source.units.find((u) => u.text.startsWith('I grew up in a small town'));
+  const newUnit = edited.units.find((u) => u.text.startsWith('I grew up in a very small town'));
+  assert.equal(newUnit.id, oldUnit.id);
+  assert.notEqual(newUnit.hash, oldUnit.hash);
+  assert.deepEqual(translationStatus(edited, translationFor(source)).stale, [oldUnit.id]);
 });

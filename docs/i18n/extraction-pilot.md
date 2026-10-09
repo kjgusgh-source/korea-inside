@@ -47,7 +47,8 @@ the unit, never in the text:
     "a1": { "tag": "a", "attrs": { "className": "…", "href": "https://krdict.korean.go.kr/…66306", "target": "_blank", "rel": "noopener noreferrer" } },
     "a2": { "tag": "a", "attrs": { "…": "…" } }
   },
-  "hash": "<sha256 of tag + text + placeholder attributes>",
+  "attrs": {},
+  "hash": "<sha256 of tag + text + meaningful attributes (own and placeholders)>",
   "protect": ["선배", "후배"],
   "translate": true,
   "firstPerson": false
@@ -61,19 +62,43 @@ the unit, never in the text:
 - `firstPerson`: the operator's own experience ("I grew up…"). The translation
   must keep the first person and must not generalise.
 
+A unit that is itself a link (for example `← Back to K-pop` or a related-guide
+card) keeps its own locked attributes in `attrs`, e.g. `{ "href": "/kpop" }`.
+
+### Meaningful vs presentation attributes
+
+| Class | Attributes | Effect of a change |
+|---|---|---|
+| Meaningful (hashed) | `href`, `src`, `srcset`, `lang`, `dir`, `cite`, `datetime`, `scope`, `colspan`, `rowspan`, `headers` | translations of that unit become **stale** |
+| Translatable | `alt`, `title`, `aria-label` | own units; an `alt` unit also hashes its image's `src` |
+| Presentation / behaviour (locked, not hashed) | `className`, `style`, `id`, `target`, `rel`, `width`, `height`, `data-*` | no effect on translations; re-applied from the English structure |
+
 ### Stable IDs and change detection
 
-- `hash` covers the unit text **and** its locked attributes, so a changed URL
-  also marks translations stale.
+- `hash` covers the unit text, the unit's own meaningful attributes (a
+  standalone link's `href`, an image's `src` for its `alt` unit) and the
+  meaningful attributes of every placeholder. A CSS-only change marks nothing
+  stale.
+- `translationStatus(source, translation)` lists each unit as `current`,
+  `stale` (same ID, English changed), `missing` or `unknown` (translation for a
+  unit that no longer exists).
 - A new unit's ID comes from its anchor (nearest section `id`/`aria-label`,
   list key), its tag, and a short content hash. It does not depend on position,
   so inserting or reordering paragraphs does not renumber other units.
 - With `--previous <last source.json>` the extractor reconciles IDs:
-  1. identical content keeps its ID, even when moved;
-  2. edited text in the same anchor and tag keeps its ID when wording overlaps
-     at least 50%. The hash changes, so existing translations become **stale**
-     instead of disappearing;
+  1. identical content keeps its ID. Same-anchor pairs are matched first; a
+     remaining one-to-one pair is a moved block;
+  2. edited text with the same tag in the same anchor (or the same list, so a
+     related link whose `href` key changed still matches) keeps its ID when
+     wording overlaps at least 50% and one old unit is clearly closest. The
+     hash changes, so existing translations become **stale** instead of
+     disappearing;
   3. everything else gets a new ID.
+- **Ambiguous matches are never chosen silently.** If identical text could
+  belong to several old IDs, if two old units are about equally close (within
+  0.15), or if two edited blocks claim the same old unit, the block gets a new
+  ID and a `review` entry naming the candidates. A person maps the old
+  translation by hand.
 - Workflow rule: always extract with `--previous` pointing at the committed
   source snapshot. Without it, an edited paragraph gets a new ID.
 
@@ -121,6 +146,11 @@ Production when checked. It was used as the comparison reference.
 | Duplicates | 0 (IDs unique; no block extracted twice) |
 | Inserted paragraph / swapped sections | 0 existing IDs changed |
 | Edited paragraph with `--previous` | same ID, new hash (stale) |
+| Re-extraction with `--previous` | all 78 IDs and hashes unchanged; the earlier pilot snapshot (`ac19f96`, older hash formula) also maps to all 78 old IDs |
+| Standalone links | 8 (back link + 7 related guides): `href` kept in `attrs` and in the v1 view |
+| `href` change on the back link / a related link / an inline citation | exactly 1 unit stale each |
+| CSS-only change (all `className` values) or `rel` change | 0 units stale |
+| Identical or near-identical units (same tag, similarity ≥ 0.5) | none on this page, so no ambiguity risk |
 
 Not extracted on purpose: `SiteHeader`/`SiteFooter` (shared UI strings belong
 in a separate UI catalogue), and JSON-LD (rebuild per locale from the translated
@@ -160,16 +190,20 @@ and never insert translated HTML (`dangerouslySetInnerHTML`).
 
 ## Compatibility with PR #86 (schemaVersion 1)
 
-- `toSchemaV1(source)` emits PR #86 blocks: `<tag>` plus unit HTML with only
-  `href`/`target`/`rel`/`src`/`alt`/`title`/`aria-label`. Classes are
-  presentation and stay in `structure`.
+- `toSchemaV1(source)` emits PR #86 blocks. The wrapper and placeholders
+  carry only `href`/`target`/`rel`/`src`/`alt`/`title`/`aria-label`; classes
+  are presentation and stay in `structure`. Standalone links keep their URL on
+  the wrapper (`<a href="/kpop">← Back to K-pop</a>`). (The first pilot commit
+  dropped it; it is fixed and tested.)
+- The v1 view is a compatibility aid. Link integrity for v2 translations comes
+  from the placeholder rules and the unit hash, not from the v1 view: v1 does
+  not carry metadata or attribute units.
 - The Sunbae v1 view (67 translatable blocks) passed PR #86's `check.mjs` as an
   identity translation. This was checked locally against the PR #86 branch; the
   check is not part of this PR.
 - Migration path: v2 is the stored format. v1 is generated when needed. A v2
   translation becomes v1 through `renderUnitHtml`, after `validateUnitText`
   passes, so PR #86 checks still apply as a second gate.
-- v1 cannot carry metadata or attribute units; those exist only in v2.
 - **PR dependency:** this PR is based on `main` and imports nothing from PR #85
   or PR #86. Either can merge first. Cross-checking v1 against PR #86 is a local
   verification step.

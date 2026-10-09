@@ -37,8 +37,29 @@ const INLINE_TAGS = new Map([
 ]);
 // Attributes whose values are text for people, not configuration.
 export const TRANSLATABLE_ATTRIBUTES = Object.freeze(['alt', 'title', 'aria-label']);
-// Attributes kept on placeholders in the schemaVersion 1 compatibility view.
+// Attributes that change what a unit says or points to. They are part of the
+// unit hash, so changing one marks existing translations as stale.
+export const MEANINGFUL_ATTRIBUTES = Object.freeze(['href', 'src', 'srcset', 'lang', 'dir', 'cite', 'datetime', 'scope', 'colspan', 'rowspan', 'headers']);
+// Locked but not hashed: presentation and behaviour (className, style, id,
+// target, rel, width, height, data-*). Changing them never invalidates translations.
+const PRESENTATION_ATTRIBUTES = new Set(['classname', 'class', 'style', 'key', 'component']);
+// Attributes kept in the schemaVersion 1 compatibility view.
 const V1_ATTRIBUTES = new Set(['href', 'target', 'rel', 'src', 'alt', 'title', 'aria-label']);
+
+/** Meaningful attributes of an element, normalized for hashing. */
+export function meaningfulAttributes(attrs) {
+  const out = {};
+  for (const [name, value] of Object.entries(attrs ?? {})) {
+    if (!MEANINGFUL_ATTRIBUTES.includes(name.toLowerCase())) continue;
+    out[name.toLowerCase()] = value !== null && typeof value === 'object' ? `dynamic:${value.dynamic}` : value;
+  }
+  return Object.fromEntries(Object.entries(out).sort(([a], [b]) => a.localeCompare(b)));
+}
+
+/** Locked, non-presentation attributes stored on a unit (for rendering and v1). */
+function lockedAttributes(attrs) {
+  return Object.fromEntries(Object.entries(attrs ?? {}).filter(([name, value]) => !PRESENTATION_ATTRIBUTES.has(name.toLowerCase()) && value !== true && name !== 'id'));
+}
 const NOT_STATIC = Symbol('not-static');
 const FIRST_PERSON = /(?:^|[^A-Za-z’'])(?:I|I’m|I'm|I’ve|I've|I’d|I'd|me|my|mine|myself|we|our|us)(?![A-Za-z])/;
 const HANGUL_RUN = /[\u1100-\u11ff\u3130-\u318f\uac00-\ud7af]+(?:[\s·]+[\u1100-\u11ff\u3130-\u318f\uac00-\ud7af]+)*/g;
@@ -321,7 +342,7 @@ export function extractFromTsx(code, { fileName = 'page.tsx', sourcePath, previo
     return text;
   }
 
-  function unitFromElement({ node, tag, children, scope, anchor, path, inArticle, origin, wrapperAttrs }) {
+  function unitFromElement({ node, tag, children, scope, anchor, group, path, inArticle, origin, wrapperAttrs }) {
     const placeholders = {};
     let text = serializeInline(children, scope, path, {}, placeholders);
     if (/[{}]/.test(text.replace(/\{\/?[a-z]+[0-9]+\/?\}/g, ''))) {
@@ -329,7 +350,7 @@ export function extractFromTsx(code, { fileName = 'page.tsx', sourcePath, previo
     }
     text = text.replace(/\s+/g, ' ').trim();
     if (!text) return null;
-    const unit = makeUnit({ kind: 'block', tag, anchor, path, origin, text, placeholders, inArticle, wrapperAttrs });
+    const unit = makeUnit({ kind: 'block', tag, anchor, group, path, origin, text, placeholders, inArticle, wrapperAttrs });
     units.push(unit);
     return unit;
   }
@@ -347,7 +368,7 @@ export function extractFromTsx(code, { fileName = 'page.tsx', sourcePath, previo
       const text = cleanJsxText(node.text).trim();
       if (text) {
         flag(node, ctx.path, `text directly inside a structural element was extracted as its own unit: "${text.slice(0, 40)}"`);
-        const unit = makeUnit({ kind: 'block', tag: '#text', anchor: ctx.anchor, path: ctx.path, origin: 'jsx', text, placeholders: {}, inArticle: ctx.inArticle, needsReview: true });
+        const unit = makeUnit({ kind: 'block', tag: '#text', anchor: ctx.anchor, group: ctx.group, path: ctx.path, origin: 'jsx', text, placeholders: {}, inArticle: ctx.inArticle, needsReview: true });
         units.push(unit);
         return { unit: unit.key };
       }
@@ -360,7 +381,7 @@ export function extractFromTsx(code, { fileName = 'page.tsx', sourcePath, previo
       if (typeof value === 'string' || typeof value === 'number') {
         if (String(value).trim() === '') return null;
         flag(node, ctx.path, 'text expression directly inside a structural element was extracted as its own unit');
-        const unit = makeUnit({ kind: 'block', tag: '#text', anchor: ctx.anchor, path: ctx.path, origin: expression.getText(sourceFile), text: String(value).trim(), placeholders: {}, inArticle: ctx.inArticle, needsReview: true });
+        const unit = makeUnit({ kind: 'block', tag: '#text', anchor: ctx.anchor, group: ctx.group, path: ctx.path, origin: expression.getText(sourceFile), text: String(value).trim(), placeholders: {}, inArticle: ctx.inArticle, needsReview: true });
         units.push(unit);
         return { unit: unit.key };
       }
@@ -400,6 +421,9 @@ export function extractFromTsx(code, { fileName = 'page.tsx', sourcePath, previo
             ...ctx,
             scope,
             anchor: `${ctx.anchor}-${slug(listName)}-${slug(keyValue)}`,
+            // Items of one list share a matching group, so an item whose key
+            // (e.g. its href) changed can still be matched to its old ID.
+            group: `${ctx.anchor}-${slug(listName)}`,
             path: `${ctx.path}>${listName}[${index}]`,
             origin: `data:${listName}[${index}]`,
           });
@@ -427,7 +451,7 @@ export function extractFromTsx(code, { fileName = 'page.tsx', sourcePath, previo
     const attributeUnits = {};
     for (const attribute of TRANSLATABLE_ATTRIBUTES) {
       if (typeof attrs[attribute] === 'string' && attrs[attribute].trim()) {
-        const unit = makeUnit({ kind: 'attr', tag: `${tag}@${attribute}`, anchor, path: `${path}@${attribute}`, origin: ctx.origin ?? 'jsx', text: attrs[attribute].trim(), placeholders: {}, inArticle });
+        const unit = makeUnit({ kind: 'attr', tag: `${tag}@${attribute}`, anchor, group: ctx.group, path: `${path}@${attribute}`, origin: ctx.origin ?? 'jsx', text: attrs[attribute].trim(), placeholders: {}, inArticle, wrapperAttrs: meaningfulAttributes(attrs) });
         units.push(unit);
         attributeUnits[attribute] = unit.key;
       }
@@ -442,7 +466,7 @@ export function extractFromTsx(code, { fileName = 'page.tsx', sourcePath, previo
 
     const childCtx = { ...ctx, anchor, path, inArticle, counter: {}, origin: ctx.origin };
     if ((BLOCK_TAGS.has(tag) || INLINE_TAGS.has(name) || isInlineOnly(children, ctx.scope)) && isInlineOnly(children, ctx.scope) && hasText(children, ctx.scope)) {
-      const unit = unitFromElement({ node, tag, children, scope: ctx.scope, anchor, path, inArticle, origin: ctx.origin ?? 'jsx', wrapperAttrs: attrs });
+      const unit = unitFromElement({ node, tag, children, scope: ctx.scope, anchor, group: ctx.group, path, inArticle, origin: ctx.origin ?? 'jsx', wrapperAttrs: attrs });
       return { element: tag, attrs, attributeUnits, unit: unit?.key ?? null };
     }
     if (BLOCK_TAGS.has(tag) && hasText(children, ctx.scope) && !isInlineOnly(children, ctx.scope)) {
@@ -459,32 +483,44 @@ export function extractFromTsx(code, { fileName = 'page.tsx', sourcePath, previo
   const structure = walk(root, { anchor: 'page', path: 'page', scope: new Map(), inArticle: false, counter: {}, origin: null });
   return finish(structure);
 
-  function makeUnit({ kind, tag, anchor, path, origin, text, placeholders = {}, inArticle = false, wrapperAttrs = null, needsReview = false }) {
+  function makeUnit({ kind, tag, anchor, group = null, path, origin, text, placeholders = {}, inArticle = false, wrapperAttrs = null, needsReview = false }) {
     const plain = plainText(text);
     const protect = [...new Set([...(plain.match(HANGUL_RUN) ?? []), ...PROTECTED_WORDS.filter((w) => plain.includes(w))])];
     const translate = /[A-Za-z]/.test(plain.replace(HANGUL_RUN, '').replace(/\b(?:HAEMIL)\b/g, ''));
     const lockedPlaceholders = Object.fromEntries(Object.entries(placeholders).map(([k, v]) => [k, v]));
+    const unitAttrs = lockedAttributes(wrapperAttrs);
+    // The hash covers the text, the unit's own meaningful attributes (a standalone
+    // link's href, an image's src for its alt text) and every placeholder's
+    // meaningful attributes. Presentation attributes are deliberately excluded.
+    const hashInput = [
+      tag,
+      text,
+      meaningfulAttributes(wrapperAttrs),
+      Object.fromEntries(Object.entries(lockedPlaceholders).map(([k, v]) => [k, { tag: v.tag, attrs: meaningfulAttributes(v.attrs) }])),
+    ];
     return {
       key: `${anchor}|${tag}|${text}`,
       kind,
       tag,
       anchor,
+      group: group ?? anchor,
       path,
       origin,
       text,
+      attrs: unitAttrs,
       placeholders: lockedPlaceholders,
-      hash: contentHash(JSON.stringify([tag, text, lockedPlaceholders])),
+      hash: contentHash(JSON.stringify(hashInput)),
       translate,
       protect,
       firstPerson: kind !== 'meta' && FIRST_PERSON.test(plain.replace(/“[^”]*”|"[^"]*"/g, '')),
       inArticle,
-      wrapperAttrs,
       needsReview,
     };
   }
 
   function finish(structure = null) {
-    const ids = assignIds(units, previous);
+    const { ids, notes } = assignIds(units, previous);
+    review.push(...notes);
     const keyToId = new Map(units.map((unit, i) => [unit.key, ids[i]]));
     const replaceKeys = (node) => {
       if (!node || typeof node !== 'object') return node;
@@ -504,9 +540,8 @@ export function extractFromTsx(code, { fileName = 'page.tsx', sourcePath, previo
       sourceFile: fileName,
       extractor: EXTRACTOR_VERSION,
       units: units.map((unit, i) => {
-        const { key, wrapperAttrs, ...rest } = unit;
+        const { key, ...rest } = unit;
         void key;
-        void wrapperAttrs;
         return { id: ids[i], ...rest };
       }),
       review,
@@ -536,34 +571,88 @@ function similarity(a, b) {
 
 export function assignIds(units, previous) {
   const ids = new Array(units.length).fill(null);
+  const ambiguous = new Set();
   const used = new Set();
+  const notes = [];
   const prevUnits = Array.isArray(previous?.units) ? previous.units : [];
-  // 1) identical content anywhere in the page keeps its ID (moved blocks).
-  units.forEach((unit, i) => {
-    const match = prevUnits.find((p) => !used.has(p.id) && p.hash === unit.hash);
-    if (match) { ids[i] = match.id; used.add(match.id); }
-  });
-  // 2) same anchor + tag and similar wording keeps its ID (edited blocks).
-  units.forEach((unit, i) => {
-    if (ids[i]) return;
-    let best = null;
-    for (const p of prevUnits) {
-      if (used.has(p.id) || p.anchor !== unit.anchor || p.tag !== unit.tag) continue;
-      const score = similarity(p.text, unit.text);
-      if (score >= 0.5 && (!best || score > best.score)) best = { id: p.id, score };
+  const take = (i, id) => { ids[i] = id; used.add(id); };
+  const note = (i, reason) => {
+    ambiguous.add(i);
+    notes.push({ line: null, where: units[i].path, reason: `ambiguous ID match (${reason}); a new ID was assigned — map the old translation by hand` });
+  };
+
+  // 1) Identical content keeps its ID. Same-anchor pairs are matched first; a
+  //    remaining one-to-one pair is a moved block. Anything else is ambiguous.
+  const hashes = new Set(units.map((u) => u.hash));
+  for (const hash of hashes) {
+    const fresh = units.map((u, i) => (u.hash === hash ? i : -1)).filter((i) => i >= 0);
+    const old = prevUnits.filter((p) => p.hash === hash);
+    if (!old.length) continue;
+    for (const i of fresh) {
+      const sameAnchorNew = fresh.filter((j) => units[j].anchor === units[i].anchor);
+      const sameAnchorOld = old.filter((p) => p.anchor === units[i].anchor && !used.has(p.id));
+      if (sameAnchorNew.length === 1 && sameAnchorOld.length === 1) take(i, sameAnchorOld[0].id);
     }
-    if (best) { ids[i] = best.id; used.add(best.id); }
+    const restNew = fresh.filter((i) => !ids[i]);
+    const restOld = old.filter((p) => !used.has(p.id));
+    if (restNew.length === 1 && restOld.length === 1) take(restNew[0], restOld[0].id);
+    else if (restNew.length && restOld.length) {
+      for (const i of restNew) note(i, `identical text also existed as ${restOld.map((p) => p.id).join(', ')}`);
+    }
+  }
+
+  // 2) Edited text in the same anchor and tag keeps its ID only when one old
+  //    unit is clearly the closest and no other new unit claims it.
+  const best = new Map();
+  units.forEach((unit, i) => {
+    if (ids[i] || ambiguous.has(i)) return;
+    const candidates = prevUnits
+      .filter((p) => !used.has(p.id) && p.tag === unit.tag && ((p.group ?? p.anchor) === unit.group || p.anchor === unit.anchor))
+      .map((p) => ({ id: p.id, score: similarity(p.text, unit.text) }))
+      .filter((c) => c.score >= 0.5)
+      .sort((a, b) => b.score - a.score);
+    if (!candidates.length) return;
+    if (candidates[1] && candidates[1].score >= candidates[0].score - 0.15) {
+      note(i, `edited text is about as close to ${candidates.slice(0, 2).map((c) => c.id).join(' and ')}`);
+      return;
+    }
+    best.set(i, candidates[0].id);
   });
-  // 3) everything else gets a new content-derived ID (independent of order).
+  const claims = new Map();
+  for (const [i, id] of best) claims.set(id, [...(claims.get(id) ?? []), i]);
+  for (const [id, claimants] of claims) {
+    if (claimants.length === 1) take(claimants[0], id);
+    else for (const i of claimants) note(i, `${claimants.length} edited blocks are closest to ${id}`);
+  }
+
+  // 3) Everything else gets a new content-derived ID (independent of order).
   units.forEach((unit, i) => {
     if (ids[i]) return;
     const base = `${unit.anchor}-${slug(unit.tag)}-${unit.hash.slice(0, 8)}`;
     let id = base;
     for (let n = 2; used.has(id); n += 1) id = `${base}-${n}`;
-    ids[i] = id;
-    used.add(id);
+    take(i, id);
   });
-  return ids;
+  return { ids, notes };
+}
+
+/**
+ * Compare a schemaVersion 2 translation with the current source:
+ * current = same ID and hash, stale = same ID but the English unit changed,
+ * missing = no translation yet, unknown = translation for a unit that no longer exists.
+ */
+export function translationStatus(source, translation) {
+  const sourceById = new Map(source.units.map((u) => [u.id, u]));
+  const translated = new Map((translation?.units ?? []).map((u) => [u.id, u]));
+  const status = { current: [], stale: [], missing: [], unknown: [] };
+  for (const unit of source.units) {
+    const t = translated.get(unit.id);
+    if (!t) status.missing.push(unit.id);
+    else if (t.sourceHash !== unit.hash) status.stale.push(unit.id);
+    else status.current.push(unit.id);
+  }
+  for (const id of translated.keys()) if (!sourceById.has(id)) status.unknown.push(id);
+  return status;
 }
 
 // ---------------------------------------------------------------------------
@@ -659,6 +748,15 @@ export function renderUnitHtml(unit, text = unit.text, { attributes = V1_ATTRIBU
 }
 
 /** schemaVersion 1 view (PR #86 contract) of a schemaVersion 2 source. */
+/** schemaVersion 1 HTML for one unit, with its own locked attributes on the wrapper. */
+export function unitToV1Html(unit, text = unit.text) {
+  const tag = /^[a-z][a-z0-9]*$/.test(unit.tag) ? unit.tag : 'p';
+  const attrs = Object.entries(unit.attrs ?? {})
+    .filter(([k, v]) => V1_ATTRIBUTES.has(k) && typeof v === 'string')
+    .map(([k, v]) => ` ${k}="${escapeHtml(v)}"`).join('');
+  return `<${tag}${attrs}>${renderUnitHtml(unit, text)}</${tag}>`;
+}
+
 export function toSchemaV1(source) {
   return {
     schemaVersion: 1,
@@ -666,10 +764,7 @@ export function toSchemaV1(source) {
     sourcePath: source.sourcePath,
     blocks: source.units
       .filter((unit) => unit.kind === 'block' && unit.translate)
-      .map((unit) => {
-        const tag = /^[a-z][a-z0-9]*$/.test(unit.tag) ? unit.tag : 'p';
-        return { id: unit.id, html: `<${tag}>${renderUnitHtml(unit)}</${tag}>` };
-      }),
+      .map((unit) => ({ id: unit.id, html: unitToV1Html(unit) })),
   };
 }
 
@@ -740,7 +835,8 @@ export function buildReport(source, comparison = null) {
   lines.push('', '## Units', '', '| # | ID | Kind / tag | Location | English (text + placeholders) | Placeholders | Flags | Built HTML |', '|---|---|---|---|---|---|---|---|');
   const status = new Map((comparison?.results ?? []).map((r) => [r.id, r.status]));
   source.units.forEach((unit, i) => {
-    const ph = Object.entries(unit.placeholders).map(([k, v]) => `${k}=<${v.tag}${typeof v.attrs.href === 'string' ? ` ${v.attrs.href}` : ''}>`).join('<br>');
+    const own = Object.entries(unit.attrs ?? {}).filter(([k]) => MEANINGFUL_ATTRIBUTES.includes(k.toLowerCase())).map(([k, v]) => `self ${k}=${typeof v === 'string' ? v : 'dynamic'}`);
+    const ph = [...own, ...Object.entries(unit.placeholders).map(([k, v]) => `${k}=<${v.tag}${typeof v.attrs.href === 'string' ? ` ${v.attrs.href}` : ''}>`)].join('<br>');
     const flags = [!unit.translate && 'keep', unit.firstPerson && '1st-person', unit.protect.length && `protect: ${unit.protect.join(', ')}`, unit.needsReview && 'REVIEW'].filter(Boolean).join('; ');
     lines.push(`| ${i + 1} | \`${unit.id}\` | ${unit.kind} / ${cell(unit.tag)} | ${cell(unit.origin === 'jsx' ? unit.path.split('>').slice(-2).join('>') : unit.origin)} | ${cell(unit.text)} | ${cell(ph)} | ${cell(flags)} | ${status.get(unit.id) ?? (unit.inArticle ? '-' : 'n/a')} |`);
   });
