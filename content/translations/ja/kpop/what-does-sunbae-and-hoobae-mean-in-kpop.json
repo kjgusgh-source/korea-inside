@@ -4,13 +4,13 @@
   "sourceLocale": "en",
   "locale": "ja",
   "status": "draft",
-  "glossaryVersion": "0.2.1-ja-pilot",
+  "glossaryVersion": "0.3.0-ja-pilot",
   "draftedBy": "AI draft in a Cowork session (no paid translation API). Not reviewed by a native speaker.",
   "units": [
     {
       "id": "meta-title-67882371",
       "sourceHash": "6ea2e14adf9abc0841745b81e18a143ca28d10fe5fafaedc0a44e90df27edac0",
-      "text": "ソンベとフベの本当の意味とは？韓国語の先輩・後輩を表す言葉"
+      "text": "ソンベとフベとは？韓国語の2つの言葉の本当の意味"
     },
     {
       "id": "meta-description-efb086ba",
@@ -25,12 +25,12 @@
     {
       "id": "header-p-e98ed66c",
       "sourceHash": "47bb82473dd42748c82f31bd7df07eaf3df78e7a31bae08c784338fd0b4a874c",
-      "text": "K-POPで知る韓国文化｜現地目線で"
+      "text": "K-POPで知る韓国文化｜現地の人の目線で"
     },
     {
       "id": "header-h1-299cbd58",
       "sourceHash": "62f0333a2c2989b6f78e2e0acbff2ca21e97b0f07572a0b88645f3324ba7857e",
-      "text": "ソンベとフベの本当の意味とは？韓国語の先輩・後輩を表す言葉"
+      "text": "ソンベとフベとは？韓国語の2つの言葉の本当の意味"
     },
     {
       "id": "header-p-78cf4305",
@@ -165,7 +165,7 @@
     {
       "id": "work-p-372cca95",
       "sourceHash": "637bd391dbf89fd2f88d9197b7847edd08d57619c7b4762d7f95b3ee015c4860",
-      "text": "韓国の職場では、一日中お互いをソンベ、フベと呼び合うとは限りません。役職名で呼ぶほうが便利なことも多いです。"
+      "text": "韓国の職場では、一日中お互いをソンベ、フベと呼び合うとは限りません。役職名のほうが使いやすいことも多いです。"
     },
     {
       "id": "work-p-9fd11b6a",
@@ -240,7 +240,7 @@
     {
       "id": "work-p-b61319f2",
       "sourceHash": "b885126c062ed32b54edcceb5b7e2fb9e0a01b4363932b17dd85b18973ccd16b",
-      "text": "上司が自分より年下ということもあります。先に入った人のほうが役職が低いこともあります。仕事を教えてくれる人は、職場によっては非公式に{em1}サス{/em1}（사수）と呼ばれますが、その人が自分の上司とは限りません。"
+      "text": "上司が自分より年下ということもあります。先に入った人のほうが役職が低いこともあります。仕事を教えてくれる人は、職場によっては非公式に{em1}サス{/em1}（사수）と呼ばれますが、その人も自分の上司とは限りません。"
     },
     {
       "id": "military-h2-713236a7",
@@ -255,7 +255,7 @@
     {
       "id": "military-p-c646635f",
       "sourceHash": "47a373f54a2ceb5a71c5a53b7e5d6450af78f2af793e9bc5e2cd7786f1dd91f9",
-      "text": "私が兵役に就いていた頃、兵士同士の話し方を見ると、そのことが特にはっきりわかりました。先輩の兵士は後輩に対して、たいてい{em1}パンマル{/em1}（반말）、つまりくだけた話し方を使っていました。後輩は先輩に話しかけるとき、ずっとかしこまった話し方をしていました。私たちはよく、それを{em2}ダナッカ{/em2}（다나까）式と呼んでいました。日常的な丁寧語の「-요」で終わる言い方ではなく、「알겠습니다」や「알겠습니까?」のような表現です。"
+      "text": "私が兵役に就いていた頃、兵士同士の話し方を見ると、そのことが特にはっきりわかりました。先輩の兵士は後輩に対して、一般的に{em1}パンマル{/em1}（반말）、つまりくだけた話し方を使っていました。後輩は先輩に話しかけるとき、ずっとかしこまった話し方をしていました。私たちはよく、それを{em2}ダナッカ{/em2}（다나까）式と呼んでいました。日常的な丁寧語の「-요」で終わる言い方ではなく、「알겠습니다」や「알겠습니까?」のような表現です。"
     },
     {
       "id": "military-p-8168b738",
@@ -310,12 +310,12 @@
     {
       "id": "a-local-take-from-haemil-aside-aria-label-16f9de9e",
       "sourceHash": "a1930a6164aca65b4e662b0a3ac0d1c8c369e85334eb50edf03d6b0137fcb8fd",
-      "text": "HAEMILから、現地目線のひとこと"
+      "text": "HAEMILから、現地の人の目線でひとこと"
     },
     {
       "id": "a-local-take-from-haemil-h2-9801a4b5",
       "sourceHash": "fc1e6ea716a8b4ec1bbda3da833191c470fbbdb5c3e2509f420026d560a70c01",
-      "text": "HAEMILから、現地目線のひとこと"
+      "text": "HAEMILから、現地の人の目線でひとこと"
     },
     {
       "id": "a-local-take-from-haemil-p-044c58b0",

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "glossaryVersion": "0.2.1-ja-pilot",
+  "glossaryVersion": "0.3.0-ja-pilot",
   "status": "draft",
   "basedOn": "Phase 0 benchmark glossary draft (23 terms), reviewed for the Sunbae / Hoobae Japanese pilot",
   "reviewNote": "Japanese entries were written and checked by the same AI model that drafted the pilot translation. They are not reviewed by a native Japanese speaker. Entries for other locales are carried over from Phase 0 unchanged and are unreviewed.",
@@ -21,8 +21,8 @@
       "Plain English 'senior' / 'junior' (not the romanized Korean word) may be translated as 先輩 / 後輩.",
       "K-pop is written K-POP.",
       "Use full-width Japanese punctuation. Keep Latin spellings inside placeholders when the English discusses the spelling itself (seonbae, hubae, sunbae, hoobae).",
-      "ja.avoid lists are blocked anywhere on the page. ja.cautions are context rules checked in review, not by string match.",
-      "Media and organization names whose official Japanese name has not been verified keep the English source spelling (e.g. Yonhap News). Korean personal names are written in katakana with a middle dot between family and given name (ナ・フナ); they stay marked needsVerification until checked."
+      "Media and organization names whose official Japanese name has not been verified keep the English source spelling (e.g. Yonhap News). Korean personal names are written in katakana with a middle dot between family and given name (ナ・フナ); they stay marked needsVerification until checked.",
+      "ja.avoid is scoped: a listed word is blocked only in units whose English source mentions that term (its English forms or Korean). The same word can be correct Japanese elsewhere (e.g. 代理 or 年功序列 in a general context). ja.cautions are context rules checked in review, not by string match."
     ]
   },
   "terms": [
@@ -118,7 +118,7 @@
         ],
         "explainOnFirstUse": false,
         "cautions": [
-          "上下関係 only when rank or authority is meant as well."
+          "年功序列 is a correct Japanese term for pay and promotion by age and length of service; it is wrong only as a translation of this article's seniority (who started first). 上下関係 only when rank or authority is meant as well."
         ]
       },
       "protectHangul": []
@@ -143,6 +143,7 @@
         ],
         "explainOnFirstUse": false,
         "cautions": [
+          "代理 / 代理人 are ordinary Japanese words (deputy, agent; e.g. 部長代理 is a different title); blocked only as a rendering of 대리 / daeri.",
           "Do not present 係長 / 主任 as an equivalent: not in the source, and the title systems differ."
         ]
       },
@@ -212,12 +213,14 @@
         "contextRules": [
           "Gloss as the English source does: つまり先輩の兵士."
         ],
-        "avoid": [
-          "先任"
-        ],
+        "avoid": [],
         "explainOnFirstUse": false,
         "cautions": [
-          "Do not use 上官 for seonim: a seonim is an earlier-enlisted soldier, not an officer."
+          "Do not use 上官 for seonim: a seonim is an earlier-enlisted soldier, not an officer.",
+          "ソニム and the honorific -ニム look alike in katakana; the Hangul 선임 shown with it is the disambiguation. Native check requested."
+        ],
+        "acceptable": [
+          "先任（の兵士） — a legitimate Japanese word for seniority by earlier appointment, also used for military seniors. Acceptable gloss for seonim; the draft keeps 先輩の兵士 to mirror the English \"senior soldier\". Native reviewer to choose."
         ]
       },
       "protectHangul": [
@@ -324,9 +327,9 @@
         "A local take"
       ],
       "ja": {
-        "preferred": "現地目線",
+        "preferred": "現地の人の目線",
         "contextRules": [
-          "Site label, not a claim about all Koreans."
+          "Site label for the operator's own perspective as someone from Korea, not a claim about all Koreans."
         ],
         "avoid": [],
         "explainOnFirstUse": false,
@@ -334,7 +337,8 @@
           "Do not turn the operator's view into a claim about all Koreans (e.g. 韓国人の総意, ネイティブ解説)."
         ],
         "alternatives": [
-          "地元目線 (can read as one's own hometown; needs native check)"
+          "現地目線 (shorter; can read as an on-the-spot or reporter's view rather than a local person's own experience)",
+          "地元目線 (can read as one's own hometown)"
         ]
       },
       "protectHangul": []
@@ -568,7 +572,7 @@
         "en": "Na Hoon-a",
         "ja": "ナ・フナ",
         "needsVerification": true,
-        "note": "Middle-dot form ナ・フナ used consistently; ナフナ not used."
+        "note": "Middle-dot form ナ・フナ used consistently; ナフナ not used. A source for the Japanese spelling was supplied by the site owner but could not be opened in this review session; keep needsVerification until checked."
       },
       {
         "en": "CSR",
@@ -588,7 +592,8 @@
       {
         "en": "Martin",
         "ja": "マーティン",
-        "needsVerification": true
+        "needsVerification": true,
+        "note": "A source for the Japanese spelling was supplied by the site owner but could not be opened in this review session; keep needsVerification until checked."
       },
       {
         "en": "HYBE",
@@ -825,6 +830,7 @@
     "Added ja avoid terms (blocked anywhere on the page): 年功序列, 後任 / 後任者 (hoobae, huim), 代理 / 代理人 (daeri), 先任 (seonim), 商社 (sangsa), 狙撃手 (sasu), 先輩様 (sunbaenim), Kポップ. Context-only cautions are kept separately in ja.cautions (上司 / 年上 for sunbae, 上下関係, 係長 / 主任, 上官, 部下, タメ口)."
   ],
   "changelog": [
-    "0.2.1-ja-pilot: press-event term added; unverified media names keep the English source spelling; personal-name rule (middle dot) recorded. Not native-reviewed."
+    "0.2.1-ja-pilot: press-event term added; unverified media names keep the English source spelling; personal-name rule (middle dot) recorded. Not native-reviewed.",
+    "0.3.0-ja-pilot: ja.avoid is now scoped to units that mention the term; 先任 moved from avoid to acceptable for seonim; 年功序列 / 代理 documented as correct in general contexts; local-take preferred form 現地の人の目線. Not native-reviewed."
   ]
 }
