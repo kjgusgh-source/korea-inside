@@ -65,18 +65,20 @@ Japanese reviewer has signed off.
 
 ## External sources
 
-The site owner listed these sources for this review:
+The site owner listed these sources. Results come from the Cowork review
+session: only sources actually opened in that session are recorded as
+checked; the others stay unverified.
 
-- 한국어기초사전, 선임: https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=62614
-- Kpedia, 先任: https://www.kpedia.jp/s/1/先任
-- 나훈아 spelling: https://linkco.re/61XSvpc8?lang=en
-- BoA source article: https://www.yna.co.kr/view/AKR20201201114000005
-- CORTIS in Japanese (KBS WORLD): https://world.kbs.co.kr/service/contents_view.htm?board_seq=461430&lang=j&menu_cate=artist
+| Source | Result | Effect on the draft |
+|---|---|---|
+| Kpedia, 先任: https://www.kpedia.jp/s/1/先任 | Opened in the Cowork session. 선임（ソニム）→ 先任; 선임병（ソニムビョン）→ 先任兵, 古参兵, 自分より先に入隊した兵士; 선임자 → 先任者. No 후임 entry on that page. | Supports 先任 / 古参兵 as candidate glosses and the reading ソニム. Wording choice left to the native reviewer. |
+| linkco.re, Na Hoon-a: https://linkco.re/61XSvpc8?lang=en | Opened in the Cowork session. Japanese description and keywords use ナ・フナ; the description also shows 羅勲児(ナ・フナ). | The draft spelling ナ・フナ matches this source. |
+| 한국어기초사전, 선임: https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=62614 | Not opened in the Cowork session (the site's robots rules blocked the fetch tool). | Not verified. |
+| KBS WORLD Japanese, CORTIS: https://world.kbs.co.kr/service/contents_view.htm?board_seq=461430&lang=j&menu_cate=artist | Not opened in the Cowork session (blocked for the fetch tool). | マーティン not verified in this session. |
+| Yonhap News, BoA: https://www.yna.co.kr/view/AKR20201201114000005 | Not opened in the Cowork session (blocked for the fetch tool). | Event type not verified; プレスイベント follows the English "press event". |
 
-**None of them could be opened in this review session** (the fetch tool
-refused URLs that were not in a chat message). The 先任 decision above relies
-on general knowledge of the word plus the owner's note; the names ナ・フナ and
-マーティン are therefore still marked `needsVerification`.
+A spelling that matches a source is not a native naturalness check; both
+remain separate review steps.
 
 ## Automated checks (offline, outside the repo)
 
@@ -97,7 +99,7 @@ on general knowledge of the word plus the owner's note; the names ナ・フナ a
 2. 現地の人の目線 (three units) — does it read as the operator's own view?
 3. ソニム vs 先任 for 선임.
 4. 役職という軸が加わる; 役職名のほうが使いやすい.
-5. Name spellings ナ・フナ, ユナ, マーティン against the owner's sources.
+5. Name spellings: ナ・フナ matches the linkco.re source; ユナ and マーティン are not verified.
 6. All 14 first-person units for tone.
 7. Preview UI strings (notice, EN link label) — outside this file.
 
