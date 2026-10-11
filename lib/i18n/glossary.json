@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "glossaryVersion": "0.2.0-ja-pilot",
+  "glossaryVersion": "0.2.1-ja-pilot",
   "status": "draft",
   "basedOn": "Phase 0 benchmark glossary draft (23 terms), reviewed for the Sunbae / Hoobae Japanese pilot",
   "reviewNote": "Japanese entries were written and checked by the same AI model that drafted the pilot translation. They are not reviewed by a native Japanese speaker. Entries for other locales are carried over from Phase 0 unchanged and are unreviewed.",
@@ -21,7 +21,8 @@
       "Plain English 'senior' / 'junior' (not the romanized Korean word) may be translated as 先輩 / 後輩.",
       "K-pop is written K-POP.",
       "Use full-width Japanese punctuation. Keep Latin spellings inside placeholders when the English discusses the spelling itself (seonbae, hubae, sunbae, hoobae).",
-      "ja.avoid lists are blocked anywhere on the page. ja.cautions are context rules checked in review, not by string match."
+      "ja.avoid lists are blocked anywhere on the page. ja.cautions are context rules checked in review, not by string match.",
+      "Media and organization names whose official Japanese name has not been verified keep the English source spelling (e.g. Yonhap News). Korean personal names are written in katakana with a middle dot between family and given name (ナ・フナ); they stay marked needsVerification until checked."
     ]
   },
   "terms": [
@@ -533,6 +534,26 @@
         "explainOnFirstUse": true
       },
       "protectHangul": []
+    },
+    {
+      "key": "press-event",
+      "ko": "기자간담회 / 보도 행사",
+      "meaningKo": "언론을 대상으로 한 행사. 원문은 'press event'이며 기자회견(press conference)으로 특정하지 않는다.",
+      "en": [
+        "press event"
+      ],
+      "ja": {
+        "preferred": "プレスイベント",
+        "contextRules": [
+          "Use 記者会見 only where the English says press conference."
+        ],
+        "avoid": [],
+        "cautions": [
+          "Do not narrow 'press event' to 記者会見 or 記者懇談会 without a source."
+        ],
+        "explainOnFirstUse": false
+      },
+      "protectHangul": []
     }
   ],
   "names": {
@@ -546,7 +567,8 @@
       {
         "en": "Na Hoon-a",
         "ja": "ナ・フナ",
-        "needsVerification": true
+        "needsVerification": true,
+        "note": "Middle-dot form ナ・フナ used consistently; ナフナ not used."
       },
       {
         "en": "CSR",
@@ -585,18 +607,21 @@
       },
       {
         "en": "Yonhap News",
-        "ja": "聯合ニュース",
-        "needsVerification": true
+        "ja": "Yonhap News",
+        "needsVerification": false,
+        "note": "Official Japanese name not verified; English source spelling kept."
       },
       {
         "en": "CBS NoCut News",
-        "ja": "CBSノーカットニュース",
-        "needsVerification": true
+        "ja": "CBS NoCut News",
+        "needsVerification": false,
+        "note": "Official Japanese name not verified; English source spelling kept."
       },
       {
         "en": "Korea Economic Daily",
-        "ja": "韓国経済新聞",
-        "needsVerification": true
+        "ja": "Korea Economic Daily",
+        "needsVerification": false,
+        "note": "Official Japanese name not verified; English source spelling kept."
       }
     ]
   },
@@ -798,5 +823,8 @@
     "es sunbae: 'jefe' removed from the avoid list ('boss' sentences need it).",
     "Added: seniority, sangsa, k-pop, local-take, rookie-group, proper names.",
     "Added ja avoid terms (blocked anywhere on the page): 年功序列, 後任 / 後任者 (hoobae, huim), 代理 / 代理人 (daeri), 先任 (seonim), 商社 (sangsa), 狙撃手 (sasu), 先輩様 (sunbaenim), Kポップ. Context-only cautions are kept separately in ja.cautions (上司 / 年上 for sunbae, 上下関係, 係長 / 主任, 上官, 部下, タメ口)."
+  ],
+  "changelog": [
+    "0.2.1-ja-pilot: press-event term added; unverified media names keep the English source spelling; personal-name rule (middle dot) recorded. Not native-reviewed."
   ]
 }

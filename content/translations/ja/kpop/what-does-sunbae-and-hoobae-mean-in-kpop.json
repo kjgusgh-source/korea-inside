@@ -4,7 +4,7 @@
   "sourceLocale": "en",
   "locale": "ja",
   "status": "draft",
-  "glossaryVersion": "0.2.0-ja-pilot",
+  "glossaryVersion": "0.2.1-ja-pilot",
   "draftedBy": "AI draft in a Cowork session (no paid translation API). Not reviewed by a native speaker.",
   "units": [
     {
@@ -280,12 +280,12 @@
     {
       "id": "kpop-p-b51e6858",
       "sourceHash": "7456ce7dc1ad662134cd51dd7592a44eae843b12ede27aa2173904a6d1f9fac0",
-      "text": "2000年にデビューしたBoAを例に見てみましょう。20周年の記者会見で、BoAはベテラン歌手のナ・フナのパフォーマンスを見て学んだことを話しながら、彼を{em1}ソンベニム{/em1}と呼びました（{a1}聯合ニュース{/a1}）。2022年には、新人グループCSRのユナが、ロールモデルとしてBoAの名前を挙げる際に、BoAを{em2}ソンベニム{/em2}と呼んでいます（{a2}CBSノーカットニュース{/a2}）。BoAは、あるアーティストにとっては先輩で、別のアーティストにとっては後輩でもあるのです。"
+      "text": "2000年にデビューしたBoAを例に見てみましょう。20周年のプレスイベントで、BoAはベテラン歌手のナ・フナのパフォーマンスを見て学んだことを話しながら、彼を{em1}ソンベニム{/em1}と呼びました（{a1}Yonhap News{/a1}）。2022年には、新人グループCSRのユナが、ロールモデルとしてBoAの名前を挙げる際に、BoAを{em2}ソンベニム{/em2}と呼んでいます（{a2}CBS NoCut News{/a2}）。BoAは、あるアーティストにとっては先輩で、別のアーティストにとっては後輩でもあるのです。"
     },
     {
       "id": "kpop-p-0029ddec",
       "sourceHash": "fe689ff3817c6706daeef32fc9e3a3e40fe568c1a37e2b164868f3abe64e7270",
-      "text": "2025年の{a1}CORTIS{/a1}のデビューショーケースでは、マーティンが、HYBEで先輩アーティストたちの音楽制作に関わってきて、ようやく自分のグループでステージに立つことになった経緯を語りました（{a2}韓国経済新聞{/a2}）。"
+      "text": "2025年の{a1}CORTIS{/a1}のデビューショーケースでは、マーティンが、HYBEで先輩アーティストたちの音楽制作に関わってきて、ようやく自分のグループでステージに立つことになった経緯を語りました（{a2}Korea Economic Daily{/a2}）。"
     },
     {
       "id": "kpop-p-cd3cec5d",
