@@ -1,21 +1,12 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import { htmlLangFromPathname } from "../lib/i18n/locales";
 
-// URL prefix -> BCP 47 language tag for <html lang>.
-// Paths without one of these prefixes keep the English default.
-const LOCALE_PREFIXES = new Map<string, string>([
-  ["ja", "ja"],
-  ["zh-hant", "zh-Hant"],
-  ["zh-hans", "zh-Hans"],
-  ["es", "es"],
-  ["ko", "ko"],
-]);
-
+// URL prefix -> BCP 47 language tag for <html lang>, from the shared locale
+// settings. Paths without a locale prefix keep the English default.
 export function langFromPathname(pathname: string | null): string {
-  const firstSegment = (pathname ?? "/").split("/")[1]?.toLowerCase() ?? "";
-
-  return LOCALE_PREFIXES.get(firstSegment) ?? "en";
+  return htmlLangFromPathname(pathname);
 }
 
 export default function HtmlRoot({

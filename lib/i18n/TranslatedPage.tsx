@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Fragment, type JSX, type ReactNode } from "react";
 import SiteHeader from "../../components/SiteHeader";
+import { LOCALES, type LocaleCode, type LocaleTypography } from "./locales";
 import { parseUnitText, validateTranslation } from "./validateTranslation.mjs";
 
 /*
@@ -52,30 +53,54 @@ export type TranslationDocument = {
   units: { id: string; sourceHash: string; text: string }[];
 };
 
+/** UI strings shown around translated content (not article text). */
+export type PreviewUiStrings = {
+  previewLabel: string;
+  previewBody: string;
+  englishOriginal: string;
+  englishLinkBadge: string;
+  englishLinkHidden: string;
+};
+
 /** Japanese UI strings used around translated content (not article text). */
-export const JA_UI = {
+export const JA_UI: PreviewUiStrings = {
   previewLabel: "確認用プレビュー（下書き）",
   previewBody:
     "この日本語版は確認用の下書きで、一般には公開していません。サイトのメニューとフッター、「EN」の印が付いたリンクの移動先は英語のページです。",
   englishOriginal: "英語の原文を読む",
   englishLinkBadge: "EN",
   englishLinkHidden: "（英語のページ）",
-} as const;
-
-type Ui = typeof JA_UI;
+};
 
 /**
- * Japanese-only presentation adjustments. The English source classes are not
- * changed; these are applied while rendering the Japanese page.
+ * Preview UI strings per locale. Only locales listed here can render a
+ * preview page. Chinese and Spanish strings are not written yet.
+ */
+export const PREVIEW_UI: Readonly<Partial<Record<LocaleCode, PreviewUiStrings>>> = Object.freeze({
+  ja: JA_UI,
+});
+
+type Ui = PreviewUiStrings;
+
+type Typography = LocaleTypography;
+
+const NO_TYPOGRAPHY: Typography = { emphasisClassName: "", classReplacements: {} };
+
+/**
+ * Presentation adjustments for a locale, from the shared locale settings.
+ * The English source classes are not changed; these are applied while
+ * rendering the translated page.
+ */
+export function typographyFor(locale: LocaleCode): Typography {
+  return LOCALES[locale].typography ?? NO_TYPOGRAPHY;
+}
+
+/**
+ * Japanese adjustments (kept as a named export for existing callers):
  * - Italic is weak for Japanese text, so <em> stays <em> but is shown bold.
  * - Wide letter-spacing from the English kicker is reduced for Japanese.
  */
-export const JA_TYPOGRAPHY = {
-  emphasisClassName: "font-bold not-italic",
-  classReplacements: { "tracking-[0.22em]": "tracking-[0.06em]" } as Record<string, string>,
-};
-
-type Typography = typeof JA_TYPOGRAPHY;
+export const JA_TYPOGRAPHY: Typography = typographyFor("ja");
 
 function adjustClassName(className: string | undefined, typography: Typography): string | undefined {
   if (!className) return className;
