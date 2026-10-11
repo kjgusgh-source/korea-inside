@@ -82,6 +82,11 @@ card) keeps its own locked attributes in `attrs`, e.g. `{ "href": "/kpop" }`.
 - `translationStatus(source, translation)` lists each unit as `current`,
   `stale` (same ID, English changed), `missing` or `unknown` (translation for a
   unit that no longer exists).
+- **Units with `translate: false`** (Korean-only terms such as `선배` or `대리`,
+  brand-only text) are listed as `keep`. They are rendered from the English
+  source as is, are never reported as `missing`, and do not need an entry in a
+  translation file. If a translation file contains one anyway, it is listed as
+  `ignored` and renderers must not use it.
 - A new unit's ID comes from its anchor (nearest section `id`/`aria-label`,
   list key), its tag, and a short content hash. It does not depend on position,
   so inserting or reordering paragraphs does not renumber other units.
@@ -94,6 +99,8 @@ card) keeps its own locked attributes in `attrs`, e.g. `{ "href": "/kpop" }`.
      hash changes, so existing translations become **stale** instead of
      disappearing;
   3. everything else gets a new ID.
+  Identical repeated units in one anchor (for example two `Read more` links to
+  the same URL) are interchangeable and are paired in document order.
 - **Ambiguous matches are never chosen silently.** If identical text could
   belong to several old IDs, if two old units are about equally close (within
   0.15), or if two edited blocks claim the same old unit, the block gets a new
@@ -101,6 +108,21 @@ card) keeps its own locked attributes in `attrs`, e.g. `{ "href": "/kpop" }`.
   translation by hand.
 - Workflow rule: always extract with `--previous` pointing at the committed
   source snapshot. Without it, an edited paragraph gets a new ID.
+
+### Unit IDs vs temporary references
+
+- The unit `id` is the **persistent** identifier stored in source and
+  translation files.
+- While extracting, every unit also gets a temporary reference that is unique
+  per extracted unit (not derived from text, tag or anchor). The structure
+  is first built with these references and then rewritten to final IDs. The
+  temporary reference is **never exported**.
+- So two `Read more` links in one section that point to different URLs, two
+  identical headings, buttons, table cells or `alt` texts each get their own
+  unit and their own structure reference.
+- `structureReferences(source)` checks the result: every ID referenced by
+  `structure` exists, no unit is referenced twice, and every non-metadata unit
+  is referenced exactly once.
 
 ### Translations (schemaVersion 2)
 
@@ -147,6 +169,8 @@ Production when checked. It was used as the comparison reference.
 | Inserted paragraph / swapped sections | 0 existing IDs changed |
 | Edited paragraph with `--previous` | same ID, new hash (stale) |
 | Re-extraction with `--previous` | all 78 IDs and hashes unchanged; the earlier pilot snapshot (`ac19f96`, older hash formula) also maps to all 78 old IDs |
+| Structure references | 0 missing, 0 duplicated, 0 unreferenced |
+| Translation status with only translatable units translated | 71 current, 7 `keep` (Korean-only), 0 missing |
 | Standalone links | 8 (back link + 7 related guides): `href` kept in `attrs` and in the v1 view |
 | `href` change on the back link / a related link / an inline citation | exactly 1 unit stale each |
 | CSS-only change (all `className` values) or `rel` change | 0 units stale |

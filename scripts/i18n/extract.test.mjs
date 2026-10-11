@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { existsSync, readFileSync } from 'node:fs';
 import {
-  extractFromTsx, cleanJsxText, validateUnitText, reviewNotes, renderUnitHtml, toSchemaV1, compareWithBuiltHtml, plainText, translationStatus,
+  extractFromTsx, cleanJsxText, validateUnitText, reviewNotes, renderUnitHtml, toSchemaV1, compareWithBuiltHtml, plainText, translationStatus, structureReferences,
 } from './extract.mjs';
 
 const PAGE = `
@@ -384,11 +384,111 @@ test('real Sunbae page: 78 units, 8 standalone links keep their URLs in v2 and v
   }
   const again = extractFromTsx(code, { fileName: path, sourcePath, previous: source });
   assert.deepEqual(again.units.map((u) => [u.id, u.hash]), source.units.map((u) => [u.id, u.hash]));
-  assert.deepEqual(translationStatus(again, translationFor(source)), { current: source.units.map((u) => u.id), stale: [], missing: [], unknown: [] });
+  const translatable = source.units.filter((u) => u.translate).map((u) => u.id);
+  assert.deepEqual(translationStatus(again, translationFor(source)), { current: translatable, stale: [], missing: [], unknown: [], keep: source.units.filter((u) => !u.translate).map((u) => u.id), ignored: source.units.filter((u) => !u.translate).map((u) => u.id) });
+  assert.deepEqual(structureReferences(source), { missing: [], duplicated: [], unreferenced: [] });
   const edited = extractFromTsx(code.replace('I grew up in a small town in Korea', 'I grew up in a very small town in Korea'), { fileName: path, sourcePath, previous: source });
   const oldUnit = source.units.find((u) => u.text.startsWith('I grew up in a small town'));
   const newUnit = edited.units.find((u) => u.text.startsWith('I grew up in a very small town'));
   assert.equal(newUnit.id, oldUnit.id);
   assert.notEqual(newUnit.hash, oldUnit.hash);
   assert.deepEqual(translationStatus(edited, translationFor(source)).stale, [oldUnit.id]);
+});
+
+// ---------------------------------------------------------------------------
+// Review round 3: structure references must not collide, and units that are
+// not translated (Korean-only / brand) are never reported as missing.
+// ---------------------------------------------------------------------------
+const COLLIDE_PAGE = `
+const rows = [{ k: "a", v: "Yes" }, { k: "b", v: "Yes" }];
+export default function Page() {
+  return (
+    <article>
+      <section id="more">
+        <h2>Guides</h2>
+        <a href="/guide-one">Read more</a>
+        <a href="/guide-two">Read more</a>
+        <a href="/guide-one">Read more</a>
+        <h3>Example</h3>
+        <h3>Example</h3>
+        <button type="button">Open</button>
+        <button type="button">Open</button>
+        <img src="/images/a.jpg" alt="Photo" />
+        <img src="/images/b.jpg" alt="Photo" />
+        <img src="/images/a.jpg" alt="Photo" />
+        <table>
+          <tbody>
+            <tr><td>Yes</td><td>Yes</td></tr>
+            {rows.map((row) => (<tr key={row.k}><td>{row.v}</td></tr>))}
+          </tbody>
+        </table>
+      </section>
+    </article>
+  );
+}
+`;
+const extractCollide = (previous = null) => extractFromTsx(COLLIDE_PAGE, { fileName: 'collide.tsx', sourcePath: '/kpop/collide', previous });
+function walkStructure(node, visit) {
+  if (!node || typeof node !== 'object') return;
+  if (Array.isArray(node)) { node.forEach((n) => walkStructure(n, visit)); return; }
+  visit(node);
+  for (const value of Object.values(node)) if (value && typeof value === 'object') walkStructure(value, visit);
+}
+
+test('same text with the same anchor never collapses structure references', () => {
+  const source = extractCollide();
+  const byId = new Map(source.units.map((u) => [u.id, u]));
+  const linkRefs = [];
+  walkStructure(source.structure, (n) => { if (n.element === 'a' && n.unit) linkRefs.push([n.unit, n.attrs.href]); });
+  assert.equal(linkRefs.length, 3);
+  assert.equal(new Set(linkRefs.map(([id]) => id)).size, 3, 'three links, three different unit IDs');
+  for (const [id, href] of linkRefs) assert.equal(byId.get(id).attrs.href, href, `unit ${id} must carry the href of the element that references it`);
+  const altRefs = [];
+  walkStructure(source.structure, (n) => { if (n.element === 'img') altRefs.push([n.attributeUnits.alt, n.attrs.src]); });
+  assert.equal(new Set(altRefs.map(([id]) => id)).size, 3, 'three images, three different alt units');
+  const refs = structureReferences(source);
+  assert.deepEqual(refs.missing, []);
+  assert.deepEqual(refs.duplicated, []);
+  assert.deepEqual(refs.unreferenced, []);
+  for (const text of ['Read more', 'Example', 'Open', 'Photo', 'Yes']) {
+    const ids = source.units.filter((u) => u.text === text).map((u) => u.id);
+    assert.equal(new Set(ids).size, ids.length, `IDs for "${text}" are unique`);
+  }
+  assert.equal(source.units.filter((u) => u.text === 'Yes').length, 4);
+});
+
+test('re-extracting a page with identical repeated units keeps every ID without ambiguity notes', () => {
+  const first = extractCollide();
+  const again = extractCollide(first);
+  assert.deepEqual(again.units.map((u) => u.id), first.units.map((u) => u.id));
+  assert.equal(again.review.filter((r) => /ambiguous/.test(r.reason)).length, 0);
+  assert.deepEqual(structureReferences(again), { missing: [], duplicated: [], unreferenced: [] });
+});
+
+test('the temporary reference key never appears in the exported source', () => {
+  const source = extractCollide();
+  for (const unit of source.units) {
+    assert.equal(Object.hasOwn(unit, 'key'), false);
+    assert.equal(Object.hasOwn(unit, 'ref'), false);
+  }
+  assert.doesNotMatch(JSON.stringify(source.structure), /"(?:key|ref)":/);
+});
+
+test('units that are not translated are kept in English and never reported as missing', () => {
+  const source = extract();
+  const keep = source.units.filter((u) => !u.translate).map((u) => u.id);
+  assert.ok(keep.length >= 4, 'fixture has Korean-only units');
+  const translation = {
+    schemaVersion: 2, sourcePath: source.sourcePath, locale: 'ja', status: 'draft', glossaryVersion: 'test',
+    units: source.units.filter((u) => u.translate).map((u) => ({ id: u.id, sourceHash: u.hash, text: u.text })),
+  };
+  const status = translationStatus(source, translation);
+  assert.deepEqual(status.missing, []);
+  assert.deepEqual(status.keep, keep);
+  assert.deepEqual(status.ignored, []);
+  assert.equal(status.current.length, source.units.length - keep.length);
+  translation.units.push({ id: keep[0], sourceHash: 'x', text: 'ソンベ' });
+  const withOverride = translationStatus(source, translation);
+  assert.deepEqual(withOverride.ignored, [keep[0]], 'a translation for a keep unit is ignored, not rendered');
+  assert.deepEqual(withOverride.stale, []);
 });

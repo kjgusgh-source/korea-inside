@@ -227,6 +227,7 @@ export function extractFromTsx(code, { fileName = 'page.tsx', sourcePath, previo
   const { evaluate } = createEvaluator(sourceFile);
   const units = [];
   const review = [];
+  let nextRef = 0;
   const lineOf = (node) => sourceFile.getLineAndCharacterOfPosition(node.getStart(sourceFile)).line + 1;
   const flag = (node, where, reason) => review.push({ line: node ? lineOf(node) : null, where, reason });
 
@@ -370,7 +371,7 @@ export function extractFromTsx(code, { fileName = 'page.tsx', sourcePath, previo
         flag(node, ctx.path, `text directly inside a structural element was extracted as its own unit: "${text.slice(0, 40)}"`);
         const unit = makeUnit({ kind: 'block', tag: '#text', anchor: ctx.anchor, group: ctx.group, path: ctx.path, origin: 'jsx', text, placeholders: {}, inArticle: ctx.inArticle, needsReview: true });
         units.push(unit);
-        return { unit: unit.key };
+        return { unit: unit.ref };
       }
       return null;
     }
@@ -383,7 +384,7 @@ export function extractFromTsx(code, { fileName = 'page.tsx', sourcePath, previo
         flag(node, ctx.path, 'text expression directly inside a structural element was extracted as its own unit');
         const unit = makeUnit({ kind: 'block', tag: '#text', anchor: ctx.anchor, group: ctx.group, path: ctx.path, origin: expression.getText(sourceFile), text: String(value).trim(), placeholders: {}, inArticle: ctx.inArticle, needsReview: true });
         units.push(unit);
-        return { unit: unit.key };
+        return { unit: unit.ref };
       }
       if (ts.isCallExpression(expression) && ts.isPropertyAccessExpression(expression.expression) && expression.expression.name.text === 'map') {
         const listName = expression.expression.expression.getText(sourceFile);
@@ -453,7 +454,7 @@ export function extractFromTsx(code, { fileName = 'page.tsx', sourcePath, previo
       if (typeof attrs[attribute] === 'string' && attrs[attribute].trim()) {
         const unit = makeUnit({ kind: 'attr', tag: `${tag}@${attribute}`, anchor, group: ctx.group, path: `${path}@${attribute}`, origin: ctx.origin ?? 'jsx', text: attrs[attribute].trim(), placeholders: {}, inArticle, wrapperAttrs: meaningfulAttributes(attrs) });
         units.push(unit);
-        attributeUnits[attribute] = unit.key;
+        attributeUnits[attribute] = unit.ref;
       }
     }
 
@@ -467,7 +468,7 @@ export function extractFromTsx(code, { fileName = 'page.tsx', sourcePath, previo
     const childCtx = { ...ctx, anchor, path, inArticle, counter: {}, origin: ctx.origin };
     if ((BLOCK_TAGS.has(tag) || INLINE_TAGS.has(name) || isInlineOnly(children, ctx.scope)) && isInlineOnly(children, ctx.scope) && hasText(children, ctx.scope)) {
       const unit = unitFromElement({ node, tag, children, scope: ctx.scope, anchor, group: ctx.group, path, inArticle, origin: ctx.origin ?? 'jsx', wrapperAttrs: attrs });
-      return { element: tag, attrs, attributeUnits, unit: unit?.key ?? null };
+      return { element: tag, attrs, attributeUnits, unit: unit?.ref ?? null };
     }
     if (BLOCK_TAGS.has(tag) && hasText(children, ctx.scope) && !isInlineOnly(children, ctx.scope)) {
       flag(node, path, `<${tag}> mixes text with block elements or dynamic content; split by hand`);
@@ -499,7 +500,9 @@ export function extractFromTsx(code, { fileName = 'page.tsx', sourcePath, previo
       Object.fromEntries(Object.entries(lockedPlaceholders).map(([k, v]) => [k, { tag: v.tag, attrs: meaningfulAttributes(v.attrs) }])),
     ];
     return {
-      key: `${anchor}|${tag}|${text}`,
+      // Temporary reference used only while building the structure. It is
+      // unique per extracted unit (unlike text or anchor) and is never exported.
+      ref: `ref-${nextRef++}`,
       kind,
       tag,
       anchor,
@@ -521,14 +524,14 @@ export function extractFromTsx(code, { fileName = 'page.tsx', sourcePath, previo
   function finish(structure = null) {
     const { ids, notes } = assignIds(units, previous);
     review.push(...notes);
-    const keyToId = new Map(units.map((unit, i) => [unit.key, ids[i]]));
+    const refToId = new Map(units.map((unit, i) => [unit.ref, ids[i]]));
     const replaceKeys = (node) => {
       if (!node || typeof node !== 'object') return node;
       if (Array.isArray(node)) return node.map(replaceKeys);
       const out = {};
       for (const [k, v] of Object.entries(node)) {
-        if (k === 'unit' && typeof v === 'string') out.unit = keyToId.get(v) ?? null;
-        else if (k === 'attributeUnits') out.attributeUnits = Object.fromEntries(Object.entries(v).map(([a, key]) => [a, keyToId.get(key)]));
+        if (k === 'unit' && typeof v === 'string') out.unit = refToId.get(v) ?? null;
+        else if (k === 'attributeUnits') out.attributeUnits = Object.fromEntries(Object.entries(v).map(([a, ref]) => [a, refToId.get(ref)]));
         else out[k] = replaceKeys(v);
       }
       return out;
@@ -540,8 +543,8 @@ export function extractFromTsx(code, { fileName = 'page.tsx', sourcePath, previo
       sourceFile: fileName,
       extractor: EXTRACTOR_VERSION,
       units: units.map((unit, i) => {
-        const { key, ...rest } = unit;
-        void key;
+        const { ref, ...rest } = unit;
+        void ref;
         return { id: ids[i], ...rest };
       }),
       review,
@@ -593,6 +596,13 @@ export function assignIds(units, previous) {
       const sameAnchorOld = old.filter((p) => p.anchor === units[i].anchor && !used.has(p.id));
       if (sameAnchorNew.length === 1 && sameAnchorOld.length === 1) take(i, sameAnchorOld[0].id);
     }
+    // Repeated identical units in one anchor (e.g. two "Read more" links to the
+    // same URL) are interchangeable: pair them in document order.
+    for (const anchor of new Set(fresh.filter((i) => !ids[i]).map((i) => units[i].anchor))) {
+      const newHere = fresh.filter((i) => !ids[i] && units[i].anchor === anchor);
+      const oldHere = old.filter((p) => !used.has(p.id) && p.anchor === anchor);
+      if (newHere.length > 1 && newHere.length === oldHere.length) newHere.forEach((i, n) => take(i, oldHere[n].id));
+    }
     const restNew = fresh.filter((i) => !ids[i]);
     const restOld = old.filter((p) => !used.has(p.id));
     if (restNew.length === 1 && restOld.length === 1) take(restNew[0], restOld[0].id);
@@ -637,17 +647,50 @@ export function assignIds(units, previous) {
 }
 
 /**
- * Compare a schemaVersion 2 translation with the current source:
- * current = same ID and hash, stale = same ID but the English unit changed,
- * missing = no translation yet, unknown = translation for a unit that no longer exists.
+ * Check that the structure and the units agree: every unit ID referenced by
+ * the structure exists, no unit is referenced twice, and every non-metadata
+ * unit is referenced by exactly one structure node.
+ */
+export function structureReferences(source) {
+  const counts = new Map();
+  const visit = (node) => {
+    if (!node || typeof node !== 'object') return;
+    if (Array.isArray(node)) { node.forEach(visit); return; }
+    if (typeof node.unit === 'string') counts.set(node.unit, (counts.get(node.unit) ?? 0) + 1);
+    if (node.unit === null && Object.hasOwn(node, 'unit')) counts.set(null, (counts.get(null) ?? 0) + 1);
+    for (const id of Object.values(node.attributeUnits ?? {})) counts.set(id, (counts.get(id) ?? 0) + 1);
+    for (const [key, value] of Object.entries(node)) if (key !== 'attributeUnits' && value && typeof value === 'object') visit(value);
+  };
+  visit(source.structure);
+  const ids = new Set(source.units.map((u) => u.id));
+  return {
+    missing: [...counts.keys()].filter((id) => !ids.has(id)),
+    duplicated: [...counts.entries()].filter(([id, n]) => ids.has(id) && n > 1).map(([id]) => id),
+    unreferenced: source.units.filter((u) => u.kind !== 'meta' && !counts.has(u.id)).map((u) => u.id),
+  };
+}
+
+/**
+ * Compare a schemaVersion 2 translation with the current source.
+ * - current: same ID and hash
+ * - stale: same ID but the English unit changed
+ * - missing: translatable unit without a translation
+ * - unknown: translation for a unit that no longer exists
+ * - keep: units with `translate: false` (Korean-only / brand); they are shown
+ *   from the English source as is and are never reported as missing
+ * - ignored: translations supplied for `translate: false` units; renderers
+ *   must not use them
  */
 export function translationStatus(source, translation) {
   const sourceById = new Map(source.units.map((u) => [u.id, u]));
   const translated = new Map((translation?.units ?? []).map((u) => [u.id, u]));
-  const status = { current: [], stale: [], missing: [], unknown: [] };
+  const status = { current: [], stale: [], missing: [], unknown: [], keep: [], ignored: [] };
   for (const unit of source.units) {
     const t = translated.get(unit.id);
-    if (!t) status.missing.push(unit.id);
+    if (!unit.translate) {
+      status.keep.push(unit.id);
+      if (t) status.ignored.push(unit.id);
+    } else if (!t) status.missing.push(unit.id);
     else if (t.sourceHash !== unit.hash) status.stale.push(unit.id);
     else status.current.push(unit.id);
   }
