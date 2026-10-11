@@ -64,6 +64,32 @@ export const JA_UI = {
 
 type Ui = typeof JA_UI;
 
+/**
+ * Japanese-only presentation adjustments. The English source classes are not
+ * changed; these are applied while rendering the Japanese page.
+ * - Italic is weak for Japanese text, so <em> stays <em> but is shown bold.
+ * - Wide letter-spacing from the English kicker is reduced for Japanese.
+ */
+export const JA_TYPOGRAPHY = {
+  emphasisClassName: "font-bold not-italic",
+  classReplacements: { "tracking-[0.22em]": "tracking-[0.06em]" } as Record<string, string>,
+};
+
+type Typography = typeof JA_TYPOGRAPHY;
+
+function adjustClassName(className: string | undefined, typography: Typography): string | undefined {
+  if (!className) return className;
+  return className
+    .split(/\s+/)
+    .map((name) => typography.classReplacements[name] ?? name)
+    .join(" ");
+}
+
+function joinClassNames(...names: (string | undefined)[]): string | undefined {
+  const joined = names.filter(Boolean).join(" ");
+  return joined || undefined;
+}
+
 const ELEMENTS = new Set([
   "main", "div", "article", "header", "section", "aside", "p", "h1", "h2", "h3",
   "table", "caption", "thead", "tbody", "tr", "th", "td", "ul", "ol", "li", "span", "a",
@@ -133,6 +159,7 @@ type Context = {
   units: Map<string, SourceUnit>;
   texts: Map<string, string>;
   ui: Ui;
+  typography: Typography;
   localizedPaths: Map<string, string>;
   afterComponent: Record<string, ReactNode>;
 };
@@ -169,9 +196,9 @@ function renderText(unit: SourceUnit, text: string, ctx: Context): ReactNode {
       if (!def || !INLINE_ELEMENTS.has(def.tag)) throw new TranslationValidationError(`${unit.id}: placeholder ${node.name} not allowed`);
       const inner = walk(node.children, key);
       if (def.tag === "a") return renderLink(def.attrs, inner, key, ctx);
-      const className = typeof def.attrs.className === "string" ? def.attrs.className : undefined;
+      const className = adjustClassName(typeof def.attrs.className === "string" ? def.attrs.className : undefined, ctx.typography);
       return def.tag === "em"
-        ? <em key={key} className={className}>{inner}</em>
+        ? <em key={key} className={joinClassNames(className, ctx.typography.emphasisClassName)}>{inner}</em>
         : <strong key={key} className={className}>{inner}</strong>;
     });
   return walk(nodes, unit.id);
@@ -207,7 +234,7 @@ function renderNode(node: StructureNode, key: string, ctx: Context): ReactNode {
   const attrs: Attrs = {};
   for (const [name, value] of Object.entries(node.attrs ?? {})) {
     if (!ELEMENT_ATTRIBUTES.has(name)) throw new TranslationValidationError(`attribute not allowed: ${tag}@${name}`);
-    if (typeof value === "string") attrs[name] = value;
+    if (typeof value === "string") attrs[name] = name === "className" ? adjustClassName(value, ctx.typography) : value;
   }
   for (const [name, id] of Object.entries(node.attributeUnits ?? {})) {
     attrs[name] = unitText(id, ctx).text;
@@ -253,11 +280,13 @@ export function PreviewNotice({ englishPath, ui = JA_UI }: { englishPath: string
 export default function TranslatedPage({
   prepared,
   ui = JA_UI,
+  typography = JA_TYPOGRAPHY,
   localizedPaths = new Map(),
   afterComponent = {},
 }: {
   prepared: PreparedTranslation;
   ui?: Ui;
+  typography?: Typography;
   localizedPaths?: Map<string, string>;
   afterComponent?: Record<string, ReactNode>;
 }) {
@@ -266,6 +295,7 @@ export default function TranslatedPage({
     units: new Map(prepared.source.units.map((u) => [u.id, u])),
     texts: prepared.texts,
     ui,
+    typography,
     localizedPaths,
     afterComponent,
   };

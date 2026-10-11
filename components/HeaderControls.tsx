@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import SiteSearchBox from "./SiteSearchBox";
 
 const CONTROL_BUTTON_CLASSES =
@@ -80,7 +81,76 @@ const LANGUAGES = [
   { code: "ja", label: "日本語", available: false },
 ];
 
+// Japanese draft preview pages live under /ja. Only those pages show the JA
+// state; every other page keeps the English control exactly as before.
+// The menu is informational: it does not switch languages.
+const JA_PREVIEW_LANGUAGES = [
+  { code: "ja", label: "日本語", note: "Draft preview", selected: true },
+  { code: "en", label: "English", note: "Main site", selected: false },
+  { code: "ko", label: "한국어", note: "Coming later", selected: false },
+];
+
+function isJapanesePreviewPath(pathname: string | null) {
+  return pathname === "/ja" || (pathname ?? "").startsWith("/ja/");
+}
+
 export function HeaderLanguageControl() {
+  const pathname = usePathname();
+  return isJapanesePreviewPath(pathname) ? <JapanesePreviewLanguageControl /> : <EnglishLanguageControl />;
+}
+
+function JapanesePreviewLanguageControl() {
+  const { open, setOpen, containerRef, buttonRef } = usePopover();
+  const popoverId = useId();
+
+  return (
+    <div ref={containerRef} className="relative">
+      <button
+        ref={buttonRef}
+        type="button"
+        onClick={() => setOpen((value) => !value)}
+        aria-label="Language: Japanese (draft preview)"
+        aria-haspopup="listbox"
+        aria-expanded={open}
+        aria-controls={popoverId}
+        className={CONTROL_BUTTON_CLASSES}
+      >
+        <span aria-hidden="true">🌐</span>
+        <span>JA</span>
+      </button>
+
+      {open && (
+        <div
+          id={popoverId}
+          role="listbox"
+          aria-label="Language"
+          className="animate-[header-pop_220ms_ease-out] motion-reduce:animate-none absolute right-0 top-12 z-50 w-56 rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-2 shadow-lg"
+        >
+          {JA_PREVIEW_LANGUAGES.map((language) => (
+            <div
+              key={language.code}
+              role="option"
+              aria-selected={language.selected}
+              aria-disabled={!language.selected}
+              className={`flex items-center justify-between rounded-xl px-3 py-2 text-sm ${
+                language.selected
+                  ? "font-semibold text-[var(--text)]"
+                  : "text-[var(--muted)]"
+              }`}
+            >
+              <span lang={language.code}>{language.label}</span>
+              <span className="text-xs text-[var(--muted)]">
+                {language.note}
+              </span>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function EnglishLanguageControl() {
   const { open, setOpen, containerRef, buttonRef } = usePopover();
   const popoverId = useId();
 
