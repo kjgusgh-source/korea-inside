@@ -1,0 +1,2531 @@
+{
+  "schemaVersion": 2,
+  "sourceLocale": "en",
+  "sourcePath": "/kpop/what-does-sunbae-and-hoobae-mean-in-kpop",
+  "sourceFile": "app/kpop/what-does-sunbae-and-hoobae-mean-in-kpop/page.tsx",
+  "extractor": "extract-pilot-1",
+  "units": [
+    {
+      "id": "meta-title-67882371",
+      "kind": "meta",
+      "tag": "title",
+      "anchor": "meta",
+      "group": "meta",
+      "path": "metadata.title",
+      "origin": "metadata.title",
+      "text": "Sunbae vs Hoobae: What These Korean Words Really Mean",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "6ea2e14adf9abc0841745b81e18a143ca28d10fe5fafaedc0a44e90df27edac0",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "meta-description-efb086ba",
+      "kind": "meta",
+      "tag": "description",
+      "anchor": "meta",
+      "group": "meta",
+      "path": "metadata.description",
+      "origin": "metadata.description",
+      "text": "What do sunbae and hoobae mean in Korean? A local explains seniority through school, work, military life, and K-pop — and why age isn't the whole story.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "15b64689a1c19691775a2bbd9b5748322bc5406d258a933a38e404355dda76a1",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "header-a-3b20ec7e",
+      "kind": "block",
+      "tag": "a",
+      "anchor": "header",
+      "group": "header",
+      "path": "page>main[1]>div[1]>article[1]>header[1]>Link[1]",
+      "origin": "jsx",
+      "text": "← Back to K-pop",
+      "attrs": {
+        "href": "/kpop"
+      },
+      "placeholders": {},
+      "hash": "f84c53daf53c3a1a7aac7be0d3838ce87363e3056aa07e7f5ceddc70339b795d",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "header-p-e98ed66c",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "header",
+      "group": "header",
+      "path": "page>main[1]>div[1]>article[1]>header[1]>p[1]",
+      "origin": "jsx",
+      "text": "Korean culture through K-pop · A local take",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "47bb82473dd42748c82f31bd7df07eaf3df78e7a31bae08c784338fd0b4a874c",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "header-h1-299cbd58",
+      "kind": "block",
+      "tag": "h1",
+      "anchor": "header",
+      "group": "header",
+      "path": "page>main[1]>div[1]>article[1]>header[1]>h1[1]",
+      "origin": "jsx",
+      "text": "Sunbae vs Hoobae: What These Korean Words Really Mean",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "62f0333a2c2989b6f78e2e0acbff2ca21e97b0f07572a0b88645f3324ba7857e",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "header-p-78cf4305",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "header",
+      "group": "header",
+      "path": "page>main[1]>div[1]>article[1]>header[1]>p[2]",
+      "origin": "jsx",
+      "text": "You may have heard an idol say “sunbaenim.” Here is what it means, and how seniority felt to me at school, at work, and during military service in Korea.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "18c5c049f458bb8ef647cecc5dfbf8fc4bfe54bddb4e3b40eebbe0583f3f81a5",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "quick-answer-section-aria-label-b52f81c5",
+      "kind": "attr",
+      "tag": "section@aria-label",
+      "anchor": "quick-answer",
+      "group": "quick-answer",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section[1]@aria-label",
+      "origin": "jsx",
+      "text": "Quick answer",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "4d3c7208692ef68bf27e54e1dd416c434098af0a6bbcf840a3290ad09681c50d",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "quick-answer-p-c5fd6aeb",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "quick-answer",
+      "group": "quick-answer",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section[1]>p[1]",
+      "origin": "jsx",
+      "text": "If you watch K-pop interviews or variety shows, you have probably heard an idol call another artist {em1}sunbaenim{/em1} (선배님). Maybe you have wondered why they say it, especially when the person they are talking to is younger.",
+      "attrs": {},
+      "placeholders": {
+        "em1": {
+          "tag": "em",
+          "attrs": {}
+        }
+      },
+      "hash": "401c1f3164d4503b4ca1a26374fd84c1ab02714d8370675d932ec7caf17b30bf",
+      "translate": true,
+      "protect": [
+        "선배님"
+      ],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "quick-answer-p-098b8510",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "quick-answer",
+      "group": "quick-answer",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section[1]>p[2]",
+      "origin": "jsx",
+      "text": "Here is the short answer: {strong1}sunbae{/strong1} (선배) means someone who started before you in the same school or field. {strong2}Hoobae{/strong2} (후배) means someone who came after you. Adding {em1}-nim{/em1} (님) makes{em2} sunbaenim{/em2} a respectful form of address.",
+      "attrs": {},
+      "placeholders": {
+        "strong1": {
+          "tag": "strong",
+          "attrs": {}
+        },
+        "strong2": {
+          "tag": "strong",
+          "attrs": {}
+        },
+        "em1": {
+          "tag": "em",
+          "attrs": {}
+        },
+        "em2": {
+          "tag": "em",
+          "attrs": {}
+        }
+      },
+      "hash": "9145d7d3cba7f288f1ac5c2b429d0c93eac5825bc27bf06f13ee25ed3b627de8",
+      "translate": true,
+      "protect": [
+        "선배",
+        "후배",
+        "님"
+      ],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "quick-answer-p-499e3d88",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "quick-answer",
+      "group": "quick-answer",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section[1]>p[3]",
+      "origin": "jsx",
+      "text": "That is the definition. What these relationships feel like in real life is another story. I grew up in Korea, went through school and military service, and worked at a Korean company. They each felt a little different.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "7d1ae2ff8762043b682344d8d1d6e0f17c4b025599199c5ec9622be57b5ac55e",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "quick-answer-terms-k5a64f8-p-4b2ff191",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "quick-answer-terms-k5a64f8",
+      "group": "quick-answer-terms",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section[1]>div[1]>terms[0]>div[1]>p[1]",
+      "origin": "data:terms[0]",
+      "text": "선배",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "260fb5828dbd4eac63d986d30e800c06db1a04bf2e0643102f78907bfce64ec7",
+      "translate": false,
+      "protect": [
+        "선배"
+      ],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "quick-answer-terms-k5a64f8-p-d2763185",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "quick-answer-terms-k5a64f8",
+      "group": "quick-answer-terms",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section[1]>div[1]>terms[0]>div[1]>p[2]",
+      "origin": "data:terms[0]",
+      "text": "Sunbae",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "c8b6b312bed7b8b498b55bc3dfd9136b3a38ae2b0793f7371647aa982e0dd1b9",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "quick-answer-terms-k5a64f8-p-c9c7ebe0",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "quick-answer-terms-k5a64f8",
+      "group": "quick-answer-terms",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section[1]>div[1]>terms[0]>div[1]>p[3]",
+      "origin": "data:terms[0]",
+      "text": "Someone who started before you in the same school or field.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "628aea7a6ad14ef4f0e34caf291a0d89dcec90fcd4e4ca09425dbbb92b63723b",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "quick-answer-terms-kd1877a-p-e00fa5fe",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "quick-answer-terms-kd1877a",
+      "group": "quick-answer-terms",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section[1]>div[1]>terms[1]>div[2]>p[1]",
+      "origin": "data:terms[1]",
+      "text": "후배",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "e38662d834337ab9fb319bb72d1a91c59806f8159b0aabd3e60bc1c76cb44d7a",
+      "translate": false,
+      "protect": [
+        "후배"
+      ],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "quick-answer-terms-kd1877a-p-234948ae",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "quick-answer-terms-kd1877a",
+      "group": "quick-answer-terms",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section[1]>div[1]>terms[1]>div[2]>p[2]",
+      "origin": "data:terms[1]",
+      "text": "Hoobae",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "bcd009af3c2f3256326d572f9eb47f147e1691393e968137cec0bfa3fb982a29",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "quick-answer-terms-kd1877a-p-8328857d",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "quick-answer-terms-kd1877a",
+      "group": "quick-answer-terms",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section[1]>div[1]>terms[1]>div[2]>p[3]",
+      "origin": "data:terms[1]",
+      "text": "Someone who joined or started later.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "9d91e2c8020de5de69d7ae3bf2b1c11b7cdad1fc15b07f936b78f9e4ce219ba6",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "quick-answer-terms-k384302-p-cd509bbd",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "quick-answer-terms-k384302",
+      "group": "quick-answer-terms",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section[1]>div[1]>terms[2]>div[3]>p[1]",
+      "origin": "data:terms[2]",
+      "text": "선배님",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "d45d736f6423f6adf64d77618eb6a01863d8fb8039f6bccc5f39e7dc81fdfced",
+      "translate": false,
+      "protect": [
+        "선배님"
+      ],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "quick-answer-terms-k384302-p-3c797710",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "quick-answer-terms-k384302",
+      "group": "quick-answer-terms",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section[1]>div[1]>terms[2]>div[3]>p[2]",
+      "origin": "data:terms[2]",
+      "text": "Sunbaenim",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "a9778690f0107d11c0048cbb677a6ac45fabc60bfaa3bcc24cc2c1b717c79650",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "quick-answer-terms-k384302-p-6b1e4b32",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "quick-answer-terms-k384302",
+      "group": "quick-answer-terms",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section[1]>div[1]>terms[2]>div[3]>p[3]",
+      "origin": "data:terms[2]",
+      "text": "A respectful way to address a sunbae.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "2c9a02a298faf81561d85e90e04f9bae8fa0b1cbd21641a03a9f5eeb866ba978",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "meaning-h2-6e6405e0",
+      "kind": "block",
+      "tag": "h2",
+      "anchor": "meaning",
+      "group": "meaning",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#meaning>h2[1]",
+      "origin": "jsx",
+      "text": "What do sunbae and hoobae mean?",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "3d02384c1801ace8b6276576bec99ddd9fa00dc93c199a893276b9ed9855b31c",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "meaning-p-afaf986d",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "meaning",
+      "group": "meaning",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#meaning>p[1]",
+      "origin": "jsx",
+      "text": "The National Institute of Korean Language’s {a1}dictionary entry for 선배{/a1} describes someone who started earlier in the same field, or entered the same school before you. Its {a2}entry for 후배{/a2} describes the person who came later.",
+      "attrs": {},
+      "placeholders": {
+        "a1": {
+          "tag": "a",
+          "attrs": {
+            "className": "font-medium text-[var(--accent)] underline underline-offset-4 hover:opacity-80",
+            "href": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=66306",
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+          }
+        },
+        "a2": {
+          "tag": "a",
+          "attrs": {
+            "className": "font-medium text-[var(--accent)] underline underline-offset-4 hover:opacity-80",
+            "href": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=73247",
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+          }
+        }
+      },
+      "hash": "0067f4b316312aede27106b8426be46a9a8ae987d6d6a5aa37a98ae3c2b76fee",
+      "translate": true,
+      "protect": [
+        "선배",
+        "후배"
+      ],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "meaning-p-a3d14dbd",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "meaning",
+      "group": "meaning",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#meaning>p[2]",
+      "origin": "jsx",
+      "text": "You might also see these words written as {em1}seonbae{/em1} and {em2}hubae{/em2}. Those follow the official Korean romanization rules; {em3}sunbae{/em3} and{em4} hoobae{/em4} are spellings you will often see in English-language fan discussions.",
+      "attrs": {},
+      "placeholders": {
+        "em1": {
+          "tag": "em",
+          "attrs": {}
+        },
+        "em2": {
+          "tag": "em",
+          "attrs": {}
+        },
+        "em3": {
+          "tag": "em",
+          "attrs": {}
+        },
+        "em4": {
+          "tag": "em",
+          "attrs": {}
+        }
+      },
+      "hash": "5b2a14c86744a160f91ddf76c493e9bdbcca5815d544fc107cdec674157b61a3",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "meaning-p-e1ac4323",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "meaning",
+      "group": "meaning",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#meaning>p[3]",
+      "origin": "jsx",
+      "text": "One thing worth remembering: {strong1}being someone’s sunbae does not automatically make you their boss.{/strong1} They might simply have been in that field longer.",
+      "attrs": {},
+      "placeholders": {
+        "strong1": {
+          "tag": "strong",
+          "attrs": {}
+        }
+      },
+      "hash": "e5f50c4a83e6c7f9d7064d1738c49922bc838ce19143d144f9d31d192ed10066",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "age-h2-314f9ea0",
+      "kind": "block",
+      "tag": "h2",
+      "anchor": "age",
+      "group": "age",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#age>h2[1]",
+      "origin": "jsx",
+      "text": "Can someone younger be your sunbae?",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "bcb1fa3b5448fd02ba710029199ec26a2d9940e4c492484d54874fe3f48ecca4",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "age-p-549861e6",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "age",
+      "group": "age",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#age>p[1]",
+      "origin": "jsx",
+      "text": "Yes. Imagine you join a university club at 22. Another member is 20, but they joined the club a year before you.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "0d84eb269b327d174a7553f5abb14debc6d0c058e954fa9959a212cb66783714",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "age-p-f4d4d942",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "age",
+      "group": "age",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#age>p[2]",
+      "origin": "jsx",
+      "text": "Even though they’re younger than you, they’re your sunbae in that club because they joined earlier and have been a member longer.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "635258f22d123d972922d4303890557b8320500aab225ce406c0a84fcbc335ce",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "age-p-aa62c554",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "age",
+      "group": "age",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#age>p[3]",
+      "origin": "jsx",
+      "text": "Being a sunbae in this situation is about how long you’ve been part of the club, not how old you are.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "37773564ec1a34d8239e7411853a66c7306b14bc3054497464e025d9354ff6f1",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "age-p-a312338f",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "age",
+      "group": "age",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#age>p[4]",
+      "origin": "jsx",
+      "text": "Age still matters in Korean social situations. It is just not the same thing as seniority. How people actually speak to each other may depend on their relationship, how well they know each other, and the setting. There is no one rule that answers every situation. If Korean age itself is confusing, our {a1}Korean age guide{/a1} helps with that part.",
+      "attrs": {},
+      "placeholders": {
+        "a1": {
+          "tag": "a",
+          "attrs": {
+            "className": "font-medium text-[var(--accent)] underline underline-offset-4 hover:opacity-80",
+            "href": "/expressions/korean-age",
+            "component": "Link"
+          }
+        }
+      },
+      "hash": "31d78902c8685b450e4f589f3e8a8328a28e90aaa8b32604ad88d727336dd319",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "school-h2-6901001a",
+      "kind": "block",
+      "tag": "h2",
+      "anchor": "school",
+      "group": "school",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#school>h2[1]",
+      "origin": "jsx",
+      "text": "What it felt like at school",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "16706f8df68c24b69a719ac8c55d2b0bf330442af58f37c6ecf6f7a63a249ed1",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "school-p-62c5b1a2",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "school",
+      "group": "school",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#school>p[1]",
+      "origin": "jsx",
+      "text": "I grew up in a small town in Korea, where people tended to know each other, or at least know someone in common.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "44c4fcc05a2332345f3c504e0a6ecfcc55fd7b6e5b4812591a4bffeae81f4032",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "school-p-b548f2bf",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "school",
+      "group": "school",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#school>p[2]",
+      "origin": "jsx",
+      "text": "Manners were a big deal while I was growing up. Even with someone just one year ahead of me at school, I was careful to be polite. To be honest, I found seniors a little scary back then.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "35a98284acb04a31b2528eca75a849bea4359c71580bb768d1c5e84ac2a4ac8b",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "school-p-221e199c",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "school",
+      "group": "school",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#school>p[3]",
+      "origin": "jsx",
+      "text": "It was not because they had threatened me or done anything wrong. Just being around them could feel intimidating. Because the town was small and people seemed connected, I worried that getting on the wrong side of one senior could make things awkward with other seniors too.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "3dc58bbabb93677231fb75119552120719beb544d269f923e660f9c8d1e62dc6",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "school-p-536492ba",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "school",
+      "group": "school",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#school>p[4]",
+      "origin": "jsx",
+      "text": "Looking back, I do not know whether that would really have happened. But as a teenager, that was how it felt. Someone who grew up elsewhere or went to a different school might remember their seniors very differently.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "7e816954f2e8a5f1d9e3fa6c30efa249451ae5e5bafa1b8a722e40dfbfe0bd17",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "work-h2-922eea52",
+      "kind": "block",
+      "tag": "h2",
+      "anchor": "work",
+      "group": "work",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#work>h2[1]",
+      "origin": "jsx",
+      "text": "At work, job titles add another layer",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "6b11b5fbbdea531a696c4097f61259d35e9d421de3e262a1174fd55dd08c9922",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "work-p-372cca95",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "work",
+      "group": "work",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#work>p[1]",
+      "origin": "jsx",
+      "text": "In a Korean office, people do not necessarily call each other sunbae and hoobae all day. Job titles are often more useful.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "637bd391dbf89fd2f88d9197b7847edd08d57619c7b4762d7f95b3ee015c4860",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "work-p-9fd11b6a",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "work",
+      "group": "work",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#work>p[2]",
+      "origin": "jsx",
+      "text": "I used to work as a {em1}daeri{/em1} (대리), a job title often translated as assistant manager. Some employees in more junior positions were older than me, but they still called me {em2}daeri-nim{/em2} (대리님) out of respect for my position. I was polite to them too, because they were older.",
+      "attrs": {},
+      "placeholders": {
+        "em1": {
+          "tag": "em",
+          "attrs": {}
+        },
+        "em2": {
+          "tag": "em",
+          "attrs": {}
+        }
+      },
+      "hash": "11957ba88155ab9d69714da08466464ae1c2a7e70562f0ac3d193da03071f481",
+      "translate": true,
+      "protect": [
+        "대리",
+        "대리님"
+      ],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "work-p-52f8847d",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "work",
+      "group": "work",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#work>p[3]",
+      "origin": "jsx",
+      "text": "For me, respect for someone’s position and respect for their age could exist side by side. A higher job title did not mean I could ignore someone’s age.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "8ca4dc3bafef95fbaaeee8166b9dc340fb790d62abe08231898769dc5114ab1d",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "work-table-caption-f2a08fcc",
+      "kind": "block",
+      "tag": "caption",
+      "anchor": "work-table",
+      "group": "work-table",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#work>div[1]>table[1]>caption[1]",
+      "origin": "jsx",
+      "text": "Common Korean workplace terms",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "685b65f1a49ce47632393b270b5373da28c6a4382d0f7e47af55001a2b2dfbc6",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "work-table-th-e7237a24",
+      "kind": "block",
+      "tag": "th",
+      "anchor": "work-table",
+      "group": "work-table",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#work>div[1]>table[1]>thead[1]>tr[1]>th[1]",
+      "origin": "jsx",
+      "text": "Korean",
+      "attrs": {
+        "scope": "col"
+      },
+      "placeholders": {},
+      "hash": "89887462f915874ebcd2ab4067c72a8383777bfe825ebe206fcef87dfafbcb15",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "work-table-th-78a1748e",
+      "kind": "block",
+      "tag": "th",
+      "anchor": "work-table",
+      "group": "work-table",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#work>div[1]>table[1]>thead[1]>tr[1]>th[2]",
+      "origin": "jsx",
+      "text": "English guide",
+      "attrs": {
+        "scope": "col"
+      },
+      "placeholders": {},
+      "hash": "619e4c8eab4631ff3c14987052e7285546d6eda6a816e47fe357d2df821fdad2",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "work-table-th-71c1bfac",
+      "kind": "block",
+      "tag": "th",
+      "anchor": "work-table",
+      "group": "work-table",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#work>div[1]>table[1]>thead[1]>tr[1]>th[3]",
+      "origin": "jsx",
+      "text": "What matters",
+      "attrs": {
+        "scope": "col"
+      },
+      "placeholders": {},
+      "hash": "7b0aa65368e542262ebc970cf3d20c21bd9b12f14cd13e78d7832645813bcbf6",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "work-table-workplaceterms-k884a00-th-fd74ec5d",
+      "kind": "block",
+      "tag": "th",
+      "anchor": "work-table-workplaceterms-k884a00",
+      "group": "work-table-workplaceterms",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#work>div[1]>table[1]>tbody[1]>workplaceTerms[0]>tr[1]>th[1]",
+      "origin": "data:workplaceTerms[0]",
+      "text": "선배 · 후배",
+      "attrs": {
+        "scope": "row"
+      },
+      "placeholders": {},
+      "hash": "ffe63d49a634888c6bda2bcc02e1468bf79b049821fb6198dc99566ede81b94e",
+      "translate": false,
+      "protect": [
+        "선배 · 후배"
+      ],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "work-table-workplaceterms-k884a00-td-fac64c01",
+      "kind": "block",
+      "tag": "td",
+      "anchor": "work-table-workplaceterms-k884a00",
+      "group": "work-table-workplaceterms",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#work>div[1]>table[1]>tbody[1]>workplaceTerms[0]>tr[1]>td[1]",
+      "origin": "data:workplaceTerms[0]",
+      "text": "Sunbae / hoobae",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "b43b91da570ad0d037849e8a81173a1d0a41439de7b6b132c0e29ca5a90b7373",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "work-table-workplaceterms-k884a00-td-5d187499",
+      "kind": "block",
+      "tag": "td",
+      "anchor": "work-table-workplaceterms-k884a00",
+      "group": "work-table-workplaceterms",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#work>div[1]>table[1]>tbody[1]>workplaceTerms[0]>tr[1]>td[2]",
+      "origin": "data:workplaceTerms[0]",
+      "text": "Who started earlier or later",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "f86e071fe074f97da6db8312bbd445d519fbd579fe94bcf2baa1c1cf03e5bf8e",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "work-table-workplaceterms-kcebb0b-th-3ae7de2b",
+      "kind": "block",
+      "tag": "th",
+      "anchor": "work-table-workplaceterms-kcebb0b",
+      "group": "work-table-workplaceterms",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#work>div[1]>table[1]>tbody[1]>workplaceTerms[1]>tr[2]>th[1]",
+      "origin": "data:workplaceTerms[1]",
+      "text": "상사",
+      "attrs": {
+        "scope": "row"
+      },
+      "placeholders": {},
+      "hash": "7145d16abbd5a99279c580362318a3691c1e49c2d20c71e0b55694a9192f2665",
+      "translate": false,
+      "protect": [
+        "상사"
+      ],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "work-table-workplaceterms-kcebb0b-td-cd782797",
+      "kind": "block",
+      "tag": "td",
+      "anchor": "work-table-workplaceterms-kcebb0b",
+      "group": "work-table-workplaceterms",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#work>div[1]>table[1]>tbody[1]>workplaceTerms[1]>tr[2]>td[1]",
+      "origin": "data:workplaceTerms[1]",
+      "text": "Sangsa · superior",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "db20db089d366aa79969d5bb7b89fdee81943934285919a5e4497440f20027a3",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "work-table-workplaceterms-kcebb0b-td-b15dbd5d",
+      "kind": "block",
+      "tag": "td",
+      "anchor": "work-table-workplaceterms-kcebb0b",
+      "group": "work-table-workplaceterms",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#work>div[1]>table[1]>tbody[1]>workplaceTerms[1]>tr[2]>td[2]",
+      "origin": "data:workplaceTerms[1]",
+      "text": "Position at work",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "826d5e6d49ebba38f0490f021e27949fa13f4d010b20637e4caa3bc226f93206",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "work-table-workplaceterms-k66e93c-th-aa001be9",
+      "kind": "block",
+      "tag": "th",
+      "anchor": "work-table-workplaceterms-k66e93c",
+      "group": "work-table-workplaceterms",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#work>div[1]>table[1]>tbody[1]>workplaceTerms[2]>tr[3]>th[1]",
+      "origin": "data:workplaceTerms[2]",
+      "text": "사수",
+      "attrs": {
+        "scope": "row"
+      },
+      "placeholders": {},
+      "hash": "a7c261c4a61941962080256e47d0c3e1a461b97a54b311c6c820008eb46e38e3",
+      "translate": false,
+      "protect": [
+        "사수"
+      ],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "work-table-workplaceterms-k66e93c-td-86c81e50",
+      "kind": "block",
+      "tag": "td",
+      "anchor": "work-table-workplaceterms-k66e93c",
+      "group": "work-table-workplaceterms",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#work>div[1]>table[1]>tbody[1]>workplaceTerms[2]>tr[3]>td[1]",
+      "origin": "data:workplaceTerms[2]",
+      "text": "Sasu · informal trainer",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "d794599907a985e8c170e73ff63027f85eab135ae4b72c5d8349daad83908fcc",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "work-table-workplaceterms-k66e93c-td-f92509bb",
+      "kind": "block",
+      "tag": "td",
+      "anchor": "work-table-workplaceterms-k66e93c",
+      "group": "work-table-workplaceterms",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#work>div[1]>table[1]>tbody[1]>workplaceTerms[2]>tr[3]>td[2]",
+      "origin": "data:workplaceTerms[2]",
+      "text": "Who guides you through the job",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "89caa097ec0cd1915d46e114d0eba39b3d640a8adbdff7c698402bba4f57c691",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "work-table-workplaceterms-k4e96b6-th-5e3ce306",
+      "kind": "block",
+      "tag": "th",
+      "anchor": "work-table-workplaceterms-k4e96b6",
+      "group": "work-table-workplaceterms",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#work>div[1]>table[1]>tbody[1]>workplaceTerms[3]>tr[4]>th[1]",
+      "origin": "data:workplaceTerms[3]",
+      "text": "대리",
+      "attrs": {
+        "scope": "row"
+      },
+      "placeholders": {},
+      "hash": "fdb5aed5ff255553ddc4c606f1fbc0af6f23215df4947c6dc0a05b795061c48a",
+      "translate": false,
+      "protect": [
+        "대리"
+      ],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "work-table-workplaceterms-k4e96b6-td-e5604a65",
+      "kind": "block",
+      "tag": "td",
+      "anchor": "work-table-workplaceterms-k4e96b6",
+      "group": "work-table-workplaceterms",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#work>div[1]>table[1]>tbody[1]>workplaceTerms[3]>tr[4]>td[1]",
+      "origin": "data:workplaceTerms[3]",
+      "text": "Daeri · assistant manager",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "16312c813706a5be54df88a31b0d281a903db533dc531b744d7765dc6d226e56",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "work-table-workplaceterms-k4e96b6-td-da5cf8ae",
+      "kind": "block",
+      "tag": "td",
+      "anchor": "work-table-workplaceterms-k4e96b6",
+      "group": "work-table-workplaceterms",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#work>div[1]>table[1]>tbody[1]>workplaceTerms[3]>tr[4]>td[2]",
+      "origin": "data:workplaceTerms[3]",
+      "text": "An organizational job title",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "fdc7ded2f35ab40a689b2397ecb4473e1a3d77284b0267b174f8529a334bf723",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "work-p-b61319f2",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "work",
+      "group": "work",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#work>p[4]",
+      "origin": "jsx",
+      "text": "Your boss can be younger than you. Someone who joined first might hold a lower job title. The person training you, informally called a {em1}sasu{/em1} (사수) in some workplaces, might not be your manager either.",
+      "attrs": {},
+      "placeholders": {
+        "em1": {
+          "tag": "em",
+          "attrs": {}
+        }
+      },
+      "hash": "b885126c062ed32b54edcceb5b7e2fb9e0a01b4363932b17dd85b18973ccd16b",
+      "translate": true,
+      "protect": [
+        "사수"
+      ],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "military-h2-713236a7",
+      "kind": "block",
+      "tag": "h2",
+      "anchor": "military",
+      "group": "military",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#military>h2[1]",
+      "origin": "jsx",
+      "text": "The military has its own seniority culture",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "e4627f3ea9b4e2acb2e07ac0e3afe956ac599d232e22d28e879bbb9fa52d1ebf",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "military-p-356bfaab",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "military",
+      "group": "military",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#military>p[1]",
+      "origin": "jsx",
+      "text": "Most Korean men are required to complete military service, with exceptions and different service arrangements. People do not all enlist at the same age, so a younger soldier can be someone else’s {em1}seonim{/em1} (선임), or senior soldier. The soldier who comes later is a {em2}huim{/em2} (후임), or junior soldier. In that relationship, age does not decide who is senior.",
+      "attrs": {},
+      "placeholders": {
+        "em1": {
+          "tag": "em",
+          "attrs": {}
+        },
+        "em2": {
+          "tag": "em",
+          "attrs": {}
+        }
+      },
+      "hash": "ffeaca1a2d9f73d1cde0b2ca92621ec3ce32dbc7a93ff3e7ecb67faebeac3a4a",
+      "translate": true,
+      "protect": [
+        "선임",
+        "후임"
+      ],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "military-p-c646635f",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "military",
+      "group": "military",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#military>p[2]",
+      "origin": "jsx",
+      "text": "The way soldiers spoke to one another made that especially clear when I served. Senior soldiers commonly used {em1}banmal{/em1} (반말), or casual speech, with juniors. Juniors used much more formal speech when addressing seniors. We often called it the {em2}danakka{/em2} (다나까) style: expressions like “알겠습니다” or “알겠습니까?” rather than an everyday polite “-요” ending.",
+      "attrs": {},
+      "placeholders": {
+        "em1": {
+          "tag": "em",
+          "attrs": {}
+        },
+        "em2": {
+          "tag": "em",
+          "attrs": {}
+        }
+      },
+      "hash": "47a373f54a2ceb5a71c5a53b7e5d6450af78f2af793e9bc5e2cd7786f1dd91f9",
+      "translate": true,
+      "protect": [
+        "반말",
+        "다나까",
+        "알겠습니다",
+        "알겠습니까",
+        "요"
+      ],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "military-p-8168b738",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "military",
+      "group": "military",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#military>p[3]",
+      "origin": "jsx",
+      "text": "Military language has been changing, although that does not mean every unit speaks the same way today. A {a1}2018 article published by the National Institute of Korean Language{/a1} describes the pressure around strict military speech and discussions about using more everyday polite forms.",
+      "attrs": {},
+      "placeholders": {
+        "a1": {
+          "tag": "a",
+          "attrs": {
+            "className": "font-medium text-[var(--accent)] underline underline-offset-4 hover:opacity-80",
+            "href": "https://www.korean.go.kr/nkview/nklife/2018_1/28_0103.pdf",
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+          }
+        }
+      },
+      "hash": "349bb6295fb2ab82f10e43751a35198560dca33f9b285dfcff3becc3a54ec6d4",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "military-p-a13594dd",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "military",
+      "group": "military",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#military>p[4]",
+      "origin": "jsx",
+      "text": "Military seniority also exists alongside official rank and the chain of command. Respecting a senior does not mean accepting bullying or unfair orders. Still, this is one of the clearest ways to see how age and seniority can differ in Korea.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "fc3c3c9078991053af05782b808200513bab1454264ef819e21ace67295bdc14",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "kpop-h2-e769bd3a",
+      "kind": "block",
+      "tag": "h2",
+      "anchor": "kpop",
+      "group": "kpop",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#kpop>h2[1]",
+      "origin": "jsx",
+      "text": "Why K-pop idols say sunbaenim",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "feb36ab4a5c7c106785f9be8e7956c22eedf531f1a9a1f1005d0a8ae05a883aa",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "kpop-p-04aa6ac1",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "kpop",
+      "group": "kpop",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#kpop>p[1]",
+      "origin": "jsx",
+      "text": "In K-pop, the word often comes up when idols speak about artists who{a1} debuted{/a1} earlier or have worked in the industry longer. It is a way of acknowledging someone’s experience, not necessarily a sign that they know each other well.",
+      "attrs": {},
+      "placeholders": {
+        "a1": {
+          "tag": "a",
+          "attrs": {
+            "className": "font-medium text-[var(--accent)] underline underline-offset-4 hover:opacity-80",
+            "href": "/kpop/what-does-debut-mean-in-kpop",
+            "component": "Link"
+          }
+        }
+      },
+      "hash": "9c2a420d3697826fa28c2439ec9808fb1f19bb56f23739d3aefe38727685bf49",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "kpop-p-b51e6858",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "kpop",
+      "group": "kpop",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#kpop>p[2]",
+      "origin": "jsx",
+      "text": "Take BoA, who debuted in 2000. During her 20th-anniversary press event, she called veteran singer Na Hoon-a {em1}sunbaenim{/em1} while discussing what she had learned from watching his performance ({a1}Yonhap News{/a1}). In 2022, Yuna from the rookie group CSR called BoA {em2}sunbaenim{/em2} when naming her as a role model ({a2}CBS NoCut News{/a2}). BoA can be a senior to one artist and a junior to another.",
+      "attrs": {},
+      "placeholders": {
+        "em1": {
+          "tag": "em",
+          "attrs": {}
+        },
+        "a1": {
+          "tag": "a",
+          "attrs": {
+            "className": "font-medium text-[var(--accent)] underline underline-offset-4 hover:opacity-80",
+            "href": "https://www.yna.co.kr/view/AKR20201201114000005",
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+          }
+        },
+        "em2": {
+          "tag": "em",
+          "attrs": {}
+        },
+        "a2": {
+          "tag": "a",
+          "attrs": {
+            "className": "font-medium text-[var(--accent)] underline underline-offset-4 hover:opacity-80",
+            "href": "https://www.nocutnews.co.kr/news/5793840",
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+          }
+        }
+      },
+      "hash": "7456ce7dc1ad662134cd51dd7592a44eae843b12ede27aa2173904a6d1f9fac0",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "kpop-p-0029ddec",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "kpop",
+      "group": "kpop",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#kpop>p[3]",
+      "origin": "jsx",
+      "text": "At the 2025 debut showcase for {a1}CORTIS{/a1}, Martin spoke about having worked on music for senior artists at HYBE before finally standing on stage with his own group ({a2}Korea Economic Daily{/a2}).",
+      "attrs": {},
+      "placeholders": {
+        "a1": {
+          "tag": "a",
+          "attrs": {
+            "className": "font-medium text-[var(--accent)] underline underline-offset-4 hover:opacity-80",
+            "href": "/kpop/who-is-cortis",
+            "component": "Link"
+          }
+        },
+        "a2": {
+          "tag": "a",
+          "attrs": {
+            "className": "font-medium text-[var(--accent)] underline underline-offset-4 hover:opacity-80",
+            "href": "https://www.hankyung.com/article/202508186044H",
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+          }
+        }
+      },
+      "hash": "fe689ff3817c6706daeef32fc9e3a3e40fe568c1a37e2b164868f3abe64e7270",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "kpop-p-cd3cec5d",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "kpop",
+      "group": "kpop",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#kpop>p[4]",
+      "origin": "jsx",
+      "text": "That kind of respect feels familiar to me. Artists do not need to work at the same company to recognize someone who started in the same industry earlier. But their personal relationship is another question, and we cannot tell how close they are from the word {em1}sunbaenim{/em1} alone.",
+      "attrs": {},
+      "placeholders": {
+        "em1": {
+          "tag": "em",
+          "attrs": {}
+        }
+      },
+      "hash": "d6e6dfcac59e34f6d60939d9e3fd1c080b48527962f6d6bff31bc055c127035d",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "relationships-h2-ac405565",
+      "kind": "block",
+      "tag": "h2",
+      "anchor": "relationships",
+      "group": "relationships",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#relationships>h2[1]",
+      "origin": "jsx",
+      "text": "The good side and the difficult side",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "8eb3b0477d66cd0a1fa198a677ce781fa7f8a210ac86eb0344c81923745b828a",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "relationships-p-3ba1c5a1",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "relationships",
+      "group": "relationships",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#relationships>p[1]",
+      "origin": "jsx",
+      "text": "Seniority can be uncomfortable. I remember being nervous around seniors as a student, and I understand why the pressure to show respect can feel heavy at times. Just because a relationship has a senior and a junior does not mean those people will automatically get along.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "608604b925a27226eb6ae3febf547a0d34fc96a33ac7cafb9e7b2e7c6387db59",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "relationships-p-91068666",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "relationships",
+      "group": "relationships",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#relationships>p[2]",
+      "origin": "jsx",
+      "text": "But when people get closer, it can become a really good relationship. A senior may look after a junior, help them settle in, or share things they learned the hard way. The junior might come to trust them, and the two can become much less formal with each other. That side of the culture matters to me too.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "1e0246737c9ccc42b4d31de378b84cfdd3cd9146662bebb9690c124a91b6450f",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "a-local-take-from-haemil-aside-aria-label-16f9de9e",
+      "kind": "attr",
+      "tag": "aside@aria-label",
+      "anchor": "a-local-take-from-haemil",
+      "group": "a-local-take-from-haemil",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>aside[1]@aria-label",
+      "origin": "jsx",
+      "text": "A local take from HAEMIL",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "a1930a6164aca65b4e662b0a3ac0d1c8c369e85334eb50edf03d6b0137fcb8fd",
+      "translate": true,
+      "protect": [
+        "HAEMIL"
+      ],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "a-local-take-from-haemil-h2-9801a4b5",
+      "kind": "block",
+      "tag": "h2",
+      "anchor": "a-local-take-from-haemil",
+      "group": "a-local-take-from-haemil",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>aside[1]>h2[1]",
+      "origin": "jsx",
+      "text": "A local take from HAEMIL",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "fc1e6ea716a8b4ec1bbda3da833191c470fbbdb5c3e2509f420026d560a70c01",
+      "translate": true,
+      "protect": [
+        "HAEMIL"
+      ],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "a-local-take-from-haemil-p-044c58b0",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "a-local-take-from-haemil",
+      "group": "a-local-take-from-haemil",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>aside[1]>p[1]",
+      "origin": "jsx",
+      "text": "When I hear someone say {em1}sunbaenim{/em1} now, I barely think about it. It is a word I have heard all my life. But I can see why it might be confusing if you did not grow up here. Being someone’s sunbae tells you something about when they started. It does not tell you everything about their relationship. That depends on the people themselves.",
+      "attrs": {},
+      "placeholders": {
+        "em1": {
+          "tag": "em",
+          "attrs": {}
+        }
+      },
+      "hash": "13a8bb64b47f5ab04ee7763855843a92b0580b7f4356c68711759d5fba87d3b5",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "related-guides-h2-12ab997b",
+      "kind": "block",
+      "tag": "h2",
+      "anchor": "related-guides",
+      "group": "related-guides",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section[9]>h2#related-guides",
+      "origin": "jsx",
+      "text": "Keep exploring Korea",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "49cd36990ca5eb94a518c4c9976511b3244b4ef51305d230266eb3890bdbf13d",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "related-guides-relatedguides-kpop-what-is-maknae-a-7f36c107",
+      "kind": "block",
+      "tag": "a",
+      "anchor": "related-guides-relatedguides-kpop-what-is-maknae",
+      "group": "related-guides-relatedguides",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section[9]>div[1]>relatedGuides[0]>Link[1]",
+      "origin": "data:relatedGuides[0]",
+      "text": "What Does Maknae Mean? →",
+      "attrs": {
+        "href": "/kpop/what-is-maknae"
+      },
+      "placeholders": {},
+      "hash": "786ef6f47c64f805e416e0c6f998f3af27ba0f97b7406a07a7ad0bd1f8588167",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "related-guides-relatedguides-kpop-what-does-debut-mean-in-kpop-a-22fdb7fd",
+      "kind": "block",
+      "tag": "a",
+      "anchor": "related-guides-relatedguides-kpop-what-does-debut-mean-in-kpop",
+      "group": "related-guides-relatedguides",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section[9]>div[1]>relatedGuides[1]>Link[2]",
+      "origin": "data:relatedGuides[1]",
+      "text": "What Does Debut Mean in K-pop? →",
+      "attrs": {
+        "href": "/kpop/what-does-debut-mean-in-kpop"
+      },
+      "placeholders": {},
+      "hash": "9937751d10e6a34cda3fa618b1d7e1eee8c3686cff12931f761579529d4ede12",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "related-guides-relatedguides-kpop-what-is-a-rookie-group-in-kpop-a-2dfd59fc",
+      "kind": "block",
+      "tag": "a",
+      "anchor": "related-guides-relatedguides-kpop-what-is-a-rookie-group-in-kpop",
+      "group": "related-guides-relatedguides",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section[9]>div[1]>relatedGuides[2]>Link[3]",
+      "origin": "data:relatedGuides[2]",
+      "text": "What Is a Rookie Group? →",
+      "attrs": {
+        "href": "/kpop/what-is-a-rookie-group-in-kpop"
+      },
+      "placeholders": {},
+      "hash": "1a4254eb89ef1186f6059b6cd82cbb18d4be416f5e17ceeb8985f39e59fa122e",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "related-guides-relatedguides-expressions-korean-age-a-d59966e2",
+      "kind": "block",
+      "tag": "a",
+      "anchor": "related-guides-relatedguides-expressions-korean-age",
+      "group": "related-guides-relatedguides",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section[9]>div[1]>relatedGuides[3]>Link[4]",
+      "origin": "data:relatedGuides[3]",
+      "text": "Korean Age Explained →",
+      "attrs": {
+        "href": "/expressions/korean-age"
+      },
+      "placeholders": {},
+      "hash": "7316c30284448aee7ea934eba216028e6ce54628c28aa445cdf397fff8a5f50e",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "related-guides-relatedguides-expressions-nunchi-a-39086e50",
+      "kind": "block",
+      "tag": "a",
+      "anchor": "related-guides-relatedguides-expressions-nunchi",
+      "group": "related-guides-relatedguides",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section[9]>div[1]>relatedGuides[4]>Link[5]",
+      "origin": "data:relatedGuides[4]",
+      "text": "What Is Nunchi? →",
+      "attrs": {
+        "href": "/expressions/nunchi"
+      },
+      "placeholders": {},
+      "hash": "424684ce145d80d9dcd5486f22d0c8faa6376ba2d63f728c75bcd2820be656d8",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "related-guides-relatedguides-kpop-who-is-cortis-a-2d50e8db",
+      "kind": "block",
+      "tag": "a",
+      "anchor": "related-guides-relatedguides-kpop-who-is-cortis",
+      "group": "related-guides-relatedguides",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section[9]>div[1]>relatedGuides[5]>Link[6]",
+      "origin": "data:relatedGuides[5]",
+      "text": "Who Is CORTIS? →",
+      "attrs": {
+        "href": "/kpop/who-is-cortis"
+      },
+      "placeholders": {},
+      "hash": "1acc164e44aecc4a0d9e6bd6583078e4f3ac5273691553d645714b07e72e471b",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "related-guides-relatedguides-kpop-glossary-a-90e64785",
+      "kind": "block",
+      "tag": "a",
+      "anchor": "related-guides-relatedguides-kpop-glossary",
+      "group": "related-guides-relatedguides",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section[9]>div[1]>relatedGuides[6]>Link[7]",
+      "origin": "data:relatedGuides[6]",
+      "text": "K-pop Glossary →",
+      "attrs": {
+        "href": "/kpop/glossary"
+      },
+      "placeholders": {},
+      "hash": "b2147dda57a3e78f91366fd8ccbe7f471b921bdaddf8d89bd9f3477305c66789",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    }
+  ],
+  "review": [
+    {
+      "line": 87,
+      "where": "page",
+      "reason": "attribute data is dynamic and was locked as an expression"
+    },
+    {
+      "line": 87,
+      "where": "page>JsonLd[1]",
+      "reason": "structured data (JSON-LD) must be generated per locale; its strings are not translated by this extractor"
+    }
+  ],
+  "structure": {
+    "fragment": true,
+    "children": [
+      {
+        "component": "JsonLd",
+        "attrs": {
+          "data": {
+            "dynamic": "structuredData"
+          }
+        },
+        "attributeUnits": {}
+      },
+      {
+        "element": "main",
+        "attrs": {
+          "className": "min-h-screen bg-[var(--bg)] text-[var(--text)]"
+        },
+        "attributeUnits": {},
+        "children": [
+          {
+            "element": "div",
+            "attrs": {
+              "className": "mx-auto flex w-full max-w-6xl flex-col gap-7 px-5 py-6 md:gap-10 md:px-8 md:py-8"
+            },
+            "attributeUnits": {},
+            "children": [
+              {
+                "component": "SiteHeader",
+                "attrs": {},
+                "attributeUnits": {}
+              },
+              {
+                "element": "article",
+                "attrs": {
+                  "className": "overflow-hidden rounded-[2rem] border border-[var(--border)] bg-[var(--surface)]"
+                },
+                "attributeUnits": {},
+                "children": [
+                  {
+                    "element": "header",
+                    "attrs": {
+                      "className": "border-b border-[var(--border)] px-6 py-9 md:px-12 md:py-14"
+                    },
+                    "attributeUnits": {},
+                    "children": [
+                      {
+                        "element": "a",
+                        "attrs": {
+                          "href": "/kpop",
+                          "className": "text-sm font-medium text-[var(--accent)] hover:underline"
+                        },
+                        "attributeUnits": {},
+                        "unit": "header-a-3b20ec7e"
+                      },
+                      {
+                        "element": "p",
+                        "attrs": {
+                          "className": "mt-8 text-xs font-semibold uppercase tracking-[0.22em] text-[var(--gold)]"
+                        },
+                        "attributeUnits": {},
+                        "unit": "header-p-e98ed66c"
+                      },
+                      {
+                        "element": "h1",
+                        "attrs": {
+                          "className": "mt-4 max-w-4xl text-4xl font-semibold leading-[1.12] tracking-tight md:text-6xl"
+                        },
+                        "attributeUnits": {},
+                        "unit": "header-h1-299cbd58"
+                      },
+                      {
+                        "element": "p",
+                        "attrs": {
+                          "className": "mt-6 max-w-3xl text-lg leading-8 text-[var(--muted)] md:text-xl"
+                        },
+                        "attributeUnits": {},
+                        "unit": "header-p-78cf4305"
+                      }
+                    ]
+                  },
+                  {
+                    "element": "div",
+                    "attrs": {
+                      "className": "mx-auto max-w-3xl space-y-11 px-6 py-9 text-base leading-8 md:mx-0 md:max-w-[62rem] md:px-12 md:py-12 md:text-lg md:leading-9"
+                    },
+                    "attributeUnits": {},
+                    "children": [
+                      {
+                        "element": "section",
+                        "attrs": {
+                          "aria-label": "Quick answer",
+                          "className": "space-y-5"
+                        },
+                        "attributeUnits": {
+                          "aria-label": "quick-answer-section-aria-label-b52f81c5"
+                        },
+                        "children": [
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "quick-answer-p-c5fd6aeb"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "quick-answer-p-098b8510"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "quick-answer-p-499e3d88"
+                          },
+                          {
+                            "element": "div",
+                            "attrs": {
+                              "className": "grid gap-3 sm:grid-cols-3"
+                            },
+                            "attributeUnits": {},
+                            "children": [
+                              {
+                                "list": "terms",
+                                "children": [
+                                  {
+                                    "element": "div",
+                                    "attrs": {
+                                      "className": "rounded-2xl border border-[var(--border)] bg-[var(--card)] p-4"
+                                    },
+                                    "attributeUnits": {},
+                                    "children": [
+                                      {
+                                        "element": "p",
+                                        "attrs": {
+                                          "className": "text-2xl font-semibold"
+                                        },
+                                        "attributeUnits": {},
+                                        "unit": "quick-answer-terms-k5a64f8-p-4b2ff191"
+                                      },
+                                      {
+                                        "element": "p",
+                                        "attrs": {
+                                          "className": "mt-1 text-sm font-semibold text-[var(--accent)]"
+                                        },
+                                        "attributeUnits": {},
+                                        "unit": "quick-answer-terms-k5a64f8-p-d2763185"
+                                      },
+                                      {
+                                        "element": "p",
+                                        "attrs": {
+                                          "className": "mt-2 text-sm leading-6 text-[var(--muted)]"
+                                        },
+                                        "attributeUnits": {},
+                                        "unit": "quick-answer-terms-k5a64f8-p-c9c7ebe0"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "element": "div",
+                                    "attrs": {
+                                      "className": "rounded-2xl border border-[var(--border)] bg-[var(--card)] p-4"
+                                    },
+                                    "attributeUnits": {},
+                                    "children": [
+                                      {
+                                        "element": "p",
+                                        "attrs": {
+                                          "className": "text-2xl font-semibold"
+                                        },
+                                        "attributeUnits": {},
+                                        "unit": "quick-answer-terms-kd1877a-p-e00fa5fe"
+                                      },
+                                      {
+                                        "element": "p",
+                                        "attrs": {
+                                          "className": "mt-1 text-sm font-semibold text-[var(--accent)]"
+                                        },
+                                        "attributeUnits": {},
+                                        "unit": "quick-answer-terms-kd1877a-p-234948ae"
+                                      },
+                                      {
+                                        "element": "p",
+                                        "attrs": {
+                                          "className": "mt-2 text-sm leading-6 text-[var(--muted)]"
+                                        },
+                                        "attributeUnits": {},
+                                        "unit": "quick-answer-terms-kd1877a-p-8328857d"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "element": "div",
+                                    "attrs": {
+                                      "className": "rounded-2xl border border-[var(--border)] bg-[var(--card)] p-4"
+                                    },
+                                    "attributeUnits": {},
+                                    "children": [
+                                      {
+                                        "element": "p",
+                                        "attrs": {
+                                          "className": "text-2xl font-semibold"
+                                        },
+                                        "attributeUnits": {},
+                                        "unit": "quick-answer-terms-k384302-p-cd509bbd"
+                                      },
+                                      {
+                                        "element": "p",
+                                        "attrs": {
+                                          "className": "mt-1 text-sm font-semibold text-[var(--accent)]"
+                                        },
+                                        "attributeUnits": {},
+                                        "unit": "quick-answer-terms-k384302-p-3c797710"
+                                      },
+                                      {
+                                        "element": "p",
+                                        "attrs": {
+                                          "className": "mt-2 text-sm leading-6 text-[var(--muted)]"
+                                        },
+                                        "attributeUnits": {},
+                                        "unit": "quick-answer-terms-k384302-p-6b1e4b32"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "element": "section",
+                        "attrs": {
+                          "id": "meaning",
+                          "className": "space-y-4 scroll-mt-24"
+                        },
+                        "attributeUnits": {},
+                        "children": [
+                          {
+                            "element": "h2",
+                            "attrs": {
+                              "className": "text-2xl font-semibold leading-tight md:text-3xl"
+                            },
+                            "attributeUnits": {},
+                            "unit": "meaning-h2-6e6405e0"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "meaning-p-afaf986d"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "meaning-p-a3d14dbd"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "meaning-p-e1ac4323"
+                          }
+                        ]
+                      },
+                      {
+                        "element": "section",
+                        "attrs": {
+                          "id": "age",
+                          "className": "space-y-4 scroll-mt-24"
+                        },
+                        "attributeUnits": {},
+                        "children": [
+                          {
+                            "element": "h2",
+                            "attrs": {
+                              "className": "text-2xl font-semibold leading-tight md:text-3xl"
+                            },
+                            "attributeUnits": {},
+                            "unit": "age-h2-314f9ea0"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "age-p-549861e6"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "age-p-f4d4d942"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "age-p-aa62c554"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "age-p-a312338f"
+                          }
+                        ]
+                      },
+                      {
+                        "element": "section",
+                        "attrs": {
+                          "id": "school",
+                          "className": "space-y-4 scroll-mt-24"
+                        },
+                        "attributeUnits": {},
+                        "children": [
+                          {
+                            "element": "h2",
+                            "attrs": {
+                              "className": "text-2xl font-semibold leading-tight md:text-3xl"
+                            },
+                            "attributeUnits": {},
+                            "unit": "school-h2-6901001a"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "school-p-62c5b1a2"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "school-p-b548f2bf"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "school-p-221e199c"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "school-p-536492ba"
+                          }
+                        ]
+                      },
+                      {
+                        "element": "section",
+                        "attrs": {
+                          "id": "work",
+                          "className": "space-y-5 scroll-mt-24"
+                        },
+                        "attributeUnits": {},
+                        "children": [
+                          {
+                            "element": "h2",
+                            "attrs": {
+                              "className": "text-2xl font-semibold leading-tight md:text-3xl"
+                            },
+                            "attributeUnits": {},
+                            "unit": "work-h2-922eea52"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "work-p-372cca95"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "work-p-9fd11b6a"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "work-p-52f8847d"
+                          },
+                          {
+                            "element": "div",
+                            "attrs": {
+                              "className": "overflow-x-auto rounded-2xl border border-[var(--border)]"
+                            },
+                            "attributeUnits": {},
+                            "children": [
+                              {
+                                "element": "table",
+                                "attrs": {
+                                  "className": "w-full min-w-[520px] border-collapse text-left text-sm md:text-base"
+                                },
+                                "attributeUnits": {},
+                                "children": [
+                                  {
+                                    "element": "caption",
+                                    "attrs": {
+                                      "className": "sr-only"
+                                    },
+                                    "attributeUnits": {},
+                                    "unit": "work-table-caption-f2a08fcc"
+                                  },
+                                  {
+                                    "element": "thead",
+                                    "attrs": {
+                                      "className": "bg-[var(--card)]"
+                                    },
+                                    "attributeUnits": {},
+                                    "children": [
+                                      {
+                                        "element": "tr",
+                                        "attrs": {},
+                                        "attributeUnits": {},
+                                        "children": [
+                                          {
+                                            "element": "th",
+                                            "attrs": {
+                                              "scope": "col",
+                                              "className": "p-3 font-semibold"
+                                            },
+                                            "attributeUnits": {},
+                                            "unit": "work-table-th-e7237a24"
+                                          },
+                                          {
+                                            "element": "th",
+                                            "attrs": {
+                                              "scope": "col",
+                                              "className": "p-3 font-semibold"
+                                            },
+                                            "attributeUnits": {},
+                                            "unit": "work-table-th-78a1748e"
+                                          },
+                                          {
+                                            "element": "th",
+                                            "attrs": {
+                                              "scope": "col",
+                                              "className": "p-3 font-semibold"
+                                            },
+                                            "attributeUnits": {},
+                                            "unit": "work-table-th-71c1bfac"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "element": "tbody",
+                                    "attrs": {},
+                                    "attributeUnits": {},
+                                    "children": [
+                                      {
+                                        "list": "workplaceTerms",
+                                        "children": [
+                                          {
+                                            "element": "tr",
+                                            "attrs": {
+                                              "className": "border-t border-[var(--border)]"
+                                            },
+                                            "attributeUnits": {},
+                                            "children": [
+                                              {
+                                                "element": "th",
+                                                "attrs": {
+                                                  "scope": "row",
+                                                  "className": "p-3 font-medium"
+                                                },
+                                                "attributeUnits": {},
+                                                "unit": "work-table-workplaceterms-k884a00-th-fd74ec5d"
+                                              },
+                                              {
+                                                "element": "td",
+                                                "attrs": {
+                                                  "className": "p-3"
+                                                },
+                                                "attributeUnits": {},
+                                                "unit": "work-table-workplaceterms-k884a00-td-fac64c01"
+                                              },
+                                              {
+                                                "element": "td",
+                                                "attrs": {
+                                                  "className": "p-3 text-[var(--muted)]"
+                                                },
+                                                "attributeUnits": {},
+                                                "unit": "work-table-workplaceterms-k884a00-td-5d187499"
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "element": "tr",
+                                            "attrs": {
+                                              "className": "border-t border-[var(--border)]"
+                                            },
+                                            "attributeUnits": {},
+                                            "children": [
+                                              {
+                                                "element": "th",
+                                                "attrs": {
+                                                  "scope": "row",
+                                                  "className": "p-3 font-medium"
+                                                },
+                                                "attributeUnits": {},
+                                                "unit": "work-table-workplaceterms-kcebb0b-th-3ae7de2b"
+                                              },
+                                              {
+                                                "element": "td",
+                                                "attrs": {
+                                                  "className": "p-3"
+                                                },
+                                                "attributeUnits": {},
+                                                "unit": "work-table-workplaceterms-kcebb0b-td-cd782797"
+                                              },
+                                              {
+                                                "element": "td",
+                                                "attrs": {
+                                                  "className": "p-3 text-[var(--muted)]"
+                                                },
+                                                "attributeUnits": {},
+                                                "unit": "work-table-workplaceterms-kcebb0b-td-b15dbd5d"
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "element": "tr",
+                                            "attrs": {
+                                              "className": "border-t border-[var(--border)]"
+                                            },
+                                            "attributeUnits": {},
+                                            "children": [
+                                              {
+                                                "element": "th",
+                                                "attrs": {
+                                                  "scope": "row",
+                                                  "className": "p-3 font-medium"
+                                                },
+                                                "attributeUnits": {},
+                                                "unit": "work-table-workplaceterms-k66e93c-th-aa001be9"
+                                              },
+                                              {
+                                                "element": "td",
+                                                "attrs": {
+                                                  "className": "p-3"
+                                                },
+                                                "attributeUnits": {},
+                                                "unit": "work-table-workplaceterms-k66e93c-td-86c81e50"
+                                              },
+                                              {
+                                                "element": "td",
+                                                "attrs": {
+                                                  "className": "p-3 text-[var(--muted)]"
+                                                },
+                                                "attributeUnits": {},
+                                                "unit": "work-table-workplaceterms-k66e93c-td-f92509bb"
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "element": "tr",
+                                            "attrs": {
+                                              "className": "border-t border-[var(--border)]"
+                                            },
+                                            "attributeUnits": {},
+                                            "children": [
+                                              {
+                                                "element": "th",
+                                                "attrs": {
+                                                  "scope": "row",
+                                                  "className": "p-3 font-medium"
+                                                },
+                                                "attributeUnits": {},
+                                                "unit": "work-table-workplaceterms-k4e96b6-th-5e3ce306"
+                                              },
+                                              {
+                                                "element": "td",
+                                                "attrs": {
+                                                  "className": "p-3"
+                                                },
+                                                "attributeUnits": {},
+                                                "unit": "work-table-workplaceterms-k4e96b6-td-e5604a65"
+                                              },
+                                              {
+                                                "element": "td",
+                                                "attrs": {
+                                                  "className": "p-3 text-[var(--muted)]"
+                                                },
+                                                "attributeUnits": {},
+                                                "unit": "work-table-workplaceterms-k4e96b6-td-da5cf8ae"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "work-p-b61319f2"
+                          }
+                        ]
+                      },
+                      {
+                        "element": "section",
+                        "attrs": {
+                          "id": "military",
+                          "className": "space-y-4 scroll-mt-24"
+                        },
+                        "attributeUnits": {},
+                        "children": [
+                          {
+                            "element": "h2",
+                            "attrs": {
+                              "className": "text-2xl font-semibold leading-tight md:text-3xl"
+                            },
+                            "attributeUnits": {},
+                            "unit": "military-h2-713236a7"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "military-p-356bfaab"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "military-p-c646635f"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "military-p-8168b738"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "military-p-a13594dd"
+                          }
+                        ]
+                      },
+                      {
+                        "element": "section",
+                        "attrs": {
+                          "id": "kpop",
+                          "className": "space-y-4 scroll-mt-24"
+                        },
+                        "attributeUnits": {},
+                        "children": [
+                          {
+                            "element": "h2",
+                            "attrs": {
+                              "className": "text-2xl font-semibold leading-tight md:text-3xl"
+                            },
+                            "attributeUnits": {},
+                            "unit": "kpop-h2-e769bd3a"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "kpop-p-04aa6ac1"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "kpop-p-b51e6858"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "kpop-p-0029ddec"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "kpop-p-cd3cec5d"
+                          }
+                        ]
+                      },
+                      {
+                        "element": "section",
+                        "attrs": {
+                          "id": "relationships",
+                          "className": "space-y-4 scroll-mt-24"
+                        },
+                        "attributeUnits": {},
+                        "children": [
+                          {
+                            "element": "h2",
+                            "attrs": {
+                              "className": "text-2xl font-semibold leading-tight md:text-3xl"
+                            },
+                            "attributeUnits": {},
+                            "unit": "relationships-h2-ac405565"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "relationships-p-3ba1c5a1"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "relationships-p-91068666"
+                          }
+                        ]
+                      },
+                      {
+                        "element": "aside",
+                        "attrs": {
+                          "aria-label": "A local take from HAEMIL",
+                          "className": "rounded-2xl border-l-4 border-[var(--gold)] bg-[var(--card)] p-6 md:p-8"
+                        },
+                        "attributeUnits": {
+                          "aria-label": "a-local-take-from-haemil-aside-aria-label-16f9de9e"
+                        },
+                        "children": [
+                          {
+                            "element": "h2",
+                            "attrs": {
+                              "className": "text-xl font-semibold md:text-2xl"
+                            },
+                            "attributeUnits": {},
+                            "unit": "a-local-take-from-haemil-h2-9801a4b5"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {
+                              "className": "mt-4"
+                            },
+                            "attributeUnits": {},
+                            "unit": "a-local-take-from-haemil-p-044c58b0"
+                          }
+                        ]
+                      },
+                      {
+                        "element": "section",
+                        "attrs": {
+                          "aria-labelledby": "related-guides",
+                          "className": "space-y-4 border-t border-[var(--border)] pt-9"
+                        },
+                        "attributeUnits": {},
+                        "children": [
+                          {
+                            "element": "h2",
+                            "attrs": {
+                              "id": "related-guides",
+                              "className": "text-2xl font-semibold md:text-3xl"
+                            },
+                            "attributeUnits": {},
+                            "unit": "related-guides-h2-12ab997b"
+                          },
+                          {
+                            "element": "div",
+                            "attrs": {
+                              "className": "grid gap-3 sm:grid-cols-2"
+                            },
+                            "attributeUnits": {},
+                            "children": [
+                              {
+                                "list": "relatedGuides",
+                                "children": [
+                                  {
+                                    "element": "a",
+                                    "attrs": {
+                                      "href": "/kpop/what-is-maknae",
+                                      "className": "rounded-2xl border border-[var(--border)] bg-[var(--card)] px-4 py-3 font-medium transition hover:border-[var(--accent)] hover:text-[var(--accent)]"
+                                    },
+                                    "attributeUnits": {},
+                                    "unit": "related-guides-relatedguides-kpop-what-is-maknae-a-7f36c107"
+                                  },
+                                  {
+                                    "element": "a",
+                                    "attrs": {
+                                      "href": "/kpop/what-does-debut-mean-in-kpop",
+                                      "className": "rounded-2xl border border-[var(--border)] bg-[var(--card)] px-4 py-3 font-medium transition hover:border-[var(--accent)] hover:text-[var(--accent)]"
+                                    },
+                                    "attributeUnits": {},
+                                    "unit": "related-guides-relatedguides-kpop-what-does-debut-mean-in-kpop-a-22fdb7fd"
+                                  },
+                                  {
+                                    "element": "a",
+                                    "attrs": {
+                                      "href": "/kpop/what-is-a-rookie-group-in-kpop",
+                                      "className": "rounded-2xl border border-[var(--border)] bg-[var(--card)] px-4 py-3 font-medium transition hover:border-[var(--accent)] hover:text-[var(--accent)]"
+                                    },
+                                    "attributeUnits": {},
+                                    "unit": "related-guides-relatedguides-kpop-what-is-a-rookie-group-in-kpop-a-2dfd59fc"
+                                  },
+                                  {
+                                    "element": "a",
+                                    "attrs": {
+                                      "href": "/expressions/korean-age",
+                                      "className": "rounded-2xl border border-[var(--border)] bg-[var(--card)] px-4 py-3 font-medium transition hover:border-[var(--accent)] hover:text-[var(--accent)]"
+                                    },
+                                    "attributeUnits": {},
+                                    "unit": "related-guides-relatedguides-expressions-korean-age-a-d59966e2"
+                                  },
+                                  {
+                                    "element": "a",
+                                    "attrs": {
+                                      "href": "/expressions/nunchi",
+                                      "className": "rounded-2xl border border-[var(--border)] bg-[var(--card)] px-4 py-3 font-medium transition hover:border-[var(--accent)] hover:text-[var(--accent)]"
+                                    },
+                                    "attributeUnits": {},
+                                    "unit": "related-guides-relatedguides-expressions-nunchi-a-39086e50"
+                                  },
+                                  {
+                                    "element": "a",
+                                    "attrs": {
+                                      "href": "/kpop/who-is-cortis",
+                                      "className": "rounded-2xl border border-[var(--border)] bg-[var(--card)] px-4 py-3 font-medium transition hover:border-[var(--accent)] hover:text-[var(--accent)]"
+                                    },
+                                    "attributeUnits": {},
+                                    "unit": "related-guides-relatedguides-kpop-who-is-cortis-a-2d50e8db"
+                                  },
+                                  {
+                                    "element": "a",
+                                    "attrs": {
+                                      "href": "/kpop/glossary",
+                                      "className": "rounded-2xl border border-[var(--border)] bg-[var(--card)] px-4 py-3 font-medium transition hover:border-[var(--accent)] hover:text-[var(--accent)]"
+                                    },
+                                    "attributeUnits": {},
+                                    "unit": "related-guides-relatedguides-kpop-glossary-a-90e64785"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

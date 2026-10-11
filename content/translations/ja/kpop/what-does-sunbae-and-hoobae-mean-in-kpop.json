@@ -1,0 +1,366 @@
+{
+  "schemaVersion": 2,
+  "sourcePath": "/kpop/what-does-sunbae-and-hoobae-mean-in-kpop",
+  "sourceLocale": "en",
+  "locale": "ja",
+  "status": "draft",
+  "glossaryVersion": "0.2.0-ja-pilot",
+  "draftedBy": "AI draft in a Cowork session (no paid translation API). Not reviewed by a native speaker.",
+  "units": [
+    {
+      "id": "meta-title-67882371",
+      "sourceHash": "6ea2e14adf9abc0841745b81e18a143ca28d10fe5fafaedc0a44e90df27edac0",
+      "text": "ソンベとフベの本当の意味とは？韓国語の先輩・後輩を表す言葉"
+    },
+    {
+      "id": "meta-description-efb086ba",
+      "sourceHash": "15b64689a1c19691775a2bbd9b5748322bc5406d258a933a38e404355dda76a1",
+      "text": "韓国語のソンベとフベは、どんな意味なのでしょうか。韓国で育った筆者が、学校・職場・軍隊生活、そしてK-POPを通して先輩・後輩の関係を説明します。年齢だけですべてが決まるわけではない理由もお伝えします。"
+    },
+    {
+      "id": "header-a-3b20ec7e",
+      "sourceHash": "f84c53daf53c3a1a7aac7be0d3838ce87363e3056aa07e7f5ceddc70339b795d",
+      "text": "← K-POPに戻る"
+    },
+    {
+      "id": "header-p-e98ed66c",
+      "sourceHash": "47bb82473dd42748c82f31bd7df07eaf3df78e7a31bae08c784338fd0b4a874c",
+      "text": "K-POPで知る韓国文化｜現地目線で"
+    },
+    {
+      "id": "header-h1-299cbd58",
+      "sourceHash": "62f0333a2c2989b6f78e2e0acbff2ca21e97b0f07572a0b88645f3324ba7857e",
+      "text": "ソンベとフベの本当の意味とは？韓国語の先輩・後輩を表す言葉"
+    },
+    {
+      "id": "header-p-78cf4305",
+      "sourceHash": "18c5c049f458bb8ef647cecc5dfbf8fc4bfe54bddb4e3b40eebbe0583f3f81a5",
+      "text": "アイドルが「ソンベニム」と言うのを聞いたことがあるかもしれません。その意味と、韓国の学校や職場、そして兵役中に、私が先輩・後輩の関係をどう感じてきたかをお話しします。"
+    },
+    {
+      "id": "quick-answer-section-aria-label-b52f81c5",
+      "sourceHash": "4d3c7208692ef68bf27e54e1dd416c434098af0a6bbcf840a3290ad09681c50d",
+      "text": "ひとことで言うと"
+    },
+    {
+      "id": "quick-answer-p-c5fd6aeb",
+      "sourceHash": "401c1f3164d4503b4ca1a26374fd84c1ab02714d8370675d932ec7caf17b30bf",
+      "text": "K-POPのインタビューやバラエティ番組を見ていると、アイドルがほかのアーティストを{em1}ソンベニム{/em1}（선배님）と呼ぶのを聞いたことがあるかもしれません。特に相手のほうが年下のとき、なぜそう呼ぶのか不思議に思ったこともあるのではないでしょうか。"
+    },
+    {
+      "id": "quick-answer-p-098b8510",
+      "sourceHash": "9145d7d3cba7f288f1ac5c2b429d0c93eac5825bc27bf06f13ee25ed3b627de8",
+      "text": "簡単に言うと、{strong1}ソンベ{/strong1}（선배）は同じ学校や分野に自分より先に入った人のことです。{strong2}フベ{/strong2}（후배）は自分より後から入ってきた人のことです。{em1}-ニム{/em1}（님）を付けると、{em2}ソンベニム{/em2}という敬意を込めた呼び方になります。"
+    },
+    {
+      "id": "quick-answer-p-499e3d88",
+      "sourceHash": "7d1ae2ff8762043b682344d8d1d6e0f17c4b025599199c5ec9622be57b5ac55e",
+      "text": "ここまでが辞書的な意味です。こうした関係が実際の生活でどう感じられるかは、また別の話です。私は韓国で育ち、学校生活と兵役を経験し、韓国の会社で働きました。それぞれ、少しずつ感じ方が違いました。"
+    },
+    {
+      "id": "quick-answer-terms-k5a64f8-p-d2763185",
+      "sourceHash": "c8b6b312bed7b8b498b55bc3dfd9136b3a38ae2b0793f7371647aa982e0dd1b9",
+      "text": "ソンベ"
+    },
+    {
+      "id": "quick-answer-terms-k5a64f8-p-c9c7ebe0",
+      "sourceHash": "628aea7a6ad14ef4f0e34caf291a0d89dcec90fcd4e4ca09425dbbb92b63723b",
+      "text": "同じ学校や分野に、自分より先に入った人。"
+    },
+    {
+      "id": "quick-answer-terms-kd1877a-p-234948ae",
+      "sourceHash": "bcd009af3c2f3256326d572f9eb47f147e1691393e968137cec0bfa3fb982a29",
+      "text": "フベ"
+    },
+    {
+      "id": "quick-answer-terms-kd1877a-p-8328857d",
+      "sourceHash": "9d91e2c8020de5de69d7ae3bf2b1c11b7cdad1fc15b07f936b78f9e4ce219ba6",
+      "text": "後から入った人、または後から始めた人。"
+    },
+    {
+      "id": "quick-answer-terms-k384302-p-3c797710",
+      "sourceHash": "a9778690f0107d11c0048cbb677a6ac45fabc60bfaa3bcc24cc2c1b717c79650",
+      "text": "ソンベニム"
+    },
+    {
+      "id": "quick-answer-terms-k384302-p-6b1e4b32",
+      "sourceHash": "2c9a02a298faf81561d85e90e04f9bae8fa0b1cbd21641a03a9f5eeb866ba978",
+      "text": "ソンベを敬って呼ぶときの言い方。"
+    },
+    {
+      "id": "meaning-h2-6e6405e0",
+      "sourceHash": "3d02384c1801ace8b6276576bec99ddd9fa00dc93c199a893276b9ed9855b31c",
+      "text": "ソンベとフベの意味は？"
+    },
+    {
+      "id": "meaning-p-afaf986d",
+      "sourceHash": "0067f4b316312aede27106b8426be46a9a8ae987d6d6a5aa37a98ae3c2b76fee",
+      "text": "国立国語院の{a1}辞書の「선배」の項目{/a1}では、同じ分野で先に始めた人、または同じ学校に先に入った人と説明されています。{a2}「후배」の項目{/a2}では、後から来た人と説明されています。"
+    },
+    {
+      "id": "meaning-p-a3d14dbd",
+      "sourceHash": "5b2a14c86744a160f91ddf76c493e9bdbcca5815d544fc107cdec674157b61a3",
+      "text": "これらの言葉は、{em1}seonbae{/em1}、{em2}hubae{/em2}と書かれていることもあります。こちらは韓国の公式なローマ字表記のルールに従った書き方で、{em3}sunbae{/em3}や{em4}hoobae{/em4}は、英語圏のファン同士の会話でよく見かける綴りです。"
+    },
+    {
+      "id": "meaning-p-e1ac4323",
+      "sourceHash": "e5f50c4a83e6c7f9d7064d1738c49922bc838ce19143d144f9d31d192ed10066",
+      "text": "覚えておきたいことが一つあります。{strong1}誰かのソンベだからといって、自動的にその人の上司になるわけではありません。{/strong1}単にその分野にいる期間が長いだけ、ということもあります。"
+    },
+    {
+      "id": "age-h2-314f9ea0",
+      "sourceHash": "bcb1fa3b5448fd02ba710029199ec26a2d9940e4c492484d54874fe3f48ecca4",
+      "text": "年下でもソンベになる？"
+    },
+    {
+      "id": "age-p-549861e6",
+      "sourceHash": "0d84eb269b327d174a7553f5abb14debc6d0c058e954fa9959a212cb66783714",
+      "text": "はい、なります。たとえば、あなたが22歳で大学のサークルに入ったとします。別のメンバーは20歳ですが、あなたより1年早くそのサークルに入っていました。"
+    },
+    {
+      "id": "age-p-f4d4d942",
+      "sourceHash": "635258f22d123d972922d4303890557b8320500aab225ce406c0a84fcbc335ce",
+      "text": "その人はあなたより年下ですが、先に入っていて、メンバーとしての期間も長いので、そのサークルではあなたのソンベです。"
+    },
+    {
+      "id": "age-p-aa62c554",
+      "sourceHash": "37773564ec1a34d8239e7411853a66c7306b14bc3054497464e025d9354ff6f1",
+      "text": "この場合のソンベかどうかは、年齢ではなく、そのサークルにどれだけ長くいるかで決まります。"
+    },
+    {
+      "id": "age-p-a312338f",
+      "sourceHash": "31d78902c8685b450e4f589f3e8a8328a28e90aaa8b32604ad88d727336dd319",
+      "text": "とはいえ、韓国の人付き合いでは、今も年齢が重要です。ただ、それは先輩・後輩の序列と同じものではありません。実際にどんな話し方をするかは、お互いの関係や親しさ、その場の状況によって変わることがあります。どんな場面にも当てはまる一つのルールはありません。韓国の年齢そのものがややこしいと感じたら、当サイトの{a1}韓国の年齢ガイド{/a1}が参考になります。"
+    },
+    {
+      "id": "school-h2-6901001a",
+      "sourceHash": "16706f8df68c24b69a719ac8c55d2b0bf330442af58f37c6ecf6f7a63a249ed1",
+      "text": "学校で感じたこと"
+    },
+    {
+      "id": "school-p-62c5b1a2",
+      "sourceHash": "44c4fcc05a2332345f3c504e0a6ecfcc55fd7b6e5b4812591a4bffeae81f4032",
+      "text": "私は韓国の小さな町で育ちました。人々がお互いを知っていることが多く、そうでなくても共通の知り合いがいるような場所でした。"
+    },
+    {
+      "id": "school-p-b548f2bf",
+      "sourceHash": "35a98284acb04a31b2528eca75a849bea4359c71580bb768d1c5e84ac2a4ac8b",
+      "text": "私が育った頃は、礼儀がとても大事にされていました。学校でたった一つ上の先輩に対しても、失礼のないように気をつけていました。正直に言うと、当時は先輩たちが少し怖かったです。"
+    },
+    {
+      "id": "school-p-221e199c",
+      "sourceHash": "3dc58bbabb93677231fb75119552120719beb544d269f923e660f9c8d1e62dc6",
+      "text": "脅されたり、何か悪いことをされたりしたわけではありません。ただ近くにいるだけで、威圧感を覚えることがあったのです。小さな町で、人と人がつながっているように思えたので、一人の先輩の機嫌を損ねたら、ほかの先輩たちとも気まずくなるのではないかと心配していました。"
+    },
+    {
+      "id": "school-p-536492ba",
+      "sourceHash": "7e816954f2e8a5f1d9e3fa6c30efa249451ae5e5bafa1b8a722e40dfbfe0bd17",
+      "text": "今振り返ると、本当にそうなっていたのかはわかりません。でも十代だった私には、そう感じられたのです。別の土地で育った人や、違う学校に通った人なら、先輩のことをずいぶん違うふうに覚えているかもしれません。"
+    },
+    {
+      "id": "work-h2-922eea52",
+      "sourceHash": "6b11b5fbbdea531a696c4097f61259d35e9d421de3e262a1174fd55dd08c9922",
+      "text": "職場では、役職という軸が加わる"
+    },
+    {
+      "id": "work-p-372cca95",
+      "sourceHash": "637bd391dbf89fd2f88d9197b7847edd08d57619c7b4762d7f95b3ee015c4860",
+      "text": "韓国の職場では、一日中お互いをソンベ、フベと呼び合うとは限りません。役職名で呼ぶほうが便利なことも多いです。"
+    },
+    {
+      "id": "work-p-9fd11b6a",
+      "sourceHash": "11957ba88155ab9d69714da08466464ae1c2a7e70562f0ac3d193da03071f481",
+      "text": "私は以前、{em1}テリ{/em1}（대리）として働いていました。英語ではassistant managerと訳されることが多い役職です。私より下の役職の社員の中には年上の人もいましたが、それでも役職への敬意から、私を{em2}テリニム{/em2}（대리님）と呼んでいました。私も、相手が年上だったので丁寧に接していました。"
+    },
+    {
+      "id": "work-p-52f8847d",
+      "sourceHash": "8ca4dc3bafef95fbaaeee8166b9dc340fb790d62abe08231898769dc5114ab1d",
+      "text": "私にとって、役職への敬意と年齢への敬意は両立するものでした。役職が上だからといって、相手の年齢を無視していいわけではありませんでした。"
+    },
+    {
+      "id": "work-table-caption-f2a08fcc",
+      "sourceHash": "685b65f1a49ce47632393b270b5373da28c6a4382d0f7e47af55001a2b2dfbc6",
+      "text": "韓国の職場でよく使われる言葉"
+    },
+    {
+      "id": "work-table-th-e7237a24",
+      "sourceHash": "89887462f915874ebcd2ab4067c72a8383777bfe825ebe206fcef87dfafbcb15",
+      "text": "韓国語"
+    },
+    {
+      "id": "work-table-th-78a1748e",
+      "sourceHash": "619e4c8eab4631ff3c14987052e7285546d6eda6a816e47fe357d2df821fdad2",
+      "text": "読みと意味"
+    },
+    {
+      "id": "work-table-th-71c1bfac",
+      "sourceHash": "7b0aa65368e542262ebc970cf3d20c21bd9b12f14cd13e78d7832645813bcbf6",
+      "text": "ポイント"
+    },
+    {
+      "id": "work-table-workplaceterms-k884a00-td-fac64c01",
+      "sourceHash": "b43b91da570ad0d037849e8a81173a1d0a41439de7b6b132c0e29ca5a90b7373",
+      "text": "ソンベ / フベ"
+    },
+    {
+      "id": "work-table-workplaceterms-k884a00-td-5d187499",
+      "sourceHash": "f86e071fe074f97da6db8312bbd445d519fbd579fe94bcf2baa1c1cf03e5bf8e",
+      "text": "先に始めたか、後から始めたか"
+    },
+    {
+      "id": "work-table-workplaceterms-kcebb0b-td-cd782797",
+      "sourceHash": "db20db089d366aa79969d5bb7b89fdee81943934285919a5e4497440f20027a3",
+      "text": "サンサ · 上司"
+    },
+    {
+      "id": "work-table-workplaceterms-kcebb0b-td-b15dbd5d",
+      "sourceHash": "826d5e6d49ebba38f0490f021e27949fa13f4d010b20637e4caa3bc226f93206",
+      "text": "職場での立場"
+    },
+    {
+      "id": "work-table-workplaceterms-k66e93c-td-86c81e50",
+      "sourceHash": "d794599907a985e8c170e73ff63027f85eab135ae4b72c5d8349daad83908fcc",
+      "text": "サス · 非公式の指導役"
+    },
+    {
+      "id": "work-table-workplaceterms-k66e93c-td-f92509bb",
+      "sourceHash": "89caa097ec0cd1915d46e114d0eba39b3d640a8adbdff7c698402bba4f57c691",
+      "text": "仕事を教えてくれる人"
+    },
+    {
+      "id": "work-table-workplaceterms-k4e96b6-td-e5604a65",
+      "sourceHash": "16312c813706a5be54df88a31b0d281a903db533dc531b744d7765dc6d226e56",
+      "text": "テリ · 英訳はassistant manager"
+    },
+    {
+      "id": "work-table-workplaceterms-k4e96b6-td-da5cf8ae",
+      "sourceHash": "fdc7ded2f35ab40a689b2397ecb4473e1a3d77284b0267b174f8529a334bf723",
+      "text": "組織の中の役職名"
+    },
+    {
+      "id": "work-p-b61319f2",
+      "sourceHash": "b885126c062ed32b54edcceb5b7e2fb9e0a01b4363932b17dd85b18973ccd16b",
+      "text": "上司が自分より年下ということもあります。先に入った人のほうが役職が低いこともあります。仕事を教えてくれる人は、職場によっては非公式に{em1}サス{/em1}（사수）と呼ばれますが、その人が自分の上司とは限りません。"
+    },
+    {
+      "id": "military-h2-713236a7",
+      "sourceHash": "e4627f3ea9b4e2acb2e07ac0e3afe956ac599d232e22d28e879bbb9fa52d1ebf",
+      "text": "軍隊には独自の先輩・後輩文化がある"
+    },
+    {
+      "id": "military-p-356bfaab",
+      "sourceHash": "ffeaca1a2d9f73d1cde0b2ca92621ec3ce32dbc7a93ff3e7ecb67faebeac3a4a",
+      "text": "韓国の男性の多くは兵役を義務づけられています（例外や、異なる形の服務もあります）。入隊する年齢は人によって違うので、年下の兵士がほかの兵士の{em1}ソニム{/em1}（선임）、つまり先輩の兵士になることもあります。後から入ってきた兵士は{em2}フイム{/em2}（후임）、つまり後輩の兵士です。この関係では、年齢で誰が先輩かが決まるわけではありません。"
+    },
+    {
+      "id": "military-p-c646635f",
+      "sourceHash": "47a373f54a2ceb5a71c5a53b7e5d6450af78f2af793e9bc5e2cd7786f1dd91f9",
+      "text": "私が兵役に就いていた頃、兵士同士の話し方を見ると、そのことが特にはっきりわかりました。先輩の兵士は後輩に対して、たいてい{em1}パンマル{/em1}（반말）、つまりくだけた話し方を使っていました。後輩は先輩に話しかけるとき、ずっとかしこまった話し方をしていました。私たちはよく、それを{em2}ダナッカ{/em2}（다나까）式と呼んでいました。日常的な丁寧語の「-요」で終わる言い方ではなく、「알겠습니다」や「알겠습니까?」のような表現です。"
+    },
+    {
+      "id": "military-p-8168b738",
+      "sourceHash": "349bb6295fb2ab82f10e43751a35198560dca33f9b285dfcff3becc3a54ec6d4",
+      "text": "軍隊の言葉づかいは変わってきていますが、今ではどの部隊も同じ話し方をしているというわけではありません。{a1}国立国語院が2018年に掲載した記事{/a1}では、厳しい軍隊式の言葉づかいをめぐるプレッシャーや、より日常的な丁寧な言い方を使おうという議論が取り上げられています。"
+    },
+    {
+      "id": "military-p-a13594dd",
+      "sourceHash": "fc3c3c9078991053af05782b808200513bab1454264ef819e21ace67295bdc14",
+      "text": "軍隊の先輩・後輩関係は、正式な階級や指揮系統と並んで存在しています。先輩を敬うことは、いじめや不当な命令を受け入れることではありません。それでもこれは、韓国で年齢と先輩・後輩の序列が必ずしも一致しないことが、最もよくわかる例の一つです。"
+    },
+    {
+      "id": "kpop-h2-e769bd3a",
+      "sourceHash": "feb36ab4a5c7c106785f9be8e7956c22eedf531f1a9a1f1005d0a8ae05a883aa",
+      "text": "K-POPアイドルが「ソンベニム」と言う理由"
+    },
+    {
+      "id": "kpop-p-04aa6ac1",
+      "sourceHash": "9c2a420d3697826fa28c2439ec9808fb1f19bb56f23739d3aefe38727685bf49",
+      "text": "K-POPでは、この言葉は、アイドルが自分より先に{a1}デビュー{/a1}したアーティストや、自分より長く業界で活動しているアーティストについて話すときによく出てきます。相手の経験を認める言い方であって、必ずしも二人が親しいというしるしではありません。"
+    },
+    {
+      "id": "kpop-p-b51e6858",
+      "sourceHash": "7456ce7dc1ad662134cd51dd7592a44eae843b12ede27aa2173904a6d1f9fac0",
+      "text": "2000年にデビューしたBoAを例に見てみましょう。20周年の記者会見で、BoAはベテラン歌手のナ・フナのパフォーマンスを見て学んだことを話しながら、彼を{em1}ソンベニム{/em1}と呼びました（{a1}聯合ニュース{/a1}）。2022年には、新人グループCSRのユナが、ロールモデルとしてBoAの名前を挙げる際に、BoAを{em2}ソンベニム{/em2}と呼んでいます（{a2}CBSノーカットニュース{/a2}）。BoAは、あるアーティストにとっては先輩で、別のアーティストにとっては後輩でもあるのです。"
+    },
+    {
+      "id": "kpop-p-0029ddec",
+      "sourceHash": "fe689ff3817c6706daeef32fc9e3a3e40fe568c1a37e2b164868f3abe64e7270",
+      "text": "2025年の{a1}CORTIS{/a1}のデビューショーケースでは、マーティンが、HYBEで先輩アーティストたちの音楽制作に関わってきて、ようやく自分のグループでステージに立つことになった経緯を語りました（{a2}韓国経済新聞{/a2}）。"
+    },
+    {
+      "id": "kpop-p-cd3cec5d",
+      "sourceHash": "d6e6dfcac59e34f6d60939d9e3fd1c080b48527962f6d6bff31bc055c127035d",
+      "text": "こうした敬意は、私にもなじみのあるものです。同じ業界で先に活動を始めた人を認めるのに、同じ事務所に所属している必要はありません。ただ、個人的な関係はまた別の話で、{em1}ソンベニム{/em1}という言葉だけでは、二人がどれほど親しいのかはわかりません。"
+    },
+    {
+      "id": "relationships-h2-ac405565",
+      "sourceHash": "8eb3b0477d66cd0a1fa198a677ce781fa7f8a210ac86eb0344c81923745b828a",
+      "text": "いい面と、難しい面"
+    },
+    {
+      "id": "relationships-p-3ba1c5a1",
+      "sourceHash": "608604b925a27226eb6ae3febf547a0d34fc96a33ac7cafb9e7b2e7c6387db59",
+      "text": "先輩・後輩の関係は、居心地が悪いこともあります。私は学生の頃、先輩の前で緊張していたことを覚えていますし、敬意を示さなければというプレッシャーが重く感じられるときがあるのもわかります。先輩と後輩という関係があるからといって、その人たちが必ずしも仲良くなれるとは限りません。"
+    },
+    {
+      "id": "relationships-p-91068666",
+      "sourceHash": "1e0246737c9ccc42b4d31de378b84cfdd3cd9146662bebb9690c124a91b6450f",
+      "text": "でも、距離が縮まると、本当にいい関係になることもあります。先輩が後輩の面倒を見たり、なじめるように手助けしたり、苦労して身につけたことを伝えたりすることもあります。後輩もその先輩を信頼するようになり、二人の間の堅苦しさがずっと薄れることもあります。この文化のそういう面も、私にとっては大切なものです。"
+    },
+    {
+      "id": "a-local-take-from-haemil-aside-aria-label-16f9de9e",
+      "sourceHash": "a1930a6164aca65b4e662b0a3ac0d1c8c369e85334eb50edf03d6b0137fcb8fd",
+      "text": "HAEMILから、現地目線のひとこと"
+    },
+    {
+      "id": "a-local-take-from-haemil-h2-9801a4b5",
+      "sourceHash": "fc1e6ea716a8b4ec1bbda3da833191c470fbbdb5c3e2509f420026d560a70c01",
+      "text": "HAEMILから、現地目線のひとこと"
+    },
+    {
+      "id": "a-local-take-from-haemil-p-044c58b0",
+      "sourceHash": "13a8bb64b47f5ab04ee7763855843a92b0580b7f4356c68711759d5fba87d3b5",
+      "text": "今の私は、誰かが{em1}ソンベニム{/em1}と言うのを聞いても、ほとんど意識することはありません。生まれてからずっと聞いてきた言葉だからです。でも、韓国で育っていなければ、わかりにくく感じるのも無理はないと思います。誰かのソンベだということから、その人がいつ始めたかはある程度わかります。でも、二人の関係のすべてがわかるわけではありません。それは、当人同士次第です。"
+    },
+    {
+      "id": "related-guides-h2-12ab997b",
+      "sourceHash": "49cd36990ca5eb94a518c4c9976511b3244b4ef51305d230266eb3890bdbf13d",
+      "text": "韓国をもっと知る"
+    },
+    {
+      "id": "related-guides-relatedguides-kpop-what-is-maknae-a-7f36c107",
+      "sourceHash": "786ef6f47c64f805e416e0c6f998f3af27ba0f97b7406a07a7ad0bd1f8588167",
+      "text": "マンネとは？ →"
+    },
+    {
+      "id": "related-guides-relatedguides-kpop-what-does-debut-mean-in-kpop-a-22fdb7fd",
+      "sourceHash": "9937751d10e6a34cda3fa618b1d7e1eee8c3686cff12931f761579529d4ede12",
+      "text": "K-POPの「デビュー」とは？ →"
+    },
+    {
+      "id": "related-guides-relatedguides-kpop-what-is-a-rookie-group-in-kpop-a-2dfd59fc",
+      "sourceHash": "1a4254eb89ef1186f6059b6cd82cbb18d4be416f5e17ceeb8985f39e59fa122e",
+      "text": "新人グループとは？ →"
+    },
+    {
+      "id": "related-guides-relatedguides-expressions-korean-age-a-d59966e2",
+      "sourceHash": "7316c30284448aee7ea934eba216028e6ce54628c28aa445cdf397fff8a5f50e",
+      "text": "韓国の年齢を解説 →"
+    },
+    {
+      "id": "related-guides-relatedguides-expressions-nunchi-a-39086e50",
+      "sourceHash": "424684ce145d80d9dcd5486f22d0c8faa6376ba2d63f728c75bcd2820be656d8",
+      "text": "ヌンチとは？ →"
+    },
+    {
+      "id": "related-guides-relatedguides-kpop-who-is-cortis-a-2d50e8db",
+      "sourceHash": "1acc164e44aecc4a0d9e6bd6583078e4f3ac5273691553d645714b07e72e471b",
+      "text": "CORTISとは？ →"
+    },
+    {
+      "id": "related-guides-relatedguides-kpop-glossary-a-90e64785",
+      "sourceHash": "b2147dda57a3e78f91366fd8ccbe7f471b921bdaddf8d89bd9f3477305c66789",
+      "text": "K-POP用語集 →"
+    }
+  ]
+}
