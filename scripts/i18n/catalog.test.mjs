@@ -79,7 +79,7 @@ function approvals(entry, kinds = ['quality', 'production', 'indexing'], overrid
 // Real repository data
 // ---------------------------------------------------------------------------
 
-test('real data: the Japanese Sunbae draft is found and valid, with unverified source freshness', () => {
+test('real data: the Japanese Sunbae draft is found and valid, with verified source freshness (committed MATCH record)', () => {
   clearCatalogCache();
   const before = sha(path.join(REAL_ROOT, 'ja', REL));
   const catalog = loadCatalog({ root: REAL_ROOT });
@@ -92,7 +92,8 @@ test('real data: the Japanese Sunbae draft is found and valid, with unverified s
   assert.equal(entry.urlPath, `/ja${PAGE}`);
   assert.equal(entry.status, 'draft');
   assert.equal(entry.validation, 'valid');
-  assert.equal(entry.sourceFreshness, 'unverified');
+  assert.equal(entry.sourceFreshness, 'verified');
+  assert.deepEqual(entry.sourceFreshnessDetail, { reason: 'matches the source freshness record', notCompared: ['json-ld'] });
   assert.deepEqual(entry.errors, []);
   assert.equal(entry.files.translation.path, `content/translations/ja/${REL}`);
   assert.equal(entry.files.source.path, `content/translations/source/${REL}`);
@@ -122,9 +123,11 @@ test('real data: publish decisions per environment', () => {
   assert.equal(prod.robots, 'noindex');
   assert.equal(prod.listInLanguageMenu, false);
   assert.equal(prod.includeInSitemap, false);
-  for (const reason of ['locale-not-public', 'status-not-approved', 'source-freshness-unverified', 'no-quality-approval', 'no-production-approval']) {
+  for (const reason of ['locale-not-public', 'status-not-approved', 'no-quality-approval', 'no-production-approval']) {
     assert.ok(prod.reasons.includes(reason), reason);
   }
+  // Source freshness is verified (committed MATCH record); that alone never allows production.
+  assert.ok(!prod.reasons.some((reason) => reason.startsWith('source-freshness')), prod.reasons.join(', '));
   assert.deepEqual(renderableEntries('ja', 'production', { root: REAL_ROOT }), []);
   assert.deepEqual(renderableEntries('ja', 'preview', { root: REAL_ROOT }).map((e) => e.key), [`ja:${PAGE}`]);
 });
@@ -419,13 +422,13 @@ test('freshness: MATCH record with the exact hashes → verified (JSON-LD listed
   assert.ok(prod.reasons.includes('status-not-approved'));
 });
 
-test('freshness: no record → unverified (real repository has none)', () => {
-  clearCatalogCache();
-  const real = getTranslation('ja', PAGE, { root: REAL_ROOT }).entry;
-  assert.equal(real.sourceFreshness, 'unverified');
-  assert.equal(real.sourceFreshnessDetail.reason, 'no source freshness record');
-  const { root } = freshFixture({ record: false });
-  assert.equal(entryOf(root).sourceFreshness, 'unverified');
+test('freshness: no record → unverified (temporary repository without a record)', () => {
+  const { root, recordFile } = freshFixture({ record: false });
+  assert.throws(() => readFileSync(recordFile), 'the temporary repository has no record');
+  const entry = entryOf(root);
+  assert.equal(entry.validation, 'valid');
+  assert.equal(entry.sourceFreshness, 'unverified');
+  assert.equal(entry.sourceFreshnessDetail.reason, 'no source freshness record');
 });
 
 test('freshness: page.tsx changed after the record → changed (even a comment)', () => {
