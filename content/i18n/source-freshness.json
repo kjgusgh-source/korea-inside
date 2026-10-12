@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 2,
+  "generator": "scripts/i18n/check-sources.mjs",
+  "extractorVersion": "extract-pilot-1",
+  "tools": {
+    "files": [
+      {
+        "path": "scripts/i18n/check-sources.mjs",
+        "sha256": "sha256:f077c765d497634055a8919f4eb12cca89f5ff462e645b98beda4c2a24f976dc"
+      },
+      {
+        "path": "scripts/i18n/extract.mjs",
+        "sha256": "sha256:85324e4c2d9a330c218ded74232492e4d151d39dbf889d2d1c074d8f7adf3954"
+      }
+    ],
+    "parser": "typescript@5.9.3"
+  },
+  "note": "MATCH covers the translation extraction (units, structure, metadata) only; see notCompared. Not a translation, publishing or indexing approval.",
+  "entries": [
+    {
+      "sourcePath": "/kpop/what-does-sunbae-and-hoobae-mean-in-kpop",
+      "sourceFile": "app/kpop/what-does-sunbae-and-hoobae-mean-in-kpop/page.tsx",
+      "sourceJson": "content/translations/source/kpop/what-does-sunbae-and-hoobae-mean-in-kpop.json",
+      "status": "MATCH",
+      "extractorVersion": "extract-pilot-1",
+      "sourceJsonSha256": "sha256:9d016d46cf45076edd8f6f565078eac23518195e62ff3f236056a029756b1998",
+      "pageSha256": "sha256:ee6b357827a84ad35369cb1a17520ba78c597c017f4d18fc26343683ad6fb974",
+      "notCompared": [
+        "json-ld"
+      ]
+    }
+  ]
+}

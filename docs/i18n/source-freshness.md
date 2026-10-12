@@ -1,4 +1,4 @@
-# English source freshness check (P5-A)
+# English source freshness check (P5-A, P5-B)
 
 Tool: `scripts/i18n/check-sources.mjs`. Tests: `scripts/i18n/check-sources.test.mjs`.
 
@@ -6,10 +6,10 @@ Tool: `scripts/i18n/check-sources.mjs`. Tests: `scripts/i18n/check-sources.test.
 **stored** English source JSON. This check answers the other half: does the
 English page (`page.tsx`) still produce that stored JSON?
 
-It is an offline Node tool. It only reads files, never rewrites the source
-JSON, the page or a translation, and does not change catalog state
-(`sourceFreshness` stays `unverified` until P5-B). Next.js pages must not import
-it or the extractor.
+It is an offline Node tool. It never rewrites the source JSON, the page or a
+translation. Only with `--write-record` does it write one file, the freshness
+record (see below), which the catalog reads to set `sourceFreshness`. Next.js
+pages must not import it or the extractor.
 
 ## How it works
 
@@ -37,8 +37,9 @@ For each `content/translations/source/<site path>.json`:
 | Header | `schemaVersion`, `sourceLocale`, `sourcePath`, `sourceFile`, extractor version |
 | Review notes | dynamic parts flagged by the extractor, compared without line numbers |
 
-Line numbers and formatting are ignored. A plain SHA-256 of `page.tsx` is
-recorded for information only; it never decides the result.
+Line numbers and formatting are ignored. The SHA-256 of `page.tsx` never
+decides the result; the record uses it only to tie a result to the exact bytes
+that were checked.
 
 ## Results
 
@@ -63,6 +64,7 @@ Exit code:
 node scripts/i18n/check-sources.mjs                 # every stored source
 node scripts/i18n/check-sources.mjs --json          # machine-readable
 node scripts/i18n/check-sources.mjs content/translations/source/kpop/x.json
+node scripts/i18n/check-sources.mjs --write-record  # full run + record
 ```
 
 ## JSON-LD and other exclusions
@@ -120,19 +122,79 @@ Change detection (fixtures in a temporary copy):
 - The extractor test file (`extract.test.mjs`) is not included here. It
   belongs to PR #87.
 
-## Next step (P5-B, not done here)
+## Freshness record (P5-B)
 
-The catalog cannot run the TypeScript extractor at build time. A minimal
-connection:
+Status:
 
-1. `check-sources.mjs --write-record` writes
-   `content/translations/source-freshness.json`. Each entry holds
-   `sourcePath`, status, extractor version, and the SHA-256 of both the stored
-   source JSON and the page file.
-2. `lib/i18n/catalog.ts` reads that record and sets `sourceFreshness` as
-   follows. This is fail closed.
-   - `verified` only if the status is `MATCH` and both hashes equal the
-     current files.
-   - Otherwise `changed` or `unverified`.
-3. The page hash only ties the record to the exact file that was checked. The
-   decision itself is always the semantic comparison above.
+- P5-B1: `--write-record` and the catalog connection.
+- P5-B1.1: the record is bound to the checker and extractor code; the record
+  path is restricted.
+- P5-B2: first record committed (Sunbae, `MATCH`).
+
+### File
+
+`content/i18n/source-freshness.json`, written only by
+`node scripts/i18n/check-sources.mjs --write-record` (a full run; never edit it
+by hand). Entries are sorted and there are no timestamps, so the same input
+gives the same bytes.
+
+`schemaVersion: 2`:
+
+| Field | Content |
+|---|---|
+| `tools.files` | SHA-256 of `scripts/i18n/check-sources.mjs` and `scripts/i18n/extract.mjs` as they ran |
+| `tools.parser` | TypeScript version used by the extractor, e.g. `typescript@5.9.3` |
+| `entries[]` | `sourcePath`, `sourceFile`, `sourceJson`, `status`, `extractorVersion`, `sourceJsonSha256`, `pageSha256`, `notCompared` (`["json-ld"]` when the page has JSON-LD) |
+
+The record can only be written as a `.json` file under `content/i18n/`. A
+symbolic link in any folder on the way, or at the file, is refused, and an
+existing file that is not a record is never replaced.
+
+### Catalog result (`sourceFreshness`)
+
+`lib/i18n/catalog.ts` reads the record, the two code files and
+`node_modules/typescript/package.json` as data at build time (nothing is
+imported). It fails closed.
+
+| Result | When |
+|---|---|
+| `verified` | All of these hold: one `MATCH` entry for the page; matching paths and extractor version; both file hashes equal the current source JSON and `page.tsx`; both code hashes and the TypeScript version equal the current ones. |
+| `changed` | The source JSON or `page.tsx` bytes differ from the checked version (also for a style- or comment-only edit), or the result was `CHANGED`. |
+| `unverified` | Everything else, including: no record or a damaged record; any change to the checker or extractor code, even when the version string is unchanged; another TypeScript version; an `UNVERIFIED` or `ERROR` result; unreadable files. |
+
+### What `verified` does not mean
+
+`verified` only says that the stored English source JSON still matches the
+English page, for the translation extraction. JSON-LD content is not compared
+(`notCompared`).
+
+It is not a translation quality approval, a production approval or an indexing
+approval. The translation `status` is not changed. Production rendering still
+needs all of these:
+
+- a public locale
+- `status: approved`
+- separate quality and production approval records
+
+Indexing needs its own approval. Japanese is a preview locale, so Japanese
+pages stay 404 in production.
+
+### When to write the record again
+
+Run `node scripts/i18n/check-sources.mjs --write-record` and commit the record
+in the same change whenever any of these changes:
+
+- an English page that has a source JSON
+- a source JSON, added or re-extracted
+- `scripts/i18n/check-sources.mjs` or `scripts/i18n/extract.mjs`
+- the installed TypeScript version
+
+Until then, the affected pages show `changed` or `unverified`.
+
+If the result is not `MATCH`:
+
+1. Re-extract the source JSON.
+2. Review the translations listed in the report.
+3. Run the checker again.
+
+Do not edit hashes by hand.
