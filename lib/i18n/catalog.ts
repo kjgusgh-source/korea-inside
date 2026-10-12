@@ -323,7 +323,13 @@ function buildCatalog(root: string): { catalog: Catalog; records: Map<string, Bu
 const cache = new Map<string, ReturnType<typeof buildCatalog>>();
 
 function load(options?: { root?: string }) {
-  const root = path.resolve(options?.root ?? defaultCatalogRoot());
+  // The bundler's file tracer cannot see which folder `options.root` points
+  // to (tests pass a temporary folder), so without this comment it treats
+  // the whole project as read and adds it to the route's server bundle.
+  // The ignore applies to tracing only; the path is still resolved and
+  // checked as before. The default folder stays traced through
+  // defaultCatalogRoot().
+  const root = path.resolve(/*turbopackIgnore: true*/ options?.root ?? defaultCatalogRoot());
   if (!cache.has(root)) cache.set(root, buildCatalog(root));
   return cache.get(root)!;
 }
