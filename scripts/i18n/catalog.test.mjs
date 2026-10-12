@@ -366,3 +366,242 @@ test('missing translations folder: empty catalog with an issue, no exception', (
   assert.deepEqual(catalog.entries, []);
   assert.deepEqual(catalog.issues, [{ id: '(catalog)', problem: 'translations folder not found' }]);
 });
+
+// ---------------------------------------------------------------------------
+// Source freshness record (P5-B1). Records are generated with the real checker
+// in temporary folders; no record is added to the repository.
+// ---------------------------------------------------------------------------
+
+const { checkAll, writeRecord } = await import('./check-sources.mjs');
+const PAGE_FILE = 'app/kpop/what-does-sunbae-and-hoobae-mean-in-kpop/page.tsx';
+const RECORD = 'content/i18n/source-freshness.json';
+
+/**
+ * Temporary repository: translations, the English Sunbae page and (unless
+ * `record` is false) a record written by the checker. `page` edits the page
+ * before the record is written.
+ */
+function freshFixture({ edit = () => {}, page = (text) => text, record = true } = {}) {
+  const root = fixture(edit);
+  const base = path.dirname(path.dirname(root));
+  const pageFile = path.join(base, PAGE_FILE);
+  mkdirSync(path.dirname(pageFile), { recursive: true });
+  writeFileSync(pageFile, page(readFileSync(path.join(REPO, PAGE_FILE), 'utf8')));
+  if (record) writeRecord(base, checkAll(base));
+  clearCatalogCache();
+  return { root, base, pageFile, recordFile: path.join(base, RECORD) };
+}
+const entryOf = (root) => getTranslation('ja', PAGE, { root }).entry;
+const editRecord = (file, change) => { const doc = readJson(file); change(doc); writeJson(file, doc); clearCatalogCache(); };
+
+test('freshness: MATCH record with the exact hashes → verified (JSON-LD listed as not compared)', () => {
+  const { root, recordFile } = freshFixture();
+  const record = readJson(recordFile);
+  assert.equal(record.entries.length, 1);
+  assert.equal(record.entries[0].status, 'MATCH');
+  const entry = entryOf(root);
+  assert.equal(entry.validation, 'valid');
+  assert.equal(entry.sourceFreshness, 'verified');
+  assert.deepEqual(entry.sourceFreshnessDetail, { reason: 'matches the source freshness record', notCompared: ['json-ld'] });
+  assert.equal(record.entries[0].sourceJsonSha256, entry.files.source.sha256);
+  // Verified freshness is not an approval: the draft still does not render in production.
+  const prod = publishDecision(entry, 'production');
+  assert.equal(prod.render, false);
+  assert.ok(!prod.reasons.includes('source-freshness-verified') && !prod.reasons.some((r) => r.startsWith('source-freshness')));
+  assert.ok(prod.reasons.includes('status-not-approved'));
+});
+
+test('freshness: no record → unverified (real repository has none)', () => {
+  clearCatalogCache();
+  const real = getTranslation('ja', PAGE, { root: REAL_ROOT }).entry;
+  assert.equal(real.sourceFreshness, 'unverified');
+  assert.equal(real.sourceFreshnessDetail.reason, 'no source freshness record');
+  const { root } = freshFixture({ record: false });
+  assert.equal(entryOf(root).sourceFreshness, 'unverified');
+});
+
+test('freshness: page.tsx changed after the record → changed (even a comment)', () => {
+  for (const change of [(t) => `// comment only\n${t}`, (t) => t.replace('You may have heard an idol say', 'You might have heard an idol say')]) {
+    const { root, pageFile } = freshFixture();
+    writeFileSync(pageFile, change(readFileSync(pageFile, 'utf8')));
+    clearCatalogCache();
+    const entry = entryOf(root);
+    assert.equal(entry.sourceFreshness, 'changed');
+    assert.match(entry.sourceFreshnessDetail.reason, /differs from the checked version/);
+  }
+});
+
+test('freshness: source JSON bytes changed after the record → changed', () => {
+  const { root } = freshFixture();
+  const file = path.join(root, 'source', REL);
+  writeFileSync(file, JSON.stringify(readJson(file)));
+  clearCatalogCache();
+  const entry = entryOf(root);
+  assert.equal(entry.validation, 'valid');
+  assert.equal(entry.sourceFreshness, 'changed');
+});
+
+test('freshness: damaged or unsupported record → unverified', () => {
+  const cases = [
+    (file) => writeFileSync(file, '{ "schemaVersion": 1, '),
+    (file) => editRecord(file, (doc) => { doc.schemaVersion = 2; }),
+    (file) => editRecord(file, (doc) => { doc.entries[0].pageSha256 = 'sha256:short'; }),
+    (file) => editRecord(file, (doc) => { doc.entries[0].status = 'OK'; }),
+    (file) => editRecord(file, (doc) => { doc.entries = 'none'; }),
+  ];
+  for (const damage of cases) {
+    const { root, recordFile } = freshFixture();
+    damage(recordFile);
+    clearCatalogCache();
+    const entry = entryOf(root);
+    assert.equal(entry.sourceFreshness, 'unverified', entry.sourceFreshnessDetail.reason);
+    assert.match(entry.sourceFreshnessDetail.reason, /source freshness record/);
+  }
+  const linked = freshFixture();
+  const target = `${linked.recordFile}.real`;
+  writeFileSync(target, readFileSync(linked.recordFile));
+  rmSync(linked.recordFile);
+  symlinkSync(target, linked.recordFile);
+  clearCatalogCache();
+  assert.equal(entryOf(linked.root).sourceFreshness, 'unverified', 'a linked record is not read');
+});
+
+test('freshness: path mismatch in the record → unverified', () => {
+  for (const change of [
+    (e) => { e.sourceFile = 'app/kpop/what-is-maknae/page.tsx'; },
+    (e) => { e.sourceJson = 'content/translations/source/kpop/other.json'; },
+  ]) {
+    const { root, recordFile } = freshFixture();
+    editRecord(recordFile, (doc) => change(doc.entries[0]));
+    assert.equal(entryOf(root).sourceFreshness, 'unverified');
+  }
+  // The source JSON must name the page that serves its sourcePath.
+  const { root, recordFile } = freshFixture();
+  editRecord(path.join(root, 'source', REL), (doc) => { doc.sourceFile = 'app/kpop/what-is-maknae/page.tsx'; });
+  editRecord(recordFile, (doc) => { doc.entries[0].sourceFile = 'app/kpop/what-is-maknae/page.tsx'; });
+  assert.equal(entryOf(root).sourceFreshness, 'unverified');
+});
+
+test('freshness: extractor version mismatch → unverified', () => {
+  const { root, recordFile } = freshFixture();
+  editRecord(recordFile, (doc) => { doc.entries[0].extractorVersion = 'extract-pilot-2'; });
+  const entry = entryOf(root);
+  assert.equal(entry.sourceFreshness, 'unverified');
+  assert.match(entry.sourceFreshnessDetail.reason, /extractor version/);
+});
+
+test('freshness: UNVERIFIED or ERROR results never verify', () => {
+  // A real UNVERIFIED result: the page uses imported data.
+  const { root, recordFile } = freshFixture({
+    page: (t) => t.replace('import JsonLd from "../../../components/JsonLd";', 'import JsonLd from "../../../components/JsonLd";\nimport { kpopGroups } from "../../../lib/kpopData";')
+      .replace('export default function SunbaeHoobaePage() {', 'export const groupCount = kpopGroups.length;\n\nexport default function SunbaeHoobaePage() {'),
+  });
+  assert.equal(readJson(recordFile).entries[0].status, 'UNVERIFIED');
+  assert.equal(entryOf(root).sourceFreshness, 'unverified');
+  // ERROR (and a forged MATCH-less record) with current hashes.
+  const other = freshFixture();
+  editRecord(other.recordFile, (doc) => { doc.entries[0].status = 'ERROR'; });
+  assert.equal(entryOf(other.root).sourceFreshness, 'unverified');
+});
+
+test('freshness: CHANGED result with current hashes → changed, not verified', () => {
+  // The page differs from the stored source JSON when the record is written.
+  const { root, recordFile } = freshFixture({ page: (t) => t.replace('You may have heard an idol say', 'You might have heard an idol say') });
+  assert.equal(readJson(recordFile).entries[0].status, 'CHANGED');
+  const entry = entryOf(root);
+  assert.equal(entry.sourceFreshness, 'changed');
+  assert.equal(entry.sourceFreshnessDetail.reason, 'checker found changes');
+});
+
+test('freshness: status "approved" with verified freshness still needs approvals and a public locale', () => {
+  const { root } = freshFixture({ edit: (r) => editRecord(path.join(r, 'ja', REL), (doc) => { doc.status = 'approved'; }) });
+  const entry = entryOf(root);
+  assert.equal(entry.status, 'approved');
+  assert.equal(entry.sourceFreshness, 'verified');
+  const alone = publishDecision(entry, 'production');
+  assert.equal(alone.render, false);
+  assert.deepEqual(alone.reasons.sort(), ['locale-not-public', 'no-production-approval', 'no-quality-approval']);
+  const withRecords = publishDecision(entry, 'production', approvals(entry));
+  assert.equal(withRecords.render, false, 'Japanese is not a public locale');
+  assert.deepEqual(withRecords.reasons, ['locale-not-public']);
+  assert.deepEqual(renderableEntries('ja', 'production', { root }), []);
+});
+
+test('freshness: a record is never reused for another page or translation', () => {
+  // A second page whose source JSON has the same content and page file name.
+  const { root, recordFile } = freshFixture({ edit: (r) => addSecondPage(r) });
+  const second = getTranslation('ja', '/kpop/copy-page', { root }).entry;
+  assert.equal(second.sourceFreshness, 'unverified');
+  assert.equal(entryOf(root).sourceFreshness, 'verified');
+  const sunbaeEntry = (doc) => doc.entries.find((e) => e.sourcePath === PAGE);
+  // Replacing the second page's entry with the Sunbae entry (hashes, MATCH) does not verify it.
+  editRecord(recordFile, (doc) => {
+    const copy = { ...sunbaeEntry(doc), sourcePath: '/kpop/copy-page', sourceJson: 'content/translations/source/kpop/copy-page.json' };
+    doc.entries = [...doc.entries.filter((e) => e.sourcePath !== '/kpop/copy-page'), copy];
+  });
+  assert.equal(getTranslation('ja', '/kpop/copy-page', { root }).entry.sourceFreshness, 'unverified');
+  assert.equal(entryOf(root).sourceFreshness, 'verified');
+  // Two entries for one page are ambiguous.
+  editRecord(recordFile, (doc) => { doc.entries.push({ ...sunbaeEntry(doc) }); });
+  assert.equal(entryOf(root).sourceFreshness, 'unverified');
+  assert.match(entryOf(root).sourceFreshnessDetail.reason, /more than one record entry/);
+});
+
+test('freshness: page file behind a symbolic link is not read', () => {
+  const { root, base, pageFile } = freshFixture();
+  const real = path.join(base, 'page-copy.tsx');
+  writeFileSync(real, readFileSync(pageFile));
+  rmSync(pageFile);
+  symlinkSync(real, pageFile);
+  clearCatalogCache();
+  const entry = entryOf(root);
+  assert.equal(entry.sourceFreshness, 'unverified');
+  assert.equal(entry.sourceFreshnessDetail.reason, 'English page file could not be read');
+
+  // A linked folder on the way to the page is not followed either.
+  const dir = freshFixture();
+  const outside = mkdtempSync(path.join(tmpdir(), 'haemil-outside-'));
+  temps.push(outside);
+  cpSync(path.join(dir.base, 'app', 'kpop'), outside, { recursive: true });
+  rmSync(path.join(dir.base, 'app', 'kpop'), { recursive: true });
+  symlinkSync(outside, path.join(dir.base, 'app', 'kpop'));
+  clearCatalogCache();
+  assert.equal(entryOf(dir.root).sourceFreshness, 'unverified');
+});
+
+test('record: sorted, stable bytes, written only on request', async () => {
+  const { base, recordFile } = freshFixture({ edit: (r) => addSecondPage(r, 'a-first-page') });
+  const first = readFileSync(recordFile, 'utf8');
+  writeRecord(base, checkAll(base));
+  assert.equal(readFileSync(recordFile, 'utf8'), first, 'same input, same bytes');
+  const paths = readJson(recordFile).entries.map((e) => e.sourcePath);
+  assert.deepEqual(paths, [...paths].sort());
+  assert.ok(!/\d{4}-\d{2}-\d{2}T/.test(first), 'no timestamps');
+  const { base: plain } = freshFixture({ record: false });
+  const { execFileSync } = await import('node:child_process');
+  try { execFileSync(process.execPath, [path.join(REPO, 'scripts/i18n/check-sources.mjs'), '--repo', plain], { encoding: 'utf8' }); } catch { /* exit code only */ }
+  assert.throws(() => readFileSync(path.join(plain, RECORD)), 'no record without --write-record');
+});
+
+test('record: an ERROR entry for another page does not invalidate the record', () => {
+  const { root, recordFile } = freshFixture();
+  editRecord(recordFile, (doc) => {
+    doc.entries.push({
+      sourcePath: '/kpop/broken-page', sourceFile: null, sourceJson: 'content/translations/source/kpop/broken-page.json',
+      status: 'ERROR', extractorVersion: doc.extractorVersion, sourceJsonSha256: null, pageSha256: null, notCompared: [],
+    });
+  });
+  assert.equal(entryOf(root).sourceFreshness, 'verified');
+});
+
+test('record: written only inside the repository, as .json, outside content/translations and app', async () => {
+  const { recordTarget } = await import('./check-sources.mjs');
+  const { base } = freshFixture({ record: false });
+  assert.equal(recordTarget(base), path.join(base, RECORD));
+  for (const bad of ['content/translations/source/kpop/what-does-sunbae-and-hoobae-mean-in-kpop.json', 'content/translations/ja/x.json', 'app/x.json', '../outside.json', 'content/i18n/record.txt']) {
+    assert.throws(() => recordTarget(base, bad), undefined, bad);
+  }
+  const sourceBefore = sha(path.join(base, 'content/translations/source', REL));
+  assert.throws(() => writeRecord(base, checkAll(base), 'content/translations/source/kpop/what-does-sunbae-and-hoobae-mean-in-kpop.json'));
+  assert.equal(sha(path.join(base, 'content/translations/source', REL)), sourceBefore, 'source JSON untouched');
+});
