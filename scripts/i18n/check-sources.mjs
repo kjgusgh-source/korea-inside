@@ -28,17 +28,19 @@
  * Exit code: 0 all MATCH, 1 any CHANGED or ERROR, 2 otherwise UNVERIFIED.
  *
  * --write-record (explicit only) writes the results of a full run to
- * content/i18n/source-freshness.json (or --record <file>): exact SHA-256 of the
- * stored source JSON and of the page file at check time, sorted, no timestamps,
- * so the same input gives the same bytes. The catalog reads it to set
- * `sourceFreshness`. A MATCH record covers the translation extraction only
- * (units, structure, metadata); JSON-LD content is listed under `notCompared`.
- * It is not a translation, publishing or indexing approval.
+ * content/i18n/source-freshness.json (or --record <file> under content/i18n/):
+ * exact SHA-256 of the stored source JSON and of the page file at check time,
+ * plus the SHA-256 of the checker and extractor code that ran and the
+ * TypeScript version. Sorted, no timestamps, so the same input gives the same
+ * bytes. The catalog reads it to set `sourceFreshness`. A MATCH record covers
+ * the translation extraction only (units, structure, metadata); JSON-LD
+ * content is listed under `notCompared`. It is not a translation, publishing
+ * or indexing approval.
  *
  * Details: docs/i18n/source-freshness.md
  */
 import { createHash } from 'node:crypto';
-import { existsSync, lstatSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, lstatSync, mkdirSync, readdirSync, readFileSync, renameSync, rmSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import ts from 'typescript';
@@ -353,15 +355,35 @@ export function checkAll(repo, files = null) {
 // Freshness record (written only with --write-record)
 // ---------------------------------------------------------------------------
 
-export const RECORD_SCHEMA_VERSION = 1;
+export const RECORD_SCHEMA_VERSION = 2;
+export const RECORD_GENERATOR = 'scripts/i18n/check-sources.mjs';
+const RECORD_DIR = 'content/i18n';
 export const DEFAULT_RECORD_FILE = path.join('content', 'i18n', 'source-freshness.json');
+
+/**
+ * Code a record is bound to (repository-relative path → module that ran).
+ * A change to either file, even one that keeps EXTRACTOR_VERSION, makes the
+ * catalog reject the record until the checker is run again.
+ */
+const TOOL_FILES = Object.freeze([
+  ['scripts/i18n/check-sources.mjs', new URL(import.meta.url)],
+  ['scripts/i18n/extract.mjs', new URL('./extract.mjs', import.meta.url)],
+]);
+
+/** Exact SHA-256 of the checker and extractor code that is running, and the TypeScript version. */
+export function toolIdentity() {
+  return {
+    files: TOOL_FILES.map(([file, url]) => ({ path: file, sha256: `sha256:${sha256(readFileSync(url))}` })),
+    parser: `typescript@${ts.version}`,
+  };
+}
 
 /**
  * Record for a full run. Entries are sorted by sourcePath and keys are in a
  * fixed order; there is no timestamp, so the same input gives the same bytes.
  * Results without a valid sourcePath cannot be matched to a page and are left out.
  */
-export function buildRecord(results) {
+export function buildRecord(results, tools = toolIdentity()) {
   const entries = results
     .filter((r) => checkSitePath(r.sourcePath))
     .map((r) => ({
@@ -377,8 +399,9 @@ export function buildRecord(results) {
     .sort((a, b) => (a.sourcePath < b.sourcePath ? -1 : a.sourcePath > b.sourcePath ? 1 : a.sourceJson < b.sourceJson ? -1 : 1));
   return {
     schemaVersion: RECORD_SCHEMA_VERSION,
-    generator: 'scripts/i18n/check-sources.mjs',
+    generator: RECORD_GENERATOR,
     extractorVersion: EXTRACTOR_VERSION,
+    tools: { files: tools.files.map((t) => ({ path: t.path, sha256: t.sha256 })), parser: tools.parser },
     note: 'MATCH covers the translation extraction (units, structure, metadata) only; see notCompared. Not a translation, publishing or indexing approval.',
     entries,
   };
@@ -388,31 +411,73 @@ export function serializeRecord(record) {
   return `${JSON.stringify(record, null, 2)}\n`;
 }
 
+/** An existing file may only be replaced when it is a record written by this tool. */
+function isRecordFile(file) {
+  try {
+    const doc = JSON.parse(readFileSync(file, 'utf8'));
+    return Boolean(doc) && typeof doc === 'object' && doc.generator === RECORD_GENERATOR && Array.isArray(doc.entries);
+  } catch {
+    return false;
+  }
+}
+
 /**
- * Where a record may be written: a .json file inside the repository, outside
- * content/translations (so it is never read as a translation or source) and
- * outside app/. Returns the absolute path, or throws.
+ * Where a record may be written: a .json file under content/i18n/ of the
+ * repository (so never a translation, a source JSON, a page or another config
+ * file). No folder on the way and not the file itself may be a symbolic link,
+ * and an existing file is replaced only if it is a record. The repository
+ * folder itself (--repo) is trusted. Returns the absolute path, or throws.
  */
 export function recordTarget(repo, file = DEFAULT_RECORD_FILE) {
+  if (typeof file !== 'string' || !file) throw new Error('record path is missing');
   const root = path.resolve(repo);
   const target = path.resolve(root, file);
   const rel = toPosix(path.relative(root, target));
   if (!rel || rel.startsWith('..') || path.isAbsolute(rel)) throw new Error('record must be inside the repository');
-  if (!rel.endsWith('.json')) throw new Error('record must be a .json file');
-  if (rel.startsWith('content/translations/') || rel.startsWith('app/')) throw new Error('record must not be inside content/translations or app');
-  try {
-    if (lstatSync(target).isSymbolicLink()) throw new Error('record path is a symbolic link');
-  } catch (error) {
-    if (error?.code !== 'ENOENT') throw error;
+  if (!rel.startsWith(`${RECORD_DIR}/`) || !rel.endsWith('.json')) throw new Error(`record must be a .json file under ${RECORD_DIR}/`);
+  const parts = rel.split('/');
+  let current = root;
+  for (let i = 0; i < parts.length; i += 1) {
+    current = path.join(current, parts[i]);
+    let stat;
+    try {
+      stat = lstatSync(current);
+    } catch (error) {
+      if (error?.code === 'ENOENT') break; // the rest does not exist yet
+      throw error;
+    }
+    const shown = parts.slice(0, i + 1).join('/');
+    if (stat.isSymbolicLink()) throw new Error(`record path contains a symbolic link: ${shown}`);
+    if (i < parts.length - 1) {
+      if (!stat.isDirectory()) throw new Error(`record path goes through a file: ${shown}`);
+    } else if (!stat.isFile()) {
+      throw new Error('record path is not a regular file');
+    } else if (!isRecordFile(current)) {
+      throw new Error('an existing file that is not a source freshness record is never overwritten');
+    }
   }
   return target;
 }
 
-/** Write the record for a full run. Returns the absolute path written. */
+/**
+ * Write the record for a full run. Returns the absolute path written.
+ * The target is checked before and after creating missing folders, and the
+ * file is replaced through a new temporary file in the same folder (a rename
+ * never follows a link at the target).
+ */
 export function writeRecord(repo, results, file = DEFAULT_RECORD_FILE) {
+  const bytes = serializeRecord(buildRecord(results));
   const target = recordTarget(repo, file);
   mkdirSync(path.dirname(target), { recursive: true });
-  writeFileSync(target, serializeRecord(buildRecord(results)));
+  recordTarget(repo, file);
+  const temp = path.join(path.dirname(target), `.${path.basename(target)}.${process.pid}.tmp`);
+  writeFileSync(temp, bytes, { flag: 'wx' });
+  try {
+    renameSync(temp, target);
+  } catch (error) {
+    rmSync(temp, { force: true });
+    throw error;
+  }
   return target;
 }
 

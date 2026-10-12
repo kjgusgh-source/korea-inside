@@ -32,12 +32,15 @@ export type ValidationState = "valid" | "stale" | "invalid";
  * `scripts/i18n/check-sources.mjs --write-record`
  * (content/i18n/source-freshness.json):
  * - verified: the record says MATCH for exactly these source JSON and page
- *   bytes, with the same extractor. It covers the translation extraction only
- *   (units, structure, metadata); see `sourceFreshnessDetail.notCompared`.
+ *   bytes, written by exactly the checker and extractor code in the repository
+ *   (byte hashes) with the same TypeScript version. It covers the translation
+ *   extraction only (units, structure, metadata); see
+ *   `sourceFreshnessDetail.notCompared`.
  * - changed: the files differ from the checked version, or the check found
  *   changes. Re-run the checker.
- * - unverified: no usable record (missing, damaged, ambiguous, other paths or
- *   extractor, unreadable files, UNVERIFIED/ERROR result).
+ * - unverified: no usable record (missing, damaged, ambiguous, other paths,
+ *   other extractor version or checker/extractor code, unreadable files,
+ *   UNVERIFIED/ERROR result).
  * None of these is a translation, publishing or indexing approval.
  */
 export type SourceFreshness = "unverified" | "verified" | "changed";
@@ -233,7 +236,14 @@ type Built = { entry: CatalogEntry; source: JsonObject | null; translation: Json
 // Source freshness record (written by scripts/i18n/check-sources.mjs)
 // ---------------------------------------------------------------------------
 
-const FRESHNESS_RECORD_SCHEMA_VERSION = 1;
+const FRESHNESS_RECORD_SCHEMA_VERSION = 2;
+/**
+ * Checker code a record must have been written with, compared as exact bytes
+ * (read as files, never imported). Same list and order as TOOL_FILES in
+ * scripts/i18n/check-sources.mjs.
+ */
+const RECORD_TOOL_FILES = ["scripts/i18n/check-sources.mjs", "scripts/i18n/extract.mjs"];
+const TYPESCRIPT_PACKAGE = "node_modules/typescript/package.json";
 const RECORD_STATUSES = new Set(["MATCH", "CHANGED", "UNVERIFIED", "ERROR"]);
 const SHA256 = /^sha256:[0-9a-f]{64}$/;
 const PAGE_SEGMENT = /^[A-Za-z0-9_()[\]-][A-Za-z0-9._()[\]-]*$/;
@@ -250,7 +260,21 @@ type FreshnessRecordEntry = {
   notCompared: string[];
 };
 
-type FreshnessRecord = { problem: string | null; bySourcePath: Map<string, FreshnessRecordEntry[]> };
+type RecordTools = { files: { path: string; sha256: string }[]; parser: string };
+
+type FreshnessRecord = { problem: string | null; tools: RecordTools | null; bySourcePath: Map<string, FreshnessRecordEntry[]> };
+
+function isRecordTools(value: unknown): value is RecordTools {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return false;
+  const t = value as Record<string, unknown>;
+  return Array.isArray(t.files) && t.files.length === RECORD_TOOL_FILES.length &&
+    t.files.every((f, i) => {
+      if (!f || typeof f !== "object") return false;
+      const file = f as Record<string, unknown>;
+      return file.path === RECORD_TOOL_FILES[i] && typeof file.sha256 === "string" && SHA256.test(file.sha256);
+    }) &&
+    typeof t.parser === "string" && /^typescript@\S+$/.test(t.parser);
+}
 
 function isRecordEntry(value: unknown): value is FreshnessRecordEntry {
   if (!value || typeof value !== "object" || Array.isArray(value)) return false;
@@ -267,19 +291,20 @@ function isRecordEntry(value: unknown): value is FreshnessRecordEntry {
 
 /** Read and validate the record. Any damage makes the whole record unusable (fail closed). */
 function readFreshnessRecord(file: string): FreshnessRecord {
-  const empty = (problem: string): FreshnessRecord => ({ problem, bySourcePath: new Map() });
+  const empty = (problem: string): FreshnessRecord => ({ problem, tools: null, bySourcePath: new Map() });
   const read = readJson(file);
   if ("error" in read) return empty(read.error === "file not found" ? "no source freshness record" : `source freshness record ${read.error}`);
   const record = read.json;
   if (record.schemaVersion !== FRESHNESS_RECORD_SCHEMA_VERSION || !Array.isArray(record.entries)) {
     return empty("source freshness record has an unsupported schema");
   }
+  if (!isRecordTools(record.tools)) return empty("source freshness record has no valid checker code hashes");
   if (!record.entries.every(isRecordEntry)) return empty("source freshness record has an invalid entry");
   const bySourcePath = new Map<string, FreshnessRecordEntry[]>();
   for (const entry of record.entries as FreshnessRecordEntry[]) {
     bySourcePath.set(entry.sourcePath, [...(bySourcePath.get(entry.sourcePath) ?? []), entry]);
   }
-  return { problem: null, bySourcePath };
+  return { problem: null, tools: record.tools, bySourcePath };
 }
 
 /** Site path served by an App Router page file (route groups skipped), or null. */
@@ -289,13 +314,18 @@ function routeOfPageFile(file: string): string | null {
   return `/${parts.slice(1, -1).filter((p) => !(p.startsWith("(") && p.endsWith(")"))).join("/")}`;
 }
 
-/** Bytes of a page file inside the repository; null if missing, a symlink on the way, or outside. */
-function readPageFile(repoRoot: string, relative: string): Buffer | null {
-  if (routeOfPageFile(relative) === null) return null;
+/**
+ * Bytes of a regular file inside the repository ("/"-separated relative path);
+ * null if missing, a symbolic link on the way, or outside. Read as data only:
+ * nothing read here is imported or executed.
+ */
+function readRepoFile(repoRoot: string, relative: string): Buffer | null {
+  const parts = relative.split("/");
+  if (parts.some((p) => p === "" || p === "." || p === "..")) return null;
   let current = repoRoot;
   try {
-    for (const part of relative.split("/")) {
-      // Tracing only: page files are read at build time and are not bundled.
+    for (const part of parts) {
+      // Tracing only: these files are read at build time and are not bundled.
       current = path.join(/*turbopackIgnore: true*/ current, part);
       if (lstatSync(current).isSymbolicLink()) return null;
     }
@@ -304,6 +334,33 @@ function readPageFile(repoRoot: string, relative: string): Buffer | null {
   } catch {
     return null;
   }
+}
+
+function readPageFile(repoRoot: string, relative: string): Buffer | null {
+  return routeOfPageFile(relative) === null ? null : readRepoFile(repoRoot, relative);
+}
+
+/**
+ * The record must come from the checker and extractor code in this repository
+ * (exact bytes) and the installed TypeScript version. A changed extractor that
+ * kept its version string is caught here. Returns a problem, or null.
+ */
+function toolProblem(tools: RecordTools, repoRoot: string): string | null {
+  for (const file of tools.files) {
+    const bytes = readRepoFile(repoRoot, file.path);
+    if (!bytes) return `checker code could not be read: ${file.path}`;
+    if (sha256(bytes) !== file.sha256) return `checker or extractor code differs from the record (${file.path}); re-run the checker`;
+  }
+  const pkg = readRepoFile(repoRoot, TYPESCRIPT_PACKAGE);
+  let version: unknown;
+  try {
+    version = pkg ? (JSON.parse(pkg.toString("utf8")) as { version?: unknown }).version : undefined;
+  } catch {
+    version = undefined;
+  }
+  if (typeof version !== "string") return "installed TypeScript version could not be read";
+  if (`typescript@${version}` !== tools.parser) return "TypeScript version differs from the record; re-run the checker";
+  return null;
 }
 
 function freshnessFor(
@@ -342,6 +399,9 @@ function buildCatalog(root: string, recordFile: string): { catalog: Catalog; rec
   const resolvedRoot = path.resolve(root);
   const repoRoot = path.dirname(path.dirname(resolvedRoot));
   const freshnessRecord = readFreshnessRecord(recordFile);
+  if (!freshnessRecord.problem && freshnessRecord.tools) {
+    freshnessRecord.problem = toolProblem(freshnessRecord.tools, repoRoot);
+  }
   const pageCache = new Map<string, Buffer | null>();
   const sourceRoot = path.join(resolvedRoot, SOURCE_DIR);
   const issues: CatalogIssue[] = [];

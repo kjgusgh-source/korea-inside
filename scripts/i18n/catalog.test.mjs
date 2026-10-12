@@ -14,7 +14,7 @@ import { register } from 'node:module';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { cpSync, mkdirSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
+import { cpSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -43,6 +43,7 @@ const sha = (file) => `sha256:${createHash('sha256').update(readFileSync(file)).
 const readJson = (file) => JSON.parse(readFileSync(file, 'utf8'));
 const writeJson = (file, value) => { mkdirSync(path.dirname(file), { recursive: true }); writeFileSync(file, `${JSON.stringify(value, null, 2)}\n`); };
 const problems = (entry) => entry.errors.map((e) => e.problem);
+const readdirRecursive = (dir) => readdirSync(dir, { recursive: true });
 
 const temps = [];
 /** Copy the real translations folder to a temporary content/translations and let `edit` change it. */
@@ -375,11 +376,14 @@ test('missing translations folder: empty catalog with an issue, no exception', (
 const { checkAll, writeRecord } = await import('./check-sources.mjs');
 const PAGE_FILE = 'app/kpop/what-does-sunbae-and-hoobae-mean-in-kpop/page.tsx';
 const RECORD = 'content/i18n/source-freshness.json';
+const TOOL_FILES = ['scripts/i18n/check-sources.mjs', 'scripts/i18n/extract.mjs'];
+const TS_PACKAGE = 'node_modules/typescript/package.json';
 
 /**
- * Temporary repository: translations, the English Sunbae page and (unless
- * `record` is false) a record written by the checker. `page` edits the page
- * before the record is written.
+ * Temporary repository: translations, the English Sunbae page, copies of the
+ * checker and extractor code, the installed TypeScript package.json and
+ * (unless `record` is false) a record written by the checker. `page` edits the
+ * page before the record is written.
  */
 function freshFixture({ edit = () => {}, page = (text) => text, record = true } = {}) {
   const root = fixture(edit);
@@ -387,6 +391,10 @@ function freshFixture({ edit = () => {}, page = (text) => text, record = true } 
   const pageFile = path.join(base, PAGE_FILE);
   mkdirSync(path.dirname(pageFile), { recursive: true });
   writeFileSync(pageFile, page(readFileSync(path.join(REPO, PAGE_FILE), 'utf8')));
+  for (const file of [...TOOL_FILES, TS_PACKAGE]) {
+    mkdirSync(path.dirname(path.join(base, file)), { recursive: true });
+    writeFileSync(path.join(base, file), readFileSync(path.join(REPO, file)));
+  }
   if (record) writeRecord(base, checkAll(base));
   clearCatalogCache();
   return { root, base, pageFile, recordFile: path.join(base, RECORD) };
@@ -444,7 +452,10 @@ test('freshness: source JSON bytes changed after the record → changed', () => 
 test('freshness: damaged or unsupported record → unverified', () => {
   const cases = [
     (file) => writeFileSync(file, '{ "schemaVersion": 1, '),
-    (file) => editRecord(file, (doc) => { doc.schemaVersion = 2; }),
+    (file) => editRecord(file, (doc) => { doc.schemaVersion = 1; }),
+    (file) => editRecord(file, (doc) => { delete doc.tools; }),
+    (file) => editRecord(file, (doc) => { doc.tools.files.reverse(); }),
+    (file) => editRecord(file, (doc) => { doc.tools.files[1].sha256 = 'sha256:short'; }),
     (file) => editRecord(file, (doc) => { doc.entries[0].pageSha256 = 'sha256:short'; }),
     (file) => editRecord(file, (doc) => { doc.entries[0].status = 'OK'; }),
     (file) => editRecord(file, (doc) => { doc.entries = 'none'; }),
@@ -604,4 +615,129 @@ test('record: written only inside the repository, as .json, outside content/tran
   const sourceBefore = sha(path.join(base, 'content/translations/source', REL));
   assert.throws(() => writeRecord(base, checkAll(base), 'content/translations/source/kpop/what-does-sunbae-and-hoobae-mean-in-kpop.json'));
   assert.equal(sha(path.join(base, 'content/translations/source', REL)), sourceBefore, 'source JSON untouched');
+});
+
+// ---------------------------------------------------------------------------
+// P5-B1.1: the record is bound to the checker and extractor code; safe record path
+// ---------------------------------------------------------------------------
+
+test('record: holds the exact hashes of the checker and extractor code that ran, and the TypeScript version', () => {
+  const { recordFile } = freshFixture();
+  const record = readJson(recordFile);
+  assert.equal(record.schemaVersion, 2);
+  assert.deepEqual(record.tools, {
+    files: TOOL_FILES.map((file) => ({ path: file, sha256: sha(path.join(REPO, file)) })),
+    parser: `typescript@${readJson(path.join(REPO, TS_PACKAGE)).version}`,
+  });
+});
+
+test('freshness: extractor or checker code changed after the record → unverified, even with the same version string', () => {
+  for (const file of TOOL_FILES) {
+    const { root, base, recordFile } = freshFixture();
+    const target = path.join(base, file);
+    // A real behaviour change that keeps EXTRACTOR_VERSION as it is.
+    writeFileSync(target, `${readFileSync(target, 'utf8')}\n// changed after the record\n`);
+    clearCatalogCache();
+    const record = readJson(recordFile);
+    const source = readJson(path.join(root, 'source', REL));
+    assert.equal(record.entries[0].extractorVersion, source.extractor, 'stored version strings still agree');
+    const entry = entryOf(root);
+    assert.equal(entry.sourceFreshness, 'unverified', file);
+    assert.match(entry.sourceFreshnessDetail.reason, /checker or extractor code differs from the record/);
+    // Re-running the checker from other code does not make the old repository code verified.
+    writeRecord(base, checkAll(base));
+    clearCatalogCache();
+    assert.equal(entryOf(root).sourceFreshness, 'unverified', 'record from other code is rejected');
+    // Restoring the exact code makes the record usable again.
+    writeFileSync(target, readFileSync(path.join(REPO, file)));
+    clearCatalogCache();
+    assert.equal(entryOf(root).sourceFreshness, 'verified');
+  }
+});
+
+test('freshness: missing or linked checker code, or another TypeScript version → unverified', () => {
+  const missing = freshFixture();
+  rmSync(path.join(missing.base, 'scripts/i18n/extract.mjs'));
+  clearCatalogCache();
+  assert.match(entryOf(missing.root).sourceFreshnessDetail.reason, /checker code could not be read/);
+  assert.equal(entryOf(missing.root).sourceFreshness, 'unverified');
+
+  const linked = freshFixture();
+  const real = path.join(linked.base, 'extract-copy.mjs');
+  writeFileSync(real, readFileSync(path.join(linked.base, 'scripts/i18n/extract.mjs')));
+  rmSync(path.join(linked.base, 'scripts/i18n/extract.mjs'));
+  symlinkSync(real, path.join(linked.base, 'scripts/i18n/extract.mjs'));
+  clearCatalogCache();
+  assert.equal(entryOf(linked.root).sourceFreshness, 'unverified', 'a linked extractor is not read');
+
+  const parser = freshFixture();
+  editRecord(path.join(parser.base, TS_PACKAGE), (doc) => { doc.version = '0.0.1-other'; });
+  const entry = entryOf(parser.root);
+  assert.equal(entry.sourceFreshness, 'unverified');
+  assert.match(entry.sourceFreshnessDetail.reason, /TypeScript version differs/);
+
+  // A forged tools block (right shape, wrong hash) is rejected too.
+  const forged = freshFixture();
+  editRecord(forged.recordFile, (doc) => { doc.tools.files[0].sha256 = `sha256:${'0'.repeat(64)}`; });
+  assert.equal(entryOf(forged.root).sourceFreshness, 'unverified');
+});
+
+test('record path: symbolic links on the way are refused and nothing is written outside the repository', async () => {
+  const { recordTarget } = await import('./check-sources.mjs');
+  const outside = mkdtempSync(path.join(tmpdir(), 'haemil-outside-'));
+  temps.push(outside);
+  const outsideFiles = () => JSON.stringify(readdirRecursive(outside));
+
+  // content/i18n is a link to a folder outside the repository.
+  const a = freshFixture({ record: false });
+  symlinkSync(outside, path.join(a.base, 'content/i18n'));
+  assert.throws(() => recordTarget(a.base), /symbolic link: content\/i18n/);
+  assert.throws(() => writeRecord(a.base, checkAll(a.base)), /symbolic link/);
+  assert.equal(outsideFiles(), '[]', 'nothing written through the link');
+
+  // content itself is a link (the translations live behind it).
+  const b = freshFixture({ record: false });
+  const moved = mkdtempSync(path.join(tmpdir(), 'haemil-content-'));
+  temps.push(moved);
+  cpSync(path.join(b.base, 'content'), moved, { recursive: true });
+  rmSync(path.join(b.base, 'content'), { recursive: true });
+  symlinkSync(moved, path.join(b.base, 'content'));
+  assert.throws(() => recordTarget(b.base), /symbolic link: content$/);
+  assert.throws(() => recordTarget(b.base, 'content/i18n/deeper/record.json'), /symbolic link: content$/);
+
+  // The record file itself is a link to a source JSON: refused, source untouched.
+  const c = freshFixture({ record: false });
+  const sourceFile = path.join(c.base, 'content/translations/source', REL);
+  const before = sha(sourceFile);
+  mkdirSync(path.join(c.base, 'content/i18n'));
+  symlinkSync(sourceFile, path.join(c.base, RECORD));
+  assert.throws(() => writeRecord(c.base, checkAll(c.base)), /symbolic link/);
+  assert.equal(sha(sourceFile), before);
+
+  // A file where a folder should be.
+  const d = freshFixture({ record: false });
+  writeFileSync(path.join(d.base, 'content/i18n'), 'x');
+  assert.throws(() => recordTarget(d.base), /goes through a file/);
+});
+
+test('record path: only .json under content/i18n/; existing non-record files are never overwritten', async () => {
+  const { recordTarget } = await import('./check-sources.mjs');
+  const { base } = freshFixture({ record: false });
+  for (const bad of ['package.json', 'tsconfig.json', 'content/record.json', 'content/i18n/../translations/ja/x.json', 'scripts/i18n/record.json', 'content/i18n', 'content/i18n/']) {
+    assert.throws(() => recordTarget(base, bad), undefined, bad);
+  }
+  assert.equal(recordTarget(base, 'content/i18n/other/record.json'), path.join(base, 'content/i18n/other/record.json'));
+
+  // Another JSON file in content/i18n is not replaced.
+  const other = path.join(base, 'content/i18n/glossary.json');
+  writeJson(other, { terms: [] });
+  const before = sha(other);
+  assert.throws(() => writeRecord(base, checkAll(base), 'content/i18n/glossary.json'), /never overwritten/);
+  assert.equal(sha(other), before);
+
+  // An existing record (also an older schema) is replaced, without leftovers.
+  writeJson(path.join(base, RECORD), { schemaVersion: 1, generator: 'scripts/i18n/check-sources.mjs', entries: [] });
+  writeRecord(base, checkAll(base));
+  assert.equal(readJson(path.join(base, RECORD)).schemaVersion, 2);
+  assert.deepEqual(readdirRecursive(path.join(base, 'content/i18n')).sort(), ['glossary.json', 'source-freshness.json']);
 });
