@@ -24,12 +24,21 @@
  *
  * Usage
  *   node scripts/i18n/check-sources.mjs [--repo <dir>] [--json] [source.json ...]
+ *   node scripts/i18n/check-sources.mjs --write-record [--record <file>] [--repo <dir>]
  * Exit code: 0 all MATCH, 1 any CHANGED or ERROR, 2 otherwise UNVERIFIED.
+ *
+ * --write-record (explicit only) writes the results of a full run to
+ * content/i18n/source-freshness.json (or --record <file>): exact SHA-256 of the
+ * stored source JSON and of the page file at check time, sorted, no timestamps,
+ * so the same input gives the same bytes. The catalog reads it to set
+ * `sourceFreshness`. A MATCH record covers the translation extraction only
+ * (units, structure, metadata); JSON-LD content is listed under `notCompared`.
+ * It is not a translation, publishing or indexing approval.
  *
  * Details: docs/i18n/source-freshness.md
  */
 import { createHash } from 'node:crypto';
-import { existsSync, lstatSync, readdirSync, readFileSync } from 'node:fs';
+import { existsSync, lstatSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import ts from 'typescript';
@@ -204,13 +213,20 @@ export function compareSources(stored, fresh) {
 export function checkSourceFile(repo, sourceJson) {
   const root = path.resolve(repo);
   const relJson = toPosix(path.isAbsolute(sourceJson) ? path.relative(root, sourceJson) : sourceJson);
-  const result = { file: relJson, sourcePath: null, sourceFile: null, status: STATUS.ERROR, reasons: [], review: {}, details: null };
+  const result = {
+    file: relJson, sourcePath: null, sourceFile: null, status: STATUS.ERROR, reasons: [], review: {}, details: null,
+    extractorVersion: EXTRACTOR_VERSION,
+    // "sha256:<hex>" of the exact bytes read during this check.
+    hashes: { sourceJson: null, page: null },
+  };
   const fail = (reason) => { result.status = STATUS.ERROR; result.reasons.push(reason); return result; };
 
   const jsonFile = safeFile(root, relJson);
   if (!jsonFile) return fail('source JSON not found (or a symbolic link / outside the repository)');
   let stored;
-  try { stored = JSON.parse(readFileSync(jsonFile, 'utf8')); } catch { return fail('source JSON could not be parsed'); }
+  const jsonBytes = readFileSync(jsonFile);
+  result.hashes.sourceJson = `sha256:${sha256(jsonBytes)}`;
+  try { stored = JSON.parse(jsonBytes.toString('utf8')); } catch { return fail('source JSON could not be parsed'); }
   if (!stored || typeof stored !== 'object' || !Array.isArray(stored.units) || stored.schemaVersion !== 2) return fail('source JSON is not a schemaVersion 2 document');
 
   const sitePath = checkSitePath(stored.sourcePath);
@@ -226,7 +242,9 @@ export function checkSourceFile(repo, sourceJson) {
   const pageFile = safeFile(root, stored.sourceFile);
   if (!pageFile) return fail('English page file not found (or a symbolic link / outside the repository)');
 
-  const code = readFileSync(pageFile, 'utf8');
+  const pageBytes = readFileSync(pageFile);
+  result.hashes.page = `sha256:${sha256(pageBytes)}`;
+  const code = pageBytes.toString('utf8');
   let fresh;
   try {
     fresh = extractFromTsx(code, { fileName: stored.sourceFile, sourcePath: sitePath, previous: stored });
@@ -268,7 +286,7 @@ export function checkSourceFile(repo, sourceJson) {
       affectedUnits: affectedIds.filter((id) => t.unitIds.has(id)),
       ...(t.unreadable ? { unreadable: true } : {}),
     })),
-    pageSha256: sha256(code),
+    pageSha256: result.hashes.page,
   };
 
   if (stored.extractor !== EXTRACTOR_VERSION) {
@@ -331,6 +349,73 @@ export function checkAll(repo, files = null) {
   return list.map((file) => checkSourceFile(repo, file));
 }
 
+// ---------------------------------------------------------------------------
+// Freshness record (written only with --write-record)
+// ---------------------------------------------------------------------------
+
+export const RECORD_SCHEMA_VERSION = 1;
+export const DEFAULT_RECORD_FILE = path.join('content', 'i18n', 'source-freshness.json');
+
+/**
+ * Record for a full run. Entries are sorted by sourcePath and keys are in a
+ * fixed order; there is no timestamp, so the same input gives the same bytes.
+ * Results without a valid sourcePath cannot be matched to a page and are left out.
+ */
+export function buildRecord(results) {
+  const entries = results
+    .filter((r) => checkSitePath(r.sourcePath))
+    .map((r) => ({
+      sourcePath: r.sourcePath,
+      sourceFile: typeof r.sourceFile === 'string' ? r.sourceFile : null,
+      sourceJson: r.file,
+      status: r.status,
+      extractorVersion: r.extractorVersion,
+      sourceJsonSha256: r.hashes?.sourceJson ?? null,
+      pageSha256: r.hashes?.page ?? null,
+      notCompared: r.review?.jsonLd?.length ? ['json-ld'] : [],
+    }))
+    .sort((a, b) => (a.sourcePath < b.sourcePath ? -1 : a.sourcePath > b.sourcePath ? 1 : a.sourceJson < b.sourceJson ? -1 : 1));
+  return {
+    schemaVersion: RECORD_SCHEMA_VERSION,
+    generator: 'scripts/i18n/check-sources.mjs',
+    extractorVersion: EXTRACTOR_VERSION,
+    note: 'MATCH covers the translation extraction (units, structure, metadata) only; see notCompared. Not a translation, publishing or indexing approval.',
+    entries,
+  };
+}
+
+export function serializeRecord(record) {
+  return `${JSON.stringify(record, null, 2)}\n`;
+}
+
+/**
+ * Where a record may be written: a .json file inside the repository, outside
+ * content/translations (so it is never read as a translation or source) and
+ * outside app/. Returns the absolute path, or throws.
+ */
+export function recordTarget(repo, file = DEFAULT_RECORD_FILE) {
+  const root = path.resolve(repo);
+  const target = path.resolve(root, file);
+  const rel = toPosix(path.relative(root, target));
+  if (!rel || rel.startsWith('..') || path.isAbsolute(rel)) throw new Error('record must be inside the repository');
+  if (!rel.endsWith('.json')) throw new Error('record must be a .json file');
+  if (rel.startsWith('content/translations/') || rel.startsWith('app/')) throw new Error('record must not be inside content/translations or app');
+  try {
+    if (lstatSync(target).isSymbolicLink()) throw new Error('record path is a symbolic link');
+  } catch (error) {
+    if (error?.code !== 'ENOENT') throw error;
+  }
+  return target;
+}
+
+/** Write the record for a full run. Returns the absolute path written. */
+export function writeRecord(repo, results, file = DEFAULT_RECORD_FILE) {
+  const target = recordTarget(repo, file);
+  mkdirSync(path.dirname(target), { recursive: true });
+  writeFileSync(target, serializeRecord(buildRecord(results)));
+  return target;
+}
+
 export function exitCode(results) {
   if (results.some((r) => r.status === STATUS.CHANGED || r.status === STATUS.ERROR)) return 1;
   if (results.some((r) => r.status === STATUS.UNVERIFIED)) return 2;
@@ -360,17 +445,38 @@ function printText(results, ms) {
 function cli(argv) {
   let repo = process.cwd();
   let json = false;
+  let write = false;
+  let recordFile = DEFAULT_RECORD_FILE;
   const files = [];
   for (let i = 0; i < argv.length; i += 1) {
     if (argv[i] === '--repo') repo = argv[++i];
     else if (argv[i] === '--json') json = true;
+    else if (argv[i] === '--write-record') write = true;
+    else if (argv[i] === '--record') recordFile = argv[++i];
     else files.push(argv[i]);
+  }
+  if (write) {
+    try { recordTarget(repo, recordFile); } catch (error) {
+      console.error(`--write-record: ${error.message}`);
+      process.exitCode = 1;
+      return;
+    }
+  }
+  if (write && files.length) {
+    // A partial run would drop the other pages from the record.
+    console.error('--write-record needs a full run; do not pass source files.');
+    process.exitCode = 1;
+    return;
   }
   const started = Date.now();
   const results = checkAll(repo, files);
   const ms = Date.now() - started;
   if (json) console.log(JSON.stringify({ extractor: EXTRACTOR_VERSION, ms, results }, null, 2));
   else printText(results, ms);
+  if (write) {
+    const target = writeRecord(repo, results, recordFile);
+    if (!json) console.log(`record written: ${path.relative(path.resolve(repo), target) || target}`);
+  }
   process.exitCode = exitCode(results);
 }
 

@@ -28,10 +28,25 @@ export type ValidationState = "valid" | "stale" | "invalid";
 
 /**
  * Whether the stored English source JSON still matches the English page
- * (page.tsx). P2 cannot check this, so every entry is "unverified".
- * The source-freshness check (P5) will set "verified" or "changed".
+ * (page.tsx), according to the record written by
+ * `scripts/i18n/check-sources.mjs --write-record`
+ * (content/i18n/source-freshness.json):
+ * - verified: the record says MATCH for exactly these source JSON and page
+ *   bytes, with the same extractor. It covers the translation extraction only
+ *   (units, structure, metadata); see `sourceFreshnessDetail.notCompared`.
+ * - changed: the files differ from the checked version, or the check found
+ *   changes. Re-run the checker.
+ * - unverified: no usable record (missing, damaged, ambiguous, other paths or
+ *   extractor, unreadable files, UNVERIFIED/ERROR result).
+ * None of these is a translation, publishing or indexing approval.
  */
 export type SourceFreshness = "unverified" | "verified" | "changed";
+
+export type SourceFreshnessDetail = {
+  reason: string;
+  /** Parts the checker did not compare (e.g. "json-ld"), from the record. */
+  notCompared: string[];
+};
 
 export type Environment = "production" | "preview" | "development";
 
@@ -53,12 +68,13 @@ export type CatalogEntry = {
   /** Translated page URL, e.g. "/ja/kpop/...". null if unusable. */
   urlPath: string | null;
   files: { translation: FileIdentity; source: FileIdentity | null };
-  /** English page file recorded in the source JSON (not read or checked in P2). */
+  /** English page file recorded in the source JSON. */
   englishPageFile: string | null;
   /** Status written in the translation file. Read only; never changed here. */
   status: TranslationStatus | null;
   validation: ValidationState;
   sourceFreshness: SourceFreshness;
+  sourceFreshnessDetail: SourceFreshnessDetail;
   errors: CatalogIssue[];
   warnings: CatalogIssue[];
 };
@@ -213,8 +229,120 @@ function classify(errors: CatalogIssue[]): ValidationState {
 
 type Built = { entry: CatalogEntry; source: JsonObject | null; translation: JsonObject | null };
 
-function buildCatalog(root: string): { catalog: Catalog; records: Map<string, Built> } {
+// ---------------------------------------------------------------------------
+// Source freshness record (written by scripts/i18n/check-sources.mjs)
+// ---------------------------------------------------------------------------
+
+const FRESHNESS_RECORD_SCHEMA_VERSION = 1;
+const RECORD_STATUSES = new Set(["MATCH", "CHANGED", "UNVERIFIED", "ERROR"]);
+const SHA256 = /^sha256:[0-9a-f]{64}$/;
+const PAGE_SEGMENT = /^[A-Za-z0-9_()[\]-][A-Za-z0-9._()[\]-]*$/;
+
+type FreshnessRecordEntry = {
+  sourcePath: string;
+  /** null for ERROR results whose source JSON names no page. */
+  sourceFile: string | null;
+  sourceJson: string;
+  status: string;
+  extractorVersion: string;
+  sourceJsonSha256: string | null;
+  pageSha256: string | null;
+  notCompared: string[];
+};
+
+type FreshnessRecord = { problem: string | null; bySourcePath: Map<string, FreshnessRecordEntry[]> };
+
+function isRecordEntry(value: unknown): value is FreshnessRecordEntry {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return false;
+  const e = value as Record<string, unknown>;
+  const hash = (h: unknown) => h === null || (typeof h === "string" && SHA256.test(h));
+  return checkSourcePath(e.sourcePath) !== null &&
+    (e.sourceFile === null || typeof e.sourceFile === "string") &&
+    typeof e.sourceJson === "string" &&
+    typeof e.status === "string" && RECORD_STATUSES.has(e.status) &&
+    typeof e.extractorVersion === "string" && e.extractorVersion !== "" &&
+    hash(e.sourceJsonSha256) && hash(e.pageSha256) &&
+    Array.isArray(e.notCompared) && e.notCompared.every((n) => typeof n === "string");
+}
+
+/** Read and validate the record. Any damage makes the whole record unusable (fail closed). */
+function readFreshnessRecord(file: string): FreshnessRecord {
+  const empty = (problem: string): FreshnessRecord => ({ problem, bySourcePath: new Map() });
+  const read = readJson(file);
+  if ("error" in read) return empty(read.error === "file not found" ? "no source freshness record" : `source freshness record ${read.error}`);
+  const record = read.json;
+  if (record.schemaVersion !== FRESHNESS_RECORD_SCHEMA_VERSION || !Array.isArray(record.entries)) {
+    return empty("source freshness record has an unsupported schema");
+  }
+  if (!record.entries.every(isRecordEntry)) return empty("source freshness record has an invalid entry");
+  const bySourcePath = new Map<string, FreshnessRecordEntry[]>();
+  for (const entry of record.entries as FreshnessRecordEntry[]) {
+    bySourcePath.set(entry.sourcePath, [...(bySourcePath.get(entry.sourcePath) ?? []), entry]);
+  }
+  return { problem: null, bySourcePath };
+}
+
+/** Site path served by an App Router page file (route groups skipped), or null. */
+function routeOfPageFile(file: string): string | null {
+  const parts = file.split("/");
+  if (parts[0] !== "app" || parts.at(-1) !== "page.tsx" || !parts.every((p) => PAGE_SEGMENT.test(p))) return null;
+  return `/${parts.slice(1, -1).filter((p) => !(p.startsWith("(") && p.endsWith(")"))).join("/")}`;
+}
+
+/** Bytes of a page file inside the repository; null if missing, a symlink on the way, or outside. */
+function readPageFile(repoRoot: string, relative: string): Buffer | null {
+  if (routeOfPageFile(relative) === null) return null;
+  let current = repoRoot;
+  try {
+    for (const part of relative.split("/")) {
+      // Tracing only: page files are read at build time and are not bundled.
+      current = path.join(/*turbopackIgnore: true*/ current, part);
+      if (lstatSync(current).isSymbolicLink()) return null;
+    }
+    if (!isInside(repoRoot, current) || !lstatSync(current).isFile()) return null;
+    return readFileSync(current);
+  } catch {
+    return null;
+  }
+}
+
+function freshnessFor(
+  entry: CatalogEntry,
+  source: JsonObject,
+  record: FreshnessRecord,
+  repoRoot: string,
+  pageCache: Map<string, Buffer | null>,
+): { state: SourceFreshness; detail: SourceFreshnessDetail } {
+  const unverified = (reason: string) => ({ state: "unverified" as const, detail: { reason, notCompared: [] } });
+  if (record.problem) return unverified(record.problem);
+  if (!entry.sourcePath || !entry.files.source) return unverified("English source not loaded");
+  const matches = record.bySourcePath.get(entry.sourcePath) ?? [];
+  if (!matches.length) return unverified("no record entry for this page");
+  if (matches.length > 1) return unverified("more than one record entry for this page");
+  const r = matches[0];
+  const pageFile = typeof source.sourceFile === "string" ? source.sourceFile : null;
+  if (!pageFile || routeOfPageFile(pageFile) !== entry.sourcePath) return unverified("sourceFile in the source JSON is not the page for sourcePath");
+  if (r.sourceFile !== pageFile) return unverified("record sourceFile does not match the source JSON");
+  if (r.sourceJson !== entry.files.source.path) return unverified("record sourceJson does not match this source file");
+  if (r.extractorVersion !== source.extractor) return unverified("record extractor version differs from the source JSON");
+  if (r.status === "UNVERIFIED" || r.status === "ERROR" || !r.sourceJsonSha256 || !r.pageSha256) {
+    return unverified(`checker result was ${r.status}`);
+  }
+  if (!pageCache.has(pageFile)) pageCache.set(pageFile, readPageFile(repoRoot, pageFile));
+  const pageBytes = pageCache.get(pageFile);
+  if (!pageBytes) return unverified("English page file could not be read");
+  if (r.sourceJsonSha256 !== entry.files.source.sha256 || r.pageSha256 !== sha256(pageBytes)) {
+    return { state: "changed", detail: { reason: "source JSON or page differs from the checked version; re-run the checker", notCompared: [] } };
+  }
+  if (r.status === "CHANGED") return { state: "changed", detail: { reason: "checker found changes", notCompared: [] } };
+  return { state: "verified", detail: { reason: "matches the source freshness record", notCompared: [...r.notCompared] } };
+}
+
+function buildCatalog(root: string, recordFile: string): { catalog: Catalog; records: Map<string, Built> } {
   const resolvedRoot = path.resolve(root);
+  const repoRoot = path.dirname(path.dirname(resolvedRoot));
+  const freshnessRecord = readFreshnessRecord(recordFile);
+  const pageCache = new Map<string, Buffer | null>();
   const sourceRoot = path.join(resolvedRoot, SOURCE_DIR);
   const issues: CatalogIssue[] = [];
   const built: Built[] = [];
@@ -262,6 +390,7 @@ function buildCatalog(root: string): { catalog: Catalog; records: Map<string, Bu
         status: null,
         validation: "invalid",
         sourceFreshness: "unverified",
+        sourceFreshnessDetail: { reason: "English source not loaded", notCompared: [] },
         errors,
         warnings,
       };
@@ -292,6 +421,9 @@ function buildCatalog(root: string): { catalog: Catalog; records: Map<string, Bu
       const source = sourceRead.json;
       entry.files.source = { path: repoPath(resolvedRoot, sourceFile), sha256: sha256(sourceRead.bytes) };
       entry.englishPageFile = typeof source.sourceFile === "string" ? source.sourceFile : null;
+      const freshness = freshnessFor(entry, source, freshnessRecord, repoRoot, pageCache);
+      entry.sourceFreshness = freshness.state;
+      entry.sourceFreshnessDetail = freshness.detail;
 
       const result = validateTranslation(source, translation, { locale, allowedStatuses: [...TRANSLATION_STATUSES] });
       errors.push(...result.errors);
@@ -322,7 +454,13 @@ function buildCatalog(root: string): { catalog: Catalog; records: Map<string, Bu
 
 const cache = new Map<string, ReturnType<typeof buildCatalog>>();
 
-function load(options?: { root?: string }) {
+export type CatalogOptions = {
+  root?: string;
+  /** Source freshness record; default <repository>/content/i18n/source-freshness.json. */
+  freshnessRecord?: string;
+};
+
+function load(options?: CatalogOptions) {
   // The bundler's file tracer cannot see which folder `options.root` points
   // to (tests pass a temporary folder), so without this comment it treats
   // the whole project as read and adds it to the route's server bundle.
@@ -330,8 +468,13 @@ function load(options?: { root?: string }) {
   // checked as before. The default folder stays traced through
   // defaultCatalogRoot().
   const root = path.resolve(/*turbopackIgnore: true*/ options?.root ?? defaultCatalogRoot());
-  if (!cache.has(root)) cache.set(root, buildCatalog(root));
-  return cache.get(root)!;
+  // Same reason as above: derived from `root`, not traced.
+  const recordFile = path.resolve(
+    /*turbopackIgnore: true*/ options?.freshnessRecord ?? path.join(path.dirname(path.dirname(root)), "content", "i18n", "source-freshness.json"),
+  );
+  const key = `${root}\u0000${recordFile}`;
+  if (!cache.has(key)) cache.set(key, buildCatalog(root, recordFile));
+  return cache.get(key)!;
 }
 
 /** Drop cached catalogs (tests). */
@@ -339,12 +482,12 @@ export function clearCatalogCache(): void {
   cache.clear();
 }
 
-export function loadCatalog(options?: { root?: string }): Catalog {
+export function loadCatalog(options?: CatalogOptions): Catalog {
   return load(options).catalog;
 }
 
 /** Every translation file found, valid or not. */
-export function listTranslations(options?: { root?: string }): CatalogEntry[] {
+export function listTranslations(options?: CatalogOptions): CatalogEntry[] {
   return load(options).catalog.entries;
 }
 
@@ -352,7 +495,7 @@ export function listTranslations(options?: { root?: string }): CatalogEntry[] {
  * One translation by locale code and English page path. Invalid input
  * (unknown locale, unsafe path) returns undefined without touching the disk.
  */
-export function getTranslation(locale: string, sourcePath: string, options?: { root?: string }): TranslationRecord | undefined {
+export function getTranslation(locale: string, sourcePath: string, options?: CatalogOptions): TranslationRecord | undefined {
   if (!isLocaleCode(locale) || locale === "en") return undefined;
   const checked = checkSourcePath(sourcePath);
   if (!checked) return undefined;
@@ -443,7 +586,7 @@ export function publishDecision(
 export function renderableEntries(
   locale: LocaleCode,
   environment: Environment,
-  options?: { root?: string; approvals?: readonly ApprovalRecord[] },
+  options?: CatalogOptions & { approvals?: readonly ApprovalRecord[] },
 ): CatalogEntry[] {
   return listTranslations(options).filter(
     (entry) => entry.locale === locale && publishDecision(entry, environment, options?.approvals).render,
