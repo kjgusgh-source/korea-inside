@@ -28,6 +28,18 @@
       "notCompared": [
         "json-ld"
       ]
+    },
+    {
+      "sourcePath": "/kpop/why-kpop-idols-feel-like-anime-characters",
+      "sourceFile": "app/kpop/why-kpop-idols-feel-like-anime-characters/page.tsx",
+      "sourceJson": "content/translations/source/kpop/why-kpop-idols-feel-like-anime-characters.json",
+      "status": "MATCH",
+      "extractorVersion": "extract-pilot-1",
+      "sourceJsonSha256": "sha256:35b4a330f0cd35f68b264b2e8f21e0487b1bc23c022f56f3b6924f20e8a94367",
+      "pageSha256": "sha256:15d0c6becd81da678c96908bc29e525c30423cc1a72ef52ae776ba8884daa6fa",
+      "notCompared": [
+        "json-ld"
+      ]
     }
   ]
 }
