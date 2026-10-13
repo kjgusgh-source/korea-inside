@@ -83,11 +83,19 @@ const menuData = async (vars) => withEnv(vars, async () => {
 
 const temps = [];
 process.on('exit', () => { for (const dir of temps) rmSync(dir, { recursive: true, force: true }); });
-/** Run `fn` in a temporary repository whose content/translations is a copy that `edit` may change. */
+/**
+ * Run `fn` in a temporary repository whose content/translations holds exactly
+ * one page: the real Sunbae source JSON and Japanese translation (other real
+ * translations are not copied, so counts inside a fixture never depend on the
+ * repository). `edit` may change it.
+ */
 async function inFixture(edit, fn) {
   const base = mkdtempSync(path.join(tmpdir(), 'haemil-menu-'));
   temps.push(base);
-  cpSync(path.join(REPO, 'content/translations'), path.join(base, 'content/translations'), { recursive: true });
+  for (const dir of ['source', 'ja']) {
+    mkdirSync(path.dirname(path.join(base, 'content/translations', dir, REL)), { recursive: true });
+    cpSync(path.join(REPO, 'content/translations', dir, REL), path.join(base, 'content/translations', dir, REL));
+  }
   edit(path.join(base, 'content/translations'));
   const cwd = process.cwd();
   process.chdir(base); // the catalog reads <cwd>/content/translations
@@ -102,9 +110,19 @@ process.chdir(REPO);
 
 test('menu data on Preview: exactly the generated translated pages, paths and locale codes only', async () => {
   const data = await menuData({ VERCEL_ENV: 'preview' });
-  assert.deepEqual(data, { version: 1, pages: { [PAGE]: ['ja'] } });
+  assert.equal(data.version, 1);
+  // The repository may hold any number of translations; Sunbae must be among them.
+  assert.deepEqual(data.pages[PAGE], ['ja']);
   const generated = await withEnv({ VERCEL_ENV: 'preview' }, () => localeStaticParams('ja').map(({ slug }) => `/${slug.join('/')}`));
   assert.deepEqual(Object.keys(data.pages).filter((p) => data.pages[p].includes('ja')), generated, 'same list as /ja/[...slug]');
+  // Every listed locale has a generated page for that path, and nothing else is listed.
+  for (const [sourcePath, codes] of Object.entries(data.pages)) {
+    for (const code of codes) {
+      const paths = await withEnv({ VERCEL_ENV: 'preview' }, () => localeStaticParams(code).map(({ slug }) => `/${slug.join('/')}`));
+      assert.ok(paths.includes(sourcePath), `${code} ${sourcePath}`);
+    }
+  }
+  assert.deepEqual(Object.keys(data.pages), [...Object.keys(data.pages)].sort(), 'sorted');
   assert.ok(/^[\x20-\x7e]*$/.test(JSON.stringify(data)), 'no translated text in the data');
 });
 
@@ -149,6 +167,50 @@ test('menu data: several pages are sorted and each lists its own locales', async
     const data = await menuData({ VERCEL_ENV: 'preview' });
     assert.deepEqual(Object.keys(data.pages), ['/kpop/a-first-page', PAGE]);
     assert.deepEqual(Object.values(data.pages), [['ja'], ['ja']]);
+  });
+});
+
+/** Copy the Sunbae page (source and Japanese) to /kpop/<slug>. */
+function copyPage(root, slug) {
+  for (const dir of ['source', 'ja']) {
+    const doc = readJson(path.join(root, dir, REL));
+    doc.sourcePath = `/kpop/${slug}`;
+    writeJson(path.join(root, dir, 'kpop', `${slug}.json`), doc);
+  }
+}
+const staticPaths = (vars) => withEnv(vars, () => localeStaticParams('ja').map(({ slug }) => `/${slug.join('/')}`));
+
+test('menu data and static pages: a stale and an invalid page are left out, the others stay', async () => {
+  await inFixture((root) => {
+    for (const slug of ['ok-page', 'stale-page', 'broken-page']) copyPage(root, slug);
+    const file = path.join(root, 'source', 'kpop', 'stale-page.json');
+    const doc = readJson(file);
+    doc.units.find((u) => u.translate).hash = '0'.repeat(64);
+    writeJson(file, doc);
+    writeFileSync(path.join(root, 'ja', 'kpop', 'broken-page.json'), '{ "broken": ');
+  }, async () => {
+    const state = Object.fromEntries(listTranslations().map((e) => [e.sourcePath, e.validation]));
+    assert.deepEqual(state, { '/kpop/broken-page': 'invalid', '/kpop/ok-page': 'valid', '/kpop/stale-page': 'stale', [PAGE]: 'valid' });
+    const data = await menuData({ VERCEL_ENV: 'preview' });
+    assert.deepEqual(data, { version: 1, pages: { '/kpop/ok-page': ['ja'], [PAGE]: ['ja'] } });
+    assert.deepEqual(await staticPaths({ VERCEL_ENV: 'preview' }), ['/kpop/ok-page', PAGE]);
+    assert.deepEqual(await menuData({ VERCEL_ENV: 'production' }), { version: 1, pages: {} });
+    assert.deepEqual(await staticPaths({ VERCEL_ENV: 'production' }), []);
+  });
+});
+
+test('menu data and static pages with many translations: no fixed count, none in production', async () => {
+  const slugs = Array.from({ length: 11 }, (_, i) => `many-page-${String(i + 1).padStart(2, '0')}`);
+  await inFixture((root) => { for (const slug of slugs) copyPage(root, slug); }, async () => {
+    const expected = [...slugs.map((slug) => `/kpop/${slug}`), PAGE].sort();
+    const data = await menuData({ VERCEL_ENV: 'preview' });
+    assert.deepEqual(Object.keys(data.pages), expected);
+    assert.ok(Object.values(data.pages).every((codes) => codes.length === 1 && codes[0] === 'ja'));
+    assert.deepEqual(await staticPaths({ VERCEL_ENV: 'preview' }), expected);
+    for (const vars of [{ VERCEL_ENV: 'production' }, { NODE_ENV: 'production' }]) {
+      assert.deepEqual(await menuData(vars), { version: 1, pages: {} }, JSON.stringify(vars));
+      assert.deepEqual(await staticPaths(vars), [], JSON.stringify(vars));
+    }
   });
 });
 

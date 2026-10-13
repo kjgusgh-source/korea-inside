@@ -46,12 +46,20 @@ const problems = (entry) => entry.errors.map((e) => e.problem);
 const readdirRecursive = (dir) => readdirSync(dir, { recursive: true });
 
 const temps = [];
-/** Copy the real translations folder to a temporary content/translations and let `edit` change it. */
+/**
+ * Temporary content/translations holding exactly one page: the real Sunbae
+ * source JSON and Japanese translation (other real translations are not
+ * copied, so counts inside a fixture never depend on the repository). `edit`
+ * may change it.
+ */
 function fixture(edit = () => {}) {
   const base = mkdtempSync(path.join(tmpdir(), 'haemil-catalog-'));
   temps.push(base);
   const root = path.join(base, 'content', 'translations');
-  cpSync(REAL_ROOT, root, { recursive: true });
+  for (const dir of ['source', 'ja']) {
+    mkdirSync(path.dirname(path.join(root, dir, REL)), { recursive: true });
+    cpSync(path.join(REAL_ROOT, dir, REL), path.join(root, dir, REL));
+  }
   edit(root);
   clearCatalogCache();
   return root;
@@ -84,8 +92,12 @@ test('real data: the Japanese Sunbae draft is found and valid, with verified sou
   const before = sha(path.join(REAL_ROOT, 'ja', REL));
   const catalog = loadCatalog({ root: REAL_ROOT });
   assert.deepEqual(catalog.issues, []);
-  assert.equal(catalog.entries.length, 1);
-  const [entry] = catalog.entries;
+  // The repository may hold any number of translations; this test checks the Sunbae one.
+  const keys = catalog.entries.map((e) => e.key);
+  assert.equal(new Set(keys).size, keys.length, 'each page is registered once per locale');
+  const matches = catalog.entries.filter((e) => e.key === `ja:${PAGE}`);
+  assert.equal(matches.length, 1);
+  const [entry] = matches;
   assert.equal(entry.key, `ja:${PAGE}`);
   assert.equal(entry.locale, 'ja');
   assert.equal(entry.sourcePath, PAGE);
@@ -110,7 +122,7 @@ test('real data: the Japanese Sunbae draft is found and valid, with verified sou
 
 test('real data: publish decisions per environment', () => {
   clearCatalogCache();
-  const [entry] = listTranslations({ root: REAL_ROOT });
+  const entry = getTranslation('ja', PAGE, { root: REAL_ROOT }).entry;
   for (const environment of ['preview', 'development']) {
     const d = publishDecision(entry, environment);
     assert.equal(d.render, true, environment);
@@ -128,8 +140,15 @@ test('real data: publish decisions per environment', () => {
   }
   // Source freshness is verified (committed MATCH record); that alone never allows production.
   assert.ok(!prod.reasons.some((reason) => reason.startsWith('source-freshness')), prod.reasons.join(', '));
+  // Every Japanese draft in the repository is blocked in production.
   assert.deepEqual(renderableEntries('ja', 'production', { root: REAL_ROOT }), []);
-  assert.deepEqual(renderableEntries('ja', 'preview', { root: REAL_ROOT }).map((e) => e.key), [`ja:${PAGE}`]);
+  // Preview lists exactly the valid Japanese entries with a known status, Sunbae among them.
+  const preview = renderableEntries('ja', 'preview', { root: REAL_ROOT }).map((e) => e.key);
+  const expected = listTranslations({ root: REAL_ROOT })
+    .filter((e) => e.locale === 'ja' && e.validation === 'valid' && e.status !== null)
+    .map((e) => e.key);
+  assert.deepEqual(preview, expected);
+  assert.ok(preview.includes(`ja:${PAGE}`));
 });
 
 // ---------------------------------------------------------------------------
@@ -251,6 +270,62 @@ test('duplicate registration and duplicate unit IDs are invalid', () => {
   const [entry] = listTranslations({ root: root2 });
   assert.equal(entry.validation, 'invalid');
   assert.ok(problems(entry).includes('duplicate translation unit'));
+});
+
+// ---------------------------------------------------------------------------
+// Several translations (fixtures; exact counts are known inside each fixture)
+// ---------------------------------------------------------------------------
+
+/** Make the copy at `slug` stale: its stored English source no longer matches the translation. */
+function makeStale(root, slug) {
+  const file = path.join(root, 'source', 'kpop', `${slug}.json`);
+  const doc = readJson(file);
+  doc.units.find((u) => u.translate).hash = '0'.repeat(64);
+  writeJson(file, doc);
+}
+const keysOf = (entries) => entries.map((e) => e.key);
+
+test('two valid translations: both in the catalog, both render in preview, neither in production', () => {
+  const root = fixture((r) => addSecondPage(r, 'a-second-page'));
+  const entries = listTranslations({ root });
+  assert.equal(entries.length, 2);
+  assert.deepEqual(entries.map((e) => [e.key, e.validation, e.status]), [
+    ['ja:/kpop/a-second-page', 'valid', 'draft'],
+    [`ja:${PAGE}`, 'valid', 'draft'],
+  ]);
+  assert.deepEqual(keysOf(renderableEntries('ja', 'preview', { root })), ['ja:/kpop/a-second-page', `ja:${PAGE}`]);
+  assert.deepEqual(renderableEntries('ja', 'production', { root }), []);
+});
+
+test('a stale and an invalid translation do not affect the valid ones', () => {
+  const root = fixture((r) => {
+    for (const slug of ['ok-page', 'stale-page', 'broken-page']) addSecondPage(r, slug);
+    makeStale(r, 'stale-page');
+    writeFileSync(path.join(r, 'ja', 'kpop', 'broken-page.json'), '{ "schemaVersion": 2, ');
+  });
+  const state = Object.fromEntries(listTranslations({ root }).map((e) => [e.key, e.validation]));
+  assert.deepEqual(state, {
+    'ja:/kpop/broken-page': 'invalid',
+    'ja:/kpop/ok-page': 'valid',
+    'ja:/kpop/stale-page': 'stale',
+    [`ja:${PAGE}`]: 'valid',
+  });
+  assert.deepEqual(keysOf(renderableEntries('ja', 'preview', { root })), ['ja:/kpop/ok-page', `ja:${PAGE}`]);
+  assert.deepEqual(renderableEntries('ja', 'production', { root }), []);
+  assert.equal(getTranslation('ja', '/kpop/stale-page', { root }).translation, null);
+  assert.equal(getTranslation('ja', PAGE, { root }).entry.validation, 'valid');
+});
+
+test('many translations: no fixed count anywhere, every draft blocked in production', () => {
+  const slugs = Array.from({ length: 11 }, (_, i) => `many-page-${String(i + 1).padStart(2, '0')}`);
+  const root = fixture((r) => { for (const slug of slugs) addSecondPage(r, slug); });
+  const entries = listTranslations({ root });
+  assert.equal(entries.length, 12);
+  assert.ok(entries.every((e) => e.validation === 'valid' && e.status === 'draft'));
+  const expected = [...slugs.map((slug) => `ja:/kpop/${slug}`), `ja:${PAGE}`].sort();
+  assert.deepEqual(keysOf(renderableEntries('ja', 'preview', { root })), expected);
+  assert.deepEqual(renderableEntries('ja', 'production', { root }), []);
+  for (const slug of slugs) assert.equal(getTranslation('ja', `/kpop/${slug}`, { root }).entry.urlPath, `/ja/kpop/${slug}`);
 });
 
 test('path escape attempts are rejected without reading outside the folder', () => {
