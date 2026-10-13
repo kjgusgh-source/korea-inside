@@ -1,0 +1,1554 @@
+{
+  "schemaVersion": 2,
+  "sourceLocale": "en",
+  "sourcePath": "/kpop/why-kpop-idols-feel-like-anime-characters",
+  "sourceFile": "app/kpop/why-kpop-idols-feel-like-anime-characters/page.tsx",
+  "extractor": "extract-pilot-1",
+  "units": [
+    {
+      "id": "meta-title-a90e6635",
+      "kind": "meta",
+      "tag": "title",
+      "anchor": "meta",
+      "group": "meta",
+      "path": "metadata.title",
+      "origin": "metadata.title",
+      "text": "Why Do Some K-pop Idols Feel Like Anime Characters?",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "a90e6635f7f93840524854d5ef2e76811094164f61b7eb586e900adf33c8c731",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "meta-description-510a223e",
+      "kind": "meta",
+      "tag": "description",
+      "anchor": "meta",
+      "group": "meta",
+      "path": "metadata.description",
+      "origin": "metadata.description",
+      "text": "A friendly HAEMIL guide to why Korean fans sometimes describe certain K-pop idols as anime-like, 2D-like, or almost like someone who stepped out of Oshi no Ko.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "510a223ebdcb083cde4122c1e9dc0ae0fc2da403d717025b2292cd0fc5c5db8b",
+      "translate": true,
+      "protect": [
+        "HAEMIL"
+      ],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-a-f84c53da",
+      "kind": "block",
+      "tag": "a",
+      "anchor": "page",
+      "group": "page",
+      "path": "page>main[1]>div[1]>article[1]>Link[1]",
+      "origin": "jsx",
+      "text": "← Back to K-pop",
+      "attrs": {
+        "href": "/kpop"
+      },
+      "placeholders": {},
+      "hash": "f84c53daf53c3a1a7aac7be0d3838ce87363e3056aa07e7f5ceddc70339b795d",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "page-p-49a6e53a",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page",
+      "group": "page",
+      "path": "page>main[1]>div[1]>article[1]>p[1]",
+      "origin": "jsx",
+      "text": "K-pop culture guide",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "49a6e53a8763e7595e58414e351d76fb8237d04522f299e86abe7086c36f0559",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "page-h1-f32993a4",
+      "kind": "block",
+      "tag": "h1",
+      "anchor": "page",
+      "group": "page",
+      "path": "page>main[1]>div[1]>article[1]>h1[1]",
+      "origin": "jsx",
+      "text": "Why Do Some K-pop Idols Feel Like Anime Characters?",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "f32993a431ffd6b91d79eddeceeaadad641864a1846e0bd58938eca2eb3c1d50",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "page-p-97a1ebe5",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page",
+      "group": "page",
+      "path": "page>main[1]>div[1]>article[1]>p[2]",
+      "origin": "jsx",
+      "text": "Sometimes Korean fans describe an idol with a phrase that sounds a little strange in English.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "97a1ebe58a0019809b4c37926e683d3f2ff8d929b4483186dedc278a0131534c",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "page-p-23d40851",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page",
+      "group": "page",
+      "path": "page>main[1]>div[1]>section[1]>div[1]>p[1]",
+      "origin": "jsx",
+      "text": "\"She looks like a character.\"",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "23d408518fc1306f40f3b662280ca30f07fd5c94d38feffa4ab241b26fa9e4d2",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-p-57d33dcb",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page",
+      "group": "page",
+      "path": "page>main[1]>div[1]>section[1]>div[1]>p[2]",
+      "origin": "jsx",
+      "text": "\"She feels 2D.\"",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "57d33dcb2ade5fafdec84cf26d0851541c1c1c330fd54e279de9a64eff016c94",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-p-64e7b662",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page",
+      "group": "page",
+      "path": "page>main[1]>div[1]>section[1]>div[1]>p[3]",
+      "origin": "jsx",
+      "text": "\"She looks like she stepped out of an anime.\"",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "64e7b66287a731f6d1d7b1ab5e2f8868dcc2636ab7fcc4a322d12970e5b73a70",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-p-4af1b77b",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page",
+      "group": "page",
+      "path": "page>main[1]>div[1]>section[1]>div[1]>p[4]",
+      "origin": "jsx",
+      "text": "It does not always mean the idol literally looks unreal. It is more about the feeling. The styling, the facial expressions, the camera timing, the colors, and the stage mood all come together so clearly that the idol starts to feel like a character you could recognize right away.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "4af1b77b132c96dec461b84f7f2c5024efe81dec8ab946cf723a510087c63bd9",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-p-18678da0",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page",
+      "group": "page",
+      "path": "page>main[1]>div[1]>section[1]>div[1]>p[5]",
+      "origin": "jsx",
+      "text": "For international fans, this can be a useful piece of Korean fan language to understand.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "18678da0249ffff60b4a6c15954a79e506406508eba8017b0a8f7cf640445511",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-p-7c3fa9ec",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page",
+      "group": "page",
+      "path": "page>main[1]>div[1]>section[1]>div[1]>p[6]",
+      "origin": "jsx",
+      "text": "In Korean fandom spaces, \"2D-like\" or \"anime-like\" is often used when someone has a very strong visual image. Not just a pretty face, but a face and mood that feel easy to remember. Big eyes, clear expressions, bright styling, sharp reactions, or a slightly unreal stage presence can all create that feeling.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "7c3fa9ecc9410a435de5f052dff095246e12d4804b5cba69f1915d7dbdd40a71",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-p-cdbd352c",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page",
+      "group": "page",
+      "path": "page>main[1]>div[1]>section[1]>div[1]>p[7]",
+      "origin": "jsx",
+      "text": "That is why people sometimes bring up Oshi no Ko when talking about certain idol images.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "cdbd352cf1014e491b425bbb5defcd4cd058f9bf056fc9aa2dcebedfda39e567",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-p-5b8f9985",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page",
+      "group": "page",
+      "path": "page>main[1]>div[1]>section[1]>div[1]>p[8]",
+      "origin": "jsx",
+      "text": "Oshi no Ko is already tied to the idea of idol fantasy, stage brightness, and the strange feeling of someone looking almost too polished for real life. So when a K-pop idol gives off a very animated, character-like stage image, Korean fans may use that kind of comparison to explain the mood quickly.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "5b8f99851cfb1511b59aeb97b9f5eed63e74dd198b3d76548fb5abaf0fe73c93",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-p-ccd207bd",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page",
+      "group": "page",
+      "path": "page>main[1]>div[1]>section[1]>div[1]>p[9]",
+      "origin": "jsx",
+      "text": "It is not usually a serious label.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "ccd207bd7fbf511a8a3301a5646fc3ce36cb2d65b25d4873a962795aa7de8aa2",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-p-d42b2afa",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page",
+      "group": "page",
+      "path": "page>main[1]>div[1]>section[1]>div[1]>p[10]",
+      "origin": "jsx",
+      "text": "It is more like saying, \"This person has the kind of image that would make sense in an idol anime.\"",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "d42b2afac1d6a9d0012b47216a8df95df0f5fff1b254e05c35e7fdb4a943622c",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-p-ab364ec8",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page",
+      "group": "page",
+      "path": "page>main[1]>div[1]>section[1]>div[1]>p[11]",
+      "origin": "jsx",
+      "text": "That is different from simply saying someone is cute.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "ab364ec8f71077d5f022847950aeab96e4e30719aef09a24577293d8480fe90a",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-p-5df6e631",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page",
+      "group": "page",
+      "path": "page>main[1]>div[1]>section[1]>div[1]>p[12]",
+      "origin": "jsx",
+      "text": "Cute can be part of it, but it is not the whole thing. An anime-like idol image often comes from timing. The idol knows when to look at the camera, when to switch expressions, when to make a small reaction feel bigger, and when to turn a simple moment into something fans want to replay.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "5df6e63129a89ead69918923bd05009e0430ce3fe2a14b560a9d9a9c11fa0df9",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-p-e2f0af3d",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page",
+      "group": "page",
+      "path": "page>main[1]>div[1]>section[1]>div[1]>p[13]",
+      "origin": "jsx",
+      "text": "Close-up fancams make this even easier to notice.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "e2f0af3d855581229123b88f9aa2b897d4dbbee4648a0989dd5a45cb3d24f41b",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-p-0ba4698f",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page",
+      "group": "page",
+      "path": "page>main[1]>div[1]>section[1]>div[1]>p[14]",
+      "origin": "jsx",
+      "text": "In a full-stage video, you are watching the whole performance. You see the dance, the formation, the outfits, and the group shape. But in a close-up fancam, the camera stays with one person. Suddenly, every small eye movement or smile matters more. The idol's face becomes the center of the stage.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "0ba4698f3c75a7d4c5a31f93c33e7073c302acfdb43d17a2479f23a9baab080c",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-p-8b0886c3",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page",
+      "group": "page",
+      "path": "page>main[1]>div[1]>section[1]>div[1]>p[15]",
+      "origin": "jsx",
+      "text": "That is where the anime-character feeling often appears.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "8b0886c33aa80863a36fda6835dea3c2db837c24455c103996ce7fa5246d04a2",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-p-ade5c655",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page",
+      "group": "page",
+      "path": "page>main[1]>div[1]>section[1]>div[1]>p[16]",
+      "origin": "jsx",
+      "text": "A member may not be doing the biggest move in the choreography. But the camera catches one perfect expression, and the clip suddenly feels like a character introduction scene. You understand the mood before you even know every detail about the idol.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "ade5c655e34ddf0f82d87a3af1354c35d1d1090ad1bf649a6114c55ee404881c",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-p-ba49dd8a",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page",
+      "group": "page",
+      "path": "page>main[1]>div[1]>section[1]>div[1]>p[17]",
+      "origin": "jsx",
+      "text": "Choi Yena is a good example for HAEMIL readers.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "ba49dd8a68ac373e60a5cb4ad9132bacffa8f2755493220b3b09950c38c00165",
+      "translate": true,
+      "protect": [
+        "HAEMIL"
+      ],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-p-a4a37b5a",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page",
+      "group": "page",
+      "path": "page>main[1]>div[1]>section[1]>div[1]>p[18]",
+      "origin": "jsx",
+      "text": "In her \"Catch Catch\" close-up fancam, the fun is not only the song or the outfit. It is the way her expressions keep moving. She looks bright, then mischievous, then focused, then playful again. The camera has something to catch almost every second.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "a4a37b5a7ef44da2580dbf6414d3e000a00bb78b8e5b65e2cf26df8a69b8a977",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-p-46cfec3a",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page",
+      "group": "page",
+      "path": "page>main[1]>div[1]>section[1]>div[1]>p[19]",
+      "origin": "jsx",
+      "text": "That is why the \"anime idol\" comparison makes sense as a feeling.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "46cfec3a265afa180c0f7d170fc58e77298d27134d54469ca2e55edf09bafff5",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-p-dda19d7e",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page",
+      "group": "page",
+      "path": "page>main[1]>div[1]>section[1]>div[1]>p[20]",
+      "origin": "jsx",
+      "text": "Yena does not need to copy an anime character. Her stage already has that pop, color, and quick expression timing that makes the comparison easy. She feels like someone with a clear character image, and that is exactly what close-up fancams are good at showing.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "dda19d7ef28361a1615868f60e1f8f22675c3ebe3107acae8623e05cc51ee0ba",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-p-981890d4",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page",
+      "group": "page",
+      "path": "page>main[1]>div[1]>section[1]>div[1]>p[21]",
+      "origin": "jsx",
+      "text": "K-pop fans often remember idols through this kind of image.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "981890d4dd3db515f0ce512a0000a70859cc74a67845e450278b09f45e9054eb",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-p-58bdddf2",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page",
+      "group": "page",
+      "path": "page>main[1]>div[1]>section[1]>div[1]>p[22]",
+      "origin": "jsx",
+      "text": "Of course, official facts matter. Group names, agencies, positions, albums, and debut dates are useful. But fandom does not grow only from profile information. A lot of it grows from small impressions: one fancam, one meme, one face, one stage outfit, one reaction that people keep talking about.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "58bdddf247a370ddc9cb744fa377b17c6c85d581d928210eaa72b3b63c478bfb",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-p-644820a5",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page",
+      "group": "page",
+      "path": "page>main[1]>div[1]>section[1]>div[1]>p[23]",
+      "origin": "jsx",
+      "text": "That is why \"anime-like\" can be a compliment in fan language.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "644820a53c82f248af41db919407cf09ec307006fcfa7829d8ac07e3c44323b2",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-p-2554e171",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page",
+      "group": "page",
+      "path": "page>main[1]>div[1]>section[1]>div[1]>p[24]",
+      "origin": "jsx",
+      "text": "It means the idol's image is strong enough to feel drawn. Not fake, but sharply remembered. Like someone whose character design is already clear in your head.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "2554e171d1c7f49ca31201fa33edd8abc4292a3867c448f539e256d2f2041695",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-p-d2770088",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page",
+      "group": "page",
+      "path": "page>main[1]>div[1]>section[1]>div[1]>p[25]",
+      "origin": "jsx",
+      "text": "For new K-pop fans, this is a helpful way to watch stages.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "d2770088fc713f4a7e57479028e2da9470620c2656fa2dab39056e1ac776bd46",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-p-9b2007a6",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page",
+      "group": "page",
+      "path": "page>main[1]>div[1]>section[1]>div[1]>p[26]",
+      "origin": "jsx",
+      "text": "Instead of asking only, \"Who sings the best?\" or \"Who dances the best?\", you can also ask, \"Who leaves the clearest image behind?\" Sometimes that image is chic. Sometimes it is powerful. Sometimes it is soft. And sometimes it feels like an idol from an anime world stepped into a real stage.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "9b2007a6155f05a52c188721c8d00515c749759bfcf7babf55e06710998ce100",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-p-21756926",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page",
+      "group": "page",
+      "path": "page>main[1]>div[1]>section[1]>div[1]>p[27]",
+      "origin": "jsx",
+      "text": "Once you notice that, Korean fan comments start to make more sense.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "21756926d5148a5811ea23e774a05fc85441346b1d82d74a9db6cd0a1c1e044c",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-p-cc9a8b22",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page",
+      "group": "page",
+      "path": "page>main[1]>div[1]>section[1]>div[1]>p[28]",
+      "origin": "jsx",
+      "text": "They are not always trying to give a formal review.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "cc9a8b2213e4a74cbc508e483a410acd26d48da259cd644ce0b5267a5f2220c0",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-p-3ccf5ea8",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page",
+      "group": "page",
+      "path": "page>main[1]>div[1]>section[1]>div[1]>p[29]",
+      "origin": "jsx",
+      "text": "Sometimes they are just trying to describe a feeling quickly.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "3ccf5ea83156a677431287b79862e42184acf3de91ef67783f01f0467cda3232",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-p-9c5c35a1",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page",
+      "group": "page",
+      "path": "page>main[1]>div[1]>section[1]>div[1]>p[30]",
+      "origin": "jsx",
+      "text": "\"This person feels like a character.\"",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "9c5c35a128e5bd41751c07bd80d63867fb942bfb8cbf706332f971255e9aeb8c",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-p-7e68eaa3",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page",
+      "group": "page",
+      "path": "page>main[1]>div[1]>section[1]>div[1]>p[31]",
+      "origin": "jsx",
+      "text": "And in K-pop, that can be enough to make someone unforgettable.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "7e68eaa3dc862780677dcb3adc957b03fc0f5d4f8452f8db926ef9744f3cd961",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-p-5abd131b",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page",
+      "group": "page",
+      "path": "page>main[1]>div[1]>section[2]>div[1]>div[1]>p[1]",
+      "origin": "jsx",
+      "text": "Keep exploring",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "5abd131b96b96082c0a315cdf1b3928e7ea3fa25588d080b087d190a86c1ff8d",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-h2-a1359015",
+      "kind": "block",
+      "tag": "h2",
+      "anchor": "page",
+      "group": "page",
+      "path": "page>main[1]>div[1]>section[2]>div[1]>div[1]>h2[1]",
+      "origin": "jsx",
+      "text": "Related K-pop guides",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "a1359015b54f1184b0a5f8d1da1a6a945d1e2315184fcfbfdb74f3f5bbb94b4d",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-a-e505aecd",
+      "kind": "block",
+      "tag": "a",
+      "anchor": "page",
+      "group": "page",
+      "path": "page>main[1]>div[1]>section[2]>div[1]>Link[1]",
+      "origin": "jsx",
+      "text": "See all K-pop →",
+      "attrs": {
+        "href": "/kpop"
+      },
+      "placeholders": {},
+      "hash": "e505aecdd0402e0d3aee01976091bcf33e04e071f21c64cb0fe05017350748c0",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-relatedguides-kpop-choi-yena-catch-catch-fancam-spotlight-p-80ce7e86",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page-relatedguides-kpop-choi-yena-catch-catch-fancam-spotlight",
+      "group": "page-relatedguides",
+      "path": "page>main[1]>div[1]>section[2]>div[2]>relatedGuides[0]>Link[1]>p[1]",
+      "origin": "data:relatedGuides[0]",
+      "text": "Solo spotlight",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "80ce7e8678ed333599a44354289246893ac9f234c5c2eaddfae14a270273786c",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-relatedguides-kpop-choi-yena-catch-catch-fancam-spotlight-h3-158dfec3",
+      "kind": "block",
+      "tag": "h3",
+      "anchor": "page-relatedguides-kpop-choi-yena-catch-catch-fancam-spotlight",
+      "group": "page-relatedguides",
+      "path": "page>main[1]>div[1]>section[2]>div[2]>relatedGuides[0]>Link[1]>h3[1]",
+      "origin": "data:relatedGuides[0]",
+      "text": "Watch Choi Yena’s Catch Catch spotlight",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "158dfec36dd7085071c670fcb0b9197428599f0f7d9ff57a80e010f672b857de",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-relatedguides-kpop-choi-yena-catch-catch-fancam-spotlight-p-944c2a1a",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page-relatedguides-kpop-choi-yena-catch-catch-fancam-spotlight",
+      "group": "page-relatedguides",
+      "path": "page>main[1]>div[1]>section[2]>div[2]>relatedGuides[0]>Link[1]>p[2]",
+      "origin": "data:relatedGuides[0]",
+      "text": "A friendly spotlight on Choi Yena’s close-up fancam, anime-idol stage image, and the small playful expressions that make the clip easy to replay.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "944c2a1a51ca85a7afa2d1161be4597c5449ef9ce3364197fd4db9d46c06d371",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-relatedguides-kpop-choi-yena-catch-catch-fancam-spotlight-p-1989bd4c",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page-relatedguides-kpop-choi-yena-catch-catch-fancam-spotlight",
+      "group": "page-relatedguides",
+      "path": "page>main[1]>div[1]>section[2]>div[2]>relatedGuides[0]>Link[1]>p[3]",
+      "origin": "data:relatedGuides[0]",
+      "text": "Read guide →",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "1989bd4c3140bc9a1a9fe5e0db8430b18ea8a739ea87a908b6db40cb01cafce4",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-relatedguides-kpop-what-is-close-up-fancam-in-kpop-p-f776b2fd",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page-relatedguides-kpop-what-is-close-up-fancam-in-kpop",
+      "group": "page-relatedguides",
+      "path": "page>main[1]>div[1]>section[2]>div[2]>relatedGuides[1]>Link[2]>p[1]",
+      "origin": "data:relatedGuides[1]",
+      "text": "K-pop term",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "f776b2fd5ecdb977d5c53f197c579276c9ba877fc48d6b0e6d6919e43d737855",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-relatedguides-kpop-what-is-close-up-fancam-in-kpop-h3-578e1b56",
+      "kind": "block",
+      "tag": "h3",
+      "anchor": "page-relatedguides-kpop-what-is-close-up-fancam-in-kpop",
+      "group": "page-relatedguides",
+      "path": "page>main[1]>div[1]>section[2]>div[2]>relatedGuides[1]>Link[2]>h3[1]",
+      "origin": "data:relatedGuides[1]",
+      "text": "Learn what an 얼빡직캠 means",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "578e1b56ecc36ba0e652e805e77ce2fcf489950c5a363c2c9e44df8757f1f0d1",
+      "translate": true,
+      "protect": [
+        "얼빡직캠"
+      ],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-relatedguides-kpop-what-is-close-up-fancam-in-kpop-p-ce8879e6",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page-relatedguides-kpop-what-is-close-up-fancam-in-kpop",
+      "group": "page-relatedguides",
+      "path": "page>main[1]>div[1]>section[2]>div[2]>relatedGuides[1]>Link[2]>p[2]",
+      "origin": "data:relatedGuides[1]",
+      "text": "A friendly guide to Korean close-up fancams, where one face, one expression, or one quick mood change can make a stage easy to replay.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "ce8879e643e00fd7e6015b3e1b32c16c3a7931b111deb9b6f477670da096e704",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-relatedguides-kpop-what-is-close-up-fancam-in-kpop-p-1989bd4c",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page-relatedguides-kpop-what-is-close-up-fancam-in-kpop",
+      "group": "page-relatedguides",
+      "path": "page>main[1]>div[1]>section[2]>div[2]>relatedGuides[1]>Link[2]>p[3]",
+      "origin": "data:relatedGuides[1]",
+      "text": "Read guide →",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "1989bd4c3140bc9a1a9fe5e0db8430b18ea8a739ea87a908b6db40cb01cafce4",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-relatedguides-kpop-what-is-a-fancam-p-a3213a5f",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page-relatedguides-kpop-what-is-a-fancam",
+      "group": "page-relatedguides",
+      "path": "page>main[1]>div[1]>section[2]>div[2]>relatedGuides[2]>Link[3]>p[1]",
+      "origin": "data:relatedGuides[2]",
+      "text": "K-pop guide",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "a3213a5f26fd35f182f35c794c2a5d9c90c0acfecb6b8b394383b39e95efb6ab",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-relatedguides-kpop-what-is-a-fancam-h3-7d64a4ab",
+      "kind": "block",
+      "tag": "h3",
+      "anchor": "page-relatedguides-kpop-what-is-a-fancam",
+      "group": "page-relatedguides",
+      "path": "page>main[1]>div[1]>section[2]>div[2]>relatedGuides[2]>Link[3]>h3[1]",
+      "origin": "data:relatedGuides[2]",
+      "text": "Learn the basic idea of fancams",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "7d64a4abeb711b0fd3fb03caba0d4bc68543b4e14612ff0745cd116671261fc4",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-relatedguides-kpop-what-is-a-fancam-p-3d0b8a76",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page-relatedguides-kpop-what-is-a-fancam",
+      "group": "page-relatedguides",
+      "path": "page>main[1]>div[1]>section[2]>div[2]>relatedGuides[2]>Link[3]>p[2]",
+      "origin": "data:relatedGuides[2]",
+      "text": "Learn why fancams matter, how fans use them, and why one focused stage video can make a member stand out.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "3d0b8a7695466189395f537bfcc238c63259ed1ba9dce8c94448bbc42201c36c",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-relatedguides-kpop-what-is-a-fancam-p-1989bd4c",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page-relatedguides-kpop-what-is-a-fancam",
+      "group": "page-relatedguides",
+      "path": "page>main[1]>div[1]>section[2]>div[2]>relatedGuides[2]>Link[3]>p[3]",
+      "origin": "data:relatedGuides[2]",
+      "text": "Read guide →",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "1989bd4c3140bc9a1a9fe5e0db8430b18ea8a739ea87a908b6db40cb01cafce4",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-relatedguides-kpop-glossary-p-a3213a5f",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page-relatedguides-kpop-glossary",
+      "group": "page-relatedguides",
+      "path": "page>main[1]>div[1]>section[2]>div[2]>relatedGuides[3]>Link[4]>p[1]",
+      "origin": "data:relatedGuides[3]",
+      "text": "K-pop guide",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "a3213a5f26fd35f182f35c794c2a5d9c90c0acfecb6b8b394383b39e95efb6ab",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-relatedguides-kpop-glossary-h3-5b7bcd52",
+      "kind": "block",
+      "tag": "h3",
+      "anchor": "page-relatedguides-kpop-glossary",
+      "group": "page-relatedguides",
+      "path": "page>main[1]>div[1]>section[2]>div[2]>relatedGuides[3]>Link[4]>h3[1]",
+      "origin": "data:relatedGuides[3]",
+      "text": "Open the K-pop glossary",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "5b7bcd52cc7a00a129a0c0730e34ddb1e3d7967423e66b4bf211c36f1c6d63e0",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-relatedguides-kpop-glossary-p-1054e626",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page-relatedguides-kpop-glossary",
+      "group": "page-relatedguides",
+      "path": "page>main[1]>div[1]>section[2]>div[2]>relatedGuides[3]>Link[4]>p[2]",
+      "origin": "data:relatedGuides[3]",
+      "text": "A beginner-friendly guide to Korean K-pop words and fan terms you will see around fancams, stages, and member clips.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "1054e62603126a2647dab81c78331b9c3aeb9fbea8139231015aa2bf87ff60ba",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "page-relatedguides-kpop-glossary-p-1989bd4c",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "page-relatedguides-kpop-glossary",
+      "group": "page-relatedguides",
+      "path": "page>main[1]>div[1]>section[2]>div[2]>relatedGuides[3]>Link[4]>p[3]",
+      "origin": "data:relatedGuides[3]",
+      "text": "Read guide →",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "1989bd4c3140bc9a1a9fe5e0db8430b18ea8a739ea87a908b6db40cb01cafce4",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    }
+  ],
+  "review": [
+    {
+      "line": 130,
+      "where": "page",
+      "reason": "attribute data is dynamic and was locked as an expression"
+    },
+    {
+      "line": 130,
+      "where": "page>JsonLd[1]",
+      "reason": "structured data (JSON-LD) must be generated per locale; its strings are not translated by this extractor"
+    }
+  ],
+  "structure": {
+    "fragment": true,
+    "children": [
+      {
+        "component": "JsonLd",
+        "attrs": {
+          "data": {
+            "dynamic": "structuredData"
+          }
+        },
+        "attributeUnits": {}
+      },
+      {
+        "element": "main",
+        "attrs": {
+          "className": "min-h-screen bg-[var(--bg)] text-[var(--text)]"
+        },
+        "attributeUnits": {},
+        "children": [
+          {
+            "element": "div",
+            "attrs": {
+              "className": "mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 py-6 md:px-8 md:py-8"
+            },
+            "attributeUnits": {},
+            "children": [
+              {
+                "component": "SiteHeader",
+                "attrs": {},
+                "attributeUnits": {}
+              },
+              {
+                "element": "article",
+                "attrs": {
+                  "className": "rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-10"
+                },
+                "attributeUnits": {},
+                "children": [
+                  {
+                    "element": "a",
+                    "attrs": {
+                      "href": "/kpop",
+                      "className": "mb-6 inline-flex text-sm font-semibold text-[var(--accent)]"
+                    },
+                    "attributeUnits": {},
+                    "unit": "page-a-f84c53da"
+                  },
+                  {
+                    "element": "p",
+                    "attrs": {
+                      "className": "text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]"
+                    },
+                    "attributeUnits": {},
+                    "unit": "page-p-49a6e53a"
+                  },
+                  {
+                    "element": "h1",
+                    "attrs": {
+                      "className": "mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl"
+                    },
+                    "attributeUnits": {},
+                    "unit": "page-h1-f32993a4"
+                  },
+                  {
+                    "element": "p",
+                    "attrs": {
+                      "className": "mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg"
+                    },
+                    "attributeUnits": {},
+                    "unit": "page-p-97a1ebe5"
+                  }
+                ]
+              },
+              {
+                "element": "section",
+                "attrs": {
+                  "className": "rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8"
+                },
+                "attributeUnits": {},
+                "children": [
+                  {
+                    "element": "div",
+                    "attrs": {
+                      "className": "space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg"
+                    },
+                    "attributeUnits": {},
+                    "children": [
+                      {
+                        "element": "p",
+                        "attrs": {},
+                        "attributeUnits": {},
+                        "unit": "page-p-23d40851"
+                      },
+                      {
+                        "element": "p",
+                        "attrs": {},
+                        "attributeUnits": {},
+                        "unit": "page-p-57d33dcb"
+                      },
+                      {
+                        "element": "p",
+                        "attrs": {},
+                        "attributeUnits": {},
+                        "unit": "page-p-64e7b662"
+                      },
+                      {
+                        "element": "p",
+                        "attrs": {},
+                        "attributeUnits": {},
+                        "unit": "page-p-4af1b77b"
+                      },
+                      {
+                        "element": "p",
+                        "attrs": {},
+                        "attributeUnits": {},
+                        "unit": "page-p-18678da0"
+                      },
+                      {
+                        "element": "p",
+                        "attrs": {},
+                        "attributeUnits": {},
+                        "unit": "page-p-7c3fa9ec"
+                      },
+                      {
+                        "element": "p",
+                        "attrs": {},
+                        "attributeUnits": {},
+                        "unit": "page-p-cdbd352c"
+                      },
+                      {
+                        "element": "p",
+                        "attrs": {},
+                        "attributeUnits": {},
+                        "unit": "page-p-5b8f9985"
+                      },
+                      {
+                        "element": "p",
+                        "attrs": {},
+                        "attributeUnits": {},
+                        "unit": "page-p-ccd207bd"
+                      },
+                      {
+                        "element": "p",
+                        "attrs": {},
+                        "attributeUnits": {},
+                        "unit": "page-p-d42b2afa"
+                      },
+                      {
+                        "element": "p",
+                        "attrs": {},
+                        "attributeUnits": {},
+                        "unit": "page-p-ab364ec8"
+                      },
+                      {
+                        "element": "p",
+                        "attrs": {},
+                        "attributeUnits": {},
+                        "unit": "page-p-5df6e631"
+                      },
+                      {
+                        "element": "p",
+                        "attrs": {},
+                        "attributeUnits": {},
+                        "unit": "page-p-e2f0af3d"
+                      },
+                      {
+                        "element": "p",
+                        "attrs": {},
+                        "attributeUnits": {},
+                        "unit": "page-p-0ba4698f"
+                      },
+                      {
+                        "element": "p",
+                        "attrs": {},
+                        "attributeUnits": {},
+                        "unit": "page-p-8b0886c3"
+                      },
+                      {
+                        "element": "p",
+                        "attrs": {},
+                        "attributeUnits": {},
+                        "unit": "page-p-ade5c655"
+                      },
+                      {
+                        "element": "p",
+                        "attrs": {},
+                        "attributeUnits": {},
+                        "unit": "page-p-ba49dd8a"
+                      },
+                      {
+                        "element": "p",
+                        "attrs": {},
+                        "attributeUnits": {},
+                        "unit": "page-p-a4a37b5a"
+                      },
+                      {
+                        "element": "p",
+                        "attrs": {},
+                        "attributeUnits": {},
+                        "unit": "page-p-46cfec3a"
+                      },
+                      {
+                        "element": "p",
+                        "attrs": {},
+                        "attributeUnits": {},
+                        "unit": "page-p-dda19d7e"
+                      },
+                      {
+                        "element": "p",
+                        "attrs": {},
+                        "attributeUnits": {},
+                        "unit": "page-p-981890d4"
+                      },
+                      {
+                        "element": "p",
+                        "attrs": {},
+                        "attributeUnits": {},
+                        "unit": "page-p-58bdddf2"
+                      },
+                      {
+                        "element": "p",
+                        "attrs": {},
+                        "attributeUnits": {},
+                        "unit": "page-p-644820a5"
+                      },
+                      {
+                        "element": "p",
+                        "attrs": {},
+                        "attributeUnits": {},
+                        "unit": "page-p-2554e171"
+                      },
+                      {
+                        "element": "p",
+                        "attrs": {},
+                        "attributeUnits": {},
+                        "unit": "page-p-d2770088"
+                      },
+                      {
+                        "element": "p",
+                        "attrs": {},
+                        "attributeUnits": {},
+                        "unit": "page-p-9b2007a6"
+                      },
+                      {
+                        "element": "p",
+                        "attrs": {},
+                        "attributeUnits": {},
+                        "unit": "page-p-21756926"
+                      },
+                      {
+                        "element": "p",
+                        "attrs": {},
+                        "attributeUnits": {},
+                        "unit": "page-p-cc9a8b22"
+                      },
+                      {
+                        "element": "p",
+                        "attrs": {},
+                        "attributeUnits": {},
+                        "unit": "page-p-3ccf5ea8"
+                      },
+                      {
+                        "element": "p",
+                        "attrs": {},
+                        "attributeUnits": {},
+                        "unit": "page-p-9c5c35a1"
+                      },
+                      {
+                        "element": "p",
+                        "attrs": {},
+                        "attributeUnits": {},
+                        "unit": "page-p-7e68eaa3"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "element": "section",
+                "attrs": {
+                  "className": "rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8"
+                },
+                "attributeUnits": {},
+                "children": [
+                  {
+                    "element": "div",
+                    "attrs": {
+                      "className": "flex flex-col gap-3 md:flex-row md:items-end md:justify-between"
+                    },
+                    "attributeUnits": {},
+                    "children": [
+                      {
+                        "element": "div",
+                        "attrs": {},
+                        "attributeUnits": {},
+                        "children": [
+                          {
+                            "element": "p",
+                            "attrs": {
+                              "className": "text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]"
+                            },
+                            "attributeUnits": {},
+                            "unit": "page-p-5abd131b"
+                          },
+                          {
+                            "element": "h2",
+                            "attrs": {
+                              "className": "mt-3 text-3xl font-semibold"
+                            },
+                            "attributeUnits": {},
+                            "unit": "page-h2-a1359015"
+                          }
+                        ]
+                      },
+                      {
+                        "element": "a",
+                        "attrs": {
+                          "href": "/kpop",
+                          "className": "text-sm font-semibold text-[var(--accent)] transition hover:opacity-80"
+                        },
+                        "attributeUnits": {},
+                        "unit": "page-a-e505aecd"
+                      }
+                    ]
+                  },
+                  {
+                    "element": "div",
+                    "attrs": {
+                      "className": "mt-6 grid gap-4 md:grid-cols-2"
+                    },
+                    "attributeUnits": {},
+                    "children": [
+                      {
+                        "list": "relatedGuides",
+                        "children": [
+                          {
+                            "element": "a",
+                            "attrs": {
+                              "href": "/kpop/choi-yena-catch-catch-fancam-spotlight",
+                              "className": "group rounded-[1.5rem] border border-[var(--border)] bg-[var(--card)] p-5 transition hover:-translate-y-1 hover:shadow-md"
+                            },
+                            "attributeUnits": {},
+                            "children": [
+                              {
+                                "element": "p",
+                                "attrs": {
+                                  "className": "text-xs font-semibold uppercase tracking-[0.2em] text-[var(--gold)]"
+                                },
+                                "attributeUnits": {},
+                                "unit": "page-relatedguides-kpop-choi-yena-catch-catch-fancam-spotlight-p-80ce7e86"
+                              },
+                              {
+                                "element": "h3",
+                                "attrs": {
+                                  "className": "mt-3 text-xl font-semibold text-[var(--text)]"
+                                },
+                                "attributeUnits": {},
+                                "unit": "page-relatedguides-kpop-choi-yena-catch-catch-fancam-spotlight-h3-158dfec3"
+                              },
+                              {
+                                "element": "p",
+                                "attrs": {
+                                  "className": "mt-3 text-sm leading-6 text-[var(--muted)]"
+                                },
+                                "attributeUnits": {},
+                                "unit": "page-relatedguides-kpop-choi-yena-catch-catch-fancam-spotlight-p-944c2a1a"
+                              },
+                              {
+                                "element": "p",
+                                "attrs": {
+                                  "className": "mt-4 text-sm font-semibold text-[var(--accent)]"
+                                },
+                                "attributeUnits": {},
+                                "unit": "page-relatedguides-kpop-choi-yena-catch-catch-fancam-spotlight-p-1989bd4c"
+                              }
+                            ]
+                          },
+                          {
+                            "element": "a",
+                            "attrs": {
+                              "href": "/kpop/what-is-close-up-fancam-in-kpop",
+                              "className": "group rounded-[1.5rem] border border-[var(--border)] bg-[var(--card)] p-5 transition hover:-translate-y-1 hover:shadow-md"
+                            },
+                            "attributeUnits": {},
+                            "children": [
+                              {
+                                "element": "p",
+                                "attrs": {
+                                  "className": "text-xs font-semibold uppercase tracking-[0.2em] text-[var(--gold)]"
+                                },
+                                "attributeUnits": {},
+                                "unit": "page-relatedguides-kpop-what-is-close-up-fancam-in-kpop-p-f776b2fd"
+                              },
+                              {
+                                "element": "h3",
+                                "attrs": {
+                                  "className": "mt-3 text-xl font-semibold text-[var(--text)]"
+                                },
+                                "attributeUnits": {},
+                                "unit": "page-relatedguides-kpop-what-is-close-up-fancam-in-kpop-h3-578e1b56"
+                              },
+                              {
+                                "element": "p",
+                                "attrs": {
+                                  "className": "mt-3 text-sm leading-6 text-[var(--muted)]"
+                                },
+                                "attributeUnits": {},
+                                "unit": "page-relatedguides-kpop-what-is-close-up-fancam-in-kpop-p-ce8879e6"
+                              },
+                              {
+                                "element": "p",
+                                "attrs": {
+                                  "className": "mt-4 text-sm font-semibold text-[var(--accent)]"
+                                },
+                                "attributeUnits": {},
+                                "unit": "page-relatedguides-kpop-what-is-close-up-fancam-in-kpop-p-1989bd4c"
+                              }
+                            ]
+                          },
+                          {
+                            "element": "a",
+                            "attrs": {
+                              "href": "/kpop/what-is-a-fancam",
+                              "className": "group rounded-[1.5rem] border border-[var(--border)] bg-[var(--card)] p-5 transition hover:-translate-y-1 hover:shadow-md"
+                            },
+                            "attributeUnits": {},
+                            "children": [
+                              {
+                                "element": "p",
+                                "attrs": {
+                                  "className": "text-xs font-semibold uppercase tracking-[0.2em] text-[var(--gold)]"
+                                },
+                                "attributeUnits": {},
+                                "unit": "page-relatedguides-kpop-what-is-a-fancam-p-a3213a5f"
+                              },
+                              {
+                                "element": "h3",
+                                "attrs": {
+                                  "className": "mt-3 text-xl font-semibold text-[var(--text)]"
+                                },
+                                "attributeUnits": {},
+                                "unit": "page-relatedguides-kpop-what-is-a-fancam-h3-7d64a4ab"
+                              },
+                              {
+                                "element": "p",
+                                "attrs": {
+                                  "className": "mt-3 text-sm leading-6 text-[var(--muted)]"
+                                },
+                                "attributeUnits": {},
+                                "unit": "page-relatedguides-kpop-what-is-a-fancam-p-3d0b8a76"
+                              },
+                              {
+                                "element": "p",
+                                "attrs": {
+                                  "className": "mt-4 text-sm font-semibold text-[var(--accent)]"
+                                },
+                                "attributeUnits": {},
+                                "unit": "page-relatedguides-kpop-what-is-a-fancam-p-1989bd4c"
+                              }
+                            ]
+                          },
+                          {
+                            "element": "a",
+                            "attrs": {
+                              "href": "/kpop/glossary",
+                              "className": "group rounded-[1.5rem] border border-[var(--border)] bg-[var(--card)] p-5 transition hover:-translate-y-1 hover:shadow-md"
+                            },
+                            "attributeUnits": {},
+                            "children": [
+                              {
+                                "element": "p",
+                                "attrs": {
+                                  "className": "text-xs font-semibold uppercase tracking-[0.2em] text-[var(--gold)]"
+                                },
+                                "attributeUnits": {},
+                                "unit": "page-relatedguides-kpop-glossary-p-a3213a5f"
+                              },
+                              {
+                                "element": "h3",
+                                "attrs": {
+                                  "className": "mt-3 text-xl font-semibold text-[var(--text)]"
+                                },
+                                "attributeUnits": {},
+                                "unit": "page-relatedguides-kpop-glossary-h3-5b7bcd52"
+                              },
+                              {
+                                "element": "p",
+                                "attrs": {
+                                  "className": "mt-3 text-sm leading-6 text-[var(--muted)]"
+                                },
+                                "attributeUnits": {},
+                                "unit": "page-relatedguides-kpop-glossary-p-1054e626"
+                              },
+                              {
+                                "element": "p",
+                                "attrs": {
+                                  "className": "mt-4 text-sm font-semibold text-[var(--accent)]"
+                                },
+                                "attributeUnits": {},
+                                "unit": "page-relatedguides-kpop-glossary-p-1989bd4c"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
