@@ -115,12 +115,14 @@ Change detection (fixtures in a temporary copy):
 
 ## Notes
 
-- `scripts/i18n/extract.mjs` is a byte-identical copy of PR #87 at
-  `f6a4f06` (blob `a00e712`). It is included because this branch stack does not
-  contain PR #87. When the stacks are merged, keep one copy. The files are
-  identical, so the merge has no conflict.
-- The extractor test file (`extract.test.mjs`) is not included here. It
-  belongs to PR #87.
+- `scripts/i18n/extract.mjs` is byte-identical to PR #87 at `f6a4f06`
+  (blob `a00e712`).
+- The integration branch also includes the PR #87 extractor tests
+  (`scripts/i18n/extract.test.mjs`, identical to PR #87) and the PR #87
+  document (`docs/i18n/extraction-pilot.md`, updated for the current state).
+  So there is one copy of the extractor, with its tests.
+- Adding the test file and the document does not change the freshness record.
+  The record binds only `check-sources.mjs` and `extract.mjs`.
 
 ## Freshness record (P5-B)
 
@@ -130,6 +132,10 @@ Status:
 - P5-B1.1: the record is bound to the checker and extractor code; the record
   path is restricted.
 - P5-B2: first record committed (Sunbae, `MATCH`).
+- The second stored source,
+  `/kpop/why-kpop-idols-feel-like-anime-characters` (56 of 56 units), was
+  added with its record entry (`MATCH`). The record now has these two
+  entries.
 
 ### File
 

@@ -1,4 +1,4 @@
-# Translation catalog contract (P2)
+# Translation catalog contract (P2; source freshness updated for P5-B)
 
 Module: `lib/i18n/catalog.ts` (server only). Tests: `scripts/i18n/catalog.test.mjs`.
 
@@ -7,7 +7,12 @@ schemaVersion 2 validator (`lib/i18n/validateTranslation.mjs`, unchanged) and
 decides where each translation may be shown. It only reads files. It never
 writes, approves or changes a status.
 
-In this step no page uses the catalog. The shared locale routes (P3) will.
+The catalog was added in P2, before anything used it. Today
+`lib/i18n/LocalePage.tsx` uses it (through `renderableEntries`) for two
+things:
+
+- the shared locale route (`app/ja/[...slug]/page.tsx`, P3)
+- the header language menu data (`app/api/i18n/available/route.ts`, P4)
 
 ## Data layout
 
@@ -58,10 +63,11 @@ type CatalogEntry = {
     translation: { path: string; sha256: string };
     source: { path: string; sha256: string } | null;
   };
-  englishPageFile: string | null;  // e.g. app/kpop/.../page.tsx (recorded, not checked)
+  englishPageFile: string | null;  // e.g. app/kpop/.../page.tsx, from the source JSON
   status: "draft" | "reviewed" | "approved" | null;  // as written in the file
   validation: "valid" | "stale" | "invalid";
   sourceFreshness: "unverified" | "verified" | "changed";
+  sourceFreshnessDetail: { reason: string; notCompared: string[] };
   errors: { id: string; problem: string }[];
   warnings: { id: string; problem: string }[];
 };
@@ -87,9 +93,33 @@ them; a change to those texts must update `STALE_PROBLEMS`.
 
 `sourceHash` only proves that a translation matches the **stored English
 source JSON**. It does not prove that the JSON still matches the English page
-(`page.tsx`). That check is P5. Until then every entry is
-`sourceFreshness: "unverified"`, and production publishing requires
-`"verified"`.
+(`page.tsx`).
+
+Since P5-B the catalog reads that answer from the freshness record
+`content/i18n/source-freshness.json`. The record is written only by
+`node scripts/i18n/check-sources.mjs --write-record`. The catalog reads the
+record and the checker and extractor code as data; it imports neither. It
+fails closed:
+
+- `verified`: all of these hold.
+  - The record has exactly one `MATCH` entry for the page.
+  - Its paths and extractor version match the source JSON.
+  - Its file hashes equal the current source JSON and `page.tsx` bytes.
+  - Its code hashes (`check-sources.mjs`, `extract.mjs`) and TypeScript
+    version equal the current ones.
+- `changed`: the source JSON or `page.tsx` bytes differ from the checked
+  version, or the checker result was `CHANGED`.
+- `unverified`: everything else, for example:
+  - no record, or a damaged record
+  - a change to the checker or extractor code
+  - another TypeScript version
+  - an `UNVERIFIED` or `ERROR` result
+
+`sourceFreshnessDetail` gives the reason and the parts that were not compared
+(`["json-ld"]`). Details are in `docs/i18n/source-freshness.md`.
+
+Production publishing requires `"verified"`. `verified` is not a translation,
+publishing or indexing approval, and it does not change `status`.
 
 ## API
 
@@ -129,8 +159,9 @@ type ApprovalRecord = {
 ```
 
 Records must match the exact bytes of both files. Any later edit to the
-English source JSON or the translation voids them. **P2 defines this shape
-only. No approval records exist, none are loaded, and nothing is enabled.**
+English source JSON or the translation voids them. **The code defines this
+shape only. No approval records exist, the routes load none, and nothing is
+enabled.**
 Where records will be stored, and who may add them, needs its own approval.
 
 | Case | preview / development | production |
@@ -139,7 +170,7 @@ Where records will be stored, and who may add them, needs its own approval.
 | valid, planned locale (`zh-*`, `es`, `ko`) | not rendered (`locale-planned`) | not rendered |
 | stale / invalid | not rendered, reported | not rendered, reported |
 | `status: "approved"` without matching records | render, noindex | not rendered |
-| all records match, today | render, noindex | not rendered (`locale-not-public`, `source-freshness-unverified`) |
+| all records match, preview locale (`ja`) today | render, noindex | not rendered (`locale-not-public`; also `source-freshness-<state>` unless `verified`) |
 
 Production rendering requires all of:
 
@@ -154,7 +185,16 @@ Production rendering requires all of:
 indexing approval, in production only.
 
 `listInLanguageMenu` is true only for production-eligible entries in
-production. Preview pages are never listed and never indexed.
+production. Preview pages are never indexed.
+
+The header language menu (P4) does not read `listInLanguageMenu`. It lists
+the pages that `/api/i18n/available` reports, and that list is built from the
+same `renderableEntries` as the locale route. So:
+
+- on Preview, the Japanese drafts are listed with a "Draft preview" label
+- on Production, nothing is listed
+
+`includeInSitemap` is not read by `app/sitemap.ts`. The sitemap is unchanged.
 
 `noindex` is not access control. Non-public translations must not be
 rendered in production at all; the route must 404.
@@ -187,8 +227,10 @@ English pages are not handled by the catalog and keep their current behavior.
 
 ## Not in P2
 
-- shared locale routes (P3)
-- header language menu (P4)
-- English page freshness check (P5)
-- approval record storage
-- sitemap, robots, canonical and hreflang changes
+The P2 list is kept as a record:
+
+- shared locale routes: added later (P3)
+- header language menu: added later (P4)
+- English page freshness check: added later (P5-A, P5-B)
+- approval record storage: still not implemented
+- sitemap, robots, canonical and hreflang changes: still not made
