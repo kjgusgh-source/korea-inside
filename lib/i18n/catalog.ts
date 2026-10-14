@@ -134,7 +134,28 @@ const SEGMENT = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const MAX_SEGMENTS = 8;
 const MAX_DEPTH = 8;
 const SOURCE_DIR = "source";
-const ISO_DATE_TIME = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(?::\d{2}(?:\.\d{1,3})?)?(?:Z|[+-]\d{2}:\d{2})$/;
+const ISO_DATE_TIME = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})(?::(\d{2})(?:\.\d{1,3})?)?(?:Z|[+-](\d{2}):(\d{2}))$/;
+
+/**
+ * ISO 8601 date-time with a time zone ("Z" or "+09:00") whose calendar date
+ * and time really exist. Date.parse() is not enough: it silently moves
+ * 2026-02-30 to March 2. Checked field by field instead: month 1-12, the day
+ * within that month (leap years: divisible by 4, except centuries not
+ * divisible by 400), hour 0-23, minute and second 0-59, offset at most 14:00.
+ */
+export function isRealDateTime(value: unknown): boolean {
+  if (typeof value !== "string") return false;
+  const m = ISO_DATE_TIME.exec(value);
+  if (!m) return false;
+  const [year, month, day, hour, minute] = m.slice(1, 6).map(Number);
+  const second = m[6] === undefined ? 0 : Number(m[6]);
+  const leap = (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+  const daysInMonth = [31, leap ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][month - 1];
+  if (daysInMonth === undefined || day < 1 || day > daysInMonth) return false;
+  if (hour > 23 || minute > 59 || second > 59) return false;
+  if (m[7] !== undefined && (Number(m[7]) > 14 || Number(m[8]) > 59 || (Number(m[7]) === 14 && Number(m[8]) !== 0))) return false;
+  return true;
+}
 
 // Validator problems that mean "translated for a different version of the
 // stored English source". Everything else is broken data (invalid).
@@ -411,14 +432,17 @@ function freshnessFor(
  *
  * The path is fixed below the repository (no option can move it). Fail closed:
  * a missing file means no approvals; a file behind a symbolic link, unreadable,
- * oversized, unparsable, with another schema, or with any record that is not
- * exactly this shape is ignored as a whole and reported as a catalog issue.
+ * oversized, unparsable, with another schema, with top-level fields other than
+ * schemaVersion and records, or with any record that is not exactly this shape
+ * (including a date that does not exist) is ignored as a whole and reported
+ * as a catalog issue. approvedBy is an audit label, not an authentication.
  */
 const APPROVALS_FILE = "content/i18n/approvals.json";
 const APPROVALS_SCHEMA_VERSION = 1;
 const APPROVALS_MAX_BYTES = 1_000_000;
 const APPROVAL_KINDS: readonly ApprovalKind[] = ["quality", "production", "indexing"];
 const APPROVAL_FIELDS = ["approvedAt", "approvedBy", "kind", "locale", "sourcePath", "sourceSha256", "translationSha256"];
+const APPROVALS_TOP_FIELDS = ["records", "schemaVersion"];
 
 type ApprovalSet = { problem: string | null; records: readonly ApprovalRecord[] };
 
@@ -433,7 +457,7 @@ function isApprovalRecord(value: unknown): value is ApprovalRecord {
     typeof r.sourceSha256 === "string" && SHA256.test(r.sourceSha256) &&
     typeof r.translationSha256 === "string" && SHA256.test(r.translationSha256) &&
     typeof r.approvedBy === "string" && r.approvedBy.trim() !== "" && r.approvedBy.length <= 200 &&
-    typeof r.approvedAt === "string" && ISO_DATE_TIME.test(r.approvedAt) && !Number.isNaN(Date.parse(r.approvedAt));
+    isRealDateTime(r.approvedAt);
 }
 
 function readApprovals(repoRoot: string): ApprovalSet {
@@ -468,6 +492,10 @@ function readApprovals(repoRoot: string): ApprovalSet {
     return none("approval records: JSON could not be parsed; no approval is used");
   }
   if (!doc || typeof doc !== "object" || Array.isArray(doc)) return none("approval records: JSON is not an object; no approval is used");
+  const top = Object.keys(doc).sort();
+  if (top.length !== APPROVALS_TOP_FIELDS.length || !top.every((key, i) => key === APPROVALS_TOP_FIELDS[i])) {
+    return none("approval records: the file must hold exactly schemaVersion and records; no approval is used");
+  }
   const { schemaVersion, records } = doc as { schemaVersion?: unknown; records?: unknown };
   if (schemaVersion !== APPROVALS_SCHEMA_VERSION || !Array.isArray(records)) {
     return none("approval records: unsupported schema; no approval is used");
@@ -670,7 +698,7 @@ function hasApproval(entry: CatalogEntry, kind: ApprovalKind, approvals: readonl
     a.sourceSha256 === entry.files.source!.sha256 &&
     a.translationSha256 === entry.files.translation.sha256 &&
     typeof a.approvedBy === "string" && a.approvedBy.trim() !== "" &&
-    typeof a.approvedAt === "string" && ISO_DATE_TIME.test(a.approvedAt),
+    isRealDateTime(a.approvedAt),
   );
 }
 

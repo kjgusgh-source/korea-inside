@@ -1,4 +1,4 @@
-# Translation catalog contract (P2; source freshness updated for P5-B)
+# Translation catalog contract (P2; source freshness P5-B; approval records E1)
 
 Module: `lib/i18n/catalog.ts` (server only). Tests: `scripts/i18n/catalog.test.mjs`.
 
@@ -8,8 +8,8 @@ decides where each translation may be shown. It only reads files. It never
 writes, approves or changes a status.
 
 The catalog was added in P2, before anything used it. Today
-`lib/i18n/LocalePage.tsx` uses it (through `renderableEntries`) for two
-things:
+`lib/i18n/LocalePage.tsx` uses it (through `renderableEntries` and
+`catalogDecision`, the same decision) for two things:
 
 - the shared locale route (`app/ja/[...slug]/page.tsx`, P3)
 - the header language menu data (`app/api/i18n/available/route.ts`, P4)
@@ -128,9 +128,12 @@ publishing or indexing approval, and it does not change `status`.
 | `loadCatalog({ root? })` | `{ root, entries, issues }`, cached per root |
 | `listTranslations({ root? })` | all entries, valid or not |
 | `getTranslation(locale, sourcePath, { root? })` | `{ entry, source, translation }` or `undefined`; documents only for valid entries; `undefined` for duplicates |
-| `publishDecision(entry, environment, approvals = [])` | `{ render, robots, listInLanguageMenu, includeInSitemap, reasons }` |
+| `publishDecision(entry, environment, approvals = [])` | `{ render, robots, listInLanguageMenu, includeInSitemap, reasons }`; pure function, records passed in |
+| `approvalRecords({ root? })` | the repository's approval records (see below); `[]` when the file is missing or unusable |
+| `catalogDecision(entry, environment, { root? })` | `publishDecision` with the repository's approval records; used by every route |
+| `isRealDateTime(value)` | `true` for an ISO 8601 date-time with a time zone whose date and time exist |
 | `resolveEnvironment(env = process.env)` | `"production"`, `"preview"` or `"development"` |
-| `renderableEntries(locale, environment, { root?, approvals? })` | entries with `render: true` (for `generateStaticParams`) |
+| `renderableEntries(locale, environment, { root? })` | entries with `render: true` by `catalogDecision` (for `generateStaticParams`) |
 | `routeSegments(entry)` | `["kpop", "what-is-maknae"]` for a catch-all route |
 | `checkSourcePath(value)` | the path if valid, otherwise `null` |
 | `clearCatalogCache()` | tests only |
@@ -153,16 +156,55 @@ type ApprovalRecord = {
   sourcePath: string;
   sourceSha256: string;       // must equal entry.files.source.sha256
   translationSha256: string;  // must equal entry.files.translation.sha256
-  approvedBy: string;         // non-empty
-  approvedAt: string;         // ISO 8601 with time zone
+  approvedBy: string;         // non-empty, at most 200 characters
+  approvedAt: string;         // ISO 8601 with time zone; the date must exist
 };
 ```
 
-Records must match the exact bytes of both files. Any later edit to the
-English source JSON or the translation voids them. **The code defines this
-shape only. No approval records exist, the routes load none, and nothing is
-enabled.**
-Where records will be stored, and who may add them, needs its own approval.
+Records must match the exact bytes of both files, the locale and the page.
+Any later edit to the English source JSON or the translation voids them. A
+record for one kind never counts for another: a production record is not a
+quality or indexing approval.
+
+### Approval records file (E1)
+
+Since E1 the catalog reads approval records from one file:
+
+```
+content/i18n/approvals.json
+{ "schemaVersion": 1, "records": [ ApprovalRecord, ... ] }
+```
+
+- **Fixed path.** The path is below the repository root of the catalog. No
+  option or environment variable can point elsewhere.
+- **No file = no approvals.** A missing file means 0 approvals. This is the
+  normal state and is not reported.
+- **A damaged file is void as a whole.** The catalog then uses 0 approvals
+  and reports a catalog issue `(approvals)`. Valid records next to a bad one
+  are not used either. The file is void when any of these is true:
+  - it, or a folder on the way, is a symbolic link
+  - it is not a regular file, cannot be read, or is larger than 1 MB
+  - it is not a JSON object
+  - its top level holds anything other than exactly `schemaVersion` and
+    `records`
+  - `schemaVersion` is not 1, or `records` is not a list
+  - any record is not exactly the shape above: a missing or extra field, an
+    unknown kind, `en` or an unknown locale, an unsafe path, a hash that is
+    not lowercase `sha256:<64 hex>`, an empty or overlong `approvedBy`, or an
+    `approvedAt` without a time zone or with a date or time that does not
+    exist (`2026-02-30`, `2026-04-31`, `2026-02-29`, `24:00`). `2028-02-29`
+    is accepted. `Date.parse()` alone is not used, because it moves
+    impossible dates to another day.
+- **`approvedBy` is an audit label.** It records who gave the approval in
+  chat. It is not a login and does not authenticate anyone. Control over the
+  file comes from review of the change that adds it.
+- **Build time only.** Routes are fully static, so the file is read when the
+  site is built. It is not traced into the function bundles. If a route were
+  ever rendered at request time, the file would be missing there, and nothing
+  would be approved (fail closed).
+- **No records exist today.** No `approvals.json` is committed, and Japanese
+  is still a non-public locale. Who may add records, and when, needs its own
+  approval for each record.
 
 | Case | preview / development | production |
 |---|---|---|
@@ -232,5 +274,5 @@ The P2 list is kept as a record:
 - shared locale routes: added later (P3)
 - header language menu: added later (P4)
 - English page freshness check: added later (P5-A, P5-B)
-- approval record storage: still not implemented
+- approval record storage: reading added in E1 (`content/i18n/approvals.json`); no records exist
 - sitemap, robots, canonical and hreflang changes: still not made

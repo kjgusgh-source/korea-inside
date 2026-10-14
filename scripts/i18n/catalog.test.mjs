@@ -51,7 +51,7 @@ export async function load(url, context, next) {
 }`));
 
 const {
-  approvalRecords, catalogDecision, checkSourcePath, clearCatalogCache, getTranslation, listTranslations, loadCatalog,
+  approvalRecords, catalogDecision, checkSourcePath, clearCatalogCache, getTranslation, isRealDateTime, listTranslations, loadCatalog,
   publishDecision, renderableEntries, resolveEnvironment, routeSegments,
 } = await import('../../lib/i18n/catalog.ts');
 
@@ -1015,6 +1015,66 @@ test('approvals: a missing file approves nothing; a damaged or redirected file i
   rmSync(i18n, { recursive: true, force: true });
   symlinkSync(path.join(elsewhere, 'i18n'), i18n);
   blocked('folder on the way is a symbolic link');
+});
+
+test('approval dates: only calendar dates and times that exist, with a time zone', () => {
+  const accepted = [
+    '2028-02-29T09:00:00Z', // leap year
+    '2000-02-29T09:00:00Z', // century divisible by 400
+    '2026-10-14T11:00:00+09:00', '2026-10-14T02:00:00-05:30', '2026-10-14T02:00Z', '2026-10-14T02:00:00.123Z',
+    '2026-12-31T23:59:59Z', '2026-01-01T00:00:00+14:00', '2026-01-01T00:00:00-12:00',
+  ];
+  const rejected = [
+    '2026-02-30T09:00:00Z', '2026-04-31T09:00:00Z', '2026-02-29T09:00:00Z', '2100-02-29T09:00:00Z',
+    '2026-13-01T09:00:00Z', '2026-00-10T09:00:00Z', '2026-01-00T09:00:00Z', '2026-01-32T09:00:00Z',
+    '2026-10-14T24:00:00Z', '2026-10-14T23:60:00Z', '2026-10-14T23:59:60Z',
+    '2026-10-14T09:00:00', '2026-10-14T09:00:00z', '2026-10-14 09:00:00Z', '2026-10-14', 'yesterday', '',
+    '2026-10-14T09:00:00+15:00', '2026-10-14T09:00:00+14:30', '2026-10-14T09:00:00+09:60', '2026-10-14T09:00:00+0900',
+  ];
+  // Date.parse() alone would accept these impossible dates by moving them to another day.
+  assert.ok(!Number.isNaN(Date.parse('2026-02-30T09:00:00Z')));
+  for (const value of accepted) assert.equal(isRealDateTime(value), true, value);
+  for (const value of rejected) assert.equal(isRealDateTime(value), false, value);
+  for (const value of [undefined, null, 20261014, {}]) assert.equal(isRealDateTime(value), false, String(value));
+
+  // In the file: one impossible date makes the whole file unusable; a real leap day is accepted.
+  const { root, base } = freshFixture({ edit: setStatus('approved') });
+  const good = approvals(entryOf(root));
+  for (const value of ['2026-02-30T09:00:00Z', '2026-04-31T09:00:00Z', '2026-02-29T09:00:00Z', '2026-10-14T09:00:00']) {
+    writeApprovals(base, approvalsDoc([...good.slice(0, 2), { ...good[2], approvedAt: value }]));
+    assert.deepEqual(approvalRecords({ root }), [], value);
+    assert.equal(approvalIssues(root).length, 1, value);
+    assert.ok(NO_RECORDS.every((r) => decide(root).reasons.includes(r)), value);
+  }
+  writeApprovals(base, approvalsDoc(approvals(entryOf(root), ['quality', 'production', 'indexing'], { approvedAt: '2028-02-29T09:00:00+09:00' })));
+  assert.equal(approvalRecords({ root }).length, 3);
+  assert.deepEqual(approvalIssues(root), []);
+  assert.deepEqual(decide(root).reasons, ['locale-not-public']);
+  // Records passed in memory follow the same date rule.
+  const entry = entryOf(root);
+  const memory = publishDecision(entry, 'production', approvals(entry, ['quality', 'production'], { approvedAt: '2026-02-30T09:00:00Z' }));
+  assert.ok(NO_RECORDS.every((r) => memory.reasons.includes(r)));
+});
+
+test('approvals: the file holds exactly schemaVersion and records; anything else voids it', () => {
+  const { root, base } = freshFixture({ edit: setStatus('approved') });
+  const good = approvals(entryOf(root));
+  for (const [label, doc] of Object.entries({
+    'extra top-level field': { schemaVersion: 1, records: good, note: 'approved' },
+    'extra approvals list': { schemaVersion: 1, records: good, approvals: good },
+    'no records': { schemaVersion: 1 },
+    'no schemaVersion': { records: good },
+  })) {
+    writeApprovals(base, doc);
+    assert.deepEqual(approvalRecords({ root }), [], label);
+    const issues = approvalIssues(root);
+    assert.equal(issues.length, 1, label);
+    assert.ok(NO_RECORDS.every((r) => decide(root).reasons.includes(r)), label);
+    if (label.startsWith('extra')) assert.match(issues[0].problem, /exactly schemaVersion and records/, label);
+  }
+  writeApprovals(base, { records: good, schemaVersion: 1 }); // key order does not matter
+  assert.equal(approvalRecords({ root }).length, 3);
+  assert.deepEqual(approvalIssues(root), []);
 });
 
 test('routes: generated pages, page metadata and renderableEntries use the same decision', async () => {
