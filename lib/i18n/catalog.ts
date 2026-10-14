@@ -101,8 +101,9 @@ export type Catalog = {
 export type ApprovalKind = "quality" | "production" | "indexing";
 
 /**
- * A separate approval record (not stored in translation files). P2 defines the
- * shape only; no approvals are recorded or loaded anywhere yet.
+ * A separate approval record (not stored in translation files), read from
+ * content/i18n/approvals.json (see readApprovals). A record approves exactly
+ * one locale + page + source bytes + translation bytes for one kind.
  */
 export type ApprovalRecord = {
   kind: ApprovalKind;
@@ -395,7 +396,88 @@ function freshnessFor(
   return { state: "verified", detail: { reason: "matches the source freshness record", notCompared: [...r.notCompared] } };
 }
 
-function buildCatalog(root: string, recordFile: string): { catalog: Catalog; records: Map<string, Built> } {
+// ---------------------------------------------------------------------------
+// Approval records (content/i18n/approvals.json, written only on the owner's request)
+// ---------------------------------------------------------------------------
+
+/**
+ * File format (schemaVersion 1):
+ *
+ *   { "schemaVersion": 1,
+ *     "records": [ { "kind": "quality" | "production" | "indexing",
+ *                    "locale": "ja", "sourcePath": "/kpop/...",
+ *                    "sourceSha256": "sha256:<hex>", "translationSha256": "sha256:<hex>",
+ *                    "approvedBy": "<name>", "approvedAt": "<ISO 8601 with time zone>" } ] }
+ *
+ * The path is fixed below the repository (no option can move it). Fail closed:
+ * a missing file means no approvals; a file behind a symbolic link, unreadable,
+ * oversized, unparsable, with another schema, or with any record that is not
+ * exactly this shape is ignored as a whole and reported as a catalog issue.
+ */
+const APPROVALS_FILE = "content/i18n/approvals.json";
+const APPROVALS_SCHEMA_VERSION = 1;
+const APPROVALS_MAX_BYTES = 1_000_000;
+const APPROVAL_KINDS: readonly ApprovalKind[] = ["quality", "production", "indexing"];
+const APPROVAL_FIELDS = ["approvedAt", "approvedBy", "kind", "locale", "sourcePath", "sourceSha256", "translationSha256"];
+
+type ApprovalSet = { problem: string | null; records: readonly ApprovalRecord[] };
+
+function isApprovalRecord(value: unknown): value is ApprovalRecord {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return false;
+  const r = value as Record<string, unknown>;
+  const keys = Object.keys(r).sort();
+  return keys.length === APPROVAL_FIELDS.length && keys.every((key, i) => key === APPROVAL_FIELDS[i]) &&
+    APPROVAL_KINDS.includes(r.kind as ApprovalKind) &&
+    isLocaleCode(r.locale) && r.locale !== "en" &&
+    checkSourcePath(r.sourcePath) !== null &&
+    typeof r.sourceSha256 === "string" && SHA256.test(r.sourceSha256) &&
+    typeof r.translationSha256 === "string" && SHA256.test(r.translationSha256) &&
+    typeof r.approvedBy === "string" && r.approvedBy.trim() !== "" && r.approvedBy.length <= 200 &&
+    typeof r.approvedAt === "string" && ISO_DATE_TIME.test(r.approvedAt) && !Number.isNaN(Date.parse(r.approvedAt));
+}
+
+function readApprovals(repoRoot: string): ApprovalSet {
+  const none = (problem: string | null): ApprovalSet => ({ problem, records: [] });
+  let current = repoRoot;
+  let bytes: Buffer;
+  try {
+    for (const part of APPROVALS_FILE.split("/")) {
+      // Tracing only: read at build time, not bundled.
+      current = path.join(/*turbopackIgnore: true*/ current, part);
+      let stat;
+      try {
+        stat = lstatSync(current);
+      } catch (error) {
+        // Missing file (or folder): no approval records, nothing is approved. Any other error is reported.
+        if ((error as NodeJS.ErrnoException).code === "ENOENT") return none(null);
+        return none("approval records could not be read; no approval is used");
+      }
+      if (stat.isSymbolicLink()) return none("approval records: symbolic links are not followed; no approval is used");
+    }
+    const stat = lstatSync(current);
+    if (!isInside(repoRoot, current) || !stat.isFile()) return none("approval records: not a regular file; no approval is used");
+    if (stat.size > APPROVALS_MAX_BYTES) return none("approval records: file is too large; no approval is used");
+    bytes = readFileSync(current);
+  } catch {
+    return none("approval records could not be read; no approval is used");
+  }
+  let doc: unknown;
+  try {
+    doc = JSON.parse(bytes.toString("utf8"));
+  } catch {
+    return none("approval records: JSON could not be parsed; no approval is used");
+  }
+  if (!doc || typeof doc !== "object" || Array.isArray(doc)) return none("approval records: JSON is not an object; no approval is used");
+  const { schemaVersion, records } = doc as { schemaVersion?: unknown; records?: unknown };
+  if (schemaVersion !== APPROVALS_SCHEMA_VERSION || !Array.isArray(records)) {
+    return none("approval records: unsupported schema; no approval is used");
+  }
+  const bad = records.findIndex((record) => !isApprovalRecord(record));
+  if (bad !== -1) return none(`approval records: record ${bad} is invalid; no approval is used`);
+  return { problem: null, records: Object.freeze(records.map((record) => Object.freeze({ ...(record as ApprovalRecord) }))) };
+}
+
+function buildCatalog(root: string, recordFile: string): { catalog: Catalog; records: Map<string, Built>; approvals: ApprovalSet } {
   const resolvedRoot = path.resolve(root);
   const repoRoot = path.dirname(path.dirname(resolvedRoot));
   const freshnessRecord = readFreshnessRecord(recordFile);
@@ -509,7 +591,9 @@ function buildCatalog(root: string, recordFile: string): { catalog: Catalog; rec
     if (record.entry.validation !== "valid") { record.source = null; record.translation = null; }
     if (byKey.get(record.entry.key)!.length === 1) records.set(record.entry.key, record);
   }
-  return { catalog: { root: resolvedRoot, entries: built.map((r) => r.entry), issues }, records };
+  const approvals = readApprovals(repoRoot);
+  if (approvals.problem) issues.push({ id: "(approvals)", problem: approvals.problem });
+  return { catalog: { root: resolvedRoot, entries: built.map((r) => r.entry), issues }, records, approvals };
 }
 
 const cache = new Map<string, ReturnType<typeof buildCatalog>>();
@@ -642,14 +726,28 @@ export function publishDecision(
   };
 }
 
-/** Entries of one locale that may be rendered here (for generateStaticParams in P3). */
-export function renderableEntries(
-  locale: LocaleCode,
-  environment: Environment,
-  options?: CatalogOptions & { approvals?: readonly ApprovalRecord[] },
-): CatalogEntry[] {
+/**
+ * Approval records of the repository that holds this catalog
+ * (content/i18n/approvals.json). Empty when the file is missing or unusable.
+ */
+export function approvalRecords(options?: CatalogOptions): readonly ApprovalRecord[] {
+  return load(options).approvals.records;
+}
+
+/**
+ * The publish decision for a catalog entry with the repository's approval
+ * records. Every route decision goes through this function (the static
+ * params, the page and its metadata, and the language menu data), so they
+ * cannot disagree.
+ */
+export function catalogDecision(entry: CatalogEntry, environment: Environment, options?: CatalogOptions): PublishDecision {
+  return publishDecision(entry, environment, approvalRecords(options));
+}
+
+/** Entries of one locale that may be rendered here (for generateStaticParams). */
+export function renderableEntries(locale: LocaleCode, environment: Environment, options?: CatalogOptions): CatalogEntry[] {
   return listTranslations(options).filter(
-    (entry) => entry.locale === locale && publishDecision(entry, environment, options?.approvals).render,
+    (entry) => entry.locale === locale && catalogDecision(entry, environment, options).render,
   );
 }
 

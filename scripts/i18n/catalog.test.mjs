@@ -14,24 +14,44 @@ import { register } from 'node:module';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { cpSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 
+const TYPESCRIPT = pathToFileURL(path.join(path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..'), 'node_modules/typescript/lib/typescript.js')).href;
+// Also loads .tsx (compiled with the project's own TypeScript) and Next.js
+// subpaths such as "next/navigation", for the route tests at the end.
 register('data:text/javascript,' + encodeURIComponent(`
+import { readFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+let ts;
 export async function resolve(specifier, context, next) {
   if (specifier === 'server-only') return { url: 'data:text/javascript,export {}', shortCircuit: true };
   try {
     return await next(specifier, context);
   } catch (error) {
-    if (/^\\.\\.?\\//.test(specifier) && !/\\.[cm]?[jt]sx?$/.test(specifier)) return next(specifier + '.ts', context);
-    throw error;
+    if (/^next\\/[a-z-]+$/.test(specifier)) return next(specifier + '.js', context);
+    if (!/^\\.\\.?\\//.test(specifier) || /\\.[cm]?[jt]sx?$/.test(specifier)) throw error;
+    try { return await next(specifier + '.ts', context); } catch { return next(specifier + '.tsx', context); }
   }
+}
+export async function load(url, context, next) {
+  if (url.startsWith('file:') && url.endsWith('.tsx')) {
+    ts ??= (await import(${JSON.stringify(TYPESCRIPT)})).default;
+    const source = readFileSync(fileURLToPath(url), 'utf8');
+    const { outputText } = ts.transpileModule(source, {
+      fileName: fileURLToPath(url),
+      compilerOptions: { module: ts.ModuleKind.ESNext, target: ts.ScriptTarget.ES2022, jsx: ts.JsxEmit.ReactJSX },
+    });
+    return { format: 'module', source: outputText, shortCircuit: true };
+  }
+  if (url.startsWith('file:') && url.endsWith('.json')) return { ...(await next(url, { ...context, importAttributes: { type: 'json' } })), shortCircuit: true };
+  return next(url, context);
 }`));
 
 const {
-  checkSourcePath, clearCatalogCache, getTranslation, listTranslations, loadCatalog,
+  approvalRecords, catalogDecision, checkSourcePath, clearCatalogCache, getTranslation, listTranslations, loadCatalog,
   publishDecision, renderableEntries, resolveEnvironment, routeSegments,
 } = await import('../../lib/i18n/catalog.ts');
 
@@ -818,4 +838,214 @@ test('record path: only .json under content/i18n/; existing non-record files are
   writeRecord(base, checkAll(base));
   assert.equal(readJson(path.join(base, RECORD)).schemaVersion, 2);
   assert.deepEqual(readdirRecursive(path.join(base, 'content/i18n')).sort(), ['glossary.json', 'source-freshness.json']);
+});
+
+// ---------------------------------------------------------------------------
+// Approval records (content/i18n/approvals.json). The repository has none;
+// every record below is written to a temporary folder only. Japanese is not a
+// public locale, so even fully approved pages stay out of production here: the
+// tests check that every other gate is satisfied ("locale-not-public" is then
+// the only reason left) and that nothing is approved by accident.
+// ---------------------------------------------------------------------------
+
+const APPROVALS = 'content/i18n/approvals.json';
+const NO_RECORDS = ['no-quality-approval', 'no-production-approval'];
+const approvalsDoc = (records) => ({ schemaVersion: 1, records });
+const writeApprovals = (base, doc) => { writeJson(path.join(base, APPROVALS), doc); clearCatalogCache(); };
+const setStatus = (status) => (root) => {
+  const file = path.join(root, 'ja', REL);
+  writeJson(file, { ...readJson(file), status });
+};
+const decide = (root, environment = 'production', sourcePath = PAGE) =>
+  catalogDecision(getTranslation('ja', sourcePath, { root }).entry, environment, { root });
+const approvalIssues = (root) => loadCatalog({ root }).issues.filter((i) => i.id === '(approvals)');
+
+test('approvals: the repository has no approval records; production lists no Japanese page', () => {
+  clearCatalogCache();
+  assert.equal(existsSync(path.join(REPO, APPROVALS)), false, 'no approval file is committed');
+  assert.deepEqual(approvalRecords({ root: REAL_ROOT }), []);
+  assert.deepEqual(approvalIssues(REAL_ROOT), []);
+  for (const entry of listTranslations({ root: REAL_ROOT }).filter((e) => e.locale === 'ja')) {
+    const d = catalogDecision(entry, 'production', { root: REAL_ROOT });
+    assert.equal(d.render, false, entry.key);
+    assert.ok(NO_RECORDS.every((r) => d.reasons.includes(r)), entry.key);
+  }
+  assert.deepEqual(renderableEntries('ja', 'production', { root: REAL_ROOT }), []);
+});
+
+test('approvals: matching records from the file satisfy every gate except the public locale', () => {
+  const { root, base } = freshFixture({ edit: setStatus('approved') });
+  const entry = entryOf(root);
+  writeApprovals(base, approvalsDoc(approvals(entry)));
+  const loaded = approvalRecords({ root });
+  assert.deepEqual(loaded.map((r) => r.kind), ['quality', 'production', 'indexing']);
+  assert.deepEqual(approvalIssues(root), []);
+  const d = decide(root);
+  assert.equal(d.render, false);
+  assert.deepEqual(d.reasons, ['locale-not-public']);
+  assert.equal(d.robots, 'noindex');
+  assert.equal(d.listInLanguageMenu, false);
+  assert.equal(d.includeInSitemap, false);
+  // The file loader gives exactly the decision of the same records passed in memory.
+  assert.deepEqual(d, publishDecision(entryOf(root), 'production', approvals(entryOf(root))));
+  assert.deepEqual(renderableEntries('ja', 'production', { root }), []);
+  // Records are read-only data.
+  assert.throws(() => { loaded[0].kind = 'production'; });
+});
+
+test('approvals: quality, production and indexing are separate; a missing kind blocks', () => {
+  const { root, base } = freshFixture({ edit: setStatus('approved') });
+  const entry = entryOf(root);
+  const cases = [
+    [['production', 'indexing'], ['no-quality-approval']],
+    [['quality', 'indexing'], ['no-production-approval']],
+    [['indexing'], NO_RECORDS],
+    [[], NO_RECORDS],
+  ];
+  for (const [kinds, missing] of cases) {
+    writeApprovals(base, approvalsDoc(approvals(entry, kinds)));
+    const d = decide(root);
+    assert.equal(d.render, false, kinds.join(','));
+    for (const reason of missing) assert.ok(d.reasons.includes(reason), `${kinds.join(',')}: ${reason}`);
+    for (const reason of NO_RECORDS.filter((r) => !missing.includes(r))) assert.ok(!d.reasons.includes(reason), `${kinds.join(',')}: ${reason}`);
+  }
+});
+
+test('approvals: a draft translation stays blocked even with matching records', () => {
+  const { root, base } = freshFixture();
+  const entry = entryOf(root);
+  assert.equal(entry.status, 'draft');
+  writeApprovals(base, approvalsDoc(approvals(entry)));
+  const d = decide(root);
+  assert.equal(d.render, false);
+  assert.ok(d.reasons.includes('status-not-approved'));
+  assert.ok(NO_RECORDS.every((r) => !d.reasons.includes(r)), 'the records match, the status still blocks');
+});
+
+test('approvals: stale hashes, another page and another locale never apply', () => {
+  const { root, base } = freshFixture({ edit: (r) => { setStatus('approved')(r); addSecondPage(r, 'copy-page'); } });
+  const entry = entryOf(root);
+  const copy = getTranslation('ja', '/kpop/copy-page', { root }).entry;
+  // Records for Sunbae only: the second Japanese page gets nothing.
+  writeApprovals(base, approvalsDoc(approvals(entry)));
+  assert.deepEqual(decide(root).reasons, ['locale-not-public']);
+  const other = decide(root, 'production', '/kpop/copy-page');
+  assert.ok(NO_RECORDS.every((r) => other.reasons.includes(r)));
+  // A record that names the other page but carries Sunbae's hashes does not match it.
+  writeApprovals(base, approvalsDoc(approvals(entry, ['quality', 'production'], { sourcePath: '/kpop/copy-page' })));
+  assert.ok(NO_RECORDS.every((r) => decide(root, 'production', '/kpop/copy-page').reasons.includes(r)));
+  assert.ok(NO_RECORDS.every((r) => decide(root).reasons.includes(r)));
+  // Another locale, or old hashes, do not match.
+  for (const overrides of [{ locale: 'es' }, { translationSha256: copy.files.translation.sha256 }, { sourceSha256: `sha256:${'0'.repeat(64)}` }]) {
+    writeApprovals(base, approvalsDoc(approvals(entry, ['quality', 'production'], overrides)));
+    assert.ok(NO_RECORDS.every((r) => decide(root).reasons.includes(r)), JSON.stringify(overrides));
+  }
+  // Records written for the current bytes stop matching after any edit of the translation.
+  writeApprovals(base, approvalsDoc(approvals(entry)));
+  const file = path.join(root, 'ja', REL);
+  writeFileSync(file, `${readFileSync(file, 'utf8')}\n`);
+  clearCatalogCache();
+  assert.ok(NO_RECORDS.every((r) => decide(root).reasons.includes(r)));
+});
+
+test('approvals: changed or unverified English source blocks even with matching records', () => {
+  const changed = freshFixture({ edit: setStatus('approved') });
+  writeFileSync(changed.pageFile, `${readFileSync(changed.pageFile, 'utf8')}\n// edited after the check\n`);
+  clearCatalogCache();
+  writeApprovals(changed.base, approvalsDoc(approvals(entryOf(changed.root))));
+  const c = decide(changed.root);
+  assert.equal(c.render, false);
+  assert.ok(c.reasons.includes('source-freshness-changed'));
+
+  const unverified = freshFixture({ edit: setStatus('approved'), record: false });
+  writeApprovals(unverified.base, approvalsDoc(approvals(entryOf(unverified.root))));
+  const u = decide(unverified.root);
+  assert.equal(u.render, false);
+  assert.ok(u.reasons.includes('source-freshness-unverified'));
+});
+
+test('approvals: a missing file approves nothing; a damaged or redirected file is ignored as a whole and reported', () => {
+  const { root, base } = freshFixture({ edit: setStatus('approved') });
+  const good = approvals(entryOf(root));
+  // Missing: nothing approved, nothing to report.
+  clearCatalogCache();
+  assert.deepEqual(approvalRecords({ root }), []);
+  assert.deepEqual(approvalIssues(root), []);
+
+  const file = path.join(base, APPROVALS);
+  const blocked = (label) => {
+    clearCatalogCache();
+    assert.deepEqual(approvalRecords({ root }), [], label);
+    assert.equal(approvalIssues(root).length, 1, label);
+    assert.ok(NO_RECORDS.every((r) => decide(root).reasons.includes(r)), label);
+  };
+  const raw = (text) => { mkdirSync(path.dirname(file), { recursive: true }); rmSync(file, { recursive: true, force: true }); writeFileSync(file, text); };
+  raw('{ "schemaVersion": 1, '); blocked('broken JSON');
+  raw('[]'); blocked('JSON array');
+  writeApprovals(base, { schemaVersion: 2, records: good }); blocked('other schema');
+  writeApprovals(base, { schemaVersion: 1, records: {} }); blocked('records not a list');
+  const invalid = {
+    'extra field': { note: 'x' }, 'unknown kind': { kind: 'publish' }, 'English locale': { locale: 'en' },
+    'unknown locale': { locale: 'zz' }, 'unsafe path': { sourcePath: '/kpop/../x' }, 'uppercase hash': { sourceSha256: `sha256:${'A'.repeat(64)}` },
+    'blank approver': { approvedBy: ' ' }, 'no time zone': { approvedAt: '2026-10-12T09:00:00' }, 'impossible date': { approvedAt: '2026-13-45T09:00:00Z' },
+  };
+  for (const [label, override] of Object.entries(invalid)) {
+    // One bad record makes the whole file unusable, including the valid ones next to it.
+    writeApprovals(base, approvalsDoc([...good, { ...good[0], ...override }]));
+    blocked(label);
+  }
+  const withoutTime = { ...good[1] };
+  delete withoutTime.approvedAt;
+  writeApprovals(base, approvalsDoc([...good.slice(0, 1), withoutTime]));
+  blocked('missing field');
+  raw(`${JSON.stringify(approvalsDoc(good))}${' '.repeat(1_000_001)}`); blocked('oversized file');
+  rmSync(file, { force: true }); mkdirSync(file); blocked('folder instead of a file');
+  rmSync(file, { recursive: true, force: true });
+
+  // Symbolic links: at the file and on the way (content/i18n).
+  const elsewhere = mkdtempSync(path.join(tmpdir(), 'haemil-approvals-'));
+  temps.push(elsewhere);
+  writeJson(path.join(elsewhere, 'approvals.json'), approvalsDoc(good));
+  symlinkSync(path.join(elsewhere, 'approvals.json'), file);
+  blocked('file is a symbolic link');
+  rmSync(file, { force: true });
+  const i18n = path.join(base, 'content/i18n');
+  cpSync(i18n, path.join(elsewhere, 'i18n'), { recursive: true });
+  writeJson(path.join(elsewhere, 'i18n', 'approvals.json'), approvalsDoc(good));
+  rmSync(i18n, { recursive: true, force: true });
+  symlinkSync(path.join(elsewhere, 'i18n'), i18n);
+  blocked('folder on the way is a symbolic link');
+});
+
+test('routes: generated pages, page metadata and renderableEntries use the same decision', async () => {
+  const { localeEnvironment, localeMetadata, localeStaticParams } = await import('../../lib/i18n/LocalePage.tsx');
+  const { root, base } = freshFixture({ edit: (r) => { setStatus('approved')(r); addSecondPage(r, 'copy-page'); } });
+  writeApprovals(base, approvalsDoc(approvals(entryOf(root))));
+  const saved = { cwd: process.cwd() };
+  for (const key of ['VERCEL', 'VERCEL_ENV', 'NODE_ENV']) saved[key] = process.env[key];
+  const expected = { preview: [PAGE, '/kpop/copy-page'].sort(), production: [] };
+  process.chdir(base); // the routes read <cwd>/content/translations
+  try {
+    for (const vars of [{ VERCEL_ENV: 'preview' }, { VERCEL_ENV: 'production' }, { NODE_ENV: 'production' }]) {
+      for (const key of ['VERCEL', 'VERCEL_ENV', 'NODE_ENV']) delete process.env[key];
+      Object.assign(process.env, vars);
+      clearCatalogCache();
+      const environment = localeEnvironment();
+      const listed = localeStaticParams('ja').map(({ slug }) => `/${slug.join('/')}`).sort();
+      const allowed = renderableEntries('ja', environment).map((e) => e.sourcePath).sort();
+      assert.deepEqual(listed, allowed, JSON.stringify(vars));
+      assert.deepEqual(listed, expected[environment], JSON.stringify(vars));
+      for (const entry of listTranslations().filter((e) => e.locale === 'ja')) {
+        const slug = routeSegments(entry);
+        if (listed.includes(entry.sourcePath)) assert.equal(typeof localeMetadata('ja', slug).title, 'string');
+        else assert.throws(() => localeMetadata('ja', slug), (error) => error?.digest === 'NEXT_HTTP_ERROR_FALLBACK;404', `${entry.key} must be a 404`);
+      }
+    }
+  } finally {
+    process.chdir(saved.cwd);
+    for (const key of ['VERCEL', 'VERCEL_ENV', 'NODE_ENV']) {
+      if (saved[key] === undefined) delete process.env[key]; else process.env[key] = saved[key];
+    }
+    clearCatalogCache();
+  }
 });
