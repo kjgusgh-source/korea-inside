@@ -4,6 +4,7 @@ import { publishedMemberIds } from "../lib/publishedGuides";
 import { getKpopGuideArticles } from "../lib/kpopGuideArticles";
 import { getKpopSoloArtists } from "../lib/kpopSoloArtists";
 import { getAllPosts } from "../lib/posts";
+import { indexedTranslations, withTranslationAlternates } from "../lib/i18n/LocalePage";
 
 const baseUrl = "https://haemilkorea.com";
 
@@ -410,12 +411,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [
-    ...staticRoutes,
-    ...culturePostRoutes,
-    ...kpopGuideRoutes,
-    ...kpopGroupRoutes,
-    ...kpopMemberRoutes,
-    ...kpopSoloProfileRoutes,
-  ];
+  // Translated pages are listed only when they may be indexed (Production,
+  // quality + production + indexing approvals), each linked to its English
+  // page with hreflang. Without such pages the sitemap is unchanged.
+  return withTranslationAlternates(
+    [
+      ...staticRoutes,
+      ...culturePostRoutes,
+      ...kpopGuideRoutes,
+      ...kpopGroupRoutes,
+      ...kpopMemberRoutes,
+      ...kpopSoloProfileRoutes,
+    ],
+    indexedTranslations(),
+    baseUrl,
+  );
 }

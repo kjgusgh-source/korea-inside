@@ -1,4 +1,4 @@
-# Translation catalog contract (P2; source freshness P5-B; approval records E1)
+# Translation catalog contract (P2; source freshness P5-B; approval records E1; search engines E3)
 
 Module: `lib/i18n/catalog.ts` (server only). Tests: `scripts/i18n/catalog.test.mjs`.
 
@@ -9,10 +9,11 @@ writes, approves or changes a status.
 
 The catalog was added in P2, before anything used it. Today
 `lib/i18n/LocalePage.tsx` uses it (through `renderableEntries` and
-`catalogDecision`, the same decision) for two things:
+`catalogDecision`, the same decision) for three things:
 
 - the shared locale route (`app/ja/[...slug]/page.tsx`, P3)
 - the header language menu data (`app/api/i18n/available/route.ts`, P4)
+- the translated entries of the XML sitemap (`app/sitemap.ts`, E3)
 
 ## Data layout
 
@@ -236,7 +237,57 @@ same `renderableEntries` as the locale route. So:
 - on Preview, the Japanese drafts are listed with a "Draft preview" label
 - on Production, nothing is listed
 
-`includeInSitemap` is not read by `app/sitemap.ts`. The sitemap is unchanged.
+## Search engines (E3)
+
+The robots decision of a translated page drives its metadata and the sitemap
+(`lib/i18n/LocalePage.tsx`: `localeMetadata`, `indexedTranslations`,
+`withTranslationAlternates`). A page is *indexed* when it renders and
+`publishDecision` gives `robots: "index"` and `includeInSitemap` in the
+current environment. That needs Production and all three approvals.
+
+| Production records (all other gates pass) | HTTP | robots | canonical | sitemap | hreflang |
+|---|---|---|---|---|---|
+| quality + production | 200 | noindex, nofollow, nocache | none | not listed | none |
+| quality + production + indexing | 200 | index, follow | itself (`/ja/...`) | listed once | `en`, `ja`, `x-default` |
+| any of quality or production missing | 404 | — | — | not listed | none |
+| stale records or source freshness, damaged file | 404 | — | — | not listed | none |
+
+Preview and development never index, whatever records exist: drafts there
+are noindex with no canonical, and the sitemap lists no translation.
+
+- **Canonical.** The translated page's own path. Like the English pages, it is
+  resolved against the root layout's `metadataBase`
+  (`https://haemilkorea.com`), the same base as the sitemap URLs. English
+  canonicals are unchanged.
+- **hreflang in the sitemap only.** No hreflang is added to any HTML page. For
+  each English page with an indexed translation:
+  - the English entry gets
+    `alternates.languages = { en: English URL, ja: Japanese URL, "x-default": English URL }`
+    (more locales are added in `locales.ts` order)
+  - the translated URL is added right after it, with the same links and the
+    English entry's `changeFrequency` and `priority`
+  - the translated URL has no `lastModified`, since no date is recorded for
+    the translation
+
+  Next.js writes these as `<xhtml:link rel="alternate" hreflang="..." href="..." />`
+  and adds `xmlns:xhtml` to `<urlset>` only when some entry has links.
+- **Unchanged when nothing is indexed.** With no indexed translation, the
+  sitemap entries are passed through as they are, so `sitemap.xml` is byte
+  for byte the same as before. English entries without a translation never
+  change.
+- **Fails closed.** A page's translations are left out of the sitemap, with a
+  build warning `[i18n] sitemap: ...`, when any of these is true:
+  - its English URL is not listed exactly once
+  - its English URL already has language links
+  - a translated URL is already listed
+
+  The sitemap URLs come from `localeStaticParams`, so every listed
+  translation is a generated page.
+- **Not changed:** `robots.txt`, JSON-LD (translated pages have none), English
+  page metadata, and Open Graph (`og:locale` only, no `og:url`).
+
+Search engines are not asked to index anything by this code. An indexing
+record is its own approval, given per page.
 
 `noindex` is not access control. Non-public translations must not be
 rendered in production at all; the route must 404.
@@ -275,4 +326,4 @@ The P2 list is kept as a record:
 - header language menu: added later (P4)
 - English page freshness check: added later (P5-A, P5-B)
 - approval record storage: reading added in E1 (`content/i18n/approvals.json`); no records exist
-- sitemap, robots, canonical and hreflang changes: still not made
+- sitemap, robots, canonical and hreflang: added in E3 (above); no page is indexed, because no records exist and Japanese is not public
