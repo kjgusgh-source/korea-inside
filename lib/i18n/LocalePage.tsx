@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, MetadataRoute } from "next";
 import { notFound } from "next/navigation";
 import {
   catalogDecision,
@@ -11,7 +11,7 @@ import {
   type Environment,
   type TranslationRecord,
 } from "./catalog";
-import { LOCALES, type LocaleCode } from "./locales";
+import { LOCALE_CODES, LOCALES, type LocaleCode } from "./locales";
 import TranslatedPage, {
   PREVIEW_UI,
   TranslationNotice,
@@ -54,8 +54,13 @@ export function localeEnvironment(env: Record<string, string | undefined> = proc
  * records, status, source freshness, public locale), whatever the current
  * environment is. Drafts shown on Preview are not published; on Production
  * only published entries render at all.
+ *
+ * `indexed`: search engines may index the page here. This is the policy's
+ * robots decision for the current environment: only on Production, and only
+ * with a matching indexing approval on top of the publishing approvals. It is
+ * never true on Preview or in development, whatever records exist.
  */
-type Renderable = { entry: CatalogEntry; prepared: PreparedTranslation; published: boolean };
+type Renderable = { entry: CatalogEntry; prepared: PreparedTranslation; published: boolean; indexed: boolean };
 
 function isPublished(entry: CatalogEntry): boolean {
   return catalogDecision(entry, "production").render;
@@ -80,7 +85,12 @@ function loadRenderable(locale: LocaleCode, slug: readonly string[] | undefined)
       record.translation as unknown as TranslationDocument,
       { locale, allowedStatuses: [record.entry.status] },
     );
-    return { entry: record.entry, prepared, published: isPublished(record.entry) };
+    return {
+      entry: record.entry,
+      prepared,
+      published: isPublished(record.entry),
+      indexed: decision.robots === "index" && decision.includeInSitemap,
+    };
   } catch (error) {
     console.error(`[i18n] ${record.entry.key}: not rendered — ${error instanceof Error ? error.message : String(error)}`);
     return null;
@@ -158,23 +168,34 @@ export function localeMenuEntries(locale: LocaleCode): { sourcePath: string; dra
 }
 
 /**
- * Metadata for a translated page. Translations are never indexed in this
- * step: noindex/nofollow/nocache, no canonical, no hreflang, no JSON-LD.
- * Indexing needs its own approval and code (later step).
+ * Metadata for a translated page.
+ *
+ * - Indexed (Production, quality + production + indexing approvals): index,
+ *   follow and a self-referencing canonical (resolved against the root
+ *   layout's metadataBase, like the English pages). The language links
+ *   (hreflang) are in the XML sitemap only, not in the HTML.
+ * - Everything else that renders (Preview drafts; Production pages without
+ *   an indexing approval): noindex/nofollow/nocache and no canonical.
+ *
+ * No JSON-LD in either case.
  */
 export function localeMetadata(locale: LocaleCode, slug: readonly string[] | undefined): Metadata {
   const item = loadRenderable(locale, slug);
   if (!item) notFound();
   const { title, description } = item.prepared;
+  const indexed = item.indexed && item.entry.urlPath !== null;
   return {
     title,
     description,
-    robots: {
-      index: false,
-      follow: false,
-      nocache: true,
-      googleBot: { index: false, follow: false },
-    },
+    ...(indexed ? { alternates: { canonical: item.entry.urlPath! } } : {}),
+    robots: indexed
+      ? { index: true, follow: true }
+      : {
+          index: false,
+          follow: false,
+          nocache: true,
+          googleBot: { index: false, follow: false },
+        },
     openGraph: {
       title,
       description,
@@ -188,6 +209,100 @@ export function localeMetadata(locale: LocaleCode, slug: readonly string[] | und
       description,
     },
   };
+}
+
+/** A translated page that search engines may index, for the XML sitemap. */
+export type IndexedTranslation = {
+  locale: LocaleCode;
+  /** hreflang value (the locale's htmlLang). */
+  hreflang: string;
+  /** English page path, e.g. "/kpop/what-is-maknae". */
+  sourcePath: string;
+  /** Translated page path, e.g. "/ja/kpop/what-is-maknae". */
+  urlPath: string;
+};
+
+/**
+ * Translated pages generated in this build whose metadata says index (see
+ * localeMetadata). Built from localeStaticParams, so every listed URL is a
+ * generated page. Empty on Preview and in development, and on Production
+ * without indexing approvals.
+ */
+export function indexedTranslations(): IndexedTranslation[] {
+  const pages: IndexedTranslation[] = [];
+  for (const locale of LOCALE_CODES) {
+    if (LOCALES[locale].urlPrefix === null) continue;
+    for (const { slug } of localeStaticParams(locale)) {
+      const item = loadRenderable(locale, slug);
+      if (!item?.indexed || !item.entry.sourcePath || !item.entry.urlPath) continue;
+      pages.push({ locale, hreflang: LOCALES[locale].htmlLang, sourcePath: item.entry.sourcePath, urlPath: item.entry.urlPath });
+    }
+  }
+  return pages;
+}
+
+/**
+ * Adds indexed translations to the site's sitemap entries.
+ *
+ * For each English page with at least one indexed translation:
+ * - the English entry gets alternates.languages
+ *   { en: English URL, <hreflang>: translated URL, ..., "x-default": English URL }
+ * - each translated URL is added right after it, with the same languages and
+ *   the English entry's changeFrequency and priority (no lastModified: there
+ *   is no recorded date for the translation).
+ *
+ * The other entries are returned unchanged, in the same order. Without
+ * indexed translations the input array itself is returned.
+ *
+ * Fails closed: a page is skipped (with a build warning) when its English URL
+ * is not in the sitemap exactly once, already has language alternates, or a
+ * translated URL is already listed. Duplicate translations are listed once.
+ */
+export function withTranslationAlternates(
+  entries: MetadataRoute.Sitemap,
+  translations: readonly IndexedTranslation[],
+  baseUrl: string,
+): MetadataRoute.Sitemap {
+  if (translations.length === 0) return entries;
+  const bySource = new Map<string, Map<LocaleCode, IndexedTranslation>>();
+  for (const page of translations) {
+    const locales = bySource.get(page.sourcePath) ?? new Map<LocaleCode, IndexedTranslation>();
+    if (!locales.has(page.locale)) locales.set(page.locale, page);
+    bySource.set(page.sourcePath, locales);
+  }
+  const listed = new Set(entries.map((entry) => entry.url));
+  const additions = new Map<number, MetadataRoute.Sitemap>();
+  const replaced = new Map<number, MetadataRoute.Sitemap[number]>();
+  for (const [sourcePath, locales] of bySource) {
+    const englishUrl = `${baseUrl}${sourcePath}`;
+    const matches = entries.flatMap((entry, index) => (entry.url === englishUrl ? [index] : []));
+    const pages = LOCALE_CODES.flatMap((code) => (locales.has(code) ? [locales.get(code)!] : []));
+    const urls = pages.map((page) => `${baseUrl}${page.urlPath}`);
+    let problem: string | null = null;
+    if (matches.length !== 1) problem = `English URL listed ${matches.length} times`;
+    else if (entries[matches[0]].alternates?.languages) problem = "English entry already has language alternates";
+    else if (urls.some((url) => listed.has(url))) problem = "translated URL already listed";
+    if (problem) {
+      console.warn(`[i18n] sitemap: ${sourcePath} translations not listed — ${problem}`);
+      continue;
+    }
+    const english = entries[matches[0]];
+    const languages: Record<string, string> = { [LOCALES.en.htmlLang]: englishUrl };
+    pages.forEach((page, i) => { languages[page.hreflang] = urls[i]; });
+    languages["x-default"] = englishUrl;
+    replaced.set(matches[0], { ...english, alternates: { languages } });
+    additions.set(
+      matches[0],
+      urls.map((url) => ({
+        url,
+        ...(english.changeFrequency ? { changeFrequency: english.changeFrequency } : {}),
+        ...(typeof english.priority === "number" ? { priority: english.priority } : {}),
+        alternates: { languages: { ...languages } },
+      })),
+    );
+  }
+  if (replaced.size === 0) return entries;
+  return entries.flatMap((entry, index) => [replaced.get(index) ?? entry, ...(additions.get(index) ?? [])]);
 }
 
 /** Page body for a translated route; 404 unless the translation may be rendered here. */
