@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import {
+  catalogDecision,
   getTranslation,
   listTranslations,
-  publishDecision,
   renderableEntries,
   resolveEnvironment,
   routeSegments,
@@ -27,7 +27,9 @@ import TranslatedPage, {
  * (app/<prefix>/[...slug]/page.tsx). Server only (imports the catalog).
  *
  * A translation is rendered only when the catalog says it is valid and the
- * publish policy allows it in this environment. Everything else is a 404.
+ * publish policy allows it in this environment, with the repository's
+ * approval records (catalogDecision; the same decision as renderableEntries).
+ * Everything else is a 404.
  * Pages are generated at build time; the route file sets dynamicParams = false.
  */
 
@@ -60,7 +62,7 @@ function loadRenderable(locale: LocaleCode, slug: readonly string[] | undefined)
   if (!Array.isArray(slug) || slug.length === 0) return null;
   const record: TranslationRecord | undefined = getTranslation(locale, `/${slug.join("/")}`);
   if (!record || record.entry.validation !== "valid" || !record.source || !record.translation) return null;
-  const decision = publishDecision(record.entry, localeEnvironment());
+  const decision = catalogDecision(record.entry, localeEnvironment());
   if (!decision.render || !PREVIEW_UI[locale] || !record.entry.status) return null;
   try {
     const prepared = prepareTranslation(
