@@ -14,7 +14,7 @@ import {
 import { LOCALES, type LocaleCode } from "./locales";
 import TranslatedPage, {
   PREVIEW_UI,
-  PreviewNotice,
+  TranslationNotice,
   prepareTranslation,
   typographyFor,
   type PreparedTranslation,
@@ -49,7 +49,17 @@ export function localeEnvironment(env: Record<string, string | undefined> = proc
   return resolved;
 }
 
-type Renderable = { entry: CatalogEntry; prepared: PreparedTranslation };
+/**
+ * `published`: the entry passes the production publish policy (approval
+ * records, status, source freshness, public locale), whatever the current
+ * environment is. Drafts shown on Preview are not published; on Production
+ * only published entries render at all.
+ */
+type Renderable = { entry: CatalogEntry; prepared: PreparedTranslation; published: boolean };
+
+function isPublished(entry: CatalogEntry): boolean {
+  return catalogDecision(entry, "production").render;
+}
 
 /**
  * Valid, allowed translation for a route, prepared for rendering; otherwise null.
@@ -70,7 +80,7 @@ function loadRenderable(locale: LocaleCode, slug: readonly string[] | undefined)
       record.translation as unknown as TranslationDocument,
       { locale, allowedStatuses: [record.entry.status] },
     );
-    return { entry: record.entry, prepared };
+    return { entry: record.entry, prepared, published: isPublished(record.entry) };
   } catch (error) {
     console.error(`[i18n] ${record.entry.key}: not rendered — ${error instanceof Error ? error.message : String(error)}`);
     return null;
@@ -94,7 +104,9 @@ function renderElement(locale: LocaleCode, item: Renderable) {
       ui={ui}
       typography={typographyFor(locale)}
       localizedPaths={localizedPaths(locale)}
-      afterComponent={{ SiteHeader: <PreviewNotice englishPath={item.entry.sourcePath!} ui={ui} /> }}
+      afterComponent={{
+        SiteHeader: <TranslationNotice englishPath={item.entry.sourcePath!} ui={ui} kind={item.published ? "published" : "preview"} />,
+      }}
     />
   );
 }
@@ -127,6 +139,22 @@ export function localeStaticParams(locale: LocaleCode): { slug: string[] }[] {
     params.push({ slug });
   }
   return params;
+}
+
+/**
+ * Language menu data for one locale: exactly the pages that localeStaticParams
+ * generates in this build, each marked draft unless it passes the production
+ * publish policy. On Production every listed page is published (drafts are
+ * not generated there).
+ */
+export function localeMenuEntries(locale: LocaleCode): { sourcePath: string; draft: boolean }[] {
+  const entries: { sourcePath: string; draft: boolean }[] = [];
+  for (const { slug } of localeStaticParams(locale)) {
+    const item = loadRenderable(locale, slug);
+    if (!item?.entry.sourcePath) continue;
+    entries.push({ sourcePath: item.entry.sourcePath, draft: !item.published });
+  }
+  return entries;
 }
 
 /**

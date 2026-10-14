@@ -6,8 +6,10 @@
  *
  * - app/api/i18n/available/route.ts: the menu data per environment, built
  *   from the same list as the locale routes.
- * - components/HeaderControls.tsx: validating that data and building the
- *   menu entries.
+ * - components/HeaderControls.tsx: validating that data (version 2) and
+ *   building the menu entries, with drafts marked per page.
+ * - lib/i18n/TranslatedPage.tsx and LocalePage.tsx: the notice above a
+ *   translated page (draft preview or published translation).
  *
  * Node 22 strips TypeScript types natively; .tsx files are compiled here with
  * the project's own TypeScript (no extra package). "server-only" is replaced
@@ -56,8 +58,11 @@ export async function load(url, context, next) {
 }`));
 
 const { GET } = await import('../../app/api/i18n/available/route.ts');
-const { localeStaticParams } = await import('../../lib/i18n/LocalePage.tsx');
-const { clearCatalogCache, listTranslations } = await import('../../lib/i18n/catalog.ts');
+const { LocaleTranslationPage, localeMenuEntries, localeStaticParams } = await import('../../lib/i18n/LocalePage.tsx');
+const { JA_UI, TranslationNotice } = await import('../../lib/i18n/TranslatedPage.tsx');
+const { catalogDecision, clearCatalogCache, getTranslation, listTranslations } = await import('../../lib/i18n/catalog.ts');
+const { renderToStaticMarkup } = await import('react-dom/server');
+const { createElement } = await import('react');
 const { LOCALE_CODES } = await import('../../lib/i18n/locales.ts');
 const { languageOptions, parseLanguageAvailability } = await import('../../components/HeaderControls.tsx');
 
@@ -105,31 +110,36 @@ async function inFixture(edit, fn) {
 process.chdir(REPO);
 
 // ---------------------------------------------------------------------------
-// Menu data (route)
+// Menu data (route), version 2
 // ---------------------------------------------------------------------------
 
-test('menu data on Preview: exactly the generated translated pages, paths and locale codes only', async () => {
+const ja = (draft) => ({ code: 'ja', draft });
+
+test('menu data on Preview: exactly the generated translated pages, each marked draft by the publish policy', async () => {
   const data = await menuData({ VERCEL_ENV: 'preview' });
-  assert.equal(data.version, 1);
-  // The repository may hold any number of translations; Sunbae must be among them.
-  assert.deepEqual(data.pages[PAGE], ['ja']);
+  assert.equal(data.version, 2);
+  // The repository may hold any number of translations; Sunbae must be among them, as a draft.
+  assert.deepEqual(data.pages[PAGE], [ja(true)]);
   const generated = await withEnv({ VERCEL_ENV: 'preview' }, () => localeStaticParams('ja').map(({ slug }) => `/${slug.join('/')}`));
-  assert.deepEqual(Object.keys(data.pages).filter((p) => data.pages[p].includes('ja')), generated, 'same list as /ja/[...slug]');
-  // Every listed locale has a generated page for that path, and nothing else is listed.
-  for (const [sourcePath, codes] of Object.entries(data.pages)) {
-    for (const code of codes) {
-      const paths = await withEnv({ VERCEL_ENV: 'preview' }, () => localeStaticParams(code).map(({ slug }) => `/${slug.join('/')}`));
-      assert.ok(paths.includes(sourcePath), `${code} ${sourcePath}`);
+  assert.deepEqual(Object.keys(data.pages).filter((p) => data.pages[p].some((l) => l.code === 'ja')), generated, 'same list as /ja/[...slug]');
+  // Every listed locale has a generated page for that path, and its draft flag is the production decision.
+  await withEnv({ VERCEL_ENV: 'preview' }, () => {
+    for (const [sourcePath, locales] of Object.entries(data.pages)) {
+      for (const { code, draft } of locales) {
+        assert.ok(localeStaticParams(code).some(({ slug }) => `/${slug.join('/')}` === sourcePath), `${code} ${sourcePath}`);
+        const entry = getTranslation(code, sourcePath).entry;
+        assert.equal(draft, !catalogDecision(entry, 'production').render, `${code} ${sourcePath}`);
+      }
     }
-  }
+  });
   assert.deepEqual(Object.keys(data.pages), [...Object.keys(data.pages)].sort(), 'sorted');
   assert.ok(/^[\x20-\x7e]*$/.test(JSON.stringify(data)), 'no translated text in the data');
 });
 
 test('menu data on Production lists no draft (Vercel Production and a plain production build)', async () => {
-  assert.deepEqual(await menuData({ VERCEL_ENV: 'production' }), { version: 1, pages: {} });
-  assert.deepEqual(await menuData({ NODE_ENV: 'production' }), { version: 1, pages: {} });
-  assert.deepEqual(await menuData({ VERCEL: '1' }), { version: 1, pages: {} }, 'unknown Vercel environment counts as production');
+  assert.deepEqual(await menuData({ VERCEL_ENV: 'production' }), { version: 2, pages: {} });
+  assert.deepEqual(await menuData({ NODE_ENV: 'production' }), { version: 2, pages: {} });
+  assert.deepEqual(await menuData({ VERCEL: '1' }), { version: 2, pages: {} }, 'unknown Vercel environment counts as production');
 });
 
 test('menu data leaves out stale and invalid translations and planned locales', async () => {
@@ -141,19 +151,19 @@ test('menu data leaves out stale and invalid translations and planned locales', 
     writeJson(file, doc);
   }, async () => {
     assert.equal(listTranslations()[0].validation, 'stale');
-    assert.deepEqual(await menuData({ VERCEL_ENV: 'preview' }), { version: 1, pages: {} });
+    assert.deepEqual(await menuData({ VERCEL_ENV: 'preview' }), { version: 2, pages: {} });
   });
   // Invalid: broken JSON.
   await inFixture((root) => writeFileSync(path.join(root, 'ja', REL), '{ "broken": '), async () => {
     assert.equal(listTranslations()[0].validation, 'invalid');
-    assert.deepEqual(await menuData({ VERCEL_ENV: 'preview' }), { version: 1, pages: {} });
+    assert.deepEqual(await menuData({ VERCEL_ENV: 'preview' }), { version: 2, pages: {} });
   });
   // Planned locale (no route yet): a valid Spanish copy is not listed.
   await inFixture((root) => {
     const doc = readJson(path.join(root, 'ja', REL));
     doc.locale = 'es';
     writeJson(path.join(root, 'es', REL), doc);
-  }, async () => assert.deepEqual((await menuData({ VERCEL_ENV: 'preview' })).pages, { [PAGE]: ['ja'] }));
+  }, async () => assert.deepEqual((await menuData({ VERCEL_ENV: 'preview' })).pages, { [PAGE]: [ja(true)] }));
 });
 
 test('menu data: several pages are sorted and each lists its own locales', async () => {
@@ -166,7 +176,7 @@ test('menu data: several pages are sorted and each lists its own locales', async
   }, async () => {
     const data = await menuData({ VERCEL_ENV: 'preview' });
     assert.deepEqual(Object.keys(data.pages), ['/kpop/a-first-page', PAGE]);
-    assert.deepEqual(Object.values(data.pages), [['ja'], ['ja']]);
+    assert.deepEqual(Object.values(data.pages), [[ja(true)], [ja(true)]]);
   });
 });
 
@@ -192,9 +202,9 @@ test('menu data and static pages: a stale and an invalid page are left out, the 
     const state = Object.fromEntries(listTranslations().map((e) => [e.sourcePath, e.validation]));
     assert.deepEqual(state, { '/kpop/broken-page': 'invalid', '/kpop/ok-page': 'valid', '/kpop/stale-page': 'stale', [PAGE]: 'valid' });
     const data = await menuData({ VERCEL_ENV: 'preview' });
-    assert.deepEqual(data, { version: 1, pages: { '/kpop/ok-page': ['ja'], [PAGE]: ['ja'] } });
+    assert.deepEqual(data, { version: 2, pages: { '/kpop/ok-page': [ja(true)], [PAGE]: [ja(true)] } });
     assert.deepEqual(await staticPaths({ VERCEL_ENV: 'preview' }), ['/kpop/ok-page', PAGE]);
-    assert.deepEqual(await menuData({ VERCEL_ENV: 'production' }), { version: 1, pages: {} });
+    assert.deepEqual(await menuData({ VERCEL_ENV: 'production' }), { version: 2, pages: {} });
     assert.deepEqual(await staticPaths({ VERCEL_ENV: 'production' }), []);
   });
 });
@@ -205,13 +215,52 @@ test('menu data and static pages with many translations: no fixed count, none in
     const expected = [...slugs.map((slug) => `/kpop/${slug}`), PAGE].sort();
     const data = await menuData({ VERCEL_ENV: 'preview' });
     assert.deepEqual(Object.keys(data.pages), expected);
-    assert.ok(Object.values(data.pages).every((codes) => codes.length === 1 && codes[0] === 'ja'));
+    assert.ok(Object.values(data.pages).every((locales) => locales.length === 1 && locales[0].code === 'ja' && locales[0].draft === true));
     assert.deepEqual(await staticPaths({ VERCEL_ENV: 'preview' }), expected);
     for (const vars of [{ VERCEL_ENV: 'production' }, { NODE_ENV: 'production' }]) {
-      assert.deepEqual(await menuData(vars), { version: 1, pages: {} }, JSON.stringify(vars));
+      assert.deepEqual(await menuData(vars), { version: 2, pages: {} }, JSON.stringify(vars));
       assert.deepEqual(await staticPaths(vars), [], JSON.stringify(vars));
     }
   });
+});
+
+test('localeMenuEntries lists exactly the generated pages, with the same draft decision as the page notice', async () => {
+  await withEnv({ VERCEL_ENV: 'preview' }, () => {
+    clearCatalogCache();
+    const listed = localeMenuEntries('ja');
+    assert.deepEqual(listed.map((e) => e.sourcePath), localeStaticParams('ja').map(({ slug }) => `/${slug.join('/')}`));
+    for (const { sourcePath, draft } of listed) {
+      // The page element passes the notice to the renderer; its kind must match the menu flag.
+      // (Read from the element tree: SiteHeader needs the Next.js router to render.)
+      const page = LocaleTranslationPage({ locale: 'ja', slug: sourcePath.slice(1).split('/') });
+      const notice = page.props.afterComponent.SiteHeader;
+      assert.equal(notice.type, TranslationNotice, sourcePath);
+      assert.equal(notice.props.kind, draft ? 'preview' : 'published', sourcePath);
+      assert.equal(notice.props.englishPath, sourcePath);
+    }
+  });
+  await withEnv({ VERCEL_ENV: 'production' }, () => { clearCatalogCache(); assert.deepEqual(localeMenuEntries('ja'), []); });
+  clearCatalogCache();
+});
+
+// ---------------------------------------------------------------------------
+// Notice above a translated page
+// ---------------------------------------------------------------------------
+
+test('notice: a draft shows the preview notice; a published page shows the translation notice without draft or review claims', () => {
+  const preview = renderToStaticMarkup(createElement(TranslationNotice, { englishPath: PAGE, ui: JA_UI, kind: 'preview' }));
+  const published = renderToStaticMarkup(createElement(TranslationNotice, { englishPath: PAGE, ui: JA_UI, kind: 'published' }));
+  assert.match(preview, /data-notice="preview"/);
+  assert.ok(preview.includes('下書き') && preview.includes('公開していません'));
+  assert.match(published, /data-notice="published"/);
+  for (const word of ['下書き', '非公開', '公開していません', 'プレビュー', 'Draft', 'draft', 'ネイティブ', '校閲', '確認済み', '品質', 'チェック済み']) {
+    assert.ok(!published.includes(word), `published notice must not say ${word}`);
+  }
+  assert.ok(published.includes(JA_UI.publishedLabel) && published.includes(JA_UI.publishedBody));
+  // Both keep the link to the English original.
+  for (const html of [preview, published]) {
+    assert.ok(html.includes(`href="${PAGE}"`) && html.includes('hrefLang="en"') && html.includes(JA_UI.englishOriginal));
+  }
 });
 
 // ---------------------------------------------------------------------------
@@ -220,16 +269,27 @@ test('menu data and static pages with many translations: no fixed count, none in
 
 const entries = (pathname, availability) => {
   const { current, options } = languageOptions(pathname, availability);
-  return { current: current.code, options: options.map((o) => `${o.locale.code}:${o.href ?? '-'}${o.current ? ':current' : ''}`) };
+  return { current: current.code, options: options.map((o) => `${o.locale.code}:${o.href ?? '-'}${o.current ? ':current' : ''}${o.draft ? ':draft' : ''}`) };
 };
-const available = (pages) => parseLanguageAvailability({ version: 1, pages });
+/** Version 2 data from { path: [codes] }; every listed page has the same draft flag. */
+const available = (pages, draft = true) => parseLanguageAvailability({
+  version: 2,
+  pages: Object.fromEntries(Object.entries(pages).map(([p, codes]) => [p, codes.map((code) => ({ code, draft }))])),
+});
 
 test('English page with a Japanese translation: English is current, Japanese links to /ja + the English slug', () => {
-  assert.deepEqual(entries(PAGE, available({ [PAGE]: ['ja'] })), { current: 'en', options: ['en:-:current', `ja:/ja${PAGE}`] });
+  assert.deepEqual(entries(PAGE, available({ [PAGE]: ['ja'] })), { current: 'en', options: ['en:-:current', `ja:/ja${PAGE}:draft`] });
 });
 
 test('Japanese page: English links back to the English path, Japanese is current', () => {
-  assert.deepEqual(entries(`/ja${PAGE}`, available({ [PAGE]: ['ja'] })), { current: 'ja', options: [`en:${PAGE}`, 'ja:-:current'] });
+  assert.deepEqual(entries(`/ja${PAGE}`, available({ [PAGE]: ['ja'] })), { current: 'ja', options: [`en:${PAGE}`, 'ja:-:current:draft'] });
+});
+
+test('draft label per page: a published translation has none, a draft keeps it, English never has one', () => {
+  assert.deepEqual(entries(PAGE, available({ [PAGE]: ['ja'] }, false)).options, ['en:-:current', `ja:/ja${PAGE}`]);
+  assert.deepEqual(entries(`/ja${PAGE}`, available({ [PAGE]: ['ja'] }, false)).options, [`en:${PAGE}`, 'ja:-:current']);
+  const mixed = parseLanguageAvailability({ version: 2, pages: { [PAGE]: [{ code: 'ja', draft: false }, { code: 'es', draft: true }] } });
+  assert.deepEqual(entries(PAGE, mixed).options, ['en:-:current', `ja:/ja${PAGE}`, `es:/es${PAGE}:draft`]);
 });
 
 test('English page without a translation: only English, no link', () => {
@@ -247,22 +307,31 @@ test('no data (request failed) or a translated URL the data does not list: no gu
 
 test('a new locale in the data works without new menu code (order from locales.ts)', () => {
   const data = available({ [PAGE]: ['es', 'zh-Hant', 'ja'] });
-  assert.deepEqual(entries(PAGE, data).options, ['en:-:current', `ja:/ja${PAGE}`, `zh-Hant:/zh-hant${PAGE}`, `es:/es${PAGE}`]);
-  assert.deepEqual(entries(`/zh-hant${PAGE}`, data).options, [`en:${PAGE}`, `ja:/ja${PAGE}`, 'zh-Hant:-:current', `es:/es${PAGE}`]);
+  assert.deepEqual(entries(PAGE, data).options, ['en:-:current', `ja:/ja${PAGE}:draft`, `zh-Hant:/zh-hant${PAGE}:draft`, `es:/es${PAGE}:draft`]);
+  assert.deepEqual(entries(`/zh-hant${PAGE}`, data).options, [`en:${PAGE}`, `ja:/ja${PAGE}:draft`, 'zh-Hant:-:current:draft', `es:/es${PAGE}:draft`]);
   assert.deepEqual(LOCALE_CODES.slice(0, 2), ['en', 'ja']);
 });
 
 test('menu data validation drops anything unexpected', () => {
   const data = parseLanguageAvailability({
-    version: 1,
+    version: 2,
     pages: {
-      [PAGE]: ['ja', 'xx', 'en', 3],
-      '../kpop/x': ['ja'], '/kpop/X': ['ja'], '/kpop/x/': ['ja'], '//kpop': ['ja'], '/kpop/%2e%2e': ['ja'],
-      '/kpop/only-unknown': ['xx'], '/kpop/not-a-list': 'ja',
+      [PAGE]: [ja(false), { code: 'xx', draft: false }, { code: 'en', draft: false }, 3, 'ja', { code: 'es' }, { code: 'es', draft: 'no' }, null],
+      '/kpop/twice': [ja(false), ja(true)], // ambiguous: left out
+      '../kpop/x': [ja(true)], '/kpop/X': [ja(true)], '/kpop/x/': [ja(true)], '//kpop': [ja(true)], '/kpop/%2e%2e': [ja(true)],
+      '/kpop/only-unknown': [{ code: 'xx', draft: true }], '/kpop/not-a-list': ja(true),
     },
   });
-  assert.deepEqual([...data.entries()], [[PAGE, ['ja']]]);
-  for (const bad of [null, 'x', [], { version: 2, pages: { [PAGE]: ['ja'] } }, { version: 1, pages: [] }, { version: 1 }]) {
+  assert.deepEqual([...data.entries()], [[PAGE, [ja(false)]]]);
+  for (const bad of [null, 'x', [], { version: 3, pages: { [PAGE]: [ja(true)] } }, { version: 2, pages: [] }, { version: 2 }, { version: '2', pages: { [PAGE]: [ja(true)] } }]) {
     assert.equal(parseLanguageAvailability(bad).size, 0, JSON.stringify(bad));
   }
+});
+
+test('old version 1 data is ignored safely: no exception, no links', () => {
+  const v1 = { version: 1, pages: { [PAGE]: ['ja'] } };
+  const data = parseLanguageAvailability(v1);
+  assert.equal(data.size, 0);
+  assert.deepEqual(entries(PAGE, data), { current: 'en', options: ['en:-:current'] });
+  assert.deepEqual(entries(`/ja${PAGE}`, data), { current: 'ja', options: ['ja:-:current'] });
 });

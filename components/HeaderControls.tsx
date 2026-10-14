@@ -88,30 +88,47 @@ export function HeaderSearchControl() {
 // Language menu
 //
 // Lists only languages that have a generated page for the current English
-// path, from /api/i18n/available (built at build time from the same list as
-// the locale routes; see app/api/i18n/available/route.ts). The list is
-// fetched the first time a menu is opened. If it cannot be loaded, only the
-// current language is shown: links are never guessed. Translated pages use
-// the English slug under the locale prefix (e.g. /ja/kpop/...).
+// path, from /api/i18n/available (version 2; built at build time from the
+// same list as the locale routes; see app/api/i18n/available/route.ts). Each
+// listed page says whether it is a draft (not published); only drafts get
+// the "Draft preview" label. The list is fetched the first time a menu is
+// opened, and on translated pages right away (for the button label). If it
+// cannot be loaded, or is in another format (for example the old version 1),
+// only the current language is shown: links are never guessed. Translated
+// pages use the English slug under the locale prefix (e.g. /ja/kpop/...).
 // ---------------------------------------------------------------------------
 
 const AVAILABLE_URL = "/api/i18n/available";
+const AVAILABLE_VERSION = 2;
 const SITE_PATH = /^\/[a-z0-9]+(?:-[a-z0-9]+)*(?:\/[a-z0-9]+(?:-[a-z0-9]+)*)*$/;
 
-/** English path -> locales with a translated page. */
-export type LanguageAvailability = ReadonlyMap<string, readonly LocaleCode[]>;
+/** A translated page of one English path in one locale. */
+export type AvailableLocale = { code: LocaleCode; draft: boolean };
+
+/** English path -> translated pages, in locales.ts order. */
+export type LanguageAvailability = ReadonlyMap<string, readonly AvailableLocale[]>;
+
+function isMenuLocale(value: unknown): value is AvailableLocale {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return false;
+  const { code, draft } = value as { code?: unknown; draft?: unknown };
+  return isLocaleCode(code) && LOCALES[code].urlPrefix !== null && typeof draft === "boolean";
+}
 
 /** Validate the menu data. Anything unexpected is dropped, never repaired. */
 export function parseLanguageAvailability(data: unknown): LanguageAvailability {
-  const result = new Map<string, LocaleCode[]>();
+  const result = new Map<string, AvailableLocale[]>();
   if (!data || typeof data !== "object") return result;
   const { version, pages } = data as { version?: unknown; pages?: unknown };
-  if (version !== 1 || !pages || typeof pages !== "object" || Array.isArray(pages)) return result;
-  for (const [sourcePath, codes] of Object.entries(pages)) {
-    if (!SITE_PATH.test(sourcePath) || !Array.isArray(codes)) continue;
-    const locales = LOCALE_CODES.filter(
-      (code) => codes.includes(code) && isLocaleCode(code) && LOCALES[code].urlPrefix !== null,
-    );
+  if (version !== AVAILABLE_VERSION || !pages || typeof pages !== "object" || Array.isArray(pages)) return result;
+  for (const [sourcePath, list] of Object.entries(pages)) {
+    if (!SITE_PATH.test(sourcePath) || !Array.isArray(list)) continue;
+    const valid = list.filter(isMenuLocale);
+    const locales: AvailableLocale[] = [];
+    for (const code of LOCALE_CODES) {
+      const matches = valid.filter((item) => item.code === code);
+      // A locale listed more than once is ambiguous: it is left out.
+      if (matches.length === 1) locales.push({ code, draft: matches[0].draft });
+    }
     if (locales.length) result.set(sourcePath, locales);
   }
   return result;
@@ -122,6 +139,8 @@ export type LanguageOption = {
   /** Where the option leads; null for the current language. */
   href: string | null;
   current: boolean;
+  /** The translated page is not published (shown with "Draft preview"). Always false for English. */
+  draft: boolean;
 };
 
 /**
@@ -137,17 +156,19 @@ export function languageOptions(
   const path = pathname || "/";
   const englishPath = current.urlPrefix === null ? path : path.slice(current.urlPrefix.length + 1) || "/";
   const translated = availability?.get(englishPath) ?? [];
-  if (current.urlPrefix !== null && !translated.includes(current.code)) {
-    return { current, options: [{ locale: current, href: null, current: true }] };
+  const listed = (code: LocaleCode) => translated.find((item) => item.code === code);
+  if (current.urlPrefix !== null && !listed(current.code)) {
+    // Not in the data: the page's own status is unknown, so it is not called published either.
+    return { current, options: [{ locale: current, href: null, current: true, draft: false }] };
   }
-  const codes = LOCALE_CODES.filter((code) => LOCALES[code].urlPrefix === null || translated.includes(code));
+  const codes = LOCALE_CODES.filter((code) => LOCALES[code].urlPrefix === null || listed(code));
   return {
     current,
     options: codes.map((code) => {
       const locale = LOCALES[code];
       const isCurrent = code === current.code;
       const href = locale.urlPrefix === null ? englishPath : `/${locale.urlPrefix}${englishPath}`;
-      return { locale, href: isCurrent ? null : href, current: isCurrent };
+      return { locale, href: isCurrent ? null : href, current: isCurrent, draft: listed(code)?.draft ?? false };
     }),
   };
 }
@@ -182,7 +203,21 @@ export function HeaderLanguageControl() {
   const [availability, setAvailability] = useState<LanguageAvailability | null>(availabilityCache);
   const [loadState, setLoadState] = useState<LoadState>(availabilityCache ? "ready" : "idle");
   const { current, options } = languageOptions(pathname, availability);
-  const draft = current.support === "preview";
+  const draft = options.some((option) => option.current && option.draft);
+  const translatedPage = current.urlPrefix !== null;
+
+  // On a translated page the button says whether it is a draft, so the data is
+  // loaded right away there (English pages load it when the menu opens).
+  useEffect(() => {
+    if (!translatedPage || availability) return;
+    loadAvailability().then(
+      (data) => {
+        setAvailability(data);
+        setLoadState("ready");
+      },
+      () => setLoadState("error"),
+    );
+  }, [translatedPage, availability]);
 
   function toggle() {
     const opening = !open;
@@ -220,7 +255,7 @@ export function HeaderLanguageControl() {
         >
           <ul aria-label="Choose language" className="flex flex-col gap-0.5">
             {options.map((option) => {
-              const note = option.locale.support === "preview" ? "Draft preview" : null;
+              const note = option.draft ? "Draft preview" : null;
               const content = (
                 <>
                   <span lang={option.locale.htmlLang}>{option.locale.nativeName}</span>
