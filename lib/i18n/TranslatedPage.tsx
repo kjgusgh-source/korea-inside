@@ -53,20 +53,39 @@ export type TranslationDocument = {
   units: { id: string; sourceHash: string; text: string }[];
 };
 
-/** UI strings shown around translated content (not article text). */
+/**
+ * UI strings shown around translated content (not article text).
+ * - preview*: notice for a translation that is not public (drafts on Preview).
+ * - published*: notice for a translation that passed the publish policy. It
+ *   says only that the page is a translation of the English article; it must
+ *   not claim a quality or native review.
+ */
 export type PreviewUiStrings = {
   previewLabel: string;
   previewBody: string;
+  publishedLabel: string;
+  publishedBody: string;
   englishOriginal: string;
   englishLinkBadge: string;
   englishLinkHidden: string;
 };
+export type TranslationUiStrings = PreviewUiStrings;
 
-/** Japanese UI strings used around translated content (not article text). */
+/** Which notice a translated page shows. */
+export type NoticeKind = "preview" | "published";
+
+/**
+ * Japanese UI strings used around translated content (not article text).
+ * The published* strings are a draft for the Japanese language review; they
+ * are not approved copy yet.
+ */
 export const JA_UI: PreviewUiStrings = {
   previewLabel: "確認用プレビュー（下書き）",
   previewBody:
     "この日本語版は確認用の下書きで、一般には公開していません。サイトのメニューとフッター、「EN」の印が付いたリンクの移動先は英語のページです。",
+  publishedLabel: "英語版の記事の翻訳です",
+  publishedBody:
+    "この記事は、HAEMILの英語の記事を日本語に訳したものです。サイトのメニューとフッター、「EN」の印が付いたリンクの移動先は英語のページです。",
   englishOriginal: "英語の原文を読む",
   englishLinkBadge: "EN",
   englishLinkHidden: "（英語のページ）",
@@ -283,15 +302,22 @@ function renderNode(node: StructureNode, key: string, ctx: Context): ReactNode {
   return <Tag {...props}>{children}</Tag>;
 }
 
-/** Notice shown above translated preview content. */
-export function PreviewNotice({ englishPath, ui = JA_UI }: { englishPath: string; ui?: Ui }) {
+/**
+ * Notice shown above translated content. "preview" for a translation that is
+ * not public, "published" for one that passed the publish policy. Both link
+ * to the English original.
+ */
+export function TranslationNotice({ englishPath, ui = JA_UI, kind }: { englishPath: string; ui?: Ui; kind: NoticeKind }) {
+  const label = kind === "published" ? ui.publishedLabel : ui.previewLabel;
+  const body = kind === "published" ? ui.publishedBody : ui.previewBody;
   return (
     <aside
-      aria-label={ui.previewLabel}
+      aria-label={label}
+      data-notice={kind}
       className="rounded-2xl border border-[var(--gold)] bg-[var(--card)] px-5 py-4 text-sm leading-7 text-[var(--text)] md:px-6"
     >
-      <p className="font-semibold text-[var(--gold)]">{ui.previewLabel}</p>
-      <p className="mt-1 text-[var(--muted)]">{ui.previewBody}</p>
+      <p className="font-semibold text-[var(--gold)]">{label}</p>
+      <p className="mt-1 text-[var(--muted)]">{body}</p>
       <p className="mt-2">
         <Link href={englishPath} hrefLang="en" className="font-semibold text-[var(--accent)] underline underline-offset-4 hover:opacity-80">
           {ui.englishOriginal}
@@ -300,6 +326,11 @@ export function PreviewNotice({ englishPath, ui = JA_UI }: { englishPath: string
       </p>
     </aside>
   );
+}
+
+/** Notice for a translation that is not public (kept for existing callers). */
+export function PreviewNotice({ englishPath, ui = JA_UI }: { englishPath: string; ui?: Ui }) {
+  return <TranslationNotice englishPath={englishPath} ui={ui} kind="preview" />;
 }
 
 export default function TranslatedPage({
