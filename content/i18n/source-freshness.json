@@ -23,8 +23,8 @@
       "sourceJson": "content/translations/source/kpop/what-does-sunbae-and-hoobae-mean-in-kpop.json",
       "status": "MATCH",
       "extractorVersion": "extract-pilot-1",
-      "sourceJsonSha256": "sha256:9d016d46cf45076edd8f6f565078eac23518195e62ff3f236056a029756b1998",
-      "pageSha256": "sha256:ee6b357827a84ad35369cb1a17520ba78c597c017f4d18fc26343683ad6fb974",
+      "sourceJsonSha256": "sha256:76e582d47d034fd79c98a1ed14f1577b95e746ecd314acb88359e4347428a599",
+      "pageSha256": "sha256:d2a8bf58b159931e2c6c84324efc12f6995dfe62f4f0d6076ece7838210439fd",
       "notCompared": [
         "json-ld"
       ]

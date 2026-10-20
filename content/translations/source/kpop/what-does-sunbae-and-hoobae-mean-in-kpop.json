@@ -1287,7 +1287,7 @@
       "group": "kpop",
       "path": "page>main[1]>div[1]>article[1]>div[1]>section#kpop>p[2]",
       "origin": "jsx",
-      "text": "Take BoA, who debuted in 2000. During her 20th-anniversary press event, she called veteran singer Na Hoon-a {em1}sunbaenim{/em1} while discussing what she had learned from watching his performance ({a1}Yonhap News{/a1}). In 2022, Yuna from the rookie group CSR called BoA {em2}sunbaenim{/em2} when naming her as a role model ({a2}CBS NoCut News{/a2}). BoA can be a senior to one artist and a junior to another.",
+      "text": "Take BoA, who debuted in 2000. During her 20th-anniversary press event, she called veteran singer Na Hoon-a {em1}sunbaenim{/em1} while discussing how watching his performance had made her reflect on herself ({a1}Yonhap News{/a1}). In 2022, Yuna from the rookie group CSR called BoA {em2}sunbaenim{/em2} when naming her as a role model ({a2}CBS NoCut News{/a2}). BoA can be a senior to one artist and a junior to another.",
       "attrs": {},
       "placeholders": {
         "em1": {
@@ -1317,7 +1317,7 @@
           }
         }
       },
-      "hash": "7456ce7dc1ad662134cd51dd7592a44eae843b12ede27aa2173904a6d1f9fac0",
+      "hash": "34fad943d36d490b8c3670991a575f501ed46a77c7668171246644bfa3eaeea9",
       "translate": true,
       "protect": [],
       "firstPerson": false,
