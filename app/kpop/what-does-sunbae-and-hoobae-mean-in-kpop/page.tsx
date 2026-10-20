@@ -294,7 +294,7 @@ export default function SunbaeHoobaePage() {
                 <p>
                   Take BoA, who debuted in 2000. During her 20th-anniversary press event,
                   she called veteran singer Na Hoon-a <em>sunbaenim</em> while discussing
-                  what she had learned from watching his performance
+                  how watching his performance had made her reflect on herself
                   (<a className={externalClass} href="https://www.yna.co.kr/view/AKR20201201114000005"
                   target="_blank" rel="noopener noreferrer">Yonhap News</a>).
                   In 2022, Yuna from the rookie group CSR called BoA <em>sunbaenim</em>{" "}
