@@ -57,8 +57,8 @@ export type TranslationDocument = {
  * UI strings shown around translated content (not article text).
  * - preview*: notice for a translation that is not public (drafts on Preview).
  * - published*: notice for a translation that passed the publish policy. It
- *   says only that the page is a translation of the English article; it must
- *   not claim a quality or native review.
+ *   says that the page is a translation of the English article and how it was
+ *   checked; it must not claim a quality or native review that did not happen.
  */
 export type PreviewUiStrings = {
   previewLabel: string;
@@ -76,16 +76,20 @@ export type NoticeKind = "preview" | "published";
 
 /**
  * Japanese UI strings used around translated content (not article text).
- * The published* strings are a draft for the Japanese language review; they
- * are not approved copy yet.
+ * The published* strings are a candidate the owner is reviewing for the
+ * Sunbae noindex pilot (docs/i18n/ja-editorial-review.md); they are not
+ * approved copy yet. They say the translation was made with AI and that no
+ * native Japanese speaker has checked it (0 native reviews). They apply to
+ * every published Japanese page, so they must be revisited before a page
+ * with a native review is published.
  */
 export const JA_UI: PreviewUiStrings = {
   previewLabel: "確認用プレビュー（下書き）",
   previewBody:
     "この日本語版は確認用の下書きで、一般には公開していません。サイトのメニューとフッター、「EN」の印が付いたリンクの移動先は英語のページです。",
-  publishedLabel: "英語版の記事の翻訳です",
+  publishedLabel: "この記事は英語版からの翻訳です",
   publishedBody:
-    "この記事は、HAEMILの英語の記事を日本語に訳したものです。サイトのメニューとフッター、「EN」の印が付いたリンクの移動先は英語のページです。",
+    "HAEMILの英語記事を、AIを使って日本語に翻訳・編集しました。日本語を母語とする人による確認は行っていません。メニューやフッター、「EN」が付いたリンクは、英語のページにつながります。",
   englishOriginal: "英語の原文を読む",
   englishLinkBadge: "EN",
   englishLinkHidden: "（英語のページ）",
@@ -306,6 +310,11 @@ function renderNode(node: StructureNode, key: string, ctx: Context): ReactNode {
  * Notice shown above translated content. "preview" for a translation that is
  * not public, "published" for one that passed the publish policy. Both link
  * to the English original.
+ *
+ * The label and link colors mix the brand color with --text so that they reach
+ * 4.5:1 on --card in both themes. The link changes color on hover instead of
+ * fading, so the link and its "EN" mark keep 4.5:1 there too. This applies to
+ * the notice only; the site color variables are unchanged.
  */
 export function TranslationNotice({ englishPath, ui = JA_UI, kind }: { englishPath: string; ui?: Ui; kind: NoticeKind }) {
   const label = kind === "published" ? ui.publishedLabel : ui.previewLabel;
@@ -316,10 +325,10 @@ export function TranslationNotice({ englishPath, ui = JA_UI, kind }: { englishPa
       data-notice={kind}
       className="rounded-2xl border border-[var(--gold)] bg-[var(--card)] px-5 py-4 text-sm leading-7 text-[var(--text)] md:px-6"
     >
-      <p className="font-semibold text-[var(--gold)]">{label}</p>
+      <p className="font-semibold text-[color-mix(in_srgb,var(--gold)_60%,var(--text))]">{label}</p>
       <p className="mt-1 text-[var(--muted)]">{body}</p>
       <p className="mt-2">
-        <Link href={englishPath} hrefLang="en" className="font-semibold text-[var(--accent)] underline underline-offset-4 hover:opacity-80">
+        <Link href={englishPath} hrefLang="en" className="font-semibold text-[color-mix(in_srgb,var(--accent)_75%,var(--text))] underline underline-offset-4 hover:text-[var(--text)]">
           {ui.englishOriginal}
           <EnglishMark ui={ui} />
         </Link>
