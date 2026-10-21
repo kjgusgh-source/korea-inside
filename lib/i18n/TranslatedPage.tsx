@@ -210,6 +210,7 @@ type Context = {
   typography: Typography;
   localizedPaths: Map<string, string>;
   afterComponent: Record<string, ReactNode>;
+  articleEnd?: ReactNode;
 };
 
 /** Render a link. Internal links without a page in this language are marked as English. */
@@ -295,6 +296,8 @@ function renderNode(node: StructureNode, key: string, ctx: Context): ReactNode {
     children = renderText(unit, text, ctx);
   } else {
     children = (node.children ?? []).map((child, i) => renderNode(child, `${key}.${i}`, ctx));
+    // Optional block after the last child of the article (outside the translated units).
+    if (tag === "article" && ctx.articleEnd) children = [...(children as ReactNode[]), <Fragment key={`${key}.end`}>{ctx.articleEnd}</Fragment>];
   }
 
   if (tag === "a") return renderLink(attrs, children, key, ctx);
@@ -348,12 +351,15 @@ export default function TranslatedPage({
   typography = JA_TYPOGRAPHY,
   localizedPaths = new Map(),
   afterComponent = {},
+  articleEnd,
 }: {
   prepared: PreparedTranslation;
   ui?: Ui;
   typography?: Typography;
   localizedPaths?: Map<string, string>;
   afterComponent?: Record<string, ReactNode>;
+  /** Rendered once, after the last child of the article element. */
+  articleEnd?: ReactNode;
 }) {
   const ctx: Context = {
     source: prepared.source,
@@ -363,6 +369,7 @@ export default function TranslatedPage({
     typography,
     localizedPaths,
     afterComponent,
+    articleEnd,
   };
   return <>{renderNode(prepared.source.structure, "root", ctx)}</>;
 }
