@@ -171,6 +171,32 @@ E8 also changed the English page (`page.tsx`, one sentence, same bytes as #110),
 re-extracted the source JSON (only `kpop-p-b51e6858` changed; ID kept) and
 rewrote the source freshness record (two Sunbae hashes).
 
+## E9: Gemini 4 Argon review (owner-provided external report)
+
+**Source of this record:** an external review report by Gemini 4 Argon that the
+owner received and passed on. The report itself is not stored in this
+repository, and its findings were not reproduced or verified here. Only the
+counts and the three applied changes below come from it; everything else in
+this section was checked in the repository.
+
+| Item | Value |
+|---|---|
+| Reviewer | Gemini 4 Argon (AI; reported by the owner) |
+| Reviewed version | PR #113 HEAD `8783212`, from two review files made from the source and Japanese JSON in reading order: a Japanese reading version and an English–Japanese unit-by-unit version. Neither file included earlier review opinions. |
+| Findings (Gemini's own grading) | P0: 0 · P1: 3 · P2: 7 |
+| Owner decision | The 3 P1 findings were applied in E9. The 7 P2 findings were reviewed and kept as they are; they are listed only in the owner's report. |
+| Human native-Japanese review | Still **0** |
+| Quality, production and release approval | None |
+
+P1 changes applied in E9 (text only; IDs, source hashes, placeholders, link
+targets and Hangul unchanged):
+
+| Unit | Before | After | Reason |
+|---|---|---|---|
+| `meaning-p-afaf986d` (2nd sentence) | 後から来た人と説明されています。 | 後から加わった人と説明されています。 | 来た can read as arriving later in a physical sense; 加わった keeps the sense of joining the same field or school later. The dictionary link {a2} is unchanged. |
+| `work-table-workplaceterms-k4e96b6-td-e5604a65` (table row 대리, column 「読みと意味」) | テリ · 英訳はassistant manager | テリ · 英語では「assistant manager（アシスタントマネージャー）」と訳される役職 | Tells Japanese readers what the English title means, in line with the other cells of the column. The title is not replaced with a Japanese rank such as 主任 or 係長. |
+| `relationships-p-91068666` (2nd sentence) | 苦労して身につけたことを伝えたりすることもあります。 | 苦労して身につけたことを伝えたりもします。 | 「こともあります」 ended three sentences of the paragraph. The English "may" stays in the paragraph through 「距離が縮まると…こともあります」 before it and 「…こともあります」 after it. |
+
 ## AI review history and scope
 
 Only what can be traced is recorded. A reviewer is not listed as having read
@@ -182,14 +208,25 @@ all 71 units unless that is documented.
 | Claude Sonnet (round 1 second pass) | Read-only review | All 71 units; same model family, so not independent |
 | ChatGPT | Cross-review findings that the owner used for E6; independent check of the PR #109 diff and the E6 translation JSON (both reported by the owner) | No review record in this repository. Records the owner keeps outside it were not checked here. **Not recorded as a full 71-unit review.** |
 | Gemini (model version not recorded) | Cross-review findings used for E6 and for the E7 list of 12 units to re-check (reported by the owner) | No review record in this repository. Records the owner keeps outside it were not checked here. **Not recorded as a full 71-unit review.** |
-| Owner | Chose which proposals to apply in E5, E6 and E8 | Decisions only; not a native review |
+| Gemini 4 Argon (E9) | Independent review of the two E9 review files made from PR #113 HEAD `8783212` (reported by the owner: P0 0, P1 3, P2 7) | The model name and counts come from the owner's external report. The report is not in this repository and was not checked here. |
+| Owner | Chose which proposals to apply in E5, E6, E8 and E9 | Decisions only; not a native review |
 
 A model name or version is listed only when a review record names it.
 
 AI cross-review, even across model families, is not a human native-Japanese
 review. The models can share the same blind spots.
 
-## Latest automated checks (E8, PR #111)
+## Latest automated checks (E9)
+
+- Exactly 3 unit texts changed; 71 units, IDs, source hashes, placeholders,
+  link targets, Hangul, numbers, `glossaryVersion` and `status: draft` unchanged.
+- Validator: OK. The glossary checker gives the same 15 findings as #113
+  (0 blocking).
+- `check-sources`: MATCH 2. Source JSON and source freshness record unchanged.
+- Tests 124/124; English pages, sitemap and robots unchanged; Japanese pages
+  stay 404 on Production.
+
+## Automated checks (E8, PR #111)
 
 - Validator: OK. 71 units; status `draft`. The glossary checker gives the same
   findings as #109 (0 blocking).
@@ -210,6 +247,7 @@ review would address the first group.
 | 「役職という軸が加わる」 (`work-h2-922eea52`) | Open (native check; kept in E5). |
 | Tone of the first-person paragraphs | Open (native check). |
 | Naturalness of the sentences changed in E5–E8 (13 edits across 11 units) | Open (native check). |
+| Naturalness of the 3 units changed in E9 (Gemini P1) | Open (native check). |
 | Japanese spelling of names and media | ナ・フナ matches one source; ユナ and マーティン not verified; media names kept in English per the glossary. |
 | Reading Korean 선배/후배 as the Japanese 先輩/後輩 system | E7 found no sentence that equates them; still a native check item. 先輩/後輩 are used only for plain English senior/junior, per the glossary. |
 | 320px mobile layout | Checked locally with web fonts replaced (E4–E8). There is no horizontal overflow, and the table scrolls inside its box. The h1 (4 lines) and the kicker break in the middle of a word (e.g. 「ソンベとフ／ベ」). This is a CSS matter, not fixed. |
