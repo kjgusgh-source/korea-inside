@@ -12,6 +12,7 @@ import {
   type TranslationRecord,
 } from "./catalog";
 import { LOCALE_CODES, LOCALES, type LocaleCode } from "./locales";
+import TranslationFeedback from "../../components/TranslationFeedback";
 import TranslatedPage, {
   PREVIEW_UI,
   TranslationNotice,
@@ -106,8 +107,23 @@ function localizedPaths(locale: LocaleCode): Map<string, string> {
   );
 }
 
+/**
+ * Reader feedback at the end of the article: the Japanese Sunbae pilot only,
+ * and only once it is published (production publish policy passed and status
+ * approved). Drafts on Preview and every other page never show it.
+ */
+const FEEDBACK_PAGES: Readonly<Partial<Record<LocaleCode, Readonly<Record<string, string>>>>> = {
+  ja: { "/kpop/what-does-sunbae-and-hoobae-mean-in-kpop": "Japanese translation feedback — Sunbae" },
+};
+
+function feedbackTopic(locale: LocaleCode, item: Renderable): string | null {
+  if (!item.published || item.entry.status !== "approved" || !item.entry.sourcePath) return null;
+  return FEEDBACK_PAGES[locale]?.[item.entry.sourcePath] ?? null;
+}
+
 function renderElement(locale: LocaleCode, item: Renderable) {
   const ui = PREVIEW_UI[locale]!;
+  const topic = feedbackTopic(locale, item);
   return (
     <TranslatedPage
       prepared={item.prepared}
@@ -117,6 +133,7 @@ function renderElement(locale: LocaleCode, item: Renderable) {
       afterComponent={{
         SiteHeader: <TranslationNotice englishPath={item.entry.sourcePath!} ui={ui} kind={item.published ? "published" : "preview"} />,
       }}
+      articleEnd={topic ? <TranslationFeedback topicTitle={topic} /> : undefined}
     />
   );
 }
