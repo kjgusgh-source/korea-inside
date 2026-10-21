@@ -310,6 +310,11 @@ function renderNode(node: StructureNode, key: string, ctx: Context): ReactNode {
  * Notice shown above translated content. "preview" for a translation that is
  * not public, "published" for one that passed the publish policy. Both link
  * to the English original.
+ *
+ * The label and link colors mix the brand color with --text so that they reach
+ * 4.5:1 on --card in both themes. The link changes color on hover instead of
+ * fading, so the link and its "EN" mark keep 4.5:1 there too. This applies to
+ * the notice only; the site color variables are unchanged.
  */
 export function TranslationNotice({ englishPath, ui = JA_UI, kind }: { englishPath: string; ui?: Ui; kind: NoticeKind }) {
   const label = kind === "published" ? ui.publishedLabel : ui.previewLabel;
@@ -320,10 +325,10 @@ export function TranslationNotice({ englishPath, ui = JA_UI, kind }: { englishPa
       data-notice={kind}
       className="rounded-2xl border border-[var(--gold)] bg-[var(--card)] px-5 py-4 text-sm leading-7 text-[var(--text)] md:px-6"
     >
-      <p className="font-semibold text-[var(--gold)]">{label}</p>
+      <p className="font-semibold text-[color-mix(in_srgb,var(--gold)_60%,var(--text))]">{label}</p>
       <p className="mt-1 text-[var(--muted)]">{body}</p>
       <p className="mt-2">
-        <Link href={englishPath} hrefLang="en" className="font-semibold text-[var(--accent)] underline underline-offset-4 hover:opacity-80">
+        <Link href={englishPath} hrefLang="en" className="font-semibold text-[color-mix(in_srgb,var(--accent)_75%,var(--text))] underline underline-offset-4 hover:text-[var(--text)]">
           {ui.englishOriginal}
           <EnglishMark ui={ui} />
         </Link>
