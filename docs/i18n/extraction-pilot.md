@@ -304,6 +304,18 @@ nothing in the repository checks it, so it is not a second gate today.
 - Placeholder checks cannot see meaning: a link around the wrong words, a
   mistranslated term or an invented fact can still pass. Native review stays
   mandatory.
+- **Narrow exception (2026-10-21).** Native review is still the default for
+  every translated page. The owner chose one exception: the Japanese Sunbae
+  page (`/ja/kpop/what-does-sunbae-and-hoobae-mean-in-kpop`) may be published
+  as a **noindex** pilot on the basis of AI cross-review, after the owner
+  separately accepts the risks and gives the final approvals.
+  - Scope, review history and open risks: `ja-editorial-review.md`.
+  - Automated checks and AI review are not a human native review and are not
+    recorded as one.
+  - The exception does not extend to any other page, including the Japanese
+    anime page.
+  - Quality, production and indexing approvals stay separate (see
+    `catalog-contract.md`); the exception includes no indexing approval.
 - `firstPerson` and `protect` are heuristics that guide review. They do not
   replace it.
 
