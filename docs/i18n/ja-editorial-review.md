@@ -180,9 +180,11 @@ all 71 units unless that is documented.
 |---|---|---|
 | Claude (Cowork sessions) | Drafted the translation; round 1 editorial pass; E4 unit review; E7 context review; source checks with the web fetch tool | All 71 units (round 1, E4, E7) |
 | Claude Sonnet (round 1 second pass) | Read-only review | All 71 units; same model family, so not independent |
-| ChatGPT | Cross-review findings that the owner used for E6; independent check of the PR #109 diff and the E6 translation JSON (reported by the owner) | Not documented in this repository. **Not recorded as a full 71-unit review.** |
-| Gemini (Gemini 3.1 Pro and Gemini 4 Argon, as named by the owner) | Cross-review findings used for E6 and for the E7 list of 12 units to re-check | Not documented in this repository. **Not recorded as a full 71-unit review.** |
+| ChatGPT | Cross-review findings that the owner used for E6; independent check of the PR #109 diff and the E6 translation JSON (both reported by the owner) | No review record in this repository. Records the owner keeps outside it were not checked here. **Not recorded as a full 71-unit review.** |
+| Gemini (model version not recorded) | Cross-review findings used for E6 and for the E7 list of 12 units to re-check (reported by the owner) | No review record in this repository. Records the owner keeps outside it were not checked here. **Not recorded as a full 71-unit review.** |
 | Owner | Chose which proposals to apply in E5, E6 and E8 | Decisions only; not a native review |
+
+A model name or version is listed only when a review record names it.
 
 AI cross-review, even across model families, is not a human native-Japanese
 review. The models can share the same blind spots.
