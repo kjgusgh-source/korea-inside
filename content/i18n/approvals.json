@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "records": [
+    {
+      "kind": "quality",
+      "locale": "ja",
+      "sourcePath": "/kpop/what-does-sunbae-and-hoobae-mean-in-kpop",
+      "sourceSha256": "sha256:76e582d47d034fd79c98a1ed14f1577b95e746ecd314acb88359e4347428a599",
+      "translationSha256": "sha256:9406fac6a5acbe32ef7779eb1017baae90a15f79c05e3d3563af644df0e3b233",
+      "approvedBy": "HAEMIL site owner (policy B: AI-assisted translation, no native-speaker review)",
+      "approvedAt": "2026-10-22T13:57:50+09:00"
+    },
+    {
+      "kind": "production",
+      "locale": "ja",
+      "sourcePath": "/kpop/what-does-sunbae-and-hoobae-mean-in-kpop",
+      "sourceSha256": "sha256:76e582d47d034fd79c98a1ed14f1577b95e746ecd314acb88359e4347428a599",
+      "translationSha256": "sha256:9406fac6a5acbe32ef7779eb1017baae90a15f79c05e3d3563af644df0e3b233",
+      "approvedBy": "HAEMIL site owner (policy B: AI-assisted translation, no native-speaker review)",
+      "approvedAt": "2026-10-22T13:57:50+09:00"
+    }
+  ]
+}
