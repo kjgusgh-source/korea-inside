@@ -93,7 +93,7 @@ export const LOCALES: Readonly<Record<LocaleCode, LocaleConfig>> = Object.freeze
     englishName: "Japanese",
     displayCode: "JA",
     support: "preview",
-    publication: "not-public",
+    publication: "public",
     typography: JAPANESE_TYPOGRAPHY,
   },
   "zh-Hant": {
