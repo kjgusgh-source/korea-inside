@@ -9,6 +9,19 @@
  * imports resolve to ".ts", and "server-only" (provided by Next.js) is
  * replaced by an empty module. Fixtures are written to a temporary folder
  * outside the repository; repository files are only read.
+ *
+ * Release state. The policy tests below were written for a Japanese locale
+ * that is not public, and they keep testing exactly that: they use a copy of
+ * the modules in which lib/i18n/locales.ts marks Japanese "not-public"
+ * ("?ja-private", changed in memory by the module loader; the file on disk is
+ * only read), and their fixtures start from the Sunbae translation as a
+ * draft. Only the "real data" tests read the repository as it is. They know
+ * two states and fail on anything else:
+ *   - before release: no approval file, Japanese not public, every Japanese
+ *     translation a draft;
+ *   - Sunbae released (policy B): Japanese public, Sunbae approved with
+ *     exactly one quality and one production record for its current bytes,
+ *     no indexing record, no record for any other page.
  */
 import { register } from 'node:module';
 import { test } from 'node:test';
@@ -19,14 +32,20 @@ import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
+const JA_PRIVATE = '?ja-private';
 const TYPESCRIPT = pathToFileURL(path.join(path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..'), 'node_modules/typescript/lib/typescript.js')).href;
 // Also loads .tsx (compiled with the project's own TypeScript) and Next.js
 // subpaths such as "next/navigation", for the route tests at the end.
 register('data:text/javascript,' + encodeURIComponent(`
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
+const REPO_URL = ${JSON.stringify(pathToFileURL(path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..')).href + '/')};
+const PRIVATE = ${JSON.stringify(JA_PRIVATE)};
+// The publication value of the Japanese entry only (exactly one match is required).
+const JA_PUBLICATION = /(\\n  ja: \\{[^}]*?\\n    publication: )"(?:public|not-public)",/g;
 let ts;
-export async function resolve(specifier, context, next) {
+const own = (url) => url.startsWith(REPO_URL) && !url.slice(REPO_URL.length).startsWith('node_modules/');
+async function resolveInner(specifier, context, next) {
   if (specifier === 'server-only') return { url: 'data:text/javascript,export {}', shortCircuit: true };
   try {
     return await next(specifier, context);
@@ -36,24 +55,46 @@ export async function resolve(specifier, context, next) {
     try { return await next(specifier + '.ts', context); } catch { return next(specifier + '.tsx', context); }
   }
 }
+export async function resolve(specifier, context, next) {
+  const parentPrivate = Boolean(context.parentURL && context.parentURL.endsWith(PRIVATE));
+  const parentURL = parentPrivate ? context.parentURL.slice(0, -PRIVATE.length) : context.parentURL;
+  const wantPrivate = parentPrivate || specifier.endsWith(PRIVATE);
+  const bare = specifier.endsWith(PRIVATE) ? specifier.slice(0, -PRIVATE.length) : specifier;
+  const result = await resolveInner(bare, { ...context, parentURL }, next);
+  // The "Japanese not public" copy: every repository module below it is loaded again with the query.
+  if (wantPrivate && own(result.url)) return { ...result, url: result.url + PRIVATE, shortCircuit: true };
+  return result;
+}
 export async function load(url, context, next) {
-  if (url.startsWith('file:') && url.endsWith('.tsx')) {
+  const isPrivate = url.endsWith(PRIVATE);
+  const plain = isPrivate ? url.slice(0, -PRIVATE.length) : url;
+  if (plain.startsWith('file:') && /\\.tsx?$/.test(plain) && (isPrivate || plain.endsWith('.tsx'))) {
     ts ??= (await import(${JSON.stringify(TYPESCRIPT)})).default;
-    const source = readFileSync(fileURLToPath(url), 'utf8');
+    let source = readFileSync(fileURLToPath(plain), 'utf8');
+    if (isPrivate && plain.endsWith('/lib/i18n/locales.ts')) {
+      if ([...source.matchAll(JA_PUBLICATION)].length !== 1) throw new Error('locales.ts: Japanese publication not found as expected');
+      source = source.replace(JA_PUBLICATION, (_, head) => head + '"not-public",');
+    }
     const { outputText } = ts.transpileModule(source, {
-      fileName: fileURLToPath(url),
+      fileName: fileURLToPath(plain),
       compilerOptions: { module: ts.ModuleKind.ESNext, target: ts.ScriptTarget.ES2022, jsx: ts.JsxEmit.ReactJSX },
     });
     return { format: 'module', source: outputText, shortCircuit: true };
   }
-  if (url.startsWith('file:') && url.endsWith('.json')) return { ...(await next(url, { ...context, importAttributes: { type: 'json' } })), shortCircuit: true };
+  if (plain.startsWith('file:') && plain.endsWith('.json')) {
+    return { format: 'json', source: readFileSync(fileURLToPath(plain), 'utf8'), shortCircuit: true };
+  }
   return next(url, context);
 }`));
 
 const {
   approvalRecords, catalogDecision, checkSourcePath, clearCatalogCache, getTranslation, isRealDateTime, listTranslations, loadCatalog,
   publishDecision, renderableEntries, resolveEnvironment, routeSegments,
-} = await import('../../lib/i18n/catalog.ts');
+} = await import('../../lib/i18n/catalog.ts' + JA_PRIVATE);
+// The repository as it is (for the "real data" tests only).
+const live = await import('../../lib/i18n/catalog.ts');
+const { LOCALES } = await import('../../lib/i18n/locales.ts');
+const PRIVATE_LOCALES = (await import('../../lib/i18n/locales.ts' + JA_PRIVATE)).LOCALES;
 
 const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const REAL_ROOT = path.join(REPO, 'content/translations');
@@ -64,6 +105,11 @@ const readJson = (file) => JSON.parse(readFileSync(file, 'utf8'));
 const writeJson = (file, value) => { mkdirSync(path.dirname(file), { recursive: true }); writeFileSync(file, `${JSON.stringify(value, null, 2)}\n`); };
 const problems = (entry) => entry.errors.map((e) => e.problem);
 const readdirRecursive = (dir) => readdirSync(dir, { recursive: true });
+
+// Release state of the repository (see the header): "released" once the approval file exists.
+const RELEASED = existsSync(path.join(REPO, 'content/i18n/approvals.json'));
+const PUBLIC_PAGES = RELEASED ? [PAGE] : [];
+const SUNBAE_STATUS = RELEASED ? 'approved' : 'draft';
 
 const temps = [];
 /**
@@ -80,6 +126,12 @@ function fixture(edit = () => {}) {
     mkdirSync(path.dirname(path.join(root, dir, REL)), { recursive: true });
     cpSync(path.join(REAL_ROOT, dir, REL), path.join(root, dir, REL));
   }
+  // Fixtures start from the Sunbae translation as a draft, whatever the committed status is.
+  const jaFile = path.join(root, 'ja', REL);
+  const text = readFileSync(jaFile, 'utf8');
+  const committed = text.split('"status": "approved"').length - 1;
+  assert.ok(committed <= 1, 'one status field');
+  if (committed === 1) writeFileSync(jaFile, text.replace('"status": "approved"', '"status": "draft"'));
   edit(root);
   clearCatalogCache();
   return root;
@@ -107,10 +159,10 @@ function approvals(entry, kinds = ['quality', 'production', 'indexing'], overrid
 // Real repository data
 // ---------------------------------------------------------------------------
 
-test('real data: the Japanese Sunbae draft is found and valid, with verified source freshness (committed MATCH record)', () => {
-  clearCatalogCache();
+test('real data: the Japanese Sunbae translation is found and valid, with verified source freshness (committed MATCH record)', () => {
+  live.clearCatalogCache();
   const before = sha(path.join(REAL_ROOT, 'ja', REL));
-  const catalog = loadCatalog({ root: REAL_ROOT });
+  const catalog = live.loadCatalog({ root: REAL_ROOT });
   assert.deepEqual(catalog.issues, []);
   // The repository may hold any number of translations; this test checks the Sunbae one.
   const keys = catalog.entries.map((e) => e.key);
@@ -122,7 +174,7 @@ test('real data: the Japanese Sunbae draft is found and valid, with verified sou
   assert.equal(entry.locale, 'ja');
   assert.equal(entry.sourcePath, PAGE);
   assert.equal(entry.urlPath, `/ja${PAGE}`);
-  assert.equal(entry.status, 'draft');
+  assert.equal(entry.status, SUNBAE_STATUS);
   assert.equal(entry.validation, 'valid');
   assert.equal(entry.sourceFreshness, 'verified');
   assert.deepEqual(entry.sourceFreshnessDetail, { reason: 'matches the source freshness record', notCompared: ['json-ld'] });
@@ -132,39 +184,52 @@ test('real data: the Japanese Sunbae draft is found and valid, with verified sou
   assert.equal(entry.files.translation.sha256, before);
   assert.equal(entry.files.source.sha256, sha(path.join(REAL_ROOT, 'source', REL)));
   assert.equal(entry.englishPageFile, 'app/kpop/what-does-sunbae-and-hoobae-mean-in-kpop/page.tsx');
-  assert.deepEqual(routeSegments(entry), ['kpop', 'what-does-sunbae-and-hoobae-mean-in-kpop']);
-  const record = getTranslation('ja', PAGE, { root: REAL_ROOT });
+  assert.deepEqual(live.routeSegments(entry), ['kpop', 'what-does-sunbae-and-hoobae-mean-in-kpop']);
+  const record = live.getTranslation('ja', PAGE, { root: REAL_ROOT });
   assert.equal(record.entry, entry);
-  assert.equal(record.translation.status, 'draft');
+  assert.equal(record.translation.status, SUNBAE_STATUS);
   // Reading never changes the file.
   assert.equal(sha(path.join(REAL_ROOT, 'ja', REL)), before);
 });
 
 test('real data: publish decisions per environment', () => {
-  clearCatalogCache();
-  const entry = getTranslation('ja', PAGE, { root: REAL_ROOT }).entry;
+  live.clearCatalogCache();
+  const entry = live.getTranslation('ja', PAGE, { root: REAL_ROOT }).entry;
+  const decide = (environment, e = entry) => live.catalogDecision(e, environment, { root: REAL_ROOT });
   for (const environment of ['preview', 'development']) {
-    const d = publishDecision(entry, environment);
+    const d = decide(environment);
     assert.equal(d.render, true, environment);
     assert.equal(d.robots, 'noindex');
     assert.equal(d.listInLanguageMenu, false);
     assert.equal(d.includeInSitemap, false);
   }
-  const prod = publishDecision(entry, 'production');
-  assert.equal(prod.render, false);
-  assert.equal(prod.robots, 'noindex');
-  assert.equal(prod.listInLanguageMenu, false);
+  const prod = decide('production');
+  assert.equal(prod.robots, 'noindex', 'never indexed: there is no indexing record');
   assert.equal(prod.includeInSitemap, false);
-  for (const reason of ['locale-not-public', 'status-not-approved', 'no-quality-approval', 'no-production-approval']) {
-    assert.ok(prod.reasons.includes(reason), reason);
+  if (RELEASED) {
+    // Released under policy B: served on Production, listed in the language menu, not indexed.
+    assert.equal(prod.render, true);
+    assert.equal(prod.listInLanguageMenu, true);
+    assert.deepEqual(prod.reasons, ['no-indexing-approval']);
+  } else {
+    assert.equal(prod.render, false);
+    assert.equal(prod.listInLanguageMenu, false);
+    for (const reason of ['locale-not-public', 'status-not-approved', 'no-quality-approval', 'no-production-approval']) {
+      assert.ok(prod.reasons.includes(reason), reason);
+    }
   }
   // Source freshness is verified (committed MATCH record); that alone never allows production.
   assert.ok(!prod.reasons.some((reason) => reason.startsWith('source-freshness')), prod.reasons.join(', '));
-  // Every Japanese draft in the repository is blocked in production.
-  assert.deepEqual(renderableEntries('ja', 'production', { root: REAL_ROOT }), []);
+  // Production renders exactly the released pages; every other Japanese translation is blocked.
+  assert.deepEqual(live.renderableEntries('ja', 'production', { root: REAL_ROOT }).map((e) => e.sourcePath), PUBLIC_PAGES);
+  for (const other of live.listTranslations({ root: REAL_ROOT }).filter((e) => e.locale === 'ja' && e.sourcePath !== PAGE)) {
+    const d = decide('production', other);
+    assert.equal(d.render, false, other.key);
+    for (const reason of ['status-not-approved', 'no-quality-approval', 'no-production-approval']) assert.ok(d.reasons.includes(reason), `${other.key}: ${reason}`);
+  }
   // Preview lists exactly the valid Japanese entries with a known status, Sunbae among them.
-  const preview = renderableEntries('ja', 'preview', { root: REAL_ROOT }).map((e) => e.key);
-  const expected = listTranslations({ root: REAL_ROOT })
+  const preview = live.renderableEntries('ja', 'preview', { root: REAL_ROOT }).map((e) => e.key);
+  const expected = live.listTranslations({ root: REAL_ROOT })
     .filter((e) => e.locale === 'ja' && e.validation === 'valid' && e.status !== null)
     .map((e) => e.key);
   assert.deepEqual(preview, expected);
@@ -450,10 +515,10 @@ test('environment: VERCEL_ENV=production and unknown Vercel values are productio
   const previous = process.env.VERCEL_ENV;
   process.env.VERCEL_ENV = 'production';
   try {
-    clearCatalogCache();
-    const environment = resolveEnvironment();
+    live.clearCatalogCache();
+    const environment = live.resolveEnvironment();
     assert.equal(environment, 'production');
-    assert.deepEqual(renderableEntries('ja', environment, { root: REAL_ROOT }), []);
+    assert.deepEqual(live.renderableEntries('ja', environment, { root: REAL_ROOT }).map((e) => e.sourcePath), PUBLIC_PAGES);
   } finally {
     if (previous === undefined) delete process.env.VERCEL_ENV; else process.env.VERCEL_ENV = previous;
   }
@@ -841,11 +906,13 @@ test('record path: only .json under content/i18n/; existing non-record files are
 });
 
 // ---------------------------------------------------------------------------
-// Approval records (content/i18n/approvals.json). The repository has none;
-// every record below is written to a temporary folder only. Japanese is not a
-// public locale, so even fully approved pages stay out of production here: the
-// tests check that every other gate is satisfied ("locale-not-public" is then
-// the only reason left) and that nothing is approved by accident.
+// Approval records (content/i18n/approvals.json). Apart from the first test
+// (the repository's own file), every record below is written to a temporary
+// folder only. These tests use the "Japanese not public" copy, so even fully
+// approved pages stay out of production here: they check that every other
+// gate is satisfied ("locale-not-public" is then the only reason left) and
+// that nothing is approved by accident. Public pages are tested in
+// sitemap-hreflang.test.mjs and translation-feedback.test.mjs.
 // ---------------------------------------------------------------------------
 
 const APPROVALS = 'content/i18n/approvals.json';
@@ -860,17 +927,59 @@ const decide = (root, environment = 'production', sourcePath = PAGE) =>
   catalogDecision(getTranslation('ja', sourcePath, { root }).entry, environment, { root });
 const approvalIssues = (root) => loadCatalog({ root }).issues.filter((i) => i.id === '(approvals)');
 
-test('approvals: the repository has no approval records; production lists no Japanese page', () => {
-  clearCatalogCache();
-  assert.equal(existsSync(path.join(REPO, APPROVALS)), false, 'no approval file is committed');
-  assert.deepEqual(approvalRecords({ root: REAL_ROOT }), []);
-  assert.deepEqual(approvalIssues(REAL_ROOT), []);
-  for (const entry of listTranslations({ root: REAL_ROOT }).filter((e) => e.locale === 'ja')) {
-    const d = catalogDecision(entry, 'production', { root: REAL_ROOT });
-    assert.equal(d.render, false, entry.key);
-    assert.ok(NO_RECORDS.every((r) => d.reasons.includes(r)), entry.key);
+test('approvals: the repository holds no record before release, and exactly Sunbae quality + production (no indexing) after', () => {
+  live.clearCatalogCache();
+  const file = path.join(REPO, APPROVALS);
+  const records = live.approvalRecords({ root: REAL_ROOT });
+  assert.deepEqual(live.loadCatalog({ root: REAL_ROOT }).issues.filter((i) => i.id === '(approvals)'), [], 'the file, if any, is usable');
+  // Locales: only English and (after release) Japanese are public; Japanese stays a preview-supported locale.
+  assert.equal(LOCALES.ja.support, 'preview');
+  assert.equal(LOCALES.ja.publication, RELEASED ? 'public' : 'not-public');
+  assert.deepEqual(Object.values(LOCALES).filter((l) => l.publication === 'public').map((l) => l.code), RELEASED ? ['en', 'ja'] : ['en']);
+  assert.equal(PRIVATE_LOCALES.ja.publication, 'not-public', 'the policy tests use a non-public Japanese locale');
+  if (!RELEASED) {
+    assert.equal(existsSync(file), false, 'no approval file before release');
+    assert.deepEqual(records, []);
+    for (const entry of live.listTranslations({ root: REAL_ROOT }).filter((e) => e.locale === 'ja')) {
+      assert.equal(entry.status, 'draft', entry.key);
+      const d = live.catalogDecision(entry, 'production', { root: REAL_ROOT });
+      assert.equal(d.render, false, entry.key);
+      assert.ok(NO_RECORDS.every((r) => d.reasons.includes(r)), entry.key);
+    }
+    assert.deepEqual(live.renderableEntries('ja', 'production', { root: REAL_ROOT }), []);
+    return;
   }
-  assert.deepEqual(renderableEntries('ja', 'production', { root: REAL_ROOT }), []);
+  // Released: the file holds exactly schemaVersion 1 and two records for the current Sunbae bytes.
+  const doc = readJson(file);
+  assert.deepEqual(Object.keys(doc).sort(), ['records', 'schemaVersion']);
+  assert.equal(doc.schemaVersion, 1);
+  assert.equal(records.length, 2);
+  assert.deepEqual(records.map((r) => r.kind), ['quality', 'production']);
+  assert.ok(!records.some((r) => r.kind === 'indexing'), 'no indexing record');
+  for (const record of records) {
+    assert.deepEqual(Object.keys(record).sort(), ['approvedAt', 'approvedBy', 'kind', 'locale', 'sourcePath', 'sourceSha256', 'translationSha256']);
+    assert.equal(record.locale, 'ja');
+    assert.equal(record.sourcePath, PAGE);
+    assert.equal(record.sourceSha256, sha(path.join(REAL_ROOT, 'source', REL)), 'English source JSON bytes');
+    assert.equal(record.translationSha256, sha(path.join(REAL_ROOT, 'ja', REL)), 'approved translation bytes');
+    assert.equal(isRealDateTime(record.approvedAt), true, record.approvedAt);
+    assert.match(record.approvedBy, /policy B/, 'the site owner approval under policy B');
+    assert.match(record.approvedBy, /no native-speaker review/, 'AI review is not presented as a native review');
+  }
+  for (const entry of live.listTranslations({ root: REAL_ROOT }).filter((e) => e.locale === 'ja')) {
+    const d = live.catalogDecision(entry, 'production', { root: REAL_ROOT });
+    if (entry.sourcePath === PAGE) {
+      assert.equal(entry.status, 'approved');
+      assert.equal(d.render, true);
+      assert.equal(d.robots, 'noindex');
+      assert.deepEqual(d.reasons, ['no-indexing-approval']);
+    } else {
+      assert.equal(entry.status, 'draft', entry.key);
+      assert.equal(d.render, false, entry.key);
+      assert.ok(NO_RECORDS.every((r) => d.reasons.includes(r)), entry.key);
+    }
+  }
+  assert.deepEqual(live.renderableEntries('ja', 'production', { root: REAL_ROOT }).map((e) => e.sourcePath), [PAGE]);
 });
 
 test('approvals: matching records from the file satisfy every gate except the public locale', () => {
@@ -1078,7 +1187,7 @@ test('approvals: the file holds exactly schemaVersion and records; anything else
 });
 
 test('routes: generated pages, page metadata and renderableEntries use the same decision', async () => {
-  const { localeEnvironment, localeMetadata, localeStaticParams } = await import('../../lib/i18n/LocalePage.tsx');
+  const { localeEnvironment, localeMetadata, localeStaticParams } = await import('../../lib/i18n/LocalePage.tsx' + JA_PRIVATE);
   const { root, base } = freshFixture({ edit: (r) => { setStatus('approved')(r); addSecondPage(r, 'copy-page'); } });
   writeApprovals(base, approvalsDoc(approvals(entryOf(root))));
   const saved = { cwd: process.cwd() };

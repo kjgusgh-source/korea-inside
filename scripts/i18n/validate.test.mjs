@@ -6,8 +6,10 @@
  *
  * Offline: no network, no environment variables, no files outside the
  * repository. The repository root is found from this file's location. It reads
- * the committed Sunbae/Hoobae English source and Japanese draft and never
- * writes anything; every broken case is built from an in-memory copy.
+ * the committed Sunbae/Hoobae English source and Japanese translation and
+ * never writes anything; every broken case is built from an in-memory copy.
+ * The committed translation is a draft before release and "approved" after
+ * it (only the status changes); the cases below start from a draft copy.
  */
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
@@ -20,17 +22,23 @@ const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..')
 const REL = 'kpop/what-does-sunbae-and-hoobae-mean-in-kpop.json';
 const readJson = (rel) => JSON.parse(readFileSync(path.join(REPO, rel), 'utf8'));
 const source = readJson(`content/translations/source/${REL}`);
-const ja = readJson(`content/translations/ja/${REL}`);
+const committed = readJson(`content/translations/ja/${REL}`);
+const ja = { ...committed, status: 'draft' };
 const opts = { locale: 'ja', allowedStatuses: ['draft'] };
 const clone = () => structuredClone(ja);
 const edit = (doc, id, fn) => { const u = doc.units.find((x) => x.id === id); fn(u); return doc; };
 const ids = (r) => r.errors.map((e) => `${e.id}|${e.problem}`);
 
-test('the committed ja draft passes: 71 texts, no errors', () => {
-  const r = validateTranslation(source, ja, opts);
+test('the committed ja translation passes with its own status: 71 texts, no errors', () => {
+  assert.ok(['draft', 'approved'].includes(committed.status), committed.status);
+  const r = validateTranslation(source, committed, { locale: 'ja', allowedStatuses: [committed.status] });
   assert.equal(r.ok, true, ids(r).join('\n'));
   assert.equal(r.texts.size, 71);
   assert.deepEqual(r.warnings, []);
+  // The draft copy used below is the same document with status "draft".
+  const draft = validateTranslation(source, ja, opts);
+  assert.equal(draft.ok, true, ids(draft).join('\n'));
+  assert.deepEqual([...draft.texts], [...r.texts], 'same texts');
 });
 
 test('stale sourceHash fails', () => {
@@ -71,6 +79,8 @@ test('HTML markup and missing protected Hangul fail', () => {
 test('wrong status or locale fails; a translate:false entry is ignored with a warning', () => {
   const approved = clone(); approved.status = 'approved';
   assert.equal(validateTranslation(source, approved, opts).ok, false);
+  assert.equal(validateTranslation(source, clone(), { locale: 'ja', allowedStatuses: ['approved'] }).ok, false, 'a draft is not approved');
+  assert.equal(validateTranslation(source, approved, { locale: 'ja', allowedStatuses: ['approved'] }).ok, true);
   const ko = clone(); ko.locale = 'ko';
   assert.equal(validateTranslation(source, ko, opts).ok, false);
   const keep = source.units.find((u) => !u.translate);

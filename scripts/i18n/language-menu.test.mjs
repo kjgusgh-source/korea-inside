@@ -16,11 +16,17 @@
  * by an empty module, as in catalog.test.mjs, and Next.js subpath imports
  * such as "next/link" resolve to their .js files. Fixtures are written to a
  * temporary folder; repository files are only read.
+ *
+ * Release state: the tests on the repository's own data know two states,
+ * before release (no approval file: every Japanese page is a draft, nothing in
+ * production) and Sunbae released under policy B (approval file present: the
+ * Japanese Sunbae page is the only published one). catalog.test.mjs checks
+ * that the approval file holds exactly the expected records.
  */
 import { register } from 'node:module';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { cpSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -68,6 +74,7 @@ const { languageOptions, parseLanguageAvailability } = await import('../../compo
 
 const PAGE = '/kpop/what-does-sunbae-and-hoobae-mean-in-kpop';
 const REL = 'kpop/what-does-sunbae-and-hoobae-mean-in-kpop.json';
+const RELEASED = existsSync(path.join(REPO, 'content/i18n/approvals.json'));
 const readJson = (file) => JSON.parse(readFileSync(file, 'utf8'));
 const writeJson = (file, value) => { mkdirSync(path.dirname(file), { recursive: true }); writeFileSync(file, `${JSON.stringify(value, null, 2)}\n`); };
 
@@ -118,8 +125,9 @@ const ja = (draft) => ({ code: 'ja', draft });
 test('menu data on Preview: exactly the generated translated pages, each marked draft by the publish policy', async () => {
   const data = await menuData({ VERCEL_ENV: 'preview' });
   assert.equal(data.version, 2);
-  // The repository may hold any number of translations; Sunbae must be among them, as a draft.
-  assert.deepEqual(data.pages[PAGE], [ja(true)]);
+  // The repository may hold any number of translations; Sunbae must be among them,
+  // as a draft before release and as a published page after it.
+  assert.deepEqual(data.pages[PAGE], [ja(!RELEASED)]);
   const generated = await withEnv({ VERCEL_ENV: 'preview' }, () => localeStaticParams('ja').map(({ slug }) => `/${slug.join('/')}`));
   assert.deepEqual(Object.keys(data.pages).filter((p) => data.pages[p].some((l) => l.code === 'ja')), generated, 'same list as /ja/[...slug]');
   // Every listed locale has a generated page for that path, and its draft flag is the production decision.
@@ -137,9 +145,11 @@ test('menu data on Preview: exactly the generated translated pages, each marked 
 });
 
 test('menu data on Production lists no draft (Vercel Production and a plain production build)', async () => {
-  assert.deepEqual(await menuData({ VERCEL_ENV: 'production' }), { version: 2, pages: {} });
-  assert.deepEqual(await menuData({ NODE_ENV: 'production' }), { version: 2, pages: {} });
-  assert.deepEqual(await menuData({ VERCEL: '1' }), { version: 2, pages: {} }, 'unknown Vercel environment counts as production');
+  // Before release: nothing. After release: only the published Japanese Sunbae page, not marked draft.
+  const expected = { version: 2, pages: RELEASED ? { [PAGE]: [ja(false)] } : {} };
+  assert.deepEqual(await menuData({ VERCEL_ENV: 'production' }), expected);
+  assert.deepEqual(await menuData({ NODE_ENV: 'production' }), expected);
+  assert.deepEqual(await menuData({ VERCEL: '1' }), expected, 'unknown Vercel environment counts as production');
 });
 
 test('menu data leaves out stale and invalid translations and planned locales', async () => {
@@ -239,7 +249,10 @@ test('localeMenuEntries lists exactly the generated pages, with the same draft d
       assert.equal(notice.props.englishPath, sourcePath);
     }
   });
-  await withEnv({ VERCEL_ENV: 'production' }, () => { clearCatalogCache(); assert.deepEqual(localeMenuEntries('ja'), []); });
+  await withEnv({ VERCEL_ENV: 'production' }, () => {
+    clearCatalogCache();
+    assert.deepEqual(localeMenuEntries('ja'), RELEASED ? [{ sourcePath: PAGE, draft: false }] : []);
+  });
   clearCatalogCache();
 });
 
