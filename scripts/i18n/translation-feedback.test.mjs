@@ -11,12 +11,15 @@
  *   request it sends, success and failure handling, one request at a time,
  *   open and close, focus).
  *
- * Display: Japanese is not a public locale in the repository and no approval
- * record exists. As in sitemap-hreflang.test.mjs, public pages are tested with
- * a second copy of the modules in which lib/i18n/locales.ts marks Japanese
- * public ("?public-ja", changed in memory by this file's module loader; the
- * file on disk is only read). Approval records, approved statuses and source
- * freshness records are written to temporary folders only. Pages are
+ * Display: as in sitemap-hreflang.test.mjs, the policy tests use copies of the
+ * modules in which lib/i18n/locales.ts marks Japanese public ("?public-ja") or
+ * not public ("?private-ja"), changed in memory by this file's module loader
+ * (the file on disk is only read). Approval records, approved statuses and
+ * source freshness records are written to temporary folders only; fixtures
+ * start from drafts. The first test reads the repository as it is and knows
+ * two states: before release (no approval file: no block anywhere, no
+ * Japanese page on Production) and Sunbae released under policy B (approval
+ * file present: the block on the Japanese Sunbae page only). Pages are
  * rendered with the real React server renderer; components/SiteHeader is
  * replaced by an empty component because it needs the Next.js router.
  *
@@ -45,6 +48,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const TYPESCRIPT = pathToFileURL(path.join(REPO, 'node_modules/typescript/lib/typescript.js')).href;
 const PUBLIC_JA = '?public-ja';
+const PRIVATE_JA = '?private-ja';
 const HOOKS = '?hooks';
 
 /** Minimal hook runtime for one mounted TranslationFeedback (see the header). */
@@ -71,12 +75,14 @@ import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 const REPO_URL = ${JSON.stringify(pathToFileURL(REPO).href + '/')};
 const PUBLIC_JA = ${JSON.stringify(PUBLIC_JA)};
+const PRIVATE_JA = ${JSON.stringify(PRIVATE_JA)};
 const HOOKS = ${JSON.stringify(HOOKS)};
-const QUERIES = [PUBLIC_JA, HOOKS];
+const QUERIES = [PUBLIC_JA, PRIVATE_JA, HOOKS];
+const FORCED = { [PUBLIC_JA]: '"public"', [PRIVATE_JA]: '"not-public"' };
 const HOOK_RUNTIME = ${JSON.stringify(HOOK_RUNTIME)};
 const SITE_HEADER_STUB = ${JSON.stringify(SITE_HEADER_STUB)};
-const JA_PRIVATE = 'support: "preview",\\n    publication: "not-public",';
-const JA_PUBLIC = 'support: "preview",\\n    publication: "public",';
+// The publication value of the Japanese entry only (exactly one match is required).
+const JA_PUBLICATION = /(\\n  ja: \\{[^}]*?\\n    publication: )"(?:public|not-public)",/g;
 const REACT_IMPORT = 'from "react";';
 let ts;
 const own = (url) => url.startsWith(REPO_URL) && !url.slice(REPO_URL.length).startsWith('node_modules/');
@@ -98,9 +104,9 @@ export async function resolve(specifier, context, next) {
   const ownQuery = queryOf(specifier);
   const bare = ownQuery ? specifier.slice(0, -ownQuery.length) : specifier;
   const result = await resolveInner(bare, { ...context, parentURL }, next);
-  // "?public-ja": every repository module below it is loaded again with the query.
+  // "?public-ja" and "?private-ja": every repository module below it is loaded again with the query.
   // "?hooks": only the module asked for (its React import is replaced, nothing else).
-  const query = ownQuery ?? (parentQuery === PUBLIC_JA ? PUBLIC_JA : undefined);
+  const query = ownQuery ?? (parentQuery in FORCED ? parentQuery : undefined);
   if (query && own(result.url)) return { ...result, url: result.url + query, shortCircuit: true };
   return result;
 }
@@ -110,9 +116,9 @@ export async function load(url, context, next) {
   if (plain.startsWith('file:') && /\\.tsx?$/.test(plain) && (query || plain.endsWith('.tsx'))) {
     ts ??= (await import(${JSON.stringify(TYPESCRIPT)})).default;
     let source = readFileSync(fileURLToPath(plain), 'utf8');
-    if (query === PUBLIC_JA && plain.endsWith('/lib/i18n/locales.ts')) {
-      if (source.split(JA_PRIVATE).length !== 2) throw new Error('locales.ts: Japanese entry not found as expected');
-      source = source.replace(JA_PRIVATE, JA_PUBLIC);
+    if (query in FORCED && plain.endsWith('/lib/i18n/locales.ts')) {
+      if ([...source.matchAll(JA_PUBLICATION)].length !== 1) throw new Error('locales.ts: Japanese publication not found as expected');
+      source = source.replace(JA_PUBLICATION, (_, head) => head + FORCED[query] + ',');
     }
     if (query === HOOKS) {
       if (!plain.endsWith('/components/TranslationFeedback.tsx')) throw new Error('hooks runtime is only for TranslationFeedback');
@@ -131,7 +137,7 @@ export async function load(url, context, next) {
   return next(url, context);
 }`));
 
-// Repository as it is (Japanese not public) and the same modules with Japanese public in memory.
+// Repository as it is, and the same modules with Japanese public or not public in memory.
 const real = {
   page: await import('../../lib/i18n/LocalePage.tsx'),
   catalog: await import('../../lib/i18n/catalog.ts'),
@@ -143,6 +149,12 @@ const pub = {
   catalog: await import('../../lib/i18n/catalog.ts' + PUBLIC_JA),
   locales: await import('../../lib/i18n/locales.ts' + PUBLIC_JA),
   Feedback: (await import('../../components/TranslationFeedback.tsx' + PUBLIC_JA)).default,
+};
+const priv = {
+  page: await import('../../lib/i18n/LocalePage.tsx' + PRIVATE_JA),
+  catalog: await import('../../lib/i18n/catalog.ts' + PRIVATE_JA),
+  locales: await import('../../lib/i18n/locales.ts' + PRIVATE_JA),
+  Feedback: (await import('../../components/TranslationFeedback.tsx' + PRIVATE_JA)).default,
 };
 const hooked = await import('../../components/TranslationFeedback.tsx' + HOOKS);
 const runtime = await import(HOOK_RUNTIME);
@@ -208,6 +220,11 @@ function fixture({ approve = {}, keepDraft = [], edit = () => {} } = {}) {
       mkdirSync(path.dirname(target), { recursive: true });
       cpSync(path.join(REPO, 'content/translations', dir, rel(sourcePath)), target);
     }
+    // Fixtures start from drafts, whatever the committed status is.
+    const translationCopy = path.join(base, 'content/translations/ja', rel(sourcePath));
+    const text = readFileSync(translationCopy, 'utf8');
+    assert.ok(text.split('"status": "approved"').length <= 2, 'one status field');
+    writeFileSync(translationCopy, text.replace('"status": "approved"', '"status": "draft"'));
     mkdirSync(path.dirname(path.join(base, pageFile(sourcePath))), { recursive: true });
     cpSync(path.join(REPO, pageFile(sourcePath)), path.join(base, pageFile(sourcePath)));
   }
@@ -237,10 +254,10 @@ function fixture({ approve = {}, keepDraft = [], edit = () => {} } = {}) {
 async function inRepo(base, vars, fn) {
   const cwd = process.cwd();
   process.chdir(base);
-  for (const m of [real, pub]) m.catalog.clearCatalogCache();
+  for (const m of [real, pub, priv]) m.catalog.clearCatalogCache();
   try { return await withEnv(vars, fn); } finally {
     process.chdir(cwd);
-    for (const m of [real, pub]) m.catalog.clearCatalogCache();
+    for (const m of [real, pub, priv]) m.catalog.clearCatalogCache();
   }
 }
 
@@ -291,23 +308,39 @@ const shownOn = (m, sourcePath) => {
 // A. Where the block is shown
 // ---------------------------------------------------------------------------
 
-test('repository data: the Japanese Sunbae draft has no feedback block on Preview and is not served on Production', async () => {
-  assert.equal(existsSync(path.join(REPO, APPROVALS)), false, 'no approval file is committed');
-  assert.equal(real.locales.LOCALES.ja.publication, 'not-public');
-  assert.equal(readJson(path.join(REPO, 'content/translations/ja', rel(SUNBAE))).status, 'draft');
+// Release state of the repository (see the header).
+const RELEASED = existsSync(path.join(REPO, APPROVALS));
+// Repository files the fixtures must never change (bytes, or null when missing).
+const GUARDED = [APPROVALS, 'lib/i18n/locales.ts', ...PAGES.map((p) => `content/translations/ja/${rel(p)}`)];
+const guardedBytes = () => GUARDED.map((file) => (existsSync(path.join(REPO, file)) ? sha(path.join(REPO, file)) : null));
+const GUARDED_AT_START = guardedBytes();
+
+test('repository data: no block before release; after release only on the published Japanese Sunbae page', async () => {
+  assert.equal(real.locales.LOCALES.ja.publication, RELEASED ? 'public' : 'not-public');
+  assert.equal(readJson(path.join(REPO, 'content/translations/ja', rel(SUNBAE))).status, RELEASED ? 'approved' : 'draft');
+  assert.equal(readJson(path.join(REPO, 'content/translations/ja', rel(ANIME))).status, 'draft');
   process.chdir(REPO);
-  for (const m of [real, pub]) m.catalog.clearCatalogCache();
+  for (const m of [real, pub, priv]) m.catalog.clearCatalogCache();
   await withEnv(PREVIEW, () => {
     const sunbae = japanesePage(real, SUNBAE);
-    assert.notEqual(sunbae, 404, 'the draft renders on Preview');
-    assert.equal(sunbae.feedback, false);
-    assert.equal(sunbae.count, 0);
-    assert.ok(sunbae.html.includes('data-notice="preview"'), 'draft notice');
-    assert.equal(shownOn(real, ANIME), false);
+    assert.notEqual(sunbae, 404, 'Sunbae renders on Preview');
+    assert.equal(sunbae.feedback, RELEASED);
+    assert.equal(sunbae.count, RELEASED ? 1 : 0);
+    assert.ok(sunbae.html.includes(RELEASED ? 'data-notice="published"' : 'data-notice="preview"'));
+    assert.equal(shownOn(real, ANIME), false, 'the anime draft never shows the block');
   });
   for (const vars of [PRODUCTION, { NODE_ENV: 'production' }]) {
     await withEnv(vars, () => {
-      assert.equal(shownOn(real, SUNBAE), 404, JSON.stringify(vars));
+      if (RELEASED) {
+        const sunbae = japanesePage(real, SUNBAE);
+        assert.notEqual(sunbae, 404, JSON.stringify(vars));
+        assert.deepEqual(sunbae.topics, [TOPIC]);
+        assert.equal(sunbae.count, 1);
+        assert.ok(sunbae.lastInArticle, 'last child of <article>');
+        assert.ok(sunbae.html.includes('data-notice="published"'));
+      } else {
+        assert.equal(shownOn(real, SUNBAE), 404, JSON.stringify(vars));
+      }
       assert.equal(shownOn(real, ANIME), 404, JSON.stringify(vars));
     });
   }
@@ -336,13 +369,13 @@ test('status "draft" blocks the block even with matching approval records', asyn
   await inRepo(base, PREVIEW, () => assert.equal(shownOn(pub, SUNBAE), false));
 });
 
-test('Japanese not public (repository locales.ts) blocks the block even when everything else is approved', async () => {
+test('Japanese not public blocks the block even when everything else is approved', async () => {
   const base = fixture({ approve: { [SUNBAE]: ['quality', 'production', 'indexing'] } });
   await inRepo(base, PRODUCTION, () => {
-    assert.equal(shownOn(real, SUNBAE), 404);
+    assert.equal(shownOn(priv, SUNBAE), 404);
     assert.equal(shownOn(pub, SUNBAE), true, 'same data with a public locale shows it');
   });
-  await inRepo(base, PREVIEW, () => assert.equal(shownOn(real, SUNBAE), false));
+  await inRepo(base, PREVIEW, () => assert.equal(shownOn(priv, SUNBAE), false));
 });
 
 test('a missing approval record blocks the block (quality or production; no records at all)', async () => {
@@ -390,7 +423,7 @@ test('English Sunbae page: no feedback block (the English route does not use the
   const tree = englishSunbae();
   const all = elements(tree);
   assert.ok(all.length > 10, 'the English page element tree was read');
-  assert.ok(!all.some((e) => e.type === real.Feedback || e.type === pub.Feedback || e.type === hooked.default));
+  assert.ok(!all.some((e) => e.type === real.Feedback || e.type === pub.Feedback || e.type === priv.Feedback || e.type === hooked.default));
   assert.ok(!all.some((e) => e.props?.['data-feedback'] !== undefined));
   const html = renderToStaticMarkup(tree);
   assert.ok(html.includes('<article') && !html.includes('data-feedback') && !html.includes('翻訳について'));
@@ -714,8 +747,7 @@ test('closing the panel while sending: a failure keeps the text for the next ope
 });
 
 test('no test data is left in the repository', () => {
-  assert.equal(existsSync(path.join(REPO, APPROVALS)), false, 'no approval file');
-  for (const sourcePath of PAGES) assert.equal(readJson(path.join(REPO, 'content/translations/ja', rel(sourcePath))).status, 'draft', sourcePath);
-  assert.equal(real.locales.LOCALES.ja.publication, 'not-public', 'locales.ts unchanged on disk');
+  assert.deepEqual(guardedBytes(), GUARDED_AT_START, 'approval file, locales.ts and translations unchanged');
+  assert.equal(existsSync(path.join(REPO, APPROVALS)), RELEASED, 'no approval file is created');
   assert.ok(!temps.some((dir) => dir.startsWith(REPO)), 'fixtures are outside the repository');
 });
