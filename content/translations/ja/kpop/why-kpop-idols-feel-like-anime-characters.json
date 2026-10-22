@@ -1,0 +1,291 @@
+{
+  "schemaVersion": 2,
+  "sourcePath": "/kpop/why-kpop-idols-feel-like-anime-characters",
+  "sourceLocale": "en",
+  "locale": "ja",
+  "status": "draft",
+  "glossaryVersion": "0.3.0-ja-pilot",
+  "draftedBy": "AI draft in a Cowork session (no paid translation API). Not reviewed by a native speaker.",
+  "units": [
+    {
+      "id": "meta-title-a90e6635",
+      "sourceHash": "a90e6635f7f93840524854d5ef2e76811094164f61b7eb586e900adf33c8c731",
+      "text": "一部のK-POPアイドルがアニメのキャラクターのように感じられるのはなぜ？"
+    },
+    {
+      "id": "meta-description-510a223e",
+      "sourceHash": "510a223ebdcb083cde4122c1e9dc0ae0fc2da403d717025b2292cd0fc5c5db8b",
+      "text": "韓国のファンが一部のK-POPアイドルを「アニメっぽい」「2次元っぽい」、さらには【推しの子】から出てきたような人と表現することがあるのはなぜか。HAEMILがわかりやすく紹介するガイドです。"
+    },
+    {
+      "id": "page-a-f84c53da",
+      "sourceHash": "f84c53daf53c3a1a7aac7be0d3838ce87363e3056aa07e7f5ceddc70339b795d",
+      "text": "← K-POPに戻る"
+    },
+    {
+      "id": "page-p-49a6e53a",
+      "sourceHash": "49a6e53a8763e7595e58414e351d76fb8237d04522f299e86abe7086c36f0559",
+      "text": "K-POPカルチャーガイド"
+    },
+    {
+      "id": "page-h1-f32993a4",
+      "sourceHash": "f32993a431ffd6b91d79eddeceeaadad641864a1846e0bd58938eca2eb3c1d50",
+      "text": "一部のK-POPアイドルがアニメのキャラクターのように感じられるのはなぜ？"
+    },
+    {
+      "id": "page-p-97a1ebe5",
+      "sourceHash": "97a1ebe58a0019809b4c37926e683d3f2ff8d929b4483186dedc278a0131534c",
+      "text": "韓国のファンは、英語にすると少し不思議に聞こえる言い方でアイドルを表現することがあります。"
+    },
+    {
+      "id": "page-p-23d40851",
+      "sourceHash": "23d408518fc1306f40f3b662280ca30f07fd5c94d38feffa4ab241b26fa9e4d2",
+      "text": "「キャラクターみたい。」"
+    },
+    {
+      "id": "page-p-57d33dcb",
+      "sourceHash": "57d33dcb2ade5fafdec84cf26d0851541c1c1c330fd54e279de9a64eff016c94",
+      "text": "「2次元っぽい。」"
+    },
+    {
+      "id": "page-p-64e7b662",
+      "sourceHash": "64e7b66287a731f6d1d7b1ab5e2f8868dcc2636ab7fcc4a322d12970e5b73a70",
+      "text": "「アニメから出てきたみたい。」"
+    },
+    {
+      "id": "page-p-4af1b77b",
+      "sourceHash": "4af1b77b132c96dec461b84f7f2c5024efe81dec8ab946cf723a510087c63bd9",
+      "text": "これは必ずしも、そのアイドルが本当に現実離れした見た目をしているという意味ではありません。どちらかというと、雰囲気の話です。スタイリング、表情、カメラのタイミング、色使い、ステージの雰囲気がはっきりとかみ合うことで、そのアイドルがひと目でわかるキャラクターのように感じられてくるのです。"
+    },
+    {
+      "id": "page-p-18678da0",
+      "sourceHash": "18678da0249ffff60b4a6c15954a79e506406508eba8017b0a8f7cf640445511",
+      "text": "海外のファンにとって、これは知っておくと役に立つ韓国のファン用語のひとつです。"
+    },
+    {
+      "id": "page-p-7c3fa9ec",
+      "sourceHash": "7c3fa9ecc9410a435de5f052dff095246e12d4804b5cba69f1915d7dbdd40a71",
+      "text": "韓国のファンダムでは、「2次元っぽい」や「アニメっぽい」という言葉が、とても強いビジュアルの印象を持つ人に対してよく使われます。ただきれいな顔というだけではなく、覚えやすい顔と雰囲気のことです。大きな目、はっきりした表情、明るいスタイリング、キレのあるリアクション、少し現実離れしたステージでの存在感は、どれもそうした印象を生み出します。"
+    },
+    {
+      "id": "page-p-cdbd352c",
+      "sourceHash": "cdbd352cf1014e491b425bbb5defcd4cd058f9bf056fc9aa2dcebedfda39e567",
+      "text": "だからこそ、あるアイドルのイメージについて話すときに、【推しの子】が引き合いに出されることがあるのです。"
+    },
+    {
+      "id": "page-p-5b8f9985",
+      "sourceHash": "5b8f99851cfb1511b59aeb97b9f5eed63e74dd198b3d76548fb5abaf0fe73c93",
+      "text": "【推しの子】はもともと、アイドルという幻想、ステージのきらめき、そして現実にしては洗練されすぎているように見える人の不思議な感じと結びついています。そのため、K-POPアイドルがとてもアニメ的で、キャラクターのようなステージのイメージを見せると、韓国のファンはその雰囲気を手短に伝えるために、こうしたたとえを使うことがあります。"
+    },
+    {
+      "id": "page-p-ccd207bd",
+      "sourceHash": "ccd207bd7fbf511a8a3301a5646fc3ce36cb2d65b25d4873a962795aa7de8aa2",
+      "text": "たいていは、真剣な意味でのレッテルではありません。"
+    },
+    {
+      "id": "page-p-d42b2afa",
+      "sourceHash": "d42b2afac1d6a9d0012b47216a8df95df0f5fff1b254e05c35e7fdb4a943622c",
+      "text": "どちらかというと、「この人は、アイドルアニメに出てきてもおかしくないようなイメージを持っている」と言うのに近いです。"
+    },
+    {
+      "id": "page-p-ab364ec8",
+      "sourceHash": "ab364ec8f71077d5f022847950aeab96e4e30719aef09a24577293d8480fe90a",
+      "text": "これは、単に誰かを「かわいい」と言うのとは違います。"
+    },
+    {
+      "id": "page-p-5df6e631",
+      "sourceHash": "5df6e63129a89ead69918923bd05009e0430ce3fe2a14b560a9d9a9c11fa0df9",
+      "text": "かわいさが含まれることはありますが、それがすべてではありません。アニメっぽいアイドルのイメージは、タイミングから生まれることが多いです。そのアイドルは、いつカメラを見るか、いつ表情を切り替えるか、いつ小さなリアクションを大きく見せるか、そして何気ない瞬間をいつファンが何度も見返したくなる場面に変えるかを知っています。"
+    },
+    {
+      "id": "page-p-e2f0af3d",
+      "sourceHash": "e2f0af3d855581229123b88f9aa2b897d4dbbee4648a0989dd5a45cb3d24f41b",
+      "text": "クローズアップのファンカムを見ると、これがさらにわかりやすくなります。"
+    },
+    {
+      "id": "page-p-0ba4698f",
+      "sourceHash": "0ba4698f3c75a7d4c5a31f93c33e7073c302acfdb43d17a2479f23a9baab080c",
+      "text": "ステージ全体を映した映像では、パフォーマンス全体を見ることになります。ダンスやフォーメーション、衣装、グループ全体の形が目に入ります。でもクローズアップのファンカムでは、カメラがひとりだけを追い続けます。すると急に、ちょっとした目の動きや笑顔のひとつひとつが大きな意味を持つようになります。アイドルの顔がステージの中心になるのです。"
+    },
+    {
+      "id": "page-p-8b0886c3",
+      "sourceHash": "8b0886c33aa80863a36fda6835dea3c2db837c24455c103996ce7fa5246d04a2",
+      "text": "アニメのキャラクターのような感じが生まれやすいのは、まさにここです。"
+    },
+    {
+      "id": "page-p-ade5c655",
+      "sourceHash": "ade5c655e34ddf0f82d87a3af1354c35d1d1090ad1bf649a6114c55ee404881c",
+      "text": "そのメンバーが振り付けの中でいちばん大きな動きをしているとは限りません。それでも、カメラが完璧な表情をひとつとらえると、その映像は急にキャラクター紹介のシーンのように感じられます。そのアイドルについて細かいことを知る前から、雰囲気が伝わってくるのです。"
+    },
+    {
+      "id": "page-p-ba49dd8a",
+      "sourceHash": "ba49dd8a68ac373e60a5cb4ad9132bacffa8f2755493220b3b09950c38c00165",
+      "text": "HAEMILの読者にとって、わかりやすい例がチェ・イェナです。"
+    },
+    {
+      "id": "page-p-a4a37b5a",
+      "sourceHash": "a4a37b5a7ef44da2580dbf6414d3e000a00bb78b8e5b65e2cf26df8a69b8a977",
+      "text": "彼女の「Catch Catch」のクローズアップのファンカムでは、楽しさは曲や衣装だけではありません。表情がずっと動き続けているところにあります。明るく見えたかと思えば、いたずらっぽくなり、集中した顔になり、また茶目っ気のある表情に戻ります。カメラがとらえるものが、ほぼ毎秒あるのです。"
+    },
+    {
+      "id": "page-p-46cfec3a",
+      "sourceHash": "46cfec3a265afa180c0f7d170fc58e77298d27134d54469ca2e55edf09bafff5",
+      "text": "だからこそ、「アニメのアイドル」というたとえが、感覚としてしっくりくるのです。"
+    },
+    {
+      "id": "page-p-dda19d7e",
+      "sourceHash": "dda19d7ef28361a1615868f60e1f8f22675c3ebe3107acae8623e05cc51ee0ba",
+      "text": "イェナがアニメのキャラクターをまねる必要はありません。彼女のステージにはすでに、そうたとえたくなるようなポップさや色彩、表情をすばやく切り替えるタイミングがあります。はっきりしたキャラクターのイメージを持つ人のように感じられ、それこそがクローズアップのファンカムが得意とすることなのです。"
+    },
+    {
+      "id": "page-p-981890d4",
+      "sourceHash": "981890d4dd3db515f0ce512a0000a70859cc74a67845e450278b09f45e9054eb",
+      "text": "K-POPファンは、こうしたイメージを通してアイドルを覚えていることがよくあります。"
+    },
+    {
+      "id": "page-p-58bdddf2",
+      "sourceHash": "58bdddf247a370ddc9cb744fa377b17c6c85d581d928210eaa72b3b63c478bfb",
+      "text": "もちろん、公式の情報も大切です。グループ名や所属事務所、ポジション、アルバム、デビュー日は役に立ちます。でもファンダムは、プロフィールの情報だけで広がるわけではありません。その多くは、小さな印象から広がっていきます。ひとつのファンカム、ひとつのミーム、ひとつの顔、ひとつのステージ衣装、みんなが話題にし続けるひとつのリアクションです。"
+    },
+    {
+      "id": "page-p-644820a5",
+      "sourceHash": "644820a53c82f248af41db919407cf09ec307006fcfa7829d8ac07e3c44323b2",
+      "text": "だからこそ、ファンの言葉では「アニメっぽい」がほめ言葉になることがあります。"
+    },
+    {
+      "id": "page-p-2554e171",
+      "sourceHash": "2554e171d1c7f49ca31201fa33edd8abc4292a3867c448f539e256d2f2041695",
+      "text": "それは、そのアイドルのイメージが、絵に描かれたように感じられるほど強いという意味です。作り物という意味ではなく、くっきりと記憶に残るということです。キャラクターデザインが、すでに頭の中ではっきりしている人のような感じです。"
+    },
+    {
+      "id": "page-p-d2770088",
+      "sourceHash": "d2770088fc713f4a7e57479028e2da9470620c2656fa2dab39056e1ac776bd46",
+      "text": "K-POPを好きになったばかりの人にとって、これはステージを見るときに役立つ見方です。"
+    },
+    {
+      "id": "page-p-9b2007a6",
+      "sourceHash": "9b2007a6155f05a52c188721c8d00515c749759bfcf7babf55e06710998ce100",
+      "text": "「誰がいちばん歌がうまい？」「誰がいちばんダンスがうまい？」と考えるだけでなく、「誰がいちばんはっきりしたイメージを残す？」と考えてみることもできます。そのイメージは、シックなこともあれば、力強いこともあり、やわらかいこともあります。そしてときには、アニメの世界のアイドルが現実のステージに足を踏み入れたように感じられることもあります。"
+    },
+    {
+      "id": "page-p-21756926",
+      "sourceHash": "21756926d5148a5811ea23e774a05fc85441346b1d82d74a9db6cd0a1c1e044c",
+      "text": "そこに気づくと、韓国のファンのコメントがもっと理解しやすくなります。"
+    },
+    {
+      "id": "page-p-cc9a8b22",
+      "sourceHash": "cc9a8b2213e4a74cbc508e483a410acd26d48da259cd644ce0b5267a5f2220c0",
+      "text": "いつもきちんとしたレビューをしようとしているわけではありません。"
+    },
+    {
+      "id": "page-p-3ccf5ea8",
+      "sourceHash": "3ccf5ea83156a677431287b79862e42184acf3de91ef67783f01f0467cda3232",
+      "text": "ときには、ただ感じたことを手短に伝えようとしているだけなのです。"
+    },
+    {
+      "id": "page-p-9c5c35a1",
+      "sourceHash": "9c5c35a128e5bd41751c07bd80d63867fb942bfb8cbf706332f971255e9aeb8c",
+      "text": "「この人、キャラクターみたい。」"
+    },
+    {
+      "id": "page-p-7e68eaa3",
+      "sourceHash": "7e68eaa3dc862780677dcb3adc957b03fc0f5d4f8452f8db926ef9744f3cd961",
+      "text": "そしてK-POPでは、それだけで誰かが忘れられない存在になることもあります。"
+    },
+    {
+      "id": "page-p-5abd131b",
+      "sourceHash": "5abd131b96b96082c0a315cdf1b3928e7ea3fa25588d080b087d190a86c1ff8d",
+      "text": "もっと読む"
+    },
+    {
+      "id": "page-h2-a1359015",
+      "sourceHash": "a1359015b54f1184b0a5f8d1da1a6a945d1e2315184fcfbfdb74f3f5bbb94b4d",
+      "text": "関連するK-POPガイド"
+    },
+    {
+      "id": "page-a-e505aecd",
+      "sourceHash": "e505aecdd0402e0d3aee01976091bcf33e04e071f21c64cb0fe05017350748c0",
+      "text": "K-POPの記事をすべて見る →"
+    },
+    {
+      "id": "page-relatedguides-kpop-choi-yena-catch-catch-fancam-spotlight-p-80ce7e86",
+      "sourceHash": "80ce7e8678ed333599a44354289246893ac9f234c5c2eaddfae14a270273786c",
+      "text": "ソロ・スポットライト"
+    },
+    {
+      "id": "page-relatedguides-kpop-choi-yena-catch-catch-fancam-spotlight-h3-158dfec3",
+      "sourceHash": "158dfec36dd7085071c670fcb0b9197428599f0f7d9ff57a80e010f672b857de",
+      "text": "チェ・イェナの「Catch Catch」スポットライトを見る"
+    },
+    {
+      "id": "page-relatedguides-kpop-choi-yena-catch-catch-fancam-spotlight-p-944c2a1a",
+      "sourceHash": "944c2a1a51ca85a7afa2d1161be4597c5449ef9ce3364197fd4db9d46c06d371",
+      "text": "チェ・イェナのクローズアップのファンカム、アニメのアイドルのようなステージのイメージ、そして何度も見返したくなる小さな茶目っ気のある表情をわかりやすく紹介するスポットライト記事です。"
+    },
+    {
+      "id": "page-relatedguides-kpop-choi-yena-catch-catch-fancam-spotlight-p-1989bd4c",
+      "sourceHash": "1989bd4c3140bc9a1a9fe5e0db8430b18ea8a739ea87a908b6db40cb01cafce4",
+      "text": "ガイドを読む →"
+    },
+    {
+      "id": "page-relatedguides-kpop-what-is-close-up-fancam-in-kpop-p-f776b2fd",
+      "sourceHash": "f776b2fd5ecdb977d5c53f197c579276c9ba877fc48d6b0e6d6919e43d737855",
+      "text": "K-POP用語"
+    },
+    {
+      "id": "page-relatedguides-kpop-what-is-close-up-fancam-in-kpop-h3-578e1b56",
+      "sourceHash": "578e1b56ecc36ba0e652e805e77ce2fcf489950c5a363c2c9e44df8757f1f0d1",
+      "text": "얼빡직캠の意味を知る"
+    },
+    {
+      "id": "page-relatedguides-kpop-what-is-close-up-fancam-in-kpop-p-ce8879e6",
+      "sourceHash": "ce8879e643e00fd7e6015b3e1b32c16c3a7931b111deb9b6f477670da096e704",
+      "text": "韓国のクローズアップのファンカムをわかりやすく紹介するガイドです。ひとつの顔、ひとつの表情、ちょっとした雰囲気の変化だけで、ステージを何度も見返したくなります。"
+    },
+    {
+      "id": "page-relatedguides-kpop-what-is-close-up-fancam-in-kpop-p-1989bd4c",
+      "sourceHash": "1989bd4c3140bc9a1a9fe5e0db8430b18ea8a739ea87a908b6db40cb01cafce4",
+      "text": "ガイドを読む →"
+    },
+    {
+      "id": "page-relatedguides-kpop-what-is-a-fancam-p-a3213a5f",
+      "sourceHash": "a3213a5f26fd35f182f35c794c2a5d9c90c0acfecb6b8b394383b39e95efb6ab",
+      "text": "K-POPガイド"
+    },
+    {
+      "id": "page-relatedguides-kpop-what-is-a-fancam-h3-7d64a4ab",
+      "sourceHash": "7d64a4abeb711b0fd3fb03caba0d4bc68543b4e14612ff0745cd116671261fc4",
+      "text": "ファンカムの基本を知る"
+    },
+    {
+      "id": "page-relatedguides-kpop-what-is-a-fancam-p-3d0b8a76",
+      "sourceHash": "3d0b8a7695466189395f537bfcc238c63259ed1ba9dce8c94448bbc42201c36c",
+      "text": "ファンカムがなぜ大切なのか、ファンがどう使っているのか、そしてひとりに焦点を当てたステージ映像がなぜメンバーを目立たせるのかを紹介します。"
+    },
+    {
+      "id": "page-relatedguides-kpop-what-is-a-fancam-p-1989bd4c",
+      "sourceHash": "1989bd4c3140bc9a1a9fe5e0db8430b18ea8a739ea87a908b6db40cb01cafce4",
+      "text": "ガイドを読む →"
+    },
+    {
+      "id": "page-relatedguides-kpop-glossary-p-a3213a5f",
+      "sourceHash": "a3213a5f26fd35f182f35c794c2a5d9c90c0acfecb6b8b394383b39e95efb6ab",
+      "text": "K-POPガイド"
+    },
+    {
+      "id": "page-relatedguides-kpop-glossary-h3-5b7bcd52",
+      "sourceHash": "5b7bcd52cc7a00a129a0c0730e34ddb1e3d7967423e66b4bf211c36f1c6d63e0",
+      "text": "K-POP用語集を開く"
+    },
+    {
+      "id": "page-relatedguides-kpop-glossary-p-1054e626",
+      "sourceHash": "1054e62603126a2647dab81c78331b9c3aeb9fbea8139231015aa2bf87ff60ba",
+      "text": "ファンカムやステージ、メンバーの映像まわりで目にする、韓国のK-POP用語やファン用語を初心者向けに紹介するガイドです。"
+    },
+    {
+      "id": "page-relatedguides-kpop-glossary-p-1989bd4c",
+      "sourceHash": "1989bd4c3140bc9a1a9fe5e0db8430b18ea8a739ea87a908b6db40cb01cafce4",
+      "text": "ガイドを読む →"
+    }
+  ]
+}
