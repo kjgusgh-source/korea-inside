@@ -16,10 +16,11 @@
  * not public ("?private-ja"), changed in memory by this file's module loader
  * (the file on disk is only read). Approval records, approved statuses and
  * source freshness records are written to temporary folders only; fixtures
- * start from drafts. The first test reads the repository as it is and knows
- * two states: before release (no approval file: no block anywhere, no
- * Japanese page on Production) and Sunbae released under policy B (approval
- * file present: the block on the Japanese Sunbae page only). Pages are
+ * start from drafts. The first test reads the repository as it is: before
+ * release (no approval file) there is no block anywhere and no Japanese page
+ * on Production; after release the block is on the published Japanese Sunbae
+ * page only, and every other Japanese page (published or not, worked out from
+ * the files by publishedPages below) has none. Pages are
  * rendered with the real React server renderer; components/SiteHeader is
  * replaced by an empty component because it needs the Next.js router.
  *
@@ -39,7 +40,7 @@
 import { register } from 'node:module';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
@@ -315,10 +316,36 @@ const GUARDED = [APPROVALS, 'lib/i18n/locales.ts', ...PAGES.map((p) => `content/
 const guardedBytes = () => GUARDED.map((file) => (existsSync(path.join(REPO, file)) ? sha(path.join(REPO, file)) : null));
 const GUARDED_AT_START = guardedBytes();
 
-test('repository data: no block before release; after release only on the published Japanese Sunbae page', async () => {
+/**
+ * Japanese translation pages of the repository and the published ones, worked
+ * out from the files (not from the code under test): published when Japanese
+ * is public, the status is "approved" and a quality and a production record
+ * match the current SHA-256 of the English source JSON and the translation.
+ */
+function publishedPages() {
+  const file = path.join(REPO, APPROVALS);
+  const records = existsSync(file) ? readJson(file).records : [];
+  const root = path.join(REPO, 'content/translations');
+  const pages = readdirSync(path.join(root, 'ja'), { recursive: true }).map(String).filter((f) => f.endsWith('.json'))
+    .map((f) => `/${f.split(path.sep).join('/').slice(0, -'.json'.length)}`).sort();
+  const matching = (sourcePath, kind) => {
+    const source = path.join(root, 'source', rel(sourcePath));
+    const translation = path.join(root, 'ja', rel(sourcePath));
+    return existsSync(source) && records.some((r) => r.kind === kind && r.locale === 'ja' && r.sourcePath === sourcePath &&
+      r.sourceSha256 === sha(source) && r.translationSha256 === sha(translation) && String(r.approvedBy ?? '').trim() !== '');
+  };
+  const published = pages.filter((p) => real.locales.LOCALES.ja.publication === 'public' &&
+    readJson(path.join(root, 'ja', rel(p))).status === 'approved' && matching(p, 'quality') && matching(p, 'production'));
+  return { pages, published };
+}
+
+test('repository data: no block before release; after release only on the published Japanese Sunbae page, never on another Japanese page', async () => {
+  const { pages, published } = publishedPages();
+  const others = pages.filter((p) => p !== SUNBAE);
   assert.equal(real.locales.LOCALES.ja.publication, RELEASED ? 'public' : 'not-public');
   assert.equal(readJson(path.join(REPO, 'content/translations/ja', rel(SUNBAE))).status, RELEASED ? 'approved' : 'draft');
-  assert.equal(readJson(path.join(REPO, 'content/translations/ja', rel(ANIME))).status, 'draft');
+  assert.equal(published.includes(SUNBAE), RELEASED, 'Sunbae is published exactly after release');
+  assert.ok(others.includes(ANIME), 'the anime page is one of the other pages');
   process.chdir(REPO);
   for (const m of [real, pub, priv]) m.catalog.clearCatalogCache();
   await withEnv(PREVIEW, () => {
@@ -327,7 +354,13 @@ test('repository data: no block before release; after release only on the publis
     assert.equal(sunbae.feedback, RELEASED);
     assert.equal(sunbae.count, RELEASED ? 1 : 0);
     assert.ok(sunbae.html.includes(RELEASED ? 'data-notice="published"' : 'data-notice="preview"'));
-    assert.equal(shownOn(real, ANIME), false, 'the anime draft never shows the block');
+    for (const sourcePath of others) {
+      const page = japanesePage(real, sourcePath);
+      assert.notEqual(page, 404, `${sourcePath} renders on Preview`);
+      assert.equal(page.feedback, false, `${sourcePath}: no block`);
+      assert.equal(page.count, 0, sourcePath);
+      assert.ok(page.html.includes(published.includes(sourcePath) ? 'data-notice="published"' : 'data-notice="preview"'), sourcePath);
+    }
   });
   for (const vars of [PRODUCTION, { NODE_ENV: 'production' }]) {
     await withEnv(vars, () => {
@@ -341,7 +374,17 @@ test('repository data: no block before release; after release only on the publis
       } else {
         assert.equal(shownOn(real, SUNBAE), 404, JSON.stringify(vars));
       }
-      assert.equal(shownOn(real, ANIME), 404, JSON.stringify(vars));
+      for (const sourcePath of others) {
+        if (published.includes(sourcePath)) {
+          const page = japanesePage(real, sourcePath);
+          assert.notEqual(page, 404, `${sourcePath} is published`);
+          assert.equal(page.feedback, false, `${sourcePath}: no Sunbae block on another page`);
+          assert.equal(page.count, 0, sourcePath);
+          assert.ok(page.html.includes('data-notice="published"'), sourcePath);
+        } else {
+          assert.equal(shownOn(real, sourcePath), 404, `${sourcePath} ${JSON.stringify(vars)}`);
+        }
+      }
     });
   }
 });

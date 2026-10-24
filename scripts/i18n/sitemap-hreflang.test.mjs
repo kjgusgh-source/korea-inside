@@ -19,11 +19,15 @@
  * temporary folders only, and fixtures start from the Sunbae translation as a
  * draft.
  *
- * The "repository data" tests read the repository as it is and know two
- * states: before release (no approval file, Japanese not public, drafts only:
- * no Japanese page in production) and Sunbae released under policy B (approval
- * file present: Japanese public, Sunbae served on Production with noindex, no
- * canonical, no sitemap URL and no hreflang; every other Japanese page 404).
+ * The "repository data" tests read the repository as it is. Before release
+ * (no approval file) Japanese is not public and no Japanese page is served on
+ * Production. After release the published and indexed pages are worked out
+ * here from the files themselves (releaseState below), not from the code
+ * under test, so any number of approved pages works without test changes:
+ * published pages are served on Production; only indexed ones get index,
+ * follow, a self canonical, a sitemap URL and hreflang; every other Japanese
+ * page is a 404. Sunbae stays published under policy B with noindex, no
+ * canonical, no sitemap URL and no hreflang.
  *
  * Node 22 strips TypeScript types natively; .ts and .tsx files are compiled
  * here with the project's own TypeScript (no extra package). "server-only" is
@@ -33,7 +37,7 @@
 import { register, createRequire } from 'node:module';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
@@ -205,11 +209,11 @@ async function inRepo(base, vars, fn) {
   }
 }
 
-/** What a build would produce for Sunbae and the anime page. */
-function snapshot(m) {
+/** What a build would produce for these pages (by default Sunbae and the anime page). */
+function snapshot(m, pages = PAGES) {
   const generated = m.page.localeStaticParams('ja').map(({ slug }) => `/${slug.join('/')}`);
   const metadata = {};
-  for (const sourcePath of PAGES) {
+  for (const sourcePath of pages) {
     try {
       metadata[sourcePath] = m.page.localeMetadata('ja', slugOf(sourcePath));
     } catch (error) {
@@ -226,48 +230,100 @@ const urlCount = (entries, url) => entries.filter((e) => e.url === url).length;
 const withoutAlternates = (entries) => entries.filter((e) => !e.alternates);
 const jaUrls = (entries) => entries.map((e) => e.url).filter((u) => u.startsWith(`${BASE_URL}/ja/`));
 
-// Sitemap of the repository as it is, used as the "unchanged" reference.
+// The English sitemap of the repository (Japanese not public, so no translated
+// page and no language link), used as the "unchanged" reference. It does not
+// depend on which Japanese pages are approved.
 process.chdir(REPO);
-const REAL_ENTRIES = await withEnv(PRODUCTION, () => real.sitemap());
-const REAL_XML = xml(REAL_ENTRIES);
+const ENGLISH_ENTRIES = await withEnv(PRODUCTION, () => priv.sitemap());
+const ENGLISH_XML = xml(ENGLISH_ENTRIES);
 
 // ---------------------------------------------------------------------------
-// Repository data: before release, or with Sunbae released (see the header)
+// Repository data: before release, or with any number of published pages
 // ---------------------------------------------------------------------------
 
 const RELEASED = existsSync(path.join(REPO, APPROVALS));
 
-test('repository data: before release only drafts; after release Sunbae approved, Japanese public, no indexing record', () => {
+/**
+ * Release state of the repository, worked out from the files (not from the
+ * code under test). For every Japanese translation file: published when
+ * Japanese is public, the status is "approved" and a quality and a
+ * production record match the current SHA-256 of its English source JSON and
+ * translation; indexed when an indexing record matches too.
+ */
+function releaseState() {
+  const file = path.join(REPO, APPROVALS);
+  const records = existsSync(file) ? readJson(file).records : [];
+  const root = path.join(REPO, 'content/translations');
+  const pages = readdirSync(path.join(root, 'ja'), { recursive: true }).map(String).filter((f) => f.endsWith('.json'))
+    .map((f) => `/${f.split(path.sep).join('/').slice(0, -'.json'.length)}`).sort();
+  const matching = (sourcePath, kind) => {
+    const source = path.join(root, 'source', rel(sourcePath));
+    const translation = path.join(root, 'ja', rel(sourcePath));
+    return existsSync(source) && records.some((r) => r.kind === kind && r.locale === 'ja' && r.sourcePath === sourcePath &&
+      r.sourceSha256 === sha(source) && r.translationSha256 === sha(translation) && String(r.approvedBy ?? '').trim() !== '');
+  };
+  const published = pages.filter((p) => real.locales.LOCALES.ja.publication === 'public' &&
+    readJson(path.join(root, 'ja', rel(p))).status === 'approved' && matching(p, 'quality') && matching(p, 'production'));
+  return { records, pages, published, indexed: published.filter((p) => matching(p, 'indexing')) };
+}
+const RELEASE = releaseState();
+const jaUrlOf = (sourcePath) => `${BASE_URL}/ja${sourcePath}`;
+
+test('repository data: before release only drafts; after release Sunbae published under policy B (no indexing record), other pages only with their own records', () => {
   assert.equal(real.locales.LOCALES.ja.publication, RELEASED ? 'public' : 'not-public');
   assert.equal(pub.locales.LOCALES.ja.publication, 'public');
   assert.equal(priv.locales.LOCALES.ja.publication, 'not-public');
   assert.equal(readJson(path.join(REPO, 'content/translations/ja', rel(SUNBAE))).status, RELEASED ? 'approved' : 'draft');
-  assert.equal(readJson(path.join(REPO, 'content/translations/ja', rel(ANIME))).status, 'draft', 'the anime page stays a draft');
+  assert.ok(RELEASE.pages.includes(SUNBAE) && RELEASE.pages.includes(ANIME), 'both real pages are in the repository');
   if (RELEASED) {
-    const records = readJson(path.join(REPO, APPROVALS)).records;
-    assert.deepEqual(records.map((r) => `${r.kind} ${r.locale} ${r.sourcePath}`), [`quality ja ${SUNBAE}`, `production ja ${SUNBAE}`]);
-    assert.ok(!records.some((r) => r.kind === 'indexing'), 'no indexing record');
+    const sunbae = RELEASE.records.filter((r) => r.sourcePath === SUNBAE);
+    assert.deepEqual(sunbae.map((r) => `${r.kind} ${r.locale}`), ['quality ja', 'production ja']);
+    assert.ok(RELEASE.published.includes(SUNBAE), 'Sunbae stays published');
+    assert.ok(!RELEASE.indexed.includes(SUNBAE), 'Sunbae has no indexing record');
+    for (const record of RELEASE.records) assert.ok(RELEASE.pages.includes(record.sourcePath), `${record.kind} ${record.sourcePath}: an existing page`);
+  } else {
+    assert.deepEqual(RELEASE.published, []);
   }
 });
 
-test('repository data: no Japanese URL, no language links and no xhtml namespace in the sitemap, on any environment', async () => {
+test('repository data: the sitemap lists Japanese URLs and language links only for indexed pages, and only on Production', async () => {
   for (const vars of [PRODUCTION, PREVIEW, { NODE_ENV: 'production' }, {}]) {
     await withEnv(vars, () => {
-      assert.deepEqual(real.page.indexedTranslations(), [], JSON.stringify(vars));
+      for (const m of [real, pub, priv]) m.catalog.clearCatalogCache();
+      const production = vars === PRODUCTION || vars.NODE_ENV === 'production';
+      const indexed = production ? RELEASE.indexed : [];
+      const label = JSON.stringify(vars);
+      assert.deepEqual(real.page.indexedTranslations(), indexed.map((sourcePath) => ({ locale: 'ja', hreflang: 'ja', sourcePath, urlPath: `/ja${sourcePath}` })), label);
       const entries = real.sitemap();
-      assert.deepEqual(jaUrls(entries), [], JSON.stringify(vars));
-      assert.equal(entries.filter((e) => e.alternates).length, 0);
-      assert.equal(xml(entries), REAL_XML, 'same sitemap bytes in every environment');
+      assert.deepEqual(jaUrls(entries), indexed.map(jaUrlOf), `${label}: one Japanese sitemap URL per indexed page (its English URL must be in the sitemap)`);
+      assert.equal(entries.filter((e) => e.alternates).length, indexed.length * 2, label);
+      for (const sourcePath of indexed) {
+        const en = `${BASE_URL}${sourcePath}`;
+        const languages = { en, ja: jaUrlOf(sourcePath), 'x-default': en };
+        const english = entries.find((e) => e.url === en);
+        const japanese = entries.find((e) => e.url === jaUrlOf(sourcePath));
+        assert.deepEqual(english.alternates, { languages }, `${label} ${sourcePath}`);
+        assert.deepEqual(japanese.alternates, { languages }, `${label} ${sourcePath}`);
+        assert.equal(entries.indexOf(japanese), entries.indexOf(english) + 1, 'listed right after its English page');
+      }
+      // Apart from the indexed Japanese URLs and their links, the sitemap is the English one.
+      const strip = (e) => { const copy = { ...e }; delete copy.alternates; return copy; };
+      assert.deepEqual(entries.filter((e) => !jaUrls([e]).length).map(strip), ENGLISH_ENTRIES, label);
+      if (indexed.length === 0) assert.equal(xml(entries), ENGLISH_XML, `${label}: same bytes as the English sitemap`);
+      else assert.ok(xml(entries).includes('xmlns:xhtml'), label);
+      assert.equal(new Set(entries.map((e) => e.url)).size, entries.length, 'no duplicate URL');
+      assert.ok(!jaUrls(entries).includes(jaUrlOf(SUNBAE)), 'Sunbae is never in the sitemap');
     });
   }
-  assert.ok(!REAL_XML.includes('xmlns:xhtml') && !REAL_XML.includes('hreflang') && !REAL_XML.includes('/ja/'));
-  assert.equal(urlCount(REAL_ENTRIES, `${BASE_URL}${SUNBAE}`), 1, 'the English Sunbae page is listed once');
-  assert.equal(new Set(REAL_ENTRIES.map((e) => e.url)).size, REAL_ENTRIES.length, 'no duplicate URL');
+  assert.ok(!ENGLISH_XML.includes('xmlns:xhtml') && !ENGLISH_XML.includes('hreflang') && !ENGLISH_XML.includes('/ja/'));
+  assert.equal(urlCount(ENGLISH_ENTRIES, `${BASE_URL}${SUNBAE}`), 1, 'the English Sunbae page is listed once');
+  assert.equal(new Set(ENGLISH_ENTRIES.map((e) => e.url)).size, ENGLISH_ENTRIES.length, 'no duplicate URL');
 });
 
-test('repository data: Preview renders noindex without canonical; Production renders nothing before release, only Sunbae (noindex, no canonical) after', async () => {
+test('repository data: Preview renders every page noindex without canonical; Production serves exactly the published pages, index and canonical only when indexed', async () => {
   await withEnv(PREVIEW, () => {
-    for (const sourcePath of PAGES) {
+    for (const m of [real, pub, priv]) m.catalog.clearCatalogCache();
+    for (const sourcePath of RELEASE.pages) {
       const metadata = real.page.localeMetadata('ja', slugOf(sourcePath));
       assert.deepEqual(metadata.robots, NOINDEX, sourcePath);
       assert.equal(metadata.alternates, undefined, sourcePath);
@@ -276,20 +332,31 @@ test('repository data: Preview renders noindex without canonical; Production ren
   for (const vars of [PRODUCTION, { NODE_ENV: 'production' }]) {
     await withEnv(vars, () => {
       for (const m of [real, pub, priv]) m.catalog.clearCatalogCache();
-      const s = snapshot(real);
-      assert.deepEqual(s.generated, RELEASED ? [SUNBAE] : [], JSON.stringify(vars));
-      assert.equal(s.metadata[ANIME], 404, 'the anime draft is never served on Production');
-      if (RELEASED) {
-        assert.deepEqual(s.metadata[SUNBAE].robots, NOINDEX, 'noindex, nofollow, nocache');
-        assert.equal(s.metadata[SUNBAE].alternates, undefined, 'no canonical, no language alternates');
-        assert.equal(s.metadata[SUNBAE].openGraph.locale, 'ja_JP');
-      } else {
-        assert.equal(s.metadata[SUNBAE], 404);
+      const s = snapshot(real, RELEASE.pages);
+      const label = JSON.stringify(vars);
+      assert.deepEqual([...s.generated].sort(), RELEASE.published, label);
+      for (const sourcePath of RELEASE.pages) {
+        const metadata = s.metadata[sourcePath];
+        if (!RELEASE.published.includes(sourcePath)) {
+          assert.equal(metadata, 404, `${sourcePath}: not published, never served on Production`);
+        } else if (RELEASE.indexed.includes(sourcePath)) {
+          assert.deepEqual(metadata.robots, { index: true, follow: true }, sourcePath);
+          assert.deepEqual(metadata.alternates, { canonical: `/ja${sourcePath}` }, sourcePath);
+          assert.equal(metadata.openGraph.locale, 'ja_JP');
+        } else {
+          assert.deepEqual(metadata.robots, NOINDEX, `${sourcePath}: noindex, nofollow, nocache`);
+          assert.equal(metadata.alternates, undefined, `${sourcePath}: no canonical, no language alternates`);
+          assert.equal(metadata.openGraph.locale, 'ja_JP');
+        }
       }
-      assert.deepEqual(s.indexed, [], 'nothing indexed');
-      assert.deepEqual(jaUrls(s.entries), [], 'no Japanese sitemap URL');
-      assert.equal(s.xml, REAL_XML, 'sitemap bytes unchanged');
-      assert.ok(!s.xml.includes('hreflang') && !s.xml.includes('xmlns:xhtml'));
+      if (RELEASED) assert.deepEqual(s.metadata[SUNBAE].robots, NOINDEX, 'Sunbae: noindex, nofollow, nocache');
+      else assert.equal(s.metadata[SUNBAE], 404);
+      assert.deepEqual(s.indexed.map((t) => t.sourcePath), RELEASE.indexed, 'indexed exactly the pages with an indexing record');
+      assert.deepEqual(jaUrls(s.entries), RELEASE.indexed.map(jaUrlOf), 'one Japanese sitemap URL per indexed page (its English URL must be in the sitemap)');
+      if (RELEASE.indexed.length === 0) {
+        assert.equal(s.xml, ENGLISH_XML, 'sitemap bytes unchanged');
+        assert.ok(!s.xml.includes('hreflang') && !s.xml.includes('xmlns:xhtml'));
+      }
     });
   }
 });
@@ -315,7 +382,7 @@ test('quality + production, no indexing: Sunbae renders with noindex, no canonic
     assert.equal(s.metadata[ANIME], 404);
     assert.deepEqual(s.indexed, []);
     assert.deepEqual(jaUrls(s.entries), []);
-    assert.equal(s.xml, REAL_XML, 'sitemap unchanged');
+    assert.equal(s.xml, ENGLISH_XML, 'sitemap unchanged');
   });
 });
 
@@ -353,8 +420,8 @@ test('quality + production + indexing: index, self canonical, one Japanese sitem
 
     // Every other entry is exactly as before, in the same order.
     const strip = (e) => { const copy = { ...e }; delete copy.alternates; return copy; };
-    assert.deepEqual(s.entries.filter((e) => e.url !== jaUrl).map(strip), REAL_ENTRIES.map(strip));
-    assert.equal(withoutAlternates(s.entries).length, REAL_ENTRIES.length - 1);
+    assert.deepEqual(s.entries.filter((e) => e.url !== jaUrl).map(strip), ENGLISH_ENTRIES.map(strip));
+    assert.equal(withoutAlternates(s.entries).length, ENGLISH_ENTRIES.length - 1);
 
     // Next.js XML: xhtml namespace and the three links on both URLs.
     assert.match(s.xml, /^<\?xml version="1\.0" encoding="UTF-8"\?>\n<urlset xmlns="http:\/\/www\.sitemaps\.org\/schemas\/sitemap\/0\.9" xmlns:xhtml="http:\/\/www\.w3\.org\/1999\/xhtml">\n/);
@@ -376,7 +443,7 @@ test('a missing approval kind blocks: 404, no sitemap entry, no hreflang', async
       assert.deepEqual(s.generated, [], approve.join('+'));
       assert.equal(s.metadata[SUNBAE], 404, approve.join('+'));
       assert.deepEqual(s.indexed, []);
-      assert.equal(s.xml, REAL_XML, approve.join('+'));
+      assert.equal(s.xml, ENGLISH_XML, approve.join('+'));
     });
   }
 });
@@ -406,12 +473,12 @@ test('stale approvals or source freshness: 404, no sitemap entry, no hreflang (f
       assert.deepEqual(s.generated, [], name);
       assert.equal(s.metadata[SUNBAE], 404, name);
       assert.deepEqual(s.indexed, [], name);
-      assert.equal(s.xml, REAL_XML, name);
+      assert.equal(s.xml, ENGLISH_XML, name);
     });
   }
   // An approval file with an extra top-level field is void as a whole.
   const base = fixture({ approve: all, approvalsDoc: (records) => ({ schemaVersion: 1, records, note: 'x' }) });
-  await inRepo(base, PRODUCTION, () => assert.equal(snapshot(pub).xml, REAL_XML));
+  await inRepo(base, PRODUCTION, () => assert.equal(snapshot(pub).xml, ENGLISH_XML));
 });
 
 test('Preview and development never index, even with every approval record', async () => {
@@ -425,7 +492,7 @@ test('Preview and development never index, even with every approval record', asy
         assert.equal(s.metadata[sourcePath].alternates, undefined);
       }
       assert.deepEqual(s.indexed, []);
-      assert.equal(s.xml, REAL_XML);
+      assert.equal(s.xml, ENGLISH_XML);
     });
   }
 });
@@ -436,7 +503,7 @@ test('a non-public locale is never served or indexed, whatever records exist', a
     const s = snapshot(priv);
     assert.deepEqual(s.generated, []);
     assert.equal(s.metadata[SUNBAE], 404);
-    assert.equal(s.xml, REAL_XML);
+    assert.equal(s.xml, ENGLISH_XML);
   });
 });
 
