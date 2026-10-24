@@ -28,8 +28,11 @@ of the content and are kept.
   objective fact.
 - **No overgeneralizing:** do not present what some people feel as the usual
   behavior of a whole fandom.
-- **Frequency words:** use words such as "most", "always", "often" or "all
-  fans" only with real support, or when the owner means them.
+- **Frequency words:** state words such as "most", "always", "often" or "all
+  fans" as fact only with real support (a source or data). When they come
+  from the owner's own observation, write them as an observation (for example
+  "some fans", "in the fan spaces HAEMIL follows", "to HAEMIL, it often
+  feels…"). The owner's opinion alone is never written as objective fact.
 - **Scope of an observation:** mark it with wording such as "some fans", "it
   can feel like" or "to HAEMIL".
 - **Keep the voice:** do not make every sentence cautious. Keep the owner's
