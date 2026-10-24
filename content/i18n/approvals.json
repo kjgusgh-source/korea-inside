@@ -18,6 +18,33 @@
       "translationSha256": "sha256:9406fac6a5acbe32ef7779eb1017baae90a15f79c05e3d3563af644df0e3b233",
       "approvedBy": "HAEMIL site owner (policy B: AI-assisted translation, no native-speaker review)",
       "approvedAt": "2026-10-22T13:57:50+09:00"
+    },
+    {
+      "kind": "quality",
+      "locale": "ja",
+      "sourcePath": "/kpop/why-kpop-idols-feel-like-anime-characters",
+      "sourceSha256": "sha256:d09c149896b558fd81aae5d7dfaf107dea4b89e91bfa395a6a4a058c99661462",
+      "translationSha256": "sha256:fdf1a71065dcbcb2b665efb7616c40cc7d5cc5793ba325c691094d6beedc3e3c",
+      "approvedBy": "HAEMIL site owner (AI 3-stage review: Claude in Cowork, then ChatGPT GPT-6 run by the owner; no native-speaker review)",
+      "approvedAt": "2026-10-24T22:55:36+09:00"
+    },
+    {
+      "kind": "production",
+      "locale": "ja",
+      "sourcePath": "/kpop/why-kpop-idols-feel-like-anime-characters",
+      "sourceSha256": "sha256:d09c149896b558fd81aae5d7dfaf107dea4b89e91bfa395a6a4a058c99661462",
+      "translationSha256": "sha256:fdf1a71065dcbcb2b665efb7616c40cc7d5cc5793ba325c691094d6beedc3e3c",
+      "approvedBy": "HAEMIL site owner (AI 3-stage review: Claude in Cowork, then ChatGPT GPT-6 run by the owner; no native-speaker review)",
+      "approvedAt": "2026-10-24T22:55:36+09:00"
+    },
+    {
+      "kind": "indexing",
+      "locale": "ja",
+      "sourcePath": "/kpop/why-kpop-idols-feel-like-anime-characters",
+      "sourceSha256": "sha256:d09c149896b558fd81aae5d7dfaf107dea4b89e91bfa395a6a4a058c99661462",
+      "translationSha256": "sha256:fdf1a71065dcbcb2b665efb7616c40cc7d5cc5793ba325c691094d6beedc3e3c",
+      "approvedBy": "HAEMIL site owner (AI 3-stage review: Claude in Cowork, then ChatGPT GPT-6 run by the owner; no native-speaker review)",
+      "approvedAt": "2026-10-24T22:55:36+09:00"
     }
   ]
 }
