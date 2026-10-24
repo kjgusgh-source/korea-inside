@@ -169,7 +169,7 @@ export default function KpopBirthdayCafesKoreaPage() {
                   happening inside it.
                 </p>
                 <p>
-                  Fan organizers often post event notices on X or Instagram. Fan-event listing
+                  Fan organizers often share event notices on X, and some also use Instagram. Fan-event listing
                   services can also help you discover events, but the organizer&apos;s latest
                   announcement is the one to check before visiting.
                 </p>
@@ -424,7 +424,7 @@ export default function KpopBirthdayCafesKoreaPage() {
 
               <section id="why-korean" className="space-y-4 scroll-mt-24">
                 <h2 className={h2Class}>What makes birthday cafes feel so Korean?</h2>
-                <p>What interests HAEMIL about birthday cafés isn&apos;t just the merchandise.</p>
+                <p>What I find interesting about birthday cafés isn&apos;t just the merchandise.</p>
                 <p>It&apos;s the way fans turn an ordinary place into a shared celebration.</p>
                 <p>
                   A café may have been serving the same drinks yesterday. Today, a few carefully
