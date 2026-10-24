@@ -17,16 +17,18 @@
  * such as "next/link" resolve to their .js files. Fixtures are written to a
  * temporary folder; repository files are only read.
  *
- * Release state: the tests on the repository's own data know two states,
- * before release (no approval file: every Japanese page is a draft, nothing in
- * production) and Sunbae released under policy B (approval file present: the
- * Japanese Sunbae page is the only published one). catalog.test.mjs checks
- * that the approval file holds exactly the expected records.
+ * Release state: the tests on the repository's own data work for any number
+ * of published pages. Before release there is no approval file (every
+ * Japanese page is a draft, nothing in production). After release the Sunbae
+ * page stays published, and the published pages are worked out here from the
+ * files themselves (publishedPages below), not from the catalog code.
+ * catalog.test.mjs checks the approval records in detail.
  */
 import { register } from 'node:module';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+import { cpSync, existsSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -69,13 +71,39 @@ const { JA_UI, TranslationNotice } = await import('../../lib/i18n/TranslatedPage
 const { catalogDecision, clearCatalogCache, getTranslation, listTranslations } = await import('../../lib/i18n/catalog.ts');
 const { renderToStaticMarkup } = await import('react-dom/server');
 const { createElement } = await import('react');
-const { LOCALE_CODES } = await import('../../lib/i18n/locales.ts');
+const { LOCALE_CODES, LOCALES } = await import('../../lib/i18n/locales.ts');
 const { languageOptions, parseLanguageAvailability } = await import('../../components/HeaderControls.tsx');
 
 const PAGE = '/kpop/what-does-sunbae-and-hoobae-mean-in-kpop';
 const REL = 'kpop/what-does-sunbae-and-hoobae-mean-in-kpop.json';
 const RELEASED = existsSync(path.join(REPO, 'content/i18n/approvals.json'));
 const readJson = (file) => JSON.parse(readFileSync(file, 'utf8'));
+const sha = (file) => `sha256:${createHash('sha256').update(readFileSync(file)).digest('hex')}`;
+
+/**
+ * Published Japanese pages of the repository, worked out from the files (not
+ * from the catalog code): Japanese public, status "approved", and a quality
+ * and a production record whose hashes match the current English source JSON
+ * and translation bytes. Sorted by English path.
+ */
+function publishedPages() {
+  const file = path.join(REPO, 'content/i18n/approvals.json');
+  const records = existsSync(file) ? readJson(file).records : [];
+  if (LOCALES.ja.publication !== 'public') return [];
+  const root = path.join(REPO, 'content/translations');
+  const published = [];
+  for (const rel of readdirSync(path.join(root, 'ja'), { recursive: true }).map(String).filter((f) => f.endsWith('.json')).sort()) {
+    const sourcePath = `/${rel.split(path.sep).join('/').slice(0, -'.json'.length)}`;
+    const translation = path.join(root, 'ja', rel);
+    const source = path.join(root, 'source', rel);
+    if (!existsSync(source) || readJson(translation).status !== 'approved') continue;
+    const has = (kind) => records.some((r) => r.kind === kind && r.locale === 'ja' && r.sourcePath === sourcePath &&
+      r.sourceSha256 === sha(source) && r.translationSha256 === sha(translation) && String(r.approvedBy ?? '').trim() !== '');
+    if (has('quality') && has('production')) published.push(sourcePath);
+  }
+  return published;
+}
+const PUBLISHED = publishedPages();
 const writeJson = (file, value) => { mkdirSync(path.dirname(file), { recursive: true }); writeFileSync(file, `${JSON.stringify(value, null, 2)}\n`); };
 
 /** Run `fn` with these environment variables (others as they are), then restore. */
@@ -145,8 +173,10 @@ test('menu data on Preview: exactly the generated translated pages, each marked 
 });
 
 test('menu data on Production lists no draft (Vercel Production and a plain production build)', async () => {
-  // Before release: nothing. After release: only the published Japanese Sunbae page, not marked draft.
-  const expected = { version: 2, pages: RELEASED ? { [PAGE]: [ja(false)] } : {} };
+  // Before release: nothing. After release: exactly the published Japanese pages (Sunbae among them), none marked draft.
+  if (RELEASED) assert.ok(PUBLISHED.includes(PAGE), 'Sunbae stays published');
+  else assert.deepEqual(PUBLISHED, []);
+  const expected = { version: 2, pages: Object.fromEntries(PUBLISHED.map((sourcePath) => [sourcePath, [ja(false)]])) };
   assert.deepEqual(await menuData({ VERCEL_ENV: 'production' }), expected);
   assert.deepEqual(await menuData({ NODE_ENV: 'production' }), expected);
   assert.deepEqual(await menuData({ VERCEL: '1' }), expected, 'unknown Vercel environment counts as production');
@@ -251,7 +281,9 @@ test('localeMenuEntries lists exactly the generated pages, with the same draft d
   });
   await withEnv({ VERCEL_ENV: 'production' }, () => {
     clearCatalogCache();
-    assert.deepEqual(localeMenuEntries('ja'), RELEASED ? [{ sourcePath: PAGE, draft: false }] : []);
+    const listed = localeMenuEntries('ja');
+    assert.deepEqual([...listed].sort((a, b) => a.sourcePath.localeCompare(b.sourcePath)), PUBLISHED.map((sourcePath) => ({ sourcePath, draft: false })));
+    assert.equal(listed.some((e) => e.sourcePath === PAGE), RELEASED);
   });
   clearCatalogCache();
 });

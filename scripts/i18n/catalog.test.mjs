@@ -15,13 +15,17 @@
  * the modules in which lib/i18n/locales.ts marks Japanese "not-public"
  * ("?ja-private", changed in memory by the module loader; the file on disk is
  * only read), and their fixtures start from the Sunbae translation as a
- * draft. Only the "real data" tests read the repository as it is. They know
- * two states and fail on anything else:
+ * draft. Only the "real data" tests read the repository as it is:
  *   - before release: no approval file, Japanese not public, every Japanese
  *     translation a draft;
- *   - Sunbae released (policy B): Japanese public, Sunbae approved with
- *     exactly one quality and one production record for its current bytes,
- *     no indexing record, no record for any other page.
+ *   - after release: Japanese public, and any number of approved pages. The
+ *     expected published and indexed pages are worked out by this test from
+ *     the files themselves (releaseState below: status, and records whose
+ *     hashes match the current bytes), not taken from catalog.ts. Sunbae
+ *     stays published under policy B with exactly one quality and one
+ *     production record and no indexing record; every other page is
+ *     published only with its own matching records.
+ * A new approved page therefore needs no change to these tests.
  */
 import { register } from 'node:module';
 import { test } from 'node:test';
@@ -108,8 +112,44 @@ const readdirRecursive = (dir) => readdirSync(dir, { recursive: true });
 
 // Release state of the repository (see the header): "released" once the approval file exists.
 const RELEASED = existsSync(path.join(REPO, 'content/i18n/approvals.json'));
-const PUBLIC_PAGES = RELEASED ? [PAGE] : [];
 const SUNBAE_STATUS = RELEASED ? 'approved' : 'draft';
+// ISO 8601 date and time with a time zone (the calendar check is isRealDateTime's own test).
+const DATE_TIME = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(:\d{2}(\.\d+)?)?(Z|[+-]\d{2}:\d{2})$/;
+
+/**
+ * Release state of the repository, worked out from the files themselves (not
+ * from catalog.ts). For every Japanese translation file: its status, and
+ * whether content/i18n/approvals.json holds a quality, a production and an
+ * indexing record that names the page and matches the current SHA-256 of its
+ * English source JSON and its translation, with an approver and a date.
+ * Published: Japanese public, status "approved", quality and production.
+ * Indexed: published and an indexing record.
+ */
+function releaseState() {
+  const file = path.join(REPO, 'content/i18n/approvals.json');
+  const records = existsSync(file) ? readJson(file).records : [];
+  const pages = {};
+  const files = readdirSync(path.join(REAL_ROOT, 'ja'), { recursive: true }).map(String).filter((f) => f.endsWith('.json')).sort();
+  for (const rel of files) {
+    const sourcePath = `/${rel.split(path.sep).join('/').slice(0, -'.json'.length)}`;
+    const translation = path.join(REAL_ROOT, 'ja', rel);
+    const source = path.join(REAL_ROOT, 'source', rel);
+    const bytes = existsSync(source) ? { source: sha(source), translation: sha(translation) } : null;
+    const has = (kind) => bytes !== null && records.some((r) => r.kind === kind && r.locale === 'ja' && r.sourcePath === sourcePath &&
+      r.sourceSha256 === bytes.source && r.translationSha256 === bytes.translation &&
+      typeof r.approvedBy === 'string' && r.approvedBy.trim() !== '' && DATE_TIME.test(String(r.approvedAt)));
+    let status = null;
+    try { status = readJson(translation).status ?? null; } catch { status = null; }
+    pages[sourcePath] = { status, quality: has('quality'), production: has('production'), indexing: has('indexing') };
+  }
+  const published = Object.keys(pages)
+    .filter((p) => LOCALES.ja.publication === 'public' && pages[p].status === 'approved' && pages[p].quality && pages[p].production);
+  return { records, pages, published, indexed: published.filter((p) => pages[p].indexing) };
+}
+const RELEASE = releaseState();
+const PUBLIC_PAGES = RELEASE.published;
+const INDEXED_PAGES = RELEASE.indexed;
+const sortedPaths = (entries) => entries.map((e) => e.sourcePath).sort();
 
 const temps = [];
 /**
@@ -192,22 +232,31 @@ test('real data: the Japanese Sunbae translation is found and valid, with verifi
   assert.equal(sha(path.join(REAL_ROOT, 'ja', REL)), before);
 });
 
-test('real data: publish decisions per environment', () => {
+test('real data: publish decisions per environment, for every Japanese translation', () => {
   live.clearCatalogCache();
+  const entries = live.listTranslations({ root: REAL_ROOT }).filter((e) => e.locale === 'ja');
   const entry = live.getTranslation('ja', PAGE, { root: REAL_ROOT }).entry;
   const decide = (environment, e = entry) => live.catalogDecision(e, environment, { root: REAL_ROOT });
+  assert.ok(entries.includes(entry), 'Sunbae is in the catalog');
+  assert.deepEqual(entries.map((e) => e.sourcePath).sort(), Object.keys(RELEASE.pages), 'every translation file is in the catalog once');
+  // Preview and development: every valid translation renders, is never indexed and never listed as published.
   for (const environment of ['preview', 'development']) {
-    const d = decide(environment);
-    assert.equal(d.render, true, environment);
-    assert.equal(d.robots, 'noindex');
-    assert.equal(d.listInLanguageMenu, false);
-    assert.equal(d.includeInSitemap, false);
+    for (const e of entries.filter((x) => x.validation === 'valid' && x.status !== null)) {
+      const d = decide(environment, e);
+      assert.equal(d.render, true, `${environment} ${e.key}`);
+      assert.equal(d.robots, 'noindex', `${environment} ${e.key}`);
+      assert.equal(d.listInLanguageMenu, false, `${environment} ${e.key}`);
+      assert.equal(d.includeInSitemap, false, `${environment} ${e.key}`);
+    }
   }
+  // Sunbae: published under policy B and never indexed (no indexing record).
   const prod = decide('production');
+  assert.ok(!INDEXED_PAGES.includes(PAGE) && !RELEASE.pages[PAGE].indexing, 'Sunbae has no indexing record');
   assert.equal(prod.robots, 'noindex', 'never indexed: there is no indexing record');
   assert.equal(prod.includeInSitemap, false);
   if (RELEASED) {
     // Released under policy B: served on Production, listed in the language menu, not indexed.
+    assert.ok(PUBLIC_PAGES.includes(PAGE), 'Sunbae stays published');
     assert.equal(prod.render, true);
     assert.equal(prod.listInLanguageMenu, true);
     assert.deepEqual(prod.reasons, ['no-indexing-approval']);
@@ -220,13 +269,29 @@ test('real data: publish decisions per environment', () => {
   }
   // Source freshness is verified (committed MATCH record); that alone never allows production.
   assert.ok(!prod.reasons.some((reason) => reason.startsWith('source-freshness')), prod.reasons.join(', '));
-  // Production renders exactly the released pages; every other Japanese translation is blocked.
-  assert.deepEqual(live.renderableEntries('ja', 'production', { root: REAL_ROOT }).map((e) => e.sourcePath), PUBLIC_PAGES);
-  for (const other of live.listTranslations({ root: REAL_ROOT }).filter((e) => e.locale === 'ja' && e.sourcePath !== PAGE)) {
-    const d = decide('production', other);
-    assert.equal(d.render, false, other.key);
-    for (const reason of ['status-not-approved', 'no-quality-approval', 'no-production-approval']) assert.ok(d.reasons.includes(reason), `${other.key}: ${reason}`);
+  // Every Japanese translation: Production follows the release state worked out from the files.
+  for (const e of entries) {
+    const d = decide('production', e);
+    const state = RELEASE.pages[e.sourcePath];
+    if (PUBLIC_PAGES.includes(e.sourcePath)) {
+      const indexed = INDEXED_PAGES.includes(e.sourcePath);
+      assert.equal(d.render, true, e.key);
+      assert.equal(d.listInLanguageMenu, true, e.key);
+      assert.equal(d.robots, indexed ? 'index' : 'noindex', e.key);
+      assert.equal(d.includeInSitemap, indexed, e.key);
+      assert.deepEqual(d.reasons, indexed ? [] : ['no-indexing-approval'], e.key);
+    } else {
+      assert.equal(d.render, false, e.key);
+      assert.equal(d.listInLanguageMenu, false, e.key);
+      assert.equal(d.robots, 'noindex', e.key);
+      assert.equal(d.includeInSitemap, false, e.key);
+      if (state.status !== 'approved') assert.ok(d.reasons.includes('status-not-approved'), `${e.key}: status-not-approved`);
+      if (!state.quality) assert.ok(d.reasons.includes('no-quality-approval'), `${e.key}: no-quality-approval`);
+      if (!state.production) assert.ok(d.reasons.includes('no-production-approval'), `${e.key}: no-production-approval`);
+    }
   }
+  // Production renders exactly the published pages; every other Japanese translation is blocked.
+  assert.deepEqual(sortedPaths(live.renderableEntries('ja', 'production', { root: REAL_ROOT })), PUBLIC_PAGES);
   // Preview lists exactly the valid Japanese entries with a known status, Sunbae among them.
   const preview = live.renderableEntries('ja', 'preview', { root: REAL_ROOT }).map((e) => e.key);
   const expected = live.listTranslations({ root: REAL_ROOT })
@@ -518,7 +583,7 @@ test('environment: VERCEL_ENV=production and unknown Vercel values are productio
     live.clearCatalogCache();
     const environment = live.resolveEnvironment();
     assert.equal(environment, 'production');
-    assert.deepEqual(live.renderableEntries('ja', environment, { root: REAL_ROOT }).map((e) => e.sourcePath), PUBLIC_PAGES);
+    assert.deepEqual(sortedPaths(live.renderableEntries('ja', environment, { root: REAL_ROOT })), PUBLIC_PAGES);
   } finally {
     if (previous === undefined) delete process.env.VERCEL_ENV; else process.env.VERCEL_ENV = previous;
   }
@@ -927,7 +992,7 @@ const decide = (root, environment = 'production', sourcePath = PAGE) =>
   catalogDecision(getTranslation('ja', sourcePath, { root }).entry, environment, { root });
 const approvalIssues = (root) => loadCatalog({ root }).issues.filter((i) => i.id === '(approvals)');
 
-test('approvals: the repository holds no record before release, and exactly Sunbae quality + production (no indexing) after', () => {
+test('approvals: the repository holds no record before release; after it, Sunbae quality + production (no indexing) and only records that match current files', () => {
   live.clearCatalogCache();
   const file = path.join(REPO, APPROVALS);
   const records = live.approvalRecords({ root: REAL_ROOT });
@@ -949,37 +1014,52 @@ test('approvals: the repository holds no record before release, and exactly Sunb
     assert.deepEqual(live.renderableEntries('ja', 'production', { root: REAL_ROOT }), []);
     return;
   }
-  // Released: the file holds exactly schemaVersion 1 and two records for the current Sunbae bytes.
+  // Released: the file holds exactly schemaVersion 1 and its records, all read by the catalog.
   const doc = readJson(file);
   assert.deepEqual(Object.keys(doc).sort(), ['records', 'schemaVersion']);
   assert.equal(doc.schemaVersion, 1);
-  assert.equal(records.length, 2);
-  assert.deepEqual(records.map((r) => r.kind), ['quality', 'production']);
-  assert.ok(!records.some((r) => r.kind === 'indexing'), 'no indexing record');
+  assert.equal(records.length, doc.records.length, 'every record is usable');
+  const seen = new Set();
   for (const record of records) {
     assert.deepEqual(Object.keys(record).sort(), ['approvedAt', 'approvedBy', 'kind', 'locale', 'sourcePath', 'sourceSha256', 'translationSha256']);
+    assert.ok(['quality', 'production', 'indexing'].includes(record.kind), record.kind);
     assert.equal(record.locale, 'ja');
-    assert.equal(record.sourcePath, PAGE);
-    assert.equal(record.sourceSha256, sha(path.join(REAL_ROOT, 'source', REL)), 'English source JSON bytes');
-    assert.equal(record.translationSha256, sha(path.join(REAL_ROOT, 'ja', REL)), 'approved translation bytes');
+    const key = `${record.kind} ${record.sourcePath}`;
+    assert.ok(!seen.has(key), `one ${key} record`);
+    seen.add(key);
+    // Each record approves the current bytes of an existing page (a stale record would approve nothing).
+    const rel = `${record.sourcePath.slice(1)}.json`;
+    assert.ok(RELEASE.pages[record.sourcePath], `${key}: a Japanese translation exists`);
+    assert.equal(record.sourceSha256, sha(path.join(REAL_ROOT, 'source', rel)), `${key}: English source JSON bytes`);
+    assert.equal(record.translationSha256, sha(path.join(REAL_ROOT, 'ja', rel)), `${key}: approved translation bytes`);
     assert.equal(isRealDateTime(record.approvedAt), true, record.approvedAt);
-    assert.match(record.approvedBy, /policy B/, 'the site owner approval under policy B');
     assert.match(record.approvedBy, /no native-speaker review/, 'AI review is not presented as a native review');
   }
+  // An indexing record is only given together with quality and production for the same bytes.
+  for (const record of records.filter((r) => r.kind === 'indexing')) {
+    assert.ok(seen.has(`quality ${record.sourcePath}`) && seen.has(`production ${record.sourcePath}`), record.sourcePath);
+  }
+  // Sunbae: exactly one quality and one production record under policy B, no indexing record.
+  const sunbae = records.filter((r) => r.sourcePath === PAGE);
+  assert.deepEqual(sunbae.map((r) => r.kind), ['quality', 'production']);
+  for (const record of sunbae) assert.match(record.approvedBy, /policy B/, 'the site owner approval under policy B');
+  // Decisions: published exactly when the status is approved and both records match.
   for (const entry of live.listTranslations({ root: REAL_ROOT }).filter((e) => e.locale === 'ja')) {
     const d = live.catalogDecision(entry, 'production', { root: REAL_ROOT });
-    if (entry.sourcePath === PAGE) {
-      assert.equal(entry.status, 'approved');
-      assert.equal(d.render, true);
-      assert.equal(d.robots, 'noindex');
-      assert.deepEqual(d.reasons, ['no-indexing-approval']);
+    const state = RELEASE.pages[entry.sourcePath];
+    if (PUBLIC_PAGES.includes(entry.sourcePath)) {
+      assert.equal(entry.status, 'approved', entry.key);
+      assert.equal(d.render, true, entry.key);
+      assert.equal(d.robots, INDEXED_PAGES.includes(entry.sourcePath) ? 'index' : 'noindex', entry.key);
     } else {
-      assert.equal(entry.status, 'draft', entry.key);
       assert.equal(d.render, false, entry.key);
-      assert.ok(NO_RECORDS.every((r) => d.reasons.includes(r)), entry.key);
+      if (!state.quality) assert.ok(d.reasons.includes('no-quality-approval'), entry.key);
+      if (!state.production) assert.ok(d.reasons.includes('no-production-approval'), entry.key);
+      if (entry.status !== 'approved') assert.ok(d.reasons.includes('status-not-approved'), entry.key);
     }
   }
-  assert.deepEqual(live.renderableEntries('ja', 'production', { root: REAL_ROOT }).map((e) => e.sourcePath), [PAGE]);
+  assert.ok(PUBLIC_PAGES.includes(PAGE));
+  assert.deepEqual(sortedPaths(live.renderableEntries('ja', 'production', { root: REAL_ROOT })), PUBLIC_PAGES);
 });
 
 test('approvals: matching records from the file satisfy every gate except the public locale', () => {

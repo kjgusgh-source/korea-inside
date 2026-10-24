@@ -35,8 +35,8 @@
       "sourceJson": "content/translations/source/kpop/why-kpop-idols-feel-like-anime-characters.json",
       "status": "MATCH",
       "extractorVersion": "extract-pilot-1",
-      "sourceJsonSha256": "sha256:35b4a330f0cd35f68b264b2e8f21e0487b1bc23c022f56f3b6924f20e8a94367",
-      "pageSha256": "sha256:15d0c6becd81da678c96908bc29e525c30423cc1a72ef52ae776ba8884daa6fa",
+      "sourceJsonSha256": "sha256:d09c149896b558fd81aae5d7dfaf107dea4b89e91bfa395a6a4a058c99661462",
+      "pageSha256": "sha256:b7d75f8d9d74922cda87ff3050b2725b5b2f82c66b3103879338b207785cb0eb",
       "notCompared": [
         "json-ld"
       ]

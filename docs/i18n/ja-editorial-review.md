@@ -13,6 +13,12 @@ exception.
 
 Human native-Japanese reviews completed for this page: **0**.
 
+> **Policy update (2026-10-23).** For Japanese pages, the default rule in
+> "Native review policy" below is replaced by `ja-translation-policy.md`: three
+> AI review stages plus the owner's approval, with no native review required.
+> This page's pilot decision, its noindex release and its two approval records
+> are unchanged. This document stays the review record for this page.
+
 ## Policy decision (2026-10-21)
 
 | Item | Record |
@@ -30,6 +36,9 @@ path").
 
 ## Native review policy
 
+*Superseded on 2026-10-23 by `ja-translation-policy.md`. Kept as the rule that
+applied when this page was released.*
+
 **Default rule.** A translated page is published only after a human native
 Japanese speaker has reviewed it. This applies to every Japanese page unless a
 written exception names that page.
@@ -41,7 +50,8 @@ cross-reviews below instead of a native review.
 
 - The exception does not apply to the Japanese anime page
   (`/ja/kpop/why-kpop-idols-feel-like-anime-characters`) or to any future
-  translated page. Each would need its own written decision.
+  translated page. Each would need its own written decision. (Since
+  2026-10-23, those pages follow `ja-translation-policy.md`.)
 - AI cross-review is not a native review and is never recorded as one.
 - The exception does not change the approval system: quality, production and
   indexing approvals stay separate records (`content/i18n/approvals.json`, see

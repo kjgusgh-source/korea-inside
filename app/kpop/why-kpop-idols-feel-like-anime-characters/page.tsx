@@ -177,9 +177,9 @@ export default function WhyKpopIdolsFeelLikeAnimeCharactersPage() {
               </p>
 
               <p>
-                In Korean fandom spaces, &quot;2D-like&quot; or
-                &quot;anime-like&quot; is often used when someone has a very
-                strong visual image. Not just a pretty face, but a face and mood
+                In Korean fandom spaces, some fans describe idols with a strong,
+                memorable visual image as &quot;2D-like&quot; or
+                &quot;anime-like.&quot; Not just a pretty face, but a face and mood
                 that feel easy to remember. Big eyes, clear expressions, bright
                 styling, sharp reactions, or a slightly unreal stage presence
                 can all create that feeling.
