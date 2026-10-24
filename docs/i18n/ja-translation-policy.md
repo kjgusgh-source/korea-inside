@@ -140,9 +140,9 @@ Rules:
 |---|---|
 | Translation file | `content/translations/ja/kpop/why-kpop-idols-feel-like-anime-characters.json` |
 | Units | 56 |
-| Status | `draft` |
-| Approval records | none |
-| Indexing | not decided |
+| Status | `approved` (owner, 2026-10-24) |
+| Approval records | quality, production and indexing, each a separate owner decision (2026-10-24), for source `sha256:d09c1498…61462` and translation `sha256:fdf1a710…e3c3e3c` |
+| Indexing | approved by the owner as a separate decision (2026-10-24) |
 | Reviewed snapshot | Draft PR #121, HEAD `e8ef118c5c0ee2490c70789b174de408c8cbb1be` |
 
 | Stage | Reviewer | Where run | Scope | Result |
@@ -155,7 +155,12 @@ Rules:
 Owner decisions (2026-10-23):
 
 **Q1 — English unit `page-p-7c3fa9ec` ("…is often used…"): change approved,
-not yet applied.**
+applied.**
+
+Applied in #123 and merged into `main` with #126 (`25213f6`), in the
+existing quote style ("2D-like" and 「2次元っぽい」), as the owner decided on
+2026-10-24. Only this unit was re-reviewed; the other 55 units are unchanged.
+The approved wording was:
 
 The first sentence of the unit changes. The rest of the unit stays.
 
