@@ -7,6 +7,13 @@ export type KpopGuideArticle = {
   
   export const kpopGuideArticles: KpopGuideArticle[] = [
   {
+    title: "K-pop Birthday Cafes in Korea: How to Find and Visit One",
+    description:
+      "Want to visit a K-pop birthday cafe in Korea? Learn how to find fan-run events, read Korean notices, understand freebies, and enjoy your first visit.",
+    href: "/kpop/kpop-birthday-cafes-korea",
+    label: "K-pop culture guide",
+  },
+  {
     title: "Sunbae vs Hoobae: What These Korean Words Really Mean",
     description:
       "What do sunbae and hoobae mean in Korean? A local explains seniority through school, work, military life, and K-pop — and why age isn't the whole story.",
