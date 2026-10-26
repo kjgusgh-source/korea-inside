@@ -227,7 +227,12 @@ export default function WhatIsAFanchantPage() {
                   If you want to learn an <span lang="ko">응원법</span>, start with the artist&apos;s
                   official channels.
                 </p>
-                <p>Try searching with the group name, song title, and one of these terms:</p>
+                <p>
+                  To find an official guide, search the group name and song title with{" "}
+                  <span lang="ko">응원법</span>, <span lang="ko">공식 응원법</span>, or{" "}
+                  <span lang="ko">응원법 영상</span>. The table below also includes related Korean fan
+                  terms you may encounter.
+                </p>
                 <div className="overflow-x-auto rounded-2xl border border-[var(--border)]">
                   <table className="w-full border-collapse text-left text-sm md:text-base">
                     <caption className="sr-only">Korean search terms for K-pop fanchants</caption>
