@@ -236,6 +236,13 @@ export default function WhatIsAFancamPage() {
                 performance, one camera following them.
               </p>
 
+              <p>
+                On Korean YouTube, you&apos;ll often see the word{" "}
+                <span lang="ko" className="whitespace-nowrap">직캠</span>{" "}(jikcam) in these video titles. If
+                you&apos;re looking for a particular member&apos;s fancam, try
+                searching their name with <span lang="ko" className="whitespace-nowrap">직캠</span>.
+              </p>
+
               <h2 className="mt-8 text-xl font-semibold text-[var(--text)] md:text-2xl">
                 Why a full-stage video isn&apos;t always enough
               </h2>
