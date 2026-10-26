@@ -7,6 +7,13 @@ export type KpopGuideArticle = {
   
   export const kpopGuideArticles: KpopGuideArticle[] = [
   {
+    title: "What Is a K-pop Fanchant? A Local Guide to 응원법",
+    description:
+      "Learn what K-pop fanchants (응원법) are, why fans shout names together, where to find official guides, and how to join in at a show.",
+    href: "/kpop/what-is-a-fanchant",
+    label: "K-pop culture guide",
+  },
+  {
     title: "K-pop Birthday Cafes in Korea: How to Find and Visit One",
     description:
       "Want to visit a K-pop birthday cafe in Korea? Learn how to find fan-run events, read Korean notices, understand freebies, and enjoy your first visit.",
