@@ -7,6 +7,13 @@ export type KpopGuideArticle = {
   
   export const kpopGuideArticles: KpopGuideArticle[] = [
   {
+    title: "K-pop Concert ID Check in Korea: Passport & Ticket Tips",
+    description:
+      "Going to a K-pop concert in Korea? Learn how ticket name matching, passport checks, presale verification, and venue pickup work before you go.",
+    href: "/kpop/kpop-concert-id-check-korea",
+    label: "K-pop culture guide",
+  },
+  {
     title: "What Is a K-pop Fanchant? A Local Guide to 응원법",
     description:
       "Learn what K-pop fanchants (응원법) are, why fans shout names together, where to find official guides, and how to join in at a show.",
