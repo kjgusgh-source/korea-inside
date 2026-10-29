@@ -284,6 +284,13 @@ export default function KpopConcertIdCheckKoreaPage() {
                 </p>
                 <p>Meanwhile, some fan-club presales require a separate membership check.</p>
                 <p>
+                  Many K-pop concerts give eligible fan-club members a chance to book tickets before
+                  general sales open. But joining the fan club isn&apos;t always enough. Some concerts
+                  require a separate presale application or membership verification within a specific
+                  period. Presale gives you an earlier chance to book, not a guaranteed ticket, so check
+                  the official notice for deadlines and eligibility.
+                </p>
+                <p>
                   And even if you&apos;ve completed an online verification step, your concert may still
                   require identification at the venue.
                 </p>
@@ -418,6 +425,13 @@ export default function KpopConcertIdCheckKoreaPage() {
                 <p>
                   Some organizers explicitly prohibit unauthorized resale, proxy bookings, or transfers
                   and may cancel tickets connected to those activities.
+                </p>
+                <p>
+                  South Korea strengthened its ticket scalping laws on August 28, 2026. Buying tickets
+                  for resale by bypassing ticketing systems, or repeatedly or commercially reselling
+                  them above the purchase price without the original seller&apos;s consent, can violate
+                  the law. Not every personal ticket transfer is automatically a criminal offense, but a
+                  concert&apos;s own no-transfer policy may still leave you with a ticket you cannot use.
                 </p>
                 <p>
                   Even if a seller sends you a ticket image or booking confirmation, that doesn&apos;t
