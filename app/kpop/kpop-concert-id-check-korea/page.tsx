@@ -77,6 +77,10 @@ const officialSources = [
     label: "NOL World — TXT 2026 Concert Ticketing and Entry Information",
     href: "https://world.nol.com/en/ticket/products/26013161",
   },
+  {
+    label: "Korean Performing Arts Act — Article 4-2 (official Korean text)",
+    href: "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?lsJoLnkSeq=1025609297",
+  },
 ];
 
 const externalClass = "font-medium text-[var(--accent)] underline underline-offset-4 hover:opacity-80";
@@ -429,7 +433,7 @@ export default function KpopConcertIdCheckKoreaPage() {
                 <p>
                   South Korea strengthened its ticket scalping laws on August 28, 2026. Buying tickets
                   for resale by bypassing ticketing systems, or repeatedly or commercially reselling
-                  them above the purchase price without the original seller&apos;s consent, can violate
+                  them above the purchase price without the authorized ticket seller&apos;s consent, can violate
                   the law. Not every personal ticket transfer is automatically a criminal offense, but a
                   concert&apos;s own no-transfer policy may still leave you with a ticket you cannot use.
                 </p>
