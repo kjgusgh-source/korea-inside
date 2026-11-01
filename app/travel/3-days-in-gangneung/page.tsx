@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import SiteHeader from "../../../components/SiteHeader";
 import JsonLd from "../../../components/JsonLd";
@@ -20,15 +21,146 @@ export const metadata: Metadata = {
     url: pageUrl,
     siteName: "HAEMIL",
     type: "article",
+    images: [
+      {
+        url: "/images/travel/3-days-in-gangneung/og-gangmun-beach.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Gangmun Beach in Gangneung under a cloudy sky",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: pageTitle,
     description: pageDescription,
+    images: ["/images/travel/3-days-in-gangneung/og-gangmun-beach.jpg"],
   },
 };
 
 const shortId = "B6ZFfvpyJFA";
+
+type Photo = { src: string; alt: string; width: number; height: number };
+
+const img = (file: string, alt: string, width = 900, height = 1200): Photo => ({
+  src: `/images/travel/3-days-in-gangneung/${file}`,
+  alt,
+  width,
+  height,
+});
+
+const photos = {
+  cover: img(
+    "gangmun-beach-cover.webp",
+    "Gangmun Beach in Gangneung under a cloudy sky, with waves rolling onto the sand, a small rock offshore, and a seagull overhead.",
+    1050,
+    700,
+  ),
+  station: img(
+    "gangneung-station.webp",
+    "The front of Gangneung Station, with the station name in Korean and English on the building.",
+  ),
+  tangsuyuk: img(
+    "yukyoung-tangsuyuk-storefront.webp",
+    "The storefront of Yukyoung Tangsuyuk in Gangneung, covered in red Korean signs for tangsuyuk.",
+  ),
+  market: img(
+    "gangneung-jungang-market-gate-5.webp",
+    "Gate 5 of Gangneung Jungang Market, with shop signs inside the covered market.",
+  ),
+  padThai: img(
+    "night-market-pad-thai.webp",
+    "Takeaway pad Thai with shrimp, bean sprouts, and chopped peanuts in a foil-lined container.",
+  ),
+  hoe: img(
+    "market-single-portion-hoe.webp",
+    "A single-serving tray of sliced raw fish from the market, with dipping sauces and small side dishes.",
+  ),
+  gilgamja: img(
+    "gilgamja-sign.webp",
+    "The Gangneung Gilgamja shop sign, shaped like a spiral potato on a stick.",
+    1050,
+    1030,
+  ),
+  donghwaStore: img(
+    "donghwa-garden-storefront.webp",
+    "The Donghwa Garden restaurant building in Gangneung, with its Korean sign.",
+  ),
+  sundubu: img(
+    "donghwa-garden-jjamppong-sundubu.webp",
+    "A bowl of jjamppong sundubu, soft tofu in a spicy red broth topped with chives and sesame, with two side dishes.",
+  ),
+  matcharoDrink: img(
+    "matcharo-iced-drink.webp",
+    "An iced drink in a Matcharo takeaway cup with a paper sleeve, on a wooden table.",
+  ),
+  matcharoOutdoor: img(
+    "matcharo-outdoor-seating.webp",
+    "Matcharo's outdoor area, with trees, hanging gourds, and earthenware jars.",
+  ),
+  beachWaves: img(
+    "gangmun-beach-waves.webp",
+    "Blue-green water and small waves at Gangmun Beach, with a small lighthouse offshore.",
+  ),
+  kalguksu: img(
+    "geumcheon-jang-kalguksu.webp",
+    "A bowl of jang kalguksu at Geumcheon Kalguksu, with egg, seaweed flakes, and sesame seeds in an orange-red broth.",
+  ),
+  riceBalls: img(
+    "self-made-rice-balls.webp",
+    "Small hand-shaped rice balls mixed with seaweed in a steel bowl.",
+    1200,
+    900,
+  ),
+  toetmaruSign: img(
+    "toetmaru-sign.webp",
+    "A tall wooden post with the name Toetmaru written in Korean, in front of the café building.",
+  ),
+  toetmaruCoffee: img(
+    "toetmaru-black-sesame-coffee.webp",
+    "Toetmaru's black sesame coffee in a takeaway cup, resting on a wooden log bench.",
+  ),
+};
+
+const photoFrame = "overflow-hidden rounded-[1.5rem] border border-[var(--border)] bg-[var(--card)]";
+
+function TripPhoto({ photo }: { photo: Photo }) {
+  return (
+    <figure className="mx-auto w-full max-w-md py-2">
+      <div className={photoFrame}>
+        <Image
+          src={photo.src}
+          alt={photo.alt}
+          width={photo.width}
+          height={photo.height}
+          sizes="(max-width: 768px) calc(100vw - 88px), 448px"
+          className="h-auto w-full"
+        />
+      </div>
+    </figure>
+  );
+}
+
+function TripPhotoPair({ photos: pair }: { photos: [Photo, Photo] }) {
+  return (
+    <div className="grid gap-4 py-2 sm:grid-cols-2">
+      {pair.map((photo) => (
+        <figure key={photo.src} className="mx-auto w-full max-w-md">
+          <div className={photoFrame}>
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              width={photo.width}
+              height={photo.height}
+              sizes="(max-width: 640px) calc(100vw - 88px), (max-width: 768px) 45vw, 420px"
+              className="h-auto w-full"
+            />
+          </div>
+        </figure>
+      ))}
+    </div>
+  );
+}
 
 const h2Class = "text-2xl font-semibold leading-tight md:text-3xl";
 const h3Class = "pt-2 text-xl font-semibold leading-snug md:text-2xl";
@@ -83,6 +215,17 @@ export default function ThreeDaysInGangneungPage() {
                 Three days of local food, long restaurant queues, black sesame coffee, and quiet
                 moments by the sea.
               </p>
+              <figure className="mt-8 overflow-hidden rounded-[1.5rem] border border-[var(--border)] bg-[var(--card)]">
+                <Image
+                  src={photos.cover.src}
+                  alt={photos.cover.alt}
+                  width={photos.cover.width}
+                  height={photos.cover.height}
+                  priority
+                  sizes="(max-width: 768px) calc(100vw - 88px), 1000px"
+                  className="h-auto w-full"
+                />
+              </figure>
             </header>
 
             <div className="mx-auto max-w-3xl space-y-11 px-6 py-9 text-base leading-8 md:mx-0 md:max-w-[62rem] md:px-12 md:py-12 md:text-lg md:leading-9">
@@ -112,6 +255,7 @@ export default function ThreeDaysInGangneungPage() {
                   I traveled from Seoul Station to Gangneung Station by KTX, and took the train back to
                   Seoul at the end of the trip.
                 </p>
+                <TripPhoto photo={photos.station} />
                 <p>
                   If you&apos;re visiting Gangneung over a weekend,{" "}
                   <strong>I strongly recommend booking your train tickets in advance.</strong>
@@ -129,7 +273,7 @@ export default function ThreeDaysInGangneungPage() {
                   <div className="aspect-[9/16] w-full max-w-[18rem] overflow-hidden rounded-[1.5rem] border border-[var(--border)] bg-black md:max-w-xs">
                     <iframe
                       className="h-full w-full"
-                      src={`https://www.youtube.com/embed/${shortId}`}
+                      src={`https://www.youtube-nocookie.com/embed/${shortId}`}
                       title="3 days in Gangneung — HAEMIL Short"
                       loading="lazy"
                       allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -156,6 +300,7 @@ export default function ThreeDaysInGangneungPage() {
                   One of the first things I did after arriving in Gangneung was pick up food from
                   Yukyoung Tangsuyuk (<span lang="ko">육영탕수육</span>).
                 </p>
+                <TripPhoto photo={photos.tangsuyuk} />
                 <p>
                   I&apos;m a big fan of tangsuyuk, Korean-style sweet-and-sour fried pork, so this was
                   one of the places I wanted to try.
@@ -184,9 +329,10 @@ export default function ThreeDaysInGangneungPage() {
 
                 <h3 className={h3Class}>An evening at Gangneung Central Market</h3>
                 <p>
-                  Later, I visited Gangneung Central Market (<span lang="ko">강릉중앙시장</span>) to
-                  pick up more food.
+                  Later, I visited Gangneung Central Market (<span lang="ko">강릉중앙시장</span>, also
+                  written as Gangneung Jungang Market) to pick up more food.
                 </p>
+                <TripPhoto photo={photos.market} />
                 <p>
                   The market had plenty of tempting options, including food stalls in its night-market
                   area.
@@ -195,6 +341,7 @@ export default function ThreeDaysInGangneungPage() {
                   I bought pad Thai and a small portion of sliced raw fish, known in Korean as{" "}
                   <em>hoe</em>{" "}(<span lang="ko">회</span>).
                 </p>
+                <TripPhotoPair photos={[photos.padThai, photos.hoe]} />
                 <p>One thing I liked was that some vendors offered individual portions of raw fish.</p>
                 <p>
                   From what I remember, my portion cost around ₩15,000, although prices and
@@ -213,6 +360,7 @@ export default function ThreeDaysInGangneungPage() {
                 </p>
                 <p>The line was incredibly long.</p>
                 <p>I ended up taking a photo of the shop sign rather than joining the queue.</p>
+                <TripPhoto photo={photos.gilgamja} />
                 <p>
                   Sometimes that&apos;s part of traveling too. You can&apos;t try everything, especially
                   when the most popular places attract such big crowds.
@@ -247,6 +395,7 @@ export default function ThreeDaysInGangneungPage() {
                 <p>
                   When I arrived at Donghwa Garden, the number of people waiting was unbelievable.
                 </p>
+                <TripPhotoPair photos={[photos.donghwaStore, photos.sundubu]} />
                 <p>
                   <strong>I waited around two hours.</strong>
                 </p>
@@ -290,6 +439,7 @@ export default function ThreeDaysInGangneungPage() {
                   There were also trees and traditional-looking earthenware jars outside, adding a
                   little character to the space.
                 </p>
+                <TripPhotoPair photos={[photos.matcharoDrink, photos.matcharoOutdoor]} />
                 <p>
                   It&apos;s the kind of place where you can grab a drink and enjoy a short break without
                   needing a long café visit.
@@ -305,6 +455,7 @@ export default function ThreeDaysInGangneungPage() {
                   The blue water, gentle waves, and open sky made it a refreshing change from busy
                   restaurants and long queues.
                 </p>
+                <TripPhoto photo={photos.beachWaves} />
                 <p>
                   I took quite a few photos and videos here, including the waves and seagulls flying
                   over the beach.
@@ -330,6 +481,7 @@ export default function ThreeDaysInGangneungPage() {
                   The restaurant focuses on jang kalguksu (<span lang="ko">장칼국수</span>), a Korean
                   noodle soup with a spicy, seasoned broth.
                 </p>
+                <TripPhoto photo={photos.kalguksu} />
                 <p>
                   I&apos;ve had jang kalguksu before, and I sometimes find the flavor a little heavy or
                   muddled.
@@ -353,6 +505,7 @@ export default function ThreeDaysInGangneungPage() {
                   In some Korean restaurants, you&apos;re given seasoned rice and disposable plastic
                   gloves so you can shape your own little rice balls.
                 </p>
+                <TripPhoto photo={photos.riceBalls} />
                 <p>
                   It&apos;s simple, but it can be a fun experience if you&apos;re trying it for the
                   first time.
@@ -382,6 +535,7 @@ export default function ThreeDaysInGangneungPage() {
                 <p>
                   The café was packed, and there were no available seats, so I got my drink to go.
                 </p>
+                <TripPhotoPair photos={[photos.toetmaruSign, photos.toetmaruCoffee]} />
                 <p>
                   The coffee itself was smooth and delicious, with a deep, nutty black sesame flavor.
                 </p>
@@ -393,10 +547,6 @@ export default function ThreeDaysInGangneungPage() {
                   If you&apos;d like to sit inside, check the seating situation and the café&apos;s
                   rules before ordering. Don&apos;t assume a table will be available just because
                   you&apos;ve waited for your drink.
-                </p>
-                <p>
-                  Toetmaru has also become popular enough to expand beyond its original location, so
-                  it&apos;s worth checking current branch options.
                 </p>
 
                 <h3 className={h3Class}>One last walk at Gangmun Beach</h3>
