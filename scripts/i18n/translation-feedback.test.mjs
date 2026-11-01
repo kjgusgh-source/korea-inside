@@ -70,6 +70,9 @@ export function useRef(initial) {
 export function useId() { return '_t_'; }
 `);
 const SITE_HEADER_STUB = 'data:text/javascript,' + encodeURIComponent('export default function SiteHeader() { return null; }');
+// next/image is CommonJS: imported from ESM its default is the module object, so
+// this loads the real component and re-exports its default export as the bundler does.
+const NEXT_IMAGE = 'data:text/javascript,' + encodeURIComponent(`import m from ${JSON.stringify(pathToFileURL(path.join(REPO, 'node_modules/next/image.js')).href)}; export default m.default;`);
 
 register('data:text/javascript,' + encodeURIComponent(`
 import { readFileSync } from 'node:fs';
@@ -82,6 +85,7 @@ const QUERIES = [PUBLIC_JA, PRIVATE_JA, HOOKS];
 const FORCED = { [PUBLIC_JA]: '"public"', [PRIVATE_JA]: '"not-public"' };
 const HOOK_RUNTIME = ${JSON.stringify(HOOK_RUNTIME)};
 const SITE_HEADER_STUB = ${JSON.stringify(SITE_HEADER_STUB)};
+const NEXT_IMAGE = ${JSON.stringify(NEXT_IMAGE)};
 // The publication value of the Japanese entry only (exactly one match is required).
 const JA_PUBLICATION = /(\\n  ja: \\{[^}]*?\\n    publication: )"(?:public|not-public)",/g;
 const REACT_IMPORT = 'from "react";';
@@ -91,6 +95,7 @@ const queryOf = (value) => (value ? QUERIES.find((q) => value.endsWith(q)) : und
 async function resolveInner(specifier, context, next) {
   if (specifier === 'server-only') return { url: 'data:text/javascript,export {}', shortCircuit: true };
   if (/(^|\\/)components\\/SiteHeader(\\.tsx)?$/.test(specifier)) return { url: SITE_HEADER_STUB, shortCircuit: true };
+  if (specifier === 'next/image') return { url: NEXT_IMAGE, shortCircuit: true };
   try {
     return await next(specifier, context);
   } catch (error) {

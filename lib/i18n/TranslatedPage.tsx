@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Fragment, type JSX, type ReactNode } from "react";
 import SiteHeader from "../../components/SiteHeader";
+import ArticlePhoto, { type ArticlePhotoLayout } from "../../components/ArticlePhoto";
 import { LOCALES, type LocaleCode, type LocaleTypography } from "./locales";
 import { parseUnitText, validateTranslation } from "./validateTranslation.mjs";
 
@@ -141,9 +142,19 @@ function joinClassNames(...names: (string | undefined)[]): string | undefined {
 const ELEMENTS = new Set([
   "main", "div", "article", "header", "section", "aside", "p", "h1", "h2", "h3",
   "table", "caption", "thead", "tbody", "tr", "th", "td", "ul", "ol", "li", "span", "a",
+  "figure", "iframe",
 ]);
-const INLINE_ELEMENTS = new Set(["em", "strong", "a"]);
+const INLINE_ELEMENTS = new Set(["em", "strong", "a", "span"]);
 const ELEMENT_ATTRIBUTES = new Set(["className", "id", "scope", "aria-label", "aria-labelledby", "href", "target", "rel"]);
+// Video embeds: only privacy-enhanced YouTube embeds, with a fixed set of attributes.
+const IFRAME_ATTRIBUTES = new Set(["src", "title", "loading", "allow", "referrerPolicy", "allowFullScreen"]);
+const IFRAME_SRC = /^https:\/\/www\.youtube-nocookie\.com\/embed\/[A-Za-z0-9_-]{6,32}$/;
+const IFRAME_LOADING = new Set(["lazy", "eager"]);
+const IFRAME_REFERRER = new Set(["strict-origin-when-cross-origin", "no-referrer"]);
+// Photos: site images only, rendered by the shared ArticlePhoto component.
+const PHOTO_SRC = /^\/images\/[a-z0-9][a-z0-9/_-]*\.(?:webp|jpe?g|png|avif)$/;
+const PHOTO_LAYOUTS = new Set<ArticlePhotoLayout>(["single", "pair", "cover"]);
+const LANG_CODE = /^[a-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$/;
 const HANGUL = /[\uac00-\ud7a3]/;
 
 export class TranslationValidationError extends Error {}
@@ -246,6 +257,10 @@ function renderText(unit: SourceUnit, text: string, ctx: Context): ReactNode {
       const inner = walk(node.children, key);
       if (def.tag === "a") return renderLink(def.attrs, inner, key, ctx);
       const className = adjustClassName(typeof def.attrs.className === "string" ? def.attrs.className : undefined, ctx.typography);
+      if (def.tag === "span") {
+        const lang = typeof def.attrs.lang === "string" && LANG_CODE.test(def.attrs.lang) ? def.attrs.lang : undefined;
+        return <span key={key} className={className} lang={lang}>{inner}</span>;
+      }
       return def.tag === "em"
         ? <em key={key} className={joinClassNames(className, ctx.typography.emphasisClassName)}>{inner}</em>
         : <strong key={key} className={className}>{inner}</strong>;
@@ -262,6 +277,45 @@ function unitText(id: string, ctx: Context): { unit: SourceUnit; text: string; k
   return { unit, text, kept: false };
 }
 
+/** A privacy-enhanced YouTube embed. Anything else is rejected. */
+function renderIframe(attrs: Attrs, key: string) {
+  const { src, title, loading, allow, referrerPolicy, allowFullScreen, className } = attrs;
+  if (typeof src !== "string" || !IFRAME_SRC.test(src)) throw new TranslationValidationError(`iframe src not allowed: ${String(src)}`);
+  if (typeof title !== "string" || !title.trim()) throw new TranslationValidationError("iframe without a title");
+  if (loading !== undefined && !(typeof loading === "string" && IFRAME_LOADING.has(loading))) throw new TranslationValidationError("iframe loading not allowed");
+  if (referrerPolicy !== undefined && !(typeof referrerPolicy === "string" && IFRAME_REFERRER.has(referrerPolicy))) throw new TranslationValidationError("iframe referrerPolicy not allowed");
+  if (allow !== undefined && (typeof allow !== "string" || /autoplay/.test(allow))) throw new TranslationValidationError("iframe allow not allowed");
+  if (allowFullScreen !== undefined && allowFullScreen !== true) throw new TranslationValidationError("iframe allowFullScreen not allowed");
+  return (
+    <iframe
+      key={key}
+      className={typeof className === "string" ? className : undefined}
+      src={src}
+      title={title}
+      loading={loading as "lazy" | "eager" | undefined}
+      allow={allow as string | undefined}
+      referrerPolicy={referrerPolicy as "strict-origin-when-cross-origin" | "no-referrer" | undefined}
+      allowFullScreen={allowFullScreen === true ? true : undefined}
+    />
+  );
+}
+
+/** A site photo rendered by the shared ArticlePhoto component, with a translated alt. */
+function renderArticlePhoto(node: StructureNode, key: string, ctx: Context) {
+  const attrs = node.attrs ?? {};
+  for (const name of Object.keys(attrs)) {
+    if (!["src", "alt", "width", "height", "layout"].includes(name)) throw new TranslationValidationError(`ArticlePhoto attribute not allowed: ${name}`);
+  }
+  const { src, width, height, layout } = attrs;
+  if (typeof src !== "string" || !PHOTO_SRC.test(src)) throw new TranslationValidationError(`ArticlePhoto src not allowed: ${String(src)}`);
+  if (!Number.isInteger(width) || !Number.isInteger(height) || (width as number) <= 0 || (height as number) <= 0) throw new TranslationValidationError("ArticlePhoto needs integer width and height");
+  if (layout !== undefined && !(typeof layout === "string" && PHOTO_LAYOUTS.has(layout as ArticlePhotoLayout))) throw new TranslationValidationError(`ArticlePhoto layout not allowed: ${String(layout)}`);
+  const altId = node.attributeUnits?.alt;
+  if (!altId) throw new TranslationValidationError("ArticlePhoto without an alt text");
+  const alt = unitText(altId, ctx).text;
+  return <ArticlePhoto key={key} src={src} alt={alt} width={width as number} height={height as number} layout={layout as ArticlePhotoLayout | undefined} />;
+}
+
 function renderNode(node: StructureNode, key: string, ctx: Context): ReactNode {
   if (node.fragment || node.list) {
     return <Fragment key={key}>{(node.children ?? []).map((child, i) => renderNode(child, `${key}.${i}`, ctx))}</Fragment>;
@@ -276,12 +330,17 @@ function renderNode(node: StructureNode, key: string, ctx: Context): ReactNode {
         </Fragment>
       );
     }
+    if (node.component === "ArticlePhoto") return renderArticlePhoto(node, key, ctx);
     throw new TranslationValidationError(`component not supported: ${node.component}`);
   }
   const tag = node.element;
   if (!tag || !ELEMENTS.has(tag)) throw new TranslationValidationError(`element not allowed: ${String(tag)}`);
   const attrs: Attrs = {};
   for (const [name, value] of Object.entries(node.attrs ?? {})) {
+    if (tag === "iframe" && IFRAME_ATTRIBUTES.has(name)) {
+      attrs[name] = value;
+      continue;
+    }
     if (!ELEMENT_ATTRIBUTES.has(name)) throw new TranslationValidationError(`attribute not allowed: ${tag}@${name}`);
     if (typeof value === "string") attrs[name] = name === "className" ? adjustClassName(value, ctx.typography) : value;
   }
@@ -301,6 +360,7 @@ function renderNode(node: StructureNode, key: string, ctx: Context): ReactNode {
   }
 
   if (tag === "a") return renderLink(attrs, children, key, ctx);
+  if (tag === "iframe") return renderIframe(attrs, key);
   const { className, id, scope, rel, target, lang } = attrs as Record<string, string | undefined>;
   const props: Record<string, unknown> = { key, className, id, scope, rel, target, lang };
   if (attrs["aria-label"]) props["aria-label"] = attrs["aria-label"];
