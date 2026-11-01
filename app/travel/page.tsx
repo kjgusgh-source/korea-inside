@@ -246,6 +246,16 @@ const STANDALONE_TRAVEL_GUIDES = [
     readingTime: "9 min read",
   },
   {
+    id: "3-days-in-gangneung",
+    category: "travel",
+    categoryLabel: "Travel guide",
+    title: "3 Days in Gangneung, Korea: A Local's Honest Food & Beach Trip",
+    description:
+      "A local's honest 3-day Gangneung trip: KTX from Seoul, jjamppong sundubu, black sesame coffee, long queues, and slow walks on Gangmun Beach.",
+    href: "/travel/3-days-in-gangneung",
+    readingTime: "8 min read",
+  },
+  {
     id: "chuseok-korea-holiday-guide-first-time",
     category: "travel",
     categoryLabel: "Travel guide",
