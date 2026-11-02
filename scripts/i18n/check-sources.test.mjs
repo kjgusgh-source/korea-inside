@@ -15,7 +15,8 @@ import { cpSync, mkdirSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writ
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { STATUS, checkAll, checkSitePath, checkSourceFile, contentImports, exitCode, routeOfPageFile } from './check-sources.mjs';
+import { STATUS, TRUSTED_COMPONENTS, articlePhotoProblems, buildRecord, checkAll, checkSitePath, checkSourceFile, contentImports, exitCode, routeOfPageFile, trustedComponentImports } from './check-sources.mjs';
+import { extractFromTsx } from './extract.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const REPO = path.resolve(HERE, '../..');
@@ -221,4 +222,133 @@ test('CLI: exit codes and read-only run over all stored sources', () => {
   try { execFileSync(process.execPath, [path.join(HERE, 'check-sources.mjs'), '--repo', changed], { encoding: 'utf8' }); } catch (error) { code = error.status; }
   assert.equal(code, 1);
   assert.equal(exitCode([{ status: STATUS.UNVERIFIED }]), 2);
+});
+
+// ---------------------------------------------------------------------------
+// Trusted shared component: ArticlePhoto (Gangneung travel story)
+// ---------------------------------------------------------------------------
+
+const GN_PAGE = 'app/travel/3-days-in-gangneung/page.tsx';
+const GN_SOURCE = 'content/translations/source/travel/3-days-in-gangneung.json';
+const PHOTO = 'components/ArticlePhoto.tsx';
+const COVER_SRC = 'src="/images/travel/3-days-in-gangneung/gangmun-beach-cover.webp"';
+const STOREFRONT = '<ArticlePhoto\n                  src="/images/travel/3-days-in-gangneung/yukyoung-tangsuyuk-storefront.webp"';
+
+/**
+ * Temporary repository with the Gangneung page, its stored source JSON and the
+ * ArticlePhoto component. `reextract` stores a fresh extraction of the edited
+ * page (as if the source JSON had been updated with it), so only the component
+ * checks can fail.
+ */
+function photoFixture({ page = (s) => s, component = (s) => s, reextract = false, sunbae = false } = {}) {
+  const root = mkdtempSync(path.join(tmpdir(), 'haemil-photo-'));
+  temps.push(root);
+  for (const file of [GN_PAGE, GN_SOURCE, PHOTO, ...(sunbae ? [PAGE, SOURCE, JA] : [])]) {
+    mkdirSync(path.dirname(path.join(root, file)), { recursive: true });
+    cpSync(path.join(REPO, file), path.join(root, file));
+  }
+  const pageFile = path.join(root, GN_PAGE);
+  writeFileSync(pageFile, page(readFileSync(pageFile, 'utf8')));
+  const componentFile = path.join(root, PHOTO);
+  writeFileSync(componentFile, component(readFileSync(componentFile, 'utf8')));
+  if (reextract) {
+    const sourceFile = path.join(root, GN_SOURCE);
+    const previous = JSON.parse(readFileSync(sourceFile, 'utf8'));
+    const fresh = extractFromTsx(readFileSync(pageFile, 'utf8'), { fileName: GN_PAGE, sourcePath: '/travel/3-days-in-gangneung', previous });
+    writeFileSync(sourceFile, `${JSON.stringify(fresh, null, 2)}\n`);
+  }
+  return root;
+}
+const photoReasons = (result) => result.reasons.join('; ');
+
+test('real data: the Gangneung page matches, ArticlePhoto is checked and its file hash is recorded for this page only', () => {
+  const before = [GN_PAGE, GN_SOURCE, PHOTO].map((f) => sha(path.join(REPO, f)));
+  const result = checkSourceFile(REPO, GN_SOURCE);
+  assert.equal(result.status, STATUS.MATCH, photoReasons(result));
+  assert.deepEqual(result.review.imports, []);
+  assert.deepEqual(result.review.components, []);
+  assert.deepEqual(result.components, [{ path: PHOTO, sha256: `sha256:${sha(path.join(REPO, PHOTO))}` }]);
+  assert.equal(TRUSTED_COMPONENTS.ArticlePhoto.sha256, `sha256:${sha(path.join(REPO, PHOTO))}`, 'the reviewed hash is the committed component');
+  const sunbae = checkSourceFile(REPO, SOURCE);
+  assert.deepEqual(sunbae.components, [], 'pages without the component bind no component file');
+  const record = buildRecord([result, sunbae], { files: [], parser: 'typescript@test' });
+  const byPath = Object.fromEntries(record.entries.map((e) => [e.sourcePath, e]));
+  assert.deepEqual(byPath['/travel/3-days-in-gangneung'].components, result.components);
+  assert.equal('components' in byPath[`/kpop/${SLUG}`], false, 'Sunbae entry keeps its previous shape');
+  assert.deepEqual([GN_PAGE, GN_SOURCE, PHOTO].map((f) => sha(path.join(REPO, f))), before);
+});
+
+test('ArticlePhoto file changed (even a comment): UNVERIFIED for the page that uses it, MATCH for others', () => {
+  const root = photoFixture({ component: (t) => `// edited\n${t}`, sunbae: true });
+  const gn = checkSourceFile(root, GN_SOURCE);
+  assert.equal(gn.status, STATUS.UNVERIFIED);
+  assert.match(photoReasons(gn), /components\/ArticlePhoto\.tsx differs from the reviewed version/);
+  assert.equal(checkSourceFile(root, SOURCE).status, STATUS.MATCH, 'Sunbae does not use the component');
+});
+
+test('ArticlePhoto file missing: not MATCH', () => {
+  const root = photoFixture();
+  rmSync(path.join(root, PHOTO));
+  const result = checkSourceFile(root, GN_SOURCE);
+  assert.equal(result.status, STATUS.UNVERIFIED);
+  assert.match(photoReasons(result), /ArticlePhoto\.tsx not found/);
+});
+
+test('ArticlePhoto prop changed on the page: CHANGED against the stored source JSON', () => {
+  const edits = [
+    (t) => t.replace(COVER_SRC, 'src="/images/travel/3-days-in-gangneung/gangmun-beach-waves.webp"'),
+    (t) => t.replace('width={1050}', 'width={1000}'),
+    (t) => t.replace('layout="cover"', 'layout="single"'),
+    (t) => t.replace(STOREFRONT, `${STOREFRONT}\n                  layout="pair"`),
+    (t) => t.replace('alt="Gate 5 of Gangneung Jungang Market', 'alt="Gate 6 of Gangneung Jungang Market'),
+  ];
+  for (const edit of edits) {
+    const root = photoFixture({ page: edit });
+    assert.notEqual(readFileSync(path.join(root, GN_PAGE), 'utf8'), readFileSync(path.join(REPO, GN_PAGE), 'utf8'), 'the edit applied');
+    const result = checkSourceFile(root, GN_SOURCE);
+    assert.equal(result.status, STATUS.CHANGED, photoReasons(result));
+  }
+});
+
+test('ArticlePhoto with a disallowed or dynamic prop: never MATCH, even after re-extracting the source JSON', () => {
+  const edits = [
+    [(t) => t.replace(STOREFRONT, `${STOREFRONT}\n                  priority`), /prop priority is not allowed/],
+    [(t) => t.replace(COVER_SRC, 'src="https://example.com/cover.webp"'), /src must be a static \/images\/ path/],
+    [(t) => t.replace(COVER_SRC, 'src={"/images/" + "travel/3-days-in-gangneung/gangmun-beach-cover.webp".slice(0)}'), /src must be a static|dynamic/],
+    [(t) => t.replace('width={1050}', 'width={1050.5}'), /width must be a static positive integer/],
+    [(t) => t.replace('layout="cover"', 'layout="full"'), /layout must be single, pair or cover/],
+  ];
+  for (const [edit, expected] of edits) {
+    const root = photoFixture({ page: edit, reextract: true });
+    const result = checkSourceFile(root, GN_SOURCE);
+    assert.equal(result.status, STATUS.UNVERIFIED, photoReasons(result));
+    assert.match(photoReasons(result), expected);
+  }
+});
+
+test('ArticlePhoto from another file, under another name or defined in the page: not trusted', () => {
+  const importLine = 'import ArticlePhoto from "../../../components/ArticlePhoto";';
+  const cases = [
+    (t) => t.replace(importLine, 'import ArticlePhoto from "../../../components/OtherPhoto";'),
+    (t) => t.replace(importLine, 'import Photo from "../../../components/ArticlePhoto";').split('<ArticlePhoto').join('<Photo'),
+    (t) => t.replace(importLine, 'function ArticlePhoto(props: { src: string; alt: string; width: number; height: number; layout?: string }) { return <p>{props.alt}</p>; }'),
+  ];
+  for (const edit of cases) {
+    const root = photoFixture({ page: edit, reextract: true });
+    if (edit === cases[0]) writeFileSync(path.join(root, 'components/OtherPhoto.tsx'), readFileSync(path.join(REPO, PHOTO)));
+    const result = checkSourceFile(root, GN_SOURCE);
+    assert.notEqual(result.status, STATUS.MATCH, photoReasons(result));
+  }
+});
+
+test('helpers: trusted component imports need the exact file and a default import', () => {
+  const body = '\nexport default function P() { return <ArticlePhoto src="/images/a.webp" alt="A" width={1} height={1} />; }';
+  assert.deepEqual(trustedComponentImports(`import ArticlePhoto from "../../../components/ArticlePhoto";${body}`, 'app/travel/x/page.tsx'), ['ArticlePhoto']);
+  assert.deepEqual(contentImports(`import ArticlePhoto from "../../../components/ArticlePhoto";${body}`, 'app/travel/x/page.tsx'), []);
+  assert.deepEqual(trustedComponentImports(`import ArticlePhoto from "../../components/ArticlePhoto";${body}`, 'app/travel/x/page.tsx'), []);
+  assert.deepEqual(contentImports(`import { ArticlePhoto } from "../../../components/ArticlePhoto";${body}`, 'app/travel/x/page.tsx'), [{ name: 'ArticlePhoto', module: '../../../components/ArticlePhoto' }]);
+  assert.deepEqual(articlePhotoProblems({ attrs: { src: '/images/a.webp', alt: 'A', width: 1, height: 2 }, attributeUnits: { alt: 'u' } }), []);
+  assert.ok(articlePhotoProblems({ attrs: { src: '/images/../a.webp', alt: 'A', width: 1, height: 2 }, attributeUnits: { alt: 'u' } }).length);
+  assert.ok(articlePhotoProblems({ attrs: { src: '/images/a.webp', alt: 'A', width: 1, height: 2 }, attributeUnits: {} }).length, 'alt must be a unit');
+  assert.ok(articlePhotoProblems({ attrs: { src: '/images/a.webp', alt: 'A', width: { dynamic: 'w' }, height: 2 }, attributeUnits: { alt: 'u' } }).length);
 });

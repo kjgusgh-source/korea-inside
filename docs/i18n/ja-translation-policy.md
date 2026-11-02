@@ -198,7 +198,7 @@ Its review record is `ja-editorial-review.md`.
 | Approval records | none |
 | Indexing | not approved |
 | Reviewed snapshot | Draft PR #134. Source `sha256:aafc4ee0…eecd589`, translation `sha256:dd5a23dc…249b745` |
-| Source freshness | `UNVERIFIED`: the checker does not inspect the imported `ArticlePhoto` component. Units and structure match. |
+| Source freshness | `MATCH` (catalog: `verified`). The checker now checks `ArticlePhoto`: import path, static props, reviewed component bytes (`source-freshness.md`, "Shared components"). Not an approval. |
 
 | Stage | Reviewer | Where run | Scope | Result |
 |---|---|---|---|---|
