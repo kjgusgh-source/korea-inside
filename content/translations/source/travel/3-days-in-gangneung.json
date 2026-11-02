@@ -1,0 +1,3839 @@
+{
+  "schemaVersion": 2,
+  "sourceLocale": "en",
+  "sourcePath": "/travel/3-days-in-gangneung",
+  "sourceFile": "app/travel/3-days-in-gangneung/page.tsx",
+  "extractor": "extract-pilot-1",
+  "units": [
+    {
+      "id": "meta-title-28c9dfca",
+      "kind": "meta",
+      "tag": "title",
+      "anchor": "meta",
+      "group": "meta",
+      "path": "metadata.title",
+      "origin": "metadata.title",
+      "text": "3 Days in Gangneung, Korea: A Local's Honest Food & Beach Trip",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "28c9dfca0d961cfa26eff6b18443d293675fb5f336cf87d21fb992b14425de87",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "meta-description-b1ff7b2f",
+      "kind": "meta",
+      "tag": "description",
+      "anchor": "meta",
+      "group": "meta",
+      "path": "metadata.description",
+      "origin": "metadata.description",
+      "text": "A local's honest 3-day Gangneung trip: KTX from Seoul, jjamppong sundubu, black sesame coffee, long queues, and slow walks on Gangmun Beach.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "b1ff7b2fe0a2ea70eeac847f989843e8abdd57d7b20e5ecf93208e756c067dc2",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": false,
+      "needsReview": false
+    },
+    {
+      "id": "header-a-318c6bcf",
+      "kind": "block",
+      "tag": "a",
+      "anchor": "header",
+      "group": "header",
+      "path": "page>main[1]>div[1]>article[1]>header[1]>Link[1]",
+      "origin": "jsx",
+      "text": "← Back to Travel",
+      "attrs": {
+        "href": "/travel"
+      },
+      "placeholders": {},
+      "hash": "318c6bcf3f85dd3e020e9db3c103364e7a157bc4d36edd1c4bcb1f9a0379072a",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "header-p-c645230f",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "header",
+      "group": "header",
+      "path": "page>main[1]>div[1]>article[1]>header[1]>p[1]",
+      "origin": "jsx",
+      "text": "Travel guide",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "c645230fae7655d6c36ce78db974a8c9301bd819db3529d8c4374020806a8b38",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "header-h1-b6b42d70",
+      "kind": "block",
+      "tag": "h1",
+      "anchor": "header",
+      "group": "header",
+      "path": "page>main[1]>div[1]>article[1]>header[1]>h1[1]",
+      "origin": "jsx",
+      "text": "3 Days in Gangneung, Korea: A Local's Honest Food & Beach Trip",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "b6b42d702bba64b8b4ac4d2b1e61e2620192cb2806cfcf6a3798d2d9a08bd292",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "header-p-05343f00",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "header",
+      "group": "header",
+      "path": "page>main[1]>div[1]>article[1]>header[1]>p[2]",
+      "origin": "jsx",
+      "text": "Three days of local food, long restaurant queues, black sesame coffee, and quiet moments by the sea.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "05343f0050d123b6ba2aa40f215ed702c50d0a77736e2d1bfe707ea6b8813b57",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "header-articlephoto-alt-db472467",
+      "kind": "attr",
+      "tag": "ArticlePhoto@alt",
+      "anchor": "header",
+      "group": "header",
+      "path": "page>main[1]>div[1]>article[1]>header[1]>ArticlePhoto[1]@alt",
+      "origin": "jsx",
+      "text": "Gangmun Beach in Gangneung under a cloudy sky, with waves rolling onto the sand, a small rock offshore, and a seagull overhead.",
+      "attrs": {
+        "src": "/images/travel/3-days-in-gangneung/gangmun-beach-cover.webp"
+      },
+      "placeholders": {},
+      "hash": "db47246710f33b718c4d51f8b4ee4910f1b2dc3e9f16c95bd6c55fc5ce461538",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "introduction-section-aria-label-0d0e8a7b",
+      "kind": "attr",
+      "tag": "section@aria-label",
+      "anchor": "introduction",
+      "group": "introduction",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section[1]@aria-label",
+      "origin": "jsx",
+      "text": "Introduction",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "0d0e8a7b489fe3c8c26c632a37d695a61619d1ddcd766a10b6bb727dc3e17032",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "introduction-p-0146e710",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "introduction",
+      "group": "introduction",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section[1]>p[1]",
+      "origin": "jsx",
+      "text": "Gangneung is one of those places in Korea where you can enjoy the sea, try local food, and spend an entire afternoon exploring cafés.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "0146e71018b75fa0ddf08982f047844ea7c83c00c455c4c93866f9a5749348e2",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "introduction-p-5eafec79",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "introduction",
+      "group": "introduction",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section[1]>p[2]",
+      "origin": "jsx",
+      "text": "I visited Gangneung for three days and two nights, from September 11 to 13, 2026. It was already September, but the weather still felt a little like summer.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "5eafec79b9f5906cc58525eceeec374ae4b7be0513e4e7c15b5945be9e467e97",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "introduction-p-a554aae0",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "introduction",
+      "group": "introduction",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section[1]>p[3]",
+      "origin": "jsx",
+      "text": "This wasn't a perfectly planned trip. Some places had much longer waits than I expected, a few foods were so popular that I couldn't even try them, and some of my favorite moments happened while simply walking around.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "a554aae0b1087c5a7bbd95376c200bb4c10b4472006f41ee6e2a67b362e068ac",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "introduction-p-5a4555c3",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "introduction",
+      "group": "introduction",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section[1]>p[4]",
+      "origin": "jsx",
+      "text": "Here's what my trip was actually like, along with a few tips I'd share with a friend visiting Gangneung for the first time.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "5a4555c3a3a9efc4f2e0c5007ee58f5657f49fdccc14fedfe14dfe23803c01c4",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "ktx-h2-9234d7f1",
+      "kind": "block",
+      "tag": "h2",
+      "anchor": "ktx",
+      "group": "ktx",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#ktx>h2[1]",
+      "origin": "jsx",
+      "text": "Getting from Seoul to Gangneung by KTX",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "9234d7f1729eb8df7c79ba4d4b9f311cdaf27b15b1f47fdceac6fb730057541b",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "ktx-p-2b5fee1b",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "ktx",
+      "group": "ktx",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#ktx>p[1]",
+      "origin": "jsx",
+      "text": "I traveled from Seoul Station to Gangneung Station by KTX, and took the train back to Seoul at the end of the trip.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "2b5fee1bb273aad70a7e2bdac6de48768934f87b0b20496185068e6163a8dd3a",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "ktx-articlephoto-alt-c610a63f",
+      "kind": "attr",
+      "tag": "ArticlePhoto@alt",
+      "anchor": "ktx",
+      "group": "ktx",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#ktx>ArticlePhoto[1]@alt",
+      "origin": "jsx",
+      "text": "The front of Gangneung Station, with the station name in Korean and English on the building.",
+      "attrs": {
+        "src": "/images/travel/3-days-in-gangneung/gangneung-station.webp"
+      },
+      "placeholders": {},
+      "hash": "c610a63f7571a5f89e18c9deabd1bc19e4a502be2f0c2770999861bb3795fab5",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "ktx-p-b4288767",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "ktx",
+      "group": "ktx",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#ktx>p[2]",
+      "origin": "jsx",
+      "text": "If you're visiting Gangneung over a weekend, {strong1}I strongly recommend booking your train tickets in advance.{/strong1}",
+      "attrs": {},
+      "placeholders": {
+        "strong1": {
+          "tag": "strong",
+          "attrs": {}
+        }
+      },
+      "hash": "b4288767d0fcf8119a471e730dfb03841aee4477b13f554b814d6513e1394b33",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "ktx-p-7798ae16",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "ktx",
+      "group": "ktx",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#ktx>p[3]",
+      "origin": "jsx",
+      "text": "Popular departures can sell out, especially when many people are heading to Gangneung for a weekend trip.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "7798ae16a6fe0f24acd251e3ac1bf393c1ce9841e8b7f0be1685639ee5b77eea",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "ktx-p-e813fbfb",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "ktx",
+      "group": "ktx",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#ktx>p[4]",
+      "origin": "jsx",
+      "text": "Standing tickets may be available on certain trains, but they're limited too. I wouldn't rely on getting one at the last minute.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "e813fbfb1e93ac023795c9b732e1065f41ac881cd625caf55895c3741d8c8b42",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "ktx-p-05faf614",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "ktx",
+      "group": "ktx",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#ktx>p[5]",
+      "origin": "jsx",
+      "text": "You can check train schedules and reservations through KORAIL before your trip.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "05faf61452fa2f8ac25bcd75eb34357673b9d195c9258eb2633fba5371c6fa7f",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "ktx-figure-iframe-title-696a4e4f",
+      "kind": "attr",
+      "tag": "iframe@title",
+      "anchor": "ktx-figure",
+      "group": "ktx-figure",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#ktx>figure[1]>div[1]>iframe[1]@title",
+      "origin": "jsx",
+      "text": "3 days in Gangneung — HAEMIL Short",
+      "attrs": {
+        "src": "https://www.youtube-nocookie.com/embed/B6ZFfvpyJFA"
+      },
+      "placeholders": {},
+      "hash": "696a4e4f953722653921890562987c03c5daa71f987cc4960e531495a49ee563",
+      "translate": true,
+      "protect": [
+        "HAEMIL"
+      ],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "ktx-figure-a-5f856e46",
+      "kind": "block",
+      "tag": "a",
+      "anchor": "ktx-figure",
+      "group": "ktx-figure",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#ktx>figure[1]>a[1]",
+      "origin": "jsx",
+      "text": "Watch on YouTube →",
+      "attrs": {
+        "href": "https://youtube.com/shorts/B6ZFfvpyJFA",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      "placeholders": {},
+      "hash": "5f856e46ac3c3ef80f3c8a7c54093b515d7cf327ebd2927a2a96fdd054e9d24d",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-1-h2-1dc045f6",
+      "kind": "block",
+      "tag": "h2",
+      "anchor": "day-1",
+      "group": "day-1",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-1>h2[1]",
+      "origin": "jsx",
+      "text": "Day 1 — Tangsuyuk, Gangneung Central Market, and a Night In",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "1dc045f674b5b472a2fdb617541b200ea945113ca058ae3bdeb90870767925f2",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-1-h3-cac00e9e",
+      "kind": "block",
+      "tag": "h3",
+      "anchor": "day-1",
+      "group": "day-1",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-1>h3[1]",
+      "origin": "jsx",
+      "text": "A takeaway dinner from Yukyoung Tangsuyuk",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "cac00e9efae83a34404488531f0d4a0f3b496e27cbe4bbd0287f34d1a8a6a21c",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-1-p-dd525114",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-1",
+      "group": "day-1",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-1>p[1]",
+      "origin": "jsx",
+      "text": "One of the first things I did after arriving in Gangneung was pick up food from Yukyoung Tangsuyuk ({span1}육영탕수육{/span1}).",
+      "attrs": {},
+      "placeholders": {
+        "span1": {
+          "tag": "span",
+          "attrs": {
+            "lang": "ko"
+          }
+        }
+      },
+      "hash": "dd52511444fff848b68e70c157b412ae62cd5ddbfb7db88ad5f8c61ce20c3b88",
+      "translate": true,
+      "protect": [
+        "육영탕수육"
+      ],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-1-articlephoto-alt-6966e657",
+      "kind": "attr",
+      "tag": "ArticlePhoto@alt",
+      "anchor": "day-1",
+      "group": "day-1",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-1>ArticlePhoto[1]@alt",
+      "origin": "jsx",
+      "text": "The storefront of Yukyoung Tangsuyuk in Gangneung, covered in red Korean signs for tangsuyuk.",
+      "attrs": {
+        "src": "/images/travel/3-days-in-gangneung/yukyoung-tangsuyuk-storefront.webp"
+      },
+      "placeholders": {},
+      "hash": "6966e657ddc58fc4442965bd5c2feef48936cde5035155e4a525b0099cfb3c57",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-1-p-ccccbb61",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-1",
+      "group": "day-1",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-1>p[2]",
+      "origin": "jsx",
+      "text": "I'm a big fan of tangsuyuk, Korean-style sweet-and-sour fried pork, so this was one of the places I wanted to try.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "ccccbb61bf735bcd02a0ce9cbaedcc4d34b7d16cc954b3aa7da0e3f720792c87",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-1-p-5ea6cf52",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-1",
+      "group": "day-1",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-1>p[3]",
+      "origin": "jsx",
+      "text": "I ordered a half-and-half combination of two interesting versions:",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "5ea6cf52cdeb0f6d0f6d778293571ef5c305b2b1a8d22caba1e4f807db674577",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-1-li-9469c586",
+      "kind": "block",
+      "tag": "li",
+      "anchor": "day-1",
+      "group": "day-1",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-1>ul[1]>li[1]",
+      "origin": "jsx",
+      "text": "{strong1}Gamkeutang ({span1}감크탕{/span1}):{/strong1} Potato cream tangsuyuk, with a rich, creamy sauce.",
+      "attrs": {},
+      "placeholders": {
+        "strong1": {
+          "tag": "strong",
+          "attrs": {}
+        },
+        "span1": {
+          "tag": "span",
+          "attrs": {
+            "lang": "ko"
+          }
+        }
+      },
+      "hash": "9469c586e4a1ef92cc1c3057e27e38b409df570ba4f1a9581d9fa4cb6301ab16",
+      "translate": true,
+      "protect": [
+        "감크탕"
+      ],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-1-li-0d527b08",
+      "kind": "block",
+      "tag": "li",
+      "anchor": "day-1",
+      "group": "day-1",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-1>ul[1]>li[2]",
+      "origin": "jsx",
+      "text": "{strong1}Gimpitang ({span1}김피탕{/span1}):{/strong1} Kimchi pizza tangsuyuk, combining kimchi, cheese, and fried pork.",
+      "attrs": {},
+      "placeholders": {
+        "strong1": {
+          "tag": "strong",
+          "attrs": {}
+        },
+        "span1": {
+          "tag": "span",
+          "attrs": {
+            "lang": "ko"
+          }
+        }
+      },
+      "hash": "0d527b087ed2fb2e77bc21aa056efbdad9900d58cb1f5b1f7c84668643e37ac9",
+      "translate": true,
+      "protect": [
+        "김피탕"
+      ],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-1-p-58b6ccde",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-1",
+      "group": "day-1",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-1>p[4]",
+      "origin": "jsx",
+      "text": "Both were delicious, and the portion was generous.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "58b6ccdee124301dbfb117334184d1f7d35c6534277a4233852d4055c459abf3",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-1-p-e6360c36",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-1",
+      "group": "day-1",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-1>p[5]",
+      "origin": "jsx",
+      "text": "Even though they were both tangsuyuk, the textures and aromas were noticeably different. That contrast was part of what made the meal so enjoyable.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "e6360c365bd3a7732c93b20debe4c9eb924bba4b7d8c51dde99cd5dc08697a12",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-1-p-2d48f7d6",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-1",
+      "group": "day-1",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-1>p[6]",
+      "origin": "jsx",
+      "text": "After picking up the food, I checked into my accommodation.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "2d48f7d6f23d7881b3409d8779c1beeab726c165c0280b7ba0541b48dfaf55c2",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-1-p-54c8899f",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-1",
+      "group": "day-1",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-1>p[7]",
+      "origin": "jsx",
+      "text": "And if I visit Gangneung again? I'd happily order from Yukyoung Tangsuyuk another time.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "54c8899ffd7cac567c41889b62a993ea1f829a9434a2ad705b64e5ce21a77a12",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-1-h3-4917fb4e",
+      "kind": "block",
+      "tag": "h3",
+      "anchor": "day-1",
+      "group": "day-1",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-1>h3[2]",
+      "origin": "jsx",
+      "text": "An evening at Gangneung Central Market",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "4917fb4eea6554cdddaf701660c0d91d1b2f5151f13762b0ebcc98952230eb9e",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-1-p-6c6f54a5",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-1",
+      "group": "day-1",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-1>p[8]",
+      "origin": "jsx",
+      "text": "Later, I visited Gangneung Central Market ({span1}강릉중앙시장{/span1}, also written as Gangneung Jungang Market) to pick up more food.",
+      "attrs": {},
+      "placeholders": {
+        "span1": {
+          "tag": "span",
+          "attrs": {
+            "lang": "ko"
+          }
+        }
+      },
+      "hash": "6c6f54a5e59e9003fd3901feb268ee1a945c91f44a66f51d93675173718f9045",
+      "translate": true,
+      "protect": [
+        "강릉중앙시장"
+      ],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-1-articlephoto-alt-a54325ad",
+      "kind": "attr",
+      "tag": "ArticlePhoto@alt",
+      "anchor": "day-1",
+      "group": "day-1",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-1>ArticlePhoto[2]@alt",
+      "origin": "jsx",
+      "text": "Gate 5 of Gangneung Jungang Market, with shop signs inside the covered market.",
+      "attrs": {
+        "src": "/images/travel/3-days-in-gangneung/gangneung-jungang-market-gate-5.webp"
+      },
+      "placeholders": {},
+      "hash": "a54325ade2544e41244e90fb89f798b926cc52bc5069e3717555c74f22308fa2",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-1-p-31ffc6a3",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-1",
+      "group": "day-1",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-1>p[9]",
+      "origin": "jsx",
+      "text": "The market had plenty of tempting options, including food stalls in its night-market area.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "31ffc6a3f8d0666a4860ba847bfeb247acf03fcbd598698571447076459f17c0",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-1-p-30a7d245",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-1",
+      "group": "day-1",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-1>p[10]",
+      "origin": "jsx",
+      "text": "I bought pad Thai and a small portion of sliced raw fish, known in Korean as {em1}hoe{/em1} ({span1}회{/span1}).",
+      "attrs": {},
+      "placeholders": {
+        "em1": {
+          "tag": "em",
+          "attrs": {}
+        },
+        "span1": {
+          "tag": "span",
+          "attrs": {
+            "lang": "ko"
+          }
+        }
+      },
+      "hash": "30a7d245bc5a021d7c68773e9fd088aaa04ed1448daea0fcf148758eb9ca6747",
+      "translate": true,
+      "protect": [
+        "회"
+      ],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-1-articlephoto-alt-2badb6ce",
+      "kind": "attr",
+      "tag": "ArticlePhoto@alt",
+      "anchor": "day-1",
+      "group": "day-1",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-1>div[1]>ArticlePhoto[1]@alt",
+      "origin": "jsx",
+      "text": "Takeaway pad Thai with shrimp, bean sprouts, and chopped peanuts in a foil-lined container.",
+      "attrs": {
+        "src": "/images/travel/3-days-in-gangneung/night-market-pad-thai.webp"
+      },
+      "placeholders": {},
+      "hash": "2badb6ce9dada048c74b6c58912d2ecab005c05fbad4db25c388721dca450c57",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-1-articlephoto-alt-ed41870c",
+      "kind": "attr",
+      "tag": "ArticlePhoto@alt",
+      "anchor": "day-1",
+      "group": "day-1",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-1>div[1]>ArticlePhoto[2]@alt",
+      "origin": "jsx",
+      "text": "A single-serving tray of sliced raw fish from the market, with dipping sauces and small side dishes.",
+      "attrs": {
+        "src": "/images/travel/3-days-in-gangneung/market-single-portion-hoe.webp"
+      },
+      "placeholders": {},
+      "hash": "ed41870c48cd695c2529c8f5cba3f65708ecbaf78e6a475c44495b3596204f8b",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-1-p-e5da8f24",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-1",
+      "group": "day-1",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-1>p[11]",
+      "origin": "jsx",
+      "text": "One thing I liked was that some vendors offered individual portions of raw fish.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "e5da8f240d0fb6926b9c103c83eca62b270b1a50b1eb9199bab9b3c0a1035d87",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-1-p-7c526c1b",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-1",
+      "group": "day-1",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-1>p[12]",
+      "origin": "jsx",
+      "text": "From what I remember, my portion cost around ₩15,000, although prices and availability can change.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "7c526c1b43bc95f1a35c2e5aa09d6b2c4be084d34f3c3e9f7e3e65a581a9fc62",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-1-p-e41cef31",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-1",
+      "group": "day-1",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-1>p[13]",
+      "origin": "jsx",
+      "text": "This can be a nice option if you're traveling alone or want to try several different foods without buying a large seafood platter.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "e41cef31863097ee868e27114ac1092ca1e5054c7e1b5eeabb08484711104a41",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-1-p-928d01b4",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-1",
+      "group": "day-1",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-1>p[14]",
+      "origin": "jsx",
+      "text": "I took the food back to my accommodation and enjoyed dinner there.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "928d01b4f6c60a25a825267706b1ec982b38ef69b8bcfdf2ff7be49dd36f0679",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-1-h3-42fe2218",
+      "kind": "block",
+      "tag": "h3",
+      "anchor": "day-1",
+      "group": "day-1",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-1>h3[3]",
+      "origin": "jsx",
+      "text": "The potato snack I couldn't try",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "42fe2218d26ba98cf6da20badd403c280b0daf3b444b8d4bd38eb437dac65e40",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-1-p-9a453087",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-1",
+      "group": "day-1",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-1>p[15]",
+      "origin": "jsx",
+      "text": "I also came across Gilgamja ({span1}길감자{/span1}), a potato snack shop that seemed especially popular with Korean visitors.",
+      "attrs": {},
+      "placeholders": {
+        "span1": {
+          "tag": "span",
+          "attrs": {
+            "lang": "ko"
+          }
+        }
+      },
+      "hash": "9a45308738ca0067ff288db2fc493580958ac331cc4b7dcd453ee3284fa35f54",
+      "translate": true,
+      "protect": [
+        "길감자"
+      ],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-1-p-f4179e07",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-1",
+      "group": "day-1",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-1>p[16]",
+      "origin": "jsx",
+      "text": "The line was incredibly long.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "f4179e07f44749a1ff0e336650d1da0eacdca82250a78d13397c7d55f9169b6f",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-1-p-24e6ca65",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-1",
+      "group": "day-1",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-1>p[17]",
+      "origin": "jsx",
+      "text": "I ended up taking a photo of the shop sign rather than joining the queue.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "24e6ca65f403f2b267edf65c0e4136998ed5157df90716fd9c7504fa28f37636",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-1-articlephoto-alt-c608f31a",
+      "kind": "attr",
+      "tag": "ArticlePhoto@alt",
+      "anchor": "day-1",
+      "group": "day-1",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-1>ArticlePhoto[3]@alt",
+      "origin": "jsx",
+      "text": "The Gangneung Gilgamja shop sign, shaped like a spiral potato on a stick.",
+      "attrs": {
+        "src": "/images/travel/3-days-in-gangneung/gilgamja-sign.webp"
+      },
+      "placeholders": {},
+      "hash": "c608f31a70d74771bb1e6ead699812dd18ca4c951c78dc0764e81a07d7c77f6c",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-1-p-7d447ce1",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-1",
+      "group": "day-1",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-1>p[18]",
+      "origin": "jsx",
+      "text": "Sometimes that's part of traveling too. You can't try everything, especially when the most popular places attract such big crowds.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "7d447ce1347c4e64314887b7b417d084f736f3ccf020d74f1f2de33d579ba7be",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-2-h2-37adb4cd",
+      "kind": "block",
+      "tag": "h2",
+      "anchor": "day-2",
+      "group": "day-2",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-2>h2[1]",
+      "origin": "jsx",
+      "text": "Day 2 — Jjamppong Sundubu, Hojicha, and Gangmun Beach",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "37adb4cd0f251453e504eca18454e5ec09f5fcf8e93052769448b48b7d6b32e5",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-2-h3-eae0293a",
+      "kind": "block",
+      "tag": "h3",
+      "anchor": "day-2",
+      "group": "day-2",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-2>h3[1]",
+      "origin": "jsx",
+      "text": "Donghwa Garden: Was the two-hour wait worth it?",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "eae0293a014c74e57c12ccc2fe21bf781cf990bfc9b2f491f3819286940af3a0",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-2-p-34b6af71",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-2",
+      "group": "day-2",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-2>p[1]",
+      "origin": "jsx",
+      "text": "One of Gangneung's well-known local dishes is jjamppong sundubu ({span1}짬뽕순두부{/span1}).",
+      "attrs": {},
+      "placeholders": {
+        "span1": {
+          "tag": "span",
+          "attrs": {
+            "lang": "ko"
+          }
+        }
+      },
+      "hash": "34b6af71de0ac4be1f698ae62f66825005dd5976c30e37355980015ffa85a16f",
+      "translate": true,
+      "protect": [
+        "짬뽕순두부"
+      ],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-2-p-9fb9c75a",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-2",
+      "group": "day-2",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-2>p[2]",
+      "origin": "jsx",
+      "text": "It combines a spicy, seafood-flavored jjamppong-style broth with soft tofu. Unlike a typical bowl of jjamppong noodles, the focus here is the tofu.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "9fb9c75ad979dfe99b222c6789cdc233140a43a55952a96b55c307a5c104235c",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-2-p-26000036",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-2",
+      "group": "day-2",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-2>p[3]",
+      "origin": "jsx",
+      "text": "I first heard about Donghwa Garden ({span1}동화가든{/span1}) from a taxi driver in Gangneung.",
+      "attrs": {},
+      "placeholders": {
+        "span1": {
+          "tag": "span",
+          "attrs": {
+            "lang": "ko"
+          }
+        }
+      },
+      "hash": "260000360851772dd7313e606d17ab4810054da9547ce5e20f06780ea18ba1a1",
+      "translate": true,
+      "protect": [
+        "동화가든"
+      ],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-2-p-a97e0ce6",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-2",
+      "group": "day-2",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-2>p[4]",
+      "origin": "jsx",
+      "text": "He told me it was famous as an original jjamppong sundubu restaurant and mentioned a patent connected to the dish.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "a97e0ce60ffdefd8ed690d07f34f079b56c7f380a12e09dfaadf933ca3ef3920",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-2-p-cd8e940c",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-2",
+      "group": "day-2",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-2>p[5]",
+      "origin": "jsx",
+      "text": "In Korea, taxi drivers sometimes know long-established local restaurants and can give you interesting recommendations. It can be worth asking where they like to eat, although everyone's tastes are different.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "cd8e940c0a8534e179db558da0741a81bb1c4c69aade96ae6e3612244726b0b0",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-2-p-cd8aca98",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-2",
+      "group": "day-2",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-2>p[6]",
+      "origin": "jsx",
+      "text": "When I arrived at Donghwa Garden, the number of people waiting was unbelievable.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "cd8aca98ef8cb29f0ff3f4ae179d56b974fe98172d74decddf32c8172cb05581",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-2-articlephoto-alt-f6b4511a",
+      "kind": "attr",
+      "tag": "ArticlePhoto@alt",
+      "anchor": "day-2",
+      "group": "day-2",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-2>div[1]>ArticlePhoto[1]@alt",
+      "origin": "jsx",
+      "text": "The Donghwa Garden restaurant building in Gangneung, with its Korean sign.",
+      "attrs": {
+        "src": "/images/travel/3-days-in-gangneung/donghwa-garden-storefront.webp"
+      },
+      "placeholders": {},
+      "hash": "f6b4511a59a3de5c0ec445c5d14d73c3368208bf4f40bd87dae55eb4b8c8392d",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-2-articlephoto-alt-0c20277a",
+      "kind": "attr",
+      "tag": "ArticlePhoto@alt",
+      "anchor": "day-2",
+      "group": "day-2",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-2>div[1]>ArticlePhoto[2]@alt",
+      "origin": "jsx",
+      "text": "A bowl of jjamppong sundubu, soft tofu in a spicy red broth topped with chives and sesame, with two side dishes.",
+      "attrs": {
+        "src": "/images/travel/3-days-in-gangneung/donghwa-garden-jjamppong-sundubu.webp"
+      },
+      "placeholders": {},
+      "hash": "0c20277a3c16ba29f03705c9298913fa9a7ac910516300f2830d30fb9cc74d65",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-2-p-9079264f",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-2",
+      "group": "day-2",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-2>p[7]",
+      "origin": "jsx",
+      "text": "{strong1}I waited around two hours.{/strong1}",
+      "attrs": {},
+      "placeholders": {
+        "strong1": {
+          "tag": "strong",
+          "attrs": {}
+        }
+      },
+      "hash": "9079264f44ab50a11da05734fee5086957ff189070e1dc4acba016413581fca0",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-2-p-9996f7f1",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-2",
+      "group": "day-2",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-2>p[8]",
+      "origin": "jsx",
+      "text": "The restaurant was clearly popular, but that much waiting can take a big part of your travel day.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "9996f7f1d70b9c0c7b8d8ffc4e13a48d6db42188e5de72a8f2be9a599c8aa7eb",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-2-p-0335e626",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-2",
+      "group": "day-2",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-2>p[9]",
+      "origin": "jsx",
+      "text": "If you want to visit, my advice is to check whether remote queue registration is available through a Korean waiting-list app such as Tabling.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "0335e626fd1a367b79c27930598beb963af62d6015dbbc833b7691ec82b099f8",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-2-p-e1d1eb2c",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-2",
+      "group": "day-2",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-2>p[10]",
+      "origin": "jsx",
+      "text": "You may be able to register before arriving, but make sure you understand the check-in rules and keep an eye on your position. Availability and the process can change.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "e1d1eb2c844aa446eac8c1d8d4f27818e590aa7e619d96f550e45bf4847e082e",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-2-p-5d121ecf",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-2",
+      "group": "day-2",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-2>p[11]",
+      "origin": "jsx",
+      "text": "Donghwa Garden is also in the Chodang area, making it convenient to combine with nearby cafés and a visit to Gangmun Beach.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "5d121ecfb94e17862edbd8af2ea07a1e3750a877f351f126363b9f4198f9c2d0",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-2-p-5cacc551",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-2",
+      "group": "day-2",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-2>p[12]",
+      "origin": "jsx",
+      "text": "{strong1}My tip:{/strong1} Plan around the waiting time, not just the meal itself.",
+      "attrs": {},
+      "placeholders": {
+        "strong1": {
+          "tag": "strong",
+          "attrs": {}
+        }
+      },
+      "hash": "5cacc5512cb6ae261b84587e054b63b9ec573585a5b6ed0a798ab175ef260326",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-2-h3-51ba7e52",
+      "kind": "block",
+      "tag": "h3",
+      "anchor": "day-2",
+      "group": "day-2",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-2>h3[2]",
+      "origin": "jsx",
+      "text": "Matcharo: A little hojicha break",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "51ba7e52b8ec710b425f3fb24c71566c551c6ed1583f6431ffe50ee74fc59b41",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-2-p-5e4586a2",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-2",
+      "group": "day-2",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-2>p[13]",
+      "origin": "jsx",
+      "text": "After Donghwa Garden, I visited Matcharo ({span1}말차로{/span1}), a café focused on takeaway drinks.",
+      "attrs": {},
+      "placeholders": {
+        "span1": {
+          "tag": "span",
+          "attrs": {
+            "lang": "ko"
+          }
+        }
+      },
+      "hash": "5e4586a24490e4d554ba3ebd04012345f2bb4cd37c3912938529eb60e0840762",
+      "translate": true,
+      "protect": [
+        "말차로"
+      ],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-2-p-57c058fb",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-2",
+      "group": "day-2",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-2>p[14]",
+      "origin": "jsx",
+      "text": "I enjoy hojicha, so I believe I ordered a hojicha latte.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "57c058fb86d66abf7fa4504ba50a6a204587dc42c276e4fe997858746786e98a",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-2-p-b3d9e383",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-2",
+      "group": "day-2",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-2>p[15]",
+      "origin": "jsx",
+      "text": "If you're unfamiliar with hojicha, it's a Japanese roasted green tea. Unlike matcha, which is made from powdered green tea, hojicha has a warm, toasted aroma from the roasting process.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "b3d9e38378c507a77155b82a24af48c02c96a0886bc103b9beb6b123f5022629",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-2-p-08d1bda3",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-2",
+      "group": "day-2",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-2>p[16]",
+      "origin": "jsx",
+      "text": "The café had a small outdoor seating area, which would be especially pleasant on a nice day.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "08d1bda3e67c526a59a7f860051001aa2fd7ed9d17203f00c3c6a55c613c25b2",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-2-p-73cfc6ff",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-2",
+      "group": "day-2",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-2>p[17]",
+      "origin": "jsx",
+      "text": "There were also trees and traditional-looking earthenware jars outside, adding a little character to the space.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "73cfc6ff8a18872d5f58c4725a6c9257aa63615ed01bc1bd209953683e449817",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-2-articlephoto-alt-d1e6ef81",
+      "kind": "attr",
+      "tag": "ArticlePhoto@alt",
+      "anchor": "day-2",
+      "group": "day-2",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-2>div[2]>ArticlePhoto[1]@alt",
+      "origin": "jsx",
+      "text": "An iced drink in a Matcharo takeaway cup with a paper sleeve, on a wooden table.",
+      "attrs": {
+        "src": "/images/travel/3-days-in-gangneung/matcharo-iced-drink.webp"
+      },
+      "placeholders": {},
+      "hash": "d1e6ef810e4aaca70204d54ae45669ee43b329a12369956abee0b851ad1370f8",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-2-articlephoto-alt-83292d4c",
+      "kind": "attr",
+      "tag": "ArticlePhoto@alt",
+      "anchor": "day-2",
+      "group": "day-2",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-2>div[2]>ArticlePhoto[2]@alt",
+      "origin": "jsx",
+      "text": "Matcharo's outdoor area, with trees, hanging gourds, and earthenware jars.",
+      "attrs": {
+        "src": "/images/travel/3-days-in-gangneung/matcharo-outdoor-seating.webp"
+      },
+      "placeholders": {},
+      "hash": "83292d4ca237aff62a3fbb14c131466383edff140e1ad8c2ce51aa2161486901",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-2-p-8394d8e8",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-2",
+      "group": "day-2",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-2>p[18]",
+      "origin": "jsx",
+      "text": "It's the kind of place where you can grab a drink and enjoy a short break without needing a long café visit.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "8394d8e85f66ee3c5eeb769adea10ecd461564856f2e7f6a3ff1b985908618ab",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-2-h3-fd98436d",
+      "kind": "block",
+      "tag": "h3",
+      "anchor": "day-2",
+      "group": "day-2",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-2>h3[3]",
+      "origin": "jsx",
+      "text": "Gangmun Beach: My favorite kind of slow travel",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "fd98436df81aea5cc9ae878e3b435879ab9aa1e093ddbab455bb165e99c62faa",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-2-p-4f112b57",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-2",
+      "group": "day-2",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-2>p[19]",
+      "origin": "jsx",
+      "text": "After the cafés and food, it was time for the sea.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "4f112b5706f02e81ced3c87801ea51fc54768a053815a975c7e2f59dfdaaf371",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-2-p-70db059c",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-2",
+      "group": "day-2",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-2>p[20]",
+      "origin": "jsx",
+      "text": "Gangmun Beach ({span1}강문해변{/span1}) was one of the places I enjoyed walking around.",
+      "attrs": {},
+      "placeholders": {
+        "span1": {
+          "tag": "span",
+          "attrs": {
+            "lang": "ko"
+          }
+        }
+      },
+      "hash": "70db059cb5a4ba5f10b0d052ae84cbdb7fcec1f25581efb5c3c3421fe270d54a",
+      "translate": true,
+      "protect": [
+        "강문해변"
+      ],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-2-p-db2e3877",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-2",
+      "group": "day-2",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-2>p[21]",
+      "origin": "jsx",
+      "text": "The blue water, gentle waves, and open sky made it a refreshing change from busy restaurants and long queues.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "db2e3877f12cd2f6292499b2c6983900240ee3862b1a8fc57d90c3108fa0df87",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-2-articlephoto-alt-bbadf187",
+      "kind": "attr",
+      "tag": "ArticlePhoto@alt",
+      "anchor": "day-2",
+      "group": "day-2",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-2>ArticlePhoto[1]@alt",
+      "origin": "jsx",
+      "text": "Blue-green water and small waves at Gangmun Beach, with a small lighthouse offshore.",
+      "attrs": {
+        "src": "/images/travel/3-days-in-gangneung/gangmun-beach-waves.webp"
+      },
+      "placeholders": {},
+      "hash": "bbadf187c21d77c6480176d03b30e52796ffc6129a2708ca40d9d9c1cd6c4dbc",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-2-p-03a8d942",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-2",
+      "group": "day-2",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-2>p[22]",
+      "origin": "jsx",
+      "text": "I took quite a few photos and videos here, including the waves and seagulls flying over the beach.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "03a8d942fbbf7ebbb4c474793ce07711f25962307bab07ebd816d2086f2ab17a",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-2-p-a684d2d2",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-2",
+      "group": "day-2",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-2>p[23]",
+      "origin": "jsx",
+      "text": "Some of the other photos from my trip were simply of interesting buildings and pine trees that caught my attention while walking.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "a684d2d2e321d211be8f48bedb2743f7d5946b8de2670bf4da37fb3beb209ab0",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-2-p-36a18b9e",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-2",
+      "group": "day-2",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-2>p[24]",
+      "origin": "jsx",
+      "text": "Not every part of a trip needs to be a famous attraction.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "36a18b9e3d9ad18a9d793bff6f3bebb39945876ba7a5e88ae158312e5fc531b0",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-2-p-a7ccbd4e",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-2",
+      "group": "day-2",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-2>p[25]",
+      "origin": "jsx",
+      "text": "Sometimes, just wandering around and noticing small details is enough.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "a7ccbd4e80a3b850555c42615bd049599be2bc7351dcb7b7b11677d6fc2e874c",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-3-h2-aa0ae298",
+      "kind": "block",
+      "tag": "h2",
+      "anchor": "day-3",
+      "group": "day-3",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-3>h2[1]",
+      "origin": "jsx",
+      "text": "Day 3 — Spicy Jang Kalguksu and Black Sesame Coffee",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "aa0ae2981d65dfb986f660c7246b18392ce8e9306529e6219494579555c470e4",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-3-h3-a100bd1c",
+      "kind": "block",
+      "tag": "h3",
+      "anchor": "day-3",
+      "group": "day-3",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-3>h3[1]",
+      "origin": "jsx",
+      "text": "Geumcheon Kalguksu: A cleaner-tasting bowl than I expected",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "a100bd1ca63f45169baff5ed5b5087a6acc07dc128f9e5850659ef9df43da34e",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-3-p-41988c4a",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-3",
+      "group": "day-3",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-3>p[1]",
+      "origin": "jsx",
+      "text": "On my final day, I went to Geumcheon Kalguksu ({span1}금천칼국수{/span1}), another well-known restaurant in Gangneung.",
+      "attrs": {},
+      "placeholders": {
+        "span1": {
+          "tag": "span",
+          "attrs": {
+            "lang": "ko"
+          }
+        }
+      },
+      "hash": "41988c4a35460bc9f71330515c6089801432eefbe7b62f2a80cc4692d2022e81",
+      "translate": true,
+      "protect": [
+        "금천칼국수"
+      ],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-3-p-4960e36a",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-3",
+      "group": "day-3",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-3>p[2]",
+      "origin": "jsx",
+      "text": "There was a wait of around 20 minutes.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "4960e36a631fdb0fa5745726ee46fa103081046a5dbcb1049abf2f6c43c184dd",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-3-p-47b88c84",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-3",
+      "group": "day-3",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-3>p[3]",
+      "origin": "jsx",
+      "text": "The restaurant focuses on jang kalguksu ({span1}장칼국수{/span1}), a Korean noodle soup with a spicy, seasoned broth.",
+      "attrs": {},
+      "placeholders": {
+        "span1": {
+          "tag": "span",
+          "attrs": {
+            "lang": "ko"
+          }
+        }
+      },
+      "hash": "47b88c84cc98159bb156451aeb882c2218bde8b0dcbf7242e109ca3dd5388b2c",
+      "translate": true,
+      "protect": [
+        "장칼국수"
+      ],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-3-articlephoto-alt-11e2cf22",
+      "kind": "attr",
+      "tag": "ArticlePhoto@alt",
+      "anchor": "day-3",
+      "group": "day-3",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-3>ArticlePhoto[1]@alt",
+      "origin": "jsx",
+      "text": "A bowl of jang kalguksu at Geumcheon Kalguksu, with egg, seaweed flakes, and sesame seeds in an orange-red broth.",
+      "attrs": {
+        "src": "/images/travel/3-days-in-gangneung/geumcheon-jang-kalguksu.webp"
+      },
+      "placeholders": {},
+      "hash": "11e2cf224d16dcffe788cd85c7721fcf36a2ed1042ca2f0bca20c9ecdd82c952",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-3-p-02a79fea",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-3",
+      "group": "day-3",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-3>p[4]",
+      "origin": "jsx",
+      "text": "I've had jang kalguksu before, and I sometimes find the flavor a little heavy or muddled.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "02a79fead8d0f1a36d70821d24f3bda8e606f06090c3720b832055620e91ac01",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-3-p-1b9a3aed",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-3",
+      "group": "day-3",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-3>p[5]",
+      "origin": "jsx",
+      "text": "But the bowl I had here tasted surprisingly clean and well-balanced.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "1b9a3aed11a198d390aad23f6ae6e6f2f756dd4f86d22fba076d7d664a00f118",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-3-p-d9cb87be",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-3",
+      "group": "day-3",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-3>p[6]",
+      "origin": "jsx",
+      "text": "It was still spicy. From what I remember, I'd compare the heat to Shin Ramyun, one of Korea's best-known spicy instant noodles.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "d9cb87be081ab5272687b429c521ddd63bcf512cab3387a297bdb61a05d5ecfc",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-3-p-a49bd60a",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-3",
+      "group": "day-3",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-3>p[7]",
+      "origin": "jsx",
+      "text": "That's just my personal comparison, though. If you're sensitive to spicy food, it may feel quite hot.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "a49bd60ab03f68a62a1743e6feb3f86cc35adbdf1d6e5b15d7a43472e569769d",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-3-h3-716e434b",
+      "kind": "block",
+      "tag": "h3",
+      "anchor": "day-3",
+      "group": "day-3",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-3>h3[2]",
+      "origin": "jsx",
+      "text": "Making your own rice balls",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "716e434bd5e88c8b0b668b3424563d3475abe722839994e9e361c56ea7a5e4e0",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-3-p-f9a31267",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-3",
+      "group": "day-3",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-3>p[8]",
+      "origin": "jsx",
+      "text": "Another enjoyable part of the meal was the self-serve rice balls, or {em1}jumeokbap{/em1} ({span1}주먹밥{/span1}).",
+      "attrs": {},
+      "placeholders": {
+        "em1": {
+          "tag": "em",
+          "attrs": {}
+        },
+        "span1": {
+          "tag": "span",
+          "attrs": {
+            "lang": "ko"
+          }
+        }
+      },
+      "hash": "f9a31267323827ed078911eac9e553335f8d71afb789997820a4281026c6d102",
+      "translate": true,
+      "protect": [
+        "주먹밥"
+      ],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-3-p-68ee0bbc",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-3",
+      "group": "day-3",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-3>p[9]",
+      "origin": "jsx",
+      "text": "In some Korean restaurants, you're given seasoned rice and disposable plastic gloves so you can shape your own little rice balls.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "68ee0bbc21b85bf599f26abdda2a84506afd452fc576b1110acd648f1b51524a",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-3-articlephoto-alt-e057d01a",
+      "kind": "attr",
+      "tag": "ArticlePhoto@alt",
+      "anchor": "day-3",
+      "group": "day-3",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-3>ArticlePhoto[2]@alt",
+      "origin": "jsx",
+      "text": "Small hand-shaped rice balls mixed with seaweed in a steel bowl.",
+      "attrs": {
+        "src": "/images/travel/3-days-in-gangneung/self-made-rice-balls.webp"
+      },
+      "placeholders": {},
+      "hash": "e057d01a38689850d5a4977e87a84e6d5dc5b15406697dadc69fa117f5bbb12e",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-3-p-8648ccc8",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-3",
+      "group": "day-3",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-3>p[10]",
+      "origin": "jsx",
+      "text": "It's simple, but it can be a fun experience if you're trying it for the first time.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "8648ccc8d0d5421f3196cc5afbbd87dcf9efe4d8ab4a956eff7385f2317fe8a1",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-3-p-7b6db919",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-3",
+      "group": "day-3",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-3>p[11]",
+      "origin": "jsx",
+      "text": "{strong1}One warning: The rice can be very hot!{/strong1}",
+      "attrs": {},
+      "placeholders": {
+        "strong1": {
+          "tag": "strong",
+          "attrs": {}
+        }
+      },
+      "hash": "7b6db919319ce55cc42a4d8da9d71b9cd5dfa235333cf7d8c80597c02946166c",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-3-p-e66b8925",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-3",
+      "group": "day-3",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-3>p[12]",
+      "origin": "jsx",
+      "text": "Be careful when mixing and shaping it, even if you're wearing the gloves.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "e66b892519d2aa62b0a1a07cf3cb41223c4b893e8fbd64392f6ed48a16ba8c78",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-3-h3-6da2f6e0",
+      "kind": "block",
+      "tag": "h3",
+      "anchor": "day-3",
+      "group": "day-3",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-3>h3[3]",
+      "origin": "jsx",
+      "text": "Toetmaru: Famous black sesame coffee, with another long wait",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "6da2f6e016e914c6f28a8dcfe7d6de62e73a287c945de3776811403cbc3127e2",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-3-p-8280aa43",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-3",
+      "group": "day-3",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-3>p[13]",
+      "origin": "jsx",
+      "text": "Next was Toetmaru ({span1}툇마루{/span1}), a café famous for its black sesame coffee.",
+      "attrs": {},
+      "placeholders": {
+        "span1": {
+          "tag": "span",
+          "attrs": {
+            "lang": "ko"
+          }
+        }
+      },
+      "hash": "8280aa43b7d08ac8c42751c2243a3424eb054c2f5d88bb12419ba34965a9a9d2",
+      "translate": true,
+      "protect": [
+        "툇마루"
+      ],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-3-p-750409bf",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-3",
+      "group": "day-3",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-3>p[14]",
+      "origin": "jsx",
+      "text": "Black sesame has a rich, nutty flavor, and it's used in various Korean foods and desserts.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "750409bf99568d1cb6ed1c47a8338063ae89e07f334eba9089ee815e00aa070f",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-3-p-2ebdce74",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-3",
+      "group": "day-3",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-3>p[15]",
+      "origin": "jsx",
+      "text": "I'd heard a lot about this coffee, so I wanted to try it myself.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "2ebdce74402bc492a3e3ef17a6f2f5d57e8720899330a7ce90fe7f1fc98597e7",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-3-p-7308ca1e",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-3",
+      "group": "day-3",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-3>p[16]",
+      "origin": "jsx",
+      "text": "But the waiting started before I even placed my order.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "7308ca1e9a52185491e9404635a48201cc50a41e5255f083513cab0aaa23bb9c",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-3-p-dc7d3496",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-3",
+      "group": "day-3",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-3>p[17]",
+      "origin": "jsx",
+      "text": "At the time of my visit, I couldn't use remote mobile waiting, so I had to stand in line.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "dc7d349610cd36a7621bbf6eac8f62a2e1ab6e4a24e0fc33a66b6a3855522229",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-3-p-e3c05174",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-3",
+      "group": "day-3",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-3>p[18]",
+      "origin": "jsx",
+      "text": "After ordering, it took roughly another 30 minutes to receive my coffee.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "e3c051747decd59fb879f9e3c3836aea69cecf85e8d108f430c0b47f78dcc002",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-3-p-361b02db",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-3",
+      "group": "day-3",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-3>p[19]",
+      "origin": "jsx",
+      "text": "Altogether, I remember waiting about an hour.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "361b02dbca7f1cd3a065bed474ade49ec5926458ee844e2236ed0964bcf96439",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-3-p-4c9134ff",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-3",
+      "group": "day-3",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-3>p[20]",
+      "origin": "jsx",
+      "text": "The café was packed, and there were no available seats, so I got my drink to go.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "4c9134ff9ec40780088250da8134e16689645f2fd42eab0a8544523a646ef264",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-3-articlephoto-alt-a56b036d",
+      "kind": "attr",
+      "tag": "ArticlePhoto@alt",
+      "anchor": "day-3",
+      "group": "day-3",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-3>div[1]>ArticlePhoto[1]@alt",
+      "origin": "jsx",
+      "text": "A tall wooden post with the name Toetmaru written in Korean, in front of the café building.",
+      "attrs": {
+        "src": "/images/travel/3-days-in-gangneung/toetmaru-sign.webp"
+      },
+      "placeholders": {},
+      "hash": "a56b036d841a7eb182e1ad88d262fc90194a240c2903840aac0c3a4925f5459c",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-3-articlephoto-alt-6747010a",
+      "kind": "attr",
+      "tag": "ArticlePhoto@alt",
+      "anchor": "day-3",
+      "group": "day-3",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-3>div[1]>ArticlePhoto[2]@alt",
+      "origin": "jsx",
+      "text": "Toetmaru's black sesame coffee in a takeaway cup, resting on a wooden log bench.",
+      "attrs": {
+        "src": "/images/travel/3-days-in-gangneung/toetmaru-black-sesame-coffee.webp"
+      },
+      "placeholders": {},
+      "hash": "6747010a70e476820c8fb07e62adfa0869417fd589791d65d2d4e393465c2953",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-3-p-6f3bdf3e",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-3",
+      "group": "day-3",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-3>p[21]",
+      "origin": "jsx",
+      "text": "The coffee itself was smooth and delicious, with a deep, nutty black sesame flavor.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "6f3bdf3e96bf46746d5dd412b59f346a88f35163dfcf658ea03e18b71c996fa6",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-3-p-3dadd8a8",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-3",
+      "group": "day-3",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-3>p[22]",
+      "origin": "jsx",
+      "text": "My only small disappointment was the portion size. I wished there had been a little more!",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "3dadd8a818c7ec47e2e49f1024b38ee2d0dd1697ac36e0cf4cf3a41bef5439ff",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-3-p-90343f57",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-3",
+      "group": "day-3",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-3>p[23]",
+      "origin": "jsx",
+      "text": "If you'd like to sit inside, check the seating situation and the café's rules before ordering. Don't assume a table will be available just because you've waited for your drink.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "90343f575443ba654f79c51bd90024090803e4cd4cd8365de79e54a28c43346b",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-3-h3-b08b388c",
+      "kind": "block",
+      "tag": "h3",
+      "anchor": "day-3",
+      "group": "day-3",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-3>h3[4]",
+      "origin": "jsx",
+      "text": "One last walk at Gangmun Beach",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "b08b388c641c3a6c4d61adb4585691950bbfe93657316300f4e056803fff01f5",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-3-p-9bc31b9b",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-3",
+      "group": "day-3",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-3>p[24]",
+      "origin": "jsx",
+      "text": "Before heading home, I returned to Gangmun Beach.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "9bc31b9b0011b226a580d65349621f8d3e913965acb542ec289ebdfeabc26bf2",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-3-p-cbf23d0a",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-3",
+      "group": "day-3",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-3>p[25]",
+      "origin": "jsx",
+      "text": "I liked being able to visit the same beach more than once without feeling that I had to do something different each time.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "cbf23d0a0c2fad632ec3d8b2bfebf4f8c22f260e6bbf4eb0475a9eae62328230",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-3-p-7d284137",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-3",
+      "group": "day-3",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-3>p[26]",
+      "origin": "jsx",
+      "text": "After several busy food stops, it was nice to spend a little more time by the water.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "7d28413753c298f67b3c3a3d86b4e9555571758ee320b7d2a9d7d417425e01be",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "day-3-p-be21f9a5",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "day-3",
+      "group": "day-3",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-3>p[27]",
+      "origin": "jsx",
+      "text": "Then I made my way back to Gangneung Station for the KTX journey to Seoul.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "be21f9a5bfeb3f5f63b7a589215a658cad7dc4467ff76e94aed4e40032441f02",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "tips-h2-f02861d1",
+      "kind": "block",
+      "tag": "h2",
+      "anchor": "tips",
+      "group": "tips",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#tips>h2[1]",
+      "origin": "jsx",
+      "text": "Things I'd Tell a Friend Before Visiting Gangneung",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "f02861d1d753954e146bfc8882f188ec0eb55a12464a87de89d9305b358ac521",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "tips-p-f459723a",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "tips",
+      "group": "tips",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#tips>p[1]",
+      "origin": "jsx",
+      "text": "{strong1}Book your weekend KTX tickets early.{/strong1} Popular departures can sell out, and standing tickets aren't guaranteed.",
+      "attrs": {},
+      "placeholders": {
+        "strong1": {
+          "tag": "strong",
+          "attrs": {}
+        }
+      },
+      "hash": "f459723a7002778d8a66db013ff96a93f5b7576d1d26ba7f6ac8aa52c29b3569",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "tips-p-faacace5",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "tips",
+      "group": "tips",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#tips>p[2]",
+      "origin": "jsx",
+      "text": "{strong1}Expect queues at famous restaurants and cafés.{/strong1} I waited about two hours at Donghwa Garden and roughly one hour at Toetmaru. Your experience may be different.",
+      "attrs": {},
+      "placeholders": {
+        "strong1": {
+          "tag": "strong",
+          "attrs": {}
+        }
+      },
+      "hash": "faacace53e647eb4c95cb9f1301bfe28db8c6fdb469bd0bbf223c7af31e0a37b",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "tips-p-95adaad0",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "tips",
+      "group": "tips",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#tips>p[3]",
+      "origin": "jsx",
+      "text": "{strong1}Check waiting-list apps before visiting.{/strong1} Some places offer remote registration, while others require you to queue in person.",
+      "attrs": {},
+      "placeholders": {
+        "strong1": {
+          "tag": "strong",
+          "attrs": {}
+        }
+      },
+      "hash": "95adaad08d6ca695aeae4025927fa777edceb46d90325aeffda43e84b8c9189d",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "tips-p-242e83a5",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "tips",
+      "group": "tips",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#tips>p[4]",
+      "origin": "jsx",
+      "text": "{strong1}Don't underestimate Korean spicy food.{/strong1} My jang kalguksu felt roughly as spicy as Shin Ramyun, but spice tolerance varies.",
+      "attrs": {},
+      "placeholders": {
+        "strong1": {
+          "tag": "strong",
+          "attrs": {}
+        }
+      },
+      "hash": "242e83a50e570b4d7b1463fdd4aa90a2e9c0453d25ae92c89bedf6f15f001eba",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "tips-p-7ad96bfa",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "tips",
+      "group": "tips",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#tips>p[5]",
+      "origin": "jsx",
+      "text": "{strong1}Try takeaway food from the local market.{/strong1} Buying several small dishes and taking them back to your accommodation can be a relaxing way to spend an evening.",
+      "attrs": {},
+      "placeholders": {
+        "strong1": {
+          "tag": "strong",
+          "attrs": {}
+        }
+      },
+      "hash": "7ad96bfa4819ad69de64bee80609d11342b84430dfa2d4d9f0c432b9d70058c8",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "tips-p-a7436c1a",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "tips",
+      "group": "tips",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#tips>p[6]",
+      "origin": "jsx",
+      "text": "{strong1}Leave time to simply walk.{/strong1} Gangneung isn't only about famous restaurants. The sea, pine trees, and little details along the way were part of what made the trip memorable.",
+      "attrs": {},
+      "placeholders": {
+        "strong1": {
+          "tag": "strong",
+          "attrs": {}
+        }
+      },
+      "hash": "a7436c1aa7189bf8cb422f9c956e412a6a6e37884ae80878df5c830b4f241ab3",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "visit-again-h2-a1311542",
+      "kind": "block",
+      "tag": "h2",
+      "anchor": "visit-again",
+      "group": "visit-again",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#visit-again>h2[1]",
+      "origin": "jsx",
+      "text": "Would I Visit Gangneung Again?",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "a131154212f9ee6f431d16673ee4cb9d69feb106c7f1598b94f01eeb4bfd8065",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "visit-again-p-248bacac",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "visit-again",
+      "group": "visit-again",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#visit-again>p[1]",
+      "origin": "jsx",
+      "text": "Yes.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "248bacaca14214cfc643b0da1c69f4afea837bf47296a153d79e31b8654a5ea5",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "visit-again-p-b5d03cf9",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "visit-again",
+      "group": "visit-again",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#visit-again>p[2]",
+      "origin": "jsx",
+      "text": "There were long waits, a few foods I couldn't try, and some small things I would plan differently next time.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "b5d03cf9ec9e81fe27939966c89b28e15d5cb55126fa8de62c428ed21107c29a",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "visit-again-p-9117159f",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "visit-again",
+      "group": "visit-again",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#visit-again>p[3]",
+      "origin": "jsx",
+      "text": "But I enjoyed the contrast between busy food spots and quiet moments by the water.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "9117159f9b52f0c98a8e0d60772c2b2830d3d78bc7f97f5874a6f494d8ab94a6",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "visit-again-p-65c87d9b",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "visit-again",
+      "group": "visit-again",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#visit-again>p[4]",
+      "origin": "jsx",
+      "text": "I'd return for the tangsuyuk, I'd happily have another black sesame coffee, and I'd leave myself more time to walk around Gangmun Beach.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "65c87d9b0d87bd3ef9ff9b396c8928b68968f40f0c8de7ebe0a3ec4b88f7cd8a",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "visit-again-p-203f3c69",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "visit-again",
+      "group": "visit-again",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#visit-again>p[5]",
+      "origin": "jsx",
+      "text": "If you're planning your first trip to Gangneung, my advice is simple: choose a few places you really want to visit, book your train early, and don't fill every hour of your schedule.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "203f3c691b20bfa183006c7eb229e75bea6c19f302093ffb8eb6dd2dc7c38468",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "visit-again-p-d9edab26",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "visit-again",
+      "group": "visit-again",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#visit-again>p[6]",
+      "origin": "jsx",
+      "text": "Sometimes the best part of a weekend trip is having enough time to enjoy where you are.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "d9edab268154434e790611ae96610607deb3c2158178ceeb8e163a630a33205d",
+      "translate": true,
+      "protect": [],
+      "firstPerson": false,
+      "inArticle": true,
+      "needsReview": false
+    },
+    {
+      "id": "visit-again-p-0136a0ac",
+      "kind": "block",
+      "tag": "p",
+      "anchor": "visit-again",
+      "group": "visit-again",
+      "path": "page>main[1]>div[1]>article[1]>div[1]>section#visit-again>p[7]",
+      "origin": "jsx",
+      "text": "Visited September 11–13, 2026. Waiting times, prices, menus, and reservation systems reflect my experience or recollection and may change.",
+      "attrs": {},
+      "placeholders": {},
+      "hash": "0136a0ac12e62b34c110a91f8445a4200e4a8959929aefa0f5f3d03e37024f9e",
+      "translate": true,
+      "protect": [],
+      "firstPerson": true,
+      "inArticle": true,
+      "needsReview": false
+    }
+  ],
+  "review": [
+    {
+      "line": 77,
+      "where": "page",
+      "reason": "attribute data is dynamic and was locked as an expression"
+    },
+    {
+      "line": 77,
+      "where": "page>JsonLd[1]",
+      "reason": "structured data (JSON-LD) must be generated per locale; its strings are not translated by this extractor"
+    }
+  ],
+  "structure": {
+    "fragment": true,
+    "children": [
+      {
+        "component": "JsonLd",
+        "attrs": {
+          "data": {
+            "dynamic": "structuredData"
+          }
+        },
+        "attributeUnits": {}
+      },
+      {
+        "element": "main",
+        "attrs": {
+          "className": "min-h-screen bg-[var(--bg)] text-[var(--text)]"
+        },
+        "attributeUnits": {},
+        "children": [
+          {
+            "element": "div",
+            "attrs": {
+              "className": "mx-auto flex w-full max-w-6xl flex-col gap-7 px-5 py-6 md:gap-10 md:px-8 md:py-8"
+            },
+            "attributeUnits": {},
+            "children": [
+              {
+                "component": "SiteHeader",
+                "attrs": {},
+                "attributeUnits": {}
+              },
+              {
+                "element": "article",
+                "attrs": {
+                  "className": "overflow-hidden rounded-[2rem] border border-[var(--border)] bg-[var(--surface)]"
+                },
+                "attributeUnits": {},
+                "children": [
+                  {
+                    "element": "header",
+                    "attrs": {
+                      "className": "border-b border-[var(--border)] px-6 py-9 md:px-12 md:py-14"
+                    },
+                    "attributeUnits": {},
+                    "children": [
+                      {
+                        "element": "a",
+                        "attrs": {
+                          "href": "/travel",
+                          "className": "text-sm font-medium text-[var(--accent)] hover:underline"
+                        },
+                        "attributeUnits": {},
+                        "unit": "header-a-318c6bcf"
+                      },
+                      {
+                        "element": "p",
+                        "attrs": {
+                          "className": "mt-8 text-xs font-semibold uppercase tracking-[0.22em] text-[var(--gold)]"
+                        },
+                        "attributeUnits": {},
+                        "unit": "header-p-c645230f"
+                      },
+                      {
+                        "element": "h1",
+                        "attrs": {
+                          "className": "mt-4 max-w-4xl text-4xl font-semibold leading-[1.12] tracking-tight md:text-6xl"
+                        },
+                        "attributeUnits": {},
+                        "unit": "header-h1-b6b42d70"
+                      },
+                      {
+                        "element": "p",
+                        "attrs": {
+                          "className": "mt-6 max-w-3xl text-base italic leading-8 text-[var(--muted)] md:text-lg"
+                        },
+                        "attributeUnits": {},
+                        "unit": "header-p-05343f00"
+                      },
+                      {
+                        "component": "ArticlePhoto",
+                        "attrs": {
+                          "src": "/images/travel/3-days-in-gangneung/gangmun-beach-cover.webp",
+                          "alt": "Gangmun Beach in Gangneung under a cloudy sky, with waves rolling onto the sand, a small rock offshore, and a seagull overhead.",
+                          "width": 1050,
+                          "height": 700,
+                          "layout": "cover"
+                        },
+                        "attributeUnits": {
+                          "alt": "header-articlephoto-alt-db472467"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "element": "div",
+                    "attrs": {
+                      "className": "mx-auto max-w-3xl space-y-11 px-6 py-9 text-base leading-8 md:mx-0 md:max-w-[62rem] md:px-12 md:py-12 md:text-lg md:leading-9"
+                    },
+                    "attributeUnits": {},
+                    "children": [
+                      {
+                        "element": "section",
+                        "attrs": {
+                          "aria-label": "Introduction",
+                          "className": "space-y-5"
+                        },
+                        "attributeUnits": {
+                          "aria-label": "introduction-section-aria-label-0d0e8a7b"
+                        },
+                        "children": [
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "introduction-p-0146e710"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "introduction-p-5eafec79"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "introduction-p-a554aae0"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "introduction-p-5a4555c3"
+                          }
+                        ]
+                      },
+                      {
+                        "element": "section",
+                        "attrs": {
+                          "id": "ktx",
+                          "className": "space-y-4 scroll-mt-24"
+                        },
+                        "attributeUnits": {},
+                        "children": [
+                          {
+                            "element": "h2",
+                            "attrs": {
+                              "className": "text-2xl font-semibold leading-tight md:text-3xl"
+                            },
+                            "attributeUnits": {},
+                            "unit": "ktx-h2-9234d7f1"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "ktx-p-2b5fee1b"
+                          },
+                          {
+                            "component": "ArticlePhoto",
+                            "attrs": {
+                              "src": "/images/travel/3-days-in-gangneung/gangneung-station.webp",
+                              "alt": "The front of Gangneung Station, with the station name in Korean and English on the building.",
+                              "width": 900,
+                              "height": 1200
+                            },
+                            "attributeUnits": {
+                              "alt": "ktx-articlephoto-alt-c610a63f"
+                            }
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "ktx-p-b4288767"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "ktx-p-7798ae16"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "ktx-p-e813fbfb"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "ktx-p-05faf614"
+                          },
+                          {
+                            "element": "figure",
+                            "attrs": {
+                              "className": "flex flex-col items-center pt-2"
+                            },
+                            "attributeUnits": {},
+                            "children": [
+                              {
+                                "element": "div",
+                                "attrs": {
+                                  "className": "aspect-[9/16] w-full max-w-[18rem] overflow-hidden rounded-[1.5rem] border border-[var(--border)] bg-black md:max-w-xs"
+                                },
+                                "attributeUnits": {},
+                                "children": [
+                                  {
+                                    "element": "iframe",
+                                    "attrs": {
+                                      "className": "h-full w-full",
+                                      "src": "https://www.youtube-nocookie.com/embed/B6ZFfvpyJFA",
+                                      "title": "3 days in Gangneung — HAEMIL Short",
+                                      "loading": "lazy",
+                                      "allow": "accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
+                                      "referrerPolicy": "strict-origin-when-cross-origin",
+                                      "allowFullScreen": true
+                                    },
+                                    "attributeUnits": {
+                                      "title": "ktx-figure-iframe-title-696a4e4f"
+                                    },
+                                    "children": []
+                                  }
+                                ]
+                              },
+                              {
+                                "element": "a",
+                                "attrs": {
+                                  "href": "https://youtube.com/shorts/B6ZFfvpyJFA",
+                                  "target": "_blank",
+                                  "rel": "noopener noreferrer",
+                                  "className": "mt-4 text-sm font-semibold text-[var(--accent)] transition hover:opacity-80"
+                                },
+                                "attributeUnits": {},
+                                "unit": "ktx-figure-a-5f856e46"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "element": "section",
+                        "attrs": {
+                          "id": "day-1",
+                          "className": "space-y-4 scroll-mt-24"
+                        },
+                        "attributeUnits": {},
+                        "children": [
+                          {
+                            "element": "h2",
+                            "attrs": {
+                              "className": "text-2xl font-semibold leading-tight md:text-3xl"
+                            },
+                            "attributeUnits": {},
+                            "unit": "day-1-h2-1dc045f6"
+                          },
+                          {
+                            "element": "h3",
+                            "attrs": {
+                              "className": "pt-2 text-xl font-semibold leading-snug md:text-2xl"
+                            },
+                            "attributeUnits": {},
+                            "unit": "day-1-h3-cac00e9e"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-1-p-dd525114"
+                          },
+                          {
+                            "component": "ArticlePhoto",
+                            "attrs": {
+                              "src": "/images/travel/3-days-in-gangneung/yukyoung-tangsuyuk-storefront.webp",
+                              "alt": "The storefront of Yukyoung Tangsuyuk in Gangneung, covered in red Korean signs for tangsuyuk.",
+                              "width": 900,
+                              "height": 1200
+                            },
+                            "attributeUnits": {
+                              "alt": "day-1-articlephoto-alt-6966e657"
+                            }
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-1-p-ccccbb61"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-1-p-5ea6cf52"
+                          },
+                          {
+                            "element": "ul",
+                            "attrs": {
+                              "className": "list-disc space-y-2 pl-6"
+                            },
+                            "attributeUnits": {},
+                            "children": [
+                              {
+                                "element": "li",
+                                "attrs": {},
+                                "attributeUnits": {},
+                                "unit": "day-1-li-9469c586"
+                              },
+                              {
+                                "element": "li",
+                                "attrs": {},
+                                "attributeUnits": {},
+                                "unit": "day-1-li-0d527b08"
+                              }
+                            ]
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-1-p-58b6ccde"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-1-p-e6360c36"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-1-p-2d48f7d6"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-1-p-54c8899f"
+                          },
+                          {
+                            "element": "h3",
+                            "attrs": {
+                              "className": "pt-2 text-xl font-semibold leading-snug md:text-2xl"
+                            },
+                            "attributeUnits": {},
+                            "unit": "day-1-h3-4917fb4e"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-1-p-6c6f54a5"
+                          },
+                          {
+                            "component": "ArticlePhoto",
+                            "attrs": {
+                              "src": "/images/travel/3-days-in-gangneung/gangneung-jungang-market-gate-5.webp",
+                              "alt": "Gate 5 of Gangneung Jungang Market, with shop signs inside the covered market.",
+                              "width": 900,
+                              "height": 1200
+                            },
+                            "attributeUnits": {
+                              "alt": "day-1-articlephoto-alt-a54325ad"
+                            }
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-1-p-31ffc6a3"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-1-p-30a7d245"
+                          },
+                          {
+                            "element": "div",
+                            "attrs": {
+                              "className": "grid gap-4 py-2 sm:grid-cols-2"
+                            },
+                            "attributeUnits": {},
+                            "children": [
+                              {
+                                "component": "ArticlePhoto",
+                                "attrs": {
+                                  "src": "/images/travel/3-days-in-gangneung/night-market-pad-thai.webp",
+                                  "alt": "Takeaway pad Thai with shrimp, bean sprouts, and chopped peanuts in a foil-lined container.",
+                                  "width": 900,
+                                  "height": 1200,
+                                  "layout": "pair"
+                                },
+                                "attributeUnits": {
+                                  "alt": "day-1-articlephoto-alt-2badb6ce"
+                                }
+                              },
+                              {
+                                "component": "ArticlePhoto",
+                                "attrs": {
+                                  "src": "/images/travel/3-days-in-gangneung/market-single-portion-hoe.webp",
+                                  "alt": "A single-serving tray of sliced raw fish from the market, with dipping sauces and small side dishes.",
+                                  "width": 900,
+                                  "height": 1200,
+                                  "layout": "pair"
+                                },
+                                "attributeUnits": {
+                                  "alt": "day-1-articlephoto-alt-ed41870c"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-1-p-e5da8f24"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-1-p-7c526c1b"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-1-p-e41cef31"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-1-p-928d01b4"
+                          },
+                          {
+                            "element": "h3",
+                            "attrs": {
+                              "className": "pt-2 text-xl font-semibold leading-snug md:text-2xl"
+                            },
+                            "attributeUnits": {},
+                            "unit": "day-1-h3-42fe2218"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-1-p-9a453087"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-1-p-f4179e07"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-1-p-24e6ca65"
+                          },
+                          {
+                            "component": "ArticlePhoto",
+                            "attrs": {
+                              "src": "/images/travel/3-days-in-gangneung/gilgamja-sign.webp",
+                              "alt": "The Gangneung Gilgamja shop sign, shaped like a spiral potato on a stick.",
+                              "width": 1050,
+                              "height": 1030
+                            },
+                            "attributeUnits": {
+                              "alt": "day-1-articlephoto-alt-c608f31a"
+                            }
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-1-p-7d447ce1"
+                          }
+                        ]
+                      },
+                      {
+                        "element": "section",
+                        "attrs": {
+                          "id": "day-2",
+                          "className": "space-y-4 scroll-mt-24"
+                        },
+                        "attributeUnits": {},
+                        "children": [
+                          {
+                            "element": "h2",
+                            "attrs": {
+                              "className": "text-2xl font-semibold leading-tight md:text-3xl"
+                            },
+                            "attributeUnits": {},
+                            "unit": "day-2-h2-37adb4cd"
+                          },
+                          {
+                            "element": "h3",
+                            "attrs": {
+                              "className": "pt-2 text-xl font-semibold leading-snug md:text-2xl"
+                            },
+                            "attributeUnits": {},
+                            "unit": "day-2-h3-eae0293a"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-2-p-34b6af71"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-2-p-9fb9c75a"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-2-p-26000036"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-2-p-a97e0ce6"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-2-p-cd8e940c"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-2-p-cd8aca98"
+                          },
+                          {
+                            "element": "div",
+                            "attrs": {
+                              "className": "grid gap-4 py-2 sm:grid-cols-2"
+                            },
+                            "attributeUnits": {},
+                            "children": [
+                              {
+                                "component": "ArticlePhoto",
+                                "attrs": {
+                                  "src": "/images/travel/3-days-in-gangneung/donghwa-garden-storefront.webp",
+                                  "alt": "The Donghwa Garden restaurant building in Gangneung, with its Korean sign.",
+                                  "width": 900,
+                                  "height": 1200,
+                                  "layout": "pair"
+                                },
+                                "attributeUnits": {
+                                  "alt": "day-2-articlephoto-alt-f6b4511a"
+                                }
+                              },
+                              {
+                                "component": "ArticlePhoto",
+                                "attrs": {
+                                  "src": "/images/travel/3-days-in-gangneung/donghwa-garden-jjamppong-sundubu.webp",
+                                  "alt": "A bowl of jjamppong sundubu, soft tofu in a spicy red broth topped with chives and sesame, with two side dishes.",
+                                  "width": 900,
+                                  "height": 1200,
+                                  "layout": "pair"
+                                },
+                                "attributeUnits": {
+                                  "alt": "day-2-articlephoto-alt-0c20277a"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-2-p-9079264f"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-2-p-9996f7f1"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-2-p-0335e626"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-2-p-e1d1eb2c"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-2-p-5d121ecf"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-2-p-5cacc551"
+                          },
+                          {
+                            "element": "h3",
+                            "attrs": {
+                              "className": "pt-2 text-xl font-semibold leading-snug md:text-2xl"
+                            },
+                            "attributeUnits": {},
+                            "unit": "day-2-h3-51ba7e52"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-2-p-5e4586a2"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-2-p-57c058fb"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-2-p-b3d9e383"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-2-p-08d1bda3"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-2-p-73cfc6ff"
+                          },
+                          {
+                            "element": "div",
+                            "attrs": {
+                              "className": "grid gap-4 py-2 sm:grid-cols-2"
+                            },
+                            "attributeUnits": {},
+                            "children": [
+                              {
+                                "component": "ArticlePhoto",
+                                "attrs": {
+                                  "src": "/images/travel/3-days-in-gangneung/matcharo-iced-drink.webp",
+                                  "alt": "An iced drink in a Matcharo takeaway cup with a paper sleeve, on a wooden table.",
+                                  "width": 900,
+                                  "height": 1200,
+                                  "layout": "pair"
+                                },
+                                "attributeUnits": {
+                                  "alt": "day-2-articlephoto-alt-d1e6ef81"
+                                }
+                              },
+                              {
+                                "component": "ArticlePhoto",
+                                "attrs": {
+                                  "src": "/images/travel/3-days-in-gangneung/matcharo-outdoor-seating.webp",
+                                  "alt": "Matcharo's outdoor area, with trees, hanging gourds, and earthenware jars.",
+                                  "width": 900,
+                                  "height": 1200,
+                                  "layout": "pair"
+                                },
+                                "attributeUnits": {
+                                  "alt": "day-2-articlephoto-alt-83292d4c"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-2-p-8394d8e8"
+                          },
+                          {
+                            "element": "h3",
+                            "attrs": {
+                              "className": "pt-2 text-xl font-semibold leading-snug md:text-2xl"
+                            },
+                            "attributeUnits": {},
+                            "unit": "day-2-h3-fd98436d"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-2-p-4f112b57"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-2-p-70db059c"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-2-p-db2e3877"
+                          },
+                          {
+                            "component": "ArticlePhoto",
+                            "attrs": {
+                              "src": "/images/travel/3-days-in-gangneung/gangmun-beach-waves.webp",
+                              "alt": "Blue-green water and small waves at Gangmun Beach, with a small lighthouse offshore.",
+                              "width": 900,
+                              "height": 1200
+                            },
+                            "attributeUnits": {
+                              "alt": "day-2-articlephoto-alt-bbadf187"
+                            }
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-2-p-03a8d942"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-2-p-a684d2d2"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-2-p-36a18b9e"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-2-p-a7ccbd4e"
+                          }
+                        ]
+                      },
+                      {
+                        "element": "section",
+                        "attrs": {
+                          "id": "day-3",
+                          "className": "space-y-4 scroll-mt-24"
+                        },
+                        "attributeUnits": {},
+                        "children": [
+                          {
+                            "element": "h2",
+                            "attrs": {
+                              "className": "text-2xl font-semibold leading-tight md:text-3xl"
+                            },
+                            "attributeUnits": {},
+                            "unit": "day-3-h2-aa0ae298"
+                          },
+                          {
+                            "element": "h3",
+                            "attrs": {
+                              "className": "pt-2 text-xl font-semibold leading-snug md:text-2xl"
+                            },
+                            "attributeUnits": {},
+                            "unit": "day-3-h3-a100bd1c"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-3-p-41988c4a"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-3-p-4960e36a"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-3-p-47b88c84"
+                          },
+                          {
+                            "component": "ArticlePhoto",
+                            "attrs": {
+                              "src": "/images/travel/3-days-in-gangneung/geumcheon-jang-kalguksu.webp",
+                              "alt": "A bowl of jang kalguksu at Geumcheon Kalguksu, with egg, seaweed flakes, and sesame seeds in an orange-red broth.",
+                              "width": 900,
+                              "height": 1200
+                            },
+                            "attributeUnits": {
+                              "alt": "day-3-articlephoto-alt-11e2cf22"
+                            }
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-3-p-02a79fea"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-3-p-1b9a3aed"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-3-p-d9cb87be"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-3-p-a49bd60a"
+                          },
+                          {
+                            "element": "h3",
+                            "attrs": {
+                              "className": "pt-2 text-xl font-semibold leading-snug md:text-2xl"
+                            },
+                            "attributeUnits": {},
+                            "unit": "day-3-h3-716e434b"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-3-p-f9a31267"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-3-p-68ee0bbc"
+                          },
+                          {
+                            "component": "ArticlePhoto",
+                            "attrs": {
+                              "src": "/images/travel/3-days-in-gangneung/self-made-rice-balls.webp",
+                              "alt": "Small hand-shaped rice balls mixed with seaweed in a steel bowl.",
+                              "width": 1200,
+                              "height": 900
+                            },
+                            "attributeUnits": {
+                              "alt": "day-3-articlephoto-alt-e057d01a"
+                            }
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-3-p-8648ccc8"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-3-p-7b6db919"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-3-p-e66b8925"
+                          },
+                          {
+                            "element": "h3",
+                            "attrs": {
+                              "className": "pt-2 text-xl font-semibold leading-snug md:text-2xl"
+                            },
+                            "attributeUnits": {},
+                            "unit": "day-3-h3-6da2f6e0"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-3-p-8280aa43"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-3-p-750409bf"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-3-p-2ebdce74"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-3-p-7308ca1e"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-3-p-dc7d3496"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-3-p-e3c05174"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-3-p-361b02db"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-3-p-4c9134ff"
+                          },
+                          {
+                            "element": "div",
+                            "attrs": {
+                              "className": "grid gap-4 py-2 sm:grid-cols-2"
+                            },
+                            "attributeUnits": {},
+                            "children": [
+                              {
+                                "component": "ArticlePhoto",
+                                "attrs": {
+                                  "src": "/images/travel/3-days-in-gangneung/toetmaru-sign.webp",
+                                  "alt": "A tall wooden post with the name Toetmaru written in Korean, in front of the café building.",
+                                  "width": 900,
+                                  "height": 1200,
+                                  "layout": "pair"
+                                },
+                                "attributeUnits": {
+                                  "alt": "day-3-articlephoto-alt-a56b036d"
+                                }
+                              },
+                              {
+                                "component": "ArticlePhoto",
+                                "attrs": {
+                                  "src": "/images/travel/3-days-in-gangneung/toetmaru-black-sesame-coffee.webp",
+                                  "alt": "Toetmaru's black sesame coffee in a takeaway cup, resting on a wooden log bench.",
+                                  "width": 900,
+                                  "height": 1200,
+                                  "layout": "pair"
+                                },
+                                "attributeUnits": {
+                                  "alt": "day-3-articlephoto-alt-6747010a"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-3-p-6f3bdf3e"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-3-p-3dadd8a8"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-3-p-90343f57"
+                          },
+                          {
+                            "element": "h3",
+                            "attrs": {
+                              "className": "pt-2 text-xl font-semibold leading-snug md:text-2xl"
+                            },
+                            "attributeUnits": {},
+                            "unit": "day-3-h3-b08b388c"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-3-p-9bc31b9b"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-3-p-cbf23d0a"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-3-p-7d284137"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "day-3-p-be21f9a5"
+                          }
+                        ]
+                      },
+                      {
+                        "element": "section",
+                        "attrs": {
+                          "id": "tips",
+                          "className": "space-y-4 scroll-mt-24"
+                        },
+                        "attributeUnits": {},
+                        "children": [
+                          {
+                            "element": "h2",
+                            "attrs": {
+                              "className": "text-2xl font-semibold leading-tight md:text-3xl"
+                            },
+                            "attributeUnits": {},
+                            "unit": "tips-h2-f02861d1"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "tips-p-f459723a"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "tips-p-faacace5"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "tips-p-95adaad0"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "tips-p-242e83a5"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "tips-p-7ad96bfa"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "tips-p-a7436c1a"
+                          }
+                        ]
+                      },
+                      {
+                        "element": "section",
+                        "attrs": {
+                          "id": "visit-again",
+                          "className": "space-y-4 border-t border-[var(--border)] pt-9 scroll-mt-24"
+                        },
+                        "attributeUnits": {},
+                        "children": [
+                          {
+                            "element": "h2",
+                            "attrs": {
+                              "className": "text-2xl font-semibold leading-tight md:text-3xl"
+                            },
+                            "attributeUnits": {},
+                            "unit": "visit-again-h2-a1311542"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "visit-again-p-248bacac"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "visit-again-p-b5d03cf9"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "visit-again-p-9117159f"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "visit-again-p-65c87d9b"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "visit-again-p-203f3c69"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {},
+                            "attributeUnits": {},
+                            "unit": "visit-again-p-d9edab26"
+                          },
+                          {
+                            "element": "p",
+                            "attrs": {
+                              "className": "pt-4 text-sm italic leading-7 text-[var(--muted)] md:text-base"
+                            },
+                            "attributeUnits": {},
+                            "unit": "visit-again-p-0136a0ac"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

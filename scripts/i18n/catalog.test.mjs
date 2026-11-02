@@ -667,6 +667,88 @@ test('freshness: page.tsx changed after the record → changed (even a comment)'
   }
 });
 
+// A page that uses the trusted ArticlePhoto component (the Gangneung travel
+// story), next to the Sunbae page that does not.
+const GN_PATH = '/travel/3-days-in-gangneung';
+const GN_REL = 'travel/3-days-in-gangneung.json';
+const GN_PAGE_FILE = 'app/travel/3-days-in-gangneung/page.tsx';
+const PHOTO_FILE = 'components/ArticlePhoto.tsx';
+function photoFreshFixture() {
+  const fx = freshFixture({ record: false });
+  for (const dir of ['source', 'ja']) {
+    mkdirSync(path.dirname(path.join(fx.root, dir, GN_REL)), { recursive: true });
+    cpSync(path.join(REAL_ROOT, dir, GN_REL), path.join(fx.root, dir, GN_REL));
+  }
+  for (const file of [GN_PAGE_FILE, PHOTO_FILE]) {
+    mkdirSync(path.dirname(path.join(fx.base, file)), { recursive: true });
+    cpSync(path.join(REPO, file), path.join(fx.base, file));
+  }
+  writeRecord(fx.base, checkAll(fx.base));
+  clearCatalogCache();
+  return { ...fx, photoFile: path.join(fx.base, PHOTO_FILE) };
+}
+const gnEntryOf = (root) => getTranslation('ja', GN_PATH, { root }).entry;
+
+test('freshness: a page using ArticlePhoto is verified with the component hash in its own record entry only', () => {
+  const { root, recordFile } = photoFreshFixture();
+  const record = readJson(recordFile);
+  const byPath = Object.fromEntries(record.entries.map((e) => [e.sourcePath, e]));
+  assert.equal(byPath[GN_PATH].status, 'MATCH');
+  assert.deepEqual(byPath[GN_PATH].components, [{ path: PHOTO_FILE, sha256: `sha256:${createHash('sha256').update(readFileSync(path.join(REPO, PHOTO_FILE))).digest('hex')}` }]);
+  assert.equal('components' in byPath[PAGE], false);
+  assert.equal(gnEntryOf(root).sourceFreshness, 'verified');
+  assert.equal(gnEntryOf(root).status, 'draft');
+  assert.equal(entryOf(root).sourceFreshness, 'verified');
+});
+
+test('freshness: ArticlePhoto changed or removed after the record → only the page that uses it loses verified', () => {
+  const changed = photoFreshFixture();
+  writeFileSync(changed.photoFile, `${readFileSync(changed.photoFile, 'utf8')}\n// changed after the record\n`);
+  clearCatalogCache();
+  const gn = gnEntryOf(changed.root);
+  assert.equal(gn.sourceFreshness, 'changed');
+  assert.match(gn.sourceFreshnessDetail.reason, /component components\/ArticlePhoto\.tsx differs from the checked version/);
+  assert.equal(entryOf(changed.root).sourceFreshness, 'verified', 'Sunbae does not use the component');
+
+  const removed = photoFreshFixture();
+  rmSync(removed.photoFile);
+  clearCatalogCache();
+  assert.equal(gnEntryOf(removed.root).sourceFreshness, 'unverified');
+  assert.match(gnEntryOf(removed.root).sourceFreshnessDetail.reason, /component file could not be read/);
+  assert.equal(entryOf(removed.root).sourceFreshness, 'verified');
+
+  const linked = photoFreshFixture();
+  writeFileSync(`${linked.photoFile}.real`, readFileSync(linked.photoFile));
+  rmSync(linked.photoFile);
+  symlinkSync(`${linked.photoFile}.real`, linked.photoFile);
+  clearCatalogCache();
+  assert.equal(gnEntryOf(linked.root).sourceFreshness, 'unverified', 'a linked component file is not read');
+
+  // Re-running the checker on the changed component does not verify it: the checker only trusts the reviewed bytes.
+  writeRecord(changed.base, checkAll(changed.base));
+  clearCatalogCache();
+  assert.equal(readJson(changed.recordFile).entries.find((e) => e.sourcePath === GN_PATH).status, 'UNVERIFIED');
+  assert.equal(gnEntryOf(changed.root).sourceFreshness, 'unverified');
+  assert.equal(entryOf(changed.root).sourceFreshness, 'verified');
+});
+
+test('freshness: damaged component list in the record → whole record unusable (fail closed)', () => {
+  const damages = [
+    (e) => { e.components = []; },
+    (e) => { e.components = [{ path: '../outside.tsx', sha256: e.components[0].sha256 }]; },
+    (e) => { e.components = [{ path: 'lib/i18n/catalog.ts', sha256: e.components[0].sha256 }]; },
+    (e) => { e.components = [{ path: PHOTO_FILE, sha256: 'sha256:short' }]; },
+    (e) => { e.components = [{ ...e.components[0], extra: true }]; },
+    (e) => { e.components = [e.components[0], e.components[0]]; },
+  ];
+  for (const damage of damages) {
+    const { root, recordFile } = photoFreshFixture();
+    editRecord(recordFile, (doc) => damage(doc.entries.find((x) => x.sourcePath === GN_PATH)));
+    assert.equal(gnEntryOf(root).sourceFreshness, 'unverified');
+    assert.match(entryOf(root).sourceFreshnessDetail.reason, /source freshness record has an invalid entry/);
+  }
+});
+
 test('freshness: source JSON bytes changed after the record → changed', () => {
   const { root } = freshFixture();
   const file = path.join(root, 'source', REL);

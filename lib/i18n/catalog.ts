@@ -32,8 +32,10 @@ export type ValidationState = "valid" | "stale" | "invalid";
  * `scripts/i18n/check-sources.mjs --write-record`
  * (content/i18n/source-freshness.json):
  * - verified: the record says MATCH for exactly these source JSON and page
- *   bytes, written by exactly the checker and extractor code in the repository
- *   (byte hashes) with the same TypeScript version. It covers the translation
+ *   bytes (and, for a page that uses a trusted shared component such as
+ *   ArticlePhoto, exactly the component file bytes the checker saw), written by
+ *   exactly the checker and extractor code in the repository (byte hashes) with
+ *   the same TypeScript version. It covers the translation
  *   extraction only (units, structure, metadata); see
  *   `sourceFreshnessDetail.notCompared`.
  * - changed: the files differ from the checked version, or the check found
@@ -268,6 +270,8 @@ const RECORD_TOOL_FILES = ["scripts/i18n/check-sources.mjs", "scripts/i18n/extra
 const TYPESCRIPT_PACKAGE = "node_modules/typescript/package.json";
 const RECORD_STATUSES = new Set(["MATCH", "CHANGED", "UNVERIFIED", "ERROR"]);
 const SHA256 = /^sha256:[0-9a-f]{64}$/;
+/** Shared component files a record entry may bind (TRUSTED_COMPONENTS in check-sources.mjs). */
+const COMPONENT_FILE = /^components\/[A-Za-z0-9_-]+\.tsx$/;
 const PAGE_SEGMENT = /^[A-Za-z0-9_()[\]-][A-Za-z0-9._()[\]-]*$/;
 
 type FreshnessRecordEntry = {
@@ -279,6 +283,8 @@ type FreshnessRecordEntry = {
   extractorVersion: string;
   sourceJsonSha256: string | null;
   pageSha256: string | null;
+  /** Present only for pages that use a trusted shared component: the exact component file bytes checked. */
+  components?: { path: string; sha256: string }[];
   notCompared: string[];
 };
 
@@ -308,7 +314,20 @@ function isRecordEntry(value: unknown): value is FreshnessRecordEntry {
     typeof e.status === "string" && RECORD_STATUSES.has(e.status) &&
     typeof e.extractorVersion === "string" && e.extractorVersion !== "" &&
     hash(e.sourceJsonSha256) && hash(e.pageSha256) &&
+    (e.components === undefined || isRecordComponents(e.components)) &&
     Array.isArray(e.notCompared) && e.notCompared.every((n) => typeof n === "string");
+}
+
+function isRecordComponents(value: unknown): boolean {
+  return Array.isArray(value) && value.length > 0 &&
+    new Set(value.map((c) => (c as { path?: unknown })?.path)).size === value.length &&
+    value.every((c) => {
+      if (!c || typeof c !== "object" || Array.isArray(c)) return false;
+      const component = c as Record<string, unknown>;
+      return Object.keys(component).length === 2 &&
+        typeof component.path === "string" && COMPONENT_FILE.test(component.path) &&
+        typeof component.sha256 === "string" && SHA256.test(component.sha256);
+    });
 }
 
 /** Read and validate the record. Any damage makes the whole record unusable (fail closed). */
@@ -412,6 +431,16 @@ function freshnessFor(
   if (!pageBytes) return unverified("English page file could not be read");
   if (r.sourceJsonSha256 !== entry.files.source.sha256 || r.pageSha256 !== sha256(pageBytes)) {
     return { state: "changed", detail: { reason: "source JSON or page differs from the checked version; re-run the checker", notCompared: [] } };
+  }
+  // Shared components the page uses: only this page's entry binds them, so a
+  // changed component affects the pages that use it and no other page.
+  for (const component of r.components ?? []) {
+    if (!pageCache.has(component.path)) pageCache.set(component.path, readRepoFile(repoRoot, component.path));
+    const componentBytes = pageCache.get(component.path);
+    if (!componentBytes) return unverified(`component file could not be read: ${component.path}`);
+    if (sha256(componentBytes) !== component.sha256) {
+      return { state: "changed", detail: { reason: `component ${component.path} differs from the checked version; re-run the checker`, notCompared: [] } };
+    }
   }
   if (r.status === "CHANGED") return { state: "changed", detail: { reason: "checker found changes", notCompared: [] } };
   return { state: "verified", detail: { reason: "matches the source freshness record", notCompared: [...r.notCompared] } };

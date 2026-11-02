@@ -6,11 +6,11 @@
     "files": [
       {
         "path": "scripts/i18n/check-sources.mjs",
-        "sha256": "sha256:f077c765d497634055a8919f4eb12cca89f5ff462e645b98beda4c2a24f976dc"
+        "sha256": "sha256:6dc42ba831f4afc42f8564ba5689074a0c73ec6831982ea9d0d0f516b4999e65"
       },
       {
         "path": "scripts/i18n/extract.mjs",
-        "sha256": "sha256:85324e4c2d9a330c218ded74232492e4d151d39dbf889d2d1c074d8f7adf3954"
+        "sha256": "sha256:88d309674d27071b4e15d5cd82e02096d1e4f07e5374ea7599e3110ef3c0874c"
       }
     ],
     "parser": "typescript@5.9.3"
@@ -37,6 +37,24 @@
       "extractorVersion": "extract-pilot-1",
       "sourceJsonSha256": "sha256:d09c149896b558fd81aae5d7dfaf107dea4b89e91bfa395a6a4a058c99661462",
       "pageSha256": "sha256:b7d75f8d9d74922cda87ff3050b2725b5b2f82c66b3103879338b207785cb0eb",
+      "notCompared": [
+        "json-ld"
+      ]
+    },
+    {
+      "sourcePath": "/travel/3-days-in-gangneung",
+      "sourceFile": "app/travel/3-days-in-gangneung/page.tsx",
+      "sourceJson": "content/translations/source/travel/3-days-in-gangneung.json",
+      "status": "MATCH",
+      "extractorVersion": "extract-pilot-1",
+      "sourceJsonSha256": "sha256:aafc4ee0df36f6688616a7c49253e3a02c670b01d27cd1fbf7daeb592eecd589",
+      "pageSha256": "sha256:b411b2f3dae31462a62238bb88ecde9ac7c0a3eb3fb238155f756e3e6760d09b",
+      "components": [
+        {
+          "path": "components/ArticlePhoto.tsx",
+          "sha256": "sha256:794a83a1c8058116967978e319a0206783a9fec7d1f9fd17317af682bcb2fb03"
+        }
+      ],
       "notCompared": [
         "json-ld"
       ]

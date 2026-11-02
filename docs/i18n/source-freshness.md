@@ -82,7 +82,40 @@ JSON-LD is not translated and translated pages do not render it.
 Imported page chrome is allowed without making a result `UNVERIFIED`:
 `SiteHeader`, `JsonLd`, `next`, `next/link`, `next/navigation`, `react`. Any
 other imported binding that the page uses makes the result `UNVERIFIED`, even
-if the extractor did not flag it.
+if the extractor did not flag it, except a trusted shared component (below).
+
+### Shared components (`ArticlePhoto`)
+
+`TRUSTED_COMPONENTS` in `check-sources.mjs` lists shared article components
+whose output is fixed by the component file and whose page-specific content
+comes only from static props. Today it has one entry: `ArticlePhoto`
+(`components/ArticlePhoto.tsx`).
+
+The checker trusts it only when all of these hold. Otherwise the result is
+`UNVERIFIED`, never `MATCH`.
+
+- **Import:** a default import named `ArticlePhoto` from exactly
+  `components/ArticlePhoto.tsx`. A component of the same name from another
+  file, under another name, or defined in the page is not trusted.
+- **Props:** every use passes only `src`, `alt`, `width`, `height` and
+  `layout`, as static values:
+  - `src`: an `/images/…` path
+  - `alt`: text, extracted as a translation unit
+  - `width`, `height`: positive integers
+  - `layout`: `single`, `pair` or `cover`
+- **Component bytes:** the component file has exactly the reviewed bytes
+  (`sha256` in `TRUSTED_COMPONENTS`). Any edit to the file, even a comment,
+  makes the pages that use it `UNVERIFIED` until someone reviews the component
+  and updates that hash. Re-running the checker alone does not verify a
+  changed component.
+
+The props are compared like the rest of the page. A changed `src`, `alt`,
+`width` or `layout`, or an added prop, is `CHANGED` against the stored source
+JSON. After re-extraction, a disallowed or dynamic prop is still `UNVERIFIED`.
+
+The record entry of each page that uses the component stores the SHA-256 of
+the component file (`components`). Pages that do not use it have no
+`components` field and are not affected by changes to it.
 
 ## First results
 
@@ -134,8 +167,10 @@ Status:
 - P5-B2: first record committed (Sunbae, `MATCH`).
 - The second stored source,
   `/kpop/why-kpop-idols-feel-like-anime-characters` (56 of 56 units), was
-  added with its record entry (`MATCH`). The record now has these two
-  entries.
+  added with its record entry (`MATCH`).
+- `/travel/3-days-in-gangneung` (135 of 135 units): `MATCH` with the
+  `ArticlePhoto` checks (16 photos) and the component hash in its entry. The
+  record now has three entries.
 
 ### File
 
@@ -151,6 +186,7 @@ gives the same bytes.
 | `tools.files` | SHA-256 of `scripts/i18n/check-sources.mjs` and `scripts/i18n/extract.mjs` as they ran |
 | `tools.parser` | TypeScript version used by the extractor, e.g. `typescript@5.9.3` |
 | `entries[]` | `sourcePath`, `sourceFile`, `sourceJson`, `status`, `extractorVersion`, `sourceJsonSha256`, `pageSha256`, `notCompared` (`["json-ld"]` when the page has JSON-LD) |
+| `entries[].components` | Only for a page that uses a trusted shared component: `path` and SHA-256 of each component file as checked |
 
 The record can only be written as a `.json` file under `content/i18n/`. A
 symbolic link in any folder on the way, or at the file, is refused, and an
@@ -164,9 +200,9 @@ imported). It fails closed.
 
 | Result | When |
 |---|---|
-| `verified` | All of these hold: one `MATCH` entry for the page; matching paths and extractor version; both file hashes equal the current source JSON and `page.tsx`; both code hashes and the TypeScript version equal the current ones. |
-| `changed` | The source JSON or `page.tsx` bytes differ from the checked version (also for a style- or comment-only edit), or the result was `CHANGED`. |
-| `unverified` | Everything else, including: no record or a damaged record; any change to the checker or extractor code, even when the version string is unchanged; another TypeScript version; an `UNVERIFIED` or `ERROR` result; unreadable files. |
+| `verified` | All of these hold: one `MATCH` entry for the page; matching paths and extractor version; both file hashes equal the current source JSON and `page.tsx`; each component hash in the entry equals the current component file; both code hashes and the TypeScript version equal the current ones. |
+| `changed` | The source JSON, `page.tsx` or a component file in the page's entry differs from the checked version (also for a style- or comment-only edit), or the result was `CHANGED`. |
+| `unverified` | Everything else, including: no record or a damaged record (also a damaged `components` list); any change to the checker or extractor code, even when the version string is unchanged; another TypeScript version; an `UNVERIFIED` or `ERROR` result; unreadable or linked files. |
 
 ### What `verified` does not mean
 
@@ -194,6 +230,9 @@ in the same change whenever any of these changes:
 - a source JSON, added or re-extracted
 - `scripts/i18n/check-sources.mjs` or `scripts/i18n/extract.mjs`
 - the installed TypeScript version
+- a trusted shared component file (`components/ArticlePhoto.tsx`): first review
+  the component and update its `sha256` in `TRUSTED_COMPONENTS`. That edits
+  `check-sources.mjs`, so the whole record must be written again.
 
 Until then, the affected pages show `changed` or `unverified`.
 

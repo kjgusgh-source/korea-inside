@@ -460,7 +460,7 @@ export function extractFromTsx(code, { fileName = 'page.tsx', sourcePath, previo
 
     if (isComponentName(name) && name !== 'Link') {
       if (hasText(children, ctx.scope)) flag(node, path, `component <${name}> has text children that were not extracted`);
-      else if (!['SiteHeader', 'SiteFooter', 'JsonLd'].includes(name)) flag(node, path, `component <${name}> renders its own content; check it separately`);
+      else if (!['SiteHeader', 'SiteFooter', 'JsonLd', 'ArticlePhoto'].includes(name)) flag(node, path, `component <${name}> renders its own content; check it separately`);
       if (name === 'JsonLd') flag(node, path, 'structured data (JSON-LD) must be generated per locale; its strings are not translated by this extractor');
       return { component: name, attrs, attributeUnits };
     }

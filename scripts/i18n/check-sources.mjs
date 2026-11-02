@@ -62,6 +62,44 @@ const POSITION_FIELDS = ['anchor', 'group', 'path', 'origin', 'inArticle'];
 // Imports that are page chrome or framework code, not article content.
 const ALLOWED_IMPORT_MODULES = new Set(['next', 'next/link', 'next/navigation', 'react']);
 const ALLOWED_IMPORT_COMPONENTS = new Set(['SiteHeader', 'JsonLd']);
+/**
+ * Shared article components whose output is fixed by the component file and
+ * whose page-specific content comes only from static props that the extractor
+ * stores (translatable props such as alt become units; the others are compared
+ * as structure). A component is trusted only when:
+ * - it is a default import under exactly this name from exactly `file`;
+ * - every use passes only the allowed props, as static values (`checkUse`);
+ * - the component file has exactly the reviewed bytes (`sha256`).
+ * Otherwise the page stays UNVERIFIED. The record stores the component file's
+ * hash in the entry of each page that uses it, so a later change to the file
+ * affects only those pages (see lib/i18n/catalog.ts). Any edit to the file
+ * needs a review of the component and an update of `sha256` here, then a new
+ * record (docs/i18n/source-freshness.md, "Shared components").
+ */
+const PHOTO_SRC = /^\/images\/[a-z0-9][a-z0-9/_-]*\.(?:webp|jpe?g|png|avif)$/;
+const PHOTO_LAYOUTS = new Set(['single', 'pair', 'cover']);
+const PHOTO_PROPS = new Set(['src', 'alt', 'width', 'height', 'layout']);
+export const TRUSTED_COMPONENTS = Object.freeze({
+  ArticlePhoto: Object.freeze({
+    file: 'components/ArticlePhoto.tsx',
+    sha256: 'sha256:794a83a1c8058116967978e319a0206783a9fec7d1f9fd17317af682bcb2fb03',
+    checkUse: articlePhotoProblems,
+  }),
+});
+
+/** Problems with one <ArticlePhoto> node of an extracted structure (empty when it only has static, allowed props). */
+export function articlePhotoProblems(node) {
+  const attrs = node?.attrs ?? {};
+  const problems = [];
+  for (const name of Object.keys(attrs)) if (!PHOTO_PROPS.has(name)) problems.push(`prop ${name} is not allowed`);
+  if (typeof attrs.src !== 'string' || !PHOTO_SRC.test(attrs.src)) problems.push('src must be a static /images/ path');
+  if (typeof attrs.alt !== 'string' || !attrs.alt.trim() || typeof node?.attributeUnits?.alt !== 'string') problems.push('alt must be static text');
+  for (const name of ['width', 'height']) {
+    if (!Number.isInteger(attrs[name]) || attrs[name] <= 0) problems.push(`${name} must be a static positive integer`);
+  }
+  if (attrs.layout !== undefined && !(typeof attrs.layout === 'string' && PHOTO_LAYOUTS.has(attrs.layout))) problems.push('layout must be single, pair or cover');
+  return problems;
+}
 
 const sha256 = (value) => createHash('sha256').update(value).digest('hex');
 const toPosix = (p) => p.split(path.sep).join('/');
@@ -131,8 +169,23 @@ function splitReview(review) {
   return { jsonLd, other };
 }
 
-/** Imported bindings that the page body uses, other than framework and page chrome. */
-export function contentImports(code, fileName) {
+/** Repository path a relative module specifier points to (from the page file), or null. */
+function importedPath(fileName, moduleName) {
+  if (!/^\.\.?\//.test(moduleName)) return null;
+  const joined = path.posix.normalize(path.posix.join(path.posix.dirname(toPosix(fileName)), moduleName));
+  return joined.startsWith('../') ? null : joined;
+}
+
+/** Name of the trusted component this import is, or null. */
+function trustedComponentOf(name, info, fileName) {
+  const trusted = Object.hasOwn(TRUSTED_COMPONENTS, name) ? TRUSTED_COMPONENTS[name] : null;
+  if (!trusted || !info.isDefault) return null;
+  const target = importedPath(fileName, info.module);
+  return target === trusted.file || target === trusted.file.replace(/\.tsx$/, '') ? name : null;
+}
+
+/** Non-type imports of a page and whether the page body uses them. */
+function scanImports(code, fileName) {
   const sourceFile = ts.createSourceFile(fileName, code, ts.ScriptTarget.Latest, true, ts.ScriptKind.TSX);
   const imported = new Map();
   for (const statement of sourceFile.statements) {
@@ -140,14 +193,14 @@ export function contentImports(code, fileName) {
     const moduleName = statement.moduleSpecifier.text;
     const clause = statement.importClause;
     const names = [];
-    if (clause?.name) names.push(clause.name.text);
+    if (clause?.name) names.push([clause.name.text, true]);
     if (clause?.namedBindings && ts.isNamedImports(clause.namedBindings)) {
-      for (const element of clause.namedBindings.elements) if (!element.isTypeOnly) names.push(element.name.text);
+      for (const element of clause.namedBindings.elements) if (!element.isTypeOnly) names.push([element.name.text, false]);
     } else if (clause?.namedBindings && ts.isNamespaceImport(clause.namedBindings)) {
-      names.push(clause.namedBindings.name.text);
+      names.push([clause.namedBindings.name.text, false]);
     }
-    if (!clause) imported.set(`(side effect) ${moduleName}`, { module: moduleName, used: true });
-    for (const name of names) imported.set(name, { module: moduleName, used: false });
+    if (!clause) imported.set(`(side effect) ${moduleName}`, { module: moduleName, used: true, isDefault: false });
+    for (const [name, isDefault] of names) imported.set(name, { module: moduleName, used: false, isDefault });
   }
   const visit = (node) => {
     if (ts.isImportDeclaration(node)) return;
@@ -159,9 +212,61 @@ export function contentImports(code, fileName) {
     ts.forEachChild(node, visit);
   };
   visit(sourceFile);
-  return [...imported.entries()]
-    .filter(([name, info]) => info.used && !ALLOWED_IMPORT_MODULES.has(info.module) && !ALLOWED_IMPORT_COMPONENTS.has(name))
+  return [...imported.entries()].filter(([, info]) => info.used);
+}
+
+/** Imported bindings that the page body uses, other than framework, page chrome and trusted components. */
+export function contentImports(code, fileName) {
+  return scanImports(code, fileName)
+    .filter(([name, info]) => !ALLOWED_IMPORT_MODULES.has(info.module) && !ALLOWED_IMPORT_COMPONENTS.has(name) && !trustedComponentOf(name, info, fileName))
     .map(([name, info]) => ({ name, module: info.module }));
+}
+
+/** Trusted components (TRUSTED_COMPONENTS) that the page imports correctly and uses. */
+export function trustedComponentImports(code, fileName) {
+  return scanImports(code, fileName)
+    .map(([name, info]) => trustedComponentOf(name, info, fileName))
+    .filter(Boolean);
+}
+
+function componentNodes(node, out = []) {
+  if (!node || typeof node !== 'object') return out;
+  if (typeof node.component === 'string') out.push(node);
+  for (const child of node.children ?? []) componentNodes(child, out);
+  return out;
+}
+
+/**
+ * Check the trusted components of a page: correct import for every use,
+ * allowed static props, reviewed component bytes. Returns the problems and,
+ * for the record, the hashes of the component files the page uses.
+ */
+export function checkTrustedComponents(root, code, fileName, structure) {
+  const imported = new Set(trustedComponentImports(code, fileName));
+  const nodes = componentNodes(structure).filter((n) => Object.hasOwn(TRUSTED_COMPONENTS, n.component));
+  const used = [...new Set([...imported, ...nodes.map((n) => n.component)])].sort();
+  const problems = [];
+  const components = [];
+  for (const name of used) {
+    const trusted = TRUSTED_COMPONENTS[name];
+    const uses = nodes.filter((n) => n.component === name);
+    if (!imported.has(name)) {
+      problems.push(`<${name}> is not the default import of ${trusted.file}; its content is not checked`);
+      continue;
+    }
+    uses.forEach((node, i) => {
+      for (const problem of trusted.checkUse(node)) problems.push(`<${name}> #${i + 1}: ${problem}`);
+    });
+    const file = safeFile(root, trusted.file);
+    if (!file) {
+      problems.push(`${trusted.file} not found (or a symbolic link / outside the repository)`);
+      continue;
+    }
+    const hash = `sha256:${sha256(readFileSync(file))}`;
+    if (hash !== trusted.sha256) problems.push(`${trusted.file} differs from the reviewed version; review it and update TRUSTED_COMPONENTS`);
+    components.push({ path: trusted.file, sha256: hash });
+  }
+  return { problems, components };
 }
 
 /** Translation files that exist for a site path, with the unit IDs they translate. */
@@ -262,12 +367,15 @@ export function checkSourceFile(repo, sourceJson) {
   const storedOther = new Set(storedReview.other.map(reviewKey));
   const newNotes = freshReview.other.filter((n) => !storedOther.has(reviewKey(n)) && !String(n.reason).startsWith('ambiguous ID match'));
   const imports = contentImports(code, stored.sourceFile);
+  const trusted = checkTrustedComponents(root, code, stored.sourceFile, fresh.structure);
+  result.components = trusted.components;
   result.review = {
     jsonLd: freshReview.jsonLd.map((n) => `${n.where}: ${n.reason}`),
     dynamic: freshReview.other.filter((n) => !String(n.reason).startsWith('ambiguous ID match')).map((n) => `line ${n.line} ${n.where}: ${n.reason}`),
     newSinceStored: newNotes.map((n) => `line ${n.line} ${n.where}: ${n.reason}`),
     ambiguousIds: fresh.review.filter((n) => String(n.reason).startsWith('ambiguous ID match')).map((n) => `${n.where}: ${n.reason}`),
     imports,
+    components: trusted.problems,
   };
 
   const changed = diff.header.length || diff.removed.length || diff.added.length || diff.contentChanged.length ||
@@ -305,10 +413,11 @@ export function checkSourceFile(repo, sourceJson) {
     if (!diff.contentChanged.length && !diff.added.length && !diff.removed.length) {
       result.reasons.push('no translated text changed: re-extract the source JSON; existing translations keep their units');
     }
-  } else if (stored.extractor !== EXTRACTOR_VERSION || newNotes.length || imports.length) {
+  } else if (stored.extractor !== EXTRACTOR_VERSION || newNotes.length || imports.length || trusted.problems.length) {
     result.status = STATUS.UNVERIFIED;
     if (newNotes.length) result.reasons.push(`${newNotes.length} new dynamic or unchecked part(s) on the page`);
     if (imports.length) result.reasons.push(`page uses imported ${imports.map((i) => `${i.name} (${i.module})`).join(', ')}; their content is not checked`);
+    result.reasons.push(...trusted.problems);
   } else {
     result.status = STATUS.MATCH;
   }
@@ -394,6 +503,8 @@ export function buildRecord(results, tools = toolIdentity()) {
       extractorVersion: r.extractorVersion,
       sourceJsonSha256: r.hashes?.sourceJson ?? null,
       pageSha256: r.hashes?.page ?? null,
+      // Only for pages that use a trusted shared component (TRUSTED_COMPONENTS).
+      ...(r.components?.length ? { components: r.components.map((c) => ({ path: c.path, sha256: c.sha256 })) } : {}),
       notCompared: r.review?.jsonLd?.length ? ['json-ld'] : [],
     }))
     .sort((a, b) => (a.sourcePath < b.sourcePath ? -1 : a.sourcePath > b.sourcePath ? 1 : a.sourceJson < b.sourceJson ? -1 : 1));
@@ -501,6 +612,7 @@ function printText(results, ms) {
     }
     if (r.review?.jsonLd?.length) console.log(`  JSON-LD (not translated, not compared): ${r.review.jsonLd.length} note(s)`);
     for (const note of r.review?.newSinceStored ?? []) console.log(`  unchecked: ${note}`);
+    for (const c of r.components ?? []) console.log(`  component: ${c.path} ${c.sha256}`);
     for (const note of r.review?.ambiguousIds ?? []) console.log(`  id: ${note}`);
   }
   const counts = Object.values(STATUS).map((s) => `${s} ${results.filter((r) => r.status === s).length}`).join(', ');

@@ -187,3 +187,105 @@ The first sentence of the unit changes. The rest of the unit stays.
 
 Released before this policy, under the pilot exception (policy B, noindex).
 Its review record is `ja-editorial-review.md`.
+
+### `/travel/3-days-in-gangneung`
+
+| Item | Value |
+|---|---|
+| Translation file | `content/translations/ja/travel/3-days-in-gangneung.json` |
+| Units | 135 |
+| Status | `draft` (Preview only, noindex; not rendered in production) |
+| Approval records | none |
+| Indexing | not approved |
+| Reviewed snapshot | Draft PR #134. Source `sha256:aafc4ee0…eecd589`. Translation after the 1 + 2 pass `sha256:dd5a23dc…249b745` (reviewed by stage 3); after the stage 3 edits `sha256:65a6ef74…c7297e7` |
+| Source freshness | `MATCH` (catalog: `verified`). The checker now checks `ArticlePhoto`: import path, static props, reviewed component bytes (`source-freshness.md`, "Shared components"). Not an approval. |
+
+| Stage | Reviewer | Where run | Scope | Result |
+|---|---|---|---|---|
+| Draft | Claude, AI translation | Cowork session | All 135 units | First draft, PR #134 HEAD `63cd954`. |
+| Owner check | Site owner | Outside Cowork, reported in the session (2026-11-02) | The draft at `63cd954` | Requested: keep the KTX gloss and record it; make the hojicha sentence natural for Japanese readers; re-check all units. |
+| 1 + 2 | Claude, AI editorial pass | Cowork session | All 135 units against the English source | P0 0, P1 7, P2 11. 18 units changed (list below). |
+| 3 | Gemini, independent AI review | Run by the owner outside Cowork; report given to the session (2026-11-02) | English source and all 135 units at PR #134 HEAD `dccb057` | Reported by the owner: P0 0, P1 8 units, P2 10 units, plus katakana readings proposed for 6 business names. Different model family from stages 1–2. Not a native-speaker review. Decisions below; 16 units changed. |
+| Human native-Japanese review | — | — | — | 0 |
+
+**Glossary exception: KTX gloss.** Unit `ktx-p-2b5fee1b` reads
+「KTX（韓国の高速鉄道）」. The gloss is not in the English source. This differs
+from the glossary rule "Do not add facts, examples, cultural explanations or
+experiences that are not in the English source" (`0.3.0-ja-pilot`,
+`rules.all`). The owner asked for a KTX explanation in the translation request
+and decided on 2026-11-02 to keep it. The exception covers this one gloss in
+this unit. The glossary itself is unchanged.
+
+**Units changed in the 1 + 2 pass**
+
+| Severity | Units | Reason |
+|---|---|---|
+| P1 | `meta-title-28c9dfca`, `header-h1-b6b42d70`, `meta-description-b1ff7b2f` | 「地元目線」「地元の人」 read as "a Gangneung local", but the author travels from Seoul. Now 「ローカル」, which keeps the English "a local". |
+| P1 | `day-1-p-9a453087` | "Korean visitors" had become 「韓国の人たち」. Now 「韓国人の旅行者」. "seemed" is kept as 「ありそう」. |
+| P1 | `day-2-p-a97e0ce6` | Mixed sentence (「運転手さんによると…話もしていました」). Now clearly the driver's words. |
+| P1 | `visit-again-p-203f3c69` | 「一時間ごとに詰め込みすぎない」 was an unnatural literal translation. Now 「ぎっしり詰め込みすぎない」. |
+| P1 | `day-2-p-b3d9e383` | Owner request. It no longer explains hojicha from the beginning ("If you're unfamiliar…" and "a Japanese tea" are not stated). It keeps the facts: matcha is powdered, hojicha is roasted green tea, and its warm, toasted aroma comes from roasting. |
+| P2 | `header-p-05343f00`, `introduction-p-0146e710`, `introduction-p-a554aae0`, `day-1-p-54c8899f`, `day-2-p-db2e3877`, `day-3-p-47b88c84`, `visit-again-p-d9edab26` | Literal Japanese made more natural. Meaning unchanged ("Sometimes" kept as 「だったりします」). |
+| P2 | `day-1-p-dd525114` | "pick up food" as 「テイクアウト」, matching the heading. |
+| P2 | `day-1-p-7c526c1b` | "availability" as 「販売状況」 (「品ぞろえ」 means assortment). |
+| P2 | `day-1-p-7d447ce1` | "Sometimes" was missing. |
+| P2 | `day-2-p-5d121ecf` | "also" was missing. |
+
+**Checked, not changed**
+
+- **Missing content:** none found. Every unit was compared with its English source.
+- **First person:** all 53 first-person units stay the author's own experience.
+- **Hedged statements:** these keep their hedge and are not written as fact:
+  - "I believe I ordered" 「たしか…と思います」
+  - "seemed" 「ありそう」
+  - "would be pleasant" 「気持ちよさそう」
+  - "From what I remember" 「記憶では」
+  - "I remember waiting" 「…と記憶しています」
+  - "He told me" (the driver's account, including the patent remark)
+  - "That's just my personal comparison"
+  - "Your experience may be different"
+- **Hangul and placeholders:** every Hangul run in the source is kept, no Hangul was added, and every placeholder is kept (validator and repository tests pass).
+- **Names:**
+  - Business names whose Japanese name is not verified keep the English spelling: Yukyoung Tangsuyuk, Gilgamja, Donghwa Garden, Matcharo, Geumcheon Kalguksu, Toetmaru, Tabling.
+  - Places: 江陵（カンヌン） (reading on first use), 江陵駅, ソウル駅, 江陵中央市場 (with "Gangneung Jungang Market" as in the source), カンムンビーチ, チョダン（Chodang）.
+  - Foods: タンスユク, カムクタン, キムピタン, フェ, チャンポンスンドゥブ, チャンカルグクス, チュモクパプ, 黒ごまコーヒー, ほうじ茶ラテ, 辛ラーメン.
+- **Notes:**
+  - 「韓国・」 in the title follows "Korea" in the English title.
+  - 「韓国風の酢豚」 translates the English "Korean-style sweet-and-sour fried pork". It does not say the two dishes are the same.
+  - 「刺身」 translates "sliced raw fish".
+  - 「ニラ」 for "chives" was checked against the photo (garlic chives).
+
+**Stage 3 (Gemini) decisions**
+
+Every proposal was checked against the English source before it was applied.
+The P1 proposals were applied first. P2 proposals were applied only when they
+clearly improved the text.
+
+| Item | Units | Decision | Applied wording / reason |
+|---|---|---|---|
+| P1 | `meta-title-28c9dfca`, `header-h1-b6b42d70`, `meta-description-b1ff7b2f` | Accepted with changes | Gemini's 「韓国ローカルが」 / 「韓国在住者が」 still uses ローカル as a subject. Now 「韓国で暮らす筆者が正直につづる」 (owner's direction). It keeps "a local" as a person living in Korea who travels from Seoul, not a Gangneung resident. |
+| P1 | `day-2-p-b3d9e383` | Accepted with changes | Now 「抹茶とはまた違い、ほうじ茶には焙じることで生まれる温かみのある香ばしさがあります。」. Gemini's 「魅力です」 was not used: it adds a judgment the English does not make. The definitions "a Japanese tea" and "matcha is powdered" are no longer spelled out, because Japanese readers know them (owner's direction). The contrast with matcha and the warm, toasted aroma from roasting are kept. 「香ばしい香り」 (the same character twice) is gone. |
+| P1 | `day-2-p-9fb9c75a` | Accepted with changes | 「韓国式チャンポンのような…スープ」 and 「一般的なチャンポンは麺料理ですが、こちらの主役は豆腐です。」. 「チャンポン麺」 (the noodles themselves) is gone. No dish information beyond the English was added. |
+| P1 | `tips-h2-f02861d1` | Accepted | 「これから江陵へ行く友人に伝えたいこと」: the friend is the one visiting. |
+| P1 | `tips-p-7ad96bfa` | Accepted with changes | 「少量の料理をいくつか買って…夜をのんびり過ごすいい方法だと思います。」. Gemini's 「少量サイズ」 sounds like a product label. |
+| P1 | `day-1-articlephoto-alt-c608f31a` | Accepted | 「江陵のGilgamjaの看板」, as in the other photo descriptions. |
+| P2 | `introduction-p-5eafec79` | Accepted | 天気 → 陽気 |
+| P2 | `introduction-p-a554aae0` | Accepted with changes | 「特に気に入った瞬間のいくつかは、ただぶらぶら歩いているときに訪れました」. 「気に入った」 stays closer to "favorite" than Gemini's 「心に残った」. |
+| P2 | `day-1-p-7c526c1b` | Accepted with changes | 「私が買った一人前」 instead of 「私の分」. Gemini's 「パック」 was not used; 一人前 matches the previous paragraph. |
+| P2 | `day-2-p-cd8e940c` | Accepted with changes | 「おもしろいお店をすすめてくれる」 instead of 「おもしろいおすすめ」. Gemini's 「よく知っていて」 and 「興味深い」 were not used: "know" is not "know well", and 興味深い is stiffer than the source. |
+| P2 | `day-2-p-9996f7f1` | Accepted with changes | 「旅行中の一日のうちかなりの時間」 (fewer の). Gemini's 「貴重な」 was not used (not in the English). |
+| P2 | `day-3-p-a49bd60a` | Accepted | 「苦手な人は、かなり辛く感じるかもしれません」 |
+| P2 | `tips-p-faacace5` | Accepted with changes | 「実際に訪れたときは、状況が違うかもしれません。」. Gemini's 「訪れるタイミングによって」 was not used: it adds a cause the English does not give. |
+| P2 | `visit-again-p-65c87d9b` | Accepted | 「ぜひもう一度飲みたいです」 |
+| P2 | `day-1-p-6c6f54a5` | Not applied | The current text is natural. 「英語では」 would be wrong: "Gangneung Jungang Market" is a romanization of the Korean name, not an English name. |
+| P2 | `day-3-p-02a79fea` | Not applied | 「ぼやけて感じたりする」 is natural Japanese. The change would be a style preference only. |
+| Business names | `day-1-p-dd525114`, `day-1-p-9a453087`, `day-2-p-26000036`, `day-2-p-5e4586a2`, `day-3-p-41988c4a`, `day-3-p-8280aa43` | Not applied | No official Japanese name could be confirmed for any of the six businesses. Katakana for Korean sounds is not standardized; for example 육영 can be written ユギョン or ユクヨン, and 툇마루 トェンマル or テンマル. A reading added in the parentheses could be taken for an official name. The English spelling (glossary rule) and the Hangul stay as in the English source. |
+
+Totals: P0 0. P1 8 units: 2 accepted, 6 accepted with changes. P2 10 units:
+3 accepted, 5 accepted with changes, 2 not applied. Business-name readings:
+6 not applied.
+
+The KTX gloss (`ktx-p-2b5fee1b`) stays as the single recorded exception.
+Status stays `draft`. Human native-Japanese reviews: 0. No quality,
+production or indexing record was created. The owner's final approval is
+still open.
