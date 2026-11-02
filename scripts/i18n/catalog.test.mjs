@@ -697,7 +697,7 @@ test('freshness: a page using ArticlePhoto is verified with the component hash i
   assert.deepEqual(byPath[GN_PATH].components, [{ path: PHOTO_FILE, sha256: `sha256:${createHash('sha256').update(readFileSync(path.join(REPO, PHOTO_FILE))).digest('hex')}` }]);
   assert.equal('components' in byPath[PAGE], false);
   assert.equal(gnEntryOf(root).sourceFreshness, 'verified');
-  assert.equal(gnEntryOf(root).status, 'draft');
+  assert.equal(gnEntryOf(root).status, readJson(path.join(REAL_ROOT, 'ja', GN_REL)).status, 'the status of the committed translation');
   assert.equal(entryOf(root).sourceFreshness, 'verified');
 });
 
