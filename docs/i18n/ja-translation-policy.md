@@ -194,9 +194,9 @@ Its review record is `ja-editorial-review.md`.
 |---|---|
 | Translation file | `content/translations/ja/travel/3-days-in-gangneung.json` |
 | Units | 135 |
-| Status | `draft` (Preview only, noindex; not rendered in production) |
-| Approval records | none |
-| Indexing | not approved |
+| Status | `approved` (owner, 2026-11-02). Production: noindex, no canonical, not in the sitemap |
+| Approval records | quality and production (owner, 2026-11-02T15:04:54+09:00), for source `sha256:aafc4ee0…eecd589` and translation `sha256:7fb5aafc…5b919af` (the reviewed text with `status: "approved"`) |
+| Indexing | not approved; no indexing record |
 | Reviewed snapshot | Draft PR #134. Source `sha256:aafc4ee0…eecd589`. Translation after the 1 + 2 pass `sha256:dd5a23dc…249b745` (reviewed by stage 3); after the stage 3 edits `sha256:65a6ef74…c7297e7` |
 | Source freshness | `MATCH` (catalog: `verified`). The checker now checks `ArticlePhoto`: import path, static props, reviewed component bytes (`source-freshness.md`, "Shared components"). Not an approval. |
 
@@ -286,6 +286,20 @@ Totals: P0 0. P1 8 units: 2 accepted, 6 accepted with changes. P2 10 units:
 6 not applied.
 
 The KTX gloss (`ktx-p-2b5fee1b`) stays as the single recorded exception.
-Status stays `draft`. Human native-Japanese reviews: 0. No quality,
-production or indexing record was created. The owner's final approval is
-still open.
+At the end of stage 3 the status was still `draft`. Human
+native-Japanese reviews: 0.
+
+Owner decisions:
+
+- **2026-11-02:** The owner approved the reviewed translation at PR #134
+  HEAD `707bb17` (merged as `a44822d`). This approved the translation and
+  the technical work only.
+- **2026-11-02, 15:04:54 KST:** The owner approved the final translation
+  quality and publishing the page on Production with noindex. Applied:
+  - the status changed from `draft` to `approved`; no translated text changed
+  - a quality and a production record were added
+- **Not approved:** indexing (Google). No indexing record exists.
+- **The English page:** it gets no "also available in" link. The header
+  language menu lists the Japanese page.
+- **`approvedAt`:** the time this session handled the owner's approval
+  message, in KST. It was read from the session clock.

@@ -45,6 +45,24 @@
       "translationSha256": "sha256:fdf1a71065dcbcb2b665efb7616c40cc7d5cc5793ba325c691094d6beedc3e3c",
       "approvedBy": "HAEMIL site owner (AI 3-stage review: Claude in Cowork, then ChatGPT GPT-6 run by the owner; no native-speaker review)",
       "approvedAt": "2026-10-24T22:55:36+09:00"
+    },
+    {
+      "kind": "quality",
+      "locale": "ja",
+      "sourcePath": "/travel/3-days-in-gangneung",
+      "sourceSha256": "sha256:aafc4ee0df36f6688616a7c49253e3a02c670b01d27cd1fbf7daeb592eecd589",
+      "translationSha256": "sha256:7fb5aafc35a6f6d85431a2666e369d51a395075848bb7810affa309105b919af",
+      "approvedBy": "HAEMIL site owner (AI 3-stage review: Claude in Cowork and independent Gemini review; no native-speaker review)",
+      "approvedAt": "2026-11-02T15:04:54+09:00"
+    },
+    {
+      "kind": "production",
+      "locale": "ja",
+      "sourcePath": "/travel/3-days-in-gangneung",
+      "sourceSha256": "sha256:aafc4ee0df36f6688616a7c49253e3a02c670b01d27cd1fbf7daeb592eecd589",
+      "translationSha256": "sha256:7fb5aafc35a6f6d85431a2666e369d51a395075848bb7810affa309105b919af",
+      "approvedBy": "HAEMIL site owner (AI 3-stage review: Claude in Cowork and independent Gemini review; no native-speaker review)",
+      "approvedAt": "2026-11-02T15:04:54+09:00"
     }
   ]
 }
