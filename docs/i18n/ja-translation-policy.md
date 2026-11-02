@@ -187,3 +187,70 @@ The first sentence of the unit changes. The rest of the unit stays.
 
 Released before this policy, under the pilot exception (policy B, noindex).
 Its review record is `ja-editorial-review.md`.
+
+### `/travel/3-days-in-gangneung`
+
+| Item | Value |
+|---|---|
+| Translation file | `content/translations/ja/travel/3-days-in-gangneung.json` |
+| Units | 135 |
+| Status | `draft` (Preview only, noindex; not rendered in production) |
+| Approval records | none |
+| Indexing | not approved |
+| Reviewed snapshot | Draft PR #134. Source `sha256:aafc4ee0…eecd589`, translation `sha256:dd5a23dc…249b745` |
+| Source freshness | `UNVERIFIED`: the checker does not inspect the imported `ArticlePhoto` component. Units and structure match. |
+
+| Stage | Reviewer | Where run | Scope | Result |
+|---|---|---|---|---|
+| Draft | Claude, AI translation | Cowork session | All 135 units | First draft, PR #134 HEAD `63cd954`. |
+| Owner check | Site owner | Outside Cowork, reported in the session (2026-11-02) | The draft at `63cd954` | Requested: keep the KTX gloss and record it; make the hojicha sentence natural for Japanese readers; re-check all units. |
+| 1 + 2 | Claude, AI editorial pass | Cowork session | All 135 units against the English source | P0 0, P1 7, P2 11. 18 units changed (list below). |
+| 3 | — | — | — | Not done yet. |
+| Human native-Japanese review | — | — | — | 0 |
+
+**Glossary exception: KTX gloss.** Unit `ktx-p-2b5fee1b` reads
+「KTX（韓国の高速鉄道）」. The gloss is not in the English source. This differs
+from the glossary rule "Do not add facts, examples, cultural explanations or
+experiences that are not in the English source" (`0.3.0-ja-pilot`,
+`rules.all`). The owner asked for a KTX explanation in the translation request
+and decided on 2026-11-02 to keep it. The exception covers this one gloss in
+this unit. The glossary itself is unchanged.
+
+**Units changed in the 1 + 2 pass**
+
+| Severity | Units | Reason |
+|---|---|---|
+| P1 | `meta-title-28c9dfca`, `header-h1-b6b42d70`, `meta-description-b1ff7b2f` | 「地元目線」「地元の人」 read as "a Gangneung local", but the author travels from Seoul. Now 「ローカル」, which keeps the English "a local". |
+| P1 | `day-1-p-9a453087` | "Korean visitors" had become 「韓国の人たち」. Now 「韓国人の旅行者」. "seemed" is kept as 「ありそう」. |
+| P1 | `day-2-p-a97e0ce6` | Mixed sentence (「運転手さんによると…話もしていました」). Now clearly the driver's words. |
+| P1 | `visit-again-p-203f3c69` | 「一時間ごとに詰め込みすぎない」 was an unnatural literal translation. Now 「ぎっしり詰め込みすぎない」. |
+| P1 | `day-2-p-b3d9e383` | Owner request. It no longer explains hojicha from the beginning ("If you're unfamiliar…" and "a Japanese tea" are not stated). It keeps the facts: matcha is powdered, hojicha is roasted green tea, and its warm, toasted aroma comes from roasting. |
+| P2 | `header-p-05343f00`, `introduction-p-0146e710`, `introduction-p-a554aae0`, `day-1-p-54c8899f`, `day-2-p-db2e3877`, `day-3-p-47b88c84`, `visit-again-p-d9edab26` | Literal Japanese made more natural. Meaning unchanged ("Sometimes" kept as 「だったりします」). |
+| P2 | `day-1-p-dd525114` | "pick up food" as 「テイクアウト」, matching the heading. |
+| P2 | `day-1-p-7c526c1b` | "availability" as 「販売状況」 (「品ぞろえ」 means assortment). |
+| P2 | `day-1-p-7d447ce1` | "Sometimes" was missing. |
+| P2 | `day-2-p-5d121ecf` | "also" was missing. |
+
+**Checked, not changed**
+
+- **Missing content:** none found. Every unit was compared with its English source.
+- **First person:** all 53 first-person units stay the author's own experience.
+- **Hedged statements:** these keep their hedge and are not written as fact:
+  - "I believe I ordered" 「たしか…と思います」
+  - "seemed" 「ありそう」
+  - "would be pleasant" 「気持ちよさそう」
+  - "From what I remember" 「記憶では」
+  - "I remember waiting" 「…と記憶しています」
+  - "He told me" (the driver's account, including the patent remark)
+  - "That's just my personal comparison"
+  - "Your experience may be different"
+- **Hangul and placeholders:** every Hangul run in the source is kept, no Hangul was added, and every placeholder is kept (validator and repository tests pass).
+- **Names:**
+  - Business names whose Japanese name is not verified keep the English spelling: Yukyoung Tangsuyuk, Gilgamja, Donghwa Garden, Matcharo, Geumcheon Kalguksu, Toetmaru, Tabling.
+  - Places: 江陵（カンヌン） (reading on first use), 江陵駅, ソウル駅, 江陵中央市場 (with "Gangneung Jungang Market" as in the source), カンムンビーチ, チョダン（Chodang）.
+  - Foods: タンスユク, カムクタン, キムピタン, フェ, チャンポンスンドゥブ, チャンカルグクス, チュモクパプ, 黒ごまコーヒー, ほうじ茶ラテ, 辛ラーメン.
+- **Notes:**
+  - 「韓国・」 in the title follows "Korea" in the English title.
+  - 「韓国風の酢豚」 translates the English "Korean-style sweet-and-sour fried pork". It does not say the two dishes are the same.
+  - 「刺身」 translates "sliced raw fish".
+  - 「ニラ」 for "chives" was checked against the photo (garlic chives).
