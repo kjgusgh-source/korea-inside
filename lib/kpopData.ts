@@ -49,17 +49,17 @@ export const KPOP_GROUPS: KpopGroup[] = [
       {
         id: "hyoyeon",
         name: "Hyoyeon",
-        note: "A member of HYORISOO. Full HAEMIL member guide may be added later.",
+        note: "A member of HYORISOO.",
       },
       {
         id: "yuri",
         name: "Yuri",
-        note: "A member of HYORISOO. Full HAEMIL member guide may be added later.",
+        note: "A member of HYORISOO.",
       },
       {
         id: "sooyoung",
         name: "Sooyoung",
-        note: "A member of HYORISOO. Full HAEMIL member guide may be added later.",
+        note: "A member of HYORISOO.",
       },
     ],
     starterTags: ["Girls' Generation", "Unit", "Comeback", "Girl group"],
@@ -605,22 +605,22 @@ export const KPOP_GROUPS: KpopGroup[] = [
       {
         id: "liv",
         name: "Liv",
-        note: "A member of RESCENE. Full HAEMIL member guide may be added later.",
+        note: "A member of RESCENE.",
       },
       {
         id: "minami",
         name: "Minami",
-        note: "A member of RESCENE. Full HAEMIL member guide may be added later.",
+        note: "A member of RESCENE.",
       },
       {
         id: "may",
         name: "May",
-        note: "A member of RESCENE. Full HAEMIL member guide may be added later.",
+        note: "A member of RESCENE.",
       },
       {
         id: "zena",
         name: "Zena",
-        note: "A member of RESCENE. Full HAEMIL member guide may be added later.",
+        note: "A member of RESCENE.",
       },
     ],
     starterTags: [
@@ -641,17 +641,17 @@ export const KPOP_GROUPS: KpopGroup[] = [
       {
         id: "yunah",
         name: "YUNAH",
-        note: "An ILLIT member. Full HAEMIL member guide may be added later.",
+        note: "An ILLIT member.",
       },
       {
         id: "minju",
         name: "MINJU",
-        note: "An ILLIT member. Full HAEMIL member guide may be added later.",
+        note: "An ILLIT member.",
       },
       {
         id: "moka",
         name: "MOKA",
-        note: "An ILLIT member. Full HAEMIL member guide may be added later.",
+        note: "An ILLIT member.",
       },
       {
         id: "wonhee",
@@ -682,7 +682,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
       {
         id: "iroha",
         name: "IROHA",
-        note: "An ILLIT member. Full HAEMIL member guide may be added later.",
+        note: "An ILLIT member.",
       },
     ],
     starterTags: [
@@ -703,22 +703,22 @@ export const KPOP_GROUPS: KpopGroup[] = [
       {
         id: "martin",
         name: "MARTIN",
-        note: "A member of CORTIS. Full HAEMIL member guide may be added later.",
+        note: "A member of CORTIS.",
       },
       {
         id: "james",
         name: "JAMES",
-        note: "A member of CORTIS. Full HAEMIL member guide may be added later.",
+        note: "A member of CORTIS.",
       },
       {
         id: "juhoon",
         name: "JUHOON",
-        note: "A member of CORTIS. Full HAEMIL member guide may be added later.",
+        note: "A member of CORTIS.",
       },
       {
         id: "seonghyeon",
         name: "SEONGHYEON",
-        note: "A member of CORTIS. Full HAEMIL member guide may be added later.",
+        note: "A member of CORTIS.",
       },
       {
         id: "keonho",
@@ -952,7 +952,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
     name: "BABYMONSTER",
     category: "girl-groups",
     description:
-      "BABYMONSTER is a seven-member girl group from YG Entertainment that debuted on April 1, 2024. HAEMIL currently starts with Ahyeon as the first covered member, using her MBCkpop #최애ZIP캠 compilation as a beginner-friendly entry point into the group’s performance image. Other official members include Ruka, Pharita, Asa, Rami, Rora, and Chiquita — member guides may be added later.",
+      "BABYMONSTER is a seven-member girl group from YG Entertainment that debuted on April 1, 2024. HAEMIL currently starts with Ahyeon as the first covered member, using her MBCkpop #최애ZIP캠 compilation as a beginner-friendly entry point into the group’s performance image. Other official members include Ruka, Pharita, Asa, Rami, Rora, and Chiquita.",
     members: [
       {
         id: "ahyeon",
@@ -1017,7 +1017,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
     name: "Hearts2Hearts",
     category: "girl-groups",
     description:
-      "Hearts2Hearts (하츠투하츠) is a rookie girl group from SM Entertainment that debuted on February 24, 2025. HAEMIL currently starts with Ian as the first covered member because her STYLE fancam and challenge-friendly performance moments make her a beginner-friendly entry point into the group’s stage image. Other official members exist — member guides may be added later.",
+      "Hearts2Hearts (하츠투하츠) is a rookie girl group from SM Entertainment that debuted on February 24, 2025. HAEMIL currently starts with Ian as the first covered member because her STYLE fancam and challenge-friendly performance moments make her a beginner-friendly entry point into the group’s stage image.",
     members: [
       {
         id: "ian",
@@ -1077,7 +1077,7 @@ export const KPOP_GROUPS: KpopGroup[] = [
     name: "Stray Kids",
     category: "boy-groups",
     description:
-      "Stray Kids (스트레이 키즈) is a K-pop boy group from JYP Entertainment. HAEMIL currently starts with Felix as the first covered member because his facecam, deep-voice contrast, and stage presence make him a beginner-friendly entry point into the group’s performance image. Other official members exist — member guides may be added later.",
+      "Stray Kids (스트레이 키즈) is a K-pop boy group from JYP Entertainment. HAEMIL currently starts with Felix as the first covered member because his facecam, deep-voice contrast, and stage presence make him a beginner-friendly entry point into the group’s performance image.",
     members: [
       {
         id: "felix",
@@ -1344,32 +1344,32 @@ export const KPOP_GROUPS: KpopGroup[] = [
       {
         id: "jungwon",
         name: "Jungwon",
-        note: "ENHYPEN's leader. Full HAEMIL member guide may be added later.",
+        note: "ENHYPEN's leader.",
       },
       {
         id: "jay",
         name: "Jay",
-        note: "A member of ENHYPEN. Full HAEMIL member guide may be added later.",
+        note: "A member of ENHYPEN.",
       },
       {
         id: "jake",
         name: "Jake",
-        note: "A member of ENHYPEN. Full HAEMIL member guide may be added later.",
+        note: "A member of ENHYPEN.",
       },
       {
         id: "sunghoon",
         name: "Sunghoon",
-        note: "A member of ENHYPEN. Full HAEMIL member guide may be added later.",
+        note: "A member of ENHYPEN.",
       },
       {
         id: "sunoo",
         name: "Sunoo",
-        note: "A member of ENHYPEN. Full HAEMIL member guide may be added later.",
+        note: "A member of ENHYPEN.",
       },
       {
         id: "ni-ki",
         name: "Ni-ki",
-        note: "A member of ENHYPEN. Full HAEMIL member guide may be added later.",
+        note: "A member of ENHYPEN.",
       },
     ],
     starterTags: ["Boy group", "BELIFT LAB", "Comeback", "I-LAND", "Bloody Paradise"],
