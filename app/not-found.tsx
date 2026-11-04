@@ -3,7 +3,7 @@ import Link from "next/link";
 import SiteHeader from "../components/SiteHeader";
 
 export const metadata: Metadata = {
-  title: "Page Not Found | HAEMIL",
+  title: "Page Not Found",
   description: "This HAEMIL page could not be found.",
   robots: {
     index: false,

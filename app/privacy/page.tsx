@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import SiteHeader from "../../components/SiteHeader";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | HAEMIL",
+  title: "Privacy Policy",
   description:
     "Privacy policy for HAEMIL, including how visitor requests, analytics, and submitted information are handled.",
 };

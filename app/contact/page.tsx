@@ -3,7 +3,7 @@ import Link from "next/link";
 import SiteHeader from "../../components/SiteHeader";
 
 export const metadata: Metadata = {
-  title: "Contact | HAEMIL",
+  title: "Contact",
   description:
     "Contact HAEMIL or suggest Korean culture topics, idols, groups, fancams, and stories to cover next.",
 };

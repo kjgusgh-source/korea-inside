@@ -3,7 +3,7 @@ import Link from "next/link";
 import SiteHeader from "../../../components/SiteHeader";
 
 export const metadata: Metadata = {
-  title: "Seoul Travel Guides | HAEMIL",
+  title: "Seoul Travel Guides",
   description:
     "Map-friendly HAEMIL guides for understanding Seoul by area, mood, and local movement.",
   alternates: {

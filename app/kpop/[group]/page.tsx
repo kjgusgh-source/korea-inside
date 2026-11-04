@@ -24,12 +24,12 @@ export async function generateMetadata({ params }: PageProps) {
 
   if (!group) {
     return {
-      title: "K-pop Group | HAEMIL",
+      title: "K-pop Group",
     };
   }
 
   return {
-    title: `${group.name} | HAEMIL`,
+    title: group.name,
     description: `${group.name} fancams, members, stage moments, and the Korean culture around them.`,
     alternates: {
       canonical: `/kpop/${group.id}`,
