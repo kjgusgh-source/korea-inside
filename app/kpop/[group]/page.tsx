@@ -61,6 +61,32 @@ export default async function KpopGroupPage({ params }: PageProps) {
         .filter((article): article is NonNullable<typeof article> => article !== undefined)
     : [];
 
+  const isPublishedMember = (memberId: string) =>
+    publishedMemberIds.some(
+      (entry) => entry.groupId === group.id && entry.memberId === memberId
+    );
+  const publishedMembers = group.members.filter((member) =>
+    isPublishedMember(member.id)
+  );
+  const otherMembers = group.members.filter(
+    (member) => !isPublishedMember(member.id)
+  );
+  // The group's existing "Who Is" guide, if HAEMIL has one. Its own title and
+  // description are reused; nothing is written here for it.
+  const groupGuide = isIve
+    ? undefined
+    : getKpopGuideArticles().find(
+        (article) => article.href === `/kpop/who-is-${group.id}`
+      );
+  // Only published content is shown: no "will be added later" notes, and no
+  // video section for groups without group videos (IVE keeps its own hub).
+  const memberHeading =
+    isIve || publishedMembers.length > 1
+      ? "Choose a member to follow the stage details."
+      : publishedMembers.length === 1
+        ? `Start with ${publishedMembers[0].name}'s member guide.`
+        : `${group.name} members`;
+
   return (
     <main className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-6 py-6 md:px-8 md:py-8">
@@ -112,49 +138,52 @@ export default async function KpopGroupPage({ params }: PageProps) {
           </div>
         </section>
 
+        {groupGuide && (
+          <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+              {groupGuide.label}
+            </p>
+
+            <Link
+              href={groupGuide.href}
+              className="group mt-5 block rounded-[1.5rem] border border-[var(--border)] bg-[var(--card)] p-5 transition hover:-translate-y-1 hover:shadow-md"
+            >
+              <h2 className="text-2xl font-semibold leading-tight text-[var(--text)]">
+                {groupGuide.title}
+              </h2>
+
+              <p className="mt-3 text-sm leading-6 text-[var(--muted)]">
+                {groupGuide.description}
+              </p>
+
+              <p className="mt-4 text-sm font-semibold text-[var(--accent)]">
+                Read guide →
+              </p>
+            </Link>
+          </section>
+        )}
+
         <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-5 md:p-8">
           <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
-                Members
+                {!isIve && publishedMembers.length === 1 ? "Member guide" : "Members"}
               </p>
               <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
-                Choose a member to follow the stage details.
+                {memberHeading}
               </h2>
             </div>
 
-            <p className="max-w-md text-sm leading-6 text-[var(--muted)]">
-              {isIve
-                ? iveGroupHub.memberSectionNote
-                : "Member pages will collect fancams, facecams, stage words, and small moments that help new fans understand why people replay these clips."}
-            </p>
+            {isIve && (
+              <p className="max-w-md text-sm leading-6 text-[var(--muted)]">
+                {iveGroupHub.memberSectionNote}
+              </p>
+            )}
           </div>
 
-          <div className="grid gap-5 md:grid-cols-3">
-            {group.members.map((member) => {
-              const isPublished = publishedMemberIds.some(
-                (entry) =>
-                  entry.groupId === group.id && entry.memberId === member.id
-              );
-
-              if (!isPublished) {
-                return (
-                  <div
-                    key={member.id}
-                    className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface)] p-5"
-                  >
-                    <p className="text-xl font-semibold text-[var(--text)]">
-                      {member.name}
-                    </p>
-
-                    <p className="mt-3 text-sm leading-6 text-[var(--muted)]">
-                      Member
-                    </p>
-                  </div>
-                );
-              }
-
-              return (
+          {publishedMembers.length > 0 && (
+            <div className="grid gap-5 md:grid-cols-3">
+              {publishedMembers.map((member) => (
                 <Link
                   key={member.id}
                   href={`/kpop/${group.id}/${member.id}`}
@@ -172,9 +201,34 @@ export default async function KpopGroupPage({ params }: PageProps) {
                     Open member page →
                   </p>
                 </Link>
-              );
-            })}
-          </div>
+              ))}
+            </div>
+          )}
+
+          {/* Members without a published guide: names only, no link, no stub card. */}
+          {otherMembers.length > 0 && (
+            <div className={publishedMembers.length > 0 ? "mt-8" : undefined}>
+              {publishedMembers.length > 0 && (
+                <p className="text-sm font-semibold text-[var(--muted)]">
+                  Other members
+                </p>
+              )}
+
+              <ul
+                aria-label={`${group.name} members`}
+                className={`flex flex-wrap gap-2${publishedMembers.length > 0 ? " mt-3" : ""}`}
+              >
+                {otherMembers.map((member) => (
+                  <li
+                    key={member.id}
+                    className="rounded-full border border-[var(--border)] bg-[var(--surface)] px-4 py-1.5 text-sm font-medium text-[var(--text)]"
+                  >
+                    {member.name}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </section>
 
         {isIve && (
@@ -219,21 +273,21 @@ export default async function KpopGroupPage({ params }: PageProps) {
           </section>
         )}
 
-        <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-5 md:p-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
-            Fancam picks
-          </p>
+        {isIve && (
+          <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-5 md:p-8">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
+              Fancam picks
+            </p>
 
-          <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
-            {isIve ? iveGroupHub.fancamTitle : "Group videos will live here."}
-          </h2>
+            <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
+              {iveGroupHub.fancamTitle}
+            </h2>
 
-          <p className="mt-4 max-w-2xl text-sm leading-7 text-[var(--muted)] md:text-base">
-            {isIve
-              ? iveGroupHub.fancamDescription
-              : "This section will later collect official stages, group fancams, dance practices, and cultural notes about the words or fan moments around this group."}
-          </p>
-        </section>
+            <p className="mt-4 max-w-2xl text-sm leading-7 text-[var(--muted)] md:text-base">
+              {iveGroupHub.fancamDescription}
+            </p>
+          </section>
+        )}
       </div>
     </main>
   );
