@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import SiteHeader from "../../components/SiteHeader";
 
 export const metadata: Metadata = {
-  title: "About | HAEMIL",
+  title: "About",
   description:
     "HAEMIL shares Korean stories, K-pop moments, food, language, and culture like a local friend explaining Korea to you.",
 };

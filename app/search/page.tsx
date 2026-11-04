@@ -5,7 +5,7 @@ import SiteSearchBox from "../../components/SiteSearchBox";
 import { getSearchIndex, searchItems } from "../../lib/searchIndex";
 
 export const metadata: Metadata = {
-  title: "Search | HAEMIL",
+  title: "Search",
   description: "Search HAEMIL guides about K-pop, Korean culture, fan words, idols, food, and everyday life.",
   robots: {
     index: false,

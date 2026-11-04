@@ -42,6 +42,9 @@ function getPostAccent(category: string) {
   };
 }
 
+// Matches a " | HAEMIL" brand segment written into the title itself.
+const BRANDED_SEO_TITLE = /\s\|\sHAEMIL\b/;
+
 export async function generateStaticParams() {
   return getAllPosts().map((post) => ({
     category: post.categorySlug,
@@ -57,12 +60,17 @@ export async function generateMetadata({
 
   if (!post) {
     return {
-      title: "Article Not Found | HAEMIL",
+      title: "Article Not Found",
     };
   }
 
   return {
-    title: post.seoTitle,
+    // A few seoTitles already include the brand (" | HAEMIL Korea Travel
+    // Guide"): render those as written, without the root "%s | HAEMIL"
+    // template. Every other post keeps the template.
+    title: BRANDED_SEO_TITLE.test(post.seoTitle)
+      ? { absolute: post.seoTitle }
+      : post.seoTitle,
     description: post.seoDescription,
     alternates: {
       canonical: `/${post.categorySlug}/${post.slug}`,

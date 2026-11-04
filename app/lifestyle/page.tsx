@@ -4,7 +4,7 @@ import SiteHeader from "../../components/SiteHeader";
 import { getPostsByCategory } from "../../lib/posts";
 
 export const metadata: Metadata = {
-  title: "Korea Now | HAEMIL",
+  title: "Korea Now",
   description:
     "HAEMIL guides to everyday, present-day Korea — the trends, routines, and small cultural habits locals live with right now.",
   alternates: {

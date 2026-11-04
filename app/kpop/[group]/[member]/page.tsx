@@ -74,7 +74,7 @@ export async function generateMetadata({
 
   if (!group || !member) {
     return {
-      title: "K-pop Member Guide | HAEMIL",
+      title: "K-pop Member Guide",
     };
   }
 
@@ -95,7 +95,9 @@ export async function generateMetadata({
     `A friendly guide to ${member.name} of ${group.name}, including stage charm, fancam points, Korean fan expressions, and cultural context.`;
 
   return {
-    title,
+    // Override titles already end with the brand: render them as written,
+    // without the root "%s | HAEMIL" template. OG/Twitter keep `title`.
+    title: override ? { absolute: title } : title,
     description,
     alternates: {
       canonical: `/kpop/${group.id}/${member.id}`,
