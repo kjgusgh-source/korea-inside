@@ -68,6 +68,9 @@ export default async function KpopGroupPage({ params }: PageProps) {
   const publishedMembers = group.members.filter((member) =>
     isPublishedMember(member.id)
   );
+  const otherMembers = group.members.filter(
+    (member) => !isPublishedMember(member.id)
+  );
   // The group's existing "Who Is" guide, if HAEMIL has one. Its own title and
   // description are reused; nothing is written here for it.
   const groupGuide = isIve
@@ -178,26 +181,9 @@ export default async function KpopGroupPage({ params }: PageProps) {
             )}
           </div>
 
-          <div className="grid gap-5 md:grid-cols-3">
-            {group.members.map((member) => {
-              if (!isPublishedMember(member.id)) {
-                return (
-                  <div
-                    key={member.id}
-                    className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface)] p-5"
-                  >
-                    <p className="text-xl font-semibold text-[var(--text)]">
-                      {member.name}
-                    </p>
-
-                    <p className="mt-3 text-sm leading-6 text-[var(--muted)]">
-                      Member
-                    </p>
-                  </div>
-                );
-              }
-
-              return (
+          {publishedMembers.length > 0 && (
+            <div className="grid gap-5 md:grid-cols-3">
+              {publishedMembers.map((member) => (
                 <Link
                   key={member.id}
                   href={`/kpop/${group.id}/${member.id}`}
@@ -215,9 +201,34 @@ export default async function KpopGroupPage({ params }: PageProps) {
                     Open member page →
                   </p>
                 </Link>
-              );
-            })}
-          </div>
+              ))}
+            </div>
+          )}
+
+          {/* Members without a published guide: names only, no link, no stub card. */}
+          {otherMembers.length > 0 && (
+            <div className={publishedMembers.length > 0 ? "mt-8" : undefined}>
+              {publishedMembers.length > 0 && (
+                <p className="text-sm font-semibold text-[var(--muted)]">
+                  Other members
+                </p>
+              )}
+
+              <ul
+                aria-label={`${group.name} members`}
+                className={`flex flex-wrap gap-2${publishedMembers.length > 0 ? " mt-3" : ""}`}
+              >
+                {otherMembers.map((member) => (
+                  <li
+                    key={member.id}
+                    className="rounded-full border border-[var(--border)] bg-[var(--surface)] px-4 py-1.5 text-sm font-medium text-[var(--text)]"
+                  >
+                    {member.name}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </section>
 
         {isIve && (
