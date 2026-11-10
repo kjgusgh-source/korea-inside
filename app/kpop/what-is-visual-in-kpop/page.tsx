@@ -27,7 +27,7 @@ const featuredVideo = {
 const quickFacts = [
   "Korean word: Visual / 비주얼",
   "Basic meaning: A member known for standing out visually in a group’s image",
-  "Official or fan-used: Often used casually by fans and media; an official “visual” title is hard to verify",
+  "Official or fan-used: Often used casually by fans and media, so it does not necessarily mean an official position",
   "Not the same as: Center, face of the group, main dancer, main vocal, or ending fairy",
   "What matters: Styling, camera presence, public image, facial impression, proportions, and how memorable the member feels in photos or videos",
   "Fan phrase: 얼굴천재 can be used by fans for someone with striking visuals, but it is not a formal company role",
@@ -332,12 +332,12 @@ export default function WhatIsVisualInKpopPage() {
                 </div>
                 <div className="rounded-[1.25rem] border border-[var(--border)] bg-[var(--surface)] p-4 text-sm leading-6">
                   <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--muted)]">
-                    Agency&apos;s official position
+                    Nickname, not a position
                   </p>
                   <p className="mt-1">
-                    We didn&apos;t find his agency naming him ASTRO&apos;s
-                    &quot;visual,&quot; so we treat 얼굴천재 as a nickname, not
-                    a role.
+                    A nickname like 얼굴천재 describes how people see someone.
+                    It is not the same thing as an official position in a
+                    group.
                   </p>
                 </div>
               </div>
@@ -497,8 +497,8 @@ export default function WhatIsVisualInKpopPage() {
 
               <p>
                 In Korean K-pop talk, fans may say 비주얼 or 비주얼 멤버. Fans
-                and media often use it casually, and an official
-                &quot;visual&quot; title is hard to verify.
+                and media often use it casually, so hearing it does not
+                necessarily mean a member holds an official position.
               </p>
 
               <p>In Korean fan language, you may also see the phrase 얼굴천재.</p>
