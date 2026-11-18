@@ -209,6 +209,8 @@ export default function KpopExplorer({ groups, soloArtists }: KpopExplorerProps)
           <button
             type="button"
             onClick={() => setIsSoloOpen((current) => !current)}
+            aria-expanded={isSoloOpen}
+            aria-controls="kpop-solo-artists"
             className="flex w-full items-center justify-between gap-4 p-5 text-left"
           >
             <div>
@@ -226,51 +228,54 @@ export default function KpopExplorer({ groups, soloArtists }: KpopExplorerProps)
             </span>
           </button>
 
-          {isSoloOpen && (
-            <div className="border-t border-[var(--border)] p-5">
-              <div className="grid gap-3 md:grid-cols-3">
-                {soloArtists.map((artist) => (
-                  <Link
-                    key={artist.id}
-                    href={artist.href}
-                    className="rounded-[1rem] border border-[var(--border)] bg-[var(--surface)] p-4 transition hover:-translate-y-0.5 hover:border-[var(--accent)] hover:shadow-md"
-                  >
-                    <div className="flex flex-wrap items-center gap-2">
-                      <p className="font-semibold text-[var(--text)]">
-                        {artist.name}
-                      </p>
-                      <span className="rounded-full bg-[var(--accent-soft)] px-3 py-1 text-xs font-semibold text-[var(--text)]">
-                        Solo artist
+          {/* Always server-rendered so the solo artist links exist in the HTML; hidden while collapsed. */}
+          <div
+            id="kpop-solo-artists"
+            hidden={!isSoloOpen}
+            className="border-t border-[var(--border)] p-5"
+          >
+            <div className="grid gap-3 md:grid-cols-3">
+              {soloArtists.map((artist) => (
+                <Link
+                  key={artist.id}
+                  href={artist.href}
+                  className="rounded-[1rem] border border-[var(--border)] bg-[var(--surface)] p-4 transition hover:-translate-y-0.5 hover:border-[var(--accent)] hover:shadow-md"
+                >
+                  <div className="flex flex-wrap items-center gap-2">
+                    <p className="font-semibold text-[var(--text)]">
+                      {artist.name}
+                    </p>
+                    <span className="rounded-full bg-[var(--accent-soft)] px-3 py-1 text-xs font-semibold text-[var(--text)]">
+                      Solo artist
+                    </span>
+                  </div>
+
+                  <p className="mt-2 text-xs font-medium text-[var(--muted)]">
+                    {artist.note}
+                  </p>
+
+                  <p className="mt-3 text-sm leading-6 text-[var(--muted)]">
+                    {artist.description}
+                  </p>
+
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {artist.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full border border-[var(--border)] px-3 py-1 text-xs text-[var(--muted)]"
+                      >
+                        {tag}
                       </span>
-                    </div>
+                    ))}
+                  </div>
 
-                    <p className="mt-2 text-xs font-medium text-[var(--muted)]">
-                      {artist.note}
-                    </p>
-
-                    <p className="mt-3 text-sm leading-6 text-[var(--muted)]">
-                      {artist.description}
-                    </p>
-
-                    <div className="mt-4 flex flex-wrap gap-2">
-                      {artist.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="rounded-full border border-[var(--border)] px-3 py-1 text-xs text-[var(--muted)]"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-
-                    <p className="mt-4 text-xs font-semibold text-[var(--accent)]">
-                      Open spotlight →
-                    </p>
-                  </Link>
-                ))}
-              </div>
+                  <p className="mt-4 text-xs font-semibold text-[var(--accent)]">
+                    Open spotlight →
+                  </p>
+                </Link>
+              ))}
             </div>
-          )}
+          </div>
         </div>
       </div>
     </section>

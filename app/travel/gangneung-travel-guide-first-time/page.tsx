@@ -80,6 +80,9 @@ const mapPlaces: MapPlace[] = [
 const naverMapSearchUrl = (query: string) =>
   `https://map.naver.com/p/search/${encodeURIComponent(query)}`;
 
+const inlineLinkClass =
+  "font-semibold text-[var(--text)] underline decoration-[var(--accent)] decoration-2 underline-offset-4";
+
 const googleMapSearchUrl = (query: string) =>
   `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
 
@@ -272,8 +275,11 @@ export default function GangneungTravelGuideFirstTimePage() {
 
                 <p>
                   If you ask Korean friends where they went on a long weekend,
-                  Gangneung comes up a lot. People go for beaches, seafood,
-                  Jungang Market, coffee streets, and that relaxed feeling you
+                  Gangneung comes up a lot. People go for beaches, seafood,{" "}
+                  <Link href="/travel/3-days-in-gangneung#day-1" className={inlineLinkClass}>
+                    Jungang Market
+                  </Link>
+                  , coffee streets, and that relaxed feeling you
                   get when you leave Seoul for a night or two. It is not hidden
                   — summer trips, family drives, and cafe dates by the sea are
                   normal here. What is different is that many overseas visitors
@@ -356,7 +362,11 @@ export default function GangneungTravelGuideFirstTimePage() {
                   Seafood is the headline — grilled fish, stews, raw fish sets,
                   and simple coastal meals depending on what looks good that day.
                   Jungang Market is useful when you want snacks and small bites
-                  in one place. Chodang sundubu (soft tofu stew) is another local
+                  in one place.{" "}
+                  <Link href="/travel/3-days-in-gangneung#day-2" className={inlineLinkClass}>
+                    Chodang sundubu
+                  </Link>{" "}
+                  (soft tofu stew) is another local
                   direction many Korean travelers know; the Chodang area is worth
                   a pin if you want something warm after the beach. Casual Korean
                   food, market food, and coffee all fit the same trip — you do
