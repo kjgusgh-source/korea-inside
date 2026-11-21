@@ -50,19 +50,19 @@
       "kind": "quality",
       "locale": "ja",
       "sourcePath": "/travel/3-days-in-gangneung",
-      "sourceSha256": "sha256:aafc4ee0df36f6688616a7c49253e3a02c670b01d27cd1fbf7daeb592eecd589",
-      "translationSha256": "sha256:7fb5aafc35a6f6d85431a2666e369d51a395075848bb7810affa309105b919af",
-      "approvedBy": "HAEMIL site owner (AI 3-stage review: Claude in Cowork and independent Gemini review; no native-speaker review)",
-      "approvedAt": "2026-11-02T15:04:54+09:00"
+      "sourceSha256": "sha256:a1eafb44be08dfc72a711ebeb73c6d21a28bbd9a559577691bd9ef661f7796f0",
+      "translationSha256": "sha256:646dbb59f517552b85e0b429d4fa97aab742c68b586169d591e4391090db5007",
+      "approvedBy": "HAEMIL site owner (AI 3-stage review; 3 link units re-reviewed by Claude in Cowork only, no independent stage 3 for them; no native-speaker review)",
+      "approvedAt": "2026-11-21T19:15:57+09:00"
     },
     {
       "kind": "production",
       "locale": "ja",
       "sourcePath": "/travel/3-days-in-gangneung",
-      "sourceSha256": "sha256:aafc4ee0df36f6688616a7c49253e3a02c670b01d27cd1fbf7daeb592eecd589",
-      "translationSha256": "sha256:7fb5aafc35a6f6d85431a2666e369d51a395075848bb7810affa309105b919af",
-      "approvedBy": "HAEMIL site owner (AI 3-stage review: Claude in Cowork and independent Gemini review; no native-speaker review)",
-      "approvedAt": "2026-11-02T15:04:54+09:00"
+      "sourceSha256": "sha256:a1eafb44be08dfc72a711ebeb73c6d21a28bbd9a559577691bd9ef661f7796f0",
+      "translationSha256": "sha256:646dbb59f517552b85e0b429d4fa97aab742c68b586169d591e4391090db5007",
+      "approvedBy": "HAEMIL site owner (AI 3-stage review; 3 link units re-reviewed by Claude in Cowork only, no independent stage 3 for them; no native-speaker review)",
+      "approvedAt": "2026-11-21T19:15:57+09:00"
     }
   ]
 }

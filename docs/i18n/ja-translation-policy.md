@@ -194,10 +194,10 @@ Its review record is `ja-editorial-review.md`.
 |---|---|
 | Translation file | `content/translations/ja/travel/3-days-in-gangneung.json` |
 | Units | 135 |
-| Status | `approved` (owner, 2026-11-02). Production: noindex, no canonical, not in the sitemap |
-| Approval records | quality and production (owner, 2026-11-02T15:04:54+09:00), for source `sha256:aafc4ee0…eecd589` and translation `sha256:7fb5aafc…5b919af` (the reviewed text with `status: "approved"`) |
+| Status | `approved` (owner, 2026-11-02; link update approved 2026-11-21). Production: noindex, no canonical, not in the sitemap |
+| Approval records | quality and production (owner, 2026-11-21T19:15:57+09:00), for source `sha256:a1eafb44…f7796f0` and translation `sha256:646dbb59…0db5007` (the 3 link units below). They replace the records of 2026-11-02T15:04:54+09:00 for source `sha256:aafc4ee0…eecd589` and translation `sha256:7fb5aafc…5b919af`, which no longer match the files (history below) |
 | Indexing | not approved; no indexing record |
-| Reviewed snapshot | Draft PR #134. Source `sha256:aafc4ee0…eecd589`. Translation after the 1 + 2 pass `sha256:dd5a23dc…249b745` (reviewed by stage 3); after the stage 3 edits `sha256:65a6ef74…c7297e7` |
+| Reviewed snapshot | Link update (2026-11-21): source `sha256:a1eafb44…f7796f0`, translation `sha256:646dbb59…0db5007`. Earlier, Draft PR #134. Source `sha256:aafc4ee0…eecd589`. Translation after the 1 + 2 pass `sha256:dd5a23dc…249b745` (reviewed by stage 3); after the stage 3 edits `sha256:65a6ef74…c7297e7` |
 | Source freshness | `MATCH` (catalog: `verified`). The checker now checks `ArticlePhoto`: import path, static props, reviewed component bytes (`source-freshness.md`, "Shared components"). Not an approval. |
 
 | Stage | Reviewer | Where run | Scope | Result |
@@ -206,6 +206,7 @@ Its review record is `ja-editorial-review.md`.
 | Owner check | Site owner | Outside Cowork, reported in the session (2026-11-02) | The draft at `63cd954` | Requested: keep the KTX gloss and record it; make the hojicha sentence natural for Japanese readers; re-check all units. |
 | 1 + 2 | Claude, AI editorial pass | Cowork session | All 135 units against the English source | P0 0, P1 7, P2 11. 18 units changed (list below). |
 | 3 | Gemini, independent AI review | Run by the owner outside Cowork; report given to the session (2026-11-02) | English source and all 135 units at PR #134 HEAD `dccb057` | Reported by the owner: P0 0, P1 8 units, P2 10 units, plus katakana readings proposed for 6 business names. Different model family from stages 1–2. Not a native-speaker review. Decisions below; 16 units changed. |
+| Link update | Claude, AI editorial check | Cowork session (2026-11-21) | The 3 units changed by the English link update only: `day-2-p-9fb9c75a`, `day-3-p-47b88c84`, `visit-again-p-203f3c69` | P0 0, P1 0. Link placeholders match the English source. The other 132 units are unchanged. No independent stage 3 for these units. |
 | Human native-Japanese review | — | — | — | 0 |
 
 **Glossary exception: KTX gloss.** Unit `ktx-p-2b5fee1b` reads
@@ -303,3 +304,38 @@ Owner decisions:
   language menu lists the Japanese page.
 - **`approvedAt`:** the time this session handled the owner's approval
   message, in KST. It was read from the session clock.
+
+**Link update (2026-11-21)**
+
+The English page got 3 internal links on existing words. The text, photos,
+dates, prices, H1, metadata, canonical, robots and sitemap did not change.
+"Korean waiting-list app" stays unlinked: the apps guide covers CatchTable,
+while the story names Tabling.
+
+| Unit | English link (target) | Japanese before | Japanese after |
+|---|---|---|---|
+| `day-2-p-9fb9c75a` | "soft tofu" (`/food/korean-soups-and-stews-guide-first-time`) | …スープに、やわらかい豆腐を合わせた料理です。… | …スープに、{a1}やわらかい豆腐{/a1}を合わせた料理です。… |
+| `day-3-p-47b88c84` | "Korean noodle soup" (`/food/korean-noodles-guide-first-time`) | …スープで食べる韓国の麺料理、チャンカルグクス… | …スープで食べる{a1}韓国の麺料理{/a1}、チャンカルグクス… |
+| `visit-again-p-203f3c69` | "first trip to Gangneung" (`/travel/gangneung-travel-guide-first-time`) | はじめて江陵への旅を計画しているなら、… | {a1}初めての江陵旅行{/a1}を計画しているなら、… |
+
+- The source JSON was re-extracted with the stored JSON as `previous`. All 135
+  unit IDs and their order are unchanged. The freshness record was written
+  again (`MATCH`).
+- The targets have no Japanese page, so the Japanese page links to the English
+  pages with the existing "EN（英語のページ）" mark.
+- In the third unit, 「初めての江陵旅行」 replaces 「はじめて江陵への旅」 at the
+  owner's request. Two other units still write 「はじめて」 for "first time".
+  They were not changed.
+
+Owner decisions (link update):
+
+- **2026-11-21:** The owner approved 3 links (not 4) and links from the
+  Japanese page to English pages with the EN mark.
+- **2026-11-21, 19:15:57 KST:** The owner approved the 3 Japanese units and
+  their links to English pages. This approves translation quality and
+  Production with noindex. Applied:
+  - the quality and production records now hold the new file hashes and this
+    time; the 2026-11-02 records are replaced, because the catalog allows one
+    record per kind and page, and a record must match the current bytes
+  - the 2026-11-02 approval stays recorded above and in the Git history
+- **Not approved:** indexing (Google). No indexing record exists.
