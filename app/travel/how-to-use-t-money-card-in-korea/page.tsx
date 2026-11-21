@@ -15,7 +15,7 @@ const quickFacts = [
   "Where to buy: Start at a convenience store; T-money’s foreigner guide lists subway station machines and information centers as top-up points",
   "Where to recharge: Convenience stores or subway station machines, with cash in Korean won (KRW 1,000 to 90,000 at a time, in KRW 1,000 steps)",
   "Use it for: Subway gates, buses, and some everyday payments depending on the store/service",
-  "Subway fare: Seoul’s official fare page lists the adult base fare as KRW 1,550 with a transportation card (in effect since June 28, 2025); always check current station information",
+  "Subway fare: Adult base fare is KRW 1,550 with a transportation card (since June 28, 2025) and KRW 1,650 with a single-journey ticket, plus a KRW 500 deposit you get back (Seoul’s official fares as of June 2026); always check current station information",
   "Foreign credit cards: Since March 17, 2026, new ticket machines at Line 1–8 stations accept them for single-journey tickets and Climate Card short-term passes; Seoul’s announcement does not cover regular T-money top-ups",
   "Transfer tip: Tap every time. On buses, tap when boarding and tap again when getting off",
   "Common mistake: Forgetting to tap off a bus can affect your next fare or transfer",
@@ -191,7 +191,10 @@ export default function HowToUseTMoneyCardInKoreaPage() {
                 better than a single-journey subway ticket if you will ride more
                 than once, take buses, or move around Seoul during the day. The
                 rhythm is straightforward: buy the card, add money, tap in, ride,
-                tap out, recharge when needed.
+                tap out, recharge when needed. For an adult, a basic subway ride
+                costs 1,550 won with a transportation card and 1,650 won with a
+                single-journey ticket, which also needs a 500 won deposit that
+                you get back after the ride.
               </p>
 
               <p>
@@ -278,10 +281,16 @@ export default function HowToUseTMoneyCardInKoreaPage() {
                 2026, Seoul lists them at 5,000, 8,000, 10,000, 15,000, and
                 20,000 won, plus 3,000 won for the physical card. A pass starts
                 on the day you charge it and runs until the last service of its
-                final day. It covers the subway inside Seoul (including getting
-                off at Incheon Airport Terminals 1 and 2) and Seoul city and
+                final day. It covers the subway inside Seoul and Seoul city and
                 village buses, but not the Shinbundang Line, GTX, airport or
-                red express buses, or subway stations outside Seoul. For mixed
+                red express buses, or subway stations outside Seoul. One
+                exception helps on the way out: you can board the Airport
+                Railroad at a covered station in Seoul, such as Seoul Station,
+                Hongik University, or Gimpo Airport, and get off at Incheon
+                Airport Terminal 1 or 2. You cannot use the pass to board at
+                the airport stations. Seoul&apos;s notices do not mention the
+                separate non-stop Airport Express train, so do not assume the
+                pass covers it. For mixed
                 trips with subways, buses, taxis, trains, or a day outside
                 Seoul, T-money stays simpler and more flexible. Keep the card
                 somewhere easy to reach — a phone pouch or wallet pocket you can
@@ -298,8 +307,9 @@ export default function HowToUseTMoneyCardInKoreaPage() {
 
               <p className="text-sm italic leading-7 md:text-base">
                 Fares, passes, and payment rules checked on November 21, 2026,
-                against the Seoul Metropolitan Government&apos;s transport pages
-                and T-money&apos;s foreigner guide. They can change, so check
+                against the Seoul Metropolitan Government&apos;s transport pages,
+                Seoul&apos;s official tourism site (Visit Seoul), and
+                T-money&apos;s foreigner guide. They can change, so check
                 station notices before you ride.
               </p>
             </div>

@@ -13,7 +13,7 @@ const pageDescription =
 const quickFacts = [
   "Best first card: T-money or another rechargeable Korean transportation card",
   "Single-journey ticket: One subway ride only, not buses; it includes a KRW 500 deposit you get back at the station’s deposit refund machine",
-  "Subway fare: Seoul’s official fare page lists the adult base fare as KRW 1,550 with a transportation card (in effect since June 28, 2025); always check current station information",
+  "Subway fare: Adult base fare is KRW 1,550 with a transportation card (since June 28, 2025) and KRW 1,650 with a single-journey ticket (Seoul’s official fares as of June 2026); always check current station information",
   "Useful apps: Naver Map or KakaoMap for routes, exits, transfers, and walking directions",
   "Climate Card: The 30-day pass has ended; the 1- to 7-day short-term passes still work on the subway and buses inside Seoul",
   "Local tip: The exit number matters. Exit 1 and Exit 8 can feel like completely different places",
@@ -197,8 +197,11 @@ export default function HowToUseKoreanSubwayPage() {
                 Tap when you enter the gate, ride, then tap again when you leave
                 — that second tap matters, because the fare system needs both
                 reads. You can also buy a single-journey subway ticket at a
-                station machine for one ride. The machine shows the fare for
-                your destination and adds a 500 won deposit, which you get back
+                station machine for one ride. For an adult, the base fare is
+                1,650 won on a single-journey ticket, compared with 1,550 won on
+                a transportation card, and longer trips cost a little more. The
+                machine shows the fare for your destination and adds a 500 won
+                deposit, which you get back
                 from the station&apos;s deposit refund machine after the ride —
                 as long as the ticket is not lost or damaged. It is less
                 convenient if you will move around more than once, and
@@ -215,10 +218,16 @@ export default function HowToUseKoreanSubwayPage() {
                 1, 2026; what visitors can still buy is the short-term pass for
                 1, 2, 3, 5, or 7 days. As of October 2026, Seoul lists them at
                 5,000 to 20,000 won, plus 3,000 won for the physical card. The
-                pass covers the subway inside Seoul (including getting off at
-                Incheon Airport Terminals 1 and 2) and Seoul city and village
+                pass covers the subway inside Seoul and Seoul city and village
                 buses, but not the Shinbundang Line, GTX, airport or red
-                express buses, or subway stations outside Seoul. For simple
+                express buses, or subway stations outside Seoul. One exception
+                helps on the way out: you can board the Airport Railroad at a
+                covered station in Seoul, such as Seoul Station, Hongik
+                University, or Gimpo Airport, and get off at Incheon Airport
+                Terminal 1 or 2. You cannot use the pass to board at the
+                airport stations. Seoul&apos;s notices do not mention the
+                separate non-stop Airport Express train, so do not assume the
+                pass covers it. For simple
                 trips, T-money is usually easier; for Seoul-heavy, subway-heavy
                 days, the short-term pass may be worth comparing.
               </p>
@@ -289,8 +298,8 @@ export default function HowToUseKoreanSubwayPage() {
               <p className="text-sm italic leading-7 md:text-base">
                 Fares, ticket, and pass details checked on November 21, 2026,
                 against the Seoul Metropolitan Government&apos;s transport
-                pages. They can change, so check station notices before you
-                ride.
+                pages and Seoul&apos;s official tourism site (Visit Seoul). They
+                can change, so check station notices before you ride.
               </p>
             </div>
           </section>
