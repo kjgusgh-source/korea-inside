@@ -22,6 +22,87 @@ const quickFacts = [
   "Local tip: Do not watch only the chorus. Sometimes the quiet seconds show the idol’s real control.",
 ];
 
+type CameraView = "full-stage" | "fancam" | "facecam";
+
+const cameraViews: {
+  id: CameraView;
+  label: string;
+  summary: string;
+  bestFor: string;
+  example?: { name: string; href: string };
+}[] = [
+  {
+    id: "full-stage",
+    label: "Full stage",
+    summary: "See the whole group, choreography, and formations.",
+    bestFor: "Understanding the full performance",
+  },
+  {
+    id: "fancam",
+    label: "Fancam",
+    summary: "Follow one member throughout the performance.",
+    bestFor: "Watching one idol's moves",
+    example: { name: "CORTIS Keonho", href: "/kpop/cortis-keonho-fancam-spotlight" },
+  },
+  {
+    id: "facecam",
+    label: "Facecam",
+    summary: "Focus on facial expressions and eye contact.",
+    bestFor: "Catching subtle expressions",
+    example: { name: "RESCENE Woni", href: "/kpop/rescene-woni-fancam-spotlight" },
+  },
+];
+
+/** Simple camera-frame diagrams: decorative, the text next to them carries the meaning. */
+function CameraViewIcon({ view }: { view: CameraView }) {
+  return (
+    <svg
+      viewBox="0 0 64 48"
+      aria-hidden="true"
+      focusable="false"
+      className="h-8 w-11 flex-none md:h-14 md:w-[4.5rem]"
+    >
+      <rect
+        x="2"
+        y="2"
+        width="60"
+        height="44"
+        rx="9"
+        fill="var(--surface)"
+        stroke="var(--border)"
+        strokeWidth="2"
+      />
+      {view === "full-stage" && (
+        <g fill="var(--accent)">
+          <circle cx="17" cy="20" r="4" />
+          <circle cx="32" cy="17" r="4" />
+          <circle cx="47" cy="20" r="4" />
+          <circle cx="24.5" cy="31" r="4" />
+          <circle cx="39.5" cy="31" r="4" />
+        </g>
+      )}
+      {view === "fancam" && (
+        <g>
+          <circle cx="20" cy="22" r="3" fill="var(--muted)" fillOpacity="0.45" />
+          <circle cx="44" cy="22" r="3" fill="var(--muted)" fillOpacity="0.45" />
+          <rect x="23" y="7" width="18" height="34" rx="4" fill="none" stroke="var(--accent)" strokeWidth="2" />
+          <circle cx="32" cy="16" r="4" fill="var(--accent)" />
+          <path d="M32 21v11M27 25.5h10M32 32l-3.5 6M32 32l3.5 6" stroke="var(--accent)" strokeWidth="2.5" strokeLinecap="round" />
+        </g>
+      )}
+      {view === "facecam" && (
+        <g>
+          <circle cx="32" cy="25" r="13" fill="var(--accent)" fillOpacity="0.14" stroke="var(--accent)" strokeWidth="2" />
+          <circle cx="27.5" cy="23" r="1.8" fill="var(--accent)" />
+          <circle cx="36.5" cy="23" r="1.8" fill="var(--accent)" />
+          <path d="M28 29.5q4 3 8 0" fill="none" stroke="var(--accent)" strokeWidth="2" strokeLinecap="round" />
+          <path d="M9 13V9h4M55 13V9h-4M9 35v4h4M55 35v4h-4" fill="none" stroke="var(--accent)" strokeWidth="2" strokeLinecap="round" />
+        </g>
+      )}
+    </svg>
+  );
+}
+
 const relatedGuides = [
   {
     label: "K-pop guide",
@@ -186,6 +267,60 @@ export default function WhatIsAFancamPage() {
               performance.
             </p>
           </article>
+
+          <section
+            aria-labelledby="camera-views-heading"
+            className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-5 md:p-8"
+          >
+            <h2
+              id="camera-views-heading"
+              className="text-xl font-semibold leading-snug text-[var(--text)] md:text-2xl"
+            >
+              Full Stage vs. Fancam vs. Facecam
+            </h2>
+
+            <ul className="mt-2 divide-y divide-[var(--border)] md:mt-6 md:grid md:grid-cols-3 md:gap-4 md:divide-y-0">
+              {cameraViews.map((view) => (
+                <li
+                  key={view.id}
+                  className="py-3 text-sm leading-6 text-[var(--muted)] md:rounded-[1.25rem] md:border md:border-[var(--border)] md:bg-[var(--surface)] md:p-5 md:text-base md:leading-7"
+                >
+                  <div className="flex items-center gap-3 md:flex-col md:items-start">
+                    <CameraViewIcon view={view.id} />
+                    <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
+                      {view.label}
+                    </h3>
+                  </div>
+
+                  <p className="mt-1.5 text-[var(--text)] md:mt-2">{view.summary}</p>
+
+                  <p>
+                    <span className="font-semibold">Best for:</span>{" "}
+                    {view.bestFor}
+                  </p>
+
+                  {view.example && (
+                    <p>
+                      See an example:{" "}
+                      <Link
+                        href={view.example.href}
+                        className="font-semibold text-[var(--accent)] underline-offset-4 hover:underline"
+                      >
+                        {view.example.name}
+                      </Link>
+                    </p>
+                  )}
+                </li>
+              ))}
+            </ul>
+
+            <a
+              href="#fancam-spotlights"
+              className="mt-2 inline-flex text-sm font-semibold text-[var(--accent)] transition hover:opacity-80 md:mt-4"
+            >
+              See all fancam examples ↓
+            </a>
+          </section>
 
           <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
@@ -485,7 +620,10 @@ export default function WhatIsAFancamPage() {
             </div>
           </section>
 
-          <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">
+          <section
+            id="fancam-spotlights"
+            className="scroll-mt-36 rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8"
+          >
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
               K-pop Spotlight
             </p>
@@ -504,6 +642,7 @@ export default function WhatIsAFancamPage() {
                   <img
                     src="https://img.youtube.com/vi/gHoKSBaLP7E/hqdefault.jpg"
                     alt=""
+                    loading="lazy"
                     className="h-full w-full object-cover"
                   />
                 </div>
@@ -535,6 +674,7 @@ export default function WhatIsAFancamPage() {
                   <img
                     src="https://img.youtube.com/vi/gOGU2zO4POY/hqdefault.jpg"
                     alt=""
+                    loading="lazy"
                     className="h-full w-full object-cover"
                   />
                 </div>
@@ -567,6 +707,7 @@ export default function WhatIsAFancamPage() {
                   <img
                     src="https://img.youtube.com/vi/qx8VbGEWcBo/hqdefault.jpg"
                     alt=""
+                    loading="lazy"
                     className="h-full w-full object-cover"
                   />
                 </div>
