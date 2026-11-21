@@ -12,10 +12,10 @@ const pageDescription =
 
 const quickFacts = [
   "Best first card: T-money or another rechargeable Korean transportation card",
-  "Single-journey ticket: Good for one subway ride, but less convenient and not for buses",
-  "Current fare note: Seoul’s official subway page lists adult base fare as KRW 1,550 by card and KRW 1,650 by single-ride cash ticket as of June 28, 2025; always check current station information",
+  "Single-journey ticket: One subway ride only, not buses; it includes a KRW 500 deposit you get back at the station’s deposit refund machine",
+  "Subway fare: Seoul’s official fare page lists the adult base fare as KRW 1,550 with a transportation card (in effect since June 28, 2025); always check current station information",
   "Useful apps: Naver Map or KakaoMap for routes, exits, transfers, and walking directions",
-  "Climate Card: Worth checking if you will ride often inside Seoul, but confirm the valid area before buying",
+  "Climate Card: The 30-day pass has ended; the 1- to 7-day short-term passes still work on the subway and buses inside Seoul",
   "Local tip: The exit number matters. Exit 1 and Exit 8 can feel like completely different places",
   "Etiquette: Stand on the side, let people get off first, keep your voice low, and avoid priority seats unless you need them",
 ];
@@ -197,21 +197,30 @@ export default function HowToUseKoreanSubwayPage() {
                 Tap when you enter the gate, ride, then tap again when you leave
                 — that second tap matters, because the fare system needs both
                 reads. You can also buy a single-journey subway ticket at a
-                station machine for one ride, but it is less convenient if you
-                will move around more than once, and single-journey tickets work
-                for subway only, not buses.
+                station machine for one ride. The machine shows the fare for
+                your destination and adds a 500 won deposit, which you get back
+                from the station&apos;s deposit refund machine after the ride —
+                as long as the ticket is not lost or damaged. It is less
+                convenient if you will move around more than once, and
+                single-journey tickets work for subway only, not buses. Since
+                March 17, 2026, the new ticket machines at Line 1–8 stations
+                also accept overseas-issued credit and debit cards for these
+                tickets, with a service fee of about 3.7% on average.
               </p>
 
               <p>
                 If you are staying in Seoul and riding a lot, you may hear about
                 the Climate Card — worth checking, not something every traveler
-                needs automatically. Short-term options exist, including 1-day,
-                2-day, 3-day, 5-day, and 7-day passes, and it can help if you
-                plan many rides inside Seoul. The valid area matters, though, so
-                confirm coverage before buying; it may not include every train,
-                airport route, or trip outside Seoul. For simple trips, T-money
-                is usually easier; for Seoul-heavy, subway-heavy days, Climate
-                Card may be worth comparing.
+                needs automatically. The 30-day Climate Card ended on October
+                1, 2026; what visitors can still buy is the short-term pass for
+                1, 2, 3, 5, or 7 days. As of October 2026, Seoul lists them at
+                5,000 to 20,000 won, plus 3,000 won for the physical card. The
+                pass covers the subway inside Seoul (including getting off at
+                Incheon Airport Terminals 1 and 2) and Seoul city and village
+                buses, but not the Shinbundang Line, GTX, airport or red
+                express buses, or subway stations outside Seoul. For simple
+                trips, T-money is usually easier; for Seoul-heavy, subway-heavy
+                days, the short-term pass may be worth comparing.
               </p>
 
               <p>
@@ -275,6 +284,13 @@ export default function HowToUseKoreanSubwayPage() {
                 sign, start following colors, and learn why the exit number
                 mattered all along. By trip&apos;s end, tapping in and walking
                 into a station may feel completely normal.
+              </p>
+
+              <p className="text-sm italic leading-7 md:text-base">
+                Fares, ticket, and pass details checked on November 21, 2026,
+                against the Seoul Metropolitan Government&apos;s transport
+                pages. They can change, so check station notices before you
+                ride.
               </p>
             </div>
           </section>
