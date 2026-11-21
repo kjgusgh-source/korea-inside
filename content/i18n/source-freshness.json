@@ -47,8 +47,8 @@
       "sourceJson": "content/translations/source/travel/3-days-in-gangneung.json",
       "status": "MATCH",
       "extractorVersion": "extract-pilot-1",
-      "sourceJsonSha256": "sha256:aafc4ee0df36f6688616a7c49253e3a02c670b01d27cd1fbf7daeb592eecd589",
-      "pageSha256": "sha256:b411b2f3dae31462a62238bb88ecde9ac7c0a3eb3fb238155f756e3e6760d09b",
+      "sourceJsonSha256": "sha256:a1eafb44be08dfc72a711ebeb73c6d21a28bbd9a559577691bd9ef661f7796f0",
+      "pageSha256": "sha256:5da9f699d7b2bd5859b50abc0d007ccf6dc92eaab73bd66b4d2ded288f09bd85",
       "components": [
         {
           "path": "components/ArticlePhoto.tsx",

@@ -42,6 +42,8 @@ const shortId = "B6ZFfvpyJFA";
 
 const h2Class = "text-2xl font-semibold leading-tight md:text-3xl";
 const h3Class = "pt-2 text-xl font-semibold leading-snug md:text-2xl";
+const inlineLinkClass =
+  "font-semibold text-[var(--text)] underline decoration-[var(--accent)] decoration-2 underline-offset-4";
 
 export default function ThreeDaysInGangneungPage() {
   const structuredData = [
@@ -285,7 +287,11 @@ export default function ThreeDaysInGangneungPage() {
                   <span lang="ko">짬뽕순두부</span>).
                 </p>
                 <p>
-                  It combines a spicy, seafood-flavored jjamppong-style broth with soft tofu. Unlike a
+                  It combines a spicy, seafood-flavored jjamppong-style broth with{" "}
+                  <Link href="/food/korean-soups-and-stews-guide-first-time" className={inlineLinkClass}>
+                    soft tofu
+                  </Link>
+                  . Unlike a
                   typical bowl of jjamppong noodles, the focus here is the tofu.
                 </p>
                 <p>
@@ -422,8 +428,11 @@ export default function ThreeDaysInGangneungPage() {
                 </p>
                 <p>There was a wait of around 20 minutes.</p>
                 <p>
-                  The restaurant focuses on jang kalguksu (<span lang="ko">장칼국수</span>), a Korean
-                  noodle soup with a spicy, seasoned broth.
+                  The restaurant focuses on jang kalguksu (<span lang="ko">장칼국수</span>), a{" "}
+                  <Link href="/food/korean-noodles-guide-first-time" className={inlineLinkClass}>
+                    Korean noodle soup
+                  </Link>{" "}
+                  with a spicy, seasoned broth.
                 </p>
                 <ArticlePhoto
                   src="/images/travel/3-days-in-gangneung/geumcheon-jang-kalguksu.webp"
@@ -576,7 +585,11 @@ export default function ThreeDaysInGangneungPage() {
                   and I&apos;d leave myself more time to walk around Gangmun Beach.
                 </p>
                 <p>
-                  If you&apos;re planning your first trip to Gangneung, my advice is simple: choose a
+                  If you&apos;re planning your{" "}
+                  <Link href="/travel/gangneung-travel-guide-first-time" className={inlineLinkClass}>
+                    first trip to Gangneung
+                  </Link>
+                  , my advice is simple: choose a
                   few places you really want to visit, book your train early, and don&apos;t fill every
                   hour of your schedule.
                 </p>

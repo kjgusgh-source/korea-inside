@@ -1071,10 +1071,19 @@
       "group": "day-2",
       "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-2>p[2]",
       "origin": "jsx",
-      "text": "It combines a spicy, seafood-flavored jjamppong-style broth with soft tofu. Unlike a typical bowl of jjamppong noodles, the focus here is the tofu.",
+      "text": "It combines a spicy, seafood-flavored jjamppong-style broth with {a1}soft tofu{/a1}. Unlike a typical bowl of jjamppong noodles, the focus here is the tofu.",
       "attrs": {},
-      "placeholders": {},
-      "hash": "9fb9c75ad979dfe99b222c6789cdc233140a43a55952a96b55c307a5c104235c",
+      "placeholders": {
+        "a1": {
+          "tag": "a",
+          "attrs": {
+            "href": "/food/korean-soups-and-stews-guide-first-time",
+            "className": "font-semibold text-[var(--text)] underline decoration-[var(--accent)] decoration-2 underline-offset-4",
+            "component": "Link"
+          }
+        }
+      },
+      "hash": "80e0db34df41e36ef1469e25d6186d80c8934bf6aba38efb063c24ff1cfb8c31",
       "translate": true,
       "protect": [],
       "firstPerson": false,
@@ -1757,7 +1766,7 @@
       "group": "day-3",
       "path": "page>main[1]>div[1]>article[1]>div[1]>section#day-3>p[3]",
       "origin": "jsx",
-      "text": "The restaurant focuses on jang kalguksu ({span1}장칼국수{/span1}), a Korean noodle soup with a spicy, seasoned broth.",
+      "text": "The restaurant focuses on jang kalguksu ({span1}장칼국수{/span1}), a {a1}Korean noodle soup{/a1} with a spicy, seasoned broth.",
       "attrs": {},
       "placeholders": {
         "span1": {
@@ -1765,9 +1774,17 @@
           "attrs": {
             "lang": "ko"
           }
+        },
+        "a1": {
+          "tag": "a",
+          "attrs": {
+            "href": "/food/korean-noodles-guide-first-time",
+            "className": "font-semibold text-[var(--text)] underline decoration-[var(--accent)] decoration-2 underline-offset-4",
+            "component": "Link"
+          }
         }
       },
-      "hash": "47b88c84cc98159bb156451aeb882c2218bde8b0dcbf7242e109ca3dd5388b2c",
+      "hash": "58431545dee53f8ab477d98b32f304086212a4e616016727a1c0155c0ffac962",
       "translate": true,
       "protect": [
         "장칼국수"
@@ -2623,10 +2640,19 @@
       "group": "visit-again",
       "path": "page>main[1]>div[1]>article[1]>div[1]>section#visit-again>p[5]",
       "origin": "jsx",
-      "text": "If you're planning your first trip to Gangneung, my advice is simple: choose a few places you really want to visit, book your train early, and don't fill every hour of your schedule.",
+      "text": "If you're planning your {a1}first trip to Gangneung{/a1}, my advice is simple: choose a few places you really want to visit, book your train early, and don't fill every hour of your schedule.",
       "attrs": {},
-      "placeholders": {},
-      "hash": "203f3c691b20bfa183006c7eb229e75bea6c19f302093ffb8eb6dd2dc7c38468",
+      "placeholders": {
+        "a1": {
+          "tag": "a",
+          "attrs": {
+            "href": "/travel/gangneung-travel-guide-first-time",
+            "className": "font-semibold text-[var(--text)] underline decoration-[var(--accent)] decoration-2 underline-offset-4",
+            "component": "Link"
+          }
+        }
+      },
+      "hash": "5330e62d980e1ed90aba64aa052ae7fe52ef26f183d8c94a1e0d628aa2cf375e",
       "translate": true,
       "protect": [],
       "firstPerson": true,
@@ -2672,12 +2698,12 @@
   ],
   "review": [
     {
-      "line": 77,
+      "line": 79,
       "where": "page",
       "reason": "attribute data is dynamic and was locked as an expression"
     },
     {
-      "line": 77,
+      "line": 79,
       "where": "page>JsonLd[1]",
       "reason": "structured data (JSON-LD) must be generated per locale; its strings are not translated by this extractor"
     }
