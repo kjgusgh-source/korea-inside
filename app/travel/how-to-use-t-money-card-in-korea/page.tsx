@@ -12,13 +12,14 @@ const pageDescription =
 
 const quickFacts = [
   "Best for: First-time visitors using Korean subways and buses",
-  "Where to buy: Usually convenience stores and subway stations, depending on location and stock",
-  "Where to recharge: Subway ticket machines and many convenience stores; cash may still be useful",
+  "Where to buy: Start at a convenience store; T-money’s foreigner guide lists subway station machines and information centers as top-up points",
+  "Where to recharge: Convenience stores or subway station machines, with cash in Korean won (KRW 1,000 to 90,000 at a time, in KRW 1,000 steps)",
   "Use it for: Subway gates, buses, and some everyday payments depending on the store/service",
-  "Current fare note: Seoul’s official subway page lists adult base fare as KRW 1,550 by card and KRW 1,650 by single-ride cash ticket as of June 28, 2025; always check current station information",
+  "Subway fare: Adult base fare is KRW 1,550 with a transportation card (since June 28, 2025) and KRW 1,650 with a single-journey ticket, plus a KRW 500 deposit you get back (Seoul’s official fares as of June 2026); always check current station information",
+  "Foreign credit cards: Since March 17, 2026, new ticket machines at Line 1–8 stations accept them for single-journey tickets and Climate Card short-term passes; Seoul’s announcement does not cover regular T-money top-ups",
   "Transfer tip: Tap every time. On buses, tap when boarding and tap again when getting off",
   "Common mistake: Forgetting to tap off a bus can affect your next fare or transfer",
-  "Climate Card note: Compare it only if you will ride many times mostly inside Seoul",
+  "Climate Card note: The 30-day pass has ended; the 1- to 7-day short-term passes are still sold for rides inside Seoul",
 ];
 
 const relatedGuides = [
@@ -190,29 +191,41 @@ export default function HowToUseTMoneyCardInKoreaPage() {
                 better than a single-journey subway ticket if you will ride more
                 than once, take buses, or move around Seoul during the day. The
                 rhythm is straightforward: buy the card, add money, tap in, ride,
-                tap out, recharge when needed.
+                tap out, recharge when needed. For an adult, a basic subway ride
+                costs 1,550 won with a transportation card and 1,650 won with a
+                single-journey ticket, which also needs a 500 won deposit that
+                you get back after the ride.
               </p>
 
               <p>
-                You can usually buy a T-money card at convenience stores or
-                subway stations, depending on location and stock. Convenience
-                stores are often the easiest starting point because travelers
-                already go there for water, snacks, and daily items; subway
-                stations may also have machines or service points, but setup
-                varies. If one place does not have the card you want, try another
-                convenience store — that is normal.
+                The easiest place to buy a T-money card is usually a
+                convenience store — travelers already go there for water,
+                snacks, and daily items. T-money&apos;s own foreigner guide
+                lists convenience stores for buying and topping up, while the
+                machines and information centers in subway stations appear as
+                top-up points. If one store does not have the card you want,
+                try another convenience store — that is normal.
               </p>
 
               <p>
-                Recharging is usually simple too, but worth a little care.
-                Subway ticket machines and many convenience stores can top up
-                transportation cards, and cash may still be useful in some
-                situations — carrying a small amount of Korean cash helps solve
-                small transportation problems even if you mostly pay by card
-                elsewhere. Public transportation fares and card rules can change,
-                so if something on a machine or notice looks different from what
-                you expected, check the station screen, official notices, or the
-                card issuer.
+                Recharging is simple, but bring cash. T-money&apos;s foreigner
+                guide describes top-ups with cash in Korean won, in 1,000 won
+                steps from 1,000 to 90,000 won at a time, and a card can hold
+                up to 500,000 won. You can top up at a convenience store counter
+                or at the reload machines in subway stations. Public
+                transportation fares and card rules can change, so if something
+                on a machine or notice looks different from what you expected,
+                check the station screen, official notices, or the card issuer.
+              </p>
+
+              <p>
+                One 2026 change is easy to misread. Since March 17, 2026, the
+                new ticket machines at Line 1–8 stations in Seoul accept
+                overseas-issued credit and debit cards — but Seoul&apos;s
+                announcement covers single-journey tickets and Climate Card
+                short-term passes, with a service fee of about 3.7% on average.
+                It does not cover topping up a regular T-money card, so keep
+                some Korean cash for that.
               </p>
 
               <p>
@@ -226,14 +239,16 @@ export default function HowToUseTMoneyCardInKoreaPage() {
               </p>
 
               <p>
-                Transfers are one of the biggest reasons T-money is useful —
-                Korea&apos;s public transport system can recognize many
-                subway-to-bus, bus-to-subway, and bus-to-bus transfers within
-                time windows, though not every transfer is free in every
-                situation. Rules vary by route, system, timing, and sometimes
-                whether you are taking the same bus route again. Tap every time,
-                do not wait too long between rides, and think of T-money as
-                making transfers smoother, not magical.
+                Transfers are one of the biggest reasons T-money is useful.
+                With a transportation card, the Seoul-area transfer discount
+                links the subway with city and village buses, as long as you
+                board the next ride within 30 minutes of tapping off the last
+                one — 60 minutes between 9 p.m. and 7 a.m. Getting back on the
+                same bus route does not count as a transfer. The base fare
+                covers the first 10 km of the whole trip; after that, a small
+                distance charge is added (100 won for every extra 5 km for
+                adults). Tap every time, do not wait too long between rides,
+                and think of T-money as making transfers smoother, not magical.
               </p>
 
               <p>
@@ -260,13 +275,27 @@ export default function HowToUseTMoneyCardInKoreaPage() {
 
               <p>
                 If you are staying mostly in Seoul and riding public transport
-                many times, you may want to compare the Climate Card — useful
-                only if its valid area and pass type match your actual trip.
-                For mixed trips with subways, buses, taxis, trains, or a day
-                outside Seoul, T-money stays simpler and more flexible. Keep the
-                card somewhere easy to reach — a phone pouch or wallet pocket
-                you can open quickly — and stand to the side if you need to
-                check something before tapping again.
+                many times, you may want to compare the Climate Card short-term
+                pass. The 30-day Climate Card ended on October 1, 2026, but the
+                1-, 2-, 3-, 5-, and 7-day passes are still sold. As of October
+                2026, Seoul lists them at 5,000, 8,000, 10,000, 15,000, and
+                20,000 won, plus 3,000 won for the physical card. A pass starts
+                on the day you charge it and runs until the last service of its
+                final day. It covers the subway inside Seoul and Seoul city and
+                village buses, but not the Shinbundang Line, GTX, airport or
+                red express buses, or subway stations outside Seoul. One
+                exception helps on the way out: you can board the Airport
+                Railroad at a covered station in Seoul, such as Seoul Station,
+                Hongik University, or Gimpo Airport, and get off at Incheon
+                Airport Terminal 1 or 2. You cannot use the pass to board at
+                the airport stations. Seoul&apos;s notices do not mention the
+                separate non-stop Airport Express train, so do not assume the
+                pass covers it. For mixed
+                trips with subways, buses, taxis, trains, or a day outside
+                Seoul, T-money stays simpler and more flexible. Keep the card
+                somewhere easy to reach — a phone pouch or wallet pocket you can
+                open quickly — and stand to the side if you need to check
+                something before tapping again.
               </p>
 
               <p>
@@ -274,6 +303,14 @@ export default function HowToUseTMoneyCardInKoreaPage() {
                 in Korea starts to feel less nervous — less about memorizing
                 fares, more about knowing the card is ready when you walk into
                 the next station or bus stop.
+              </p>
+
+              <p className="text-sm italic leading-7 md:text-base">
+                Fares, passes, and payment rules checked on November 21, 2026,
+                against the Seoul Metropolitan Government&apos;s transport pages,
+                Seoul&apos;s official tourism site (Visit Seoul), and
+                T-money&apos;s foreigner guide. They can change, so check
+                station notices before you ride.
               </p>
             </div>
           </section>
