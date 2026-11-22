@@ -187,19 +187,10 @@ export default function ResceneWoniFancamSpotlightPage() {
           <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
             <div className="space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
               <p>
-                Some idols catch attention through one huge viral stage. Others
-                do it more slowly, through small moments that fans keep
-                replaying: a look, a reaction, a facecam, or a short clip that
-                suddenly makes people ask, “Wait, who is she?”
-              </p>
-
-              <p>RESCENE’s Woni fits that second kind of discovery.</p>
-
-              <p>
-                For international K-pop fans, RESCENE may still feel like a new
-                name. That is part of the appeal. They do not have the automatic
-                noise of a big-company debut, so when people start talking about
-                them, it feels more like a discovery than a scheduled moment.
+                For some international K-pop fans, RESCENE may still feel like a
+                new name. That can be part of the appeal: finding a group through
+                one clip often feels more like a personal discovery than a
+                scheduled moment.
               </p>
 
               <p>
@@ -232,12 +223,9 @@ export default function ResceneWoniFancamSpotlightPage() {
               </p>
 
               <p>
-                RESCENE’s recent attention also makes this timing interesting.
-                They are not being talked about only because of one polished
-                promotional line. The group’s rise feels connected to clips,
-                member personality, local humor, and the kind of self-produced or
-                replayable content that can spread outside the usual fandom
-                route.
+                That is also why short clips can be a good way into a group like
+                RESCENE. A promotional line can tell you who a group is, but a
+                replayable moment can make you want to find out more.
               </p>
 
               <p>
@@ -250,11 +238,11 @@ export default function ResceneWoniFancamSpotlightPage() {
               </p>
 
               <p>
-                There is also something refreshing about a small-agency group
-                getting attention this way. It feels less like a huge campaign
-                and more like people slowly noticing the same thing at the same
-                time. One clip leads to another. One member name becomes easier
-                to remember. One stage becomes a reason to check the group again.
+                There is also something refreshing about discovering a group
+                this way. It feels less like a campaign and more like slowly
+                noticing something on your own. One clip leads to another. One
+                member name becomes easier to remember. One stage becomes a
+                reason to check the group again.
               </p>
 
               <p>
@@ -280,10 +268,10 @@ export default function ResceneWoniFancamSpotlightPage() {
               </p>
 
               <p>
-                For RESCENE, that doorway may be especially important. A big
-                company can push a group into everyone’s feed. A smaller group
-                often needs moments that fans want to carry for them. Woni’s
-                facecam-friendly presence gives RESCENE one of those moments.
+                For RESCENE, that doorway can be especially useful. Not every
+                group reaches new fans through a big announcement. Sometimes it
+                starts with a moment fans want to share. Woni’s facecam-friendly
+                presence gives RESCENE one of those moments.
               </p>
             </div>
           </section>

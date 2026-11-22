@@ -223,12 +223,15 @@ export default function CortisKeonhoFancamSpotlightPage() {
               <p>That is where Keonho becomes interesting.</p>
 
               <p>
-                Some fans remember him with the nickname &quot;French Fry
-                Boy,&quot; which comes from the Korean-style way fans often
-                attach a small, oddly specific image to a rookie. In Korean fan
-                spaces, a nickname does not always have to sound serious to
-                work. Sometimes it is cute, random, and strangely sticky — and
-                that is exactly why people remember it.
+                Some fans remember him as &quot;French Fry Boy.&quot; The
+                nickname started before his debut, when a fan-filmed clip of
+                Keonho eating French fries spread through Korean online
+                communities. Korean fans called him{" "}
+                <span lang="ko">감튀남</span> (gamtwinam), which roughly means
+                &quot;French Fry Boy.&quot; In Korean fan spaces, a nickname
+                does not always have to sound serious to work. Sometimes it is
+                cute, random, and strangely sticky — and that is exactly why
+                people remember it.
               </p>
 
               <p>

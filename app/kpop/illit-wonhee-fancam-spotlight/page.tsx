@@ -10,7 +10,7 @@ const pageUrl = `${siteUrl}/kpop/illit-wonhee-fancam-spotlight`;
 const pageTitle =
   "K-pop Spotlight: Why ILLIT Wonhee Keeps Catching Attention in Fancams";
 const pageDescription =
-  "A friendly K-pop spotlight on ILLIT Wonhee, her “It’s Me” fancam, and why clear expressions, small timing changes, and close-up stage clips make her easy to remember.";
+  "A friendly K-pop spotlight on ILLIT Wonhee, her “It’s Me” fancam, and why clear expressions, small timing changes, and one-member stage clips make her easy to remember.";
 
 const relatedGuides = [
   {
@@ -154,7 +154,7 @@ export default function IllitWonheeFancamSpotlightPage() {
 
           <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
-              Official facecam
+              Official fancam
             </p>
 
             <h2 className="mt-3 text-3xl font-semibold">
@@ -186,16 +186,8 @@ export default function IllitWonheeFancamSpotlightPage() {
           <section className="rounded-[2rem] border border-[var(--border)] bg-[var(--card)] p-6 md:p-8">
             <div className="space-y-7 text-base leading-8 text-[var(--muted)] md:text-lg">
               <p>
-                Some idols feel familiar before you even know every detail about
-                them. You see one clip, then another, then a facecam, and
-                suddenly the name starts to stay in your head.
-              </p>
-
-              <p>For ILLIT&apos;s Wonhee, that is part of the charm.</p>
-
-              <p>
                 Wonhee does not need a complicated introduction to be easy to
-                notice. Even if you are new to ILLIT, she has the kind of facecam
+                notice. Even if you are new to ILLIT, she has the kind of fancam
                 presence that makes a viewer pause for a second and keep
                 watching.
               </p>
@@ -209,8 +201,8 @@ export default function IllitWonheeFancamSpotlightPage() {
 
               <p>
                 The &quot;It&apos;s Me&quot; fancam works well because the camera
-                stays close. In a full-stage video, you follow the choreography,
-                the group shape, and the whole performance. In a fancam, the
+                stays with her. In a full-stage video, you follow the
+                choreography, the group shape, and the whole performance. In a fancam, the
                 question becomes simpler: does this one member still feel
                 interesting when the camera does not move away?
               </p>
@@ -239,7 +231,7 @@ export default function IllitWonheeFancamSpotlightPage() {
               <p>
                 For new fans, that makes her a good entry point. You do not have
                 to understand every ILLIT song or every member dynamic right
-                away. Start with one close-up clip. If you remember her face, her
+                away. Start with one fancam. If you remember her face, her
                 timing, or one small moment after the video ends, the fancam has
                 already done its job.
               </p>
@@ -274,8 +266,8 @@ export default function IllitWonheeFancamSpotlightPage() {
               </p>
 
               <p>
-                There is also a different feeling here compared with a new
-                discovery from a smaller group. RESCENE Woni&apos;s spotlight
+                There is also a different feeling here compared with discovering
+                a newer name. RESCENE Woni&apos;s spotlight
                 feels like watching people notice a fresh name. Wonhee&apos;s
                 spotlight feels more like understanding why a familiar name keeps
                 appearing again and again.
@@ -292,7 +284,7 @@ export default function IllitWonheeFancamSpotlightPage() {
                 If you are watching this fancam for the first time, do not only
                 look for the biggest moment. Watch the in-between seconds. Watch
                 how she moves from one expression to another. Watch how she
-                handles the close camera when nothing dramatic is happening.
+                handles the camera when nothing dramatic is happening.
               </p>
 
               <p>
@@ -322,8 +314,8 @@ export default function IllitWonheeFancamSpotlightPage() {
                   every moment huge.
                 </li>
                 <li>
-                  Notice how the close camera makes her charm easier to follow
-                  than a full-stage video.
+                  Notice how a camera that stays with her makes her charm easier
+                  to follow than a full-stage video.
                 </li>
                 <li>
                   Pay attention to the transitions between bigger points in the
@@ -348,7 +340,7 @@ export default function IllitWonheeFancamSpotlightPage() {
                 This is not only a profile of one idol. It is a simple example of
                 how member-focused K-pop discovery works. Wonhee is already a
                 familiar name to many fans, but a fancam helps explain why she
-                remains easy to notice: clear expressions, close-camera comfort,
+                remains easy to notice: clear expressions, comfort on camera,
                 and small moments that make people want to replay.
               </p>
             </div>
